@@ -1,0 +1,71 @@
+---
+title: "Standardfält"
+---
+
+Genom att hantera och omfatta vissa standardfält kan du enkelt anpassa dina medarbetarprofiler så att de passar din organisations behov. Läs mer om vilka fält som är anpassningsbara och hur du kommer igång nedan!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="3Z7QoQX" title="Standardfält" />
+
+## Vad är standardfält
+
+Standardfält är fördefinierade fält i Hailey som används för att lagra information om medarbetare. Vissa standardfält kan aktiveras eller inaktiveras. Dessa fält kan även scopas till specifika delar av organisationen, vilket gör det enklare att anpassa informationen efter olika delar av verksamheten och olika länder.
+
+**Följande standardfält kan aktiveras eller inaktiveras:**
+
+- Relation (Personligt - Kontakt vid Nödfall)
+- Kontonummer (Kompensation - Bankuppgifter)
+- Clearingnummer (Kompensation - Bankuppgifter)
+- IBAN (Kompensation - Bankuppgifter)
+- Bic (Kompensation - Bankuppgifter)
+- Swift (Kompensation - Bankuppgifter)
+- Avtalade timmar (Jobb - Anställningsperiod)
+- Avtalad omfattning (Jobb - Anställningsperiod)
+- Uppsägningstid (Jobb - Villkor)
+- Semesterdagar (Jobb - Villkor)
+
+<Note>
+  Som standard kommer fälten Relation, Kontonummer, Clearingnummer, Uppsägningstid och Semesterdagar att vara **aktiva**. De återstående fälten (IBAN, Bic, Swift, Avtalade timmar & Avtalad omfattning) är **inaktiva** som standard, men kan enkelt aktiveras under Inställningar - Anpassning.
+</Note>
+
+## Hur hanterar man standardfält?
+
+För att aktivera eller inaktivera standardfält, gå till **Inställningar - Anpassning**. Välj fliken **Standardfält.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-27-2026-01-13-16-4643-PM.png?width=670&height=340&name=image-png-Jul-27-2026-01-13-16-4643-PM.png)
+
+Klicka på de tre prickarna till höger för det fält du vill redigera. Du kan sedan välja att aktivera/inaktivera det aktuella fältet genom att klicka på "Aktiv" och sedan Spara.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-27-2026-01-14-00-6556-PM.png?width=670&height=334&name=image-png-Jul-27-2026-01-14-00-6556-PM.png)
+
+## Omfatta standardfält
+
+Du kan också omfatta dessa standardfält till olika delar av din organisation. För att omfatta ett standardfält går du till Inställningar - Anpassning - Standardfält. Klicka på de tre prickarna till höger om det fält som du vill anpassa. Fyl de fält som du vill inkludera i omfattningen. När du har sparat fältet kommer det bara att vara synligt på de medarbetarprofiler som matchar den omfattning som du har fyllt i.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-14-2026-09-52-16-2394-AM.png?width=670&height=388&name=image-png-Aug-14-2026-09-52-16-2394-AM.png)
+
+## Rättigheter
+
+Endast användare med administratörsrollen kan redigera standardfält. Denna behörighet kan inte tilldelas andra roller.
+
+Läs mer om roller och rättigheter i Hailey [**HÄR**](/sv/roles-and-rights#rattigheter).
+
+## Vanliga fragor
+
+<AccordionGroup>
+  <Accordion title="Varför kan jag inte se ett standardfält på en medarbetares profil?">
+  **Svar:** Du kan bara se ett standardfält på en medarbetares profil om du är del av samma omfattning som det aktuella standardfältet. Om ett standardfält exempelvis är omfattat till arbetsplatsen **Köpenhamn** måste både du och medarbetaren tillhöra arbetsplatsen Köpenhamn för att fältet ska vara synligt.
+  </Accordion>
+</AccordionGroup>

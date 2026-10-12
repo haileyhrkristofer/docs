@@ -1,0 +1,165 @@
+---
+title: "Importera löneförändringar"
+---
+
+Uppdatera lönebelopp för flera medarbetare samtidigt genom att importera en fil i Hailey. I den här guiden får du veta vad som krävs innan importen, hur du laddar ner och fyller i importmallen samt hur du validerar och genomför importen.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="UnI29rp" title="Importera löneförändringar" />
+
+## Vad är en import av löneförändringar?
+
+Import av löneförändringar används för att uppdatera beloppet på flera befintliga löner samtidigt. Funktionen skapar en ny förändring på respektive lön med det belopp och förändringsdatum som anges i importfilen.
+
+<Note>
+  Importen kan endast användas för att ändra **lönebeloppet**. Den kan inte användas för att ändra exempelvis lönens namn, lönetyp, löneform eller valuta. Klicka [HÄR](/sv/import-salaries) för hur du importerar löner
+</Note>
+
+## Innan du sätter igång
+
+Innan du importerar löneförändringar behöver följande vara på plats:
+
+- Medarbetarna ska redan finnas i Hailey.
+- Varje lön som ska ändras ska vara registrerad i Hailey.
+- Du behöver känna till det nya lönebeloppet och datumet då förändringen ska börja gälla.
+- Importfilen ska användas för att ändra beloppet på befintliga löner, inte för att lägga till nya löner.
+
+## Hur importerar man löneförändringar?
+
+#### Ladda ner importmallen
+
+1. Gå till **Medarbetare** i huvudmenyn.
+2. Markera de medarbetare som importen ska omfatta om du endast vill uppdatera vissa medarbetares löner.
+3. Klicka på **Importera - Löneförändringar**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-20-2025-07-59-48-2965-AM.png?width=670&height=858&name=image-png-Oct-20-2025-07-59-48-2965-AM.png)
+
+**4.** Välj om mallen ska innehålla:
+
+- Alla medarbetare eller,
+- endast de medarbetare som du har markerat
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-01-2024-07-47-49-6484-AM.png?width=670&height=415&name=image-png-Aug-01-2024-07-47-49-6484-AM.png)
+
+5. Ladda ner och öppna filen.
+
+#### Fyll i importmallen
+
+Den nedladdade filen innehåller information om medarbetarna och deras aktiva löner.
+
+Följande befintlig information används för att identifiera rätt medarbetare och lön:
+
+- EmployeeID
+- Employment Number
+- Name
+- Company email
+- Salary Id
+- Salary Title
+- Start Date
+- End Date
+- Pay Period
+- Currency Code
+- Current Amount
+
+Ändra inte informationen i dessa kolumner. Om befintliga uppgifter ändras kan Hailey inte koppla förändringen till rätt lön.
+
+![Guide-1](https://docs.haileyhr.com/hs-fs/hubfs/Guide-1.png?width=670&height=171&name=Guide-1.png)
+
+Fyll i följande kolumner för varje lön som ska ändras:
+
+- **New Amount:** Ange det nya totala lönebeloppet. Fältet ska endast innehålla siffror eftersom valutan redan anges i en separat kolumn.
+- **Effective Date:** Ange datumet då det nya beloppet ska börja gälla. Använd formatet **ÅÅÅÅ-MM-DD**. Förändringsdatumet måste infalla efter lönens befintliga startdatum. Det får inte vara samma datum som, eller ett tidigare datum än, lönens **Start Date**.
+
+<Note>
+  Endast en förändring per lön kan inkluderas i samma import.
+</Note>
+
+![Guide2-1](https://docs.haileyhr.com/hs-fs/hubfs/Guide2-1.png?width=670&height=215&name=Guide2-1.png)
+
+## Ladda upp och validera filen
+
+<Steps>
+  <Step title="Spara den ifyllda filen på datorn">
+    Spara den ifyllda filen på datorn.
+  </Step>
+  <Step title="Gå tillbaka till Medarbetare">
+    Gå tillbaka till **Medarbetare**.
+  </Step>
+  <Step title="Klicka på Importera - Löneförändringar">
+    Klicka på **Importera - Löneförändringar**
+  </Step>
+  <Step title="Dra filen till uppladdningsrutan eller klicka på rutan för a">
+    Dra filen till uppladdningsrutan eller klicka på rutan för att välja filen.
+  </Step>
+  <Step title="Kontrollera resultatet av valideringen">
+    Kontrollera resultatet av valideringen.
+  </Step>
+  <Step title="Klicka på Importera när filen har validerats">
+    Klicka på **Importera** när filen har validerats.
+  </Step>
+</Steps>
+
+Om filen innehåller fel visar Hailey vilket fält som behöver korrigeras. Uppdatera filen och ladda sedan upp den på nytt.
+
+<Note>
+  Om en lön redan har en förändring som väntar på godkännande kommer den väntande förändringen att skrivas över av importen. Kontrollera därför eventuella pågående löneärenden innan du startar importen.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-01-2024-07-51-03-1608-AM.png?width=566&height=344&name=image-png-Aug-01-2024-07-51-03-1608-AM.png)
+
+När importen har startat visas ett meddelande om att löneförändringarna behandlas. Importen kan ta en stund beroende på hur många förändringar filen innehåller.
+
+När importen är klar visas löneförändringarna:
+
+- på respektive medarbetarprofil
+- i relevanta rapporter.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-01-2024-07-54-06-2530-AM.png?width=583&height=294&name=image-png-Aug-01-2024-07-54-06-2530-AM.png)
+
+## Rättigheter
+
+Det är enbart **admin** i systemet som kan genomföra importen av löneförändringar.
+
+## Vanliga frågor
+
+<AccordionGroup>
+  <Accordion title="Kan jag använda importen för att lägga till en helt ny lön?">
+    Nej. Importen för löneförändringar kan endast användas för löner som redan finns i Hailey. Använd **Importera - Löner** för att lägga till nya löner.
+  </Accordion>
+
+  <Accordion title="Kan jag ändra lönens namn eller lönetyp i samma fil?">
+    Nej. Importen kan endast ändra lönebeloppet. Använd **Importera - Ändringar av löneinformation** för att ändra lönens namn eller lönetyp.
+  </Accordion>
+
+  <Accordion title="Ska jag ange löneökningen eller det nya totala beloppet i New Amount?">
+    Ja, ange det nya totala lönebeloppet. Om den nuvarande lönen är 30 000 och den nya lönen ska vara 32 000 anger du **32000**, inte mellanskillnaden 2 000.
+  </Accordion>
+
+  <Accordion title="Varför godkänns inte mitt förändringsdatum?">
+    Kontrollera att datumet är skrivet i formatet **ÅÅÅÅ-MM-DD** och att det infaller efter lönens befintliga **Start Date**. Förändringsdatumet får inte vara samma datum som, eller tidigare än, lönens startdatum.
+  </Accordion>
+
+  <Accordion title="Kan jag importera flera framtida förändringar för samma lön samtidigt?">
+    Nej. Endast en förändring per lön kan inkluderas i samma import.
+  </Accordion>
+
+  <Accordion title="Vad händer om filen innehåller ett eller flera fel?">
+    Hailey validerar filen innan importen genomförs och visar vilket fält som behöver korrigeras. Uppdatera filen och ladda sedan upp den igen.
+  </Accordion>
+
+  <Accordion title="Vad händer med en löneförändring som redan väntar på godkännande?">
+    En väntande förändring för samma lön skrivs över när förändringen importeras. Kontrollera därför pågående förändringar innan du genomför importen.
+  </Accordion>
+</AccordionGroup>

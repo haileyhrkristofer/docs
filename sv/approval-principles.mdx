@@ -1,0 +1,59 @@
+---
+title: "Godkännandeprinciper"
+---
+
+Ställ in era godkännandeprinciper för lön & certifikat inom er organisation!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="AyrkZS5" title="Godkännandeprinciper" />
+
+## Möjligheter med funktionaliteten
+
+Godkännandeprinciper gör att ni kan ställa in vem som ska få uppgiften när:
+
+- en **lön** ändras eller läggs till på en medarbetare
+- ett **certifikat** har laddats upp på en medarbetare
+
+Standardinställningen, om ingen redigering görs, är att den person som medarbetaren rapporterar till får uppgiften att godkänna löneändringen eller frånvaroansökan. Gå till **Inställningar** - **Säkerhet** och **Godkännandeprinciper** för att se inställningen. I bilden nedan visas standardinställningen.
+
+<Note>
+  Godkännaren kan godkänna lön för sig själv om principerna tillåter det.
+</Note>
+
+## Ställ in era godkännandeprinciper
+
+Om ni vill använda andra godkännandeprinciper än standardinställningen klickar ni på den princip ni vill ändra. Här anger ni vilken del av organisationen som ska få uppgiften att godkänna lön (i exemplet nedan). De tillgängliga alternativen är **Chefer**, **Team Leads,** **Avdelningsansvariga**, **Ansvarig över organisationen** eller **Utvalda medarbetare**.
+
+Team Leads och Avdelningsansvariga konfigureras under Inställningar - Organisation.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-11-2026-08-15-18-8065-AM.png?width=670&height=176&name=image-png-May-11-2026-08-15-18-8065-AM.png)
+
+Om en medarbetare tillhör flera team skickas godkännandeuppgiften till samtliga team leads för respektive team. När uppgiften har godkänts av en av team leads tas den automatiskt bort för övriga.
+
+<Note>
+  Notera att vi alltid rekommenderar att ni lägger till minst en medarbetare under sektionen **För medarbetare utan chef**, för att säkerställa att det alltid finns någon som kan godkänna uppgiften.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-11-2026-08-15-46-8136-AM.png?width=670&height=176&name=image-png-May-11-2026-08-15-46-8136-AM.png)
+
+Om ni önskar vägledning i hur ni ställer in era godkännandeprinciper är ni välkomna att kontakta vår support på *support@haileyhr.com* eller er Customer Success-kontakt.
+
+## Vanliga fragor
+
+<AccordionGroup>
+  <Accordion title="Kan man lägga till flera godkännare för en och samma löneändring?">
+  Nej, det är för närvarande inte möjligt att tilldela flera godkännare till en enskild löneändring. Varje löneändring kan endast ha en godkännare.
+  </Accordion>
+</AccordionGroup>

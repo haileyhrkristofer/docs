@@ -1,0 +1,177 @@
+---
+title: "Starta semesterplanering"
+---
+
+Planera semesterperioder och ge medarbetare en tydlig överblick över vilka som är frånvarande och arbetar under perioden.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="KprM4uU" title="Starta semesterplanering" />
+
+## Vad är en semesterplanering?
+
+En semesterplanering ger en samlad överblick över registrerad frånvaro under en vald period, exempelvis inför sommaren eller julen. Medarbetare som ingår i samma semesterplanering kan enkelt se varandras frånvaro utan att behöva öppna tidsöversikten.
+
+Ni kan skapa flera olika semesterplaneringar för olika grupper eller delar av organisationen
+
+<Note>
+  Endast de medarbetare som är inkluderade i samma semesterplanering kan se varandras frånvaro i översikten. Ni kan skapa separata semesterplaneringar för olika grupper av medarbetare inom organisationen.
+</Note>
+
+<Tip>
+  Semesterplaneringen i sig kan inte exporteras. Använd istället vår rapport för Frånvaro, där ni får en överblick och kan exportera all registrerad frånvaro.
+</Tip>
+
+## Hur startar man en semesterplanering?
+
+För att komma igång med en semesterplanering börjar du med att välja vilka medarbetare som ska ingå i planeringen.
+
+1. Gå till **Medarbetarlistan**.
+2. Markera de medarbetare som ska ingå.
+3. Klicka på **Hantera**.
+4. Välj **Starta semesterplanering**.
+5. Ange:
+
+- Namn på planeringen
+- Period
+- Deadline för när frånvaron ska vara registrerad
+- Eventuell kommentar
+
+6. Klicka på **Skicka**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-29-2026-01-13-29-0658-PM.png?width=670&height=409&name=image-png-Jul-29-2026-01-13-29-0658-PM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-29-2026-01-14-33-4783-PM.png?width=670&height=582&name=image-png-Jul-29-2026-01-14-33-4783-PM.png)
+
+När planeringen skickas får **alla inkluderade medarbetare ett mejl** med information om semesterplaneringen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/2-png.png?width=661&height=542&name=2-png.png)
+
+## Hur använder man semesterplaneringen?
+
+När semesterplaneringen har skapats visas ett kort under **Mina uppdateringar** för både den som startade planeringen och de medarbetare som ingår. Kortet ligger kvar tills semesterperioden har passerat.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-29-2026-01-20-43-6895-PM.png?width=670&height=199&name=image-png-Jul-29-2026-01-20-43-6895-PM.png)
+
+I översikten visas:
+
+- all registrerad frånvaro under den valda perioden
+- endast att personen är **Frånvarande** (inte vilken frånvaro anledning eller typ det gäller)
+
+Det går även att filtrera på:
+
+- Medarbetare
+- Närvaro
+- Organisationsfilter
+
+Om ni har aktiverat **arbetsfria dagar** räknas medarbetare inte som närvarande under dessa dagar. Medarbetare med registrerade arbetstimmar på sin profil visas inte heller som närvarande de dagar de saknar schemalagd arbetstid.
+
+<Tip>
+  Tips! Filtreringar kan sparas som vyer och återanvändas i andra semesterplaneringar.
+</Tip>
+
+<Note>
+  Medarbetare som är långtidsfrånvarande inkluderas inte i semesterplaneringen.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-29-2026-01-22-21-4163-PM.png?width=670&height=441&name=image-png-Jul-29-2026-01-22-21-4163-PM.png)
+
+<Tip>
+  Är du nyfiken på vilka andra som arbetar under jul- eller sommarledigheten? Använd dig i så fall av **Närvaro**-filtret för att snabbt få en överblick! Det räcker med att en medarbetare arbetar en dag under aktuell period för att medarbetaren ska dyka upp under filtrerna Jobbar denna vecka samt Jobbar nästa vecka.
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-29-2026-01-23-13-8190-PM.png?width=670&height=439&name=image-png-Jul-29-2026-01-23-13-8190-PM.png)
+
+## Hur ansöker man om frånvaro i en semesterplanering?
+
+För att registrera frånvaro under en aktiv semesterplanering **ansöker du om ledighet på samma sätt som vanligt**.
+
+Du kan göra det från **Lägg till frånvaro** på startsidan, via **Hantera - Lägg till frånvaro** på din profil eller direkt från den aktiva semesterplaneringen genom att klicka på **Lägg till frånvaro** uppe till höger.
+
+**Gör så här:**
+
+1. Klicka på **Lägg till frånvaro** direkt från semesterplaneringen, på startsidan eller via din profil.
+2. Välj den period du vill ansöka om.
+3. Ange anledning och omfattning:
+
+- Vid rapportering i procent anger du omfattningen i procent.
+- Vid rapportering i timmar kan du använda alternativet **Hela dagen** (om arbetstimmar finns registrerade på din profil) eller ange antal timmar manuellt.
+
+4. Lägg till en kommentar om det behövs.
+5. För att registrera flera perioder i samma ansökan, klicka på **Lägg till ytterligare frånvaro**.
+6. Klicka på **Skicka till godkännare** när du är klar.
+
+<Tip>
+  Läs mer om hur man ansöker om frånvaro [HÄR.](/sv/time-off-submit)För mer information om hur man godkänner frånvaro, klicka [HÄR.](/sv/time-off-approve-and-change)
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-29-2026-01-31-34-3960-PM.png?width=670&height=441&name=image-png-Jul-29-2026-01-31-34-3960-PM.png)
+
+## Hur uppdaterar man semesterplaneringen?
+
+Behöver ni göra några **ändringar i semesterplaneringen**, kan den som **startat semesterplaneringen** gå till översikten via sin startsida, klicka på **Uppdatera** uppe i högra hörnet och göra justeringarna. Det som är möjligt att uppdatera är:
+
+- Vilka medarbetare som ska ingå i planeringen
+- Titel
+- Från och till-datum
+- Deadline
+- Kommentar
+
+För att ta bort semesterplaneringen klicka på **Ta bort**. Ingen frånvaro som registrerats under den perioden kommer att försvinna, den kommer finnas tillgänglig i tidsöversikten i huvudmenyn för de som har rättighet att se detta. Läs mer om tidsöversikten [HÄR](/sv/time-off-approve-and-change#oversikt).
+
+<Tip>
+  Har en ny medarbetare börjat efter att semesterplanen skapades? Du kan alltid lägga till medarbetare i efterhand genom att uppdatera semesterplanen!
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-29-2026-01-37-07-4760-PM.png?width=1254&height=828&name=image-png-Jul-29-2026-01-37-07-4760-PM.png)
+
+## Rättigheter
+
+Följande rättighet krävs för att andra användare än admin ska kunna starta en semesterplanering:
+
+- **Tid & frånvaro - Starta semesterplanering**: Ger användaren rätt att skapa och starta semesterplaneringar (endast Nej eller Ja).
+
+## Vanliga fragor
+
+**Fråga**: Varför kan jag inte starta en semesterplanering?
+
+För att starta en semesterplanering behövs rättigheten **Starta semesterplanering**.
+
+En administratör kan ge dig denna rättighet genom att uppdatera din roll under **Inställningar - Säkerhet - Roller & rättigheter**. Under sektionen **Företagsrättigheter** i rollen hittar du **Starta semesterplanering** under **Tid & frånvaro**.
+
+Åtkomst till denna rättighet hanteras vanligtvis av administratörer.
+
+<AccordionGroup>
+  <Accordion title="Om jag inkluderar hela organisationen i en semesterplanering, kan alla då se varandras anledning till frånvaron under den perioden?">
+    Nej, alla kan se att en medarbetare är frånvarande, men inte den specifika frånvaroorsaken. Frånvaron visas endast genom att dagen markeras i **lila** i kalendern, utan att orsaken visas.
+
+    **Fråga**: Kan jag lägga till eller ta bort medarbetare från en befintlig semesterplanering?
+
+    Ja, personen som skapade semesterplaneringen kan uppdatera vilka medarbetare som ska ingå.
+
+    Öppna semesterplaneringen och klicka på **Uppdatera** för att lägga till eller ta bort medarbetare, ändra period, deadline, titel eller kommentar.
+
+    **Fråga**: Varför kan jag inte se en medarbetare i semesterplaneringen?
+
+    Medarbetare visas endast i en semesterplanering om de inkluderades när planen skapades eller har lagts till senare genom en uppdatering.
+
+    Tänk på att medarbetare som är på längre sjukfrånvaro inte inkluderas automatiskt i semesterplaneringen.
+  </Accordion>
+
+  <Accordion title="Kan jag exportera en semesterplanering?">
+    Nej, det går inte att exportera en semesterplanering.
+
+    Användare med rätt behörighet (till exempel Admin eller användare med åtkomst till rapporter) kan däremot exportera frånvarodata via **Rapporter - Frånvaro**. Välj önskat datumintervall och exportera rapporten. Datan laddas ner i **CSV-format**.
+  </Accordion>
+</AccordionGroup>

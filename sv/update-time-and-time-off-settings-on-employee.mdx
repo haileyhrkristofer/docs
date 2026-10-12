@@ -1,0 +1,69 @@
+---
+title: "Uppdatera tid- och frånvaroinställningar på medarbetares profil"
+---
+
+Se till att dina medarbetare är redo för tid och frånvaro i Hailey genom att uppdatera deras tid och frånvaroinställningar.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="6F84lVA" title="Uppdatera tid- och frånvaroinställningar på medarbetares profil" />
+
+## Hur uppdaterar man medarbetarens tid- och frånvaroinställningar?
+
+När era inställningar för tid och frånvaro har skapats under **Inställningar - Tid & frånvaro** behöver de appliceras till de relevanta medarbetarnas anställningar. Du kan göra detta på en **medarbetares profil** eller i bulk från **medarbetarlistan**.
+
+- Uppdatera inställningarna i bulk från medarbetarlistan - markera de medarbetare du vill uppdatera och klicka på **Hantera - Uppdatera inställningar för tid & frånvaro**. Välj inställningar och klicka på **Spara**.
+
+<Note>
+  **Observera** att alla fyra inställningar ingår i bulkuppdateringen. Om ett fält lämnas tomt kommer det befintliga värdet att tas bort från de valda medarbetarnas profiler.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-17-2026-02-11-44-8993-PM.png?width=670&height=372&name=image-png-Jul-17-2026-02-11-44-8993-PM.png)
+
+- Uppdatera inställningarna direkt på medarbetarens profil - klicka på den anställningen du vill uppdatera och klicka på **Hantera - Uppdatera tid & frånvaro - Spara.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-12-18-56-9552-PM.png?width=668&height=377&name=image-png-Aug-07-2026-12-18-56-9552-PM.png)
+
+## Översikt på tid och frånvaroinställningar
+
+För att få en överblick över vilka inställningar medarbetare har kan du ta fram relevanta **kolumner** i medarbetarlistan. På så sätt får du enkelt fram informationen direkt i listvyn.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-17-2026-02-13-36-6137-PM.png?width=670&height=372&name=image-png-Jul-17-2026-02-13-36-6137-PM.png)
+
+## Rättigheter
+
+- **Anställning - Visa & ändra** ger rättighet att redigera tid- och frånvaroinställningar på en medarbetares anställning.
+- **Hantera – Uppdatera organisationstillhörighet i bulk** ger möjlighet att uppdatera dessa inställningar för flera medarbetare samtidigt från medarbetarlistan.
+
+<Note>
+  Observera att dessa rättigheter ger även möjlighet att uppdatera andra fält i anställningen.
+</Note>
+
+Läs mer om Roller & rättigheter i guiden [HÄR](/sv/roles-and-rights).
+
+## Vanliga fragor
+
+**Fråga**: En av våra medarbetare ska få en ny anställning och ska börja rapportera tid och/eller frånvaro, hur gör jag?
+
+Inställningar för tid och frånvaro är kopplade till en **anställning** och inte medarbetaren som person. Om en medarbetare byter roll eller får ändrade anställningsvillkor som resulterar i en **ny anställning** i Hailey så kommer tid och frånvaroinställningarna att kunna uppdateras i flödet för **Lägg till ny anställning**. Läs mer om det flödet i guiden [HÄR](/sv/employment-wizard).
+
+<AccordionGroup>
+  <Accordion title="Jag vill uppdatera arbetstimmar för ett helt team. Hur gör jag?">
+    Gå till **Medarbetarlistan**, filtrera listan på det team du vill uppdatera, markera alla medarbetare och välj **Hantera - Uppdatera inställningar för tid och frånvaro**.
+
+    **Tänk på** att alla fält under **Tid och frånvaro** på anställningen uppdateras vid bulkuppdateringen. Om du bara vill ändra **Arbetstimmar** behöver du ändå fylla i de övriga fälten med deras nuvarande värden. Om ett fält lämnas tomt tas det befintliga värdet bort från medarbetarnas anställningar.
+
+    Tips: Om möjligt, uppdatera medarbetare som har exakt samma inställningar för tid och frånvaro samtidigt. Då blir det enklare att fylla i alla fält korrekt och minska risken för att värden av misstag tas bort.
+  </Accordion>
+</AccordionGroup>

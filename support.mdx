@@ -1,0 +1,163 @@
+---
+title: "Contact support"
+hidden: true
+---
+
+export const hsFormStyles = `
+.hailey-hs-form {
+  --f-text: #18181b;
+  --f-muted: #52525b;
+  --f-input-bg: #ffffff;
+  --f-border: rgba(9, 9, 11, 0.12);
+  --f-accent: #FFB2B2;
+  --f-accent-ring: rgba(255, 178, 178, 0.35);
+  --f-btn-text: #18181b;
+  --f-error: #dc2626;
+  max-width: 640px;
+  margin-top: 24px;
+}
+.dark .hailey-hs-form {
+  --f-text: rgba(255, 255, 255, 0.92);
+  --f-muted: rgba(255, 255, 255, 0.6);
+  --f-input-bg: rgba(255, 255, 255, 0.04);
+  --f-border: rgba(255, 255, 255, 0.12);
+  --f-error: #f87171;
+}
+.hailey-hs-form form,
+.hailey-hs-form fieldset { max-width: none !important; }
+.hailey-hs-form .hs-form-field { margin-bottom: 24px; }
+.hailey-hs-form label,
+.hailey-hs-form legend,
+.hailey-hs-form p,
+.hailey-hs-form .hs-richtext {
+  color: var(--f-text) !important;
+  font-family: inherit !important;
+  font-size: 14px !important;
+  line-height: 1.5;
+}
+.hailey-hs-form .hs-form-field > label {
+  display: block;
+  font-weight: 500 !important;
+  margin-bottom: 8px;
+}
+.hailey-hs-form .hs-field-desc,
+.hailey-hs-form .hs-richtext,
+.hailey-hs-form .hs-richtext p { color: var(--f-muted) !important; }
+.hailey-hs-form .hs-form-required { color: var(--f-accent); margin-left: 2px; }
+.hailey-hs-form .inputs-list { list-style: none; padding: 0 !important; margin: 0 !important; }
+.hailey-hs-form .inputs-list li { margin: 0 0 8px !important; }
+.hailey-hs-form .inputs-list label {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+  font-weight: 400 !important;
+  cursor: pointer;
+}
+.hailey-hs-form input[type="checkbox"],
+.hailey-hs-form input[type="radio"] {
+  accent-color: var(--f-accent);
+  width: 16px;
+  height: 16px;
+  margin: 0 !important;
+  cursor: pointer;
+}
+.hailey-hs-form .hs-input:not([type="checkbox"]):not([type="radio"]):not([type="file"]) {
+  width: 100% !important;
+  box-sizing: border-box;
+  background: var(--f-input-bg) !important;
+  color: var(--f-text) !important;
+  border: 1px solid var(--f-border) !important;
+  border-radius: 12px !important;
+  padding: 10px 14px !important;
+  font-family: inherit !important;
+  font-size: 14px !important;
+  outline: none;
+  box-shadow: none !important;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.hailey-hs-form textarea.hs-input { min-height: 120px; resize: vertical; }
+.hailey-hs-form .hs-input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):focus {
+  border-color: var(--f-accent) !important;
+  box-shadow: 0 0 0 3px var(--f-accent-ring) !important;
+}
+.hailey-hs-form input[type="file"] {
+  color: var(--f-muted);
+  font-family: inherit;
+  font-size: 14px;
+}
+.hailey-hs-form input[type="file"]::file-selector-button {
+  margin-right: 12px;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  border: 1px solid var(--f-border);
+  background: var(--f-input-bg);
+  color: var(--f-text);
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+.hailey-hs-form .hs-button {
+  background: var(--f-accent) !important;
+  color: var(--f-btn-text) !important;
+  border: none !important;
+  border-radius: 9999px !important;
+  padding: 10px 24px !important;
+  font-family: inherit !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  box-shadow: none !important;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.hailey-hs-form .hs-button:hover { opacity: 0.9; }
+.hailey-hs-form .hs-error-msgs { list-style: none; padding: 0 !important; margin: 6px 0 0 !important; }
+.hailey-hs-form .hs-error-msgs label,
+.hailey-hs-form .hs-error-msg {
+  color: var(--f-error) !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+}
+.hailey-hs-form .hs-input.invalid.error { border-color: var(--f-error) !important; }
+.hailey-hs-form .submitted-message { color: var(--f-text); }
+`;
+
+export const HubspotForm = ({ portalId, formId, region = "eu1" }) => {
+  const targetId = `hs-form-${formId}`;
+
+  useEffect(() => {
+    const create = () => {
+      const target = document.getElementById(targetId);
+      if (!window.hbspt || !target) return;
+      target.innerHTML = "";
+      window.hbspt.forms.create({ portalId, formId, region, target: `#${targetId}`, css: "" });
+    };
+
+    if (window.hbspt) {
+      create();
+      return;
+    }
+
+    const src = `https://js-${region}.hsforms.net/forms/embed/v2.js`;
+    let script = document.querySelector(`script[src="${src}"]`);
+    if (!script) {
+      script = document.createElement("script");
+      script.src = src;
+      script.charset = "utf-8";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    script.addEventListener("load", create);
+    return () => script.removeEventListener("load", create);
+  }, [portalId, formId, region]);
+
+  return (
+    <div className="hailey-hs-form not-prose">
+      <style>{hsFormStyles}</style>
+      <div id={targetId} style={{ minHeight: "300px" }} />
+    </div>
+  );
+};
+
+Can't find what you're looking for? Send us a message and our support team will get back to you.
+
+<HubspotForm portalId="8690880" formId="ff5171a3-480c-4a31-aa07-016e59e0869c" region="eu1" />

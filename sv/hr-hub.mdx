@@ -1,0 +1,147 @@
+---
+title: "HR-hub"
+---
+
+Lär känna vad HR-huben är för något och hur du kan jobba i den. Guiden går igenom alla sju översikter var för sig.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="gszrlz8" title="HR-hub" />
+
+## Vad är Hr-hub?
+
+Hr-hub är en samlingsplats för översikter av olika HR-processer. Dessa sju översikter är:
+
+- **Arbetsflöden**
+- **Uppgifter**
+- **Anställningar**
+- **Signeringar**
+- **Lönerevisioner**
+- **Medarbetardokument**
+- **Lönekartläggningar**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-06-2026-12-56-47-6270-PM.png?width=668&height=338&name=image-png-Aug-06-2026-12-56-47-6270-PM.png)
+
+<Tip>
+  **Tips!** Använd gärna filtreringen i de översikter som det är tillgängligt i för att enklare kunna hitta den informationen du söker.
+</Tip>
+
+## Arbetsflöden
+
+Översikten för **Arbetsflöden** visar alla pågående arbetsflöden. Sju kolumner visas i översikten:
+
+- **Typ** – arbetsflödets titel.
+- **För** – den person som arbetsflödet körs för.
+- **Aktuella steg** – det eller de steg som är aktiva nu.
+- **Väntar på** – den eller de medarbetare som arbetsflödet väntar på ska vidta en åtgärd.
+- **Startat av** – om en medarbetares visas här har arbetsflödet startats manuellt av den personen. Om ett kugghjul visas betyder det att arbetsflödet har startats av en automatiskt trigger. Läs mer om hur arbetsflöden fungerar [HÄR](/sv/arbetsfl%C3%B6den-uppgifter#main-content).
+- **Startdatum** – datumet då arbetsflödet startades.
+- **Framsteg** – visar hur långt arbetsflödet har kommit i processen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-06-2026-12-57-33-6178-PM.png?width=670&height=378&name=image-png-Aug-06-2026-12-57-33-6178-PM.png)
+
+När du klickar på ett arbetsflöde får du upp mer detaljerad information om varje uppgift i flödet. Du kan hoovra över check-ikonen på en uppgift för att se när och vem som klarmarkerade uppgiften.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-18-2026-08-03-03-3821-AM.png?width=668&height=381&name=image-png-Aug-18-2026-08-03-03-3821-AM.png)
+
+## Uppgifter
+
+Överikten för **Uppgifter** visar alla uppgifter som ännu inte är klarmarkerade. Kolumnerna som visas är:
+
+- **Uppgift -** titel för uppgiften.
+- **Tilldelad -** medarbetaren som har uppgiften på sin dashboard.
+- **Kategori -** vilken typ av process som uppgiften kommer från, exempelvis **Direktuppgift**.
+- **För -** medarbetaren som uppgiften körs för.
+- **Deadline -** deadline för uppgiften.
+
+Beroende på rättigheter kan du klarmarkera uppgifter åt någon annan. Markera uppgiften till vänster och klarmarkera genom att klicka på check-ikonen i det övre högra hörnet.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-06-2026-01-00-27-1859-PM.png?width=670&height=379&name=image-png-Aug-06-2026-01-00-27-1859-PM.png)
+
+## Anställningar
+
+Den här översikten visas alla era anställningsprocesser, både pågående och avslutade. Kolumnerna som visas är:
+
+- **I anställningsprocess** - medarbetaren som är i anställningsprocess.
+- **Typ** - typen av anställning, exempelvis återanställning.
+- **Nuvarande steg** - nuvarande steg i processen.
+- **Väntar på** - medarbetaren som har nuvarande uppgift i processen.
+- **Började på** - datumet som processen startade.
+- **Progress** - visar hur långt processen har kommit.
+
+När du klickar på en anställningsprocess visas mer detaljerad information om varje uppgift i processen. Du kan visa kontraktet genom att klicka på **Visa kontrakt**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-06-2026-01-25-54-4637-PM.png?width=666&height=382&name=image-png-Aug-06-2026-01-25-54-4637-PM.png)
+
+Du kan ändra ägare av anställningsprocessen. Klicka på de **tre prickarna - redigera** och ändra ägare - **Spara**. Läs mer om hur anställningsprocessen fungerar [HÄR](/sv/iniate-hire).
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-07-27-23-3955-AM.png?width=670&height=383&name=image-png-Aug-07-2026-07-27-23-3955-AM.png)
+
+## Signeringar
+
+Denna översikt visar alla pågående signeringar. Följande kolumner visas:
+
+- **Medarbetare** - medarbetaren som signeringen gäller för. Dokumentet kommer landa på denna medarbetares profil.
+- **Mall** - titeln på dokumentet som signeras.
+- **Granskare** - granskare för signeringen.
+- **Signerare** - signeringspart(er).
+- **Skickat** - datumet signeringen startades.
+- **Progress** - hur långt processen har kommit.
+
+Du kan radera en signering genom att markera den och klicka på **Soptunnan** i det övre högra hörnet - **Ja jag är säker.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-06-2026-01-26-22-8935-PM.png?width=666&height=382&name=image-png-Aug-06-2026-01-26-22-8935-PM.png)
+
+## Lönerevisioner
+
+Här visas alla lönerevisioner. Klicka på en lönerevision för att se mer detaljerad information. Läs mer om hur lönerevision fungerar i guiderna [HÄR](/sv/kompensation#l%C3%B6nerevision).
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-06-2026-01-26-59-7350-PM.png?width=670&height=270&name=image-png-Aug-06-2026-01-26-59-7350-PM.png)
+
+## Medarbetardokument
+
+Översikten för medarbetardokument visar alla dokument. Du kan se följande kolumner:
+
+- **Namn** - namn på dokumentet. Detta kan ändras på dokumentet från medarbetarens profil.
+- **Mapp** - namn på mappen som dokumentet ligger i.
+- **Medarbetare** - medarbetaren vars profil dokumentet finns på.
+- **Uppladdad** - datumet som dokumentet laddades upp.
+- **Raderingsregel** - Ja eller Nej. Hoovra över för att se mer information.
+- **Raderingsdatum** - datumet som dokumentet kommer raderas från Hailey.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-06-2026-01-27-47-5351-PM.png?width=667&height=377&name=image-png-Aug-06-2026-01-27-47-5351-PM.png)
+
+## Lönekartläggningar
+
+Denna översikt visar alla lönekartläggningar. Klicka in på en lönekartläggning för att se mer detaljerad information. Läs mer om hur lönekartläggningar fungerar i guiden [HÄR](/sv/pay-survey).
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-06-2026-01-28-17-2823-PM.png?width=669&height=384&name=image-png-Aug-06-2026-01-28-17-2823-PM.png)
+
+## Rättigheter
+
+- **Aktivera** ger rättigheten att visa och redigera **eller** visa översikten i HR-huben på omfattade medarbetare. Hoovra över informationsikonen för den specifika rättigheten för att veta mer detaljerad information.
+- **Visa** ger rättigheten att visa översikten på medarbetare som omfattas.
+- **Visa och ändra** ger rättigheten att visa och redigera översikten på de medarbetare som omfattas.
+
+Läs mer om hur Roller & rättigheter fungerar i guiden [HÄR](/sv/roles-and-rights).
+
+## Vanliga fragor
+
+**Fråga**: Våra chefer kan inte se sina medarbetares arbetsflöden i översikten, varför?
+
+För att kunna få tillgång till översikten behövs det rättigheter att visa och/eller visa och ändra arbetsflöden på medarbetare under sig. Läs mer om Roller & rättigheter HÄR.
+
+**Fråga**: Varför kan jag inte markera förberedande frågor för one-to-ones i översikten för Uppgifter?
+
+Det går att klarmarkera uppgifter åt någon annan om uppgiften kommer från ett arbetsflöden. Andra typer av uppgifter behövs hanteras från ägaren av uppgiften eller så behöver processen raderas.

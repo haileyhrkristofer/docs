@@ -1,0 +1,146 @@
+---
+title: "Time cycles"
+---
+
+With Hailey’s time cycles, employees and approvers receive a monthly reminder to review and approve time and time off.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="Jh1F7aL" title="Time cycles" />
+
+## What are time cycles?
+
+Time cycles are monthly automated reminders that help ensure all time and time off are reported and approved correctly.
+
+Employees are prompted to submit their time and time off for the previous month, while approvers are reminded to review and approve entries.
+
+Once the approver has approved the time cycle, the period is locked and can no longer be edited.
+
+## How do you set up time cycles in Hailey?
+
+To activate your time cycles you need to go to **Settings - Time & time off - Reporting policy**. From here, you can either create a new reporting policy or edit an existing one using the three dots.
+
+In the reporting policy, you activate time cycles and define:
+
+- How many days after the end of the cycle employees receive a **reminder** to submit their time.
+- How many days after the end of the cycle approvers receive a **reminder** to approve.
+
+Once activated and assigned to active employees, time cycles are automatically sent out each month for the previous period.
+
+<Note>
+  Please note: If you activate Time cycles in the **middle of a month**, you will receive the tasks to submit and approve time/time off for the previous month on the **following day**.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-15-2026-09-27-03-8290-AM.png?width=670&height=375&name=image-png-Jul-15-2026-09-27-03-8290-AM.png)
+
+## How do you submit time cycles?
+
+On the first day of each month, you will receive a new task on your Dashboard along with an \*\*email.
+
+You can find your task on your dashboard under **My tasks**, where you can review and complete it.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-23-2026-08-57-14-8240-AM.png?width=670&height=372&name=image-png-Jul-23-2026-08-57-14-8240-AM.png)
+
+When you open the task, you will see your calendar for the previous month. Review all entries carefully and **make sure everything is correct** before submitting.
+
+If you need to add or adjust time or time off, close the task and return to your dashboard or profile. From there, you can select **Add time off** or **Report time** to update your entries. Once you’ve made the necessary updates, return to the task and submit it.
+
+<Note>
+  Regardless of if you've had any reported time or time off during this month you need to submit it.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-19-2026-07-36-30-3385-AM.png?width=670&height=381&name=image-png-Aug-19-2026-07-36-30-3385-AM.png)
+
+When you submit your time or time off your approver will be able to approve it.
+
+Once your time cycle is approved you **no longer have the possibility to register any time or time off for that month.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-19-2026-07-37-44-4297-AM.png?width=664&height=374&name=image-png-Aug-19-2026-07-37-44-4297-AM.png)
+
+## How do you approve time cycles?
+
+On the first day of each month, approvers receive a task on their **Dashboard**.
+
+When you open the task, you will see an overview of the employees’ reported time and time off for the previous month.
+
+By approving the time cycle for each employee, **you confirm their reported time and time off and lock the month**.
+
+Once **the month is locked, employees can no longer add or edit any time or time off** for that period.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/Eng-png.png?width=670&height=427&name=Eng-png.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/2-png-Sep-22-2026-02-31-07-7677-PM.png?width=670&height=367&name=2-png-Sep-22-2026-02-31-07-7677-PM.png)
+
+<Note>
+  Note that once a time cycle has been approved, you can only add or remove time or time off for that period if you have the right to **Edit approved time cycle.**
+</Note>
+
+Approvers can approve both submitted and unsubmitted time cycles.
+
+If you approve a time cycle that has not yet been submitted by the employee, the employee's task will disappear and they will no longer be able to register any time or time off for that month.
+
+After the time cycle has been approved, a confirmation email will automatically be sent to the employee.
+
+## Rights
+
+The following rights may be useful when working with time cycles:
+
+- Time & time off - View: gives access to the Time tab on the employee profile.
+- **Time & time off - Edit approved time cycle**: allows to edit an approved month's entries.
+
+If you want to read more about how **Roles & rights** work in Hailey, click [HERE](/roles-and-rights)!
+
+## Common questions
+
+Below are answers to common questions about time cycles. These FAQs are intended to help both employees and admins troubleshoot common issues and find the information you need.
+
+<AccordionGroup>
+  <Accordion title="Why don't I see a task to submit my time/time off?">
+    There are a few reasons why the task may not be visible:
+
+    - Have you already submitted your time/time off for the previous month? Once your submission is complete, the task is removed.
+    - Has the new time cycle already started? A new task is created on the **first day of each month** at approximately **09:00** CET/CEST\*\*.\*\*
+    - Your time cycle might have already been approved. Even if you haven't submitted through the task, your approver can approve it. Check your mail if you have received an email that the month has been approved. <img src="https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-17-2026-11-17-50-1900-AM.png?width=417&height=201&name=image-png-Jul-17-2026-11-17-50-1900-AM.png" alt="" /> If you need to update your entries, reach out to your **admin,** who can make changes to the previous month.
+  </Accordion>
+
+  <Accordion title="I need to report time and time off for the previous month, but the system won't let me. What should I do?">
+    Once your time cycle has been approved, the month is locked and can no longer be edited.
+
+    Only **admins** and users with right to **Edit approved time cycle** can make changes.
+
+    Admins can review and manage these rights under **Settings - Security - Roles & Rights.**
+  </Accordion>
+
+  <Accordion title="My employee is on vacation when the month changes and can't submit their time cycle. Can I still approve it?">
+    Yes. You can approve a time cycle even if the employee hasn't submitted it through the task.
+
+    If an employee is going to be away when the month changes, it's a good idea to ask them to check and complete their time entries before they leave. That way, you can review and approve the time cycle as usual while they're on vacation.
+
+    **Question**: I didn't have any time or time off entries last month - do I still need to submit the time cycle?
+
+    Even if you didn't have any time off or reported working hours during the previous month, you still need to review and submit the time cycle. This confirms that your entires are correct and allows your approver to finalize the month.
+  </Accordion>
+
+  <Accordion title="I only report time off in Hailey. Why does the task ask me to submit my time as well?">
+    The task always refers to both time and time off. If you only report time off, that's all you need to review.
+  </Accordion>
+
+  <Accordion title="Why can't I report time from the task?">
+    The task is not used to report time or time off. Its purpose is to **review and confirm** your time and time off registrations for the previous month before the month is locked.
+
+    If you need to report time or edit a registration, do so by selecting **Report time** from the dashboard or your profile.
+
+    Once all registrations are correct, you can submit your time and time off. This confirms that you have reviewed your entries, allowing the approver to approve and finalize the month.
+  </Accordion>
+</AccordionGroup>

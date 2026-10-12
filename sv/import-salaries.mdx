@@ -1,0 +1,171 @@
+---
+title: "Importera löner"
+---
+
+Importera löner för flera medarbetare samtidigt och få en samlad överblick över organisationens nuvarande och historiska lönedata. I den här guiden får du veta vad som behöver vara på plats innan importen, hur du fyller i importmallen och hur du genomför importen i Hailey.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="UyypPwH" title="Importera löner" />
+
+## Innan du sätter igång
+
+Innan du importerar löner behöver era medarbetare vara importerade till Hailey och era lönetyper skapade i inställningar.
+
+- **[HÄR](/sv/import-employees)** kan du läsa mer om hur du **importerar medarbetare** till Hailey.
+- **[HÄR](/sv/salary-types)** kan du läsa mer om hur du skapar **lönetyper.**
+
+Dessutom är det bra att tänka på följande:
+
+- De valutor som ska användas behöver vara aktiverade i kontot.
+- Du behöver besluta om historiska löner ska inkluderas.
+- Eventuella löneintegrationer och deras krav på löneinformationen bör vara utredda.
+
+## Hur importerar du löner?
+
+Ladda ner importmallen genom att gå till **Medarbetare** i huvudmenyn, klicka på **Importera** - **Lön** och sedan **Ladda ner** **importmall**. Öppna sedan mallen för att komma igång och fyll i relevant information för varje medarbetare.
+
+![Import1](https://docs.haileyhr.com/hs-fs/hubfs/Import1.png?width=670&height=293&name=Import1.png)
+
+<Note>
+  Importfilen innehåller information om medarbetarna A-D. Det är viktigt att ni **inte ändrar** uppgifterna i dessa kolumner.
+
+  Om informationen ändras kan Hailey inte koppla lönen till rätt medarbetare.
+</Note>
+
+## Fyll i importmallen
+
+Fyll i följande information för varje lön som ska importeras. Importmallen följer ett särskilt format som behöver skrivas på exakt rätt sätt. Annars registreras inte informationen korrekt vid importen.
+
+## Format
+
+- **Salary Title**: Vad ni önskar döpa lönerna till. Här väljer ni fritt, i bilden nedan har vi valt att döpa den till Månadslön.
+- **Pay Period**: Här styr ni huruvida lönen är årlig (skriv **Yearly**), månatlig (skriv **Monthly**), varannan vecka (skriv **Biweekly**) eller per timme (skriv **Hourly**).
+- **Amount**: Ange medarbetarens lön i siffror, inga mellanslag eller andra tecken. Om lönen innehåller decimaler, använd punkt (.) — till exempel: 30554.5 SEK.
+- **Start Date**: Det datum då detta belopp började betalas ut. Datumformatet är **ÅÅÅÅ-MM-DD**.
+- **End Date**: I regel ska inget fyllas i här. Ett slutdatum ska endast anges om en lön har eller ska sluta betalas ut helt. Detta är alltså **INTE** relevant enbart vid förändring av summan.
+- **Currency Code**: Här fyller ni i valutan på lönen, och detta i form av valutakoden som gäller. T. ex. SEK, EUR, USD, DKK, NOK och GBP. För att möjliggöra olika valutor, gå till **Inställningar - Allmänt - Valutor**, och lägg till vilka valutor som är tillåtna i ert konto.
+- **Salary Type**: Fylls i i enlighet med de [lönetyper](/sv/salary-types) ni skapat. Behöver stavas exakt likadant som ni stavat i Hailey.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-27-2026-02-18-32-8544-PM.png?width=670&height=141&name=image-png-Jul-27-2026-02-18-32-8544-PM.png)
+
+## Hur importerar man historiska löneförändringar?
+
+Du kan importera både aktuella och historiska löner i samma fil. Börja med att ange medarbetarens ursprungliga lön på den första raden. För varje historisk löneförändring lägger du sedan till en **ny rad** direkt under och fyller i det nya lönebeloppet samt det datum då lönen började gälla. Förändringarna ska registreras i kronologisk ordning, från den äldsta lönen till den nuvarande.
+
+Observera att kolumnerna **A–F** samt **J–K** endast ska fyllas i på den första raden för varje medarbetare. På raderna för historiska löneförändringar fyller du endast i det nya lönebeloppet och dess startdatum.
+
+<Note>
+  Ange inte ett slutdatum på varje historiskt belopp. Ett slutdatum används endast när hela lönen har upphört eller ska upphöra.
+</Note>
+
+## Hur lägger man till flera löner för samma medarbetare?
+
+En medarbetare kan ha flera separata löner, till exempel en grundlön och ett ansvarstillägg.
+
+För att lägga till ytterligare en lön skapar du en ny rad i importfilen och kopierar medarbetarens ID, anställningsnummer, namn och företagsmail till den nya raden. Ange därefter en ny **Lönetitel** och fyll i löneuppgifterna, inklusive **Löneperiod**, **Belopp**, **Startdatum**, **Valutakod** och **Lönetyp**. Du kan även ange ett **Slutdatum** om det är aktuellt.
+
+Varje separat lön ska registreras på en egen rad där medarbetarens information är ifylld.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-21-2025-11-48-07-9312-AM.png?width=670&height=149&name=image-png-Jul-21-2025-11-48-07-9312-AM.png)
+
+<Tip>
+  Om en medarbetare finns med i importmallen men inte ska få någon lön, raderar du hela medarbetarens rad från filen.
+</Tip>
+
+## Ladda upp och validera importfilen
+
+När du har skrivit in informationen i filen är det dags att importera den! Gå till **Medarbetare** i huvudmenyn och klicka på **Importera**  **→** **Lön**. Klicka sedan på rutan i mitten som säger **”Klicka eller släpp filen här för att ladda upp”**.
+
+<Note>
+  Om filen innehåller fel visar Hailey var felet finns och varför uppgiften inte kan importeras.
+
+  Hailey informerar även om en medarbetare redan har en registrerad lön, vilket minskar risken för att dubbletter skapas. Korrigera eventuella fel i filen och ladda sedan upp den igen.
+</Note>
+
+## Kontrollera resultatet
+
+När importen har startat visas ett meddelande om att lönerna håller på att importeras.
+
+Importen kan ta en stund beroende på hur många löner filen innehåller. När importen är färdig skickas ett mejl till användaren som genomförde importen.
+
+De importerade lönerna visas därefter på respektive medarbetares profil.
+
+![Import2](https://docs.haileyhr.com/hs-fs/hubfs/Import2.png?width=670&height=309&name=Import2.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-21-2025-10-57-28-5490-AM.png?width=670&height=338&name=image-png-Jul-21-2025-10-57-28-5490-AM.png)
+
+## Hur lägger man till en lön manuellt?
+
+Via medarbetarkortet kan du även lägga till löner manuellt. Gå till medarbetarens profil och klicka på **Åtgärder → Lägg till lön**.
+
+![Läggtill](https://docs.haileyhr.com/hs-fs/hubfs/L%C3%A4ggtill.png?width=670&height=388&name=L%C3%A4ggtill.png)
+
+Fyll i korrekt information. **Slutdatum** ska endast anges om lönen har avslutats eller kommer att avslutas. När du är klar klickar du på **Skicka för godkännande**.
+
+Lönen skickas då vidare till den utsedda godkännaren, som kan välja att **godkänna** eller **avvisa** den nya lönen.
+
+![Ny lön](https://docs.haileyhr.com/hs-fs/hubfs/Ny%20l%C3%B6n.png?width=669&height=381&name=Ny%20l%C3%B6n.png)
+
+Om fel information har registrerats kan lönen tas bort via menyn med de tre punkterna på lönen. Lägg därefter till lönen på nytt med rätt information.
+
+## Hur ändrar man en befintlig lön?
+
+För att ändra beloppet på en befintlig lön följer du guiden **Importera löneförändringar** [HÄR](/sv/import-salary-changes).
+
+För att ändra lönens titel eller lönetyp följer du guiden **Importera förändringar av löneinformation** [HÄR](/sv/import-updated-salary-information).
+
+## Rättigheter
+
+Det är enbart admin i systemet som kan genomföra en import av löner i Hailey.
+
+## Vanliga frågor
+
+<AccordionGroup>
+  <Accordion title="Kan jag importera löner innan medarbetarna har importerats?">
+  Nej. Medarbetarna behöver redan finnas i Hailey eftersom lönerna kopplas till deras befintliga profiler.
+  </Accordion>
+  <Accordion title="Kan jag importera historiska löner?">
+  Ja. Lägg till historiska belopp på separata rader under den ursprungliga lönen och placera förändringarna i kronologisk ordning.
+  </Accordion>
+  <Accordion title="Ska jag ange ett slutdatum när en medarbetare har fått en löneökning?">
+  Nej. Ett slutdatum ska endast anges när hela lönen har upphört eller ska upphöra att betalas ut. Vid en förändring av lönebeloppet lägger du i stället till det nya beloppet med ett nytt startdatum.
+  </Accordion>
+  <Accordion title="Kan samma medarbetare ha flera löner?">
+  Ja. Lägg varje separat lön på en egen rad och fyll i medarbetarinformationen på varje sådan rad.
+  </Accordion>
+  <Accordion title="Måste lönetypen finnas i Hailey innan importen?">
+  Ja. Lönetypen ska vara skapad i Hailey och namnet i importfilen måste överensstämma exakt med namnet i systemet.
+  </Accordion>
+  <Accordion title="Vilka värden kan anges i Pay Period?">
+  Använd något av följande värden:
+
+  - Yearly
+
+  - Monthly
+
+  - Biweekly
+
+  - Hourly
+  </Accordion>
+  <Accordion title="Hur skriver jag ett lönebelopp med decimaler?">
+  Använd punkt som decimaltecken, exempelvis **30554.5**.
+  </Accordion>
+  <Accordion title="Vad händer om en medarbetare redan har en lön?">
+  Hailey informerar om att en lön redan finns registrerad för att minska risken för dubbletter. Kontrollera den befintliga lönen innan du fortsätter med importen.
+  </Accordion>
+  <Accordion title="Vad händer om importfilen innehåller ett fel?">
+  Hailey validerar filen och visar var felet finns och varför uppgiften inte kan importeras. Korrigera filen och ladda sedan upp den igen.
+  </Accordion>
+</AccordionGroup>

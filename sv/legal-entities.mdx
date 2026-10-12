@@ -1,0 +1,153 @@
+---
+title: "Kom igång med flera legala enheter"
+---
+
+Om er organisation består av flera legala enheter kan Hailey hjälpa er att hantera dem i samma konto. I den här guiden går vi igenom hur ni skapar legala enheter och hur de kan användas för att anpassa upplevelsen för olika delar av organisationen.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="ZbXmac6" title="Kom igång med flera legala enheter" />
+
+## Vad är en legal enhet?
+
+En legal enhet representerar ett företag inom er organisation. Om organisationen består av flera registrerade bolag kan varje bolag läggas upp som en egen legal enhet i Hailey.
+
+Varje legal enhet kan ha sina egna medarbetare, företagsuppgifter, varumärkesprofilering, arbetsflöden och andra inställningar, samtidigt som allt hanteras i samma Hailey-konto.
+
+Genom att använda flera legala enheter kan ni skapa en mer anpassad upplevelse för varje bolag samtidigt som administrationen hålls samlad och effektiv.
+
+## Innan du sätter igång
+
+Innan ni konfigurerar flera legala enheter i Hailey rekommenderar vi att ni samlar in några viktiga uppgifter för varje bolag. Det gör uppsättningen smidigare och hjälper er att få rätt struktur från början.
+
+Det kan vara bra att ha följande tillgängligt:
+
+- Företagsnamn
+- Organisationsnummer
+- Logotyper och grafiskt material
+- Information om vilka medarbetare som tillhör respektive legal enhet
+
+## Hur sätter man upp legal enheter?
+
+#### Allmänna inställningar
+
+Under **Inställningar → Allmänt → Företag** kan ni konfigurera företagets språk.
+
+Vi rekommenderar att ni väljer ett språk som samtliga medarbetare förstår, eftersom det används i systemgenererad kommunikation, såsom notiser och e-postpåminnelser.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-22-2026-08-33-47-7509-AM.png?width=670&height=283&name=image-png-Jul-22-2026-08-33-47-7509-AM.png)
+
+#### Ladda upp logotyper
+
+Om ni vill använda olika logotyper för olika juridiska enheter kan dessa laddas upp under **Inställningar → Allmänt → Branding**.
+
+Lägg till de logotyper ni behöver och välj en standardlogotyp som används som förvald logotyp i systemet.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-22-2026-08-34-38-8077-AM.png?width=670&height=307&name=image-png-Jul-22-2026-08-34-38-8077-AM.png)
+
+<Tip>
+  Om ni har flera legala enheter rekommenderar vi att ni laddar upp samtliga logotyper redan från början. Det gör det enklare att koppla rätt logotyp till rätt anställningsmall och medarbetarupplevelse senare i implementationen.
+</Tip>
+
+#### Skapa legala enheter
+
+Gå till **Inställningar → Organisation** för att lägga till legala enheter i organisationen.
+
+Klicka på **Lägg till ny → Legal enhet** och fyll i företagsnamn samt organisationsnummer för varje legal enhet.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-22-2026-08-35-49-7978-AM.png?width=670&height=286&name=image-png-Jul-22-2026-08-35-49-7978-AM.png)
+
+<Note>
+  Läs mer om hur du bygger upp organisationen i Hailey **[HÄR](/sv/organization-in-hailey).**
+</Note>
+
+## Hur kan legala enheter användas i Hailey?
+
+#### Omfattning
+
+När ni har skapat era legala enheter kan ni använda **omfattning** för att styra vilka medarbetare som ska kunna ta del av specifikt innehåll, inställningar och funktionalitet.
+
+Genom att omfatta innehåll på en legal enhet kan ni skapa en mer relevant medarbetarupplevelse och säkerställa att information endast visas för rätt målgrupp.
+
+En medarbetare i en legal enhet kan exempelvis behöva tillgång till andra dokument, nyheter eller arbetsflöden än en medarbetare i en annan legal enhet.
+
+Legala enheter kan användas som omfattningskriterium inom flera delar av Hailey, bland annat:
+
+- Arbetsflöden
+- Anställningsmallar
+- Anpassade roller
+- Dokument
+- Nyheter
+- Företagshörnan
+- Frånvaroanledningar
+
+Det gör det möjligt att hantera flera bolag i samma Hailey-konto samtidigt som företagsspecifik information och processer hålls separerade.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-22-2026-08-38-37-9497-AM.png?width=468&height=455&name=image-png-Jul-22-2026-08-38-37-9497-AM.png)
+
+<Note>
+  Läs mer om omfattning [**HÄR**](/sv/scope).
+</Note>
+
+#### Arbetsflöden
+
+När ni skapar **arbetsflöden** i Hailey kan olika uppgifter behöva triggas beroende på vilken legal enhet arbetsflödet gäller.
+
+Genom att använda omfattning kan uppgifter begränsas till medarbetare inom specifika legala enheter. På så sätt får varje medarbetare endast de uppgifter som är relevanta för deras bolag.
+
+Exempelvis kan ett onboardingflöde innehålla uppgifter som endast gäller medarbetare i en viss legal enhet.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-22-2026-08-39-21-7091-AM.png?width=670&height=399&name=image-png-Jul-22-2026-08-39-21-7091-AM.png)
+
+<Note>
+  Läs mer om hur du skapar arbetsflöden [**HÄR**](/sv/create-workflows).
+</Note>
+
+#### Anställningsmallar
+
+Anställningsmallar kan också omfattas av legala enheter. Det gör det möjligt att skapa olika onboardingupplevelser för olika bolag inom organisationen. Varje legal enhet kan till exempel ha egna logotyper, språkinställningar, onboardinginnehåll och anställningsmallar.
+
+Vi rekommenderar att ni skapar separata anställningsmallar om onboardingprocessen skiljer sig mellan bolagen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-22-2026-08-37-57-9869-AM.png?width=670&height=353&name=image-png-Jul-22-2026-08-37-57-9869-AM.png)
+
+<Note>
+  Läs mer om anställningsmallar [**HÄR**](/sv/hiring-templates).
+</Note>
+
+#### Anpassade roller
+
+**Anpassade roller** kan användas när vissa behörigheter endast ska gälla inom en specifik legal enhet. Exempelvis ska vissa roller få tillgång till information och funktioner för medarbetare inom sin egen legala enhet, medan åtkomst till övriga legala enheter begränsas.
+
+Det hjälper er att säkerställa att användare har rätt behörigheter samtidigt som företagsspecifik information hålls separerad.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-22-2026-08-40-14-7697-AM.png?width=670&height=336&name=image-png-Jul-22-2026-08-40-14-7697-AM.png)
+
+<Note>
+  Läs mer om anpassade roller **[HÄR.](/sv/roles-and-rights#lagg_till_ny_riktad_roll)**
+</Note>
+
+## Vanliga fragor
+
+<AccordionGroup>
+  <Accordion title="Kan medarbetare tillhöra flera legala enheter?">
+  Nej, en medarbetare kan endast vara kopplad till en legal enhet åt gången.
+  </Accordion>
+  <Accordion title="Kan varje legal enhet ha sin egen logotyp?">
+  Ja, ni kan ladda upp flera logotyper och använda olika varumärkesprofiler för olika legala enheter.
+  </Accordion>
+  <Accordion title="Kan jag skapa olika onboardingprocesser för olika legala enheter?">
+  Ja, genom att använda separata anställningsmallar kan ni anpassa onboardingupplevelsen per legal enhet.
+  </Accordion>
+</AccordionGroup>

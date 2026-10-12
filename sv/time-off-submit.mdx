@@ -1,0 +1,164 @@
+---
+title: "Rapportera frånvaro"
+---
+
+Den här guiden förklarar hur du registrerar, ändrar, tar bort och följer din frånvaro i Hailey.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="8UujjfS" title="Rapportera frånvaro" />
+
+## Vad är frånvaro?
+
+Funktionen **Frånvaro** gör det möjligt att registrera frånvaro, till exempel semester eller annan ledighet.
+
+När du skickar in en frånvaroanmälan **skickas den automatiskt för godkännande**. Du kan även följa statusen på dina frånvaroärenden direkt i Hailey.
+
+<Tip>
+  Läs mer om hur du godkänner och ändrar frånvaro [HÄR](/sv/time-off-approve-and-change).
+</Tip>
+
+Innan du sätter igång
+
+Innan du kan registrera frånvaro behöver du säkerställa att:
+
+- Du har en **rapporteringspolicy** kopplat till din anställning.
+
+Läs mer om hur man tilldelar en rapporteringspolicy för medarbetare [HÄR](/sv/update-time-and-time-off-settings-on-employee).
+
+## Hur lägg man till frånvaro?
+
+Du kan registrera frånvaro för idag, ett framtida datum eller ett datum som redan har passerat. När du skickar in din frånvaro skickas den automatiskt till en godkännare.
+
+1. Gå till **Dashboarden** och klicka på **Lägg till frånvaro**.
+2. Välj **datumintervall** för din frånvaro.
+3. Välj **frånvaroanledning**.
+4. Ange **omfattningen** av din frånvaro.
+
+- Du kan registrera frånvaro i **procent** eller **timmar**.
+- Om du registrerar frånvaro i timmar och har arbetstid konfigurerad i din profil kan du aktivera **Hela dagen?** för att registrera en hel arbetsdag automatiskt. Avaktivera alternativet om du vill ange ett specifikt antal timmar.
+
+5. Lägg till en **kommentar** om du vill ge ytterligare information (valfritt).
+6. Om du vill registrera flera frånvaroperioder i samma anmälan klickar du på **Lägg till ytterligare frånvaro**.
+7. Klicka på **Skicka till godkännare** för att skicka in din frånvaroanmälan.
+
+<Note>
+  Det går inte att registrera ledighet på en **arbetsfri** **dag**.
+
+  Om en frånvaro registreras för **en period som inkluderar arbetsfria dagar** kommer ingen frånvaro registreras på de dagar som är arbetsfria.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-19-2026-07-26-11-6274-AM.png?width=670&height=369&name=image-png-Aug-19-2026-07-26-11-6274-AM.png)
+
+## Hur ändrar eller tar man bort sin frånvaro?
+
+Om din frånvaroansökan fortfarande **väntar på godkännande** kan du ändra eller ta bort den vid behov.
+
+Om du upptäcker ett fel, till exempel att du valt fel anledning, kan du enkelt **ta bort** ansökan och skicka in en ny med rätt uppgifter.
+
+Så tar du bort en inskickad ansökan:
+
+<Steps>
+  <Step title="Gå till ditt medarbetarkort och öppna fliken Tid">
+    Gå till ditt medarbetarkort och öppna fliken **Tid**.
+  </Step>
+  <Step title="Klicka på papperskorgsikonen uppe till höger">
+    Klicka på **papperskorgsikonen** uppe till höger.
+  </Step>
+  <Step title="Välj de dagar du vill ta bort och bekräfta">
+    Välj de dagar du vill ta bort och **bekräfta.**
+  </Step>
+</Steps>
+
+När ansökan är borttagen kan du skapa en ny frånvaroansökan med korrekta uppgifter.
+
+<Note>
+  **Godkänd frånvaro** kan endast **tas bort av en administratör eller chef som har de behörigheter som krävs**. Läs mer [HÄR](/sv/time-off-approve-and-change).
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/3-png-Apr-28-2026-11-49-37-2869-AM.png?width=670&height=249&name=3-png-Apr-28-2026-11-49-37-2869-AM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/4-png-Apr-28-2026-11-50-16-3063-AM.png?width=670&height=373&name=4-png-Apr-28-2026-11-50-16-3063-AM.png)
+
+## Hur följer man sin ansökan?
+
+Efter att du har skickat in en frånvaroansökan kan du enkelt följa dess status från din startsida.
+
+Alla ansökningar som fortfarande är relevanta (kommande eller i väntan på godkännande) visas i ett uppdateringskort under **Mina uppdateringar**. Där kan du se om din ansökan har blivit godkänd eller inte.
+
+För att se en fullständig översikt över din frånvaro, inklusive tidigare registreringar, går du till fliken **Tid** på ditt medarbetarkort.
+
+<Note>
+  När en frånvaroansökan blivit godkänd eller nekad kommer du att få ett **mail** om detta.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/6-png-Apr-28-2026-11-53-27-2631-AM.png?width=670&height=434&name=6-png-Apr-28-2026-11-53-27-2631-AM.png)
+
+## Rättigheter
+
+Följande rättigheter kan vara användbara när man lägger till frånvaro:
+
+- **Tid & frånvaro - Visa:** ger åtkomst till fliken **Tid** på medarbetarens profil.
+- **Tid & frånvaro - Visa & redigera:** ger möjlighet att lägga till frånvaro som godkänns automatiskt och ta bort redan godkänd frånvaro.
+- **Tid & frånvaro - Ändra godkänd tidscykel:** ger möjlighet att lägga till eller ta bort frånvaro i en redan godkänd månad.
+
+För att läsa mer om hur **Roller & rättigheter** fungerar i Hailey, klicka [HÄR](/sv/roles-and-rights).
+
+## Vanliga fragor
+
+<AccordionGroup>
+  <Accordion title="Jag vill lägga till frånvaro, men jag kan inte hitta knappen Lägg till frånvaro. Vad ska jag göra?">
+    Om knappen **Lägg till frånvaro** saknas beror det troligen på att ingen rapporteringspolicy är kopplad till din anställning.
+
+    För att kunna registrera frånvaro behöver en admin eller en användare med rätt behörighet uppdatera dina inställningar för **Tid & frånvaro** och tilldela rätt rapporteringspolicy.
+
+    Läs mer om hur du uppdaterar en medarbetares inställningar för Tid & frånvaro [HÄR](/sv/update-time-and-time-off-settings-on-employee).
+  </Accordion>
+
+  <Accordion title="Var kan jag se min godkända frånvaro?">
+    Du kan se din godkända frånvaro under fliken **Tid** i din profil. Dina registrerade frånvarodagar visas i kalendern.
+
+    Kommande frånvaro visas även under **Mina uppdateringar** på startsidan Där kan du se om din ansökan har blivit godkänd eller fortfarande väntar på godkännande.
+  </Accordion>
+
+  <Accordion title="Varför väntar min frånvaroansökan fortfarande på godkännande?">
+    Din frånvaroansökan förblir väntande tills den har granskats och godkänts av din tilldelade **godkännare för tid och frånvaro**.
+
+    Om du är osäker på vem som är din godkännare kan du kontakta din chef eller Hailey-admin.
+  </Accordion>
+
+  <Accordion title="Varför kan jag inte ansöka om frånvaro vissa dagar?">
+    Vissa dagar kan vara otillgängliga på grund av organisationens inställningar, stängda perioder eller begränsningar kopplade till frånvaroanledningen.
+
+    Om en dag är **gråmarkerad** i din kalender är det en **arbetsfri dag**. Det går inte att registrera ledighet på en arbetsfri dag.
+
+    Får du ett meddelande när du försöker registrera ledighet? I så fall kan du ha uppnått det maximala antalet dagar som du får registrera för den aktuella frånvaroanledningen.
+
+    Om du tror att något är fel kan du kontakta din Hailey-admin.
+
+    **Fråga**: Varför kan jag inte lägga till eller ta bort frånvaro i en tidigare månad?
+
+    Om ni använder **tidscykler** kan månaden redan vara godkänd. När en tidscykel har godkänts kan endast användare med behörigheten **Redigera godkänd tidscykel** göra ändringar i den månadens frånvaro. Läs mer om tidscykler [**HÄR**](/sv/time-cycles).
+
+    Även om ni **inte** använder tidscykler krävs särskild rättighet för att kunna ta bort **godkänd frånvaro.**
+
+    Om ni **inte** använder tidscykler ska det gå att registrera frånvaro för en tidigare månad.
+
+    **Fråga**: Kan jag lägga till frånvaro för flera anställda samtidigt?
+
+    Nej, det går inte att lägga till frånvaro för flera anställda samtidigt.
+
+    För att lägga till frånvaro för en anställd går du till personens **medarbetarprofil** och klickar på **Hantera - Lägg till frånvaro**. Du kan även lägga till frånvaro direkt från **Tidsöversikten** genom att klicka på en dag i den anställdes rad. Du kan registrera både en enskild dag eller en längre period.
+  </Accordion>
+</AccordionGroup>

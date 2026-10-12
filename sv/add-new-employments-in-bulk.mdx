@@ -1,0 +1,114 @@
+---
+title: "Lägg till ny anställning i bulk"
+---
+
+Har du flera medarbetare som ska påbörja en ny anställning samtidigt? Med Lägg till ny anställning i bulk, kan du enkelt lägga till en ny anställning med bara några klick.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="bX1ngMp" title="Lägg till ny anställning i bulk" />
+
+## Vad är lägg till ny anställning i bulk?
+
+Lägg till ny anställning i bulk gör det enkelt och effektivt att lägga till flera medarbetares nya anställning samtidigt. Detta kan vara användbart vid organisationsförändringar, till exempel när flera medarbetare byter roll eller anställning och du vill skapa en ny anställning i ett svep.
+
+<Note>
+  Vill du bara lägga till en anställning för en medarbetare? Klicka [**HÄR**](/sv/employment-wizard) för att läsa mer.
+</Note>
+
+## Hur lägger man till ny anställning i bulk?
+
+Gör så här:
+
+<Steps>
+  <Step title="Gå till Medarbetare i menyn till vänster">
+    Gå till **Medarbetare** i menyn till vänster.
+  </Step>
+  <Step title="Markera de medarbetare i listan som ska tilldelas samma nya">
+    Markera de medarbetare i listan som ska tilldelas samma nya anställning.
+  </Step>
+  <Step title="Klicka på Hantera - Lägg till ny anställning i bulk">
+    Klicka på **Hantera** - **Lägg till ny anställning i bulk**.
+  </Step>
+</Steps>
+
+En översikt öppnas där du ser de medarbetare som du har valt under sektionen **För**.
+
+Välj sedan ett **Startdatum** för när den nya anställningen ska starta.
+
+<Note>
+  Om en medarbetares anställning är aktiv på det valda startdatumet sätts automatiskt ett slutdatum på den befintliga anställningen till dagen innan den nya anställningen börjar.
+
+  Anställningar som startar samma dag, eller efter det valda startdatumet, påverkas inte.
+</Note>
+
+Klicka på **\+ Lägg till fäl**t under sektionen **Anställningsfält att uppdatera** för att välja vilka fält som ska uppdateras i den nya anställningen för de valda medarbetarna.
+
+Du kan uppdatera fält inom:
+
+- **Organisation**
+- **Villkor**
+- **Tid och frånvaro**
+
+Markera de fält du vill ska få nya värden och klicka sedan på **Lägg till**.
+
+<Note>
+  Du behöver bara välja de fält som du vill uppdatera. Fält som du inte markerat behåller automatiskt värdena från medarbetarens tidigare anställning.
+</Note>
+
+Fyll i de nya värdena i de valda fälten. Medarbetarnas nya anställning kommer att få värdet du anger i fältet. När allt ser korrekt ut klickar du på **Bekräfta**.
+
+<Note>
+  När du klickat på **Bekräfta** går det inte att återkalla/ångra anställningen.
+</Note>
+
+Efter att du klickat på **Bekräfta** kommer den nya anställningen att registreras på medarbetarens profil under sektionen **Anställningar.**
+
+## Rättigheter
+
+Admin har automatiskt rättigheten att lägga till ny anställning i bulk.
+
+Vill du ge en annan medarbetare rättigheten att lägga till ny anställning i bulk? Gå då till Roller & rättigheter, **Hantera - Lägg till anställning** (eller Livscykel - Lägg till anställning).
+
+<Note>
+  [**HÄR**](/sv/roles-and-rights) kan du läsa mer om Roller & rättigheter.
+</Note>
+
+## Vanliga fragor
+
+<AccordionGroup>
+  <Accordion title="När ska jag använda Lägg till ny anställning i bulk?">
+    Använd **Lägg till ny anställning i bulk** när flera medarbetare behöver få en ny anställning registrerad i ett svep med nya anställningsvillkor, till exempel vid organisationsförändringar.
+  </Accordion>
+
+  <Accordion title="Vad händer med medarbetarnas befintliga anställningar?">
+    Alla aktiva anställningar på det valda startdatumet avslutas automatiskt dagen innan. Anställningar som börjar på eller efter det datumet påverkas inte.
+  </Accordion>
+
+  <Accordion title="Behöver jag uppdatera alla fält i anställningen?">
+    Nej, du behöver bara uppdatera de fält du vill ska uppdateras. Övriga fält behåller automatiskt värdena från den tidigare anställningen.
+  </Accordion>
+
+  <Accordion title="Kan jag ångra anställningen efter att jag har klickat på **Bekräfta**?">
+    Anställningen går inte att ångra efter att du har klickat på **Bekräfta**. Om du behöver ändra eller ta bort anställningen kan du göra det manuellt från medarbetarens profil. Klicka på anställningen, välj **Hantera** och därefter den sektion du vill ändra, eller välj att ta bort hela anställningen.
+  </Accordion>
+
+  <Accordion title="Får jag en bekräftelse när de nya anställningen har skapats?">
+    Ja, när den nya anställningen är skapade skickas ett bekräftelsemail till den som utförde åtgärden.
+  </Accordion>
+
+  <Accordion title="Vad händer om jag väljer att inkludera ett fält i den nya anställningen, men lämnar värdet tomt?">
+    Om du väljer att ta med ett fält, men inte fyller i något nytt värde i fältet så kommer fältet lämnas tomt i den nya anställningen.
+  </Accordion>
+</AccordionGroup>

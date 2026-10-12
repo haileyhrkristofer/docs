@@ -1,0 +1,86 @@
+---
+title: "Hantera rörliga löner"
+---
+
+Den här guiden visar hur du hanterar rörlig lön i Hailey. Vi går igenom hur du lägger till och registrerar rörliga lönebelopp, hanterar perioder, tar bort registrerade belopp samt vilka behörigheter som krävs för att arbeta med rörlig lön.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="HEWbwaI" title="Hantera rörliga löner" />
+
+## Vad är rörlig lön?
+
+Rörlig lön är ersättning som betalas ut utöver medarbetarens fasta lön, till exempel bonus, provision eller annan prestationsbaserad ersättning.
+
+I Hailey används rörlig lön för att samla och följa sådana ersättningar på ett strukturerat sätt. Det gör det enklare att se vilken typ av rörlig ersättning medarbetaren har, vilka perioder den gäller för och vilka belopp som har registrerats.
+
+## Lägg till ny rörlig lön
+
+Du kan lägga till en ny rörlig lön antingen genom att registrera den manuellt på varje medarbetaröversikt, eller genom att importera den för flera medarbetare samtidigt. Klicka [**HÄR**](/sv/import-variable-pay) för att komma till guiden om import av rörlig lön.
+
+För att lägga till rörlig lön manuellt, gå till medarbetarens profil → **Kompensation** och klicka på **Hantera** uppe i det högra hörnet. Välj sedan **Lägg till rörlig lön.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-14-2026-02-15-26-2392-PM.png?width=539&height=271&name=image-png-Apr-14-2026-02-15-26-2392-PM.png)
+
+Välj typ av rörlig lön, ange period och fyll i summa. Valutan sätts automatiskt utifrån den valda typen av rörlig lön. Klicka på **Spara** för att lägga till den rörliga lönen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-14-2026-02-17-04-9609-PM.png?width=500&height=399&name=image-png-Apr-14-2026-02-17-04-9609-PM.png)
+
+När den rörliga lönen har lagts till hittar du den på medarbetarens profil, under fliken **Kompensation** i sektionen **Rörlig lön.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-21-2026-01-18-33-5413-PM.png?width=435&height=327&name=image-png-Apr-21-2026-01-18-33-5413-PM.png)
+
+## Lägg till belopp och period på existerande rörlig lön
+
+Lägg till ett belopp på en rörlig lön genom att klicka på kortet för den rörliga lönen, välj sedan **Hantera → Lägg till belopp** och fyll i perioden beloppet gäller för. På så sätt skapas en historik över beloppen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202026-04-21%20kl-%2015-25-37-png.png?width=670&height=327&name=Sk%C3%A4rmavbild%202026-04-21%20kl-%2015-25-37-png.png)
+
+Varje ny period med tillhörande belopp visas i historiken när du klickar på kortet för den rörliga lönen.
+
+## Ta bort belopp
+
+För att ta bort ett eller flera belopp, klicka på kortet för den rörliga lönen. Välj sedan **Hantera → Ta bort belopp**, markera det eller de belopp du vill ta bort och klicka på **Ta bort.**
+
+<Note>
+  Om alla belopp tas bort kommer hela kortet för den rörliga lönen att tas bort.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-21-2026-10-04-06-0631-AM.png?width=476&height=527&name=image-png-Apr-21-2026-10-04-06-0631-AM.png)
+
+## Rättigheter
+
+Admin har som standard tillgång till att hantera rörlig lön.
+
+Om andra roller ska kunna hantera rörlig lön behöver rättigheten nedan aktiveras för den aktuella rollen:
+
+- **Visa & ändra** för **Rörlig lön** under **Kompensation** gör det möjligt att lägga till rörlig lön, lägga till nya belopp och perioder samt ta bort belopp på medarbetare som omfattas av rollen.
+
+<Note>
+  Läs mer om hur du ställer in roller & rättigheter [**HÄR.**](/sv/roles-and-rights)
+</Note>
+
+## Vanliga fragor
+
+<AccordionGroup>
+  <Accordion title="Varför visas inga typer av rörlig lön när jag ska lägga till rörlig lön på en medarbetare?">
+    Om inga typer visas har ni troligen inte skapat några ännu. Typer av rörlig lön skapas under **Inställningar → Kompensation → Rörlig lön.** När de har skapats blir de valbara när du lägger till rörlig lön på medarbetarens profil. Klicka \*\*[HÄR](/sv/create-variable-pay)\*\*för att komma till guiden som beskriver hur du skapar rörliga löner.
+  </Accordion>
+
+  <Accordion title="Ska jag lägga till en ny rörlig lön eller lägga till ett nytt belopp på en befintlig rörlig lön?">
+    Om medarbetaren redan har samma typ av rörlig lön registrerad kan du lägga till ett nytt belopp och en ny period på det befintliga kortet. På så sätt sparas historiken samlat på samma rörliga lön.
+
+    Om det gäller en annan typ av rörlig lön, till exempel provision i stället för bonus, lägger du till en ny rörlig lön.
+  </Accordion>
+</AccordionGroup>

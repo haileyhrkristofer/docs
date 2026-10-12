@@ -1,0 +1,95 @@
+---
+title: "Återanställning och återaktivering"
+---
+
+Ska en tidigare medarbetare återanställas? Eller råkade du avsluta anställningen för en medarbetare av misstag och enkelt vill återaktivera den? Den här guiden visar dig hur.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="0uZI6sF" title="Återanställning och återaktivering" />
+
+## Vad innebär det att återanställa eller återaktivera en medarbetare?
+
+När en tidigare medarbetare återvänder till organisationen kan du enkelt återanställa personen direkt från medarbetarkortet. Då startas anställningsprocessen där du kan registrera den nya anställningens villkor, skriva kontrakt samt samla in nödvändig information från medarbetaren via kandidat- och preboardingportalerna - allt i ett och samma flöde.
+
+Om en medarbetares anställning istället har avslutats av misstag kan du återaktivera den direkt från medarbetarkortet. Då återställs den tidigare anställningen, utan att behöva gå igenom hela anställningsprocessen.
+
+## Hur återanställer man en medarbetare?
+
+Medarbetare som har slutat hos er och har status **Har lämnat** kan enkelt återanställas från deras medarbetarkort. Medarbetaren som har slutat kommer att ha knappen **Återanställ** synlig under sitt namn.
+
+![Skärmavbild 2026-07-27 kl. 15.00.31](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202026-07-27%20kl.%2015.00.31.png?width=670&height=350&name=Sk%C3%A4rmavbild%202026-07-27%20kl.%2015.00.31.png)
+
+Klicka på **Återanställ** och följ wizarden. Wizarden följer samma steg som när en anställning initieras i Hailey, där du fyller i anställningsvillkor, får samla in information om medarbetaren och signera kontrakt.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-11-2025-12-28-20-1441-PM.png?width=670&height=424&name=image-png-Sep-11-2025-12-28-20-1441-PM.png)
+
+<Note>
+  Guiden för hur anställningsflödet fungerar i Hailey hittar ni [HÄR](/sv/iniate-hire#initiera_anstallning).
+</Note>
+
+Vid återanställning av en person som tidigare arbetat hos er och som haft ett konto i Hailey, är det bra att tänka på följande:
+
+- Eventuellt låsa upp kontot för personen så hen kan logga in igen. Ni kan göra detta genom att markera personen från medarbetarlistan, klicka på **Hantera** - **Lås upp medarbetarkonton**. Alternativt kan ni öppna personens medarbetarkort och klicka på **Hantera** - **Lås upp konto**.
+- Gå igenom datat som ligger kvar på personens medarbetarkort och se vilken data som har gallrats som resultat av era GDPR inställningar. Läs mer om GDPR inställningarna och dess resultat [HÄR.](/sv/gdpr)
+
+## Hur återaktiverar man en medarbetare?
+
+Navigera till medarbetarkortet. Den tidigare medarbetaren har då knappen **Återaktivera medarbetare** under sitt namn, som du kan använda för att återaktivera den tidigare anställningen utan att behöva återanställa.
+
+![Skärmavbild 2026-07-27 kl. 15.25.08](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202026-07-27%20kl.%2015.25.08.png?width=670&height=402&name=Sk%C3%A4rmavbild%202026-07-27%20kl.%2015.25.08.png)
+
+<Note>
+  Observera att vid återaktivering av en medarbetare behöver **alla tidigare GDPR-rensade fält fyllas i pånytt** på medarbetarkortet.
+</Note>
+
+När du återaktiverar en medarbetare händer följande:
+
+- **Slutdatumet** för den senaste anställningen samt fältet **Sista arbetsdagen** rensas.
+- Om det finns flera anställningar med samma slutdatum tas slutdatumet bort för **samtliga**.
+- **GDPR-rensningen** av personlig information avslutas.
+
+## Rättigheter
+
+För att kunna återanställa och återaktivera medarbetare krävs följande behörigheter för användare som inte är administratörer:
+
+- **Initiera anställning**
+- **Visa medarbetare som har lämnat**
+
+<Note>
+  Läs mer om roller och rättigheter [HÄR](/sv/roles-and-rights).
+</Note>
+
+## Vanliga fragor
+
+<AccordionGroup>
+  <Accordion title="En tidigare kollega ska börja hos oss igen. Ska jag återaktivera eller återanställa medarbetaren?">
+    **Återanställa** - då kan du skapa en ny anställning med den uppdaterade informationen, skriva kontrakt på den nya anställningen samt samla in information från medarbetaren - allt i ett flöde.
+
+    **Fråga**: Jag återaktiverade en medarbetare, men viss information saknas. Varför?
+
+    När en anställning avslutas startar GDPR-gallringen omedelbart och raderar information enligt den policy för datalagring som du finner under **Inställningar - Säkerhet - GDPR**.
+
+    Om viss information redan har raderats behöver den fyllas i på nytt.
+  </Accordion>
+
+  <Accordion title="Jag har återanställt en medarbetare, men personen kan inte logga in i Hailey. Varför?">
+    Medarbetarens konto kan ha låsts när den tidigare anställningen avslutades. Ett låst konto förhindrar medarbetaren från att logga in.
+
+    För att lösa detta kan du låsa upp kontot genom att antingen:
+
+    - välja medarbetaren i **Medarbetarlistan** och klicka på **Hantera - Lås upp medarbetarkonton**
+    - öppna medarbetarkortet och klicka på **Hantera - Lås upp konto**
+  </Accordion>
+</AccordionGroup>

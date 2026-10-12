@@ -1,0 +1,121 @@
+---
+title: "Importera organisation"
+---
+
+I denna guide går vi igenom hur du går tillväga för att importera era organisatoriska enheter i Hailey!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="15tcK1U" title="Importera organisation" />
+
+## Vad innebär organisationsimporten?
+
+Organisationsimporten gör det enkelt att importera organisationens olika enheter till Hailey, såsom team, avdelningar, arbetsplatser, titlar och andra organisatoriska strukturer.
+
+Importen är särskilt användbar för organisationer med **stora mängder data** eller många organisatoriska enheter, eftersom den minskar behovet av att lägga till varje enhet manuellt.
+
+I den här guiden går vi igenom hur du enkelt importerar era organisatoriska enheter till Hailey och säkerställer att er organisationsstruktur kommer på plats på ett smidigt sätt.
+
+## Innan du sätter igång
+
+Innan du sätter igång med import av organisation är det bra att se över hur er organisation ser ut idag och vilka delar behöver importeras. De organisatoriska delar ni har möjlighet att importera är följande:
+
+- Arbetsplatser
+- Kostnadsställe
+- Avdelningar
+- Team
+- Titlar
+
+<Note>
+  Läs gärna mer om de olika organisatoriska enheterna **[HÄR](/sv/organization-in-hailey)**, för att skapa en förståelse över vilken effekt de i ett senare skede får i Hailey.
+</Note>
+
+## Kom igång med importen!
+
+Ladda ner importmallen genom att gå till **Inställningar → Organisation**. Klicka på **Importera** i det övre högra hörnet och välj den organisatoriska enhet som du vill importera.
+
+Klicka därefter på **Ladda ner importmall** för den valda enheten och öppna filen för att komma igång.
+
+![organisation](https://docs.haileyhr.com/hs-fs/hubfs/organisation.png?width=670&height=219&name=organisation.png)
+
+## Fyll i importmall
+
+I mallen fyller ni i den information som mallen efterfrågar. En rad i importmallen representerar en organisatorisk enhet, beroende på vilken mall ni arbetar i. Exempelvis, importerar ni Arbetsplatser **representerar en rad en arbetsplats**.
+
+Nedan finner ni ett exempel på hur en väl ifylld importfil kan se ut, för att **importera Arbetsplatser**:
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-31-2025-01-26-39-0514-PM.png?width=670&height=145&name=image-png-Oct-31-2025-01-26-39-0514-PM.png)
+
+Notera att nedan är obligatoriskt att fylla i i respektive importmall:
+
+- **Arbetsplatser:** Namn, Adress, Postkod, Stad, Land
+- **Kostnadsställen:** Namn, Kod
+- **Avdelningar:** Namn
+- **Team:** Namn
+- **Titlar:** Namn
+
+<Note>
+  Notera att importen av titlar **inte tillåter kommatecken**. Har ni exempelvis titlar i likhet med Software architect, Back-end behöver ni antingen:
+
+  - Bryta upp titeln i två och applicera respektive titel på medarbetaren i fråga
+  - Sammanfoga titlarna och exkludera kommatecknet
+</Note>
+
+## Importera organisation
+
+När filen är ifylld är det dags att importera!
+
+För att starta importen, gå till **Inställningar → Organisation** och klicka på **Importera**. Välj sedan den organisatoriska enhet som motsvarar den importmall du har arbetat med.
+
+Klicka därefter på rutan **"Klicka eller släpp filen här för att ladda upp"** och välj din ifyllda importfil.
+
+![importera](https://docs.haileyhr.com/hs-fs/hubfs/importera.png?width=670&height=247&name=importera.png)
+
+Skulle någon kolumn som är obligatorisk att fylla i saknas kommer ett **felmeddelande** att dyka upp och informera vilken kolumn och vilken rad som kräver mer information. Ändra det som är i behov av justering, och ladda sedan upp filen på nytt igen.
+
+![wohoo-1](https://docs.haileyhr.com/hs-fs/hubfs/wohoo-1.png?width=670&height=250&name=wohoo-1.png)
+
+När allt stämmer klickar ni på Importera! Importen kan ta en stund beroende på hur mycket som ska importeras. Du kan stänga denna ruta - importen jobbar på ändå!
+
+## Lägg till organisatoriska enheter manuellt
+
+Om ni istället vill lägga till organisatoriska enheter manuellt går det självklart lika bra.
+
+I stället för att klicka på **Importera** i det övre högra hörnet väljer ni **Lägg till**. Därefter väljer ni den typ av organisatorisk enhet som ska skapas, exempelvis team, avdelning eller titel, och fyller i den efterfrågade informationen.
+
+Detta alternativ passar särskilt bra om ni bara behöver lägga till ett fåtal enheter och inte har behov av en större import.
+
+![lagg-till-1](https://docs.haileyhr.com/hs-fs/hubfs/lagg-till-1.png?width=670&height=311&name=lagg-till-1.png)
+
+## Rättigheter
+
+Att importera organisatoriska enheter till ert Hailey konto är något som endast en admin kan göra. Vill du läsa mer om Roller & rättigheter kan du göra det [**HÄR**](/sv/roles-and-rights).
+
+## Vanliga fragor
+
+**Fråga 1:** När ska jag importera organisatoriska enheter och när ska jag lägga till dem manuellt?
+
+Det väljer ni helt själva!
+
+Om ni har många organisatoriska enheter att skapa, till exempel ett stort antal titlar, är det ofta både snabbare och smidigare att använda importen.
+
+Om ni däremot bara behöver lägga till ett fåtal enheter kan det vara enklare att skapa dem manuellt direkt i Hailey.
+
+Oavsett vilken metod ni väljer blir resultatet detsamma – era organisatoriska enheter skapas och kan användas på samma sätt i systemet
+
+**Fråga 2:** Kan jag importera en titel med ett komma-tecken?
+
+Nej, titlar som innehåller kommatecken stöds inte vid import.
+
+Om en titel innehåller ett kommatecken behöver ni antingen dela upp den i två separata titlar och koppla båda till medarbetaren, eller justera titeln genom att ta bort kommatecknet och använda en alternativ benämning.

@@ -1,0 +1,129 @@
+---
+title: "Scope"
+---
+
+Read this guide to learn how scope helps you customise Hailey to different parts of the organization. We explain how to set scope, when to use it and how it works when multiple selections are combined.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="I6ICD7A" title="Scope" />
+
+## What is scope?
+
+Scope is a setting that targets which parts of the organisation a specific type of content should be available to. By scoping a template, document or workflow task – for example – you make Hailey a more relevant and useful tool for each employee, since they only see and have access to what applies to them.
+
+It's a way of customising the platform, making sure the right content reaches the right employees. Depending on where you are in Hailey, you can scope based on:
+
+- Legal entity
+- Location
+- Business area
+- Department
+- Team
+- Title
+- Employment type
+
+In some parts of the platform, you can also choose that something should apply to managers only.
+
+<Note>
+  Scope is about targeting and customising content, while **Roles and rights** control what employees can see and do in Hailey. Read more about managing rights [**HERE.**](/roles-and-rights)
+</Note>
+
+## How to scope
+
+Scope can be added when you create, edit or publish something in Hailey. When scope is available, you'll find a list of all possible options for that part of Hailey under **Scope**.
+
+All you have to do is choose which parts of the organisation you want to include in the scope – *meaning, who should see it* – and then save your changes to apply the scope.
+
+<Tip>
+  If something should be available to all employees, just leave the scope empty.
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-24-2026-08-54-54-7393-AM.png?width=449&height=537&name=image-png-Jun-24-2026-08-54-54-7393-AM.png)
+
+## How does scope work?
+
+When adding scope, you choose which employees should be able to see the content by selecting options within different categories – like **Location**, **Department** or **Title** for example. The available categories depend on where in Hailey you are adding the scope.
+
+Hailey uses these selections to make the content available only to employees who meet the scope requirements. Employees who do not meet the requirements will not see the content in the platform, even if they created it.
+
+<Note>
+  You can still find and edit scoped content where it was created, but it will not appear where it is intended to be used.
+</Note>
+
+If you select multiple options *within the same category*, an employee only needs to match one of the selected options. If you make selections across *different categories,* the employee must match at least one option in each category to see the content.
+
+<Note>
+  Categories left empty do not affect the scope. For example, if you leave Department empty, it does not matter which department the employee belongs to, as long as the employee meets the other selections in the scope.
+</Note>
+
+For example, content scoped to **Location** - **Stockholm**, **Odense** or **Oslo** will only be available for employees in any of those three locations.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2026-12-05-21-3601-PM.png?width=670&height=352&name=image-png-Jul-10-2026-12-05-21-3601-PM.png)
+
+A scope towards **Department** - **IT**, **Legal & Compliance** and **Location** - **Stockholm**, **Oslo**, **Odense** means that the employee must belong to one of those departments and one of those locations.
+
+An employee belonging to IT and London would not see the content – they match the **Department** requirement, but not the **Location** requirement.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2026-12-06-11-8769-PM.png?width=670&height=352&name=image-png-Jul-10-2026-12-06-11-8769-PM.png)
+
+If you add options to a third category, for example **Legal entity** - **Company OY**, the scope becomes even more targeted. Now the employee must also belong to Company OY in addition to meeting the location and department requirements to be included in the scope.
+
+<Note>
+  The more categories you add options to, the more targeted the scope becomes – and the fewer employees will see the content, since it's harder to match many requirements.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2026-12-22-09-3667-PM.png?width=670&height=350&name=image-png-Jul-10-2026-12-22-09-3667-PM.png)
+
+## Common questions
+
+Below you will find frequently asked questions about scope.
+
+<AccordionGroup>
+  <Accordion title="I'm a Hailey admin and just created a Hiring template for our recruiting *managers* working in *Finance* but I can't find it to try it out in the hiring flow. Why can't I see the template?">
+  As an admin, you still need to meet the scope criteria yourself to see something. If you've scoped the template **For managers** in **Finance** you also have to have reportees in Hailey and belong to that department. Or else it won't show up in the hiring flow.
+
+  To try the template you could either:
+
+  - Temporarily remove the scope - try it out - then scope it again.
+
+  - Make a **Copy** of the template and scope it towards yourself to try it.
+
+  If you are unsure of how you've set the scope, go to **Settings** - **Hiring** and you'll see the scope from the overview.
+
+  ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-09-2026-01-49-51-6548-PM.png?width=670&height=171&name=image-png-Jul-09-2026-01-49-51-6548-PM.png)
+
+  The same rule applies across the platform. Meaning, if something isn't showing up where you'd expect it, it's worth checking and adjusting the scope.
+  </Accordion>
+  <Accordion title="When is it useful to scope?">
+  Use scope when something should only be available or applicable to certain parts of the organization.
+
+  **Example**: If you have a **One-to-one template** that is only relevant for a specific legal entity and certain departments, you can set scope on the template. In this example, Legal entities has been set to Demo BD SWE and Department has been set to Recruitment and Finance.
+
+  This means that the template can be used by employees who belong to Demo BD SWE and also belong to either Recruitment or Finance.
+
+  ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-24-2026-10-31-51-9954-AM.png?width=419&height=426&name=image-png-Jun-24-2026-10-31-51-9954-AM.png)
+  </Accordion>
+  <Accordion title="When is scope not needed?">
+  If something should be visible, available or applicable to all employees in your Hailey account, you do not need to add any scope. Instead, leave the scope empty. This means you do not need to select all legal entities, locations, departments or other categories.
+  </Accordion>
+  <Accordion title="Why can’t I see or use the content, even though it exists in Hailey?">
+  This is most likely because it's been scoped and you are not meeting the requirements to be included in the scope yourself.
+
+  **Example:** You have created an article in **Company Corner** and set the scope to Location: Stockholm Office and Department: Finance. The article will then only be shown to employees who belong to both Stockholm Office and Finance.
+
+  If you belong to another location or department, the article will not be shown to you, even if you are an admin and created the article. Check that you are included in the scope if you should be able to access the article.
+
+  The same principle applies across all functionalities in Hailey where scope is used.
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,91 @@
+---
+title: "Direktuppgifter"
+---
+
+Med Direktuppgifter i Hailey kan du enkelt skapa och skicka uppgifter direkt från medarbetarlistan — utan att behöva använda ett arbetsflöde. Be medarbetare uppdatera fält, samla in viktig information och följ upp status – allt på ett och samma ställe. Snabbt, enkelt och effektivt.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="m6a2nyS" title="Direktuppgifter" />
+
+## Vad är direktuppgifter
+
+Direktuppgifter är en funktion i Hailey som gör det möjligt för admins och användare med rätt rättigheter, att skicka uppgifter direkt till medarbetare. Uppgifterna kan innehålla instruktioner eller förfrågningar om att uppdatera specifik profilinformation. Medarbetare får en e-postnotifiering och ser uppgiften i sin **Att göra** på Haileys dashboard. Om standardfält eller egna fält ingår, uppdateras informationen automatiskt när medarbetaren markerar uppgiften som slutförd.
+
+Vanliga exempel inkluderar att uppdatera nödkontakter, ladda upp en profilbild eller välkomna nya medarbetare till Hailey.
+
+## Skicka direktuppgift
+
+När du vill skicka en direktuppgift går du till **Medarbetare** i huvudmenyn. Välj den eller de medarbetare som du vill skapa en direktuppgift för. Klicka på **Hantera – Skicka direktuppgift**. Detta kan även göras direkt från medarbetarkortet.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-12-2026-01-08-12-4038-PM.png?width=650&height=335&name=image-png-Aug-12-2026-01-08-12-4038-PM.png)
+
+Välj mellan att skicka en uppgift med enbart text, eller tillsammans med fälten i en specifik sektion som du vill uppdatera.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-12-2026-01-10-56-2217-PM.png?width=650&height=334&name=image-png-Aug-12-2026-01-10-56-2217-PM.png)
+
+## Hantera direktuppgifter
+
+När en medarbetare får en direktuppgift blir de **meddelade via e-post.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-13-2025-11-13-58-1678-AM.png?width=670&height=356&name=image-png-Oct-13-2025-11-13-58-1678-AM.png)
+
+Uppgiften visas också under medarbetarens **Att göra-lista** på Haileys dashboard. Via e-posten kan du klicka på **Gå till Hailey** för att direkt komma till dashboarden och se din nya uppgift.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-12-2026-01-13-58-3530-PM.png?width=650&height=334&name=image-png-Aug-12-2026-01-13-58-3530-PM.png)
+
+Klicka på en direktuppgift för att få en mer detaljerad vy. Om uppgiften kräver att du fyller i fält kommer dessa fält att visas direkt i uppgiften.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-13-2026-07-00-22-8276-AM.png?width=650&height=334&name=image-png-Aug-13-2026-07-00-22-8276-AM.png)
+
+För att markera en uppgift som slutförd, klicka på **Markera som klar** i hörnet. Om uppgiften kräver att du fyller i fält kommer dessa fält att uppdateras direkt på din profil när uppgiften markeras som slutförd.
+
+Om en medarbetare inte markerar uppgiften som klar före utsatt deadline, skickas en **påminnelse** via mail ut dagen **efter att deadline har passerat.**
+
+## Följ och redigera direktuppgifter
+
+I **HR Hub – Uppgifter** kan du se alla direktuppgifter som har skickats ut. Klicka på en uppgift för att se vem som har slutfört den (markerat den som klar).
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-13-2026-07-02-23-5461-AM.png?width=650&height=333&name=image-png-Aug-13-2026-07-02-23-5461-AM.png)
+
+Klicka på **Redigera** för att göra ändringar i uppgiften. Härifrån kan du:
+
+- Uppdatera uppgiftens titel, instruktioner eller deadline
+- Lägga till eller ta bort mottagare
+- Ta bort medarbetare som redan har fått uppgiften
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-13-2026-07-03-21-1077-AM.png?width=650&height=333&name=image-png-Aug-13-2026-07-03-21-1077-AM.png)
+
+För att ta bort uppgiften, klicka på **Ta bort** – den försvinner då från allas att göra-lista.
+
+## Exempel på direktuppgifter
+
+De direktuppgifter som skapas kan variera mellan olika organisationer. För att ge dig lite inspiration har vi nedan listat några av de mest använda direktuppgifterna bland våra kunder:
+
+- **Välkommen till Hailey** – när du bjuder in dina medarbetare till systemet, skicka en direktuppgift för att låta dem veta vad de bör kolla in!
+- **Uppdatera nödkontakt**
+- **Ladda upp profilbild**
+- **Individuella Att göra** – du kan skicka en direktuppgift till dig själv!
+
+## Rättigheter
+
+Som administratör i Hailey har du alltid rätt att skicka en direktuppgift. Du kan också tilldela denna rättighet till andra roller inom din organisation, till exempel om du vill att chefer ska kunna skicka en direktuppgift. Detta görs genom att navigera till **Inställningar – Säkerhet – Roller och rättigheter**.
+
+## Vanliga frågor
+
+<AccordionGroup>
+  <Accordion title="Vilka fält kan uppdateras genom direktuppgifter?">
+    **Svar:** Endast de fält som är i fliken **"Personligt"** på en medarbetares profil kan uppdateras med hjälp av direktuppgifter.
+  </Accordion>
+</AccordionGroup>

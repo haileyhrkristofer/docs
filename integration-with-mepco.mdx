@@ -1,0 +1,118 @@
+---
+title: "Integration with Mepco"
+---
+
+The integration with Mepco enables you to export employee data to create and update users in Mepco, aswell as import your time-off data from Mepco to Hailey to enable usage of Hailey's time-off analytics.
+
+## 1. What does the integration do?
+
+This integration consists of two parts:
+
+- **Easily import time off data from Mepco to Hailey with a CSV-file**. This means that the time off changes made in Mepco can be updated by exporting a file from Mepco that you import into Hailey directly. In this way, the new data does not have to be entered into two different systems manually, which reduces the time spent on administrative work.
+- **Seamlessly transfer employee data from Hailey to Mepco with a CSV-file**. This file can be used to both create new users in Mepco and make changes to existing users. The solutions ensures that you do not need to register employees manually in two different systems.
+
+## 2. Before activating the integration
+
+### 2.1. Time-off from Mepco to Hailey
+
+- Ensure that the file is in the correct Mepco adjusted format before importing it into Hailey. **If you have any questions about the export file from Mepco, feel free to reach out to their support team for assistance.** <img src="https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-17-2024-12-28-08-1921-PM.png?width=461&height=145&name=image-png-Jul-17-2024-12-28-08-1921-PM.png" alt="" />
+- You'll need to have matching time off reasons in Hailey and Mepco, in order for the import to work. **Make sure that the time off reasons are consistently named with matching lower and upper case letters for the integration to function smoothly.**
+- Make sure that the **Personal ID** in Mepco corresponds to the **Employment number** in Hailey.
+
+<Note>
+  💡 To properly use the Time Off analytics for the imported time off - make sure that you've set up work hours for the employees. Read more about work hours [here](/time-and-time-off-settings#work-hours)
+</Note>
+
+<Warning>
+  ❗️ The column titles in the file must match the titles shown in the picture exactly, including uppercase letters. Additionally, your time off reasons in Hailey should correspond to the Sick leave code entered in the file.
+</Warning>
+
+### 2.2. Employee data from Hailey to Mepco
+
+To be able to import the file from Hailey into Mepco, you need to do some initial set-up in Mepco.
+
+- Start by setting up a "Liittymätiedosto" in Mepco.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-05-2025-08-29-30-9267-AM.png?width=617&height=322&name=image-png-Mar-05-2025-08-29-30-9267-AM.png)
+
+- When setting this up, set the values as highlighted in the picture below:
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-05-2025-08-29-49-5928-AM.png?width=494&height=569&name=image-png-Mar-05-2025-08-29-49-5928-AM.png)
+
+- On the next tab, you will get to set up what data should be imported through the file:
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-05-2025-08-31-56-7890-AM.png?width=497&height=570&name=image-png-Mar-05-2025-08-31-56-7890-AM.png)
+
+- Once this is done, the next step is to create a _"Liittymä"_:
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-05-2025-08-34-08-1750-AM.png?width=579&height=235&name=image-png-Mar-05-2025-08-34-08-1750-AM.png)
+
+- When setting this up, choose the file you created under _"Lähde - tyyppi"._ In the field "_Sijainti palvelimella_" you should define from where Mepco should retrieve the file. The rest of the fields are optional.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-05-2025-08-34-37-0718-AM.png?width=554&height=406&name=image-png-Mar-05-2025-08-34-37-0718-AM.png)
+
+- On the next tab, set up the fields as shown in the picture below:
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-05-2025-08-38-36-6402-AM.png?width=580&height=414&name=image-png-Mar-05-2025-08-38-36-6402-AM.png)
+
+Once this is set up you will be able to import your data from Hailey to Mepco. This set up only needs to be done once, whereafter you can import files from Hailey as often as you need to.
+
+## 3. Activate integration
+
+To activate the integration, go to Settings > Integrations in Hailey, go to the 'All' tab and pick Mepco. Set the integration to Active and then save the setting.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-06-2025-09-37-05-2103-AM.png?width=461&height=262&name=image-png-Mar-06-2025-09-37-05-2103-AM.png)
+
+## 4. How to use the integration
+
+### 4.1. Time-off from Mepco to Hailey
+
+After the integration is activated, you'll easily find the import option in your company's Time off view under Reports. You'll go to Reports, then head to Time Off. On the next view, you'll find the Import-button next to the date picker. Choose Mepco Time off.
+
+![Skärmavbild 2024-06-14 kl- 10-34-32-png](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202024-06-14%20kl-%2010-34-32-png.png?width=389&height=103&name=Sk%C3%A4rmavbild%202024-06-14%20kl-%2010-34-32-png.png)
+
+On the next view, select (or drag and drop) the Mepco time off file you'd like import and pick Import.
+
+![Skärmavbild 2024-06-14 kl- 10-39-40-png](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202024-06-14%20kl-%2010-39-40-png.png?width=418&height=191&name=Sk%C3%A4rmavbild%202024-06-14%20kl-%2010-39-40-png.png)
+
+After this step, the file import is done and you can view your employees imported time off from Mepco in Hailey!
+
+### 4.2. Employee data from Hailey to Mepco
+
+After the integration is activated, you can export the Mepco employee file by navigating to Reports - Mepco. When clicking on Export, you will get to select from which dates you want to include data in the file:
+
+![Screenshot 2025-05-28 at 11.22.35](https://docs.haileyhr.com/hs-fs/hubfs/Screenshot%202025-05-28%20at%2011.22.35.png?width=670&height=140&name=Screenshot%202025-05-28%20at%2011.22.35.png)
+
+<Warning>
+  Before importing the file to Mepco - **check that the employment numbers of the included employees match the ones in Mepco,** to make sure the correct data is updated on the correct users.
+</Warning>
+
+<Note>
+  The exported employee file will include all employees with an active employment during the selected time period.
+</Note>
+
+5. The data included
+
+### 5.1. Time-off from Mepco to Hailey
+
+The data included in the _time off file_ will differ from company to company. This because each company pick their own reasons for time off in Mepco. Due to this, we do not show any chart for this here.
+
+### 5.2. Employee data from Hailey to Mepco
+
+_When exporting the Mepco employee file from Hailey, these are the data fields that are included:_
+
+| **HAILEY** | **MEPCO** |
+| --- | --- |
+| Employment number | Henkilönumero |
+| Last name | Sukunimi |
+| First name | Etunimi |
+| Date of birth | Syntymäaika |
+| Personal identity number | Henkilötunnus |
+| Street adress | Katuosoite |
+| Postal code + city | Postitoimipaikka |
+| Date of joining | Työsuhteen alkupäivä |
+| IBAN | Tilinumero |
+| Titles |  |
+| Company email |  |
+
+_If you have any questions regarding the integration, please contact your Customer Success specialist at Hailey._

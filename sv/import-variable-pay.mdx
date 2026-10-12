@@ -1,0 +1,112 @@
+---
+title: "Importera rörlig lön"
+---
+
+Importera rörlig lön för att få en bra översikt över anställdas nuvarande och historiska data för rörlig lön.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="szWOSJj" title="Importera rörlig lön" />
+
+## Vad innebär importen av rörlig lön?
+
+Med importen av rörlig lön kan du enkelt registrera rörliga lönedelar, såsom bonusar, provisioner och andra ersättningar, i Hailey.
+
+Importen kan även användas för att registrera historiska uppgifter om rörlig lön. Informationen visas direkt på medarbetarens profil och kan användas för uppföljning och analys av lönedata i organisationen.
+
+I den här guiden visar vi hur du importerar rörliga lönedata till Hailey på ett enkelt och strukturerat sätt.
+
+## Innan du sätter igång
+
+Innan du importerar din rörliga lön måste dina medarbetare först ha importerats, eftersom all rörlig lön behöver vara kopplad till en medarbetare.
+
+Det du också behöver göra innan du börjar importera rörlig lön är att först skapa de rörliga löner som används i din organisation. Det gör du under **Inställningar → Kompensation → Lägg till → Rörlig lön**.
+
+Rörlig lön fungerar som kategorier och hjälper dig att strukturera och klassificera de olika typer av rörlig lön som ni använder, till exempel bonusar, provisioner eller andra företagsspecifika former av rörlig lön.
+
+![rorlig-lon](https://docs.haileyhr.com/hs-fs/hubfs/rorlig-lon.png?width=670&height=316&name=rorlig-lon.png)
+
+## Kom igång med importen!
+
+Nu är vi redo att importera! Ladda ner importmallen genom att gå till Medarbetare i huvudmenyn, klicka på **Importera →** **Rörlig lön.**
+
+![importera-1](https://docs.haileyhr.com/hs-fs/hubfs/importera-1.png?width=670&height=433&name=importera-1.png)
+
+Om ni har satt upp flera rörliga löner, får du valet vilken av dessa du vill importera. Välj vilken rörlig lön du vill importera och **Ladda ner importmall**. Öppna sedan mallen för att komma igång.
+
+![välj-rörlig-lön](https://docs.haileyhr.com/hs-fs/hubfs/v%C3%A4lj-r%C3%B6rlig-l%C3%B6n.png?width=670&height=336&name=v%C3%A4lj-r%C3%B6rlig-l%C3%B6n.png)
+
+## Fyll i importmall
+
+Nu är det dags att fylla i importmallen!
+
+Mallen innehåller fyra förifyllda kolumner (**A-E**) med information om varje medarbetare: **Medarbetar-ID, Anställningsnummer, För- och efternamn, Företagsmejl** samt **namnet för den valda rörliga lönen**. Informationen i dessa kolumner behövs för att systemet ska veta för vilken medarbetare rörliga lönen tillhör. Gör därför inga ändringar i dessa kolumner!
+
+Fyll i resterande kolumner med information om respektive medarbetares rörliga löner. För att säkerställa att importen genomförs korrekt är det viktigt att du följer formatkraven nedan.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-28-2026-09-48-19-1148-AM.png?width=670&height=99&name=image-png-Apr-28-2026-09-48-19-1148-AM.png)
+
+**Historiska rörliga löner** fylls i genom att infoga tomma rader under den rad där medarbetarens ID, anställningsnummer, namn, företagsmail och rörlig lön typ finns med. På de tomma raderna fylls endast **From, To** och **Amount** i med information.
+
+![VP](https://docs.haileyhr.com/hs-fs/hubfs/VP.png?width=670&height=97&name=VP.png)
+
+## Format
+
+För att registrera rörlig lön och dess historiska ändringar ska följande uppgifter fyllas i:
+
+- **From**: Startdatum för perioden beloppet avser. Datumformatet ska vara **ÅÅÅÅ‑MM‑DD.** Exempel: 2026-01-01.
+- **To**: Slutdatum för den period beloppet avser. Datumformatet ska vara **ÅÅÅÅ-MM-DD**. Exempel: 2027-01-01
+- **Amount**: Ange medarbetarens rörliga lönebelopp i siffror. Inga mellanslag eller bindestreck. Om lönen innehåller decimaler, använd punkt (.) — till exempel: 30554.5 SEK. Den valuta som kommer visas är den som är angiven i uppsättningen av rörliga lönen.
+
+## Importera rörlig lön
+
+När mallen är ifylld med den data ni önskar importera sparar ni filen på er dator. Gå därefter tillbaka till Hailey och Medarbetarlistan. Klicka på **Importera → Rörlig lön**. Klicka på rutan i mitten _"Klicka eller släpp filen här för att ladda upp"_ och välj er importfil.
+
+När importen är klar skickas ett mail till dig som genomförde importen, och de importerade förmånerna kommer nu att vara synliga på medarbetarnas profiler under fliken för **Kompensation** **→ Rörliga löner.**
+
+<Note>
+  Om ett fält är felaktigt ifyllt kommer systemet att varna för var och varför något är fel. Om en medarbetare redan har rörlig lön registrerad i Hailey kommer systemet också att informera dig om detta för att undvika dubbletter.
+</Note>
+
+![importera-VP](https://docs.haileyhr.com/hs-fs/hubfs/importera-VP.png?width=670&height=265&name=importera-VP.png)
+
+## Lägg till rörlig lön manuellt
+
+Du kan också lägga till rörlig lön manuellt via medarbetarkortet. I så fall går du till medarbetarens kort, klickar på **Hantera →  Lägg till →  rörlig lön**. Välj i rullistan vilken rörlig lön du vill lägga till och skriv in från- & tilldatum samt summa, klicka sedan på **Spara**.
+
+![lägg till manuellt](https://docs.haileyhr.com/hs-fs/hubfs/l%C3%A4gg%20till%20manuellt.png?width=670&height=239&name=l%C3%A4gg%20till%20manuellt.png)
+
+<Tip>
+  Behöver du uppdatera eller hantera befintliga rörliga löner? Läs mer [**HÄR**](/sv/manage-variable-pay) om hur du hanterar rörliga löner.
+</Tip>
+
+## Rättigheter
+
+Att importera rörlig lön är något som endast en admin kan göra. Detta är på grund av den känsliga informationen som visas i importfilen. Vill du läsa mer om Roller & rättigheter kan du göra det [**HÄR**](/sv/roles-and-rights).
+
+## Vanliga frågor
+
+**Fråga 1:** Kan man importera historiska rörliga löner?
+
+Ja, absolut! Om du vill importera historiska rörliga löner för samma medarbetare behöver du fylla i **From,** **To** och **Amount** på nästa rad.
+
+Se exemplet nedan för hur detta ska fyllas i:
+
+![VP](https://docs.haileyhr.com/hs-fs/hubfs/VP.png?width=670&height=97&name=VP.png)
+
+**Fråga 2:** Kan man lägga till historiken för rörlig lönen i ett senare skede?
+
+Nej. Om du vill inkludera historik för en rörlig lön behöver den importeras i samband med att den rörliga lönen läggs upp. Det går inte att komplettera med historik i efterhand på en redan befintlig rörlig lön.
+
+Alla framtida förändringar av den rörliga lönen kommer däremot att registreras, på samma sätt som för ordinarie löner.

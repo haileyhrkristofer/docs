@@ -1,0 +1,125 @@
+---
+title: "eNPS"
+---
+
+Explore internal engagement by consistently measuring results over time with eNPS. This tool helps reduce turnover, foster a positive work environment, and enhance overall well-being, among other benefits.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="kBdL2wC" />
+
+## What is eNPS?
+
+The Employee Net Promoter Score (eNPS) is a metric used to measure employee loyalty and satisfaction within an organization. It is based on the Net Promoter Score (NPS) methodology commonly used to assess customer loyalty. The calculation involves a simple survey where employees are asked a single question:
+
+"On a scale of 0 to 10, how likely are you to recommend our company as a great place to work?"
+
+Based on their responses, employees are categorized into three groups:
+
+- **Promoters (score 9-10):** These are employees who are highly satisfied and likely to promote the company as a great place to work.
+- **Passives (score 7-8):** These employees are satisfied but not enthusiastic, and they are considered neutral.
+- **Detractors (score 0-6):** These are dissatisfied employees who may have negative feelings about the company.
+
+The eNPS score is then calculated by subtracting the percentage of detractors from the percentage of promoters. The formula is as follows:
+
+<Note>
+  **Percentage of Promoters − Percentage of Detractors = eNPS**
+</Note>
+
+The resulting score can range from -100 to +100. A positive eNPS indicates that the majority of employees are promoters, which is generally considered a positive sign for employee satisfaction and loyalty. Conversely, a negative eNPS suggests that there are more detractors than promoters, indicating potential issues that may need attention within the organization.
+
+## Create eNPS
+
+Hailey's eNPS is created in **Performance** - **eNPS**. To create your first eNPS, click on **Create eNPS.**
+
+![](/images/enps/01.png)
+
+The only setting that needs to be made is to decide whether your eNPS should include the whole organization or not. If yes, do not select any legal entity. If no, select the legal entity or entities to be included.
+
+<Note>
+  The eNPS will only include employees with the status In Service or Leaving. The affected employees will be shown in the group of avatars on the bottom of the setting page.
+</Note>
+
+![](/images/enps/02.png)
+
+To update the eNPS, click on **Update**. Once again, the only settings are title and scope on legal entity. If you want to create another eNPS, e.g. for another legal entity, this is done by clicking on the arrow next to the current eNPS' name.
+
+## Send eNPS
+
+To send the eNPS survey, click on **Send eNPS** in the top right corner. The survey will now be sent to all employees included in the scope. The receiving employees can easily answer the survey by clicking on a score in the email. The survey will be automatically closed when all included employees have submitted their answers.
+
+![](/images/enps/03.png)
+
+The employee will then be redirected to a new page, where they can submit their score with an optional comment. Each employee will only be able to answer the survey once. All answers are anonymous.
+
+![eNps-Dec-01-2025-03-18-05-2262-PM](/images/enps/04.png)
+
+![eNps 2](/images/enps/05.png)
+
+If you want to send out a new survey, you can do so by clicking **Send eNPS again**.
+
+<Warning>
+  Please note that your **previous eNPS will be automatically closed** when a new one is sent out.
+</Warning>
+
+## View results
+
+In the overview, you can easily follow the result of your eNPS over time. The eNPS score is automatically calculated for each survey. At the top of the page, there are boxes with statistics from the last sent eNPS. This includes:
+
+- The score - with comparison to last eNPS score and a pop-over with contextual help
+- Number of detractors
+- Number of passives
+- Number of promoters
+- Response rate
+
+![](/images/enps/06.png)
+
+In the list below the graph, you can see the response rate of each survey when they have been sent out and which employees have been included. If you click on a specific survey, you will see the statistics as listed above, a graph showing the distribution of scores from that survey, the comments, and the option to filter the comments. The results are updated in real time!
+
+![](/images/enps/07.png)
+
+## Set historical eNPS
+
+If you want to include historical eNPS, i.e., results you have gathered previously outside of Hailey, click on the three dots to the right of the eNPS you want to include historical data for, and select **Add historical eNPS.**
+
+![](/images/enps/08.png)
+
+Here, you set the eNPS score and the date for it and add how many you would like. You can only enter data for dates **before** today's date and **before** the first official eNPS survey sent out by Hailey.
+
+![](/images/enps/09.png)
+
+When added, the respective score will be presented in the same graph.
+
+![](/images/enps/10.png)
+
+## Rights
+
+Admins automatically have permission to create and send eNPS surveys. If you would like to grant this permission to other roles, you can do so by enabling it for members of that role under **Company rights** - **Performance** - **eNPS**.
+
+Explanation of the available settings:
+
+- **None** - eNPS is not visible at all for the user.
+- **View** - eNPS is visible for the user, including all surveys.
+- **View & Edit** - Same as view, with the ability to also create and send eNPS surveys.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Is it possible to create and send an eNPS survey to only a specific department?">
+  No. Once you have created an eNPS survey, it is only possible to select one or several legal entities.
+  </Accordion>
+  <Accordion title="What language is the eNPS survey sent in?">
+  The eNPS survey will be sent in the language you have set under Company Language. For example if your company language is set to English, the survey will be sent in English.
+  </Accordion>
+</AccordionGroup>

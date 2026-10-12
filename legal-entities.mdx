@@ -1,0 +1,149 @@
+---
+title: "Multiple legal entities - Get started"
+---
+
+If your organization consists of multiple legal entities, Hailey can help you manage them all within the same account. In this guide, you'll learn how to set up legal entities and understand which parts of the platform can be tailored to each entity.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="ZbXmac6" title="Multiple legal entities - Get started" />
+
+## What are legal entities?
+
+A legal entity is a separate company within your organization. For example, if your organization consists of multiple registered companies, each company can be set up as its own legal entity in Hailey.
+
+Each legal entity can have its own employees, company information, branding, workflows, and other settings, while still being managed within the same Hailey account.
+
+Using multiple legal entities makes it easier to tailor the employee experience to each company while keeping administration centralized and efficient.
+
+## Before you get started
+
+Before setting up multiple legal entities in Hailey, we recommend gathering a few key details for each company. Having this information ready will make the setup process smoother and help ensure everything is configured correctly from the start.
+
+It's helpful to have:
+
+- Company names
+- Registration numbers
+- Company logos and branding assets
+- Information about which employees belong to each legal entity
+
+## How do you set up legal entities?
+
+#### General settings
+
+Under **Settings → General → Localisation,** configure your company language. We recommend choosing a language that all employees can understand, as this language will be used in system-generated communications, such as workflow notifications and email reminders.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-22-2026-07-54-23-1642-AM.png?width=670&height=354&name=image-png-Jul-22-2026-07-54-23-1642-AM.png)
+
+#### Upload company logos
+
+If you want to use different logos for different legal entities, you can upload them under **Settings** → **General** → **Branding.** Upload as many logos as needed and make sure to designate one as the default logo.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-22-2026-07-55-32-8454-AM.png?width=670&height=355&name=image-png-Jul-22-2026-07-55-32-8454-AM.png)
+
+#### Create your legal entities
+
+Under **Settings → Organization**, add all legal entities within your organization. Click **Add new → Legal entity** and enter the company name and registration number for each legal entity.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-22-2026-07-56-22-1161-AM.png?width=670&height=354&name=image-png-Jul-22-2026-07-56-22-1161-AM.png)
+
+## How can legal entities be used in Hailey?
+
+#### Scope
+
+Once you've set up your legal entities, you can use **scope** to control which employees can access specific content, settings, and functionality.
+
+By scoping content to a legal entity, you can create a more tailored employee experience and ensure that employees only see information that is relevant to their company. For example, employees belonging to one legal entity may need access to different documents, news posts, workflows, or onboarding content than employees belonging to another.
+
+Legal entities can be used as a scope criterion in several areas of Hailey, including:
+
+- Workflows
+- Hiring templates
+- Targeted roles
+- Contract repository
+- News
+- Company corner
+- Custom fields
+- Standard fields
+- Time off reasons
+
+This allows you to manage multiple companies within the same Hailey account while keeping company-specific information and processes separated.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-22-2026-07-58-34-6236-AM.png?width=490&height=463&name=image-png-Jul-22-2026-07-58-34-6236-AM.png)
+
+<Tip>
+  You can read more about how scope works [**HERE**.](/scope)
+</Tip>
+
+#### Workflows
+
+When creating **workflows** in Hailey, you may want different tasks to be triggered depending on which legal entity the workflow applies to.
+
+By using scope, workflow tasks can be limited to employees belonging to specific legal entities. This helps ensure that employees only receive tasks that are relevant to their company while still benefiting from an automated workflow process.
+
+For example, an onboarding workflow may contain tasks that only apply to employees in a specific legal entity.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-22-2026-08-03-13-5361-AM.png?width=670&height=394&name=image-png-Jul-22-2026-08-03-13-5361-AM.png)
+
+<Tip>
+  You can read more about workflows [**HERE.**](/create-workflows)
+</Tip>
+
+#### Hiring templates
+
+**Hiring templates** can also be scoped to legal entities. This allows you to create tailored hiring experiences for different companies within your organization. For example, each legal entity can have its own logo, language settings, onboarding content, and employment templates.
+
+We recommend creating separate hiring templates for each legal entity when the onboarding experience differs between companies.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-22-2026-08-01-56-5914-AM.png?width=670&height=356&name=image-png-Jul-22-2026-08-01-56-5914-AM.png)
+
+<Tip>
+  Read more about how to create hiring templates **[/hiring-templates](/hiring-templates)[HERE](/hiring-templates).**
+</Tip>
+
+#### Custom roles
+
+**Custom roles** can be used when certain permissions should only apply to employees within a specific legal entity.
+
+For example, you may want local HR administrators or managers to access information and perform actions only for employees belonging to their legal entity. By combining custom roles with legal entities, you can ensure that users have the right level of access while keeping company-specific information separated.
+
+This helps maintain clear responsibilities and prevents users from accessing data that is not relevant to their part of the organization.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-22-2026-08-08-42-3874-AM.png?width=670&height=355&name=image-png-Jul-22-2026-08-08-42-3874-AM.png)
+
+<Tip>
+  Read more about custom roles and how to create them [**HERE.**](/roles-and-rights#add-new-targeted-role)
+</Tip>
+
+## Common questions
+
+Below you'll find answers to some of the most common questions about setting up and managing multiple legal entities in Hailey.
+
+<AccordionGroup>
+  <Accordion title="Can employees belong to different legal entities?">
+  No, each employee is connected to one legal entity at a time. If an employee changes company within your organization, their legal entity can be updated.
+  </Accordion>
+  <Accordion title="Can each legal entity have its own logo and branding?">
+  Yes. You can upload multiple logos and use different branding assets for different legal entities.
+  </Accordion>
+  <Accordion title="Can I create company-specific onboarding experiences?">
+  Yes. By creating separate hiring templates, you can tailor onboarding content, branding, and settings for each legal entity.
+  </Accordion>
+  <Accordion title="Can workflows be limited to specific legal entities?">
+  Yes. Workflow tasks can be scoped to specific legal entities, ensuring employees only receive tasks relevant to their company.
+  </Accordion>
+  <Accordion title="Can news, documents, and other content be shown only to certain legal entities?">
+  Yes. Using scope, you can control which employees can access specific content, settings, and functionality based on their legal entity.
+  </Accordion>
+</AccordionGroup>

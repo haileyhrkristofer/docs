@@ -1,0 +1,244 @@
+---
+title: "Att bygga sin organisation i Hailey"
+---
+
+Organisationsstrukturen är grunden för hur ni arbetar i Hailey. I den här guiden går vi igenom hur organisationens olika delar hänger ihop och hur ni kan bygga upp er struktur i systemet!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="9jlzv68" title="Att bygga sin organisation i Hailey" />
+
+## Vad är organisationsstrukturen i Hailey?
+
+Organisationsstrukturen i Hailey används för att organisera medarbetare och spegla hur er verksamhet är uppbyggd.
+
+Genom att sätta upp legala enheter, arbetsplatser, avdelningar, team och andra organisatoriska delar kan ni skapa en struktur som stöttar rapportering, behörigheter, arbetsflöden och mycket mer.
+
+En genomtänkt organisationsstruktur gör det enklare att administrera organisationen och skapar rätt förutsättningar för att använda Haileys olika funktioner.
+
+## Hur bygger du upp din organisationsstruktur?
+
+För att bygga upp er organisationsstruktur går du till **Inställningar - Organisation** och klickar på **Lägg till ny**.
+
+Vi rekommenderar att ni börjar med de övergripande delarna av organisationen och sedan arbetar er nedåt i strukturen. En vanlig uppsättning kan se ut så här:
+
+- Lägg till legala enheter
+- Lägg till arbetsplatser
+- Lägg till kostnadsställen
+- Lägg till affärsområden
+- Lägg till avdelningar
+- Lägg till team
+- Lägg till titlar
+- Lägg till arbetsgrupper
+
+I avsnitten nedan går vi igenom de olika delarna av organisationsstrukturen och hur de kan användas i Hailey.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-22-2026-01-14-07-1245-PM.png?width=670&height=322&name=image-png-Jul-22-2026-01-14-07-1245-PM.png)
+
+## Viktiga begrepp
+
+### Legala enheter
+
+För varje bolag med ett **eget organisationsnummer** rekommenderar vi att du skapar en separat legal enhet i Hailey. En legal enhet består av ett namn, ett visningsnamn och ett organisationsnummer.
+
+Varje anställning kan kopplas till en legal enhet, vilket gör det möjligt att särskilja medarbetare, processer och data mellan olika bolag inom organisationen.
+
+<Note>
+  Legala enheter används bland annat för:
+
+  - Filtrering i olika listor och vyer
+  - Koppling av mallar, artiklar och annat innehåll
+  - Medarbetarmallar
+  - Styrkoder i kontraktsmallar
+  - Integrationer
+</Note>
+
+<Tip>
+  **Exempel på legal enhet:** Nordic Innovate AB
+</Tip>
+
+### Arbetsplatser
+
+Arbetsplatser används för att representera organisationens fysiska kontor eller verksamhetsadresser i Hailey.
+
+Vi rekommenderar att du skapar en arbetsplats för varje fysisk plats där organisationen bedriver verksamhet. Varje arbetsplats innehåller ett namn, adressuppgifter och en tidszon. Adressuppgifterna är obligatoriska, och tidszonen används bland annat för att styra när systemaviseringar och notifieringar skickas till användarna.
+
+Om ni arbetar på flera språk kan arbetsplatser även översättas. Vilket namn som visas beror på användarens valda språk i Hailey och kan även användas i kontraktsmallar.
+
+Varje anställning kan kopplas till en arbetsplats.
+
+<Note>
+  Arbetsplatser används bland annat för:
+
+  - Filtrering i olika listor och vyer
+  - Koppling av mallar, artiklar och annat innehåll
+  - Medarbetarmallar
+  - Styrkoder i kontraktsmallar
+  - Integrationer
+</Note>
+
+<Tip>
+  **Exempel på arbetsplats:** Stockholm
+</Tip>
+
+### Affärsområden
+
+Affärsområden används för att gruppera avdelningar och skapa en mer avancerad organisationsstruktur i Hailey. Funktionen passar främst organisationer med en matrisstruktur eller större organisationer som vill dela upp verksamheten i exempelvis regioner, affärsenheter eller verksamhetsområden. Affärsområden används vanligtvis inte av organisationer med färre än 500 medarbetare.
+
+Ett affärsområde består av ett namn, en affärsområdesansvarig och de avdelningar som tillhör affärsområdet.
+
+Genom att koppla avdelningar till affärsområden kan ni skapa ett organisationsträd som speglar er verksamhet på ett tydligare sätt.
+
+Om ni arbetar på flera språk kan affärsområden även översättas. Vilket namn som visas beror på användarens valda språk i Hailey och kan även användas i kontraktsmallar.
+
+Varje anställning kan kopplas till ett affärsområde.
+
+<Note>
+  Affärsområden används bland annat för:
+
+  - Organisationsstrukturen och organisationsträdet
+  - Filtrering i olika listor och vyer
+  - Koppling av mallar, artiklar och annat innehåll
+  - Medarbetarmallar
+  - Styrkoder i kontraktsmallar
+  - Eventuella integrationer
+</Note>
+
+<Tip>
+  **Exempel på affärsområde:** Region Syd
+</Tip>
+
+### Avdelningar
+
+Avdelningar används vanligtvis för att spegla organisationens olika funktioner, exempelvis HR, Ekonomi, Marknad eller IT. En avdelning består av ett namn och en avdelningsansvarig.
+
+Om ni arbetar på flera språk kan avdelningar översättas. Vilket namn som visas beror på användarens valda språk i Hailey och kan även användas i kontraktsmallar.
+
+Varje anställning kan kopplas till en avdelning.
+
+Genom att koppla avdelningar till varandra kan ni skapa ert organisationsträd. Läs mer om detta **[HÄR.](/sv/organizational-chart)**
+
+<Note>
+  Avdelningar används bland annat för:
+
+  - Organisationsträdet
+  - Filtrering i olika listor och vyer
+  - Koppling av mallar, artiklar och annat innehåll
+  - Medarbetarmallar
+  - Styrkoder i kontraktsmallar
+  - Standardvyn i medarbetarlistan
+  - Frånvaro just nu
+  - Integrationer
+  - Godkännandeprinciper kopplade till avdelningsansvarig
+</Note>
+
+<Tip>
+  **Exempel på avdelning:** HR
+</Tip>
+
+### Kostnadsställen
+
+Kostnadsställen används för att följa upp och fördela kostnader inom organisationen. I många organisationer motsvarar kostnadsställena organisationens avdelningar, men de kan också användas för andra ekonomiska strukturer beroende på hur verksamheten är uppbyggd.
+
+Ett kostnadsställe består av ett namn och en kod.
+
+Varje anställning kan kopplas till ett kostnadsställe.
+
+<Note>
+  Kostnadsställen används bland annat för:
+
+  - Filtrering i olika listor och vyer
+  - Eventuella integrationer
+</Note>
+
+<Tip>
+  **Exempel på kostnadsställe:** IT (3010)
+</Tip>
+
+### Team
+
+Team används för att skapa flexibla grupperingar av medarbetare utöver den formella organisationsstrukturen.
+
+En medarbetare kan exempelvis tillhöra avdelningen **IT**, samtidigt som personen ingår i teamet **Digitaliseringsprojekt**. Team är därför särskilt användbara för projektgrupper, arbetsgrupper eller andra tvärfunktionella samarbeten. Ett team består av ett namn och kan vid behov ha en Team Lead kopplad till sig.
+
+Om ni arbetar på flera språk kan team översättas. Vilket namn som visas beror på användarens valda språk i Hailey och kan även användas i kontraktsmallar.
+
+Till skillnad från avdelningar kan en medarbetare tillhöra **flera team** samtidigt.
+
+<Note>
+  Team används bland annat för:
+
+  - Filtrering i olika listor och vyer
+  - Koppling av mallar, artiklar och annat innehåll
+  - Medarbetarmallar
+  - Styrkoder i kontraktsmallar
+  - Separat behörighetsstyrning för team leads
+  - Godkännandeprinciper kopplade till team leads
+  - Frånvaro just nu
+</Note>
+
+<Tip>
+  **Exempel på team:** Digitaliseringsprojekt
+</Tip>
+
+### Titlar
+
+Titlar används för att beskriva en medarbetares yrkesroll eller arbetsfunktion i organisationen, exempelvis **Marknadschef**, **Projektledare** eller **Systemutvecklare**.
+
+Till skillnad från avdelningar och team beskriver titeln *vad medarbetaren arbetar som*, oavsett var i organisationen personen är placerad.
+
+Om ni arbetar på flera språk kan både titlar och titelbeskrivningar översättas. Vilken översättning som visas beror på användarens valda språk i Hailey och kan även användas i kontraktsmallar.
+
+En medarbetare kan ha **flera titlar** kopplade till samma anställning.
+
+<Note>
+  Titlar används bland annat för:
+
+  - Lönekartläggning
+  - Filtrering i olika listor och vyer
+  - Koppling av mallar, artiklar och annat innehåll
+  - Medarbetarmallar
+  - Styrkoder i kontraktsmallar
+</Note>
+
+<Tip>
+  **Exempel på titel:** Marknadschef
+</Tip>
+
+### Arbetsgrupper
+
+Arbetsgrupper används för att skapa informella grupperingar av medarbetare som inte är kopplade till organisationens struktur. De används ofta för att samla personer med ett gemensamt ansvarsområde eller behov, exempelvis administratörer, IT-personal, löneansvariga eller externa samarbetspartners.
+
+Arbetsgrupper kan bland annat användas för att:
+
+- Tilldela uppgifter i arbetsflöden
+- Behörighetsstyra medarbetarmappar
+- Styra åtkomst till innehåll i Företagshörnan
+
+Till skillnad från organisatoriska komponenter som avdelningar och team kan en medarbetare tillhöra **flera arbetsgrupper** samtidigt.
+
+<Note>
+  **Exempel på arbetsgrupper:**
+
+  - Admin (alla som har adminbehörigheter)
+  - IT
+  - Lön
+  - Externa parter
+</Note>
+
+<Tip>
+  Arbetsgrupper är särskilt användbara när du vill gruppera användare baserat på ansvar eller behörighet snarare än organisatorisk tillhörighet.
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-22-2026-01-18-26-1770-PM.png?width=288&height=265&name=image-png-Jul-22-2026-01-18-26-1770-PM.png)

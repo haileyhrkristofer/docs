@@ -1,0 +1,174 @@
+---
+title: "Import employments"
+---
+
+Use this guide as a reference to help ensure that importing your employees employment records goes smoothly.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="aG8ceXM" title="Import employments" />
+
+## Before you get started
+
+Before you import your employees’ employments, the*[import of employees](/import-employees)* must be done. You also need to decide **how much historical data you want to include**.
+
+<Note>
+  Note that if you initially import one continuous employment period per employee and later want to import detailed history, this will need to be adjusted manually for each profile.
+</Note>
+
+Furthermore, **locations**, **business areas** (if you operate in business areas), **departments**, **cost centers**, **titles**, and **legal entities** need to be created. You can read more about how to add these organizational parts [HERE](/admin-get-started#organization).
+
+<Note>
+  If you import employments containing historical data such as departments or titles you no longer have, you can mark these organizational units as archived. Simply click on the three dots to the right of the selected entity – **Archive**.
+</Note>
+
+The import file you are about to create now needs to **reflect your organization in Hailey.**
+
+<Warning>
+  A common mistake is accidentally adding an extra space after the name of, for example, a department or a title in Hailey. If the import file doesn’t have the same space, it will not match. The same applies to uppercase and lowercase letters – they must be exactly the same in Hailey and in the file.
+
+  **Remember that locations, departments, cost centers, titles, and legal entities must be spelled EXACTLY the same in Hailey as in the import file.**
+</Warning>
+
+## How do you create a employment import?
+
+Go to **Employees - Import - Employment**. If you wish to download the import template for only certain employees, you can first check those employees in the list and then click **Import - Employment**.
+
+<Tip>
+  **Can't find your employees in the list?** If you have just imported employees, their profiles will have the status **Unknown** because employment information is missing. To find them, clear all filters in the **Employment Status** field in the **Filter** menu on the left.
+</Tip>
+
+![Employments](https://docs.haileyhr.com/hs-fs/hubfs/Employments.png?width=670&height=765&name=Employments.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2025-12-54-02-4108-PM.png?width=670&height=443&name=image-png-Jul-14-2025-12-54-02-4108-PM.png)
+
+**Fill in template:** In the template, employees will be listed with ID, employment number, name, and company email. This is so Hailey can link the employment records to the correct employees. **Therefore, it is important not to change any data in these columns!**
+
+If you have created any custom employment fields in Hailey, these will also be included at the far right of the file.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2025-12-55-54-4682-PM.png?width=670&height=142&name=image-png-Jul-14-2025-12-55-54-4682-PM.png)
+
+The import of employment records can, as mentioned above, be used to enter historical data related to employments. If you do this, the first row for each employee should be *the earliest employment you want to import into the system*.
+
+<Tip>
+  Some examples of why it can be wise to enter detailed history:
+
+  - Provides you with accurate data in various types of analyses
+  - Makes it easier if you plan to use the system to create employment certificates, etc.
+  - Eases rehiring employees
+  - Ensures you have the correct information in case you need to retrieve employment periods and similar data
+  - Gives you historical data in functions like analytics and reports
+</Tip>
+
+When you add the remaining employments, do so by inserting empty rows below the row containing the employee’s ID, name, and email address. One row per employment/employment period.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2025-12-49-04-2019-PM.png?width=670&height=281&name=image-png-Jul-14-2025-12-49-04-2019-PM.png)
+
+<Warning>
+  It is important that both the **start date** and **end date** are provided for historical employments. If the **EndDate** is left empty, Hailey interprets this as the employee having concurrent employments. **Therefore, make sure that each ended employment has an end date.**
+</Warning>
+
+<Note>
+  **Have you already imported information about current employments and want to add history afterwards?**
+
+  Then you only need to fill in the details for the previous employments. Remember to always provide both **start** and **end dates** for employments that have ended.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2025-01-00-28-3410-PM.png?width=670&height=89&name=image-png-Jul-14-2025-01-00-28-3410-PM.png)
+
+*In the example image above, you can see that some fields have been left empty. This is because not all fields are relevant for every employee. One example is when an employee has a permanent employment. In such cases, no information is required in fields like end date for a fixed-term employment or end of probationary period, etc.*
+
+## Format
+
+Many columns need to be filled in according to specific formats for the import to be successful:
+
+- **Dates**: YYYY-MM-DD
+- **Employment Type**: ProbationaryPeriod, Permanent, FixedTerm, Consultant, or Intern.
+  - If the field is filled in as FixedTerm, the field FixedTermType must also be filled in with one of the following: GeneralTemporary, TemporarySubstitute, or SeasonalWork.
+- **Scope Percentage**: Filled in as a decimal. For example 1 for 100% and **0.5** for 50%, etc. (Use a period instead of comma).
+- **Scope Hours per Week:** If you want to enter a decimal (e.g., 37.5 hours), you should use a period instead of a comma.
+- **Titles**, **Teams**, **Location**, **Department**, **Business Area**, **Cost Center** & **Legal Entity**: Must be spelled exactly the same as your titles, teams, offices, departments, business areas, and legal entities in Hailey. If an employee has multiple titles or teams, separate them with a comma — no spaces!
+- **Reports to:** Enter the employee ID under **Reports To** – *not* the name.
+
+<Note>
+  You can find the employee ID in column A of the import file, provided that the person being reported to is included in it.
+  If the person is *not* included in the import file, you can find their employee ID in the URL of their employee profile.
+
+  ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-01-2025-03-06-53-7679-PM.png?width=670&height=49&name=image-png-Oct-01-2025-03-06-53-7679-PM.png)
+
+  ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-15-2025-01-26-14-0484-PM.png?width=670&height=201&name=image-png-Oct-15-2025-01-26-14-0484-PM.png)
+
+  In the example below, Abby reports to Aaron. Aaron’s employee ID is entered in Abby’s row under **Reports To**.
+
+  ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Dec-23-2025-09-12-10-7643-AM.png?width=670&height=52&name=image-png-Dec-23-2025-09-12-10-7643-AM.png)
+
+  ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Dec-23-2025-09-12-25-3960-AM.png?width=670&height=58&name=image-png-Dec-23-2025-09-12-25-3960-AM.png)
+</Note>
+
+- **Notice Period**: Filled in as a number. If you fill in this field, you must also fill in the Notice Period Unit (see description below). *If the employee has no notice period or you refer to a collective agreement and do not want to specify it here, you can leave this field empty.*
+- **Notice Period Unit**: Filled in with Weeks or Months, based on the unit the number in the Notice Period field refers to.
+- **Custom fields**: [HERE](/custom-fields#formats)you can find the formats used for custom fields.
+
+Below is an example of how a properly completed file can look:
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2025-12-57-23-5552-PM.png?width=670&height=91&name=image-png-Jul-14-2025-12-57-23-5552-PM.png)
+
+## Import employments
+
+When the template is ready to be uploaded, go back to Hailey and the Employee list. Click on **Import – Employment.** Click the box in the middle labeled "Click or drop the file here to upload" and select your import file.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2025-01-01-17-5302-PM.png?width=670&height=453&name=image-png-Jul-14-2025-01-01-17-5302-PM.png)
+
+If any column is incorrectly filled in, an error message will appear indicating which column and row require correction. Make the necessary adjustments, and then upload the file again.
+
+<Note>
+  If errors occur during the import, Hailey will **stop the entire import process**. This means you don’t need to search for which employees’ employments were imported and which were not. Instead, you can fix the issues based on the error messages you receive and then run the entire file again!
+</Note>
+
+![Skärmavbild 2025-10-24 kl. 13.31.10](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202025-10-24%20kl.%2013.31.10.png?width=670&height=377&name=Sk%C3%A4rmavbild%202025-10-24%20kl.%2013.31.10.png)
+
+When everything is correct, click Import! The window below will then appear. The import may take a while depending on how many employments are being imported. You can close this window — the import will continue running in the background!
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2025-01-04-31-1769-PM.png?width=670&height=431&name=image-png-Jul-14-2025-01-04-31-1769-PM.png)
+
+When the import is complete, you who started the import will receive a verification email.
+
+<Tip>
+  In rare cases, the email may indicate that some employments failed to import. You will then receive information about which employees failed, along with a message explaining what went wrong. **Try again with only the employees who failed**. Another option is to go into each affected employee’s record to make the necessary corrections.
+</Tip>
+
+## Update Reports to
+
+You can update or manually add "reports to". Go to Employees in the main menu and use the filter menu on the left to easily find people who work in, for example, the same department. **Then check the boxes next to the people who should report to the same manager, click Action – Bulk update organizational fields**. Select “Reports To” and then choose the correct person from the dropdown list.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2025-01-05-42-3091-PM.png?width=670&height=272&name=image-png-Jul-14-2025-01-05-42-3091-PM.png)
+
+## Rights
+
+Admins automatically have the right to import employments.
+
+To give these permissions to other roles, update the role settings under **Settings – Security – Roles and rights** for **Import employee data. [HERE](/roles-and-rights)** you can read more about **Roles and rights.**
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Is it possible to import historical employments at a later stage?">
+  Yes, absolutely - you simply need to enter the details for the previous employment records. Remember to always provide both the **start** and **end date** for employment periods that have ended.
+
+  **Please note:** If you initially import one continuous employment period per employee and later want to import detailed employment history, this will need to be adjusted manually on each profile.
+  </Accordion>
+  <Accordion title="Are there any fields other than *Reports to* that I can bulk update from the employee list at a later stage?">
+  Yes, you can update the location, department, business area, legal entity, title, cost center, and team from the employee list.
+  </Accordion>
+</AccordionGroup>

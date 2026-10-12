@@ -1,0 +1,126 @@
+---
+title: "Integration with Flex Lön"
+---
+
+Through Haileys integration it's possible to access employee and salary data in a GDPR compliant way and import into Flex Lön.
+
+<Tip>
+  First time activating one of **Hailey's standard integrations**? Start by reading [**THIS**](/haileys-standard-integrations) guide to know what to keep in mind before you get started.
+</Tip>
+
+---
+
+## 1. What does the integration do?
+
+Using this integration, you can easily export a file with the necessary employee data and salary data from Hailey to Flex Lön. This means that the changes made in Hailey, such as salary changes, can be updated by file export in Flex Lön directly. In this way, the new data does not have to be entered into two different systems manually, which reduces the time spent on administrative work.
+
+---
+
+## 2. Before activating the integration
+
+### Employee number
+
+All employees who are to be synchronized with FlexLön must have an **employment number** in Hailey that matches the employment number in FlexLön.
+
+### Active Employment
+
+For the employee to be included in the integration, they must also have an active employment during the selected period, as shown in the image below.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2025-01-46-21-9647-PM.png?width=670&height=393&name=image-png-Jul-16-2025-01-46-21-9647-PM.png)
+
+### Salaries
+
+For an employee’s salary to be synchronized with FlexLön, the salary must be specified in SEK, and the clearing number may contain a maximum of 5 characters. If the salary data and/or currency are invalid, these values will be excluded from the integration, but the employee will still be included.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2025-01-51-01-1791-PM.png?width=670&height=350&name=image-png-Jul-16-2025-01-51-01-1791-PM.png)
+
+<Warning>
+  ❗️Please note that each salary needs to correlate to a specific employment period. It is therefore not possible to have different end dates for an employee's salary and employment within this integration.
+</Warning>
+
+---
+
+## 3. Activate the integration
+
+To activate the integration - go to Hailey -> Settings and Integrations and then click on Flex Lön.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2025-01-52-22-2546-PM.png?width=670&height=387&name=image-png-Jul-16-2025-01-52-22-2546-PM.png)
+
+Activate the integration and **Save**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2025-01-53-44-7659-PM.png?width=670&height=451&name=image-png-Jul-16-2025-01-53-44-7659-PM.png)
+
+Once the integration is active, you can now export reports for changes whenever you want or need to. We will guide you through the process below.
+
+---
+
+## 4. Export file
+
+The employee file is carried out from Insights in the main menu > Reports > FlexLön.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-01-2026-06-23-00-2861-AM.png?width=646&height=317&name=image-png-Apr-01-2026-06-23-00-2861-AM.png)
+
+- Select **Export employee file**.
+- A date picker appears here where you determine from which date you want to include **approved** salary changes (monthly salary) in the exported file - please note that the date in the 'To' field is always today's date. If any changes have been made to a monthly salary during the period you have chosen, even though the start date of the salary is before the period - this change will also be included.
+- The export being done now is based on the data available at the time of the export. Save the export file to transfer it to Flex Lön.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2025-01-56-06-0136-PM.png?width=670&height=277&name=image-png-Jul-16-2025-01-56-06-0136-PM.png)
+
+<Warning>
+  ❗️Please note that salary changes that occur outside of the employment period will not be included in the exported file.
+</Warning>
+
+After the file has been saved, you go to Flex Lön to continue with the import there. What you do in Flex Lön is to go under the Servicerutiner menu and select "import personal data". Then you'll get the import box.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2025-09-28-39-7594-AM.png?width=670&height=382&name=image-png-Jul-16-2025-09-28-39-7594-AM.png)
+
+In the import box it's important to check "tillåt uppdatering av befintliga anställda"
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2025-09-28-57-3757-AM.png?width=480&height=486&name=image-png-Jul-16-2025-09-28-57-3757-AM.png)
+
+Then click OK to initiate the import process. The system will retrieve the file based on your **importmallinställningar** in Flex Lön.
+
+---
+
+## 5. The included data in the file:
+
+**Employee data**
+
+| **HAILEY** | **FLEX LÖN** |
+| --- | --- |
+| Employment number | Employment number |
+| First name + Last Name | Full name |
+| Personal identity number | Personal identity number |
+| Employment start date | Employment start date |
+| Employment end date | Employment end date |
+| Scope (%) | Scope |
+| Street address | Street address |
+| Postal code | Postal code |
+| City | City |
+
+**Salary data**
+
+| **HAILEY** | **FLEX LÖN** |
+| --- | --- |
+| Monthly salary | Monthly salary amount |
+| Hourly salary | Hourly salary amount |
+| Salary start date | Salary start date |
+| Clearing number | Clearing number |
+| Account number | Account number |
+
+---
+
+## 6. Troubleshooting
+
+- Does the employees have an employee number in FlexLön that matches their employee number in Hailey?
+  - If not, enter the employee number in Hailey.
+- Are the employees not included in the export file?
+  - For an employee to be included in the export file, they must be employed or have been employed during the selected export period. In other words, employees who are set to start in the future will not be included in the file.
+- An employee’s salary isn’t included in the export file?
+  - Only approved salary changes (monthly salary) are included in the exported file. Make sure all relevant salary updates are approved before exporting.
+- Is the employee’s salary in a currency other than SEK?
+  - These will not be included in the file.
+- Is the employee's clearing number longer than 5 characters?
+  - These will not be included in the file.
+
+_If you have any questions regarding the integration, please contact your Customer Success specialist at Hailey._

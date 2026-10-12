@@ -1,0 +1,63 @@
+---
+title: "Approval principles"
+---
+
+Set up your company’s approval principles for salary and certificates!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="AyrkZS5" title="Approval principles" />
+
+## Possibilities with the functionality
+
+Approval principles enables you to decide and set who should **receive** **the task** when:
+
+- a **salary** is changed or added to an employee
+- a **certificate** is added to an employee
+
+If no changes are made, the default setting is that the person the employee reports to will receive the task to approve the salary change or when a certificate is added to their profile. You can view and manage this setting by going to **Settings** - **Security** - **Approval principles**.
+
+The image below shows the default configuration.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-11-2026-08-16-58-4400-AM.png?width=670&height=200&name=image-png-May-11-2026-08-16-58-4400-AM.png)
+
+<Note>
+  The approver is able to approve salary and verify certificates for themselves if the principles resolve to that.
+</Note>
+
+## Set your approval principles
+
+If you want to use approval principles other than the default setting, click on the one you would like to change. Here, you decide which part of the organization will be assigned the task of approving salary changes. The available options (shown in the image below) are **Managers**, **Team Leads**, **Head of Department**, **Head of Organization**, or **Specific employee(s)**.
+
+Team Leads and Heads of Department are configured under **Settings - Organization**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-11-2026-08-18-19-6022-AM.png?width=670&height=248&name=image-png-May-11-2026-08-18-19-6022-AM.png)
+
+If an employee belongs to multiple teams, the approval task will be sent to all team leads of those teams. Once the task has been approved by one team lead, it will automatically be removed for the others.
+
+<Note>
+  Please note that we always recommend adding **at least one employee** under the section “For employees without a manager” to ensure that there is always someone who can approve the task.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-11-2026-08-17-49-5694-AM.png?width=670&height=200&name=image-png-May-11-2026-08-17-49-5694-AM.png)
+
+If you would like guidance when setting your approval principles, you are welcome to contact our support at *support@haileyhr.com* or your Customer Success contact.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Can you add several approvers for one salary change?">
+  No, at the moment it is not possible to assign multiple approvers to a single salary change. Each salary change can only have one approver.
+  </Accordion>
+</AccordionGroup>

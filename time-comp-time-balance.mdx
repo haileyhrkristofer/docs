@@ -1,0 +1,105 @@
+---
+title: "Comp time"
+---
+
+Activate comp time to make it easier to keep track of how many hours of comp time your employees have accumulated and when these are used as time-off!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="IGD3ol3" title="Comp time" />
+
+## What is comp time?
+
+The comp time balance in Hailey is based on **the difference between scheduled working hours and reported working hours.** The positive balance can be used by the employee to **take time off**.
+
+The comp time balance is an accumulation of the hours an employee has reported that differ from their scheduled working hours. Each time an employee reports more hours than scheduled, the balance increases. If an employee reports fewer hours than scheduled, the balance decreases.
+
+On the employee profile, you can see **the current balance.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-25-2026-02-02-00-0929-PM.png?width=660&height=436&name=image-png-Sep-25-2026-02-02-00-0929-PM.png)
+
+If the employee has requested compensatory time off that has **not yet been approved**, the balance will also show future reductions, and what the balance will be after the requests have been approved.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-25-2026-02-04-23-8984-PM.png?width=661&height=435&name=image-png-Sep-25-2026-02-04-23-8984-PM.png)
+
+By **clicking** on the Comp time balance, you can view the balance history. The list shows all **deviations** from the employee’s scheduled hours. If an employee reports more or fewer hours than scheduled, this will appear as an event in the history. If the employee reports exactly the scheduled number of hours, no event will be shown.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-25-2026-02-01-03-0537-PM.png?width=659&height=434&name=image-png-Sep-25-2026-02-01-03-0537-PM.png)
+
+## Before you get started
+
+To activate comp time, you need to create a **reporting policy** where this feature is **enabled** and **assign it to the relevant employees**.
+
+Read more about how to set it up [HERE](/time-and-time-off-settings#reporting-policies).
+
+## Import comp time balance
+
+It is common for employees to **already have a calculated comp time balance from before**. Therefore, it is **possible to import the existing data** when you start using comp time in Hailey.
+
+If employees do not have an existing comp time balance, **a balance of 0** should be imported to ensure accurate tracking.
+
+Read more about the import [HERE.](/import-comp-balance)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-15-2026-12-31-34-9994-PM.png?width=670&height=378&name=image-png-Jul-15-2026-12-31-34-9994-PM.png)
+
+## How do you use comp time as time-off?
+
+To **allow employees to use their accumulated comp time as time off**, you need to **create a time off reason that deducts from the comp time balance**. Read more about how to set that up [HERE](/time-off-konfiguration#time_off_reasons).
+
+Once this has been configured, employees can request to use their comp time as time off by selecting **Add time off** and choosing the time off reason that is set up to deduct from the comp time balance.
+
+<Note>
+  When submitted, the time-off will go through the regular approval process according to your [approval principles](/approval-principles).
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-15-2026-12-52-15-5499-PM.png?width=670&height=373&name=image-png-Jul-15-2026-12-52-15-5499-PM.png)
+
+## Common questions
+
+Here are some frequently asked questions about comp time to help you understand how the balance is calculated and managed in Hailey.
+
+<AccordionGroup>
+  <Accordion title="My comp time balance is not correct. Why?">
+    There are a few common reasons why your comp time balance may not match what you expect.
+
+    - Have you reported time for **today**? If you've reported time for today, any increase or decrease to your comp time balance will be reflected **the following day**.
+    - Have your **working hours** changed? If your scheduled working hours have changed (for example, from full-time to part-time), Hailey automatically recalculates your comp time balance based on your new schedule. A new balance need to be imported.
+    - Have you taken comp **time off**? If you've registered time off using a reason that is connected to your comp time balance, your balance will decrease automatically.
+    - Are your working hours and working days set up correctly? Comp time is calculated by comparing the hours you report with your scheduled working hours for that day.
+    - Was the starting balance imported on the correct date?
+    - Was the starting balance correct? The imported starting balance should reflect the actual comp time balance on the day before you started using Hailey.
+  </Accordion>
+
+  <Accordion title="An employee's working hours are changing. What happens to their comp time balance?">
+    When an employee's working hours change (for example, from part-time to full-time), you need to **import the correct comp time balance**.
+
+    This is because Hailey recalculates the balance based on the employee's new work schedule, which makes the existing balance inaccurate.
+
+    To keep the balance correct:
+
+    1. Make sure the employee has reported all time up to the day before the change and **note down** their current comp time balance.
+    2. Create a new employment to keep the employment history accurate.
+    3. Import the accurate comp time balance the day before the new employment starts.
+
+    After that, the comp time balance will be calculated correctly based on the employee's new working hours.
+  </Accordion>
+
+  <Accordion title="I reported time for today but my comp time balance didn't update, why?">
+    Your comp time balance in Hailey always shows your balance **up to yesterday**. If you report time for **today**, any increase or decrease to your comp time balance will be reflected **the following day**.
+
+    This is intentional so that you don't start your workday with a negative comp time balance.
+
+    If you report time for previous days, the balance will be updated immediately.
+  </Accordion>
+</AccordionGroup>

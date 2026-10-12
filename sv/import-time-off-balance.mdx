@@ -1,0 +1,90 @@
+---
+title: "Importera frånvarosaldo"
+---
+
+I den här guiden visar vi er hur ni importerar nuvarande frånvarosaldon för era medarbetare.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="ycXnt9r" title="Importera frånvarosaldo" />
+
+## Innan du sätter igång
+
+Inledningsvis förutsätter systemet att vi gjort en grundlig uppsättning av frånvarosaldon i era inställningar, läs gärna mer om detta i guiden [HÄR](/sv/time-off-balances).
+
+Innan du importerar frånvarosaldo för dina medarbetare behöver du säkerställa att frånvarosaldon är registrerade på respektive medarbetares profil. För att kontrollera detta, gå till medarbetarens profil och öppna upp anställningen, längst ned ser du **Tid och Frånvaro**.
+
+För att kunna importera ett frånvarosaldo måste medarbetaren redan ha ett saldo kopplat till sin profil. Om detta saknas kan du lägga till det genom att klicka upp anställning och sedan **Hantera** i det övre högra hörnet - Korrigera Tid och frånvaro.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-28-2026-07-21-33-1983-AM.png?width=670&height=364&name=image-png-Aug-28-2026-07-21-33-1983-AM.png)
+
+<Tip>
+  **Tips:** Om du vill lägga till frånvarosaldo för flera medarbetare samtidigt kan du göra detta via **Medarbetarlistan** genom att välja **Uppdatera inställningar för tid och frånvaro**. Tänk då på att du behöver fylla i **samtliga** fält som ska gälla för medarbetarna, det vill säga också **rapporteringspolicy**, **arbetsfria dagar** och **arbetstimmar**.
+</Tip>
+
+## Hur importerar jag frånvarosaldon?
+
+Gå till fliken Medarbetare i huvudmenyn, klicka på **Importera - Frånvarosaldo**. Om du önskar att endast ladda ner importmallen för vissa medarbetare, så kan du börja med att bocka i dessa medarbetare i listan och sedan följa resten av stegen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-28-2026-07-24-30-7360-AM.png?width=670&height=344&name=image-png-Aug-28-2026-07-24-30-7360-AM.png)
+
+Nu kan du välja ifall du vill ladda ner importmallen för alla medarbetare, eller endast för de utvalda medarbetarna. Klicka på alternativet du vill välja. Mallen laddas ner som en Excel-fil. Filen kommer att ta med alla medarbetare, eller de utvalda medarbetarna, som finns upplagda i ert konto.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-28-2026-08-00-42-6542-AM.png?width=670&height=364&name=image-png-Aug-28-2026-08-00-42-6542-AM.png)
+
+## Fyll i importmall
+
+Importmallen plockar med Employee ID, Employment number, Employee, Company email, Time off balance ID och Time off balance name på medarbetarna, dessa kolumner lämnar du orörda. Det kommer att finnas flera rader för en medarbetare om det ligger flera frånvarosaldon inlagda på profilen. Den kolumn du fyller i för att importera det nuvarande frånvarosaldo är den som heter New Time Off Balance, ange siffran för hur många dagar medarbetaren **har kvar att ansöka om**.
+
+En import av frånvarosaldon gör du i regel första året när ni börjar använda er av frånvaron i Hailey. Ni kan även använda importen för att bulkuppdatera frånvarosaldon för era medarbetare.
+
+<Tip>
+  Det går även bra att uppdatera frånvarosaldon manuellt på respektive medarbetare. Läs mer om hur du gör det [HÄR.](/sv/time-off-holiday-balance#justera_semestersaldo_manuellt)
+</Tip>
+
+## Importera
+
+När importmallen är ifylld går du tillbaka till medarbetarlistan, klickar på **Importera - Frånvarosaldo** och ladda upp den sparade filen i rutan. Klicka eller släpp filen här för att ladda upp.
+
+När importen är gjord kommer frånvarosaldon att registreras på respektive medarbetares profil.
+
+<Warning>
+  När du importerar frånvarosaldon kommer detta att återställa historiken för de berörda medarbetarens frånvarosaldon, om det finns några sådana. Detta innebär att tidigare minskningar, påfyllningar eller justeringar av saldot inte längre kommer att visas i översikten. All tidigare frånvaro kommer dock fortfarande att sparas på Tid-fliken och vara tillgänglig i rapporter.
+</Warning>
+
+<Note>
+  För att frånvarosaldot ska bli synligt på medarbetarkortet behöver frånvarosaldon vara inlagda på den aktiva anställningen i profilen.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-28-2026-08-06-53-0781-AM.png?width=670&height=347&name=image-png-Aug-28-2026-08-06-53-0781-AM.png)
+
+## Rättigheter
+
+Administratörer har automatiskt behörighet att importera frånvarosaldon.
+
+För att ge dessa behörigheter till andra roller, uppdatera rättigheterna under **Inställningar – Säkerhet – Roller & rättigheter** för **Importera medarbetardata**. [**HÄR**](/sv/roles-and-rights) kan du läsa mer om **Roller och rättigheter**.
+
+## Vanliga frågor
+
+**Fråga**: Jag får felmeddelande när jag importerar Excelfilen till Hailey. Vad gör jag för fel?
+
+Säkerställ att det inte hamnat ett mellanslag efter era siffror under kolumnen New time off balance. De andra kolumnerna ska även lämnas orörda för att filen ska kunna läsas in korrekt.
+
+**Fråga**: Vi har medarbetare som har flera olika frånvarosaldon kopplat till deras anställning, går dessa att importera samtidigt?
+
+Ja, alla inlagda saldon som medarbetaren har kommer att dyka upp i importfilen!
+
+**Fråga**: Min medarbetare har flera frånvarosaldon, men jag vill enbart uppdatera balansen för ett av dem - vad händer med det andra?
+
+Det andra saldot kommer då inte uppdateras och dess ursprungliga saldo kommer ligga kvar.

@@ -1,0 +1,204 @@
+---
+title: "Integration med Outlook"
+---
+
+Vill du att medarbetares frånvaro automatiskt ska överföras från Hailey till Outlook? Med vår integration är detta möjligt, vilket säkerställer att registrerad frånvaro synkroniseras sömlöst till medarbetarnas kalendrar.
+
+<Tip>
+  Första gången du aktiverar en av **Haileys standardintegrationer**? Börja med att läsa den [**HÄR**](/sv/haileys-standard-integrations) guiden för att veta vad du ska tänka på innan du sätter igång.
+</Tip>
+
+## Vad gör integrationen?
+
+Vid varje synkronisering överförs medarbetarnas registrerade ledighet automatiskt via API från Hailey till Outlook-kalendern, vilket säkerställer att frånvaron alltid är uppdaterad i medarbetares Outlook-kalendrar.
+
+När frånvaro registreras i Hailey skapar integrationen automatiskt en **Frånvarande (Out of Office)**-händelse i medarbetarens Outlook-kalender.
+
+Integrationen synkar varje timme.
+
+## Vilken data är inkluderad i integrationen?
+
+Den här integrationen synkroniserar medarbetarnas frånvaro från Hailey till Outlook. Endast heldagsledighet överförs via integrationen.
+
+Vid uppsättningen av integrationen kan du välja vilka frånvaroanledningar som ska inkluderas, så att endast relevant frånvaro överförs till medarbetarnas kalendrar.
+
+## Vad krävs för att ingå i integrationen?
+
+För att en användare **ska ingå** i integrationen behöver medarbetaren ha:
+
+- En **företagsmail** som matchar er domän
+
+Medarbetare synkroniseras mellan Hailey och Outlook genom att företagsmailen i Hailey matchas mot UPN i Entra ID.
+
+Medarbetare med följande **anställningsstatus** ingår i integrationen:
+
+- **I tjänst**
+- **Ska lämna**
+
+## Hur aktiveras integrationen?
+
+För att aktivera integrationen behöver du:
+
+<Steps>
+  <Step title="Förbereda uppsättning av integrationen i Entra ID">
+    Förbereda uppsättning av integrationen i Entra ID
+  </Step>
+  <Step title="Lägga till integrationen i Hailey">
+    Lägga till integrationen i Hailey
+  </Step>
+  <Step title="Fyll i nödvändig data för integrationsuppsättningen">
+    Fyll i nödvändig data för integrationsuppsättningen
+  </Step>
+  <Step title="Omfatta integrationen vid behov">
+    Omfatta integrationen vid behov
+  </Step>
+  <Step title="Spara och aktivera">
+    Spara och aktivera
+  </Step>
+</Steps>
+
+Följ instruktionerna nedan för att genomföra aktivering av integrationen.
+
+### Steg 1 - Förberedelser
+
+Innan ni aktiverar integrationen behöver den som aktiverar integrationen **ha adminrättighet i Entra ID.** Som admin i Hailey har du automatiskt rättigheten att kunna sätta upp integrationen.
+
+- Om någon annan, exempelvis IT, ska ansvara för att sätta upp integrationen, kan du ge dem de rättigheter som krävs genom att följa guiden för roller och rättigheter [**HÄR**](/sv/roles-and-rights). IT behöver rättigheten att Visa & ändra integrationer.
+
+### Steg 2 - Uppsättning i Entra ID
+
+Börja med att logga in i Microsoft Entra ID.
+
+- Gå till App registreringar
+- Klicka på **\+ Ny registrering.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-11-32-18-6624-AM.png?width=670&height=404&name=image-png-Jul-10-2025-11-32-18-6624-AM.png)
+
+<Steps>
+  <Step title="Namnge applikationen, förslagsvis skriver ni 'Hailey Outlook">
+    Namnge applikationen, förslagsvis skriver ni "Hailey Outlook" för tydlighet. Ni kan även välja att bocka i det övre alternativet under Supported account types - "Accounts in this organizational directory only".
+  </Step>
+  <Step title="Under Redirect URL väljer ni Web och klistrar in denna länk:">
+    Under Redirect URL väljer ni **Web** och klistrar in denna länk: [https://haileyhr.app/settings?item=integrations](https://haileyhr.app/settings?item=integrations) (ni kan kopiera länken, se bara till att det inte följer med något mellanslag före eller efter).
+  </Step>
+  <Step title="Klicka på Register">
+    Klicka på **Register**.
+  </Step>
+</Steps>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-11-39-54-9081-AM.png?width=670&height=440&name=image-png-Jul-10-2025-11-39-54-9081-AM.png)
+
+När registreringen av appen är klar:
+
+- Gå till **API Permissions** i menyn till vänster
+- Klicka på **\+ Add a permission**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-11-40-59-0866-AM.png?width=670&height=401&name=image-png-Jul-10-2025-11-40-59-0866-AM.png)
+
+Gå vidare genom att klicka på **Microsoft Graph.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-11-35-36-1210-AM.png?width=670&height=329&name=image-png-Jul-10-2025-11-35-36-1210-AM.png)
+
+Klicka på **Application permissions.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-11-35-16-9547-AM.png?width=670&height=317&name=image-png-Jul-10-2025-11-35-16-9547-AM.png)
+
+Under **Select permissions,** sök på **"calendar",** öppna listan och välj **Calendar.ReadWrite**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-06-2026-06-23-08-9301-AM.png?width=670&height=320&name=image-png-Oct-06-2026-06-23-08-9301-AM.png)
+
+Sök på "**User**", öppna upp **User.**
+
+Välj **User.Read.All** och klicka på **Add permissions.**
+
+![User-read-all](https://docs.haileyhr.com/hs-fs/hubfs/User-read-all.png?width=670&height=373&name=User-read-all.png)
+
+I tabben som heter API permissions så klicka på Grant admin consent for "Your-Company-Name" (här kommer ert företagsnamn stå). Klicka sedan **Yes.**
+
+I listan API / Permissions kommer du nu att se att rättigheterna har statusen **Granted**.
+
+![granted](https://docs.haileyhr.com/hs-fs/hubfs/granted.png?width=670&height=363&name=granted.png)
+
+Gå tillbaka till:
+
+- **Overview-fliken** och kopiera **Directory (tenant) ID** samt er **Application (client) ID**.
+- **Spara både dessa.** De kommer behövas när integrationen ska aktiveras i Hailey.
+
+![ID](https://docs.haileyhr.com/hs-fs/hubfs/ID.png?width=670&height=357&name=ID.png)
+
+Gå till:
+
+- **Certificates & Secrets** och säkerställ att du befinner dig i **Client secrets**.
+- Klicka på **\+ New client secret**.
+- Under description väljer ni namn, förslagsvis till "Hailey HR secret". Vi rekommenderar att ni sätter **Expires** till 24 månader.
+- Klicka sedan på **Add**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-11-54-25-7396-AM.png?width=670&height=451&name=image-png-Jul-10-2025-11-54-25-7396-AM.png)
+
+Kopiera nu koden under **Value** och spara den. Även denna kommer behövas vid aktivering i Hailey.
+
+![client secret](https://docs.haileyhr.com/hs-fs/hubfs/client%20secret.png?width=670&height=407&name=client%20secret.png)
+
+**Efter 24 månader behöver integrationen förnyas.**
+
+- När det är dags för detta kommer du att få ett e-postmeddelande från Hailey som informerar dig om det.
+
+### Steg 3 - Aktivera integrationen i Hailey
+
+- Gå till **Inställningar -** **Integrationer.**
+- Klicka på rubriken **Alla.**
+- Klicka på **Microsoft Outlook** och **Lägg till integration.**
+
+![Lägg-till](https://docs.haileyhr.com/hs-fs/hubfs/L%C3%A4gg-till.png?width=670&height=338&name=L%C3%A4gg-till.png)
+
+Klistra in värdet för **Tenant ID** och **Client ID** som du kopierat från tidigare steg i Entra ID och tryck sedan på **Auktorisera.**
+
+![ID-1](https://docs.haileyhr.com/hs-fs/hubfs/ID-1.png?width=670&height=431&name=ID-1.png)
+
+Logga in till din Entra och **Godkänn.**
+
+Gå sedan tillbaka till integrationsinställningarna och aktivera integrationen genom att toggla på **Aktiv.**
+
+- Integrationen blir inte aktiv förrän du klickar på Spara i det nedre högra hörnet. Detta görs som det sista steget när hela integrationskonfigurationen är färdig.
+
+Klistra in värdet för **Client Secret** som du kopierade från **Entra ID**. Ange därefter ett namn för **Händelsen (Händelsetitel)**. Denna rubrik kommer att visas i medarbetarnas Outlook-kalendrar.
+
+Välj vilka **frånvaroanledningar** som ska ingå i integrationen och ange från vilket datum frånvarodata ska synkroniseras till Outlook-kalendrarna.
+
+![Outlook-2](https://docs.haileyhr.com/hs-fs/hubfs/Outlook-2.png?width=670&height=936&name=Outlook-2.png)
+
+Efter ovan steg är gjorda är det bara att klicka på **Spara** och sedan är Outlook-integrationen aktiverad!
+
+Vill ni göra justeringar i uppsättningen så görs det via den aktiva integrationen som ligger under **Inställningar** - **Integrationer** - **Tillagda**.
+
+![Integrationer](https://docs.haileyhr.com/hs-fs/hubfs/Integrationer.png?width=670&height=342&name=Integrationer.png)
+
+## Gäller integrationen inte hela företaget?
+
+Då finns det möjlighet att **omfatta** integrationen!
+
+Om dessa fält lämnas tomma kommer alla anställda som uppfyller krav för integrationen att synkas över.
+
+<Note>
+  Exempelbilden nedan visar att endast medarbetare som tillhör den valda legala enheten och den valda arbetsplatsen som anges i integrationsuppsättningen, kommer att inkluderas i integrationen mot Outlook.
+</Note>
+
+## Vanliga fragor
+
+<AccordionGroup>
+  <Accordion title="1: Varför fungerar inte synkroniseringen av ledighet för vissa av mina medarbetare?">
+    Om ledigheten inte synkroniseras för en medarbetare, kontrollera följande:
+
+    - Är ledighetsansökan godkänd?
+    - Uppfyller medarbetaren kriterierna för integrationen?
+    - Är ledigheten registrerad som en heldagsfrånvaro?
+  </Accordion>
+
+  <Accordion title="2: Är frånvaroanledningen synlig i Outlook?">
+    Nej, orsaken till ledigheten visas inte i Outlook-händelsen. Den enda information som syns i kalenderposten är den **händelserubrik (Event Title)** som du har konfigurerat i integrationsinställningarna.
+
+    ![Calendar-outlook](https://docs.haileyhr.com/hs-fs/hubfs/Calendar-outlook.png?width=670&height=216&name=Calendar-outlook.png)
+
+    _Om du har några frågor om integrationen, vänligen kontakta din Customer Success-specialist på Hailey._
+  </Accordion>
+</AccordionGroup>

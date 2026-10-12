@@ -1,0 +1,238 @@
+---
+title: "Create workflows"
+---
+
+## Want to automate your HR processes and make sure nothing falls through the cracks? Then read this guide for tips and instructions on how to create a Workflow 💫
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="PIdeVo0" title="Create workflows" />
+
+### What are workflows?
+
+Workflows in Hailey are automated processes that help manage HR tasks and activities. They consist of steps and tasks that can be assigned to employees, managers or teams. Workflows can be triggered manually, by specific dates, recurring schedules, or time-off events. They help automate processes such as onboarding, offboarding, and reminders, ensuring tasks are completed at the right time. Workflows can also use custom fields and scoping to make sure the right tasks reach the right people.
+
+### Create workflow
+
+To create a workflow, go to **Settings - Workflows** and click **Add** in the top right corner. Start by giving your workflow a **Title** and entering a **Description**. Then, choose **how the workflow will be triggered**.
+
+You can choose from four types of triggers:
+
+- **Date-related employee field** – the workflow is automatically triggered based on a date entered on an employee’s profile.
+- **Time off** - the workflow is automatically triggered based on predefined absence reasons you have created.
+- **Manual** – the workflow is triggered manually via the employee list or an employee profile.
+- **Recurring** – the workflow is automatically triggered on a specified date.
+
+Once everything is filled in, click **Save** to start adding **Steps** and **Tasks** to your workflow!
+
+<Note>
+  Keep the trigger set to Manual while building the workflow. Switch to an automatic trigger only when you’re ready to go live with your processes.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-13-2026-09-09-59-5367-AM.png?width=650&height=333&name=image-png-Aug-13-2026-09-09-59-5367-AM.png)
+
+After clicking **Save**, you’ll automatically be taken to the **workflow editor view**. From here, you can start adding different **Steps**. Each Step you add must contain at least one **Task**.
+
+- **Step** - used to schedule when tasks should be sent out. If tasks should be sent at different times, they need to be placed in separate steps.
+- **Task** - a task is always assigned to someone and includes details describing what needs to be done.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-14-2026-12-39-41-4050-PM.png?width=650&height=333&name=image-png-Aug-14-2026-12-39-41-4050-PM.png)
+
+### Create steps
+
+Hailey automatically names each step you add. Start by renaming your step. You do this by clicking on **Step 1** and then entering a new name that feels appropriate. Naming a step is a great way to describe where you are in the process or to provide context for the tasks included in that step.
+
+Steps work like a timeline. If you want tasks to be sent out at different times, you need to add multiple steps. All tasks that should be sent out simultaneously should be placed within the same step. You can do this by clicking **Add Step** on the left side of the editor view.
+
+### When should the step be activated?
+
+Each step has its own trigger. Choose the trigger for each step via the dropdown menu under the heading **When should the step be activated?** in each step.
+
+The trigger controls when the tasks in that specific step will be sent out. There are four triggers to choose from:
+
+- **When the workflow starts** – should always be used as the trigger for the first step!
+- **Date-related employee field** – the step is activated by a date specified on an employee’s profile.
+- **When the previous step is completed** – the step is activated once all tasks in the previous step are marked as completed.
+- **Time after the workflow started** – set how many days after the workflow start the step should be activated.
+
+Note that every step **must have a trigger**, and you choose the trigger for each step yourself!
+
+<Note>
+  Click [**HERE**](https://app.vaam.io/share/mUBtHwp) to watch a short video explaining how triggers work.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-14-2026-12-42-51-2098-PM.png?width=650&height=333&name=image-png-Aug-14-2026-12-42-51-2098-PM.png)
+
+### Add tasks to steps
+
+All steps consist of tasks. A task is always assigned to someone and includes details explaining what the task involves. Add a task by clicking the plus sign below the bird.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-Aug-14-2026-12-45-38-6410-PM.png?width=650&height=333&name=undefined-Aug-14-2026-12-45-38-6410-PM.png)
+
+When you click the plus sign, you’ll be taken directly to the view for **Adding a task to the step**.
+
+Start by entering a name in the **Task** field. The name of the task will be visible to the person it is assigned to. After that, it’s always a good idea to set a **Deadline** for the task!
+
+<Note>
+  If a deadline is set, an extra reminder will be sent to the person assigned the task—**if the deadline has passed.**
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-14-2026-12-47-37-5839-PM.png?width=650&height=331&name=image-png-Aug-14-2026-12-47-37-5839-PM.png)
+
+Now it's time to fill in **the Details.** This is where you provide instructions to the person responsible for completing the task!
+
+The content in the details section is visible to the assignee, so **be clear about what's expected**! Feel free to use **bullet points, underlining, bold text,** or **hyperlinks** to make the instructions more user-friendly.
+
+You can also choose to include additional information about the employee the workflow is running for. You do this by toggling the switch (if the button is black, the data is included).
+
+For example, the task will display the employee’s **Start Date**.
+
+<Note>
+  In an offboarding workflow, it might be useful to include the employee’s **Last Day of Employment**, while the **Date of joining** is helpful to include in a preboarding or onboarding workflow.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-14-2026-12-50-34-5676-PM.png?width=650&height=331&name=image-png-Aug-14-2026-12-50-34-5676-PM.png)
+
+Next, the task needs to be assigned to someone. Under **Assigned to**, you will see all available options in a dropdown list:
+
+- **The person the workflow is running for** – the task will be sent to the employee the workflow was triggered for. If the workflow was started for a new hire, it will be that new hire who receives the task.
+- **The person the employee reports to** – a workflow always runs for an employee, and if you choose this option, the task will be sent to their manager.
+- **Specific employee** – you can choose a specific employee who will always be responsible for completing the task (regardless of which employee the workflow is running for).
+- **Specific team** – all members of the team will receive the task, but only one person from the team needs to mark it as completed.
+- **Specific task force** – all members of the workgroup will receive the task, but again, only one person needs to mark it as completed.
+
+<Note>
+  To avoid tasks in a workflow becoming dependent on a specific person, we recommend using **Task forces** instead of assigning to a **Specific employee**. Instead we recommend creating a task force with the specific employee.
+</Note>
+
+### Scope
+
+There are two different types of **scoping** in workflows. You can either scope an **entire workflow** or **individual tasks** within a workflow. The purpose of **Scoping** is to ensure that the right workflows are sent to the right people — so that the tasks assigned are relevant and timely.
+
+- **Scope an entire workflow**: Your processes vary significantly and you want to control which workflow should be triggered for a specific part of the organization — in this case, you should scope the entire workflow.
+- **Scope a task**: Your processes are mostly identical, with only a few differences — in this case, you should scope specific tasks within the workflow.
+
+See the examples below to understand when to scope a workflow and when to scope a task!
+
+<Note>
+  **Example of when to scope an entire workflow:**
+
+  If your onboarding processes differ entirely depending on the **type of employment** your new hires have, we recommend scoping the **entire workflow**.
+
+  ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-15-2025-01-29-28-1741-PM.png?width=670&height=350&name=image-png-Oct-15-2025-01-29-28-1741-PM.png)
+</Note>
+
+<Note>
+  **Example of when to scope a task:**
+
+  You have three legal entities. One of the entities uses an external payroll provider. The external provider only needs to be informed about employees hired under that specific legal entity. In this case, you should scope the task based on the Legal entity.
+
+  In the image, the task is scoped to the **Legal entity** - **Nordic Innovate AB**. This means that the external payroll provider will only receive the task **Ensure that all payroll details are in place!** if the employee the workflow is triggered for belongs to the legal entity Nordic Innovate AB.
+
+  ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-26-2026-12-55-51-3052-PM.png?width=650&height=330&name=image-png-Aug-26-2026-12-55-51-3052-PM.png)
+</Note>
+
+### Time off and Workflows
+
+Start a **workflow** with **time off** as the trigger for the workflow.
+
+When you create a workflow linked to time off, it follows the same principles as described above, but in this case, you select **Time off** as the trigger. You will then be presented with five different options for what the trigger should be based on:
+
+- **Occassions during a specific period –** used to track how often absences occur, for example, to identify recurring patterns.
+- **Number of days during a specific period** – shows the total extent of absence within a defined timeframe.
+- **Number of consecutive days**
+- **Long term leave start date**
+- **Long term leave end date**
+
+You will then choose which of these absence reasons the workflow should be based on. These options are determined by how you have configured your **Time off reasons** in Hailey under **Settings – Time & Time off – Time off Reasons**. Learn more about how to set these up [**HERE**](/time-and-time-off-settings).
+
+### Custom fields and workflows
+
+If you have created Custom Fields of the type **Date** or **Employee**, you can use these to make your workflows even more detailed.
+
+- **Custom Field (Date)** – If you choose **Date-related employee field** as a trigger, you can trigger the workflow based on any custom field with the type **Date**.
+- **Custom Field (Employee)** – If you have added custom fields of the type **Employee**, these fields will appear as options in the dropdown when **assigning** a task.
+
+<Note>
+  **Example of a workflow triggered by a custom date field:**
+
+  To keep track of ID documents that are about to expire, a custom field called **Perform new ID check** has been created, which is of the type **Date**.
+
+  In this example, the workflow will be triggered 30 days before the date entered in the **Perform new ID check** field on the employee’s profile.
+
+  <img src="https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2025-08-49-00-9887-AM.png?width=670&height=405&name=image-png-Jul-16-2025-08-49-00-9887-AM.png" alt="" /> In this case, the workflow would have been triggered for Adam 30 days before November 3rd, 2025.
+
+  ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-18-2026-09-10-03-3568-AM.png?width=650&height=334&name=image-png-Aug-18-2026-09-10-03-3568-AM.png)
+</Note>
+
+<Note>
+  **Example of a task assigned using a Custom Field of type Employee:**
+
+  The task in this workflow is **assigned** to the person specified in the field **Onboarding Buddy** on the employee profile the workflow is triggered for.
+
+  ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2025-09-57-40-5171-AM.png?width=670&height=403&name=image-png-Jul-16-2025-09-57-40-5171-AM.png)
+
+  Let’s say an onboarding workflow is running for Hanna, and that one of the tasks in the workflow is assigned to the **Onboarding Buddy**.
+
+  Adam is listed as the employee in the **Onboarding Buddy field** on Hanna’s profile. This means the task **Plan Welcome Lunch** is sent to Adam!
+
+  ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-18-2026-09-13-51-4642-AM.png?width=650&height=335&name=image-png-Aug-18-2026-09-13-51-4642-AM.png)
+</Note>
+
+### Inspiration on workflows
+
+Here are some examples of workflows that you can create:
+
+- Reminder before the end of a probationary period or fixed-term
+- When an employee is returning to work after a long term leave, such as sabbatical or parental leave
+- A recurring reminder about safety inspection routine
+- Reminder for all events included in your HR annual plan
+- Reminder to all managers regarding booking feedback sessions
+
+### Webhook tasks in workflows
+
+In workflows, you can also create tasks that send a webhook to another system. This means that **Hailey can notify the other system in real time** when the step containing this task is triggered.
+
+When you create a task of this type, you start by naming the task. The task title will only be visible in Hailey, so you can see that the task was completed and the webhook was sent. Next, enter **the URL you want the task to be sent to** when it is triggered. You can also include **custom variables** by clicking "Add variable".
+
+Webhooks are sent using the POST method with JSON in the body containing the employee ID of the person the workflow is running for as well as any variables you set up in the task. If for some reason the webhook cannot be sent, an email will be sent from Hailey to the company admin, where we describe which task failed.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-18-2026-09-21-31-1227-AM.png?width=650&height=330&name=image-png-Aug-18-2026-09-21-31-1227-AM.png)
+
+### Rights
+
+There are various rights related to workflows in Hailey. All rights are configured via Settings - Security - Roles and Rights. Below, we outline the rights that affect workflows:
+
+<Note>
+  Would you like to read more about Roles and Rights in Hailey? Click [HERE](/roles-and-rights).
+</Note>
+
+- **Start Workflows**
+- **Follow Workflows**
+- **View and Complete Tasks for Others**
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="How can we set up the Workflow so that only one of the employees in a taskforce need to complete task?">
+    **Answer:** By choosing the option **Specific** **task force** under the **Assigned to** tab – all members of the workgroup will receive the task, but only one person needs to mark it as completed. Read more about assigning tasks [HERE.](#Assigned_To)
+  </Accordion>
+
+  <Accordion title="How do i receive notifications in Teams or Slack?">
+    **Answer:** If you want to receive notifications about new tasks in Teams or Slack, you can check out our guides on how to connect Hailey with Teams or Slack:
+
+    - [TEAMS](/integration-with-teams)
+    - [SLACK](/integration-with-slack)
+  </Accordion>
+</AccordionGroup>

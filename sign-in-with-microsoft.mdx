@@ -1,0 +1,74 @@
+---
+title: "Sign in with Microsoft SSO"
+---
+
+With the single sign on solution for Microsoft, you will use the same authentication credentials for signing in to Hailey as you use for your work email and other Microsoft services.
+
+## How to sign in with Microsoft SSO
+
+This guide provides step by step instructions on how you activate sign in with Microsoft SSO.
+
+## Settings
+
+Activate Microsoft SSO by going to **Settings** - **Security** - **Log in** - **Microsoft SSO** - Click **Activate** -- **Save**.
+
+<Note>
+  If needed, it is possible to have **multiple** options activated at the same time.
+</Note>
+
+<Note>
+  We strongly recommend **trying your new option** for log in before deactivating the old one. This just to make sure that you don't lock yourself out from the system. You can easily try the new option by logging out and then log in with the new one. Once you can confirm that this is working you can deactivate the old option.
+</Note>
+
+Signing with Microsoft SSO requires that:
+
+- **Company email in Hailey matches Email in Entra ID.**
+- The email address for **Email and UPN in Entra ID has the same domain**. If the email address for Email and UPN differ in terms of different domains, you can whitelist your Entra ID. Further down in this guide you will find more information on how to add a whitelisted Tenant ID.
+
+<Note>
+  When signing in with Microsoft SSO, the company email address in Hailey is matched against the email address associated with the user in Entra.
+
+  In cases where no email address is available in Entra and the user only has a UPN, the company email address in Hailey is matched against the UPN instead.
+
+  If the company email address in Hailey matches the email address or UPN in Entra, the user can sign in successfully.
+</Note>
+
+## Add whitelisted Tenant ID
+
+**If the domain for your company email is different than the user's UPN,** you need to add **Whitelisted Tenant ID**. In order to do that, go to your Entra ID - Overview and copy Tenant ID.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Feb-27-2024-11-02-28-7514-AM.png?width=670&height=983&name=image-png-Feb-27-2024-11-02-28-7514-AM.png)
+
+Then go back to Hailey and paste your Tenant ID in the field for Whitelisted Tenant IDs, click Save.
+
+<Note>
+  Email domains connected to whitelisted IDs **will not have to match** your company´s deafult Mictrosoft Entra ID domain upon login.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Feb-27-2024-03-52-14-3155-PM.png?width=660&height=1108&name=image-png-Feb-27-2024-03-52-14-3155-PM.png)
+
+## Sign in
+
+When signing in with Microsoft is active, users can **click on the Microsoft logo** at the login page.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-16-2024-01-57-13-5294-PM.png?width=547&height=442&name=image-png-May-16-2024-01-57-13-5294-PM.png)
+
+The first time doing this, one needs to fill out the authentication credentials.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Feb-27-2024-10-20-30-8272-AM.png?width=553&height=232&name=image-png-Feb-27-2024-10-20-30-8272-AM.png)
+
+If your company requires _multi factor authentication_, there will be a step for this afterwards of the pictures shown above. This is not something that every company requires.
+
+Once the setup is done, you will from now on be able to log in by just clicking on the Microsoft logo.
+
+<Tip>
+  **Tip!**
+
+  To prepare for inviting your colleagues and make it even easier for them, **admin in your Microsoft Entra ID** can give consent for the necessary permissions. This eliminates the need for each user to individually approve them when logging in for the first time with Microsoft SSO into Hailey. Here's how you can proceed:
+
+  1. Log in to Hailey via SSO using the same email address that is registered as an administrator in Entra.
+  2. Go to Microsoft Entra ID - Enterprise applications.
+  3. Search for Hailey HR Sign-in (application ID: dce4b1a0-1f12-4059-b8a5-27c80f36e9d5).
+  4. Under Security - Permissions, choose "Grant admin consent for Hailey HR."
+  5. Done! Now, employees won't see a prompt the first time they log in to Hailey. You've streamlined the process through admin approval in Microsoft Entra ID.
+</Tip>

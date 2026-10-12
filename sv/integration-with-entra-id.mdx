@@ -1,0 +1,276 @@
+---
+title: "Integration med Entra ID"
+---
+
+Vill du att nya medarbetare automatiskt ska skapas i Entra ID när de läggs till i Hailey? Med vår integration till Entra ID är detta möjligt – tillsammans med smidig överföring av data som befattningar och anställningsnummer!
+
+<Tip>
+  Första gången du aktiverar en av **Haileys standardintegrationer**? Börja med att läsa den [**HÄR**](/sv/haileys-standard-integrations) guiden för att veta vad du ska tänka på innan du sätter igång.
+</Tip>
+
+## Vad gör integrationen?
+
+Vid varje synkronisering kommer inkluderad data[https://docs.haileyhr.com/sv/integration-med-kleer-0#vilken-data-ar-inkluderad](/sv/integration-with-kleer-salary-and-employee-data#vilken-data-ar-inkluderad)att **automatiskt** uppdateras via **API överföring** **till Entra ID** och få samma värde som finns i Hailey, eftersom **Hailey är master** (facit).
+
+Sammanfattningsvis kan integrationen hjälpa er med följande saker:
+
+- Skapa nya användare i Entra ID
+- Uppdatera information om användare i Entra ID
+- Inaktivera användare i Entra ID efter deras sista arbetsdag (_valfritt_)
+
+## Hur fungerar integrationen?
+
+Med API-överföringen sker en synkronisering mellan Hailey och Entra ID **varje timme** baserat på förändringar. Detta innebär att:
+
+- Inkluderad data som inte överensstämmer mellan Hailey och Entra ID kommer att uppdateras med den information som finns i Hailey varje timme.
+
+<Note>
+  Haileys integration med Entra ID är anpassad för det molnbaserade Entra ID.
+</Note>
+
+## Vilken data är inkluderad i integrationen?
+
+| **HAILEY** | **Entra ID** |
+| --- | --- |
+| Företagsmail | User principal name |
+| Företagsmail (utan @domän) | Mail nickname (utan separering) |
+| Jobbtelefon | Business phone |
+| Förnamn | First name |
+| Efternamn | Last name |
+| Förnamn + Efternamn | Display name |
+
+**Valbara datafält:**
+
+| **HAILEY** | **Entra ID** |
+| --- | --- |
+| Titel | Job title (comma separated) |
+| Avdelning | Department |
+| Legal enhet | Company name |
+| Kontor | Office location |
+| Anställningsdatum | Employee hire date |
+| Anställningsnummer | Employee ID |
+| Rapporterar till | Manager |
+| Telefonnummer privat, telefonnummer jobb eller eget fält | Mobile phone |
+
+## Vad krävs för att ingå i integrationen?
+
+För att en användare **ska ingå/skapas i integrationen** behöver medarbetaren ha:
+
+- Företagsmail som matchar er domän
+
+Medarbetare synkroniseras mellan Hailey och Entra ID genom att företagsmailen i Hailey matchas mot UPN i Entra ID. Om ingen matchande UPN finns, skapar Hailey automatiskt en ny användare i Entra ID.
+
+Medarbetare med följande **anställningsstatus** ingår i integrationen:
+
+- Ska börja
+- I tjänst
+- Ska lämna
+
+## Hur aktiveras integrationen?
+
+För att aktivera integrationen behöver du:
+
+<Steps>
+  <Step title="Förbereda uppsättning av integrationen i Entra ID">
+    Förbereda uppsättning av integrationen i Entra ID
+  </Step>
+  <Step title="Lägga till integrationen i Hailey">
+    Lägga till integrationen i Hailey
+  </Step>
+  <Step title="Fyll i nödvändig data för integrationsuppsättningen">
+    Fyll i nödvändig data för integrationsuppsättningen
+  </Step>
+  <Step title="Omfatta integrationen vid behov">
+    Omfatta integrationen vid behov
+  </Step>
+  <Step title="Spara och aktivera">
+    Spara och aktivera
+  </Step>
+</Steps>
+
+Följ instruktionerna nedan för att genomföra aktivering av integrationen.
+
+### Steg 1 - Förberedelser
+
+Innan ni aktiverar integrationen behöver den som aktiverar integrationen **ha adminrättighet i Entra ID.** Som admin i Hailey har du automatiskt rättigheten att kunna sätta upp integrationen.
+
+- Om någon annan, exempelvis IT, ska ansvara för att sätta upp integrationen, kan du ge dem de rättigheter som krävs genom att följa guiden för roller och rättigheter [**HÄR**](/sv/roles-and-rights). IT behöver rättigheten att Visa & ändra integrationer.
+
+### Steg 2 - Uppsättning i Entra ID
+
+Börja med att logga in i Microsoft Entra ID.
+
+- Gå till App registreringar
+- Klicka på **\+ Ny registrering**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-01-51-05-7019-PM.png?width=670&height=414&name=image-png-Jul-10-2025-01-51-05-7019-PM.png)
+
+<Steps>
+  <Step title="Namnge applikationen, förslagsvis skriver ni 'Hailey' för ty">
+    Namnge applikationen, förslagsvis skriver ni "Hailey" för tydlighet. Ni kan även välja att bocka i det övre alternativet under Supported account types - "Accounts in this organizational directory only".
+  </Step>
+  <Step title="Under Redirect URL väljer ni Web och klistrar in denna länk:">
+    Under Redirect URL väljer ni **Web** och klistrar in denna länk: [https://haileyhr.app/settings?item=integrations](https://haileyhr.app/settings?item=integrations) (ni kan kopiera länken, se bara till att det inte följer med något mellanslag före eller efter).
+  </Step>
+  <Step title="Klicka på Register">
+    Klicka på **Register**.
+  </Step>
+</Steps>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-01-53-57-3546-PM.png?width=670&height=541&name=image-png-Jul-10-2025-01-53-57-3546-PM.png)
+
+När registreringen av appen är klar:
+
+- Gå till **API Permissions** i menyn till vänster
+- Klicka på **\+ Add a permission**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-01-56-33-4335-PM.png?width=670&height=392&name=image-png-Jul-10-2025-01-56-33-4335-PM.png)
+
+Gå vidare genom att klicka på **Microsoft Graph.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-01-56-48-9620-PM.png?width=670&height=316&name=image-png-Jul-10-2025-01-56-48-9620-PM.png)
+
+Klicka på **Application permissions.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-01-57-03-4523-PM.png?width=670&height=347&name=image-png-Jul-10-2025-01-57-03-4523-PM.png)
+
+Sök på "**domain**", expandera listan och välj **Domain.Read.All**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-01-59-26-1081-PM.png?width=670&height=623&name=image-png-Jul-10-2025-01-59-26-1081-PM.png)
+
+Sök på "**User**", expandera listan för User.
+
+Markera User.ReadWrite.All och klicka på **Add permissions.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-01-59-36-4857-PM.png?width=670&height=616&name=image-png-Jul-10-2025-01-59-36-4857-PM.png)
+
+I tabben som heter API permissions så klicka på Grant admin consent for "Your-Company-Name" (här kommer ert företagsnamn stå). Klicka sedan **Yes.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-02-02-41-0599-PM.png?width=670&height=232&name=image-png-Jul-10-2025-02-02-41-0599-PM.png)
+
+I listan API / Permissions kommer du nu att se att rättigheterna har statusen **Granted**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-02-25-57-7231-PM.png?width=670&height=345&name=image-png-Jul-10-2025-02-25-57-7231-PM.png)
+
+Gå tillbaka till:
+
+- Overview-fliken. Kopiera ert **Directory (tenant) ID** samt ert **Application (client) ID**. **Spara båda dessa.** De kommer behövas när integrationen ska aktiveras i Hailey.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-02-28-19-0584-PM.png?width=670&height=467&name=image-png-Jul-10-2025-02-28-19-0584-PM.png)
+
+Gå till:
+
+- **Certificates & Secrets** och säkerställ att du befinner dig på **Client secrets**.
+- Klicka på **\+ New client secret**.
+- Under Description väljer ni ett namn, förslagsvis till Hailey secret. Vi rekommenderar att ni sätter Expires till 24 månader.
+- Klicka sedan på **Add**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-02-30-11-4007-PM.png?width=670&height=451&name=image-png-Jul-10-2025-02-30-11-4007-PM.png)
+
+Kopiera nu koden under Value och spara den. Även denna kommer behövas vid aktivering i Hailey.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-02-31-28-9191-PM.png?width=670&height=344&name=image-png-Jul-10-2025-02-31-28-9191-PM.png)
+
+**Efter 24 månader behöver integrationen förnyas.**
+
+- När det är dags för detta kommer du att få ett e-postmeddelande från Hailey som informerar dig om det.
+
+### Steg 3 - Aktivera integrationen i Hailey
+
+- Gå till **Inställningar -** **Integrationer.**
+- Klicka på rubriken **Identitet och åtkomst.**
+- Klicka på **Microsoft Entra ID** och **Lägg till integration.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-02-35-51-2222-PM.png?width=670&height=292&name=image-png-Jul-10-2025-02-35-51-2222-PM.png)
+
+Klistra in värdet för Tenant ID och Client ID som ni kopierat från tidigare steg i Entra ID och tryck sedan på **Autentisera**.
+
+- Efter att ni har klickat på **Autentisera** kommer ni att finna integrationen under fliken Tillagda i Hailey.
+
+Klicka på **Microsoft Entra I**D integrationen när autentiseringen är klar för att göra resterande uppsättning av integrationen och för att aktivera integrationen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-09-2026-07-23-32-0379-AM.png?width=670&height=403&name=image-png-Jun-09-2026-07-23-32-0379-AM.png)
+
+När ni har öppnat upp integrationsuppsättning på nytt kan ni välja att toggla på **Aktiv** knappen.
+
+- Integrationen blir inte aktiv förens du klickat på **Spara** längst ned i höger hörn, vilket görs som ett slutsteg när hela integrationsuppsättningen är färdigställd.
+
+Klistra in värdet för **Client secret** som kopierats från Entra ID.
+
+Ange ett **Standardlösenord** (det _kommer nya användare som skapats upp via integrationen att använda vid första inloggning_).
+
+<Note>
+  Användare som skapats upp via integrationen behöver ange **Standardlösenordet** första gången de loggar in på sitt Microsoft-konto.
+
+  - Vid det första inloggningstillfället kommer användaren även att uppmanas till att byta lösenord!
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-09-2026-07-13-46-0506-AM.png?width=670&height=337&name=image-png-Jun-09-2026-07-13-46-0506-AM.png)
+
+Bocka i eventuella **Valbara fält** som ska inkluderas i överföringen av data.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-09-2026-07-18-23-2020-AM.png?width=670&height=277&name=image-png-Jun-09-2026-07-18-23-2020-AM.png)
+
+Skrolla sedan ner i integrationsuppsättningen och välj huruvida ni vill inaktivera medarbetare utan en aktiv anställning i Entra ID.
+
+<Note>
+  Notera att om en medarbetare ändras från statusen "Har lämnat" till aktiv i Hailey igen, kommer medarbetaren även att återaktiveras i Entra.
+</Note>
+
+Slutligen kan ni besluta om ni vill att integrationen ska **Synkronisera mobiltelefon i Entra ID.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-Jun-12-2026-07-20-41-4785-AM.png?width=670&height=402&name=undefined-Jun-12-2026-07-20-41-4785-AM.png)
+
+Efter ovan steg är gjorda är det bara att klicka på **Spara** och sedan är Entra-integrationen aktiverad!
+
+Vill ni göra justeringar i uppsättningen så görs det via den aktiva integrationen som ligger under **Inställningar** - **Integrationer** - **Tillagda**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-Jun-12-2026-07-22-18-9399-AM.png?width=670&height=282&name=undefined-Jun-12-2026-07-22-18-9399-AM.png)
+
+## Gäller integrationen inte hela företaget?
+
+Då finns det möjlighet att **omfatta** integrationen!
+
+Om dessa fält lämnas tomma kommer alla anställda som uppfyller krav för integrationen att synkas över.
+
+<Note>
+  **Exempelbilden** nedan visar att endast medarbetare som tillhör den valda legala enheten och den valda arbetsplatsen som anges i integrationsuppsättningen, kommer att inkluderas i integrationen mot Entra ID.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-Jun-12-2026-07-23-35-4807-AM.png?width=670&height=284&name=undefined-Jun-12-2026-07-23-35-4807-AM.png)
+
+### Det är även möjligt att skapa upp flera integrationer mot olika/flera konton i Entra ID.
+
+- Om ert företag har flera arbetsplatser och/eller legala enheter i Hailey kan det vara fördelaktigt att skapa separata integrationer med Entra ID till olika/flera Entra ID konton.
+
+Om ni **vill ha flera uppsättningar av integrationen mot olika Entra ID konton** gör ni om samma process som beskrivit ovan. Med andra ord, navigera till rubriken **Identitet och åtkomst** sedan gör ni på samma sätt som när ni satte upp den första integrationen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-Jun-12-2026-07-24-25-4414-AM.png?width=670&height=439&name=undefined-Jun-12-2026-07-24-25-4414-AM.png)
+
+Hur gör en medarbetare vid första inloggning i Entra ID?
+
+När en ny medarbetare, som skapats upp via integrationen, loggar in på sitt Entra ID-konto för första gången använder medarbetaren ange standardlösenord som angavs vid konfigureringen av Entra ID-integrationen i Hailey.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-Jun-09-2026-01-05-15-8499-PM.png?width=670&height=559&name=undefined-Jun-09-2026-01-05-15-8499-PM.png)
+
+När medarbetaren angett **standardlösenordet** och klickat på **Logga in,** kommer medarbetaren att uppmanas att skapa ett eget lösenord på nästa sida.
+
+---
+
+## Vanliga fragor
+
+**Fråga 1:** Om jag gör en ändring i Entra ID, kommer det då ändras i Hailey?
+
+Hailey är master vilken innebär att för den data som omfattas av integrationen är Hailey den primära datakällan. Om en ändring görs direkt i Entra ID på ett fält som ingår i integrationen kommer värdet vid nästa synkronisering att återställas till det värde som finns i Hailey.
+
+**Fråga 2:** Hur kommer användare som redan finns i vårt Entra ID att matchas och hanteras när synkroniseringen aktiveras, skapas det dubbletter av användarna?
+
+Integrationen identifierar medarbetare utifrån deras företagsmail. Om mejladressen redan finns i Entra ID kommer **inte** dubbletter att skapas ut utan integrationen identifierar och matchar till användarens redan uppsatta profil.
+
+**Fråga 3**: Vad händer om jag ändrar en medarbetares företagsmail i Hailey, hur påverkar det integrationen?
+
+När ni ändrar företagsmejladressen på en medarbetare i Hailey skapas en ny profil i Entra ID. Detta beror på att e-postadressen används som identifiering vid skapandet av medarbetarens konto och fungerar som kopplingen mellan systemen.
+
+**Fråga 4:** Fungerar integrationen med lokalt Active Directory (on-premises)?
+
+Haileys integration med Entra ID är anpassad för det molnbaserade Entra ID.

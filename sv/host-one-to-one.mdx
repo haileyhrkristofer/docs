@@ -1,0 +1,122 @@
+---
+title: "Håll One-to-one"
+---
+
+Gör era samtal mer effektiva genom att hantera dem direkt i Hailey! Planera, dokumentera och följ upp direkt i systemet – inga fler borttappade anteckningar eller pappersdokument.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="hwPl3c8" title="Håll One-to-one" />
+
+## Vad är ett One-to-one?
+
+One-to-one är ett strukturerat samtal designat för att skapa t.ex. en återkommande dialog kring trivsel, prestation, utveckling och mål. Det möjliggör ökad transparens, stärker relationen mellan medarbetare, chef, teamlead samt ger båda parter i samtalet utrymme att lyfta frågor eller behov som annars kan försvinna i vardagen. Ni kan enkelt följa upp vad som diskuterats tidigare, se status för planerade samtal och skapa en gemensam förståelse för nästa steg.
+
+Genom att använda Haileys One-to-one-funktion får du stöd för att hålla konversationer konsekventa, väl förberedda och dokumenterade. Det blir enkelt att följa upp vad som har diskuterats tidigare, se status för planerade möten och skapa en gemensam förståelse för nästa steg.
+
+## Innan du sätter gång
+
+Innan du börjar, se till att du har konfigurerat dina mallar för samtal. Du kan läsa mer om hur du skapar dem [**HÄR**](/sv/using-feedback-sessions).
+
+## Hur man håller ett one-to-one
+
+Du kan antingen hålla ett spontant one-to-one eller ett förberett one-to-one.
+
+Om du vill hålla ett **spontant one-to-one** utan förberedande frågor går du direkt till medarbetarens profil, klickar på **Hantera – Håll eller förbered one-to-one – Håll one-to-one nu**.
+
+Ge samtalet en titel, ange ett datum, välj en typ av one-to-one och välj vilken mall du vill använda. Det är inte obligatoriskt att använda en mall, du kan i stället skriva alla anteckningar direkt i anteckningsfältet under samtalet. Härifrån kan du också visa ett tidigare one-to-one genom att klicka på **Visa föregående one-to-one.**
+
+![](/images/sv/host-one-to-one/01.png)
+
+När du vill **förbereda ett one-to-one**, det vill säga skicka ut frågor i förväg, kan du antingen skicka ut one-to-ones i bulk eller skicka ett one-to-one till en specifik medarbetare.
+
+- Om du vill skicka ut one-to-ones i bulk går du till **Medarbetarlistan** och markerar de medarbetare som du vill förbereda ett one-to-one för. Klicka på **Hantera** och välj **Förbered one-to-one**.
+- Om du endast vill skicka ett one-to-one till en specifik medarbetare går du till **medarbetarens profil**, klickar på **Hantera – Håll eller förbered one-to-one – Förbered one-to-one**.
+
+Ge one-to-one-samtalet ett namn, välj samtalshållare, välj mallen och ange en deadline för när du vill att medarbetarna ska ha besvarat sina förberedande frågor. Du kan även förhandsgranska mallen innan du skickar den till medarbetarna. Klicka därefter på **Starta**.
+
+![](/images/sv/host-one-to-one/02.png)
+
+Medarbetaren och/eller samtalshållaren får nu ett e-postmeddelande och en uppgift där de kan besvara de förberedande frågorna.
+
+Du kan besvara frågorna och **spara som utkast** för att fortsätta vid ett senare tillfälle, eller **skicka in dina svar**. När du skickar in dina svar försvinner uppgiften från din startsida. Om du glömmer att klicka på **Spara som utkast** sparas den senaste texten du skrev ändå.
+
+<Note>
+  Observera att när **one-to-one-samtalet** har startats kan varken medarbetaren eller samtalshållaren längre besvara eller redigera de förberedande frågorna.
+</Note>
+
+När det är dags att hålla det förberedda one-to-one-samtalet i Hailey går du till medarbetarens profil och öppnar fliken **Samtal**. Klicka på de tre punkterna till höger om **one-to-one-samtalet** och välj **Starta**.
+
+![](/images/sv/host-one-to-one/03.png)
+
+En sidopanel öppnas nu där du kan se svaren på förberedande frågorna, tillsammans med möjligheten att göra ytterligare anteckningar. Om du vill se svar från ett tidigare one-to-one kan du klicka på **Visa tidigare one-to-one** och granska svar från tidigare samtal sida vid sida. Det är även möjligt att filtrera på one-to-one-typer för att enklare hitta vilket tidigare one-to-one du vill visa.
+
+![](/images/sv/host-one-to-one/04.png)
+
+Klicka på **Spara** när ditt one-to-one är avslutat. Om du vill gå tillbaka och redigera det klickar du på de tre punkterna till höger och väljer **Redigera**.
+
+För att slutföra ett one-to-one kan du antingen begära godkännande eller slutföra det direkt.
+
+![](/images/sv/host-one-to-one/05.png)
+
+När ett godkännande begärs får både samtalshållaren och medarbetaren en uppgift som innehåller anteckningarna samt möjlighet att godkänna dem. När one-to-one har godkänts av båda parter kan det inte längre redigeras.
+
+Om du väljer att slutföra ett one-to-one direkt hoppar du över steget där du begär godkännande. One-to-one godkänns då omedelbart.
+
+## One-to-one-översikt
+
+I huvudmenyn under **Prestation** hittar du en översikt över one-to-one-sessionerna i Hailey. Här kan du följa dina sessioner och se om det är något du behöver agera på.
+
+![](/images/sv/host-one-to-one/06.png)
+
+Översikten visar dig medarbetaren, titeln samtalet, status, typ, mötesdatum samt samtalshållare. Det är också möjligt att filtrera listan för att enkelt hitta t.ex. en specifik medarbetare, vilken status samtalet har eller med vem som hållit samtalet.
+
+Om du vill uppdatera dina konversationer till en annan one-to-one typ med en annan behörighetsnivå kan du markera de relevanta samtalen, klicka på **Hantera** uppe i högra hörnet och därefter välj **Redigera typ**. Välj vilken typ du vill tilldela konversationen och klicka sedan på **Spara**.
+
+![](/images/sv/host-one-to-one/07.png)
+
+## Viktiga begrepp
+
+Här hittar du förklaringar av begrepp som kan vara bra att få lite extra insikt i:
+
+- **Samtalshållare:** Personen som leder det samtalet.
+- **Medarbetare:** Personen som samtalet gäller och genomförs med.
+- **Förberedande frågor:** Frågor som skickas ut innan samtalet genomförs.
+
+## Rättigheter
+
+Om exempelvis en chef, medarbetare, teamlead eller du som admin ska ha rätt att starta och hålla ett samtal måste personen ha nödvändiga behörigheter för att få åtkomst till denna typ av samtal. Du kan läsa mer om hur du konfigurerar detta [**HÄR**](/sv/using-feedback-sessions).
+
+Här listar vi de behörigheter som kan vara relevanta att aktivera om du vill arbeta med samtal i Hailey.
+
+- **Visa** ger behörighet att se samtal och besvara förberedande frågor.
+- **Hantera** ger ovanstående behörighet och även möjlighet att starta, redigera, begära godkännande för och slutföra samtal.
+- **Full åtkomst** ger alla ovanstående behörigheter samt möjlighet att radera samtal.
+- **Redigera one-to-one typer** ger behörighet att ändra one-to-one typen l för redan genomförda samtal.
+
+## Vanliga frågor
+
+<AccordionGroup>
+  <Accordion title="Jag ser inga mallar när jag försöker skicka ut förberedande frågor. Varför är det så?">
+  Behörigheterna för individuella samtal hanteras nu via **Inställningar – Samtal** under one-to-one typer. Se till att du åtminstone har behörigheten **Hantera**, antingen genom att vara medarbetare, teamlead, chef eller en överordnad chef, eller genom att ha blivit tillagd via en arbetsgrupp.
+
+  Om du inte har behörighet att redigera behörigheterna för one-to-one typer, kontakta den person som är Hailey-administratör i ert system.
+  </Accordion>
+  <Accordion title="Som chef, kan jag se tidigare samtal som den tidigare chefen har haft med medarbetarna?">
+  Om behörigheterna är oförändrade jämfört med när den tidigare chefen arbetade, kommer du att kunna se redan genomförda samtal. Om du inte ser några tidigare samtal, kontakta personen som är Hailey-administratör i ert system.
+  </Accordion>
+  <Accordion title="Jag vill se svaren på en medarbetares förberedande frågor innan vi genomför samtalet. Hur gör jag det?">
+  Om förberedande frågor redan är besvarade kan du starta samtalet genom att gå till **medarbetarens profil – Samtal** och klicka på de tre punkterna till höger om det samtalet och välja **Starta**. När samtalet har startats kan du se alla förberedda svar. Du kan alltid gå tillbaka till samtalet senare.
+  </Accordion>
+</AccordionGroup>

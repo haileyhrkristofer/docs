@@ -1,0 +1,216 @@
+---
+title: "Starta, hantera och uppdatera lönerevision"
+---
+
+Den här guiden visar hur du startar och hanterar en lönerevision i Hailey. Du får också veta hur du ändrar inställningarna för revisionen och vilka rättigheter som är relevanta. Funktionen samlar hela processen i ett och samma system och gör den enklare att följa.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="KkYbgQI" title="Starta, hantera och uppdatera lönerevision" />
+
+## Vad är lönerevision?
+
+Lönerevision är en funktion som hjälper er att samla och hantera löneförslag i Hailey. I stället för att arbeta i separata dokument kan ni låta chefer lämna förslag, skicka dem vidare för godkännande och därefter uppdatera lönerna direkt i systemet.
+
+Funktionen ger er en tydlig överblick över processen och gör det enklare att följa arbetet steg för steg. Ni ser vad som är gjort, vad som väntar på godkännande och vad som återstår innan lönerevisionen kan slutföras.
+
+<Note>
+  Om du deltar i lönerevisionen, klicka på din roll nedan för att komma till rätt guide:
+
+  - [Chef](/sv/salary-review-for-managers)
+  - [https://docs.haileyhr.com/sv/salary-review-for-managers](/sv/salary-review-for-managers)[Chefens chef](/sv/s)
+  - [https://docs.haileyhr.com/sv/s](/sv/s)[Slutgiltig godkännare](/sv/salary-review-for-the-managers-manager)
+</Note>
+
+## Starta lönerevision
+
+För att starta en lönerevision går du till **Medarbetare** i huvudmenyn och markerar de medarbetare du vill inkludera i lönerevisionen. Klicka sedan på **Hantera - Starta lönerevision.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jan-07-2026-10-49-20-3786-AM.png?width=670&height=322&name=image-png-Jan-07-2026-10-49-20-3786-AM.png)
+
+Då öppnas en wizard där du stegvis fyller i inställningarna för lönerevisionen. I det första steget namnger du lönerevisionen och lägger till instruktioner till den närmaste chef som ska lämna löneförslag.
+
+<Note>
+  Hailey tillåter mycket text i det här fältet, så lägg gärna till tydliga instruktioner som hjälper cheferna att förstå vad de ska göra.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jan-07-2026-10-49-46-5506-AM.png?width=670&height=338&name=image-png-Jan-07-2026-10-49-46-5506-AM.png)
+
+I nästa steg anger du en målhöjning i procent som cheferna kan utgå från när de lämnar sina löneförslag. Du väljer också om målhöjningen ska sättas på nivån **Företag, Avdelning** eller **Affärsområde.**
+
+Målhöjningen appliceras på alla löner som ingår i lönerevisionen. Den närmaste chefen kan sedan justera löneförslaget vid behov.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jan-07-2026-10-49-56-8607-AM.png?width=670&height=276&name=image-png-Jan-07-2026-10-49-56-8607-AM.png)
+
+Om du väljer målhöjning per avdelning eller affärsområde anger du både en målhöjning för hela företaget och en målhöjning per avdelning eller affärsområde. Om en medarbetare saknar avdelning eller affärsområde används företagets målhöjning.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jan-07-2026-10-50-06-4432-AM.png?width=670&height=320&name=image-png-Jan-07-2026-10-50-06-4432-AM.png)
+
+Om er organisation har löner av olika valutor kommer du att kunna välja **referensvalutan** för lönerevisionen.
+
+Du har sedan möjlighet att ställa in **växlingskursen.** Detta för att konvertera samtliga löner till den valda referensvalutan när summeringar görs. Växlingskurserna kan korrigeras när lönerevisionen är startad.
+
+Om du bara startar revisionen för löner med en och samma valuta behöver du enbart välja referensvaluta.
+
+<Note>
+  Hailey använder som standard de växlingskurser som ni har definierat under **Inställningar - Allmänt - Företag.** Justera dem sedan i lönerevisionen vid behov.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jan-07-2026-10-50-16-9899-AM.png?width=670&height=362&name=image-png-Jan-07-2026-10-50-16-9899-AM.png)
+
+I nästa steg kan ni exkludera lönetyper eller inkludera egna medarbetarfält om ni önskar. Egna medarbetarfält behöver vara skapade och innehålla relevant data. Läs mer om egna fält **[HÄR](/sv/custom-fields).**
+
+<Tip>
+  Det kan till exempel vara fält för tidigare erfarenhet, performance review eller relevant utbildning, beroende på era behov.
+</Tip>
+
+Om ni vill göra lönejusteringar utan att de påverkar målhöjningen kan ni lägga till och namnge en ytterligare justering. Cheferna kan sedan lägga till ett separat belopp när de lämnar löneförslag.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jan-07-2026-10-50-36-7694-AM.png?width=670&height=304&name=image-png-Jan-07-2026-10-50-36-7694-AM.png)
+
+I det sista steget i wizarden anger du tre datum och väljer en eller flera slutgiltiga godkännare.
+
+Du anger:
+
+- En deadline för när ni senast vill få in löneförslag från de närmaste cheferna.
+- En deadline för när de föreslagna löneförändringarna senast ska vara godkända.
+- Datum för när lönerna ska uppdateras. Datumet kan sättas framåt i tiden eller retroaktivt.
+
+Här väljer du också vem som ska godkänna löneförslagen: **Förslagsställarens chef** eller **Alla chefer ovanför.** Om du väljer **Alla chefer ovanför** behöver samtliga chefer ovanför den närmaste chefen godkänna löneförslagen innan lönerevisionen kan slutföras.
+
+De slutgiltiga godkännarna behöver godkänna hela lönerevisionen innan den kan slutföras. När samtliga slutgiltiga godkännare har godkänt lönerevisionen kan en av dem slutföra den.
+
+Om listan är tom har troligtvis ingen medarbetare tilldelats rättigheten **Ge slutgiltigt godkännande.** Läs mer om rättigheten under avsnittet **Rättigheter** i den här guiden.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jan-07-2026-10-52-01-7221-AM.png?width=670&height=340&name=image-png-Jan-07-2026-10-52-01-7221-AM.png)
+
+När du har gått igenom alla steg visas en sammanfattning av dina val. Om allt ser bra ut klickar du på den **gröna bocken** för att starta lönerevisionen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jan-07-2026-10-52-16-2340-AM.png?width=670&height=337&name=image-png-Jan-07-2026-10-52-16-2340-AM.png)
+
+## Sammanfattning av stegen i lönerevisionen
+
+Här hittar du en sammanfattning av de steg som ingår i lönerevisionen.
+
+<Steps>
+  <Step title="Starta lönerevision - Wizarden tar dig genom alla steg som k">
+    **Starta lönerevision** - Wizarden tar dig genom alla steg som krävs för att starta er lönerevision.
+  </Step>
+  <Step title="Föreslå löneförändringar - Närmaste chef  får en uppgift und">
+    **Föreslå löneförändringar** - Närmaste chef (Rapporterar till i Hailey) får en uppgift under **Mina uppdateringar** på startsidan. Där kan chefen föreslå löneförändringar och sedan skicka förslagen vidare för godkännande till sin chef eller till alla chefer ovanför, beroende på lönerevisionens inställningar.
+  </Step>
+  <Step title="Godkänn förslagen - Den chef eller de chefer som enligt löne">
+    **Godkänn förslagen** - Den chef eller de chefer som enligt lönerevisionens inställningar ska godkänna förslagen får därefter en uppgift under Mina uppdateringar på startsidan. Där kan de se förslagen, kommentera och/eller godkänna dem.
+  </Step>
+  <Step title="Godkänn lönerevisionen - När föregående steg är klara kan de">
+    **Godkänn lönerevisionen -** När föregående steg är klara kan den slutgiltiga godkännaren godkänna lönerevisionen, eller samtliga slutgiltiga godkännare om flera har valts.
+  </Step>
+  <Step title="Slutför lönerevision - När den slutgiltiga godkännaren har g">
+    **Slutför lönerevision** - När den slutgiltiga godkännaren har godkänt lönerevisionen, eller samtliga slutgiltiga godkännare om flera har valts, behöver lönerevisionen slutföras för att löneförändringarna ska bli synliga för medarbetarna. Här kan du även välja om medarbetarna ska meddelas om löneförändringen.
+  </Step>
+  <Step title="Uppdaterade löner - Hailey uppdaterar alla löner på valt dat">
+    **Uppdaterade löner** - Hailey uppdaterar alla löner på valt datum för löneförändring när samtliga steg ovan är genomförda.
+  </Step>
+</Steps>
+
+<Note>
+  För en steg-för-steg-guide, klicka på din roll nedan för att komma till rätt guide:
+
+  - [Chef](/sv/salary-review-for-managers)
+  - [https://docs.haileyhr.com/sv/salary-review-for-managers](/sv/salary-review-for-managers)[Chefens chef](/sv/s)
+  - [https://docs.haileyhr.com/sv/s](/sv/s)[Slutgiltig godkännare](/sv/salary-review-for-the-managers-manager)
+</Note>
+
+---
+
+## Uppdatera lönerevisionen
+
+Som admin hittar du pågående och slutförda lönerevisioner via **HR Hub** - **Lönerevisioner**. Klicka på en lönerevision för att öppna och hantera den.
+
+Om du själv startade lönerevisionen hittar du den även under **Mina uppdateringar** på startsidan. Klicka då på uppgiften **Hantera lönerevision** och sedan på **Hantera** inne i revisionen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-09-2026-06-26-10-8810-AM.png?width=670&height=338&name=image-png-Jul-09-2026-06-26-10-8810-AM.png)
+
+Från **Hantera** kan du uppdatera lönerevisionen, ta bort den eller exportera föreslagna löneändringar till Excel. Exporten innehåller all data i lönerevisionen, oavsett eventuell filtrering.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-09-2026-06-27-39-3232-AM.png?width=670&height=255&name=image-png-Jul-09-2026-06-27-39-3232-AM.png)
+
+Det som är möjligt att uppdatera i efterhand är:
+
+- Namn på lönerevisionen
+- Lägga till och ta bort medarbetare
+- Instruktioner till förslagsställande chef
+- Målhöjning
+- Deadlines
+- Datumet för när de nya lönerna ska börja gälla
+- Slutgiltiga godkännare
+- Växelkurs på valutor
+
+<Note>
+  Lönerevisionen kan uppdateras fram tills slutgiltigt godkännande har lämnats. Därefter går det inte längre att göra några ändringar.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-09-2026-06-29-51-1333-AM.png?width=670&height=358&name=image-png-Jul-09-2026-06-29-51-1333-AM.png)
+
+## Viktiga begrepp
+
+Här hittar du korta förklaringar av begrepp som kan vara bra att känna till när ni arbetar med lönerevisioner.
+
+- **Målhöjning**: Den procentuella höjning som sätts när lönerevisionen startas och som används som utgångspunkt för löneförslagen. Målhöjningen kan sättas för hela företaget, per avdelning eller per affärsområde.
+- **Ytterligare justering:** En separat lönejustering som kan läggas på utöver den beräknade höjningen, till exempel för justeringar kopplade till en genomförd lönekartläggning. Chefen fyller i justeringen vid behov när löneförslag lämnas.
+- **Slutgiltig godkännare**: En person som ansvarar för att godkänna hela lönerevisionen innan den kan slutföras. Om flera slutgiltiga godkännare har valts behöver samtliga godkänna lönerevisionen innan en av dem kan slutföra den.
+
+## Rättigheter
+
+Här listar vi rättigheter som kan vara relevanta när ni arbetar med lönerevisioner. Behöver ni stöd i hur rättigheter sätts upp? Läs mer i guiden om Roller & rättigheter [**HÄR.**](/sv/roles-and-rights)
+
+Admin har alltid möjlighet att starta och hantera samtliga lönerevisioner.
+
+- **Starta lönerevision** gör det möjligt att starta en ny lönerevision. Du kan även hantera lönerevisioner som du själv har startat.
+- **Hantera lönerevision** ger tillgång till lönerevisioner som har startats av andra användare. Med den här rättigheten kan medarbetaren uppdatera, exportera och ta bort lönerevisioner. Tänk på att rättigheten gäller för samtliga lönerevisioner under HR-hub. Det innebär att löneuppgifter för de medarbetare som ingår i lönerevisionerna blir synliga.
+- **Ge slutgiltigt godkännande** gör det möjligt att vara slutgiltig godkännare i en lönerevision. En admin behöver också ha den här rättigheten för att kunna ge slutgiltigt godkännande.
+
+<Note>
+  Chefer kan vara delaktiga i lönerevisionen utan särskilda rättigheter, så länge de endast ska ge och godkänna löneförslag.
+</Note>
+
+## Vanliga fragor
+
+Nedan listas vanligt förekommande frågor kopplade till lönerevision.
+
+<AccordionGroup>
+  <Accordion title="Varför visas inte valet Affärsområde när jag ska sätta målhöjning?">
+    Målhöjning per Affärsområde kan endast väljas om ni har skapat affärsområden i Hailey. Om valet inte visas beror det troligtvis på att ni inte har skapat några affärsområden. Läs mer om affärsområden [**HÄR.**](/sv/organization-in-hailey#affarsomraden)
+  </Accordion>
+
+  <Accordion title="Varför är en medarbetares lön inte med i underlaget, trots att medarbetaren ingår i lönerevisionen?">
+    Det kan bero på att lönen börjar gälla efter det datum då de nya lönerna ska börja gälla. Underlaget i lönerevisionen inkluderar endast löner som är aktiva senast detta datum. Om en lön börjar gälla senare ingår den därför inte i underlaget.
+  </Accordion>
+
+  <Accordion title="Varför dyker inte en person upp i listan för slutgiltigt godkännande?">
+    Det kan bero på att personen inte har tilldelats rättigheten **Ge slutgiltigt godkännande.** Endast medarbetare med den rättigheten kan väljas som slutgiltiga godkännare i lönerevisionen. Läs mer om rättigheten under avsnittet **Rättigheter** i den här guiden.
+  </Accordion>
+
+  <Accordion title="Varför ändras inte lönerna när jag uppdaterar målhöjningen?">
+    När du uppdaterar målhöjningen i en pågående lönerevision ändras endast procentsiffran i översiktsvyn. Den nya målhöjningen appliceras inte automatiskt på lönerna.
+  </Accordion>
+
+  <Accordion title="Vad händer om en medarbetare byter chef under en pågående lönerevision?">
+    Lönerevisionen utgår från vem som är angiven i fältet **Rapporterar till** på medarbetarens anställning. Om **Rapporterar till** ändras under en pågående lönerevision uppdateras även den förslagsställande chefen i lönerevisionen.
+  </Accordion>
+
+  <Accordion title="Kan en vikarierande chef lämna löneförslag i lönerevisionen?">
+    Lönerevisionen utgår från vem som är angiven i fältet **Rapporterar till** på medarbetarens anställning. Om en chef har en vikarie i Hailey tar vikarien inte över rollen som förslagsställande chef i lönerevisionen. Ansvaret för löneförslaget ligger fortfarande hos den person som är angiven i **Rapporterar till**.
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,145 @@
+---
+title: "Integration med Google Workspace"
+---
+
+Vill du att nya medarbetare automatiskt ska skapas i Google Workspace när de läggs till i Hailey? Med vår integration till Google Workspace är detta möjligt – tillsammans med smidig överföring av inkluderad data!
+
+<Tip>
+  Första gången du aktiverar en av **Haileys standardintegrationer**? Börja med att läsa den [**HÄR**](/sv/haileys-standard-integrations) guiden för att veta vad du ska tänka på innan du sätter igång.
+</Tip>
+
+## Vad gör integrationen?
+
+Med Haileys standardintegration till Google Workspace synkas förändringar i inkluderad data automatiskt över från Hailey till Google Workspace. Lägger man till en ny medarbetare i Hailey kommer det att skapas upp en ny användare i Google workspace.
+
+Integrationen erbjuder även möjligheten att **Inaktivera användare** i Google Workspace om medarbetaren inte längre har en aktiv anställning i Hailey.
+
+## Hur fungerar integrationen?
+
+Vid varje synkronisering kommer inkluderad data[https://docs.haileyhr.com/sv/integration-med-kleer-0#vilken-data-ar-inkluderad](/sv/integration-with-kleer-salary-and-employee-data#vilken-data-ar-inkluderad)att **automatiskt** uppdateras via **API överföring** **till Google Workspace** och få samma värde som finns i Hailey, eftersom **Hailey är master** (facit).
+
+Vid inaktiverande av användare i Google Workspace, givet att funktionen är påslagen, kommer medarbetare som har en **Sista arbetsdag**, eller **Slutdatum** som har passerat att få status **Avaktiverad** i Google Workspace. Avaktiveringen görs natten efter att datum i Hailey passerat.
+
+Viktigt att notera att Hailey agerar master i den data som är inkluderad i integrationen. Därför behöver ändringar i inkluderad data **alltid** göras i Hailey. I praktiken innebär det att om du uppdaterar ett fält i Hailey som är inkluderat i integrationen, kommer samma uppdatering att göras per automatik i motsvarande fält i Google Workspace under nästkommande timme.
+
+<Tip>
+  [HÄR](#Vilken_data_inkluderas_i_integrationen) kan ni läsa mer om vilken data som är inkluderad i standardintegrationen.
+</Tip>
+
+Sammanfattningsvis kan integrationen hjälpa er med följande saker:
+
+- Skapa nya användare i Google Workspace
+- Uppdatera information om användare i Google Workspace
+- Inaktivera användare i Google Workspace efter deras sista arbetsdag (_valfritt_)
+
+Allt detta sker baserat på uppdateringar och ändringar som görs i Hailey. Att bara göra ändringar i Hailey sparar er tid eftersom ni inte behöver uppdatera båda systemen - det gör Hailey åt er!
+
+## Vilken data inkluderas i integrationen?
+
+De datafält som överförs till Google Workspace är följande:
+
+| **HAILEY** | **GOOGLE WORKSPACE** |
+| --- | --- |
+| Förnamn | Given name |
+| Efternamn | Family name |
+| Förnamn + Efternamn | Full name |
+| Telefonnummer | Phones\* |
+| Företagsmail | Primary email |
+
+**Valfria fält:**
+
+| **HAILEY** | **GOOGLE WORKSPACE** |
+| --- | --- |
+| Titel | Befattning |
+| Avdelning | Avdelning |
+| Rapporterar till | Ansvarigs e-postadress |
+| Arbetsplats | Location\* |
+
+\*_Uppdateras enbart i GWS API - inte i användargränssnittet_
+
+## Vad krävs för att ingå i integrationen?
+
+För att en ny användare ska skapas i Google Workspace behöver den nya medarbetaren som lagts till i Hailey ha en **Företagsmail** (_med er domän_) inlagd på sin profil. Samma gäller befintliga medarbetare som ska ingå i integrationen.
+
+Utöver företagsmail med er domän behöver medarbetare också ha en av följande **Anställningsstatusar** för att ingå, eller skapas upp i Google Workspace via integrationen:
+
+- **Ska börja**
+- **I tjänst**
+- **Ska lämna**
+
+## Hur aktiveras integrationen?
+
+För att sätta upp integrationen med Google Workspace och Hailey behöver du ha tillgång till att **Visa & ändra** Integrationer i Hailey.
+
+Som admin i Hailey har du redan denna rättighet för att kunna sätta upp integrationer. Om någon annan (t.ex. IT) ska ansvara för att sätta upp integrationen, kan du gå till **Inställningar – Säkerhet – Roller & rättigheter** för att skapa en **Företagsroll** med dessa rättigheter innan de påbörjar arbetet. Den specifika rättigheten för att hantera integrationer finns under **Inställningar – Integrationer**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-10-2025-08-43-14-2153-AM.png?width=670&height=612&name=image-png-Sep-10-2025-08-43-14-2153-AM.png)
+
+Börja med att logga in i Google Workspace, gå till **Konto** och **Kontoinställningar**. Kopiera **Kund-ID:t** under Profil.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-24-2025-02-02-51-3478-PM.png?width=670&height=431&name=image-png-Oct-24-2025-02-02-51-3478-PM.png)
+
+Logga in i Hailey och gå till **Inställningar** - **Integrationer** - **Google workspace** och klistra in **Kund-ID:t**. Klicka **Auktorisera** och följ stegen. Därefter kan du aktivera **Aktiv**-knappen.
+
+Du väljer sedan ett standardlösenord i Hailey som alla nya användare måste använda [första gången de loggar in](#logga_in) på sitt Google-konto. När de gör detta för första gången kommer de automatiskt att uppmanas att välja ett eget personligt lösenord, som de sedan använder vid framtida inloggningar med Google.
+
+<Tip>
+  Ni har möjlighet att stänga av användningen av ett standardlösenord i integrationsinställningarna.
+
+  Om denna inställning är avstängd genereras istället ett unikt lösenord automatiskt i bakgrunden för varje ny användare som skapas i Google Workspace. Lösenordet kommuniceras inte till användaren och är inte heller tillgängligt för någon administratör.
+</Tip>
+
+Välj motsvarande alternativ om du vill att **Titel, Avdelning, Arbetsplats och/eller Rapporterar till** ska synkroniseras i integrationen också.
+
+Genom att aktivera **Inaktivera anställda utan aktiv anställning** tillåter du integrationen att automatiskt inaktivera användare i Google Workspace efter deras sista arbetsdag. Detta sker natten efter att medarbetaren har passerat sin **Sista arbetsdag** eller **Slutdatum** i Hailey. Med andra ord, de inaktiveras natten _efter_ att deras status ändras till **Arbetsbefriad** eller **Har lämnat** i Hailey.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-24-2025-02-03-04-1492-PM.png?width=670&height=512&name=image-png-Oct-24-2025-02-03-04-1492-PM.png)
+
+När du klickar på **Spara** i steget ovan kommer ett popup-fönster att visas, där du ombeds att ge Hailey åtkomst till ditt Google-konto – liknande bilden nedan. Dubbelkolla att det ger **haileyhr.app** åtkomst till att:
+
+- Visa domäner som är kopplade till dina kunder
+- Visa och hantera administrationen av användare på din domän
+
+Klicka på **Tillåt**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-04-2022-11-28-17-01-AM.png?width=435&name=image-png-Oct-04-2022-11-28-17-01-AM.png)
+
+När integrationen med Google Workspace har aktiverats kommer du att se att det finns en aktiv koppling till Google Workspace under **Inställningar – Integrationer – Tillagda**. Härifrån kan du **Redigera** inställningen för denna integration vid behov.
+
+## Gäller integrationen inte hela företaget?
+
+Du kan välja att begränsa integrationen till **Legal enhet** eller **Arbetsplats**. Det innebär att du kan välja att endast konfigurera integrationen för delar av företaget, eller sätta upp flera integrationer om du vill att integrationen ska skilja sig åt mellan olika delar av organisationen.
+
+Om ditt företag verkar från flera Arbetsplatser eller Legala enheter inom Hailey där olika datapunkter behöver synkroniseras eller där bara några ska ingå i synken, kan det alltså vara fördelaktigt att omfatta Google Workspace och anpassa dem efter specifika behov. Går du till **Inställningar – Integrationer – Identitet och åtkomst**, har du möjlighet att konfigurera fler integrationer till Google Workspace genom att klicka på **Lägg till integration +** på Google Workspace-kortet.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-24-2025-01-54-57-5944-PM.png?width=670&height=319&name=image-png-Oct-24-2025-01-54-57-5944-PM.png)
+
+I den nya integrationen väljer du vilken del av företaget du vill konfigurera integrationen för och vad som ska synkroniseras, på samma sätt som du gjorde med konfigurationen av din andra integration. Genom att göra detta kan du **skapa flera integrationer till Google Workspace för olika delar av företaget.**
+
+![](https://docs.haileyhr.com/hubfs/image-png-Oct-24-2025-01-55-12-3946-PM.png)
+
+Detta är fördelaktigt om dina Legala enheter eller Arbetsplatser har separata Google Workspace-konton, eller om du behöver synkronisera olika data för olika delar av företaget som finns inom samma Google Workspace-konto.
+
+Hur gör en medarbetare vid första inloggning i Google Workspace?
+
+När en ny medarbetare börjar i organisationen och loggar in i ett system med sitt Google Workspace-konto som har skapats via integrationen i Hailey, behöver hen använda det lösenord som du har angett som **standardlösenord** i integrationsinställningen i Hailey.
+
+![](https://docs.haileyhr.com/hubfs/image-png-Oct-24-2025-01-55-20-8245-PM.png)
+
+Efter att ha lagt till standardlösenordet och klickat på **Logga in**, kommer användaren att ombes att skapa ett eget lösenord på nästa sida. Detta blir det lösenord som din nya medarbetare kommer att använda för att logga in i alla system som är kopplade till ert Google-konto.
+
+## Vanliga fragor
+
+<AccordionGroup>
+  <Accordion title="Vid uppsättning av integrationen mot Google Workspace så klickar jag på auktorisera men får felmeddelande enligt nedan. Hur kommer jag vidare?">
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2026-08-03-52-6294-AM.png?width=670&height=411&name=image-png-Jul-10-2026-08-03-52-6294-AM.png)
+
+    **Svar:** För att komma vidare så behöver ni bara klicka på "Avancerat" och godkänna därigenom.
+  </Accordion>
+
+  <Accordion title="Är det obligatoriskt att sätta ett standardlösenord i integrationsinställningarna som skapas varje gång en användare skapas genom integrationen?">
+    **Svar:** Ni har möjligheten att stänga av skapandet av ett standardlösenord i integrationsinställningarna vilket innebär att det istället genereras ett unikt lösenord för användaren i bakgrunden istället. Det är inte ett lösenord som kommuniceras till någon utan IT/ansvarig person behöver gå in på användaren i Goggle WS efter integrationen har skapat den och begära ett nytt eller sätta ett eget lösenord.
+
+    _Om du har några frågor angående integrationen, vänligen kontakta Hailey's support._
+  </Accordion>
+</AccordionGroup>

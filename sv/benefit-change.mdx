@@ -1,0 +1,104 @@
+---
+title: "Hantera förmåner"
+---
+
+I den här guiden går vi igenom hur du hanterar medarbetarnas förmåner i Hailey. Du får steg för steg lära dig hur du lägger till, uppdaterar, avslutar samt tar bort förmåner.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="vp3iFyI" title="Hantera förmåner" />
+
+## Vad är förmåner?
+
+Förmåner är ersättningar som ges utöver lön, till exempel friskvårdsbidrag, tjänstebil eller andra skattepliktiga och skattefria förmåner. I Hailey kan förmåner läggas till, uppdateras, avslutas och tas bort direkt på medarbetarprofilen.
+
+## Hur hanterar man förmåner?
+
+#### Lägg till förmån
+
+Innan förmåner kan hanteras i Hailey behöver de först registreras på medarbetarnas profiler. Detta kan göras antingen via import eller manuellt. Om du vill importera förmåner kan du följa importguiden [**HÄR.**](/sv/import-benefits)
+
+För att lägga till en förmån manuellt öppnar du den aktuella medarbetarprofilen och går till fliken **Kompensation**. Klicka på **Hantera** uppe i det högra hörnet och välj **Lägg till förmån**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-18-2026-08-32-04-2545-AM.png?width=670&height=324&name=image-png-Mar-18-2026-08-32-04-2545-AM.png)
+
+Fyll i startdatum, typ av förmån samt förmånens värde. Observera att slutdatum enbart ska fyllas i om du vet att förmånen enbart gäller mellan specifika datum. När du är nöjd klickar du på **Spara**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-18-2026-08-32-47-1713-AM.png?width=475&height=366&name=image-png-Mar-18-2026-08-32-47-1713-AM.png)
+
+#### Ändra förmånsvärde
+
+För att uppdatera värdet på en befintlig förmån öppnar du medarbetarprofilen och går till fliken **Kompensation**. Välj den förmån du vill uppdatera och klicka på **Hantera → Ändra förmånsvärde**.
+
+Ange det nya förmånsvärdet och välj från vilket datum ändringen ska gälla. Ändringar av förmånsvärden kräver ingen attest. När du är nöjd med ändringen klickar du på **Spara**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-18-2026-08-34-44-2403-AM.png?width=522&height=447&name=image-png-Mar-18-2026-08-34-44-2403-AM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-18-2026-08-35-34-7437-AM.png?width=502&height=221&name=image-png-Mar-18-2026-08-35-34-7437-AM.png)
+
+#### Avsluta förmån
+
+För att avsluta en medarbetares förmån öppnar du medarbetarprofilen och går till fliken **Kompensation**. Välj den förmån du vill avsluta och klicka på **Hantera → Avsluta förmån**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-18-2026-08-36-14-9109-AM.png?width=483&height=208&name=image-png-Mar-18-2026-08-36-14-9109-AM.png)
+
+När en förmån har avslutats, eller schemalagts att avslutas vid ett framtida datum, visas detta på förmånskortet. Förmånen finns kvar i medarbetarens historik men är inte längre aktiv efter det angivna slutdatumet. Att avsluta en förmån kräver ingen attest.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-18-2026-08-37-46-2390-AM.png?width=347&height=230&name=image-png-Mar-18-2026-08-37-46-2390-AM.png)
+
+#### Ta bort förmån
+
+#### Om en förmån har lagts till av misstag eller ska tas bort helt från medarbetarens historik kan du öppna förmånen och välja **Hantera** → **Ta bort förmån**. Att ta bort en förmån innebär att den permanent raderas från medarbetarprofilen och inte kan återställas.
+
+#### Om förmånen ska finnas kvar i historiken men inte längre vara aktiv rekommenderar vi att du istället använder **Avsluta förmån**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-18-2026-08-38-16-5331-AM.png?width=476&height=209&name=image-png-Mar-18-2026-08-38-16-5331-AM.png)
+
+## Rättigheter
+
+Om vissa medarbetare ska kunna lägga till eller hantera förmåner behöver de ha rätt behörigheter. För att konfigurera dessa går du till **Inställningar → Säkerhet → Roller och rättigheter**.
+
+Välj den aktuella rollen och säkerställ att **Kompensation → Förmåner** är inställt på **Visa & redigera** för den aktuella medarbetargruppen.
+
+<Tip>
+  Läs mer om roller och rättigheter [**HÄR!**](/sv/roles-and-rights)
+</Tip>
+
+## Vanliga fragor
+
+Nedan hittar du svar på vanliga frågor om hantering av förmåner i Hailey.
+
+<AccordionGroup>
+  <Accordion title="Varför ser jag inga förmånstyper?">
+    Förmånstyper måste först skapas innan förmåner kan läggas till på medarbetare. Läs mer [**HÄR**](/sv/benefits)!
+  </Accordion>
+
+  <Accordion title="Kräver ändringar av förmåner attest?">
+    Nej. Ändringar av förmånsvärden och avslut av förmåner kräver ingen attest.
+  </Accordion>
+
+  <Accordion title="Vad är skillnaden mellan att avsluta och ta bort en förmån?">
+    Att avsluta en förmån innebär att den finns kvar i medarbetarens historik men blir inaktiv från valt slutdatum. Att ta bort en förmån innebär att den raderas permanent och inte kan återställas.
+  </Accordion>
+
+  <Accordion title="Kan jag schemalägga att en förmån avslutas i framtiden?">
+    Ja. När du avslutar en förmån kan du välja ett framtida slutdatum.
+
+    <Note>
+      **Vilka behörigheter krävs för att hantera förmåner?**
+
+      Användaren behöver behörigheten **Visa & redigera** under **Kompensation → Förmåner** i **Roller och rättigheter**. Läs mer [**HÄR**](/sv/roles-and-rights)!
+    </Note>
+  </Accordion>
+</AccordionGroup>

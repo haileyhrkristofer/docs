@@ -1,0 +1,111 @@
+---
+title: "Start and follow 360° review"
+---
+
+Enhance your path to success with 360° reviews! By utilizing this powerful tool, you can gather valuable feedback from various perspectives and make a positive impact on your organization.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="5Mx4mru" title="Start and follow 360° review" />
+
+## What is a 360° review?
+
+With a 360° review, you gain a structured method for collecting feedback from multiple perspectives, including managers, colleagues, and direct reports. By incorporating different viewpoints, you can build a more comprehensive understanding of strengths, development areas, and collaboration skills. A 360° review also enables you to create structured question templates, making it easier to track progress and development over time.
+
+## Before you get started
+
+Before you get started make sure you have set up your 360° review templates. You can read more how to set them up **[HERE](/create-three-sixty)**.
+
+## How to start and follow a 360° review?
+
+The 360° review can be initiated in two different ways:
+
+- from **the employee list** by ticking the employee(s) and clicking **Action** - **Start 360° review**
+- from **employee card**, clicking **Action – Start a 360° review**
+
+Whether you start a 360° review from the employee list or the employee card, you will get the opportunity to **set a title**, **choose a template**, and **set a deadline** for your 360° review.
+
+![](/images/start-and-follow-360-review/01.png)
+
+When you start a 360° review, tasks will be **sent out to the employees you have chosen to send questions to, in accordance with the template**. These employees will also receive an email informing them that they have a review to complete in Hailey. The tasks can be sent out to:
+
+- Employee (who the 360 concerns)
+- Peers
+- Manager
+- Reportees
+
+If peers are included in the 360° template the employee that the review is run for will be sent out a task where **the employee has to select peers that they want feedback from.**
+
+If the Feedback template includes the option **Task to adjust peers**, a task will be sent to the manager after the employee submits their proposed peers. The manager can review and adjust the peer selection if necessary. Once the manager saves the task, the selected peers will receive a task with questions about the employee.
+
+![](/images/start-and-follow-360-review/02.png)
+
+On the employees profile under **Feedback** you will be able to **keep track of the submitted answers** from relevant employees through a progress bar. The progress bar will be full once one person from every category has submitted their answers. Meaning that the bar might look full even though not everyone receiving a task has answered the questions.
+
+![](/images/start-and-follow-360-review/03.png)
+
+To view detailed progress, click the 360° review box from the **Feedback** tab on the employee card. The overview displays:
+
+- Started date
+- Deadline
+- Status
+- Progress in procent
+- How many has answered the preparing questions (Employee, Manager, Peers, Reportees)
+
+If you only **Finalize** the review, results will not be visible to the employee. If you **Finalize and share**, results will be visible to the employee. You can **Finalize** first and **Share** later. Once finalized, no further responses can be submitted.
+
+![](/images/start-and-follow-360-review/04.png)
+
+The submitted responses will be displayed in the **sections** on the left. To view a response, click on the relevant section. Each answer will appear according to the selected answer type and will always be grouped by respondent category (e.g., Manager, Peers).
+
+You can return to the 360° review at any time to view the answers again, even after navigating away from the review.
+
+![](/images/start-and-follow-360-review/05.png)
+
+## 360° review overview
+
+In the main menu under **Performance** you will find an overview of the 360 reviews in Hailey. Here you can keep track of your reviews and whether or not there is something you need to take action on. If you hover your mouse over the progress bar, you can see whether the questions have been answered or not for the unique 360° review.
+
+![](/images/start-and-follow-360-review/06.png)
+
+The overview shows the **employee** the 360° review concerns, **the title of the review, the initiated date** and a **progress bar**. You can also filter the list to easily find, for example, a specific employee.
+
+## Mobile App
+
+In the mobile app, users can **complete the review tasks** assigned to them based on the selected template.
+
+- **Employee:** Complete self-review questions and select peers to recieve feedback from.
+- **Manager:** Adjust peers and complete manager review.
+- **Peer:** Complete peer review.
+- **Reportees:** Complete reportee review
+
+## Rights
+
+To give these permissions to other roles, update the role settings under **Settings – Security – Roles and rights:**
+
+- **View and edit 360° reviews:** Allows users to view and edit 360° reviews
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="How long will the task stay in the task list?">
+  The task disappears from the employee's To-Do list as soon as they **complete the evaluation**, or as soon as the questions has been sent in.
+  </Accordion>
+  <Accordion title="How many peers can be selected?">
+  There is no system limit on how many peers can be selected.
+  </Accordion>
+  <Accordion title="Do the task transfer when an employee gets a new manager?">
+  Organizational changes do not affect tasks that have already been sent out. If a new manager is assigned to an employee during a 360° review - these tasks will *not* be transferred to the new manager.
+  </Accordion>
+</AccordionGroup>

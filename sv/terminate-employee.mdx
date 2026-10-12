@@ -1,0 +1,126 @@
+---
+title: "Avsluta anställning"
+---
+
+Är det dags att säga hejdå till en medarbetare? Den här guiden visar hur du smidigt avslutar en medarbetares anställning i Hailey - allt i ett och samma flöde.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="AilglT6" title="Avsluta anställning" />
+
+## Vad innebär det att avsluta en anställning?
+
+När det är dags att ta farväl av en kollega kan du smidigt hantera hela processen i ett och samma flöde. Här registrerar du sista anställningsdag och sista arbetsdag samt väljer om medarbetarens löner ska avslutas automatiskt på samma datum. Du har också möjlighet att skapa och skicka kontrakt samt starta ett arbetsflöde vid behov. På så sätt får du en smidig och strukturerad offboardingprocess där alla viktiga steg hanteras på ett och samma ställe.
+
+## Hur avslutar man anställningen?
+
+Gå till medarbetarkortet och klicka på **Hantera - Avsluta** för att avsluta anställningen.
+
+![avsluta](https://docs.haileyhr.com/hs-fs/hubfs/avsluta.png?width=670&height=331&name=avsluta.png)
+
+Nu kommer en wizard att leda dig genom processen.
+
+![Skärmavbild 2026-07-23 kl. 11.14.53](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202026-07-23%20kl.%2011.14.53.png?width=670&height=346&name=Sk%C3%A4rmavbild%202026-07-23%20kl.%2011.14.53.png)
+
+Ange **sista anställningsdag** och **sista arbetsdag**. I detta steg får du också alternativet att **avsluta medarbetarens lönen/löner** på den sista anställningsdagen.
+
+![Skärmavbild 2026-07-23 kl. 11.18.16](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202026-07-23%20kl.%2011.18.16.png?width=670&height=351&name=Sk%C3%A4rmavbild%202026-07-23%20kl.%2011.18.16.png)
+
+<Tip>
+  **Sista arbetsdag:**
+
+  Att ange sista arbetsdag är användbart om medarbetaren av någon anledning, ska sluta arbeta tidigare än det faktiska slutdatumet för anställningen. Medarbetaren får då anställningsstatus **Arbetsbefriad** under perioden mellan sista arbetsdag och sista anställningsdag.
+
+  ![arbetsfriad 2](https://docs.haileyhr.com/hs-fs/hubfs/arbetsfriad%202.png?width=670&height=129&name=arbetsfriad%202.png)
+</Tip>
+
+I nästa steg får du välja om du vill fortsätta utan kontrakt eller skicka iväg ett kontrakt gällande avslutet:
+
+- **Fortsätt utan kontrakt** - Inget kontrakt skapas och avslutandet av anställningen genomförs direkt efter sista steget i wizarden.
+- **Konfigurera ett kontrakt** - Du väljer en kontraktsmall och följer stegen för att skapa kontraktet.
+
+<Note>
+  Observera att om du väljer att fortsätta utan kontrakt så **registreras avslutet av anställningen direkt**. Anställningen avslutas då enligt det slutdatum som du angav i det första steget.
+</Note>
+
+![Skärmavbild 2026-07-23 kl. 11.23.57](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202026-07-23%20kl.%2011.23.57.png?width=670&height=358&name=Sk%C3%A4rmavbild%202026-07-23%20kl.%2011.23.57.png)
+
+Om du vill konfiguera ett kontrakt på avslutandet av anställningen, klicka på **Konfigurera** **ett** **kontrakt.** Välj sedan en kontraktsmall från rullistan och klicka dig vidare.
+
+<Note>
+  Observera att vid användning av kontrakt så avslutas anställningen först när signeringen är slutförd.
+</Note>
+
+![Skärmavbild 2026-07-23 kl. 14.12.34](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202026-07-23%20kl.%2014.12.34.png?width=670&height=348&name=Sk%C3%A4rmavbild%202026-07-23%20kl.%2014.12.34.png)
+
+<Note>
+  Notera att det enbart är möjligt att välja en kontraktsmall från ert kontraktsbiblioteket som är skapad för **Avslutande av en medarbetares anställning.** Läs mer om hur du skapar en kontraktsmall [HÄR](/sv/create-contract-templates).
+</Note>
+
+Om kontraktsmallen innehåller **valbara sektioner** och/eller **valbara bilagor**, markera de delar som ska inkluderas i kontraktet. Om kontraktet innehåller fritextrutor fyller du i dem manuellt här.
+
+![Skärmavbild 2026-07-23 kl. 14.23.57](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202026-07-23%20kl.%2014.23.57.png?width=670&height=364&name=Sk%C3%A4rmavbild%202026-07-23%20kl.%2014.23.57.png)
+
+Till sist skapar vi signeringsprocessen.
+
+- Under **Signeringsmetod** väljer du hur avtalet ska signeras, med BankID eller digital autograf.
+- Under **Granskningssteg** kan du ange en granskare som ska granska kontraktet innan de skickas för signering. Granskaren kan antingen godkänna eller neka kontraktet med en kommentar. Om kontraktet godkänns skickas det vidare för signering. Om det nekas får du en kommentar från granskaren, så att du kan göra nödvändiga ändringar innan kontraktet skickas på nytt.
+- Under **Signeringssteg** är medarbetare och chef som standard inlagda i det första steg. För att justera signeringsstegen eller signeringsordningen tryck på **Lägg till signeringssteg** och lägg till de antal signeringssteg som önskas, samt vem eller vilka som ska signera i respektive steg.
+- **Signeringen följer ordningen på stegen**, och ifall det ligger fler namn i ett steg, så kommer samtliga få kontraktet samtidigt.
+
+![Skärmavbild 2026-07-23 kl. 15.32.10](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202026-07-23%20kl.%2015.32.10.png?width=670&height=370&name=Sk%C3%A4rmavbild%202026-07-23%20kl.%2015.32.10.png)
+
+I sista steget ser du en sammanfattning av processen. Klicka på **Förhandsgranska** för att se kontraktet i sin helhet och **Skicka** när du känner dig klar.
+
+![Skärmavbild 2026-07-23 kl. 16.04.40](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202026-07-23%20kl.%2016.04.40.png?width=670&height=366&name=Sk%C3%A4rmavbild%202026-07-23%20kl.%2016.04.40.png)
+
+I det sista steget får du möjligheten att starta ett arbetsflöde för medarbetaren. Detta är inte obligatoriskt, och eventuella **automatiska arbetsflöden** för t. ex. offboarding kommer fortfarande att aktiveras om de inte startas i detta steg.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jan-07-2026-10-04-35-8946-AM.png?width=670&height=329&name=image-png-Jan-07-2026-10-04-35-8946-AM.png)
+
+Medan signeringen pågår kan du följa avslutningsprocessen på medarbetarens profil.
+
+![Skärmavbild 2026-04-17 kl. 09.18.39](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202026-04-17%20kl.%2009.18.39.png?width=670&height=205&name=Sk%C3%A4rmavbild%202026-04-17%20kl.%2009.18.39.png)
+
+När kontraktet har signerats av samtliga parter är avslutet av anställningen slutförd. Medarbetaren får då statusen **Ska lämna** och slutdatumet blir synligt.
+
+## Ställ in dina rättigheter
+
+Som admin i Hailey kan du avsluta anställningar. Om någon som inte är admin i systemet behöver avsluta en anställningen, behöver personen ha rättigheten att **avsluta** anställning.
+
+<Note>
+  [HÄR](/sv/roles-and-rights) kan du läsa mer om roller och rättigheter.
+</Note>
+
+## Vanliga fragor
+
+<AccordionGroup>
+  <Accordion title="Avslutas anställningen direkt?">
+    Nej. Anställningen avslutas först på det slutdatum som du anger i det första steget i processen. Fram till dess har medarbetaren statusen **Ska lämna**.
+
+    **Fråga**: Vad är skillnaden mellan att **ta bort** en medarbetare och att **avsluta** en anställning?
+
+    När du avslutar en anställning så förblir medarbetarens profil ändå kvar i systemet, medan gallring av data påbörjas enligt era GDPR-inställningar. Detta är fördelaktigt för bland annat statistik och historik, samtidigt som det gör det möjligt att smidigt återanställa personen vid behov.
+
+    När du istället tar bort en medarbetare **raderas hela profilen och all tillhörande data från systemet.** Detta alternativ används därför mer sällan och är främst avsett för situationer där en profil har skapats av misstag eller av något anledning inte längre ska finnas kvar.
+  </Accordion>
+
+  <Accordion title="Behöver jag skicka ut kontrakt?">
+    Nej. Du kan avsluta en anställning utan att skicka ett kontrakt. Välj då **Fortsätt utan kontrakt** i wizarden.
+  </Accordion>
+
+  <Accordion title="Jag avslutade en medarbetares lön av misstag eller för tidigt i samband med processen  - hur gör jag?">
+    Du kan enkelt återaktivera lönen från medarbetarens profil. Gå till **Kompensation**-fliken, klicka på den aktuella lönen och **Hantera** och välj **Återaktivera lön.** Då raderas lönens slutdatum och lönen får då åter statusen **Aktiv**. Lönen kan sedan manuellt avslutas från profilen.
+  </Accordion>
+</AccordionGroup>

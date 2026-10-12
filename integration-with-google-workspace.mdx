@@ -1,0 +1,157 @@
+---
+title: "Integration with Google Workspace"
+---
+
+Do you want new employees to be created in Google Workspace when they are created in Hailey? With our integration to Google Workspace, this is possible—along with seamless transfer of included data!
+
+<Tip>
+  First time activating one of **Hailey's standard integrations**? Start by reading [**THIS**](/haileys-standard-integrations) guide to know what to keep in mind before you get started.
+</Tip>
+
+## What does the integration do?
+
+With Hailey’s standard integration for Google Workspace, changes to the included data are automatically synchronized from Hailey to Google Workspace. For example, when a new employee is added in Hailey, a corresponding user account is automatically created in Google Workspace.
+
+The integration also provides the option to automatically deactivate users in Google Workspace when an employee no longer has an active employment status in Hailey.
+
+## How does the integration work?
+
+With each synchronization, the included data is automatically transferred to Google Workspace via API and updated to match the values stored in Hailey, as Hailey acts as the master system (source of truth).
+
+If the user deactivation feature is enabled, employees whose **Last Working Day** or **Employment End Date** has passed will automatically be assigned a **Deactivated** status in Google Workspace. The deactivation takes place during the night following the date that has passed in Hailey.
+
+It is important to note that Hailey serves as the master system for all data included in the integration. Therefore, any changes to synchronized data should always be made in Hailey. In practice, this means that if you update a field in Hailey that is included in the integration, the corresponding field in Google Workspace will be automatically updated with the same value during the next synchronization cycle, typically within the following hour.
+
+<Tip>
+  You can read more about the included data in the standard integration to Google Workspace [**HERE**](#data_included)[.](#What_data_is_included_in_the_integration)[#data_included](#data_included)
+</Tip>
+
+In summary, the integration can help you with the following:
+
+- Create new users in Google Workspace
+- Update data on users in Google Workspace
+- Suspend users in Google Workspace after their last day _(Optional)_
+
+All of these actions are driven by updates and changes made in Hailey. By managing employee data exclusively in Hailey, you save time and reduce manual administration, as there is no need to update both systems separately - Hailey automatically keeps Google Workspace up to date for you.
+
+## What data is included in the integration?
+
+Below we present what data fields in Hailey that are transfered to Google Workspace data fields are:
+
+| **HAILEY** | **GOOGLE WORKSPACE** |
+| --- | --- |
+| First name | Given name |
+| Last name | Family name |
+| First name + Last name | Full name |
+| Work phone | Phones\* |
+| Company email | Primary email |
+
+**Optional fields:**
+
+| **HAILEY** | **GOOGLE WORKSPACE** |
+| --- | --- |
+| Title | Job title |
+| Department | Department |
+| Reports to | Manager's email |
+| Location | Location\* |
+
+\*_Updated only via the GWS API – not in the user interface_
+
+## What is required to be included in the integration?
+
+**For a new user to be created in Google Workspace, the employee added in Hailey must have a Company Email address (using your organization's domain) entered in their profile. The same requirement applies to existing employees who are to be included in the integration.**
+
+In addition to having a Company Email address associated with your domain, employees must have one of the following employment statuses to be included in the integration and to be created or maintained in Google Workspace:
+
+- **Starting**
+- **Active**
+- **Leaving**
+
+Only employees who meet both of these requirements—a valid company email address and one of the approved employment statuses—will be synchronized to Google Workspace through the integration.
+
+## How is the integration activated?
+
+To configure the integration with Google Workspace and Hailey, you need to have admin rights in Google Workspce and the right to **View & edit** Integrations in Hailey.
+
+As an admin in Hailey, you already have this right to set up integrations, but if someone else (eg IT) is going to set up the integration, you can go to **Settings - Security - Roles & rights** to set up a **Company role** with these rights before they start setting up the integration. The specific right for managing integrations is found under **Settings - Integrations** in the Company role.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-23-2025-11-22-23-4079-AM.png?width=670&height=413&name=image-png-Oct-23-2025-11-22-23-4079-AM.png)
+
+Start by signing in to Google Workspace, go to **Account** and **Account** **Settings**. Copy the **Customer ID** under profile information.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-23-2025-11-18-52-2389-AM.png?width=670&height=318&name=image-png-Oct-23-2025-11-18-52-2389-AM.png)
+
+**Setup in Hailey:**
+
+Paste the Customer ID into Hailey under **Settings - Integrations - Google workspace - Authorise - Customer ID**. Click Authorize and follow the steps. When this is done you can toggle **Active** on.
+
+You then chose a default password in Hailey that all new users needs to use the [first time they log in](#log_in) to their Google account when they do this the first time, they will automatically be asked to choose their own personal password which they will use when logging in with Google in the future.
+
+<Tip>
+  You have the option to disable the use of a default password in the integration settings.
+
+  When this option is disabled, a **unique password is automatically generated in the background** for each newly created Google Workspace user. This password is not communicated to the user or to any administrator.
+</Tip>
+
+Select the corresponding options if you want **Titles**, **Department**, **Location** and/or **Reports** **to** be synced in the integration as well.
+
+By toggling on **Decommission employees without an active employment** in the setup, you allow the integration to automatically suspend users in Google Workspace after their last working day. This will happen the night _after_ the employee has passed their **Last working day** or **End date** in Hailey. In other words, they are suspended the night after they change to the status **Garden leave** or **Has left** in Hailey.
+
+You can also choose to **scope** the integration on Legal entity or Location. This means that you can choose to only set up the integration for parts of your company, or set up more than one integration if you want the integration to vary for different parts of the company.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-23-2025-11-20-48-1050-AM.png?width=670&height=531&name=image-png-Oct-23-2025-11-20-48-1050-AM.png)
+
+When you click Save in the above step, a pop up asking you allow Hailey to get access to your Google account like the picture below will pop up. Double-check that it giver haileyhr.app access to View domains connected to your customers and View and handle administration of users in your domains. Click Allow.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-04-2022-11-31-42-54-AM.png?width=425&name=image-png-Oct-04-2022-11-31-42-54-AM.png)
+
+Once the integration with Google Workspace is activated, you will notice that there is an active connection with Google Workspace under Settings - Integrations - Added. From here, you can **Edit** the setup for this integration.
+
+## Does the integration not apply to the entire company?
+
+You can choose to limit the integration to specific Legal Entities or Locations. This allows you to configure the integration for only certain parts of the organization, or to set up multiple integrations if different parts of the business require different configurations.
+
+If your company operates across multiple Workplaces or Legal Entities in Hailey, and different sets of data need to be synchronized—or if only certain entities should be included in the synchronization—it may be beneficial to configure separate Google Workspace integrations tailored to those specific requirements.
+
+To add additional Google Workspace integrations, navigate to **Settings → Integrations → Identity & Access**. From there, click **Add Integration +** on the **Google Workspace** card and configure the integration according to your needs.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-23-2025-01-57-24-4245-PM.png?width=670&height=286&name=image-png-Oct-23-2025-01-57-24-4245-PM.png)
+
+In the new integration, you choose what part of the company you want to set up the integration for and what should be synced in the same way as you did with the configuration of your other integration. By doing so, **you can establish multiple integrations to Google Workspace for various parts of your company.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-23-2025-01-59-50-8946-PM.png?width=670&height=1012&name=image-png-Oct-23-2025-01-59-50-8946-PM.png)
+
+This is beneficial if your legal enitites/locations have seperate Google Workspace accounts, or if you need different data to be synced for separate parts of you company who are in the same Google Workspace account.
+
+How does an employee sign in with Google Workspace for the first time?
+
+When a **new employee** starts in your organisation and logs into a system using their Google Workspace account which was created through the integration in Hailey, they need to use the password that you set as **Default password** in the integration set up in Hailey.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-23-2025-02-13-45-1937-PM.png?width=670&height=407&name=image-png-Oct-23-2025-02-13-45-1937-PM.png)
+
+After adding the Default password and clicking Sign in, they will be asked to create their own password on the next page. This will be the password that your new employee will use to log into any system connected to your Google.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="When setting up the Google Workspace integration, I click **Authorize** but receive the error message shown below. How can I proceed?">
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2026-08-47-24-9468-AM.png?width=670&height=411&name=image-png-Jul-10-2026-08-47-24-9468-AM.png)
+
+    **Answer:** To proceed, simply click **Advanced** and then continue with the authorization process by approving the requested access.
+  </Accordion>
+
+  <Accordion title="Is it mandatory to set a default password in the integration settings that will be assigned whenever a user is created through the integration?">
+    Answer: You have the option to disable the use of a default password in the integration settings.
+
+    When this option is disabled, a **unique password is automatically generated in the background** for each newly created Google Workspace user. This password is not communicated to the user or to any administrator.
+
+    As a result, once the integration has created the user account, an IT administrator or other responsible person will need to access the user in **Google Workspace** and either:
+
+    - Reset the user's password and share the new credentials with the employee, or
+    - Manually set a password of their choice.
+
+    This approach can provide an additional level of security by ensuring that the same default password is not used for multiple users.
+
+    _I\*\*f you have any questions regarding the integration, please contact your Customer Success specialist at Hailey._
+  </Accordion>
+</AccordionGroup>

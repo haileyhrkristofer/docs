@@ -1,0 +1,281 @@
+---
+title: "Integration with Entra ID"
+---
+
+Would you like new employees to be automatically created in Entra ID when they’re added in Hailey? With our integration to Entra ID, this is possible—along with seamless transfer of data like job titles and employee numbers!
+
+<Tip>
+  First time activating one of **Hailey's standard integrations**? Start by reading [**THIS**](/haileys-standard-integrations) guide to know what to keep in mind before you get started.
+</Tip>
+
+---
+
+## What does the integration do?
+
+At each synchronization, the **included data** will be automatically updated via **API transfer** to Entra ID and assigned the same values as in Hailey, since Hailey is the master.
+
+In summary, the integration can help you with the following:
+
+- Create new users in Entra ID
+- Update user information in Entra ID
+- Disable users in Entra ID after their last working day (optional)
+
+## How does the integration work?
+
+With the API transfer, a synchronization between Hailey and Entra ID takes place **once an hour based** **on changes.** This means that:
+
+- Included data that does not match between Hailey and Entra ID will be updated every hour with the information available in Hailey.
+
+<Note>
+  Hailey's integration with Entra ID is designed for the cloud-based version of Entra ID.
+</Note>
+
+## What data is included in the integration?
+
+| **HAILEY** | **Entra ID** |
+| --- | --- |
+| Company email | User principal name |
+| Company email (without @domaine) | Mail nickname (without separation) |
+| Company phone | Business phone |
+| First name | First name |
+| Last name | Last name |
+| First name + Last name | Display name |
+
+**Optional data fields:**
+
+| **HAILEY** | **Entra ID** |
+| --- | --- |
+| Titles | Job title (comma separated) |
+| Department | Department |
+| Legal entity | Company name |
+| Location | Office location |
+| Date of joining | Employee hire date |
+| Employment number | Employee ID |
+| Reports to | Manager |
+| Private phone, work phone or custom field | Mobile phone |
+
+## What is required to be included in the integration?
+
+For a user to be included in / created through the integration, the employee must have:
+
+- A company email address that matches your domain
+
+Employees are synchronized between Hailey and Entra ID by matching the company email address in Hailey with the UPN in Entra ID. If no matching UPN exists, Hailey will automatically create a new user in Entra ID.
+
+Employees with the following **employment statuses** are included in the integration:
+
+- Will join
+- In service
+- Leaving
+
+## How is the integration activated?
+
+To activate the integration, you need to:
+
+- Prepare the integration setup in Entra ID
+- Add the integration in Hailey
+- Fill in the required data for the integration setup
+- Include the integration where applicable
+- Save and activate
+
+Follow the instructions below to complete the activation of the integration.
+
+### Step 1 - Preparation
+
+Before activating the integration, the person setting up the integration **must have administrator rights in Entra ID**. As a Hailey admin, you automatically have the required rights to set up the integration.
+
+- If someone else, such as your IT, will be responsible for setting up the integration, you can give them the required rights by following the roles & rights guide [**HERE**](/roles-and-rights). The IT will need View & Edit integrations.
+
+#### Steg 2 - Entra ID setup
+
+Start by signing in to Microsoft Entra ID.
+
+- Go to App registrations.
+- Click on **\+ New registration.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-11-32-18-6624-AM.png?width=670&height=404&name=image-png-Jul-10-2025-11-32-18-6624-AM.png)
+
+<Steps>
+  <Step title="Start by naming your application">
+    Start by naming your application. We suggest you name it "Hailey HR" for clarity. Under supported account types; select Accounts in this organizational directory only.
+  </Step>
+  <Step title="Under Redirect URI, select Web in the drop down and enter th">
+    Under Redirect URI, select **Web** in the drop down and enter the value [https://haileyhr.app/settings?item=integrations](https://haileyhr.app/settings?item=integrations) (you can copy this link, make sure there is no space before or after).
+  </Step>
+  <Step title="Click on Register">
+    Click on **Register**.
+  </Step>
+</Steps>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-11-39-54-9081-AM.png?width=670&height=440&name=image-png-Jul-10-2025-11-39-54-9081-AM.png)
+
+When the app registration has been created;
+
+- Go to **API Permissions** in the left menu
+- Click **\+ Add a permission.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-11-40-59-0866-AM.png?width=670&height=401&name=image-png-Jul-10-2025-11-40-59-0866-AM.png)
+
+Proceed by clicking on **Microsoft Graph.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-11-35-36-1210-AM.png?width=670&height=329&name=image-png-Jul-10-2025-11-35-36-1210-AM.png)
+
+Click on **Application permissions.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-11-35-16-9547-AM.png?width=670&height=317&name=image-png-Jul-10-2025-11-35-16-9547-AM.png)
+
+Under **Select permissions,** search for "domain", expand the list and select Domain.Read.All
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-11-44-55-4942-AM.png?width=670&height=620&name=image-png-Jul-10-2025-11-44-55-4942-AM.png)
+
+Search for "**User**", expand the User.
+
+Select User.ReadWrite.All and click on **Add permissions.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-11-45-45-8931-AM.png?width=670&height=620&name=image-png-Jul-10-2025-11-45-45-8931-AM.png)
+
+In the tab API permissions, click Grant admin consent for _Your-Company-Name_, and then click **Yes**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-11-47-31-8583-AM.png?width=670&height=241&name=image-png-Jul-10-2025-11-47-31-8583-AM.png)
+
+In the list of API / Permissions you will now see that three rights have the status **Granted.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-11-49-48-8865-AM.png?width=670&height=344&name=image-png-Jul-10-2025-11-49-48-8865-AM.png)
+
+Go back to:
+
+- the **Overview** **tab** and Copy the ID under **Directory (tenant) ID** and the **Application (client) ID**.
+- Save it for later use in Hailey.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-11-52-11-8482-AM.png?width=670&height=479&name=image-png-Jul-10-2025-11-52-11-8482-AM.png)
+
+Go to:
+
+- **Certificates & Secrets** in the main menu and make sure that you are in the tab **Client secrets**.
+- Click on **\+ New client secret**.
+- Under description you choose a name, we suggest "Hailey HR secret". We recommend that you set Expires to 24 months.
+- Click **Add**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-11-54-25-7396-AM.png?width=670&height=451&name=image-png-Jul-10-2025-11-54-25-7396-AM.png)
+
+Copy the code under Value and save for later use in Hailey.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-11-56-46-4407-AM.png?width=670&height=337&name=image-png-Jul-10-2025-11-56-46-4407-AM.png)
+
+After 24 months, the **integration will need to be renewed**.
+
+- When it is time for this, you will receive an email from Hailey notifying you about this.
+
+### Step 3 - Active the integration in Hailey
+
+- Go to **Settings - Integrations**.
+- Click on the heading **User provisioning**
+- Click on **Microsoft Entra ID** and **Add integration**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-12-00-42-9267-PM.png?width=670&height=265&name=image-png-Jul-10-2025-12-00-42-9267-PM.png)
+
+Paste the **Tenant ID** and **Client ID** values that you copied from the previous steps in Entra ID, and then click **Authenticate**.
+
+- After you have clicked **Authenticate**, you will find the integration under the **Added** tab in Hailey.
+
+Click the **Microsoft Entra ID** integration once authentication is complete to finish the remaining setup of the integration and to activate it.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-09-2026-07-23-32-0379-AM.png?width=670&height=403&name=image-png-Jun-09-2026-07-23-32-0379-AM.png)
+
+When you have reopened the integration setup, you can choose to toggle the **Active** button on.
+
+- The integration will not become active until you click **Save** in the bottom-right corner. This is done as the final step once the entire integration setup has been completed.
+
+Paste the **Client secret** value that was copied from Entra ID.
+
+Enter a **Default password** (new users created through the integration will use this for their first login).
+
+<Note>
+  Users created through the integration will need to enter the **Default password** the first time they sign in to their Microsoft account.
+
+  - During the first sign-in, the user will also be prompted to change their password.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-23-2026-08-56-24-7826-AM.png?width=670&height=324&name=image-png-Jun-23-2026-08-56-24-7826-AM.png)
+
+Choose the **optional fields** that should be included in the data transfer.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-23-2026-08-58-23-6526-AM.png?width=670&height=268&name=image-png-Jun-23-2026-08-58-23-6526-AM.png)
+
+Scroll down in the integration setup and choose whether you want to decommission employees without an active employment in Entra ID.
+
+- If you choose **decommission employees without an active employment in Entra ID**, employees whose **Last working day** or **End date** in Hailey has passed will have their status changed to **Disabled** in Entra ID.
+
+The deactivation takes place overnight after the employee has left the user will receive the **Disabled** status in Entra ID.
+
+<Note>
+  **Note:** If an employee's status is changed from **"Has left"** back to **Active** in Hailey, the employee will also be reactivated in Entra.
+</Note>
+
+Finally, you can decide whether you want the integration to **Synchronize mobile phone in Entra ID**.
+
+- Here you have the option to choose between the fields in Hailey that have **Phone** as their type (this can be either a standard field or custom fields).
+- The phone number you select will then be synchronized to the Mobile phone field in Entra ID.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-Jun-12-2026-07-20-41-4785-AM.png?width=670&height=402&name=undefined-Jun-12-2026-07-20-41-4785-AM.png)
+
+After the above steps have been completed, simply click **Save** and the Entra- integration will be activated!
+
+If you want to make adjustments to the setup, this can be done through the active integration found under **Settings - Integrations - Added**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-Jun-12-2026-07-22-18-9399-AM.png?width=670&height=282&name=undefined-Jun-12-2026-07-22-18-9399-AM.png)
+
+## Does the integration not apply to the entire company?
+
+There is also an option **scope** the integration!
+
+- The scope of the integration allows you to include only employees with a specific locations and/or legal entity in the integration.
+- This is important to do immediately when setting up the integration. The reason it must be configured during the initial setup is to ensure that the correct employees are synchronized from Hailey to Entra ID, as synchronization starts immediately.
+
+If these fields are left empty, all employees who meet the integration requirements will be synchronized.
+
+<Note>
+  The image below shows and example that only employees belonging to the selected location specified in the integration setup will be included in the integration with Entra ID.
+</Note>
+
+### It is also possible to set up multiple integrations with different/multiple accounts in Entra ID.
+
+- If your company has multiple locations and/or legal entities in Hailey, it may be beneficial to create separate integrations with Entra ID for different/multiple Entra ID accounts.
+
+If you want to set up multiple integrations with different Entra ID accounts, repeat the same process as described above. In other words, navigate to the **User provisioning** section and follow the same steps as when you set up the first integration.
+
+- You can see how many integrations with Entra ID you have activated by navigating to **Settings - Integrations - Added**. Here you can also see the scope of each active integration.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-30-2026-11-58-57-2863-AM.png?width=670&height=348&name=image-png-Apr-30-2026-11-58-57-2863-AM.png)
+
+How does an employee sign in for the first time in Entra ID?
+
+When a new employee starts in your organisation and logs into a system using their Entra account which was created through the Entra integration in Hailey, they need to use the password that you set as **Default password** in the integration set up in Hailey.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-12-18-26-5536-PM.png?width=670&height=560&name=image-png-Jul-10-2025-12-18-26-5536-PM.png)
+
+After adding the **Default password** and clicking **Sign in**, they will be asked to create their own password on the next page. This will be the password that your new employee will use to log into any system connected to your Entra ID.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-12-20-18-9012-PM.png?width=670&height=688&name=image-png-Jul-10-2025-12-20-18-9012-PM.png)
+
+---
+
+## Common questions
+
+**Question 1:** If I make a change in Entra ID, will it also be updated in Hailey?
+
+Hailey is the master system, meaning that for the data included in the integration, Hailey is the primary data source. If a change is made directly in Entra ID to a field that is included in the integration, the value will be reset to the value in Hailey.
+
+**Question 2:** How will users that already exist in our Entra ID be matched and handled when the synchronization is activated? Will duplicate users be created?
+
+The integration identifies employees based on their company email address. If the email address already exists in Entra ID, duplicate users will **not** be created. Instead, the integration will identify and match the existing user profile.
+
+**Question 3:** What happens if I change an employee’s company email address in Hailey - how does that affect the integration?
+
+When you change an employee’s company email address in Hailey, a new profile will be created in Entra ID. This is because the email address is used as the unique identifier when creating the employee account and serves as the link between the two systems.
+
+**Question 4:** Does the integration work with on-premises Active Directory?
+
+Hailey’s integration with Entra ID is designed for cloud-based Entra ID.
+
+_If you have any questions regarding the integration, please contact your Customer Success specialist at Hailey._

@@ -1,0 +1,111 @@
+---
+title: "Importera medarbetare"
+---
+
+Använd denna guide som stöd för att importen av era medarbetare ska bli så smidig som möjligt.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="0xBOjqF" title="Importera medarbetare" />
+
+## Innan du sätter igång
+
+Innan du importerar medarbetare rekommenderar vi att du förbereder dig genom att samla in all medarbetardata i förväg. En medarbetare importeras endast en gång, så vi rekommenderar att du inkluderar så mycket information som möjligt redan vid den första importen. Vi föreslår också att du går igenom standardfälten samt sätter upp de egna fälten då dessa också ligger med i importfilen.
+
+- **[HÄR](/sv/standard-fields)** kan du läsa mer om hur du aktiverar, avaktiverar och avgränsar **Standardfält**.
+- **[HÄR](/sv/custom-fields)** kan du läsa mer om hur du skapar och lägger till **Egna** **fält**.
+
+## Hur importerar du medarbetare?
+
+Ladda ner importmallen genom att gå till **Medarbetare** i huvudmenyn, klicka på **Importera** - **Medarbetare** och sedan **Ladda ner** **importmall**. Öppna sedan mallen för att komma igång och fyll i relevant information för varje medarbetare.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-03-2026-11-59-02-3570-AM.png?width=670&height=205&name=image-png-Jul-03-2026-11-59-02-3570-AM.png)
+
+För att importen ska lyckas måste tre fält i importmallen vara ifyllda:
+
+- **CompanyEmail**
+- **FirstName**
+- **LastName**
+
+Några av kolumnerna behöver följa ett visst format för att importfilen ska kunna laddas upp i Hailey. **[#format](#format)[HÄR](#format)** kan du se vilka formatkrav som behöver följas. Nedan är ett exempel på hur en väl ifylld import kan se ut.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-09-2025-07-43-09-3622-AM.png?width=670&height=210&name=image-png-Jul-09-2025-07-43-09-3622-AM.png)
+
+När du har skrivit in informationen i filen är det dags att importera den! Importen skapar upp medarbetarprofiler för varje medarbetare med den data du lagt in i filen. Gå till **Medarbetare** i huvudmenyn och klicka på **Importera** – **Medarbetare**. Klicka sedan på rutan i mitten som säger **”Klicka eller släpp filen här för att ladda upp”**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-09-2025-07-47-54-8083-AM.png?width=670&height=451&name=image-png-Jul-09-2025-07-47-54-8083-AM.png)
+
+Skulle någon kolumn vara felaktigt ifyllt, kommer ett felmeddelande att dyka upp och informera om vilken kolumn och rad som kräver justering. Ändra det som är i behov av justering, och ladda sedan upp filen på nytt.
+
+När allt stämmer klickar du på **Importera**. Importen kan ta en stund beroende på hur många medarbetare som ska importerats. Du kan stänga denna ruta - importen jobbar på ändå! När importen är färdig kommer personen som initierade rapporten att få ett verifieringsmail:
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-09-2025-07-59-17-3550-AM.png?width=670&height=567&name=image-png-Jul-09-2025-07-59-17-3550-AM.png)
+
+## Format
+
+Importfilen har vissa formatkrav du behöver följa. Här nedan följer en lista över de olika formaten:
+
+| **KOLUMN** | **FORMAT** |
+|---|---|
+| **E-mail** | Giltig emailadress, accepterar inga mellanslag, Å, Ä eller Ö. |
+| **Anställningsnummer** | Tillåtna tecken är a-z, A-Z samt 0-9, inga specialtecken tillåts. |
+| **Datum** | ÅÅÅÅ-MM-DD |
+| **Personnummer** | Svenskt personnummer: ÅÅÅÅMMDD-XXXX Norskt personnummer: DDMMÅÅXXXXX Danskt personnummer: DDMMÅÅ-XXXX Finskt personnummer: DDMMÅÅ-XXXX Alla övriga personnummer går bra att skriva i vilket format som helst. |
+| **Utfärdare av personnummer** | SWE, NOR, DNK, DEU, FIN, USA eller Other. *Ange bara om ni angivit personnummer*. **Fylls i på engelska och är krav för att kunna signera med BankID**. |
+| **Kön** | Fylls i på engelska som Female, Male, NonBinary eller Other. |
+| **Telefonnummer** | Tillåtna tecken är siffror, +, - och mellanslag. T. ex. +46 72-123 12 34. |
+| **Egna fält** | **[HÄR](/sv/custom-fields)** hittar ni formaten som används för era egna fält. |
+
+<Note>
+  För er som använder flera sekvenser för anställningsnummer kommer kolumn B att vara **EmploymentNumberSequenceName**. Sekvensnamnet för anställningsnummer måste fyllas i om du vill lägga till anställningsnumret i importen. Du hittar detta under  **Inställningar -** **Allmänt - Inställningar för anställningsnummer**.
+</Note>
+
+## Rättigheter
+
+Administratörer har automatiskt behörighet att importera medarbetare.
+
+För att ge dessa behörigheter till andra roller, uppdatera rättigheterna under **Inställningar – Säkerhet – Roller & rättigheter** för **Importera medarbetardata**. [**HÄR**](/sv/roles-and-rights) kan du läsa mer om **Roller och rättigheter**.
+
+## Vanliga frågor
+
+<AccordionGroup>
+  <Accordion title="Jag har fått felmeddelande likt någon av dessa nedan. Vad behöver jag göra?">
+  ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-30-2026-07-33-11-8475-AM.png?width=670&height=120&name=image-png-Jun-30-2026-07-33-11-8475-AM.png)
+
+  ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-30-2026-08-02-28-5346-AM.png?width=670&height=119&name=image-png-Jun-30-2026-08-02-28-5346-AM.png)
+
+  Efter ni säkerställt att filändelserna är någon av de tillåtna får ni gärna se över att ni inte lagt en intern klassificering på filen samt testa gärna att ladda ner en ny importfil och kopiera din information och klistra in i den nya filen.
+
+  Dyker felmeddelandet upp kring ogiltig kolumnrubrik, löser sig ofta problemet att ladda ner en ny importfil och testa göra importen igen då det kan ligga någon formatering i bakgrunden och störa. I Excelfilen kan det även hjälpa att markera varje kolumn i headern på rad 1 och välja **Text** som format igen.
+
+  Kvarstår problemet, kontakta din ansvariga Customer Success Specialist eller vår support så hjälper vi dig gärna vidare!
+  </Accordion>
+  <Accordion title="Går det att importera medarbetares information i ett senare skede, exempelvis personnummer och gatuadress?">
+  Importen av medarbetare görs enbart en gång, så här rekommenderar vi att samla så mycket information som möjligt i importen för att slippa att manuellt addera detta på dina kollegors profiler.
+  </Accordion>
+  <Accordion title="Vi vill gärna att medarbetare uppdaterar sin personliga information själva (*exempelvis kontakt vid nödfall*) när de kommer in i systemet, går det?">
+  Självklart! Det går bra att lämna fält tomma i importfilen och sedan lägga detta ansvar på medarbetaren att fylla i sin relevanta information med rätt rättigheter.
+  </Accordion>
+  <Accordion title="Jag har importerat medarbetare men kan inte hitta den i medarbetarlistan. Varför?">
+  När medarbetare skapas via import har de ännu ingen anställning kopplad till sig. Som standard visar **medarbetarlistan** endast medarbetare med statusarna *I tjänst* och *Ska lämna*, vilka hämtas från deras anställningar.
+
+  För att visa de importerade medarbetarna, gå till **Medarbetare** - **Filter** och **avmarkerar alternativen I tjänst och Ska lämna**.
+  </Accordion>
+  <Accordion title="Jag vill endast lägga till några få medarbetare. Måste jag använda importen?">
+  Ifall du föredrar att lägga till medarbetare manuellt i Hailey och inte använda dig av importen kan du gå till **Medarbetare** i huvudmenyn och klicka på **Lägg till medarbetare** - **Lägg till**.
+  </Accordion>
+  <Accordion title="Kommer medarbetarna att bli inbjudna när jag importerat dem?">
+  Att en medarbetare har skapats i Hailey innebär inte att de automatiskt har tillgång till sitt konto eller får en notis om det. De får tillgång först när ni aktivt skickar en inbjudan, vilket sker som ett sista steg i implementeringen.
+  </Accordion>
+</AccordionGroup>

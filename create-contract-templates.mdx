@@ -1,0 +1,238 @@
+---
+title: "Create contract templates"
+---
+
+Follow the steps below to create your contract templates – and you'll soon be ready to start signing agreements with both your current stars and future team members.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="XrY4e8k" title="Create contract templates" />
+
+## What is a contract template?
+
+All types of documents that you want to be signable via Hailey need to be included in your Contract Repository. This can include employment agreements, attachments, policies, and more.
+
+## How to create a contract template
+
+Go to **Settings** – **Contract Repository** - click **Add new**. Two options will appear: **Create contract template** and **Add document**. To create a contract template, click on **Create contract template**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-24-2026-09-24-27-7454-AM.png?width=670&height=384&name=image-png-Jun-24-2026-09-24-27-7454-AM.png)
+
+### Initial settings
+
+- Give the template **a title**
+- **Describe** when the contract should be used
+- **Content Source**
+  - **Contract editor** – Creating a template where the content is saved and reused for every signing.
+  - **Manual upload for each signing** – No contract content is saved. When this option is selected, the user must uploaded a file every time a signing is initiated.
+- Select the **language** of the template
+- Choose where the contract should be available
+  - **Hiring** – The contract template will be accessible when initiating a new hire and from the employee profile page.
+  - **Signing with many employees** – The contract template will be accessible from the bulk action button in the employee list and from the employee profile page.
+  - **Signing with one employee** – The contract template will be accessible from the employee profile page.
+  - **New employment for existing employee** – The contract template will be accessible from an employee’s profile page when adding a new employment.
+  - **Terminating one employee** – The contract template will be accessible from an employee’s profile when terminating the employee.
+  - **Hiring & New employment** - The contract template will be accessible when initiating a new hire and from the employee profile page.
+  - **Contracted period** – The contract template will be available when adding an employment period to an employee. This option only appears if you have **Casual** **employment** enabled on your account.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-24-2026-09-25-20-0783-AM.png?width=670&height=382&name=image-png-Jun-24-2026-09-25-20-0783-AM.png)
+
+<Tip>
+  With the **Require BankID to view contract** feature, you can increase security by only allowing signing parties to open the document after verifying their identity with Swedish BankID. Enable the feature by clicking the gear icon in the top‑right corner and activating **Require BankID to view contract**.
+
+  Please note that all parties must have a Swedish personal identity number, and that digital autograph cannot be used when this feature is active.
+
+  ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-24-2026-09-13-32-7130-AM.png?width=670&height=387&name=image-png-Jun-24-2026-09-13-32-7130-AM.png)
+</Tip>
+
+#### Scope
+
+Select who should be able to use the template when sending contracts for signing by scoping the access. If the template should be available to users regardless of where they belong in the organization, leave all fields empty.
+
+<Note>
+  Read more about scope in Hailey [**HERE.**](/scope)
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-05-2026-01-07-05-1382-PM.png?width=1240&height=1110&name=image-png-Oct-05-2026-01-07-05-1382-PM.png)
+
+#### Signing settings
+
+The next step is to configure your **signing settings.**
+
+- **Require reviewer** – The template can only be signed if a reviewer has been selected first.
+- **After the signing** – Choose which folder the signed document should be stored in. If no folder is selected, it will be placed in the **Root folder**.
+- **Notify when signing is complete** – Here, you can choose whether one or more recipients should be notified when all parties have signed the contract.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-24-2026-09-26-41-8727-AM.png?width=670&height=380&name=image-png-Jun-24-2026-09-26-41-8727-AM.png)
+
+## Build your contract template
+
+After selecting your initial settings, it's time to start building your contract template! In the right-hand column, you’ll find information about:
+
+- **Visual elements** – Choose the font you want to use and whether you’d like automatic numbering.
+- **Variables** – These are used in your contract template to pull information directly from employee profiles.
+- **Salary** – Salary-related variables used in your contract template to fetch information directly from employee profiles.
+- **Input fields** – Fields that are filled in when you send out your template for signing.
+- **Attachments** – Additional documents that can be included with the contract.
+
+<Tip>
+  You can use the search bar to easily find the variable you need.
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-24-2026-09-26-03-6633-AM.png?width=670&height=386&name=image-png-Jun-24-2026-09-26-03-6633-AM.png)
+
+### Add content
+
+It's now time to add content to your contract template.
+
+Under **General** in the left-hand panel, you can:
+
+- Enter a **contract title**.
+- Change the logo by clicking the current logo and selecting a new one from the media library.
+- Choose whether to **include information about the signing parties** at the beginning of the contract. When this option is enabled, the contract starts with information about the employer and the employee.
+
+#### Create sections
+
+Build your contract by adding sections. Each section can contain:
+
+- A section title
+- A heading (subheading)
+- One or more paragraphs
+- A bulleted list
+
+Add as many sections as needed to create a clear and well-structured contract.
+
+<Note>
+  If you have multiple versions of the same content, you can make a section **Optional**. This allows the appropriate version to be selected when the contract is created from the template.
+
+  You can also duplicate a section by clicking the **three dots** next to the section in the right-hand panel.
+
+  By using **Optional** and duplicated sections, the same contract template can be used in multiple scenarios, reducing the need to create separate templates.
+</Note>
+
+#### Use variables
+
+Variables correspond to different fields on the employee profile. Add variables to your contract template to automatically fill in information from the employee profile, when a contract is created from the template.
+
+The **variables** can be found in the **right-hand menu** and are categorized as follows:
+
+- **Employee** – Includes information such as name, private contact details, and custom employee fields.
+- **Employment – Organization** – Includes structural codes like title, department, or manager.
+- **Employment – Terms** – Includes details like vacation days or scope of employment.
+- **Company** – Includes company name and organization number.
+- **Workplace** – Includes workplace address and phone number.
+- **Salary** – Includes salary-related information such as amount or start date.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-24-2026-09-21-31-2677-AM.png?width=670&height=385&name=image-png-Jun-24-2026-09-21-31-2677-AM.png)
+
+#### Add input fields
+
+An **Input field** is used for information that needs to be entered manually when the contract is sent for signing. It is useful for information that is not available as a field in Hailey.
+
+To add an input field:
+
+- Click **input fields** in the right-hand panel.
+- Enter a name that describes the information that should be filled in.
+- Add a comment with instructions for the person using the template, such as the required format or any important details to keep in mind.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-24-2026-09-20-53-2087-AM.png?width=670&height=385&name=image-png-Jun-24-2026-09-20-53-2087-AM.png)
+
+#### Add attachments
+
+If you have attachments that should be sent together with the contract, add them by clicking **Attachments** (the paperclip icon) in the right-hand panel.
+
+All documents that have been uploaded and tagged as **Contract template attachment** in **Contract Repository** - **Documents** are available to select here. You can also upload a new document directly from the contract template.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-24-2026-09-22-27-0255-AM.png?width=670&height=387&name=image-png-Jun-24-2026-09-22-27-0255-AM.png)
+
+If the attachment should not always be included:
+
+- Select **Optional**.
+- Add a comment describing when the attachment should be used.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-24-2026-09-23-05-8718-AM.png?width=670&height=383&name=image-png-Jun-24-2026-09-23-05-8718-AM.png)
+
+#### Save the contract template
+
+When you are finished building your contract template, click **Save** in the top-right corner.
+
+The completed contract template will appear in the list of templates together with its title and purpose.
+
+From the list, you can:
+
+- Preview a template by clicking its name.
+- Edit a template by clicking the **three dots** and selecting **Edit**.
+
+## Upload attachments and signable documents
+
+If you have any additional documents that need to be signed, you can upload them by going to **Settings** - **Contract Repository** - **Add Document.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-24-2026-09-19-38-8927-AM.png?width=670&height=386&name=image-png-Jun-24-2026-09-19-38-8927-AM.png)
+
+In the box that opens:
+
+- Upload a PDF file.
+- Enter a name for the document.
+- Select how the document should be used:
+  - **Signable document** – the document is sent for signing together with the contract.
+  - **Contract template attachment** – the document can be added as an attachment in a contract template.
+  - **Both** – the document can be both signed and used as an attachment.
+
+<Note>
+  All documents that has been tagged as Template attachment are selectable in contract templates.
+</Note>
+
+You can then choose which **folder** the document should be placed in after signing, provided it is tagged as a signable document. You can also limit the document’s **scope** to certain parts of the organization.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-Jun-24-2026-09-10-53-7923-AM.png?width=670&height=383&name=undefined-Jun-24-2026-09-10-53-7923-AM.png)
+
+The uploaded documents will appear in the Documents list.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-24-2026-09-11-55-4108-AM.png?width=670&height=385&name=image-png-Jun-24-2026-09-11-55-4108-AM.png)
+
+If a new version of an existing document needs to be uploaded, click on the **three dots to the right** of the document and **Edit**, then on **Replace** file to upload the latest version. You are also able to set or edit scope.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-24-2026-09-12-35-7684-AM.png?width=670&height=383&name=image-png-Jun-24-2026-09-12-35-7684-AM.png)
+
+## Key terms
+
+Here you’ll find explanations of terms and features that are helpful to understand when creating contract templates.
+
+- **Optional sections:** Allows the sender to decide whether the section should be included when the contract is sent. This is useful when certain terms vary — for example between different types of employment — while the rest of the contract remains the same. By placing such terms in optional sections, the same template can be used regardless of employment type ect.
+- **Variables:** Automatically fill in information that would otherwise need to be updated for each signing — such as name, start date or salary. Variables are connected to the employee profile, and pull the information directly from there into the contract. This ensures that the same template works for employees with different start dates, salaries ect.
+- **Input field:** An input field allows the sender to manually enter text when creating the contract. This is useful for example when certain information changes for each signing, but is not stored on the employee profile, and therefore cannot be added as a variable.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="The contract template I want to use does not appear as an option when I go to use it, why is this?">
+    If a contract template does not appear as an option when you're creating or sending a contract, it's usually because the template is assigned to the wrong **usage area** under **Where should the contract be available?** in the template settings.
+
+    For example, a template with the usage area **Terminating one employee** will not be available when you're sending a contract to a **new hire** as part of the hiring process.
+
+    To update the usage area:
+
+    1. Go to **Settings** - **Contracts.**
+    2. Click the **three dots** next to the contract template and select **Edit**.
+    3. Click the **gear icon**.
+    4. Under **Where should the contract be available?**, select the appropriate usage area for how you want to use the template.
+    5. Save your changes.
+
+    Once the template has the correct usage area, it will be available in the relevant contract flow.
+  </Accordion>
+
+  <Accordion title="Which countries can sign contracts using bank authentication?">
+    Hailey supports bank authentication in Sweden, Norway, Finland, and Denmark.
+  </Accordion>
+</AccordionGroup>

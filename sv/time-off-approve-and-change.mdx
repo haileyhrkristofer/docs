@@ -1,0 +1,192 @@
+---
+title: "Godkänn och ändra frånvaro"
+---
+
+I den här guiden hittar ni information om hur du som admin eller chef godkänner och ändrar frånvaro för era medarbetare.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="91mlF9E" title="Godkänn och ändra frånvaro" />
+
+## Vad är godkänn och ändra frånvaro?
+
+Som chef eller administratör kan du godkänna, ändra eller avslå frånvaroansökningar från dina medarbetare. När en medarbetare ansöker om frånvaro får du en uppgift i Hailey. Ett e-postmeddelande skickas också till den e-postadress som är registrerad på din profil.
+
+## Innan du börjar
+
+Innan du kan börja godkänna och ändra dina medarbetares frånvaro behöver inställningarna för **Tid** och **frånvaro** vara konfigurerade i ditt Hailey-konto. Se till att följande är inställt:
+
+- [Rapporteringspolicyer](/sv/create-reporting-policy)
+- [Frånvaroanledningar](/sv/time-off-reason)
+- [Arbetsfria dagar](/sv/non-working-days)
+- [Frånvarosaldon](/sv/time-off-balances)
+- [Arbetstimmar](/sv/work-hours)
+
+Varje punkt i punktlistan ovan tar dig till den specifika guiden för varje ämne.
+
+## Hur godkänner man frånvaro?
+
+När en medarbetare **registrerar frånvaro**, skickas en **begäran om godkännande till ansvarig godkännare**. Godkännaren får då ett e-postmeddelande med en länk till startsidan i Hailey.
+
+För att hantera ansökan går du till **Att göra** på startsidan och öppnar uppgiften för frånvarogodkännande. Där kan du välja att godkänna eller neka frånvaron.
+
+Om medarbetaren har ansökt om flera olika perioder kan du välja att endast godkänna vissa av dem. Markera de perioder du vill godkänna och klicka sedan på **Godkänn**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2026-11-42-56-3643-AM.png?width=670&height=373&name=image-png-Jul-16-2026-11-42-56-3643-AM.png)
+
+Du kan även godkänna frånvaro via **Tid** i huvudmenyn.
+
+Markera de personer vars frånvaro du vill godkänna och klicka på **Godkänn** uppe i högra hörnet. Välj därefter vilken period godkännandet ska gälla för.
+
+<Tip>
+  **Tips!** Du kan filtrera efter team, chef eller andra organisatoriska kriterier.
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2026-11-44-36-2794-AM.png?width=670&height=269&name=image-png-Jul-16-2026-11-44-36-2794-AM.png)
+
+## Hur nekar man frånvaro?
+
+Från uppgiften **Godkänn frånvaro** under **Att göra** kan du även neka en frånvaroansökan. Ett fönster visas där du behöver lägga till ett meddelande till medarbetaren.
+
+Medarbetaren får ett **e-postmeddelande** som informerar om att deras frånvaro har nekats, tillsammans med ditt meddelande.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2026-11-43-23-5594-AM.png?width=670&height=372&name=image-png-Jul-16-2026-11-43-23-5594-AM.png)
+
+## Hur tar man bort frånvaro för medarbetare?
+
+För att ta bort en medarbetares frånvaro går du till medarbetarens profil. Du måste vara admin eller ha tillräckliga [rättigheter](#rattigheter).
+
+Medarbetare kan ta bort sin egen **icke godkända** frånvaro.
+
+Klicka på **papperskorgen** i det övre högra hörnet ovanför kalendervyn och välj sedan vilken eller vilka dagar du vill ta bort.
+
+Den tid som visas gäller den aktuella månaden. Om du vill ta bort frånvaro för en tidigare eller kommande månad använder du **pilarna till vänster för att navigera till rätt månad**.
+
+Du kan ta bort både framtida och passerad frånvaro, inklusive godkänd frånvaro.
+
+Använder ni **tidscykler**? Frånvaro kan inte tas bort om den ligger inom en period som har godkänts genom en tidscykel. Endast de med rättigheten att Ändra godkänd tidscykel kan ta bort frånvaro i en godkänd period.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2026-11-46-16-7781-AM.png?width=670&height=328&name=image-png-Jul-16-2026-11-46-16-7781-AM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2026-11-47-24-7079-AM.png?width=670&height=440&name=image-png-Jul-16-2026-11-47-24-7079-AM.png)
+
+## Hur lägger man till frånvaro för en medarbetare?
+
+Du kan även lägga till frånvaro för en medarbetare om du är admin eller har tillräckliga [rättigheter](#rattigheter).
+
+Gå till medarbetarkortet och klicka på **Hantera - Lägg till frånvaro**. Välj vilka datum frånvaron gäller, ange anledning och eventuell kommentar, och klicka sedan på **Spara**.
+
+<Note>
+  Observera att frånvaron blir registrerad och godkänd direkt.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2026-11-48-58-6690-AM.png?width=670&height=441&name=image-png-Jul-16-2026-11-48-58-6690-AM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2026-11-49-48-9696-AM.png?width=670&height=442&name=image-png-Jul-16-2026-11-49-48-9696-AM.png)
+
+Du kan även lägga in frånvaro direkt i översikten under **Tid** i huvudmenyn.
+
+Filtrera fram medarbetaren du vill registrera frånvaro för under **Filter**, **klicka på den aktuella dagen i vyn** och följ samma steg som ovan.
+
+<Note>
+  Observera att frånvaron blir registrerad och godkänd direkt.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2026-11-51-25-4863-AM.png?width=670&height=371&name=image-png-Jul-16-2026-11-51-25-4863-AM.png)
+
+## Hur godkänner man tidscykler?
+
+Läs mer om tidscykler och hur du sätter upp dem [HÄR.](/sv/time-cycles)
+
+Medarbetare som har **aktiverade tidscykler i sin rapporteringspolicy** får en **uppgift** den första dagen i varje månad att skicka in sin tid/frånvaro för föregående månad, oavsett om någon frånvaro har registrerats eller inte.
+
+Godkännare får en **uppgift** att godkänna tid/frånvaro som visar alla medarbetare som kräver godkännande (t.ex. chefers medarbetare), tillsammans med en sammanfattning och status för deras tidscykel.
+
+Godkännare kan godkänna både inskickade och icke inskickade tidscykler.
+
+När tidscykeln har godkänts försvinner uppgiften. Det innebär att medarbetare **inte längre kan registrera någon frånvaro för den månaden**.
+
+<Note>
+  Observera att när en tidscykel har godkänts kan du endast lägga till eller ta bort frånvaro för den aktuella perioden om du har rättigheten att **Ändra godkänd tidscykel**.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2026-11-53-53-2698-AM.png?width=670&height=345&name=image-png-Jul-16-2026-11-53-53-2698-AM.png)
+
+## Översikt
+
+Klicka på **Tid** i huvudmenyn för att öppna en frånvaroöversikt över alla medarbetare som du har behörighet att visa. Här visas all frånvaro som har registrerats i Hailey, inklusive frånvaro som har lagts till i en semesterplanering. Läs mer om semesterplaneringen [HÄR](/sv/plan-your-holidays-in-hailey).
+
+<Tip>
+  **Tips!** Använd filtren till vänster för att välja vilka medarbetare eller delar av organisationen du vill visa. Du kan även filtrera på frånvarodetaljer, som status eller anledning, och spara dina filtervyer för att snabbt kunna komma åt dem igen.
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2026-11-57-12-1835-AM.png?width=670&height=372&name=image-png-Jul-16-2026-11-57-12-1835-AM.png)
+
+För en bättre överblick kan du öppna översikten i **helskärmsläge** via ikonen längst upp till höger. Navigera mellan månader med hjälp av pilarna och utöka vyn för att visa upp till 100 medarbetare samtidigt.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2026-11-57-29-0725-AM.png?width=670&height=194&name=image-png-Jul-16-2026-11-57-29-0725-AM.png)
+
+## Rättigheter
+
+För att kunna godkänna en medarbetares frånvaro behöver du vara deras **Tid & frånvaro-godkännare**. Läs mer om detta [HÄR](/sv/create-reporting-policy).
+
+Följande rättigheter kan vara användbara när ni hanterar frånvaro:
+
+- **Tid & frånvaro - Visa:** ger åtkomst till fliken **Tid** på medarbetarens profil samt **Tid översikten**.
+- **Tid & frånvaro - Visa & redigera:** ger möjlighet att ta bort redan godkänd frånvaro och lägga till frånvaro som godkänns automatiskt.
+- **Tid & frånvaro - Ändra godkänd tidscykel:** ger möjlighet att lägga till eller ta bort frånvaro i en redan godkänd månad.
+
+För att läsa mer om hur **Roller & rättigheter** fungerar i Hailey, klicka [HÄR](/sv/roles-and-rights).
+
+## Vanliga fragor
+
+Här hittar du svar på några vanliga frågor som kan hjälpa dig när du godkänner och hanterar frånvaro.
+
+<AccordionGroup>
+  <Accordion title="Jag har åtkomst till tidsöversikten, men kan inte godkänna en medarbetares frånvaro. Varför?">
+    För att kunna godkänna en medarbetares frånvaro måste du vara utsedd till medarbetarens **Tid och frånvaro godkännare**.
+
+    När du är en godkännare får du både en **mejlnotis** och en **uppgift** i Hailey varje gång en medarbetare skickar in en frånvaroansökan för godkännande.
+
+    Godkännaren anges i medarbetarens **Rapporteringspolicy**. Läs mer om rapporteringspolicyer [HÄR](/sv/create-reporting-policy).
+  </Accordion>
+
+  <Accordion title="Kan jag godkänna frånvaro för flera medarbetare samtidigt?">
+    Ja. Du kan godkänna flera frånvaroansökningar samtidigt från **Tid** i huvudmenyn.
+
+    När du godkänner en ansökan från Tid översikten försvinner den tillhörande uppgiften automatiskt från din **uppgiftslista**.
+  </Accordion>
+
+  <Accordion title="Jag godkände en frånvaro av misstag. Kan jag ångra det?">
+    När en frånvaro har godkänts kan den inte nekas i efterhand. Däremot kan du **ta bort** frånvaron.
+
+    Gå till medarbetarens profil och fliken **Tid**. Klicka på **papperskorgsikonen** längst upp till höger i kalendern för att ta bort frånvaron.
+
+    Observera att du kan behöva ytterligare rättigheter för att kunna ta bort redan godkänd frånvaro.
+  </Accordion>
+
+  <Accordion title="Kan jag lägga till eller ta bort frånvaro för flera medarbetare samtidigt?">
+    Nej, det går inte att lägga till eller ta bort frånvaro för flera medarbetare samtidigt.
+
+    För att lägga till frånvaro för en medarbetare går du till medarbetarens profil och väljer **Hantera** - **Lägg till frånvaro**. Du kan också lägga till frånvaro direkt från **Tid översikten** genom att klicka på en dag i medarbetarens rad. Där kan du registrera frånvaro för en dag eller en period.
+
+    För att ta bort frånvaro går du till medarbetarens profil och fliken **Tid**. Klicka på **papperskorgsikonen** längst upp till höger i kalendern och välj de dagar du vill ta bort.
+  </Accordion>
+
+  <Accordion title="Varför kan jag inte lägga till eller ta bort frånvaro för en medarbetare i en tidigare månad?">
+    Om ni använder **tidscykler** kan månaden redan vara godkänd. När en tidscykel har godkänts kan endast de med rättigheten **Ändra godkänd tidscykel** göra ändringar i den månaden. Läs mer om tidscykler [HÄR](/sv/time-cycles).
+
+    Om ni inte använder tidscykler och du normalt kan lägga till och ta bort frånvaro ska du även kunna göra ändringar i tidigare månader.
+  </Accordion>
+</AccordionGroup>

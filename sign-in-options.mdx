@@ -1,0 +1,159 @@
+---
+title: "Manage sign in options"
+---
+
+In this guide you'll learn how to manage your sign in settings, how to invite employees to the platform and how to handle the most common login issues.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="BcpAk0J" title="Manage sign in options" />
+
+## Settings
+
+Your organization can decide how employees sign in to Hailey. To manage your organization's sign-in methods, go to **Settings** - **Security** - **Log in**. You can choose from the following sign-in methods:
+
+- Microsoft (SSO)
+- Email login
+- Google (SSO)
+- Okta (SSO)
+
+Select the sign-in method(s) you would like to make available for your organization. You can have mutliple sign-in methods active at the same time if needed!
+
+<Note>
+  If you plan to switch to another sign-in method, **we strongly recommend** testing the new method before disabling the current one. This helps prevent the risk of accidentally locking yourself out from Hailey. To test a new sign-in method: Enable the new sign-in method, sign out from Hailey, sign back in using the new method and confirm that everything works as expected. Once you've verified that it works, you can disable the old one.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-07-2026-09-27-37-0075-AM.png?width=670&height=352&name=image-png-May-07-2026-09-27-37-0075-AM.png)
+
+## Email login
+
+Email login is the default sign-in method in Hailey. To sign in using Email login, **enter your email address and password** on the login page. For additional security, we recommend activating Two-Factor Authentication. This provides an extra layer of security for your account by requiring both your password and a one-time verification code when you sign in.
+
+Navigate to **Settings** - **Security** - **Email Login** - **toggle** **on** **two-factor authentication** to enable.
+
+When this is activated, all users are required to enter a verification code sent to their email address after signing in with their email and password.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-07-2026-09-28-11-3108-AM.png?width=670&height=363&name=image-png-May-07-2026-09-28-11-3108-AM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-07-2026-09-28-53-5153-AM.png?width=670&height=359&name=image-png-May-07-2026-09-28-53-5153-AM.png)
+
+## Logging in with SSO
+
+**Single Sign-On (SSO)** allows users to sign in to Hailey using **their existing company login credentials**. When SSO is enabled, employees do not need separate login credentials for Hailey. This saves time and makes login easier, and more secure.
+
+Click the links below to find more information about our different **SSO options**:
+
+- [**Microsoft SSO**](/sign-in-with-microsoft)
+- [**Google SSO**](/sign-in-with-google)
+- [**Okta SSO**](/sign-in-with-okta)
+
+## Multiple logins with the same email
+
+If you are part of a group of companies or work with subcontractors who use Hailey, it may be useful to have multiple Hailey accounts connected to the same email address. The multiple logins feature **allows a user to have multiple Hailey accounts linked to the same company email address**. If a person's company email address is connected to more than one account, the user will be prompted to choose which account they would like to login to during sing-in.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-16-2024-02-00-50-9616-PM.png?width=554&height=326&name=image-png-May-16-2024-02-00-50-9616-PM.png)
+
+If the organizations connected to your email do not have the same sign-in methods activated, you will not be asked to choose an account. Instead, you will be signed in directly into the organization that supports the sign-in method you used.
+
+## How to invite employees
+
+Before employees can sign in to Hailey, they must have an email address entered in the **Company email** field on their employee profile, and they must have **received an invitation** to the platform. To avoid any issues, make sure to add a company email to your employees' profiles before sending invitations!
+
+There are two ways to invite employees to Hailey, either via the Employee list or the Employee profile.
+
+1. Go to Employees in the main menu, click **Action** - **Invite employees to Hailey.**
+2. Open the Employee profile, click **Action** - **Invite employee to Hailey.**
+
+<Tip>
+  Need to invite multiple employees at once? Send out inivtations from the employee list! This makes it quick and easy to get everyone set up.
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2026-09-38-22-0987-AM.png?width=670&height=349&name=image-png-Jul-14-2026-09-38-22-0987-AM.png)
+
+Once an employee has been invited, an invitation email is automatically sent to the address listed in the employee's **Company email** field. To access Hailey, the employee simply needs to open the invitation email, click **Go to Hailey**, and log in using the sign-in method enabled by your organization.
+
+<Tip>
+  Not sure which employees have already been invited? Go to **Employees** in the main menu, select **Other Filters** and filter by **Account Status**. This way you can see who has been invited.
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-11-2026-11-54-23-6423-AM.png?width=670&height=328&name=image-png-May-11-2026-11-54-23-6423-AM.png)
+
+## FAQ's
+
+Below you will find a list of frequently asked questions that both **Employees** and **Admins** can use to troubleshoot login issues.
+
+Please note that Hailey does not have access to your account and cannot see which sign-in method you're expected to use or which email address is registered on your employee profile.
+
+If you need information about which sign-in method or email address to use, we recommend reaching out to your organisation's administrator.
+
+**Question 1:** How do I know I've been invited, and which email should I use to log in?
+
+When an admin invites you, an email is sent from [**noreply@haileyhr.com**](mailto:noreply@haileyhr.com). The email is sent out to the email address entered in the **Company email** field on your employee profile, and this is the same email address you should use whn logging in to Hailey.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-11-2026-11-34-17-8741-AM.png?width=670&height=315&name=image-png-May-11-2026-11-34-17-8741-AM.png)
+
+**Question 2**: Our administrator has invited me, but I can't find my invitation?
+
+The invitation is sent to the email address entered in the **Company email** field on your employee profile in Hailey. Please double-check if:
+
+- The invitation have been sent to your personal email, work email, or another one of your inboxes?
+- An invitation email appear if you search for the sender [**noreply@haileyhr.com**](mailto:noreply@haileyhr.com) in any of your inboxes?
+
+If the answer is no, we recommend contacting your Hailey administrator so they can confirm that you've been invited and verify which email address the invitation was sent to.
+
+**Question 3:** I get an error message when logging in with SSO. What does this mean?
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-04-2026-01-16-03-6794-PM.png?width=670&height=352&name=image-png-May-04-2026-01-16-03-6794-PM.png)
+
+If you receive the error message _"The email address associated with your external identity provider doesn't match any registered users in Hailey HR"_, it is usually caused by on of the following:
+
+- SSO is not enabled as a sign-in method method in your organization.
+- You are trying to log in with a different email address than the one added in the Company email field on your Hailey profile.
+- The email address on your Hailey-profile does not match the email address used to sign in to your Microsoft, Google or Okta account.
+
+We recommend either trying to log in using **Email** + **Password** or asking your Hailey administrator to double-check that the correct email address is entered on the **Company email** field on your profile.
+
+**Question 4:** It get "_Invalid email address or password_" when I log in. What does this mean, and what do I do?
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-04-2026-01-17-00-7894-PM.png?width=670&height=350&name=image-png-May-04-2026-01-17-00-7894-PM.png)
+
+This is likely because you've entered an incorrect email address or password, or because **Email + Password** is not activated as a sign-in method in your organisation. Please double-check that you are:
+
+- Logging in with the email address entered in the **Company email** field on your profile in Hailey.
+- Entering the correct password.
+- Using a sign-in method that your organisation has activated.
+
+If you're unsure of your password, you can always click **Don't remember your Hailey HR password** to reset it. Once reset, a new password will be sent to the email address entered in the **Company email** field on your Hailey profile.
+
+If you're unsure which sign-in method is activated for your organization, we recommend reaching out to your Hailey administrator.
+
+**Question 5:** I'm unable to log in. The page turns white and keeps loading when I select **Log in**. Why?
+
+This is usually caused by a firewall or network restriction within your IT-environment that is blocking the connection to the service.
+
+Please try the following:
+
+- Check that the URL is spelled correctly.
+- Perform a **hard refresh** of the page.
+
+If the issue persists:
+
+- Try connecting through a different network.
+- Try using a different web browser.
+- Clear your browser's cache and cookies.
+
+If you are still unable to sign in, please contact your IT department and ask them to whitelist the following domains:
+
+- **hhr.app**
+- **haileyhr.app**

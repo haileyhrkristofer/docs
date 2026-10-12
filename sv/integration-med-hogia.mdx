@@ -1,0 +1,338 @@
+---
+title: "Integration med HogiaLön Plus"
+---
+
+Genom Haileys integration kan ni smidigt hämta nödvändiga data på ett GDPR-säkert sätt och importera in till HogiaLön Plus! Ni själva bestämmer när datan ska överföras vilket underlättar och effektiviserar det administrativa arbetet.
+
+<Tip>
+  Första gången du aktiverar en av **Haileys standardintegrationer**? Börja med att läsa den [**HÄR**](/sv/haileys-standard-integrations) guiden för att veta vad du ska tänka på innan du sätter igång.
+</Tip>
+
+---
+
+## Vad gör integrationen?
+
+Vid varje manuell **filexport** **och** **överföring** kommer [**inkluderad data**](/sv/integration-with-kleer-salary-and-employee-data#vilken-data-ar-inkluderad)att uppdateras och få samma värde i HogiaLön Plus som finns i Hailey, eftersom **Hailey är master** (facit).
+
+## Hur fungerar integrationen?
+
+Med en **filexport** från Hailey kommer den **inkluderade datan** att uppdateras i HogiaLön Plus enligt värderna som finns i Hailey via filöverföringen. Ni själva styr när filen ska exporteras och överförs. Detta innebär att:
+
+- De förändringar som görs i Hailey uppdateras med hjälp av en filexport/import till HogiaLön Plus.
+
+## Vilken data är inkluderad i integrationen?
+
+Medarbetarfilen:
+
+| **HAILEY** | **HOGIALÖN PLUS** |
+|---|---|
+| Anställningsnummer | Anställningsnummer |
+| Förnamn, Efternamn | Förnamn, Efternamn, Namn |
+| Personnummer | Sekel + personnr |
+| Företagsmail | E-post |
+| Postnummer, Stad | Postadr |
+| Gatuadress | Utd-adr |
+| Land | Land |
+| Anställningsdatum | Anställningsdatum |
+| Sista anställningsdag | Avgångsdatum |
+| Telefonnummer jobb | Telefon arbete |
+| Telefonnummer privat | Telefon privat |
+| Omfattning (timmar per vecka) | Arbetstid faktisk/v (P8) |
+| Clearingnummer | Clearingnr ISO |
+| Kontonummer | Kontonr ISO |
+| Månadslön (om lönetyper inte är mappade) | Månadslön faktisk & Månadslön heltid |
+
+Frånvarofilen:
+
+| **HAILEY** | **HOGIALÖN PLUS** |
+|---|---|
+| Frånvaro | Frånvaro |
+
+<Note>
+  Frånvarofilens inkluderade data baseras på vilka frånvaroanledningar som ni har satt upp i Hailey respektive HogiaLönPlus.
+</Note>
+
+Valfria fält:
+
+| **HAILEY** | **HOGIALÖN PLUS** |
+|---|---|
+| Kostnadsställe | Resultatenhet |
+| Eget anställningsfält 1 | Avgångsorsak |
+| Eget anställningsfält 2 | Urvalskategori |
+| Eget anställningsfält 3 | Urvalskategori 2 |
+
+## Vad krävs för att ingå i integrationen?
+
+För att en medarbetare **ska ingå i integrationen** behöver medarbetaren ha:
+
+- Anställningsnummer...
+  - som matchar anställningsnumret i Hogia
+  - som enbart består av siffror
+  - får inte överstiga 13 tecken
+- Omfattning (timmar per vecka) på sin profil i Hailey
+- [Eget anställningsfält](#Eget-falt) för heltidsekvivalent på sin profil i Hailey (läs mer om detta i guiden nedan)
+
+<Note>
+  Om medarbetaren inte finns registrerad i Hogia, kommer medarbetaren att skapas upp i HogiaLön Plus vid nästa filöverföring om anställningsnummer finns på profilen i Hailey.
+</Note>
+
+Medarbetare med följande **anställningsstatus** ingår i integrationen:
+
+- I tjänst
+- Ska lämna
+- Arbetsbefriad
+
+## Vilka förberedelser krävs i Hailey?
+
+Förberedelser i Hailey innan aktivering av integrationen:
+
+- [Skapa eget anställningsfält](#Eget-falt) för heltidsekvivalent (obligatoriskt)
+- [Skapa egna anställningsfält (valfritt)](#Valfria-falt)
+
+- [Lön och lönetyper](#Lon-lonetyper)
+
+**Eget anställningsfält för heltidsekvivalent**
+
+I integrationen beräknas en medarbetares faktiska månadslön utifrån hur många timmar som är en heltidstjänst. För att integrationen ska kunna göra beräkningen används ett eget anställningsfält i Hailey där ni anger era heltidstimmar. Skapa fältet genom att gå till:
+
+- Inställningar - Anpassning
+- Klicka på **Lägg till** - **Anställningsfält**
+- Välj svarstyp: **Alternativ**
+- Fyll i alternativ som motsvarar antalet timmar för en heltidstjänst hos er, t.ex. 40*.* Alternativet får endast innehålla siffror (inga bokstäver eller specialtecken).
+
+<Note>
+  Vill du veta hur du skapar upp egna fält i Hailey? **[HÄR](/sv/custom-fields)** kan ni läsa mer om detta.
+</Note>
+
+Om ni har **flera olika heltidsekvivalenter** kan ni skapa upp flera olika svarsalternativ i fältet, t.ex. ett alternativ för 40 och ett alternativ för 37.5.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2025-07-23-58-3349-AM.png?width=670&height=356&name=image-png-Jul-14-2025-07-23-58-3349-AM.png)
+
+När fältet har skapats upp **ska fältet fyllas i på varje medarbetares profil.** Fältet ska alltid innehålla antalet arbetstimmar för en heltidsanställning, även om medarbetaren arbetar deltid.
+
+- Den faktiska arbetstiden per vecka anges istället i fältet Omfattning (timmar per vecka) i Hailey.
+
+<Note>
+  Vill ni uppdatera informationen i fältet i ett svep på medarbetarnas profiler? **[HÄR](/sv/import-custom-employment-fields)** kan ni läsa mer om hur ni bulk uppdaterar anställningsfältet.
+</Note>
+
+**Vill ni inkludera fler fält i integrationen?**
+
+Det finns möjlighet att inkludera valfria fält från Hailey till HogiaLön Plus, vilket är helt frivilligt. Valfria fälten att mappa från Hailey till HogiaLön plus är:
+
+- Avgångsorsak
+- Urvalskategori
+- Urvalskategori 2
+
+Om ni vill inkludera dessa fält i integrationen behöver ni skapa upp fälten i Hailey på samma sätt som när ni skapade upp fältet för antal arbetstimmar för heltid. Det egna anställningsfältet behöver vara av svarstypen "Alternativ".
+
+**Lön och Lönetyper**
+
+Löner som ingår i integrationen ska anges som **heltidslöner**, oavsett medarbetarens anställningsomfattning.
+
+- Den faktiska lönen räknas ut i integrationen genom fältet Omfattning (timmar per vecka) och det egna anställningsfältet för antal arbetstimmar för heltid.
+
+För att rätt lön i Hailey ska kopplas till rätt löneart i HogiaLön Plus behöver lönetyper vara registrerade i Hailey. Du kan läsa mer om lönetyper **[HÄR](/sv/salary-types).**
+
+- Om lönetyper saknas kommer alla löner för en medarbetare att slås ihop i integrationen.
+
+## Hur aktiveras integrationen?
+
+För att aktivera integrationen behöver du:
+
+<Steps>
+  <Step title="Lägga till integrationen i Hailey">
+    Lägga till integrationen i Hailey.
+  </Step>
+  <Step title="Fyll i nödvändig data för integrationsuppsättningen">
+    Fyll i nödvändig data för integrationsuppsättningen.
+  </Step>
+  <Step title="Spara och aktivera!">
+    Spara och aktivera!
+  </Step>
+</Steps>
+
+**Följ instruktionerna nedan för att gå genomföra aktivering av integrationen.**
+
+Den som sätter upp integrationen behöver ha tillgång till ett **administratörskonto i båda systemen.**
+
+För att aktivera integrationen i Hailey:
+
+- Gå till **Inställningar.**
+- Klicka på **Integrationer** längst ner i menyraden.
+- Klicka därefter på rubriken **Lön.**
+- Klicka på **HogiaLön Plus** och **Lägg till integration.**
+
+- Välja om medarbetarna ska **sorteras på förnamn** eller **efternamn** i filen för medarbetarexporten.
+- Under kolumnen **Eget anställningsfält mappad till heltidsekvivalent** får du en rullista att med val av egna anställningsfältet. Välj fältet ni skapat för för heltidsekvivalent i rullistan.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-15-2026-07-17-19-5167-AM.png?width=670&height=459&name=image-png-May-15-2026-07-17-19-5167-AM.png)
+
+- Därefter får ni valet att inkludera **Kostnadsställe** samt de valfria fälten för integrationen **(Avgångsorsak, Urvalskategori 1 och Urvalskategori 2**). Detta är valfritt.
+
+Vi rekommenderar att använda er av **lönetyper i Hailey** för att **mappa** löneinformation till specifika fält i **HogiaLön Plus**. Om lönetyperna inte mappas i integrationen förs alla månadslöner över till Månadslön faktisk och Månadslön heltid i HogiaLön Plus. Har medarbetare flera löner slås lönerna ihop till ett totalt belopp.
+
+Toggla på **Använd lönetyper** och säkerställ detta vid mappning av lönetyper:
+
+- Mappa i vilket fält respektive lönetyp ska hamna när den förs över till HogiaLön Plus.
+- Vi rekommenderar att du mappar er **grundlön** till **P2 (Månadslön heltid)** i HogiaLön Plus för en korrekt lönesynkronisering.
+- Om vissa lönetyper i Hailey **saknar en motsvarande mappning** mot en löneart i Hogia, kommer dessa **inte** **att inkluderas i integrationen.**
+
+<Warning>
+  Vi **avråder** att mappa lönetyper till **P1 (Månadslön faktisk)** i HogiaLön Plus. Det är **inte möjligt** att mappa lönetyper till **P8, P9 och P10**.
+</Warning>
+
+För att inkludera **Frånvaro** i integrationen behöver ni mappa era frånvaroanledningar i Hailey med lönearter och avvikelsearter i **HogiaLön Plus.**
+
+- **Vi rekommenderar att rapportera frånvaro i procent i Hailey** för mest optimal frånvarohantering och korrekt överföring mellan Hailey och HogiaLön Plus.
+- Se till att namnen på frånvaroanledningarna exakt matchar dem som används i HogiaLön Plus. Anledningarna ska alltid börja med antingen:
+  - **A** för avvikelsearter
+  - **L** för lönearter
+- Om ni är osäkra på hur era specifika arter är konfigurerade i Hogia, eller vid frågor om era lönearter och avvikelsearter, **kontakta Hogias support** innan mappning av frånvaroanledningarna.
+
+Som standard exporteras frånvaro **dag för dag i filen**.
+
+Om ni vill kan vissa frånvaroanledningar i stället exporteras som en sammanhängande period. Välj vilka frånvaroanledningar som ska exporteras på detta sätt under **Frånvaroanledningar exporteras som en sammanhängande period.**
+
+- Detta går endast med frånvarorapportering i procent.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-Jun-03-2026-02-35-42-7342-PM.png?width=670&height=670&name=undefined-Jun-03-2026-02-35-42-7342-PM.png)
+
+När integrationsuppsättningen är klar aktiverar ni den genom att toggla på **Aktiv** högst upp på sidan. Klicka därefter på **Spara** längst ned till höger.
+
+Ni kan nu, närhelst ni vill eller behöver, exportera rapporter för medarbetardata respektive frånvaro. Hur ni gör detta går vi igenom nedan!
+
+## Hur exporteras och importeras filen/filerna?
+
+Med integrationen får du valet att exportera en medarbetarfil som inkluderar medarbetardata och lön, och en export av frånvarofil.
+
+Exporten av data genomförs från huvudmenyn genom att gå till:
+
+- Rapporter
+- Klicka på **Hogia**
+
+I översiktsvyn till höger kan ni välja att:
+
+- [Exportera medarbetarfil](#Export-medarbetarfil)
+- [Exportera frånvarofil](#exportera_franvarofil)
+
+Följ guiden nedan för att se hur ni exporterar respektive fil.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-15-2026-08-15-14-5632-AM.png?width=667&height=375&name=image-png-May-15-2026-08-15-14-5632-AM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-15-2026-08-16-30-9288-AM.png?width=670&height=151&name=image-png-May-15-2026-08-16-30-9288-AM.png)
+
+**Exportera medarbetarfil:**
+
+Ett datumspann visas där du bestämmer från vilket datum som du vill exportera **medarbetardata** och **godkända** **löneförändringar** (måndslön) i filen. Datumfältet för **Till** är alltid till dagens datum.
+
+- Om någon **ändring** har gjorts på en månadslön under perioden du valt, trots att **startdatumet** för lönen är innan perioden - kommer denna ändring också att **inkluderas**.
+- Finns det **flera löneändringar under perioden** kommer samtliga förändringar att inkluderas i filen.
+- Vi synkar över den **totala summan av månadslönerna** om man har flera aktiva månadslöner i Hailey (t. ex. om man har en grundlön och ett ansvarstillägg).
+- Om en medarbetare har fått en **ny** anställning i Hailey med ny **Omfattning (timmar per vecka)**, inkluderas samtliga ändringar av omfattningen under den valda perioden.
+- Exporten inkluderar den data som finns vid tidsintervallet för exporten. Spara ner exportfilen för att kunna överföra den till HogiaLön Plus.
+- De uppgifter som förs över via filen från Hailey, kommer att skriva över informationen som finns i HogiaLön Plus på samtliga datafält. Detta innebär att rätt uppgifter behöver finnas på **[dessa](#inkluderad_data)** fält i Hailey innan exporten genomförs.
+- De medarbetare inkluderas i filen är användare som har en **aktiv anställning** inom det valda tidsintervallet i filen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-15-2026-08-26-32-3494-AM.png?width=670&height=484&name=image-png-May-15-2026-08-26-32-3494-AM.png)
+
+**Importera medarbetarfil i HogiaLön Plus:**
+
+- Öppna HogiaLön Plus
+- Välj fliken Arkiv - Import - Anställda.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-15-2026-08-28-18-9625-AM.png?width=670&height=388&name=image-png-May-15-2026-08-28-18-9625-AM.png)
+
+Här kommer en dialogruta dyka upp.
+
+- Välj exportfilen från Hailey som du sparat.
+- Klicka därefter på OK.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-15-2026-08-29-21-6973-AM.png?width=670&height=723&name=image-png-May-15-2026-08-29-21-6973-AM.png)
+
+Nu finns förändringarna registrerade på medarbetardatan i HogiaLön Plus som exporterades från Hailey. För att se vilka datafält som berörs, klicka **[HÄR](#inkluderad_data).**
+
+**Exportera frånvarofil:**
+
+Ett datumspann visas där ni bestämmer själva från och till vilket datum som ni vill exportera frånvarofilen.
+
+- Endast **godkänd** frånvaro som är registrerats under den perioden som du exporterar inkluderas i filen.
+  - Detta innebär - för att få med all frånvaro från månaden som har varit - behöver filen exporterats sista dagen/i slutet av månaden.
+
+- Frånvarotyper kräver någon form av arbetsschema i HogiaLön Plus. Dessa skapar ni under Allmänt à Schema. Här väljer ni själva scheman för respektive medarbetare. Detta är något Hailey kräver att det finns i HogiaLön Plus för att kunna importera frånvarofilen.
+
+<Note>
+  Ett tips för att bli påmind om att exportera frånvarofilen är att skapa ett återkommande arbetsflöde. **[HÄR](/sv/create-workflows)**[finner du guiden för hur du gör detta.](/sv/create-workflows)
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-15-2026-08-44-40-8229-AM.png?width=670&height=430&name=image-png-May-15-2026-08-44-40-8229-AM.png)
+
+**Importera frånvarofil till HogiaLön Plus:**
+
+- Gå till Arkiv.
+- Import - Löneberedning.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-15-2026-08-42-44-0816-AM.png?width=670&height=422&name=image-png-May-15-2026-08-42-44-0816-AM.png)
+
+- Välj filen ni har exporterat från Hailey.
+- Klicka därefter på OK.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-15-2026-08-43-41-1603-AM.png?width=670&height=575&name=image-png-May-15-2026-08-43-41-1603-AM.png)
+
+Nu finns den importerade frånvaron från Hailey registrerad på berörda medarbetare i HogiaLön Plus!
+
+## [Gäller integrationen inte hela företaget?](/sv/integration-with-kleer-salary-and-employee-data#Omfattning)
+
+Då finns det möjlighet att **omfatta** integrationen!
+
+- Omfattning av integrationen innebär att ni kan möjliggöra att **endast medarbetare med specifik arbetsplats och/eller legal enhet,** **inkluderas i integrationen.**
+- Detta gör ni i samband med att ni exporterar filen/filerna.
+
+Om dessa fält lämnas tomma kommer alla anställda som uppfyller krav för integrationen att medfölja i filen/filerna.
+
+**Exempelbilden** nedan visar att endast medarbetare som tillhör den valda legala enheten och den valda arbetsplatsen som anges i filexporten kommer att inkluderas i integrationen mot HogiaLön Plus.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-15-2026-08-47-30-8748-AM.png?width=661&height=538&name=image-png-May-15-2026-08-47-30-8748-AM.png)
+
+## Hur beräknas lönen i medarbetarfilen?
+
+För att integrationen ska kunna beräkna medarbetarens faktiska lön (P1) behöver grundlönen vara mappad till P2. I beräkningen används det egna anställningsfältet **Heltidsekvivalent,** som i filen automatiskt mappas till P9. Uträkningen sker enligt följande formel:
+
+**(P8 / P9) x P2 = P1**
+
+Förklaring:
+
+- **P8** = Arbetstid faktisk per vecka
+- **P9** = Arbetstid heltid per vecka
+- **P2** = Månadslön heltid
+- **P1** = Månadslön faktisk
+
+<Note>
+  **Exempel** En medarbetare har en heltidslön på 40 000 kr (P2) och har omfattning 30 timmar/vecka (P8), där heltid motsvarar 40 timmar per vecka (P9). Integrationen beräknar då den faktiska månadslönen (P1) enligt följande:
+
+  **(30 / 40) × 40 000 = 30 000 kr.**
+
+  Den faktiska månadslönen blir alltså 30 000 kr.
+</Note>
+
+---
+
+## Vanliga fragor
+
+**Fråga**: Kan jag exportera frånvaro som en sammanhängande period?
+
+Ja! Du kan välja vilka frånvaroanledningar som ska exporteras som en sammanhängande period. Inställningen görs i integrationsuppsättningen under **Frånvaroanledningar exporteras som en sammanhängande period**.
+
+**Fråga**: Innehåller exportfilen framtida anställningar?
+
+Exportfilen inkluderar medarbetare med anställningsstatus **I tjänst**, **Ska lämna** och **Arbetsbefriad**.
+
+**Fråga**: Vad kan jag dubbelkolla om en medarbetare i medarbetarfilen saknas?
+
+Det kan finnas flera delar du kan kontrollera! Exempelvis om medarbetaren har ett påbörjat anställningsdatum och är i tjänst. Att anställningsnumret endast består av siffror och är högst 13 tecken långt. Om medarbetaren ingår i den omfattning som exporten avser.
+
+**Fråga**: Vad kan det bero på om en frånvaro inte följer med i frånvarofilen?
+
+Börja med att kontrollera att frånvaron är godkänd, att frånvaroanledningen är korrekt mappad i integrationsuppsättningen, att frånvaron omfattas av exporten och att medarbetaren ingår i den aktuella omfattningen.
+
+*Om du har några frågor angående integrationen, vänligen kontakta Hailey support.*

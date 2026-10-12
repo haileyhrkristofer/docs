@@ -1,0 +1,36 @@
+---
+title: "Projects"
+---
+
+Are your employees reporting time on different projects? This guide helps you to set up your projects.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="ydDyPQi" title="Projects" />
+
+## What is Project?
+
+When using **Projects**, your employees can categorize their reported time in different projects. Using **Projects** is an effective way to categorize time and track how your resources are used.
+
+## Create Projects
+
+Click on **Settings - Time & time off - Add new - Project**. Give the Project a name and if needed, a scope. When using a **Scope**, only the employees within the scope will be able to report time for that specific project. You can scope projects to **Legal entity, Location** and **Department**. Read mot about reporting time [HERE](/report-and-approve-time).
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-29-2026-12-20-25-7584-PM.png?width=660&height=334&name=image-png-Apr-29-2026-12-20-25-7584-PM.png)
+
+<Tip>
+  **Tip!** When using **Projects** in your time reporting, you can easily follow each project in the **Report for Time**. Read more about reporting time i the guide [HERE](/time-report).
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-12-57-20-8835-PM.png?width=670&height=339&name=image-png-Aug-07-2026-12-57-20-8835-PM.png)

@@ -1,0 +1,162 @@
+---
+title: "Pulsmätningar"
+---
+
+Den här guiden visar hur ni skapar pulsmätningar steg för steg i Hailey samt hur ni kan använda resultaten för att mäta medarbetarupplevelser och förbättra er arbetsplats.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="UizsIW1" />
+
+## Vad är pulsmätningar?
+
+Pulsmätningar i Hailey hjälper er att regelbundet samla in feedback om medarbetarnas arbetsupplevelse och välmående. Resultaten ger värdefulla insikter som kan stärka arbetsmiljön, utveckla ledarskap och öka engagemang.
+
+Frågeramen har tagits fram tillsammans med HR-strategen och forskaren **Patrik Reman** och bygger på forskning inom HR-analys, medarbetarengagemang och organisationsutveckling.
+
+Med pulsmätningar kan ni:
+
+- **Upptäcka arbetsplatsproblem i tid** innan de växer sig större.
+- **Följa utvecklingen över tid** och mäta effekten av genomförda insatser.
+- **Fatta beslut** baserat på medarbetarnas feedback.
+- **Stödja kontinuerlig förbättring** av ledarskap, kommunikation och arbetsmiljö.
+
+Frågorna är utformade för att ge jämförbara resultat över tid och skapa insikter på både team- och organisationsnivå.
+
+## Hur skapar man en pulsmätning?
+
+För att skapa en pulsmätning, navigera till **Prestation** i huvudmenyn och klicka på **Pulsmätningar**.
+
+![](/images/sv/pulse-surveys/01.png)
+
+Klicka därefter på **Skapa pulsmätning** och följ Wizarden som tar dig igenom de olika stegen. Ge mätningen ett **namn** och välj vilka som ska delta i pulsmätningen. Om du lämnar omfattningsfälten tomma, kommer inget specifikt urval definieras och mätningen kommer skickas ut till alla anställda inom er organisation.
+
+<Note>
+  Om du vill utesluta **konsulter** eller **praktikanter** från pulsmätningen kan du göra det genom att omfatta den baserat på **Anställningsform**. Om du även önskar att pulsen alltid ska exkludera medarbetare som är på **långtidsfrånvaro** ges möjligheten här.
+</Note>
+
+![](/images/sv/pulse-surveys/02.png)
+
+Välj sedan ett **startdatum** för när den första pulsmätningen ska skickas ut och ange hur ofta (i veckor) den ska upprepas. Den veckodag som startdatumet infaller på blir den veckodag då framtida mätningar skickas ut, baserat på det intervall du har valt.
+
+![](/images/sv/pulse-surveys/03.png)
+
+I nästa steg får du se de kategorier som Haileys pulsmätning är baserad på. Därefter kan du klicka på kategorierna för att se vilka frågor som inkluderas i varje kategori.
+
+![](/images/sv/pulse-surveys/04.png)
+
+Som standard inkluderas alla kategorier och frågor i mätningen, men du kan manuellt välja vilka du vill behålla och avmarkera de som du inte vill inkludera. Alla frågor besvaras på en **Likert-skala från 1 till 10**.
+
+<Note>
+  Varje fråga har en förklaring till varför den ställs, som du kan se genom att hovra över informationssymbolen.
+</Note>
+
+![](/images/sv/pulse-surveys/05.png)
+
+I nästa steg väljer du **hur många frågor** medarbetarna ska besvara i varje pulsmätnings utskick. Om antalet inkluderade frågor överstiger det valda antalet per utskick, kommer frågorna att **slumpas**.
+
+![](/images/sv/pulse-surveys/06.png)
+
+I nästa steg kan du välja att aktivera möjligheten för alla chefer att kunna se resultaten av anställda som rapporterar till dem. För att chefer ska kunna se resultaten på start sidan, behöver pulsmätningen inkludera **minst fem anställda som rapporterar till chefen**.
+
+Läs mer om hur chefer kan visa resultat längre ner i guiden.
+
+![](/images/sv/pulse-surveys/07.png)
+
+I det sista steget visas de inställningar du har konfigurerat. När du är nöjd med uppsättningen kan du starta din pulsmätning!
+
+<Note>
+  Du kan ändra de inställningar du konfigurerade i guiden även efter att pulsmätningen har startats.
+</Note>
+
+![](/images/sv/pulse-surveys/08.png)
+
+## Hur svarar man på en pulsmätning?
+
+När en pulsmätning skickas ut får de inkluderade medarbetarna ett **e-postmeddelande** där medarbetarna med en knapp som de kan klicka på för att besvara enkäten. Man får också en uppgift i sin Att göra-lista och kan även nå pulsmätningen därifrån.
+
+![](/images/sv/pulse-surveys/09.png)
+
+Efter att ha klickat på **Gå till hailey** kommer medarbetarna att omdirigeras till pulsmätningen i sin webbläsare. Respondenterna får en uppskattning av hur lång tid enkäten tar att slutföra och informeras även om att den är **anonym**.
+
+![](/images/sv/pulse-surveys/10.png)
+
+Frågorna kommer att visas en i taget, och varje fråga besvaras med en **1-10 Likert-skala**.
+
+![](/images/sv/pulse-surveys/11.png)
+
+## Visa resultat av pulsmätning
+
+När du tittar på resultaten från pulsmätningen kommer du att se **realtidsresultat** från den senaste utskickade enkäten. Pulsmätningen måste ha minst fem svar för att resultaten ska visas. Puls kategorin visar det **genomsnittliga betyget** för hela pulsundersökningen, där trend-diagrammet visar utvecklingen över tid. Genom att klicka på de inkluderade kategorierna, ser du det genomsnittliga betyget per kategori samt dess trend över tid.
+
+Det är också möjligt att filtrera efter **kön** och **organisatorisk enhet** om du klickar på filterikonen i det övre högra hörnet.
+
+<Note>
+  Pilarna i varje kategori visar trenden baserat på tidigare resultat jämfört med de senaste resultaten.
+</Note>
+
+![Picture23](/images/sv/pulse-surveys/12.png)
+
+Om du klickar på **Hantera-knappen** i det övre högra hörnet kan du:
+
+- **Uppdatera frågor:** Här kan du när som helst redigera antalet frågor samt vilka som ska ingå i pulsen.
+- **Uppdatera frekvens:** Här kan du både **pausa** pulsen och uppdatera dess **frekvens**. När pulsen är pausad skickas inga nya pulser ut och pulsen får status **Pausad**. Alla tidigare resultat fortsätter att vara synliga även under pausen. När pulsen återaktiveras fortsätter den som vanligt igen.
+- **Uppdatera pulsmätning**: Här kan du uppdatera vilka medarbetare som ska inkluderas samt bestämma om du vill dela resultaten med chefer.
+- **Ta bort pulsen:** Här kan du radera pulsen och all data som finns i den.
+
+![](/images/sv/pulse-surveys/13.png)
+
+## Visa resultat för Chef
+
+Om du har aktiverat alternativet att dela resultat med chefer, visas pulsmätningens resultat för **deras medarbetare** direkt på chefens startsida. En widget visar resultatet från den senast stängda pulsen och visar vilka medarbetare som är inkluderade i pulsmätningen.
+
+<Note>
+  Denna vy är endast tillgänglig för chefer som har **minst fem medarbetare** i den senast stängda pulsen. För att chefen ska kunna se resultatet krävs även att **minst tre** av de rapporterande medarbetarna har svarat.
+</Note>
+
+![](/images/sv/pulse-surveys/14.png)
+
+Genom att klicka på widgeten, presenteras det övergripande pulsresultatet på den första sidan, följt av en trendgraf som visar utvecklingen över de **sex senaste utskicken**. Resultat för enskilda kategorier visas endast när det finns **minst tre svar** från medarbetare som rapporterar till chefen inom respektive kategori. Varje resultat kompletteras med en kort förklarande text som hjälper till att ge kontext till resultatet.
+
+![Picture73](/images/sv/pulse-surveys/15.png)
+
+![Picture80](/images/sv/pulse-surveys/16.png)
+
+## Ställ in rättigheter
+
+Som administratör har du alltid rättigheter att hantera pulsmätningar. Det är möjligt att ge andra användare rättigheten att **hantera pulsmätningar** genom att **Aktivera** hantering av alla pulsmätningar, inom en anpassad roll.
+
+<Warning>
+  Observera att detta ger **full åtkomst** till pulsmätningar: att starta, uppdatera, radera samt se alla resultat.
+</Warning>
+
+## Vanliga frågor
+
+**Fråga 1:** Kan jag ändra det minsta antalet svar som krävs för att visa resultat?
+
+Nej. Det minsta antalet svar som krävs för att visa resultat är fastställt och kan inte ändras. Minst fem svar krävs för att resultat från pulsmätningen ska visas för att säkerställa anonymitet.
+
+**Fråga 2:** Jag kan inte se några resultat från pulsmätningen. Varför?
+
+Anledningen till att du inte kan se några resultat, kan bero på att färre än fem medarbetare kan ha svarat på undersökningen, eller så saknar du behörighet att se resultaten. Om du är chef visas resultaten endast om delning av resultat med chefer har aktiverats och minst tre medarbetare som rapporterar till chefen har svarat på pulsmätningen.
+
+För att felsöka problemet, kontrollera att undersökningen har fått minst fem svar, att du har rätt behörigheter och att delning med chefer har aktiverats om du försöker se resultat som chef.
+
+**Fråga 3:** Kan jag redigera en pulsmätning efter att den har startats?
+
+Ja. Du kan uppdatera de inkluderade frågorna, mätfrekvensen, deltagarna och inställningarna för chefers åtkomst efter att pulsmätningen har startats. Om ändringar görs kommer dessa gälla i kraft från och med nästa utskick och kommer inte påverka tidigare utskick.
+
+**Fråga 4:** Medarbetare får ingen uppgift att besvara pulsen. Vad ska jag kontrollera?
+
+Om ingen uppgift finns tillgänglig, kontrollera att pulsmätningen har startats, att medarbetaren ingår i målgruppen och att startdatumet för pulsmätningen har passerat. Medarbetaren behöver även vara **inbjuden** **till** **Hailey** för att kunna få en uppgift att besvara pulsen. Kontrollera även att medarbetaren inte har exkluderats baserat på anställningstyp eller inställningen för längre frånvaro.

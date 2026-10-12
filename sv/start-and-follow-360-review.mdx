@@ -1,0 +1,113 @@
+---
+title: "Starta och följ 360° review"
+---
+
+Bana väg för framgång med Haileys 360° review! Genom att använda detta verktyg kan du samla värdefull feedback från olika perspektiv och göra positiv inverkan på din organisation.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="5Mx4mru" title="Starta och följ 360° review" />
+
+## Vad är en 360° review?
+
+Med hjälp av 360° review får ni en strukturerad metod för att samla in återkoppling från flera perspektiv som från chef, kollegor, och medarbetare. Genom att inkludera olika synvinklar skapas en mer heltäckande bild av till exempel styrkor, utvecklingsområden och samarbetsförmåga. Med en 360° review kan ni skapa strukturerade frågemallar och gör det enklare att följa utveckling över tid.
+
+## Innan du sätter igång
+
+Innan du börjar, se till att du har konfigurerat dina mallar för 360° reviews. Du kan läsa mer om hur du skapar dem [**HÄR**](/sv/create-three-sixty).
+
+## Hur man startar och följer en 360° review
+
+En 360° review kan initieras på två olika sätt:
+
+- Från **medarbetarlistan** genom att markera medarbetaren/medarbetarna och klicka på **Hantera** - **Starta 360° review**
+- Från **medarbetarkortet** genom att klicka på **Hantera – Starta en 360° review**
+
+Oavsett om du startar en 360° review från medarbetarlistan eller medarbetarkortet, får du möjlighet att **sätta** **en titel, välja en mall** och **sätta en deadline** på din 360° review.
+
+![](/images/sv/start-and-follow-360-review/01.png)
+
+När du startar en 360° review så kommer de medarbetarna som inkluderats i mallen få en uppgift på sin dashboard. Det kommer även att skickas ut ett mail som informerar om att det finns en utvärdering att slutföra. Uppgifterna kan bli skickade till:
+
+- Medarbetare (en själv)
+- Kollegor
+- Chef
+- Rapporterande
+
+När kollegor är inkluderade i 360° mallen kommer medarbetaren som utvärderingen körs på att få en uppgift att **välja kollegor som de vill ha feedback från**.
+
+Om samtalsmallen innehåller alternativet **Uppgift att justera kollegor**, skickas en uppgift till chefen efter att medarbetaren har skickat in sina föreslagna kollegor. Chefen kan granska och justera urvalet av kollegor vid behov. När chefen sparar uppgiften får de valda kollegorna en uppgift med frågor om medarbetaren.
+
+![](/images/sv/start-and-follow-360-review/02.png)
+
+På medarbetarprofilen under **Samtal** kommer du att kunna **hålla reda på de inskickade svaren** från relevanta medarbetare genom en progressbar. Progressbaren är full när en person från varje grupp har skickat in sina svar. Det innebär att cirkeln kan se full ut även om inte alla som får en uppgift har svarat på frågorna.
+
+![](/images/sv/start-and-follow-360-review/03.png)
+
+För att se detaljerad progress, klicka på rutan för 360° review från fliken **Samtal** på medarbetarkortet.
+
+Översikten visar:
+
+- Startdatum
+- Deadline
+- Status
+- Progress i procent
+- Hur många som har besvarat förberedande frågor (Medarbetare, Chef, Kollegor, Rapporterande)
+
+Om du endast **Slutför** reviewn kommer resultaten inte att vara synliga för medarbetaren. Om du klickar på **Slutför och dela** blir resultaten synliga för medarbetaren. Du kan först **Slutföra** och sedan **Dela** vid ett senare tillfälle. När reviewn är slutförd kan inga fler svar skickas in.
+
+![](/images/sv/start-and-follow-360-review/04.png)
+
+De inskickade svaren visas i **sektionerna** till vänster. För att se ett svar, klicka på den relevanta sektionen. Varje svar visas enligt vald svarstyp och är alltid grupperat efter respondentkategori (t.ex. Chef, Kollegor).
+
+Du kan när som helst återvända till 360°-reviewn för att se svaren igen, även efter att du har lämnat sidan.
+
+![](/images/sv/start-and-follow-360-review/05.png)
+
+## 360° review översikt
+
+I huvudmenyn under **Performance** hittar du en översikt över 360° reviews i Hailey. Här kan du hålla koll på dina utvärderingar och se om det finns något som kräver åtgärd från din sida. Om du håller muspekaren över förloppsindikatorn kan du se om frågorna har besvarats eller inte för den specifika 360°-utvärderingen.
+
+![](/images/sv/start-and-follow-360-review/06.png)
+
+Översikten visar **medarbetaren** som utvärderingen gäller för, **titel på utvärderingen**, **startdatum**, och en **progressbar**. Du kan även filtrera i listan för att hitta till exempel en specifik legal enhet eller medarbetare.
+
+## Mobilapp
+
+I mobilappen kan användare **slutföra de utvärderingsuppgifter** som har tilldelats dem utifrån den valda mallen.
+
+- **Medarbetare:** Slutför utvärderingsfrågor av dig själv och välj kollegor som du vill ha feedback från.
+- **Chef:** Justera kollegor och slutför din utvärdering som chef.
+- **Kollega:** Slutför utvärdering.
+- **Direktrapporterande medarbetare:** Slutför utvärderingen av din chef.
+
+## Rättigheter
+
+För att ge dessa behörigheter till andra roller, uppdatera rollinställningarna under **Inställningar – Säkerhet – Roller och behörigheter**:
+
+- **Visa och ändra 360° utvärderingar:** Ger användare möjlighet att visa och ändra 360°-utvärderingar
+
+## Vanliga frågor
+
+<AccordionGroup>
+  <Accordion title="Hur länge stannar uppgiften i att göra listan?">
+  Uppgiften försvinner från medarbetarens att göra-lista så snart de **slutför utvärderingen**, eller så snart frågorna har **skickats in**.
+  </Accordion>
+  <Accordion title="Hur många kollegor kan väljas?">
+  Det finns ingen systembegränsning för hur många kollegor (peers) som kan väljas.
+  </Accordion>
+  <Accordion title="Överförs uppgifter när en medarbetare får en ny chef exempelvis?">
+  Organisationsförändringar påverkar inte uppgifter som redan har skickats ut. Om en medarbetare får en ny chef under en pågående 360°-utvärdering kommer dessa uppgifter **inte** att överföras till den nya chefen.
+  </Accordion>
+</AccordionGroup>

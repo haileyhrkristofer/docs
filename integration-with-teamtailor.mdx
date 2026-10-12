@@ -1,0 +1,108 @@
+---
+title: "Integration with Teamtailor"
+---
+
+Say goodbye to manual intake of new employees! Thanks to Hailey’s integration to Teamtailor seamless and GDPR compliant transfer of personal data is made possible. You get to choose when in the recruitment process the data should be transferred.
+
+## What does the integration do?
+
+This integration automates the transition from recruitment to the hiring process by connecting Teamtailor and Hailey. When a candidate reaches a selected stage in your recruitment process, a trigger in Teamtailor is activated and automatically transfers the candidate’s personal information to Hailey.
+
+As a result, the future employee is already created in Hailey when it’s time to initiate the hiring process. This reduces the need for manual administration, saves time, and creates a seamless and efficient transition from candidate to employee.
+
+## How does the integration work?
+
+You decide at which stage of the recruitment process the candidate’s information should be transferred to Hailey. When a candidate is moved to the selected stage in Teamtailor, a trigger is activated that automatically creates the employee profile in Hailey.
+
+At the same time, a task is added to the responsible person’s **To-do list** in Hailey. From there, the user can choose to **quickly add** the candidate, **initiate hiring process**, or **remove** the candidate from the list.
+
+## What data is included in the integration?
+
+When a candidate is moved from Teamtailor to Hailey, data from completed fields in Teamtailor (_listed in the right column of the table_) will be transferred to corresponding fields in Hailey.
+
+| First name | First name |
+| --- | --- |
+| Last name | Last name |
+| Private phone | Email |
+| Private email | Phone |
+
+## How do you activate the integration?
+
+Under your company name in Teamtailor, go to Add-on features. Choose **Triggers** and **Active**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-26-2022-09-04-19-5229-AM.png?width=670&height=485&name=image-png-Oct-26-2022-09-04-19-5229-AM.png)
+
+Go to Settings in Teamtailor and scroll down in the left side menu to Integrations. Choose API keys. Click + New API key.
+
+![](https://docs.haileyhr.com/hubfs/image-png-Oct-26-2022-09-09-58-9127-AM.png)
+
+Name your API key, in this case we named it **Admin – Hailey – Key**. Set the API scope to Admin and choose Read. Click Create.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-01-2022-01-38-10-98-PM.png?width=435&name=image-png-Mar-01-2022-01-38-10-98-PM.png)
+
+Your created API key should now have appeared in the list under Settings and API keys. Copy the generated key and log into Hailey.
+
+![](https://docs.haileyhr.com/hubfs/image-png-Oct-26-2022-09-11-59-5074-AM.png)
+
+Go to **Settings** - **Integrations** in the left side menu. Choose **Teamtailor**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-02-2026-03-47-52-6363-PM.png?width=670&height=328&name=image-png-Jul-02-2026-03-47-52-6363-PM.png)
+
+Paste your API key from Tematailor under Teamtailor API key. Choose a default reviewer who will get a notification and a task when a candidate is sent from Teamtailor to Hailey IF the reviewer set in Teamtailor doesn’t exist in Hailey for some reason. Also copy the Hailey API key and Click **Save**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-03-2026-05-56-57-3468-AM.png?width=670&height=353&name=image-png-Jul-03-2026-05-56-57-3468-AM.png)
+
+Back to Teamtailor. Go to Marketplace, choose HR system in the left side menu and choose Hailey HR. Once there you can click Activate. <img src="https://docs.haileyhr.com/hubfs/image-png-Mar-01-2022-01-31-54-98-PM.png" alt="" />
+
+This box will appear where you paste the Hailey API key and click outside the field to save it. Choose your created Teamtailor API key and click **Finish installation**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-08-2022-08-30-27-82-AM.png?width=442&name=image-png-Jun-08-2022-08-30-27-82-AM.png)
+
+## Activate trigger
+
+Now the two systems are connected, but you are not finished yet. Now you have to, for each position you are recruiting for, activate a trigger in order for Teamtailor to be able to send candidates to Hailey.
+
+Go to **Jobs** in Teamtailor and choose the job where you would like candidates to automatically be sent to Hailey. Inside the job, click the magic wand to your right.
+
+![](https://docs.haileyhr.com/hubfs/image-png-Oct-26-2022-09-07-00-0510-AM.png)
+
+Choose the step where you would like to activate the trigger. In this case we choose step Hired by clicking the + inside the step.
+
+![](https://docs.haileyhr.com/hubfs/image-png-Oct-26-2022-09-08-14-5952-AM.png)
+
+Choose Send Webhook Hailey HR.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-01-2022-01-40-15-60-PM.png?width=350&name=image-png-Mar-01-2022-01-40-15-60-PM.png)
+
+Now you will set a reviewer who will get a notification and a task in Hailey when a candidate in this job is sent to Hailey. Click **Add trigger**.
+
+<Note>
+  If the email you register doesn’t exist in Hailey, the default reviewer in Hailey will get the notification and task instead.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-01-2022-01-40-28-38-PM.png?width=370&name=image-png-Mar-01-2022-01-40-28-38-PM.png)
+
+What does it look like when a candidate has been sent to Hailey?
+
+When a candidate is moved to the step where we activated the trigger they (their information) will be sent to Hailey. This goes through an email and a task to the reviewer and the candidate is created in Hailey. Open the task in Hailey, fill out the information and choose whether you would like to **abort the transfer**, just **quick add** the person in Hailey or **initiate a hire.**
+
+- If you choose **Initiate hire**, it is also important to choose a hiring template and whether you want to require a personal identity number. This makes the hiring process smoother. If you would like to know more about the hiring process which will follow with this action, click [HERE.](/iniate-hire)
+- If you choose **Quick add** the employee is just added to the employee list and an employee card is created for the employee
+
+![](https://docs.haileyhr.com/hubfs/image-png-Jul-02-2026-02-19-29-8231-PM.png)
+
+## Common questions
+
+**Question 1**: Is it possible to have multiple Teamtailor integrations activated for the same Hailey account?
+
+No, that isn't possible. If you have multiple Teamtailor accounts, you'll need to choose one account to synchronize with Hailey.
+
+**Question 2:** What happens if we rehire an employee who already exists in Hailey through Teamtailor?
+
+The candidate will be imported into Hailey again. Please note that this may result in duplicate employee profiles.
+
+**Question 3:** When in the process is the employee profile created in Hailey?
+
+The profile is created with the employment status "Being hired" as soon as you move the candidate to the stage where you have placed the trigger.
+
+_If you have any questions regarding the integration, please contact your Customer Success specialist at Hailey._

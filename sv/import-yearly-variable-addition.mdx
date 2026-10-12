@@ -1,0 +1,69 @@
+---
+title: "Importera ändringar av årligt rörligt tillägg"
+---
+
+I den här guiden får du lära dig hur du importerar årligt rörligt tillägg eller lägger till det manuellt.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="jsbUYEM" title="Importera ändringar av årligt rörligt tillägg" />
+
+## Innan ni börjar
+
+Innan ni importerar årligt rörligt tillägg måste först medarbetarna och lönerna ha importerats.
+
+Det som också är bra att göra innan importen är att toggla på **Tillåt årligt rörligt tillägg** i **Inställningar - Anpassning - Lönetyper.** Om du vill veta mer kring att skapa lönetyper klicka **[HÄR](/sv/salary-types).**
+
+![1-Sep-16-2026-07-12-16-4209-PM](https://docs.haileyhr.com/hs-fs/hubfs/1-Sep-16-2026-07-12-16-4209-PM.png?width=670&height=323&name=1-Sep-16-2026-07-12-16-4209-PM.png)
+
+## Ladda ned och fyll i mall
+
+Nu är vi redo att importera ändringar av årligt rörligt tillägg. Navigera till medarbetarlistan under **Medarbetare** i huvudmenyn och klicka på **Importera - Ändringar av årligt rörligt tillägg.**
+
+![2-Sep-16-2026-07-13-23-9840-PM](https://docs.haileyhr.com/hs-fs/hubfs/2-Sep-16-2026-07-13-23-9840-PM.png?width=670&height=347&name=2-Sep-16-2026-07-13-23-9840-PM.png)
+
+Här kan du välja ifall du vill ladda ner importmallen för alla medarbetare, eller endast för de utvalda medarbetarna du markerat. Klicka på alternativet du vill välja och öppna filen.
+
+![3-Sep-16-2026-07-14-08-8803-PM](https://docs.haileyhr.com/hs-fs/hubfs/3-Sep-16-2026-07-14-08-8803-PM.png?width=670&height=272&name=3-Sep-16-2026-07-14-08-8803-PM.png)
+
+I mallen kommer medarbetarna att **dyka upp med ett ID, namn, salary ID** och **salary title**. Detta för att Hailey måste veta vem årliga rörliga ersättningen tillhör. Datan i dessa kolumner måste således lämnas **orörda**.
+
+Fyll i kolumnerna E och F:
+
+- **Yearly variable addition (% of salary):** Fylls i som decimal. Exempelvis 1 för 100% och 0.5 för 50%, etc.
+- **Yearly variable addition (effective date):** Från vilket datum årlig rörlig ersättning ska gälla. Datumformatet är **YYYY-MM-DD**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Nov-17-2025-03-16-30-0750-PM.png?width=670&height=53&name=image-png-Nov-17-2025-03-16-30-0750-PM.png)
+
+## Import
+
+När mallen är ifylld med den data ni önskar importera in i Hailey sparar ni filen på er dator. Gå tillbaka till Hailey och Medarbetarlistan. Klicka på **Importera -** **Ändringar av årligt rörligt tillägg**. Klicka på rutan i mitten "Klicka eller släpp filen här för att ladda upp" och välj er importfil.
+
+![4-4](https://docs.haileyhr.com/hs-fs/hubfs/4-4.png?width=670&height=270&name=4-4.png)
+
+## Lägg till årligt rörligt tillägg manuellt
+
+Via medarbetarkortet kan ni också lägga till årligt rörligt tillägg manuellt. Navigera till medarbetarens medarbetarkort, gå till **Kompensation – klicka på ersättningsrutan – Hantera – Lägg till årligt rörligt tillägg**.
+
+![9-2](https://docs.haileyhr.com/hs-fs/hubfs/9-2.png?width=670&height=298&name=9-2.png)
+
+Fyll i gäller från och procent av lönen, spara sedan.
+
+![10-1](https://docs.haileyhr.com/hs-fs/hubfs/10-1.png?width=670&height=293&name=10-1.png)
+
+När ett rörligt tillägg läggs till eller ändras skapas automatiskt en uppgift och ett mejl skickas till godkännare – precis som för andra löneändringar. Godkännaren kan sedan välja att godkänna eller avslå tillägget.
+
+Det årliga rörliga tilläget kommer nu att vara synlig på kompensationskortet.
+
+![12-1](https://docs.haileyhr.com/hs-fs/hubfs/12-1.png?width=670&height=363&name=12-1.png)

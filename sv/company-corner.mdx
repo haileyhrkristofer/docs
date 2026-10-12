@@ -1,0 +1,166 @@
+---
+title: "Företagshörnan"
+---
+
+I denna guide hittar du hur Företagshörnan i Hailey fungerar samt hur ni sätter upp den.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="UNUXwwh" title="Företagshörnan" />
+
+## Vad är Företagshörnan?
+
+Företagshörnan är en plats där du kan samla viktiga dokument, hjälpa medarbetare att hitta rätt svar samt dela med dig av sådant som är bra att känna till - allt på ett och samma ställe.
+
+Företagshörnan i Hailey består av **Kategorier**, **Dokument** och **Artiklar**. I denna guide går vi igenom hur ni skapar innehåll till företagshörnan, hur ni riktar innehållet och hur det visualiseras för era medarbetare i organisationen.
+
+## Hur skapas innehåll till Företagshörnan?
+
+För att skapa innehåll till Företagshörnan går ni till **Inställningar** - **Företagshörnan**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-11-15-36-0075-AM.png?width=670&height=357&name=image-png-Aug-07-2026-11-15-36-0075-AM.png)
+
+Företagshörnan består i sin tur av tre delar:
+
+- [**Kategorier**](#Kategorier)
+- [**Dokument**](#Dokument)
+- [**Artiklar**](#Artikel)
+
+Du väljer själv vilka delar du vill använda. Följ guiden för att se hur du lägger till dem.
+
+### Lägg till kategorier
+
+Med hjälp av kategorier kan du enkelt gruppera artiklar och dokument för att underlätta informationssökningen för era medarbetare i organisationen.
+
+För att skapa en kategori, klicka på **Lägg till** uppe i det högra hörnet och välj **Lägg till kategori.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-11-17-00-6665-AM.png?width=670&height=357&name=image-png-Aug-07-2026-11-17-00-6665-AM.png)
+
+**Namnge** kategorin, välj en **Emoji** som passar och lägg till en valfri **Beskrivning**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-10-2026-07-24-44-2377-AM.png?width=670&height=357&name=image-png-Aug-10-2026-07-24-44-2377-AM.png)
+
+En kategori blir synlig i Företagshörnan först när den innehåller **minst** ett dokument eller en artikel.
+
+<Note>
+  Om en kategori endast innehåller **omfattade** dokument och artiklar kommer denna kategori inte synas för de personer som innehållet inte är riktat till. Ni kan läsa mer hur ni omfattar innehåll i Företagshörnan i denna guide.
+</Note>
+
+### Lägg till dokument
+
+Det är fördelaktigt att ladda upp ett dokument, istället för att lägga till en artikel, om ni vill att era medarbetare ska kunna **ladda ner innehållet** från Företagshörnan.
+
+För att ladda upp dokument i Företagshörnan, klicka på **Lägg till dokument.**
+
+Börja med att **ladda upp en fil**, ge dokumentet en **Titel** och välj sedan vilken **Kategori** som dokumentet ska tillhöra (valfritt).
+
+Dokumenten dyker upp i **alfabetisk ordning.** Om ni vill kategorisera det annorlunda går det fint att lägga till ett nummer eller en bokstav innan titeln på dokumentet.
+
+Dokument som **inte kategoriseras** kommer publiceras nedanför kategorierna i Företagshörnan.
+
+<Note>
+  De filformat som stöds är **pdf, ppt, pptx, xls, xlsx, doc och docx.** Maximal storlek 25 MB.
+</Note>
+
+#### Omfattning av dokument
+
+Ni har dessutom möjlighet att **omfatta** **dokumentet** till olika organisatoriska tillhörigheter i ert Hailey. Omfattningen styr för vilka medarbetare som dokumentet kommer att vara **synligt** för i Företagshörnan. Lämnas alla fält tomma kommer dokumentet att vara synligt för alla.
+
+Om ni bockar i **Chefsroll** i omfattningen kommer innehållet endast vara synligt för de personer som är chefer i Hailey (har rapporterande till sig).
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-11-39-25-6171-AM.png?width=670&height=358&name=image-png-Aug-07-2026-11-39-25-6171-AM.png)
+
+<Note>
+  Om ni fyller i ett värde under **flera fält** kommer innehållet synliggöras för de personer som uppfyller **samtliga** värden. Med hjälp av detta kan ni välja att rikta innehåll exempelvis endast åt chefer på ett visst kontor eller en viss avdelning.
+</Note>
+
+### Lägg till artikel
+
+En artikel består av text som komponeras direkt i systemet.
+
+Det är fördelaktigt att skapa en artikel för att på ett smidigt sätt **informera** om hur medarbetaren går tillväga i olika situationer. Artiklar kan även innehålla **hyperlänkar** som tar medarbetaren vidare till exempelvis detta hjälpcenter eller andra system.
+
+För att lägga till en artikel i Företagshörnan, klicka på **Lägg till artikel**.
+
+Börja med att ge artikeln en **Titel** och välj en **Emoji** som passar genom att klicka på emoji-ikonen till vänster om titelfältet. Fyll sedan i innehållet i **Text-rutan** och välj vilken **Kategori** som artikeln ska tillhöra (valfritt).
+
+Artiklar som **inte kategoriseras** kommer publiceras nedanför kategorierna i Företagshörnan.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-10-2026-07-32-29-8911-AM.png?width=670&height=358&name=image-png-Aug-10-2026-07-32-29-8911-AM.png)
+
+#### Omfattning av artiklar
+
+Likt dokument har ni också möjlighet att **omfatta** **artiklar** till olika organisatoriska tillhörigheter i ert Hailey. Omfattningen styr för vilka medarbetare som artikeln kommer att vara synlig för i Företagshörnan. Lämnas alla fält tomma kommer artikeln att vara synlig för alla.
+
+Om ni bockar i **Chefsroll** i omfattningen kommer innehållet endast vara synligt för de personer som är chefer i Hailey (har rapporterande till sig).
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-11-42-04-3237-AM.png?width=670&height=359&name=image-png-Aug-07-2026-11-42-04-3237-AM.png)
+
+<Note>
+  Om ni fyller i värden under **flera fält** kommer innehållet synliggöras för de personer som uppfyller **samtliga** värden. Med hjälp av detta kan ni välja att rikta innehåll exempelvis endast åt chefer på ett visst kontor eller en viss avdelning.
+</Note>
+
+## Se innehåll i Företagshörnan
+
+För att se innehåll i Företagshörnan klickar ni på **Företagssida** i huvudmenyn.
+
+Här kommer era medarbetare hitta information som är relevant för dem, uppdelade i **Kategorier** med innehåll bestående av **Dokument** och **Artiklar**.
+
+Nedan vy visar er hur **Kategorier** visualiseras i Företagshörnan:
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-11-58-14-9215-AM.png?width=670&height=390&name=image-png-Aug-07-2026-11-58-14-9215-AM.png)
+
+För att ta del av innehållet i en **Kategori** klickar ni på den.
+
+Om kategorin innehåller ett **Dokument** klickar ni på det. Vill ni enkelt kunna ladda ner dokumentet klickar ni på nedladdnings-ikonen till höger om dokumentet.
+
+Om kategorin istället innehåller en **Artikel** klickar ni på den för att läsa informationen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-12-00-54-6832-PM.png?width=670&height=389&name=image-png-Aug-07-2026-12-00-54-6832-PM.png)
+
+## Rättigheter
+
+Om ni vill att någon utöver Admin i ert konto ska kunna **ladda upp och redigera innehåll** i Företagshörnan arbetar ni med rättigheten:
+
+- **Inställningar - Redigera företagshörnan**
+
+[**HÄR**](/sv/roles-and-rights) kan ni läsa mer om Roller & Rättigheter i Hailey
+
+## Inspiration till artiklar
+
+Här är några exempel på vanliga ämnen som våra kunder skapar artiklar om:
+
+- Arbetstider och arbete hemifrån
+- Var rapporterar jag utgifter?
+- Har jag rätt till friskvårdsbidrag eller andra förmåner?
+- Halvdagar/Allmänna helgdagar
+- Semester - Hur många dagar har jag? Var hittar jag min saldo? Var registrerar jag semesterdagar?
+- Viktiga adresser
+- WIFI-lösenord och annan IT-information
+- Fakturaadresser
+- Vem ansvarar för frukost på kontoret?
+- Hur visselblåser jag på företaget? (rapportera oegentligheter)
+- Länkar till andra system som företaget använder.
+
+## Vanliga frågor
+
+<AccordionGroup>
+  <Accordion title="Jag som Admin har laddat upp innehåll i Företagshörnan men nu dyker det inte upp för mig, vad beror detta på?">
+    Adminrollen ger **inte per automatik** tillgång till allt innehåll i Företagshörnan i det fall ni valt en omfattning. För att kunna se det uppladdade innehållet måste därför Admin **ingå i den omfattning** som innehållet har laddats upp för.
+  </Accordion>
+
+  <Accordion title="Vad innebär **Chefsroll** i omfattningen? Vem kan se den då?">
+    Att toggla på **Chefsroll** under **Omfattning** innebär att innehållet endast kommer synas för de medarbetare som har rapporterande till sig. Ett bra användningsområde för detta kan därför vara chefsmaterial som endast medarbetare med rapporterande till sig ska ha möjlighet att se.
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,91 @@
+---
+title: "Add education session"
+---
+
+This guide walks you through how to add new education sessions for the employees, step by step.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="rOytwFb" title="Add education session" />
+
+## What is educations?
+
+Educations help you develop employees’ skills, knowledge, and competencies in a structured way. They are useful for ensuring compliance, onboarding, and continuous professional development. Education sessions are the occasions when an education takes place, making it easy to assign participation. In the system, you can manage educations and sessions to track attendance and ensure employees meet role requirements.
+
+## Before you get started
+
+Before you get started it is important that you have added the education sessions under Settings - Skills. Follow [THIS](/educations) guide to see how this is set up.
+
+## How do you add an education session?
+
+To register education sessions, **go to the employee list** or to an **employee's profile**. It is possible to add an education session for multiple employees at once from the employee list. Click on **Action -** **Add an education session**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-23-2026-09-20-02-1843-AM.png?width=670&height=335&name=image-png-Jun-23-2026-09-20-02-1843-AM.png)
+
+Select an education and a **description** for this specific session. Set the **session** **date** and **duration**. You can add multiple sessions in one action by clicking on **\+ Add session**. Then click **Save**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-23-2026-09-21-08-0282-AM.png?width=670&height=339&name=image-png-Jun-23-2026-09-21-08-0282-AM.png)
+
+The education session will be registered on each selected employees profile under the tab **Education**. When you click on an education, all attended sessions for that education will be visible.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-07-2026-11-27-59-9925-AM.png?width=670&height=357&name=image-png-May-07-2026-11-27-59-9925-AM.png)
+
+## Overview of educations
+
+If you have the rights to view educations on other employees than yourself, you can get an overview of the educations by clicking **Skills - Education** in the main menu.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-07-2026-11-28-52-8116-AM.png?width=670&height=369&name=image-png-May-07-2026-11-28-52-8116-AM.png)
+
+You will now access three views:
+
+- Educations overview
+- By session
+- By employee
+
+The **Education overview** gives you a view of the total number of session hours, total number of sessions and a list of all educations broken down by hours and number of sessions.
+
+You can export the education overview by clicking on **Export** in the top right corner.
+
+<Tip>
+  **Tip!** Use the calendar in the top right corner to easily choose a period of time to view.
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-23-2026-09-21-48-7601-AM.png?width=670&height=337&name=image-png-Jun-23-2026-09-21-48-7601-AM.png)
+
+The **By session** view is of use when you want to get an overview of the specific occation that employees attended an education session.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-23-2026-09-22-19-7438-AM.png?width=669&height=337&name=image-png-Jun-23-2026-09-22-19-7438-AM.png)
+
+By clicking on **the three dots - Edit**, you can edit participants to an education session, change the date, duration and description.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-23-2026-09-22-50-2581-AM.png?width=669&height=334&name=image-png-Jun-23-2026-09-22-50-2581-AM.png)
+
+The **By employee** view is particularly helpful when you need to **track the most recent attendance** of various educations.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-23-2026-09-23-22-2647-AM.png?width=669&height=338&name=image-png-Jun-23-2026-09-23-22-2647-AM.png)
+
+<Tip>
+  **Tip!** Use the filtering menu to navigate easy.
+</Tip>
+
+## Rights
+
+- **View** on your own profile makes it possible to see all information under tab **Education** on your own profile.
+- **View** on other employees makes it possible to see all information under tab **Education** on the employee profiles + access to **Skills - Education** in the main menu for employees who is scoped.
+- **View & edit** education gives you the right to view, add and delete educations.
+- **Settings - Create** education gives full access to create new and manage already added educations under **Settings**.
+
+<Tip>
+  Do you need more help with **Roles & rights**? Read more about it [HERE!](/roles-and-rights)
+</Tip>

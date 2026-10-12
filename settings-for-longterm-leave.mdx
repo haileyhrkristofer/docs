@@ -1,0 +1,70 @@
+---
+title: "Settings for long-term leave"
+---
+
+This guide walks you through long-term leave in Hailey. What it is, how to activate it, and what is needed to use it.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="lIiNme0" title="Settings for long-term leave" />
+
+## What is long-term leave?
+
+Long-term leave is used for employee being away from work for a longer continuous period. It helps you separate these periods from regular time off and gives you a clearer overview of who is away.
+
+With long-term leave, the time off is managed as one continuous period instead of separate time off days. This makes it easier to follow up, filter employees, and keep the time off overview accurate.
+
+<Tip>
+  Did you know that you can automate and standardize your long-term leave processes using **Time off-triggered workflows** in Hailey? Click [**HERE**](/create-workflows#Time-off-and-Workflows) to get started.
+</Tip>
+
+## How to activate long-term leave?
+
+Long-term leave is toggled on for each **Time off reason** that should count as long-term leave in your account. In the setting, you enter from which day in the time off period the absence should be treated as long-term leave.
+
+<Tip>
+  **Example:**
+
+  If you enter day 15, the time off is counted as long-term leave when the employee’s time off period has lasted for 15 days.
+</Tip>
+
+Go to **Settings - Time and time off - Time off reasons.**
+
+To edit an existing time off reason, click the three dots next to the relevant time off reason.
+
+To create a new time off reason, click **Add - Time off reason.**
+
+Turn on **Long-term leave** and select from which day the time off should count as long-term leave. Click **Save** when you are done.
+
+<Note>
+  Keep in mind that only the categories **Other** and **Sick leave** can be used for long-term leave.
+</Note>
+
+## What is needed on the employee profile?
+
+Admins can add long-term leave to an employee if it is enabled for the relevant time off reason.
+
+For employees to report long-term leave themselves, they need a **Reporting policy** set on their employment. The policy determines whether time off is reported in days or hours. If time off is reported in hours, **Work hours** must also be added to the employee's employment.
+
+This is because long-term leave only applies at 100% of a day. By adding **Work hours**, you help Hailey understand how many hours correspond to a full day for that employee.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-15-2026-01-43-13-3625-PM.png?width=670&height=446&name=image-png-Jul-15-2026-01-43-13-3625-PM.png)
+
+## Rights
+
+Admin has default access to manage time off reasons, including enabling long-term leave.
+
+**Settings - Edit time and time off** gives other roles access to time off reasons under settings. With this right, the user can, among other things, create, edit and enable long-term leave on a time off reason.
+
+Read more about how to set up Roles & rights [**HERE.**](/roles-and-rights)

@@ -1,0 +1,169 @@
+---
+title: "Company corner"
+---
+
+In this guide, you'll find how the Company corner in Hailey works and how to set it up.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="UNUXwwh" title="Company corner" />
+
+## What is Company corner?
+
+The Company corner is a space where you can gather important documents, help employees find the right answers, and share useful information - all in one place.
+
+In Hailey, the Company corner consists of **Categories**, **Documents**, and **Articles**. In this guide, we’ll walk you through how to create content for the Company Corner and how it is presented to employees across your organization.
+
+## How do you create content for the Company corner?
+
+To create content for the Company corner, go to **Settings** - **Company corner.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-12-25-37-4189-PM.png?width=670&height=358&name=image-png-Aug-07-2026-12-25-37-4189-PM.png)
+
+The Company corner consists of three parts:
+
+- **Categories**
+- **Documents**
+- **Articles**
+
+You can choose which parts you want to use. Follow the guide to se how to add them.
+
+### Add category
+
+Categories help you easily group articles and documents, making it easier for employees across your organization to find the information they need.
+
+To create a category, click **Add** in the top-right corner and select **Add category**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-12-26-35-6000-PM.png?width=670&height=359&name=image-png-Aug-07-2026-12-26-35-6000-PM.png)
+
+Give the category a **Name**, choose a suitable **Emoji**, and add an optional **Description**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-10-2026-07-35-47-3826-AM.png?width=670&height=358&name=image-png-Aug-10-2026-07-35-47-3826-AM.png)
+
+A category will only become visible in the Company corner once it contains **at least** one document or article.
+
+<Note>
+  If a category only contains **scoped** documents and articles, it will not be visible to users who are not included in that scope. You can learn more about scoping content in the Company corner in this guide.
+</Note>
+
+### Add document
+
+Uploading a document instead of creating an article is recommended if you want employees to be able to **download the content** from the Company corner.
+
+To upload documents to the Company corner, click **Add document.**
+
+Start by **uploading a file**, give the document a **Title**, and then select which **Category** it should belong to (optional).
+
+Documents are displayed in **alphabetical order**. If you prefer a different sorting, you can add a number or letter before the document title.
+
+Documents that are **not categorized** will appear below the categories in the Company corner.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-10-2026-07-37-31-0348-AM.png?width=670&height=357&name=image-png-Aug-10-2026-07-37-31-0348-AM.png)
+
+<Note>
+  Supported file formats are **pdf, ppt, pptx, xls, xlsx, doc, and docx.** Maximum file size is 25 MB.
+</Note>
+
+#### Document scope
+
+You can also **scope the document** to different organizational groups in Hailey. The scope determines which employees will be able to view the document in the Company corner. If all fields are left empty, the document will be visible to everyone.
+
+If you select **Manager role** in the scope, the content will only be visible to employees who are managers in Hailey (i.e. have direct reports).
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-12-27-59-5337-PM.png?width=670&height=357&name=image-png-Aug-07-2026-12-27-59-5337-PM.png)
+
+<Note>
+  If you enter values in **multiple fields**, the content will only be visible to employees who meet **all** specified criteria. This allows you to target content, for example, only to managers in a specific office or department.
+</Note>
+
+### Add article
+
+An article consists of text created directly in the system.
+
+Creating an article is a convenient way to **inform** employees about how to handle different situations. Articles can also include **hyperlinks** that direct employees to, for example, this Help Center or other systems.
+
+To add an article to the Company corner, click **Add article.**
+
+Start by giving the article a **Title** and selecting a suitable **Emoji** by clicking the emoji icon to the left of the title field. Then enter the content in the **Text** field and choose which **Category** the article should belong to (optional).
+
+Articles that are **not categorized** will appear below the categories in the Company Corner
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-10-2026-07-43-12-0516-AM.png?width=670&height=359&name=image-png-Aug-10-2026-07-43-12-0516-AM.png)
+
+**Article scope**
+
+Just like documents, you can also scope articles to different organizational groups in Hailey. The scope determines which employees will be able to view the article in the Company corner. If all fields are left empty, the article will be visible to everyone.
+
+If you select **Manager role** in the scope, the content will only be visible to employees who are managers in Hailey (i.e. have direct reports).
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-12-29-01-1888-PM.png?width=670&height=358&name=image-png-Aug-07-2026-12-29-01-1888-PM.png)
+
+<Note>
+  If you enter values in **multiple fields**, the content will only be visible to employees who meet all specified criteria. This allows you to target content, for example, only to managers in a specific office or department.
+</Note>
+
+## View content in the Company corner
+
+To view content in the Company corner, click **Company** in the main menu.
+
+Here, employees will find information relevant to them, organized into **Categories** containing **Documents** and **Articles**.
+
+The view below shows how **Categories** are displayed in the Company corner.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-12-35-58-0636-PM.png?width=670&height=391&name=image-png-Aug-07-2026-12-35-58-0636-PM.png)
+
+To **access the content of a category**, click on it.
+
+If the **Category** includes a **Document** you can read it by clicking on it. To download the document, click the download icon to the right of the document.
+
+To read an **Article**, click the arrow icon to the right of the article.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-12-34-42-1512-PM.png?width=670&height=387&name=image-png-Aug-07-2026-12-34-42-1512-PM.png)
+
+## Rights
+
+If you want someone other than the Admin of your account to be able to **upload and edit content** in the Company corner, you need the following right:
+
+- **Settings - Edit Company corner**
+
+[**HERE**](/roles-and-rights) you can read more about Roles & Rights in Hailey
+
+## Inspiration on articles
+
+Here are some examples on common things our customers create articles on:
+
+- Working hours and working from home
+- Where do I report expenses?
+- Am I entitled to wellness allowance or other benefits?
+- Half-days/Public holidays
+- Vacation - How many days do I have? Where can I find my balance? Where do I register vacation days?
+- Addresses of importance
+- WIFI password and other IT-information
+- Invoice addresses
+- Who is responsible for breakfast at office?
+- How do I blow the whistle on us? (report misconduct)
+- Links to other systems used by the company.
+- Internal policies.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="I’m an Admin and I’ve uploaded content to the Company corner, but I can’t see it. Why is that?">
+    The Adminrole **does not automatically grant access** to all content in the Company corner when a scope has been applied. To view the uploaded content, Admin must be **included in the selected scope** for which the content was uploaded.
+  </Accordion>
+
+  <Accordion title="What does **Manager role** mean in the scope settings? Who will be able to see it?">
+    Enabling **Manager role** under **Scope** means that the content will only be visible to employees with reportees. A good use case for this could be manger information, which should only be available for employees with reportees.
+  </Accordion>
+</AccordionGroup>

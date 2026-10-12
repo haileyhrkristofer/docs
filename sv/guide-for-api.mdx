@@ -1,0 +1,90 @@
+---
+title: "Guide för Haileys API"
+---
+
+Vill ni bygga en integration till Hailey? Kanske vill ni att bilder på era medarbetare uppdateras på er hemsida automatiskt när de uppdaterats i Hailey? I denna guide går vi igenom hur Haileys API fungerar.
+
+Hailey har ett öppet API (Application Programming Interface) som gör det möjligt för er att programmatisk läsa ut era medarbetares data, vilket gör det möjligt för utvecklare att ansluta andra system till Hailey.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="6r9xZ4f" title="Guide för Haileys API" />
+
+## Generera API-nyckel
+
+I Hailey kan ni hämta ut API nycklar som senare används för att ge er åtkomst till era medarbetares data. En API nyckel kan hämtas ut av antingen en admininstratör i ert konto, eller någon som har rättigheten **Visa & ändra** - **Integrationer** i ert konto. Läs mer om att tilldela rättigheter [HÄR.](/sv/roles-and-rights)
+
+**För att generera nyckeln, klicka på din profilbild/dina initialer uppe nere till vänster och "Åtkomsttoken".** Namnge nyckeln och generera. Det är endast vid genereringstillfället som ni har tillgång till API-nyckeln så var noga med att kopiera ut den direkt. När fönstret stängs kommer ni inte längre kunna tillgå denna nyckel.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Nov-22-2022-01-41-06-2115-PM.png?width=349&height=361&name=image-png-Nov-22-2022-01-41-06-2115-PM.png)
+
+## Vem som genererar API-nyckel
+
+Våra API-nycklar är personliga, vilket innebär att de rättigheter det konto som begärt ut en nyckel har kommer vara de rättigheter som nyckeln bär med sig. Skulle kontot som begärt ut nyckeln få förändrade rättigheter så kommer samma förändringar appliceras på API-nyckeln.
+
+Här finns två alternativ på hur ni kan gå tillväga:
+
+1. För att undvika att bli för individberoende i era egenbygda integrationer kan ni skapa ett servicekonto i Hailey för att begära ut API-nycklar. På så sätt blir ni inte sårbara om en medarbetare som ansvarat för en integration slutar hos er. Skapa en roll för servicekontot i systemet med de rättigheter som era API-nycklar ska bära.
+
+För att skapa servicekontot, gå till medarbetarlistan, klicka på **Lägg till medarbetare** och Lägg till. Fyll här i vad ert servicekonto ska heta och en mejladress som ni sen kommer logga in via.
+
+Markera servicekontot i medarbetarlistan, klicka på **Hantera** - **Skicka inbjudan**. Logga nu in som servicekontot och lägg sedan in kontot i den nyskapade rollen med rätt rättigheter.
+
+<Note>
+  För att ta ut en API-nyckel behöver servicekontot tilldelas rättigheten **Visa & ändra** på **Inställningar** - **Integrationer**. Läs mer [HÄR](/sv/roles-and-rights) om hur **Roller & rättigheter** fungerar.
+</Note>
+
+2. Låt en administratör hämta ut API-nycklarna och vid potentiellt byta av administratör i kontot genererar ni nya API-nycklar vid behov.
+
+## Generera ny nyckel
+
+Våra API-nycklar är giltiga i ett år. Därför behöver ni generera nya nycklar en gång per år. Ta då förslagsvis bort den gamla, generera en ny, kopiera ut denna direkt vid genereringstillfället och ersätt nyckeln i er befintliga integration.
+
+<Note>
+  När det är en vecka kvar tills att nyckeln löper ut skickas det ett påminnelsemail till den som genererat API-nyckeln + alla medarbetare som ligger i rollen **Admin** i ert konto. Utöver det skickas det även en påminnelse samma dag som nyckeln löpt ut.
+</Note>
+
+## API-dokumentation
+
+Via länken [HÄR](https://api.haileyhr.app/docs/index.html) hittar ni vår API-dokumentation.
+
+<Warning>
+  När du ska kopiera in din åtkomsttoken för att begära ut data från Haileys API, kom ihåg att skriva Bearer och ett mellanslag innan värdet för åtkomsttoken kopieras in.
+</Warning>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Feb-29-2024-02-23-11-0723-PM.png?width=616&height=625&name=image-png-Feb-29-2024-02-23-11-0723-PM.png)
+
+## Möjligheter med Haileys API
+
+**Aktivering av offentlig medarbetarlista**
+
+Haileys API erbjuder möjligheten att öppna en offentlig åtkomstpunkt som tillhandahåller grundläggande information om medarbetare, såsom namn och URI för profilbild. Denna offentliga åtkomstpunkt tillåter hämtning av en lista över medarbetare med deras väsentliga uppgifter. Ni kan använda den här funktionen för att visa eller komma åt information om era medarbetare på er webbsida.
+
+Du kan aktivera detta genom att gå till Hailey, sedan navigera till Inställningar - Integrationer - Hailey API och aktivera. Du kan också välja ytterligare information att inkludera i listan.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Nov-03-2023-03-44-14-4359-PM.png?width=670&height=1055&name=image-png-Nov-03-2023-03-44-14-4359-PM.png)
+
+## Webhooks
+
+En webhook fungerar som ett sätt för ett system att meddela ett annat system eller applikation i realtid när en specifik händelse eller datamodifikation inträffar.
+
+Du har möjlighet att konfigurera webhooks för att ta emot aviseringar när data förändras, vilket är fördelaktigt om du integrerar Haileys API med din egen applikation. Webhooks skickas när företagsdata ändras eller när en enskild medarbetares data ändras i Hailey. Du kan konfigurera webhook URI från avsnittet Integrationer i Haileys inställningar.
+
+Webhooks skickas med användning av POST-metoden med JSON i kroppen som innehåller antingen det ändrade företags-ID eller medarbetar-ID.
+
+<Tip>
+  Genom att hämta en enskild medarbetare eller hela medarbetarlistan via API:et, kan ni se om det har skett någon uppdatering relaterad till en medarbetare, och säkerställa att er webhook inte missar några ändringar.
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Nov-03-2023-03-49-47-3779-PM.png?width=670&height=256&name=image-png-Nov-03-2023-03-49-47-3779-PM.png)

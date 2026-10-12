@@ -1,0 +1,135 @@
+---
+title: "Import organization"
+---
+
+In this guide, we’ll go through how to import your organizational units into Hailey!
+
+##### What is the organizational import?
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="15tcK1U" title="Import organization" />
+
+## What is the organizational import?
+
+The **Organizational Import** makes it easy to import your organization's various units into Hailey, such as **teams, departments, job titles**, and other organizational units.
+
+This feature is especially useful for organizations with large amounts of data or many organizational units, as it reduces the need to add each unit manually.
+
+In this guide, we'll show you how to quickly and easily import your organizational units into Hailey and ensure that your organizational structure is set up smoothly and efficiently.
+
+## Before you get started
+
+Before you begin importing organizational data, it is a good idea to review your current organizational structure and determine which units need to be imported.
+
+The following organizational units can be imported into Hailey:
+
+- Locations
+- Cost centers
+- Departments
+- Teams
+- Titles
+
+<Tip>
+  You can read more about the different organizational units [**HERE**](/organization-in-hailey) to gain an understanding of the impact they will have in Hailey at a later stage.
+</Tip>
+
+## Get started with the import
+
+Download the import template by navigating to **Settings → Organization**. Click **Import** in the upper-right corner and select the organizational unit you want to import.
+
+Then click on **Download Template** and open the file to get started.
+
+![import-EN](https://docs.haileyhr.com/hs-fs/hubfs/import-EN.png?width=670&height=187&name=import-EN.png)
+
+## Fill in the import template
+
+In the template, enter the information requested in the relevant fields. Each row in the import template represents **one organizational unit**. For example, if you are importing **Locations**, each row represents a single location.
+
+Below is an example of a correctly completed import file for importing **Locations**:
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-27-2025-10-12-54-8071-AM.png?width=670&height=104&name=image-png-Oct-27-2025-10-12-54-8071-AM.png)
+
+Please note that the following fields are **mandatory** in each import template:
+
+- **Locations:** Name, Address, Postal Code, City, Country
+- **Cost Centers:** Name, Code
+- **Departments:** Name
+- **Teams:** Name
+- **Job Titles:** Name
+
+<Tip>
+  Note that when importing **Titles**, commas are not allowed. For example, if you have titles such as *Software architect, Back-end*, you must either:
+
+  - Split the title into two and assign each title to the respective employee, **or**
+  - Combine the titles and remove the comma.
+</Tip>
+
+## Import organizational units
+
+Once the file has been completed, it's time to import it!
+
+To start the import, navigate to **Settings → Organization** and click **Import**. Then select the organizational unit that corresponds to the import template you have been working with.
+
+Next, click the **"Click or drop a file here to upload"** box and select your completed import file.
+
+![import-locations](https://docs.haileyhr.com/hs-fs/hubfs/import-locations.png?width=670&height=250&name=import-locations.png)
+
+If any mandatory column is missing information, an error message will appear indicating which column and row need to be corrected. Make the necessary adjustments and upload the file again.
+
+![success](https://docs.haileyhr.com/hs-fs/hubfs/success.png?width=670&height=250&name=success.png)
+
+When everything looks good, click **Import!** The import may take a little while depending on how much data is being uploaded. You can close the window — the import will continue running in the background.
+
+## Add organizational units manually
+
+If you would rather add organizational units manually, that's perfectly fine as well.
+
+Instead of clicking **Import** in the upper-right corner, select **Add**. Then choose the type of organizational unit you want to create, such as a **team**, **department**, or **job title**, and enter the required information.
+
+This option is particularly useful if you only need to add a few units and do not require a larger import
+
+![add-manually](https://docs.haileyhr.com/hs-fs/hubfs/add-manually.png?width=670&height=313&name=add-manually.png)
+
+## Rights
+
+Only an admin can import organizational units in to your Hailey account. If you’d like to learn more about Roles & rights, you can do so **[HERE](/roles-and-rights)**.
+
+## Common questions
+
+**Question 1:** When should I import organizational units, and when should I add them manually?
+
+That is entirely up to you!
+
+If you need to create a large number of organizational units, such as many job titles, using the **import** is often the quickest and most efficient option.
+
+On the other hand, if you only need to add a few units, it may be easier to create them manually directly in Hailey.
+
+Whichever method you choose, the end result is the same: your organizational units will be created and can be used throughout the system in the same way.
+
+**Question 2:** Can I import a job title that contains a comma?
+
+No, job titles that contain commas are not supported during import.
+
+If a job title includes a comma, you will need to either split it into two separate titles and assign both to the employee, or modify the title by removing the comma and using an alternative naming convention.
+
+**Question 3:** What is the difference between a Task Force and a Team?
+
+Task Forces and Teams serve similar purposes in Hailey, but they are designed for different use cases.
+
+**Teams** are typically used to represent a formal organizational structure and are displayed on employee profiles. They can also be used for reporting, filtering, and other features where organizational hierarchy is relevant.
+
+**Task Forces**, on the other hand, provide a more informal way of grouping employees. They are particularly useful for assigning tasks and managing responsibilities within Hailey, such as in workflows.
+
+Read more [**HERE**](/organization-in-hailey) about the different organizational units and how they are used in Hailey.

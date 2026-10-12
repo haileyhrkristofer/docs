@@ -1,0 +1,156 @@
+---
+title: "Skapa och hantera jobbannonser"
+---
+
+Den här guiden visar hur du skapar och publicerar en jobbannons, så att du kan ta nästa steg i att hitta rätt kandidat för din organisation.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="LWjtE8U" title="Skapa och hantera jobbannonser" />
+
+## Vad är en jobbannons?
+
+En jobbannons i Haileys rekryteringsmodul är en publikt synlig annons där du presenterar en ledig tjänst. Den innehåller information om rollen, företaget och hur man ansöker.
+
+Jobbannonsen är kopplad till en rekrytering och publiceras på er karriärssida samt i utvalda externa kanaler.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Nov-17-2025-03-29-00-4371-PM.png?width=670&height=330&name=image-png-Nov-17-2025-03-29-00-4371-PM.png)
+
+## Innan du sätter igång
+
+För att kunna skapa en **Jobbannons** behöver du först ha en **Karriärsida** och en aktiv **Rekrytering.**
+
+Om du inte är klar med dessa steg än, följ instruktionerna i följande guider:
+
+- **Skapa en Karriärsida – [HÄR](/sv/career-page)**
+- **Starta en Rekrytering – [HÄR](/sv/start-and-manage-recruitment)**
+
+När ovanstående steg är klara kan du skapa din **Jobbannons** till rekryteringen.
+
+## Skapa jobbannons
+
+För att skapa en jobbannons börjar du med att **navigera till den rekrytering som annonsen ska kopplas till**. Öppna rekryteringen och klicka sedan på **Hantera - Skapa jobbannons** i det övre högra hörnet.
+
+<Note>
+  När du har skapat en jobbannons för din rekrytering ändras knappen **Skapa jobbannons** till **Redigera jobbannons**, vilket gör det möjligt för dig att gå tillbaka och göra ändringar.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2026-12-07-32-6641-PM.png?width=670&height=286&name=image-png-Jul-10-2026-12-07-32-6641-PM.png)
+
+Börja med att skapa en översikt för jobbannonsen. **Hailey använder automatiskt er standard-logotyp och omslagsbild,** men du kan enkelt byta ut dem genom att klicka på respektive bild och välja en ny fil. **Ange sedan en titel och, om du vill, en undertitel för jobbannonsen.**
+
+<Note>
+  För att logotyper och omslagsbilder ska vara valbara måste de först laddas upp under **Organisation - Branding.** Läs mer om det [**HÄR.**](/sv/admin-kom-igang#Branding)
+</Note>
+
+Nästa steg är att **välja om avdelning,** **arbetsplats** **och eventuellt lön ska visas i jobbannonsen** genom att aktivera eller avaktivera respektive alternativ. Den avdelning, plats och lön som visas är de uppgifter som valdes när rekryteringen skapades.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2026-12-19-39-0749-PM.png?width=670&height=421&name=image-png-Jul-10-2026-12-19-39-0749-PM.png)
+
+Dags för det roliga – att skriva **arbetsbeskrivningen**! Haileys jobbannons erbjuder en redigerare för formaterad text, vilket innebär att du till exempel kan använda fetstilta rubriker, fetstilad text och punktlistor för att **strukturera innehållet i din jobbannons.**
+
+Du kan också använda **AI som stöd när du skriver arbetsbeskrivningen.** För att använda funktionen behöver AI först aktiveras i Rekrytering. För instruktioner om hur du gör detta, klicka **[HÄR](/sv/ai).**
+
+I det här steget kan du även välja **kontaktperson** från företaget. Hailey väljer automatiskt en administratör, men du kan enkelt ändra detta genom att klicka på namnfältet och välja en medarbetare från rullgardinsmenyn.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2026-12-34-27-4599-PM.png?width=670&height=424&name=image-png-Jul-10-2026-12-34-27-4599-PM.png)
+
+## Ansökningsformulär
+
+Nästa steg är att bestämma **hur kandidaterna ska ansöka till tjänsten**. Du redigerar ansökningsformuläret genom att välja **Ansökan** i menyn till vänster.
+
+För att kandidater ska kunna skicka in en ansökan innehåller formuläret fyra obligatoriska fält som inte kan tas bort:
+
+- Förnamn
+- Efternamn
+- Privat e-postadress
+- Privat telefonnummer
+
+Som standard innehåller ansökningsformuläret även fälten **CV** och **Personligt brev**. Du kan välja om kandidaterna måste bifoga något av dessa genom att markera fältet som obligatoriskt.
+
+De anpassade **ansökningsfälten kan enkelt flyttas upp eller ned med hjälp av pilarna**. Du kan även ta bort ett fält genom att klicka på papperskorgen.
+
+<Tip>
+  Det går att byta namn på de anpassade ansökningsfälten som redan har skapats, om så önskas.
+</Tip>
+
+![d](https://docs.haileyhr.com/hs-fs/hubfs/d.png?width=670&height=411&name=d.png)
+
+Om du vill lägga till **fler ansökningsfält** i ansökan klickar du på plustecknet och väljer den fälttyp du vill använda. Du behöver också bestämma om dessa fälten ska vara obligatoriska eller inte. Följande fälttyper finns tillgängliga:
+
+- Område för uppladdning av PDF
+- Ja/Nej
+- Textfält
+- Kort text (max 80 tecken)
+- Nummer
+- Alternativ
+- Flervalsalternativ
+
+Fälttyperna avgör hur kandidaterna kan besvara formuläret och säkerställer att informationen samlas in i det format du behöver.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2026-12-49-04-4439-PM.png?width=670&height=415&name=image-png-Jul-10-2026-12-49-04-4439-PM.png)
+
+Publicera jobbannons
+
+Nu är det dags att publicera jobbannonsen! Som nämnts tidigare måste det finnas en karriärsida för att ni ska kunna publicera en jobbannons. Klicka [**HÄR**](/sv/career-page) för instruktioner om hur du skapar din(a) karriärsida(or).
+
+För att publicera annonsen klickar du på **Publicera** i sidomenyn till höger. Här väljer du vilken karriärsida annonsen ska publiceras på samt under vilka datum den ska vara synlig.
+
+Om publiceringsdatumen lämnas tomma publiceras annonsen direkt och kommer att vara tillgänglig tills den manuellt avpubliceras.
+
+<Note>
+  Observera att när du publicerar en jobbannons blir den synlig på er publika karriärsida.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2026-01-07-19-2091-PM.png?width=670&height=420&name=image-png-Jul-10-2026-01-07-19-2091-PM.png)
+
+När jobbannonsen har publicerats visas den på er karriärsida. Därifrån kan ni enkelt dela annonsen via LinkedIn, mail och kopiera länken för att dela i andra kanaler.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2026-01-10-19-9133-PM.png?width=670&height=418&name=image-png-Jul-10-2026-01-10-19-9133-PM.png)
+
+## Avpublicera jobbannons
+
+För att avpublicera en jobbannons, gå till **Rekrytering** i huvudmenyn - **Jobbannonser** - välj rätt jobbannons - klicka **Avpublicera** - **Ja, jag är säker**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-25-2026-07-30-15-2752-AM.png?width=627&height=291&name=image-png-Aug-25-2026-07-30-15-2752-AM.png)
+
+## Rättigheter
+
+Som Admin i Hailey har du per automatik rättigheten **Åtkomst till rekryteringar**, som inkluderar **Jobbannonser.** Läs mer om Roller & Rättigheter i den [**HÄR**](/sv/roles-and-rights) guiden.
+
+- **Inga** - Rekryteringen i huvudmenyn är **dolda** för användaren.
+- **Visa** - Gör det möjligt att endast **se** allt i fliken **Rekrytering i huvudmenyn**, inklusive **Karriärsidan, Rekrytering** och **Jobbannonser.**
+- **Visa och ändra** - Ger användaren **full åtkomst** till att **hantera rekryteringsmodulen,** inkluderat möjligheten att skapa, redigera och ta bort **Karriärsidan, Rekryteringar** och **Jobbannonser.**
+
+## Vanliga fragor
+
+<AccordionGroup>
+  <Accordion title="Jag har satt ett **Till-datum** för min publicerade annons och nu vill jag förlänga så att annonsen ligger uppe på min karriärsida längre, hur gör jag detta?">
+    För att ändra **Till-datumet** på er publicerade annons väljer ni först att **Avpublicera** annonsen, för att sedan **Publicera** den på nytt med nya datum. Avpubliceringen kommer **inte** ta bort kandidater som redan sökt tjänsten. Detta innebär att informationen om varje kandidat kommer finnas kvar i rekryteringen.
+  </Accordion>
+
+  <Accordion title="Hur lägger jag till screening frågor i mitt ansökningsformulär?">
+    Du kan lägga till screening frågor i ditt ansökningsformulär genom att lägga till ett eller flera **anpassade ansökningsfält**.
+
+    Om du väljer typerna **Ja/Nej,** **Alternativ,** eller **Flervalsalternativ** kommer du kunna filtrera och sortera kandidaterna utifrån deras svar.
+  </Accordion>
+
+  <Accordion title="Jag är nu klar med annonseringen av min jobbannons, behöver jag aktivt plocka ner annonsen?">
+    Ja, för att avsluta möjligheten att få in ansökningar till er jobbannons behöver annonsen **avpubliceras**. Detta avslutar annonseringen av er jobb-annons via er karriärsida.
+  </Accordion>
+
+  <Accordion title="Måste jag ha en karriärsida för att publicera min jobbannons?">
+    Ja, för att kunna publicera den annons ni skapat behöver det finnas en karriärsida för denna att publiceras på. [**HÄR**](/sv/career-page) kan ni läsa mer om hur ni skapar upp er karriärsida.
+  </Accordion>
+</AccordionGroup>

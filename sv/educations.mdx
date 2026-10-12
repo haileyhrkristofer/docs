@@ -1,0 +1,67 @@
+---
+title: "Skapa utbildningar"
+---
+
+Den här guiden hjälper er att sätta igång med att skapa era utbildningar i Hailey!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="avOz0z6" title="Skapa utbildningar" />
+
+## Vad är utbildningar?
+
+Utbildningar hjälper dig att utveckla medarbetares färdigheter, kunskap på ett strukturerat sätt. De är användbara för att säkerställa efterlevnad, onboarding och kontinuerlig professionell utveckling. Utbildningstillfällen är de tillfällen då en utbildning genomförs, vilket gör det enkelt att tilldela deltagande. I systemet kan du hantera utbildningar och tillfällen för att följa upp närvaro och säkerställa att medarbetare uppfyller rollkrav.
+
+## Skapa utbildningar
+
+För att skapa en utbildning, gå till **Inställningar - Skills**, klicka på **Lägg till** och välj **Utbildning**. Ange namnet och en beskrivning av utbildningen och klicka på **Spara**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-28-2026-09-13-38-8597-AM.png?width=621&height=357&name=image-png-Jul-28-2026-09-13-38-8597-AM.png)
+
+Alla skapade utbildningar visas i översiktslistan!
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-23-2026-09-32-28-4826-AM.png?width=670&height=338&name=image-png-Jun-23-2026-09-32-28-4826-AM.png)
+
+## Rättigheter
+
+- **Visa** på egen profil gör det möjligt att se det som ligger under fliken **Utbildningar** på ens egna profil.
+- **Visa** på andra medarbetare gör det möjligt att se det som ligger under fliken **Utbildningar** på medarbetarprofilen + tillgång till **Skills - Utbildningar** i huvudmenyn för medarbetare som omfattas.
+- **Visa & ändra** utbildningar gör det möjligt att visa, lägga till och ta bort tillagda utbildningar.
+- **Inställningar - Skapa utbildningar** ger full tillgång till att skapa upp nya och hantera redan tillagda utbildningar under **Inställningar**.
+
+Läs mer i guiden för Roller och rättigheter [HÄR.](/sv/roles-and-rights)
+
+<Note>
+  Vill du veta hur man **lägger till** ett utbildningstillfälle? Läs mer om hur du gör det i guiden [HÄR!](/sv/add-education-session)
+</Note>
+
+## Vanliga frågor
+
+Här hittar du svar på vanliga frågor som kan hjälpa dig när du skapar utbildningar.
+
+<AccordionGroup>
+  <Accordion title="Var syns utbildningsbeskrivningen?">
+    Beskrivningen visas när ett utbildningstillfälle registreras och ger den som registrerar tillfället mer information om utbildningen.
+
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-24-2026-11-02-50-7431-AM.png?width=670&height=441&name=image-png-Jul-24-2026-11-02-50-7431-AM.png)
+
+    Medarbetaren kan även skriva en separat beskrivning när ett utbildningstillfälle registreras. Läs mer om den processen [HÄR](/sv/add-education-session).
+  </Accordion>
+
+  <Accordion title="Vilka typer av utbildningar är funktionen avsedd för?">
+    Utbildningsfunktionen i Hailey är främst avsedd för att följa upp **utbildningstillfällen**, till exempel kurser och workshops.
+
+    Eftersom utbildningstillfällen registreras i timmar och kan omfatta högst en dag är funktionen inte utformad för att hantera längre utbildningar, såsom medarbetares examina.
+  </Accordion>
+</AccordionGroup>

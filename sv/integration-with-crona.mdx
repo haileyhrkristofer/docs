@@ -1,0 +1,230 @@
+---
+title: "Integration med Crona Lön"
+---
+
+Med integrationen till Crona Lön kan ni säkerställa att uppgifter som förs mellan systemen hanteras GDPR-säkert. Samtidigt sparar ni tid genom att integrationen automatiskt säkerställer att ändringar i Hailey synkroniseras till Crona Lön.
+
+<Tip>
+  Första gången du aktiverar en av **Haileys standardintegrationer?** Börja med att läsa den [**HÄR**](/sv/haileys-standard-integrations)guiden för att få veta vad du ska tänka på innan du sätter igång.
+</Tip>
+
+---
+
+## Vad gör integrationen?
+
+Vid varje synkronisering kommer **inkluderad data** att **automatiskt** uppdateras via **API överföring** **till Crona Lön** och få samma värde som finns i Hailey, eftersom **Hailey är master** (facit).
+
+Med API-överföringen sker en synkronisering mellan Hailey och Crona Lön **varje timme** baserat på förändringar. Detta innebär att:
+
+- Inkluderad data som inte överensstämmer mellan Hailey och Crona Lön kommer att uppdateras med den information som finns i Hailey varje timme.
+
+<Note>
+  Ni har möjlighet att föra över medarbetardata, löner och frånvaro från Hailey till Crona Lön.
+</Note>
+
+## Vilken data är inkluderad i integrationen?
+
+**Vid synkronisering utan aktiverad lönesynk:**
+
+| **HAILEY** | **CRONA LÖN** |
+|---|---|
+| Anställningsnummer | Anställningsnummer |
+| Förnamn | Förnamn |
+| Efternamn | Efternamn |
+| Personnummer | Personnummer |
+| Gatuadress | Adress 1 |
+| Postnummer | Postnummer |
+| Stad | Postort |
+| Land | Land |
+| Email privat | Epost, privat |
+| Företagsmail | Epost, arbete |
+| Telefonnummer jobb | Mobilnummer |
+| Titlar | Befattning |
+| Anställningsdag | Anställd fr. o. m. |
+| Sista anställningsdag | Slutat datum |
+| Clearingnummer | Clearingnummer |
+| Kontonummer | Kontonummer |
+| **VALFRIA** |  |
+| Befattningskod (Eget anställningsfält) | Befattningskod |
+| Mallpersoner (Eget medarbetarfält) | Mallpersoner |
+
+**Vid synkronisering med aktiverad lönesynk:**
+
+| **HAILEY** | **CRONA LÖN** |
+|---|---|
+| Månadslön | Månadslön |
+| Timlön | Timlön |
+
+<Warning>
+  - Observera att Hailey synkroniserar **grundlönen** via integrationen, eventuell information om arbetstider/sysselsättningsgrad/omfattning behöver fyllas i manuellt via personalregistret i Crona Lön.
+  - Har medarbetaren fler än en timlön i Hailey kommer **ingen** av dessa synkroniseras till Crona.
+  - Observera att alla löner med betalningsperioden månadslön kommer att **slås ihop** i Crona på medarbetarens kort.
+</Warning>
+
+**Vid synkronisering med aktiverad frånvarosynk:**
+
+| **HAILEY** | **CRONA LÖN** |
+|---|---|
+| Frånvaro | Frånvaro |
+
+## Vad krävs för att ingå i integrationen?
+
+För att en medarbetare **ska ingå i integrationen** behöver medarbetaren ha:
+
+<Note>
+  Ett **anställningsnummer** i Hailey som matchar **Anställnings** **ID** i Crona Lön
+</Note>
+
+Om en medarbetare i Hailey har ett **anställningsnummer** som ännu inte finns i Crona Lön, kommer en användare skapas upp i Crona Lön. Därför är det **viktigt** att alla nya medarbetare alltid skapas i Hailey först.
+
+ Medarbetare som helt saknar anställningsnummer kommer aldrig ingå i integrationen.
+
+## Mallpersoner och befattningskoder:
+
+Integrationen ger även möjlighet att aktivera synk med **mallpersoner** och **befattningskoder** om ni använder det i er Crona Lön uppsättning. Detta innebär att när en ny medarbetare anställs och skapas upp i Hailey, kan ni fylla i på medarbetarkortet vilken **mallperson** den nya medarbetaren ska ha i Crona Lön. Detsamma gäller för **befattningskoder.** För att aktivera synk för detta krävs det att ni skapat **Medarbetarfält** för mallpersoner samt **Anställningsfält** för befattningskoder. Följ guiden [HÄR](/sv/anpassning) för hur ni sätter upp era medarbetar- och anställnignsfält.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-May-15-2026-12-07-48-0230-PM.png?width=670&height=198&name=undefined-May-15-2026-12-07-48-0230-PM.png)
+
+**❗️** Om ni har valt att inkludera mallpersoner i integrationen, tänk på detta:
+
+När en ny medarbetare ska börja hos er och ni vill att hen ska omfattas av integrationen och kunna skapas upp i Crona, välj först på medarbetarkortet vilken mallperson medarbetaren ska ha. Det är viktigt att ni gör det **innan** ni ger era nya medarbetare ett anställningsnummer i Hailey. Detta eftersom nya medarbetare skapas upp i Crona när de har fått ett anställningsnummer i Hailey - och därmed också tillhörande mallperson.
+
+## Innan du aktiverar integrationen
+
+Innan aktivering av integrationen behöver alla fält under inkluderad data som omfattas av integrationen säkerställas innehåller korrekt data innan aktivering, eftersom uppgifterna i Hailey kommer att skriva över motsvarande data i Crona.
+
+Om ni ska synkronisera lön eller frånvaro behöver ni dessutom välja startdatum för när respektive synk ska börja gälla. Startdatumen måste vara korrekt satta för att rätt information ska föras över.
+
+För mallpersoner måste du skapa ett **eget medarbetarfält** och välja typen **Alternativ**, där ett alternativ avser en mallperson i Crona.
+
+<Tip>
+  Detta innebär alltså; om ni använder er utav t. ex. 8 st olika mallpersoner i Crona, ska 8 st alternativ skapas i det egna fältet. Respektive alternativ döps till det **Id** som mallpersonen har i Crona (observera - ej namnet på mallpersonen). Se nedan bilder för exempel. Alternativet i Hailey och Id:t på mallpersonen i Crona behöver vara identiska.
+</Tip>
+
+För befattningskod behöver du skapa ett **eget anställningsfält**. Med samma logik som ovan, behöver typen på detta egna fält vara **Alternativ**, och respektive alternativ som anges är en befattningskod som återfinns i Crona.
+
+## Hur aktiveras integrationen?
+
+För att aktivera integrationen behöver du:
+
+<Steps>
+  <Step title="Generera och hämta ut API nyckeln i Crona Lön">
+    Generera och hämta ut API nyckeln i Crona Lön
+  </Step>
+  <Step title="Lägga till integrationen i Hailey och klistra in API nyckeln">
+    Lägga till integrationen i Hailey och klistra in API nyckeln från Crona Lön
+  </Step>
+  <Step title="Fyll i nödvändig data för integrationsuppsättningen">
+    Fyll i nödvändig data för integrationsuppsättningen.
+  </Step>
+  <Step title="Omfatta integrationen vid behov">
+    Omfatta integrationen vid behov
+  </Step>
+  <Step title="Spara och aktivera!">
+    Spara och aktivera!
+  </Step>
+</Steps>
+
+Börja med att logga in i Crona Lön.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-May-15-2026-09-26-33-6619-AM.png?width=670&height=345&name=undefined-May-15-2026-09-26-33-6619-AM.png)
+
+Klicka på Inställningar - Kopplingar.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-May-15-2026-09-26-33-1283-AM.png?width=670&height=271&name=undefined-May-15-2026-09-26-33-1283-AM.png)
+
+Klicka på Inställningar och kryssa i rutan för "Tillåt kopplingar att skapa nya anställda", **denna ruta måste vara ifylld för att integrationen ska fungera**. Klicka sedan på Spara.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-May-15-2026-09-26-31-3613-AM.png?width=552&height=423&name=undefined-May-15-2026-09-26-31-3613-AM.png)
+
+Klicka sedan på raden som har kommit upp.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-May-15-2026-09-26-33-9792-AM.png?width=670&height=349&name=undefined-May-15-2026-09-26-33-9792-AM.png)
+
+Välj Koppling och därefter **API-koppling**. Under "Benämning" döper ni vad kopplingen ska heta, förslagsvis "**Hailey HR - Integration**".
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-May-15-2026-09-26-32-8775-AM.png?width=648&height=192&name=undefined-May-15-2026-09-26-32-8775-AM.png)
+
+Klicka sedan på Spara.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-May-15-2026-09-26-32-4706-AM.png?width=670&height=344&name=undefined-May-15-2026-09-26-32-4706-AM.png)
+
+Därefter dyker en aktiveringskod upp. Kopiera aktiveringskoden.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-May-15-2026-09-26-31-8560-AM.png?width=670&height=344&name=undefined-May-15-2026-09-26-31-8560-AM.png)
+
+Gå in i Hailey - Inställningar - Integrationer och klicka på Crona.
+
+<Note>
+  Om ni väljer ett synkroniseringsdatum som är **senare** än anställningens startdatum i Crona, kommer **en del av anställningen** (innan synkroniseringsdatumet) att flyttas till historiken och förbli orörd. Den del vi hanterar blir den aktiva anställningen **med synkroniseringsdatumet som nytt startdatum.**
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-May-15-2026-09-26-31-6334-AM.png?width=670&height=275&name=undefined-May-15-2026-09-26-31-6334-AM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-May-15-2026-09-26-34-2992-AM.png?width=670&height=248&name=undefined-May-15-2026-09-26-34-2992-AM.png)
+
+Om ni väljer ett synkroniseringsdatum i Hailey som är **senare** än lönens startdatum i Crona kommer det **skapas upp en ny rad** för lönen i Crona med ett nytt startdatum. Om lönehistoriken däremot inte finns i Crona kommer lönen få det startdatum som ni väljer att löner ska synkroniseras ifrån i Hailey.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-May-15-2026-09-26-33-4150-AM.png?width=670&height=386&name=undefined-May-15-2026-09-26-33-4150-AM.png)
+
+- **Aktivera synkronisering av frånvaro:** För att aktivera synkroniseringen av frånvaro, ange ett startdatum för när ni önskar att frånvarodata ska överföras från Hailey till Crona. Observera att endast frånvaro som har lagts till eller ändrats efter detta datum kommer att inkluderas i synkroniseringen. Frånvaro registrerad före detta datum kommer inte att överföras. Det är viktigt att notera att Hailey är master, vilket innebär att all frånvarodata i Crona kommer att uppdateras med information från Hailey efter det angivna datumet. Nästa steg är att mappa era frånvaroanledningar i Hailey mot era respektive frånvaroanledningar i Crona. ![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-May-15-2026-09-26-32-1676-AM.png?width=483&height=426&name=undefined-May-15-2026-09-26-32-1676-AM.png)
+
+Klicka på Spara för att aktivera integrationen.
+
+## Gäller integrationen inte för hela företaget?
+
+Då finns det möjlighet att **omfatta** integrationen!
+
+- Omfattning av integrationen innebär att ni kan möjliggöra att **endast medarbetare med specifik arbetsplats och/eller legal enhet,** **inkluderas i integrationen.**
+- Detta är viktigt att göra **direkt när ni sätter upp integrationen**. Varför detta måste göras direkt i uppsättningen av integrationen är för att säkerställa att rätt medarbetare synkas från Hailey till Crona Lön **eftersom synkroniseringen inleds omedelbart.**
+
+Om dessa fält lämnas tomma kommer alla anställda som uppfyller krav för integrationen att synkas över.
+
+#### Bra att ha i åtanke om **anställning och omfattning**:
+
+- Endast de anställningar som omfattas av integrationen kommer att synkas över till Crona Lön.
+- Exempelvis: Omfattar ni integrationen mot en arbetsplats måste fältet arbetsplats vara ifyllt på samtliga anställningar som ska synkas. Detta gäller även **historiska anställningar**.
+
+<Tip>
+  **Exempelbilden** nedan visar att endast medarbetare som tillhör den valda legala enheten och den valda arbetsplatsen som anges i integrationsuppsättningen, kommer att inkluderas i integrationen
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-15-2026-11-45-10-6100-AM.png?width=642&height=308&name=image-png-May-15-2026-11-45-10-6100-AM.png)
+
+### Det är även möjligt att skapa upp flera integrationer mot olika/flera konton i Crona Lön.
+
+- Om ert företag har flera arbetsplatser och/eller legala enheter i Hailey kan det vara fördelaktigt att skapa separata integrationer med Crona Lön till olika/flera Crona konton.
+
+Om ni **vill ha flera uppsättningar av integrationen mot olika Crona Lön konton** gör ni om samma process som beskrivit ovan. Med andra ord, navigera till rubriken **Lön** sedan gör du på samma sätt som när du satte upp den första integrationen.
+
+Du kan följa vilka/hur många integrationer som ert företag har aktiva under Aktiv-fliken under Integrationer.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-15-2026-11-48-12-8202-AM.png?width=589&height=357&name=image-png-May-15-2026-11-48-12-8202-AM.png)
+
+## Vanliga fragor
+
+<Note>
+  **Hur kopplas medarbetarna ihop mellan Hailey och Crona?**
+
+  Via anställningsnumret. Det behöver överensstämma i båda systemen. Gå igenom medarbetarna i Hailey och se till att alla har samma anställningsnummer som i Crona.
+</Note>
+
+<Note>
+  **Vilka löneförändringar synkroniseras till Crona?**
+
+  Endast löneförändringar som ligger inom ert sync-from-datum, och bara om ni har valt att synkronisera löner i integrationen. En retroaktiv löneförändring som gäller från ett datum före sync-from-datumet kommer inte med. Kontrollera att lönesynken är aktiverad och att förändringens datum ligger inom spannet.
+</Note>
+
+<Note>
+  **Vad händer med information före sync-from-datumet om datumet har ändrats?**
+
+  Den kommer inte med automatiskt. Om ni har flyttat sync-from-datumet bakåt behöver integrationen konfigureras om, så att Hailey tar med informationen från det nya datumet.
+</Note>
+
+<Note>
+  **Vilken frånvaro synkroniseras till Crona?**
+
+  Bara godkänd frånvaro. Om en frånvaro inte syns i Crona, kontrollera att den är godkänd i Hailey.
+</Note>
+
+*Om du har några frågor angående integrationen, vänligen kontakta din Customer Success kontaktperson på Hailey.*

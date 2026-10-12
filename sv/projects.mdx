@@ -1,0 +1,36 @@
+---
+title: "Projekt"
+---
+
+Ska dina medarbetare rapportera sin tid i projekt? Den här guiden visar dig hur ni skapar projekt!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="ydDyPQi" title="Projekt" />
+
+## Vad är Projekt?
+
+När ni använder **Projekt** har era medarbetare möjlighet att lägga till ett projekt för den rapporterade arbetstiden. Att använda **Projekt** ger er ett effektivt sätt att kategorisera er tid och följa hur era resurser används.
+
+## Skapa Projekt
+
+Klicka på **Inställningar - Tid & frånvaro - Lägg till - Projekt**. Namnge Projektet och om ni önskar, en **Omfattning**. När ni omfattar ett projekt innebär det att endast de medarbetare som ingår i omfattningen har möjlighet att rapportera tid för det specifika projektet. Ni har möjlighet att omfatta till **Legal enhet**, **Arbetsplats** och **Avdelning**. Läs mer om att **rapportera tid** [HÄR](/sv/report-and-approve-time).
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-22-2026-05-18-12-4649-AM.png?width=670&height=394&name=image-png-Apr-22-2026-05-18-12-4649-AM.png)
+
+<Tip>
+  **Tips** När ni använder **Projekt** i er tidsrapportering kan du följa vardera projekt i **Rapporten för Tid**. Läs med om hur man rapporterar tid i guiden HÄR.
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-12-57-03-2276-PM.png?width=667&height=337&name=image-png-Aug-07-2026-12-57-03-2276-PM.png)

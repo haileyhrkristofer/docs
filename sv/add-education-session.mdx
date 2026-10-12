@@ -1,0 +1,91 @@
+---
+title: "Lägg till utbildningstillfälle"
+---
+
+Den här guiden visar dig hur du lägger till nya utbildningstillfällen som medarbetarna genomför!
+
+Hur får man en [översikt av alla utbildningar?](#oversikt)
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="rOytwFb" title="Lägg till utbildningstillfälle" />
+
+## Vad är utbildningar?
+
+Utbildningar hjälper dig att utveckla medarbetares färdigheter, kunskap på ett strukturerat sätt. De är användbara för att säkerställa efterlevnad, onboarding och kontinuerlig professionell utveckling. Utbildningstillfällen är de tillfällen då en utbildning genomförs, vilket gör det enkelt att tilldela deltagande. I systemet kan du hantera utbildningar och tillfällen för att följa upp närvaro och säkerställa att medarbetare uppfyller rollkrav.
+
+## Innan du börjar
+
+Innan du börjar är det viktigt att du lagt till utbildningar under **Inställningar**. Följ guiden [HÄR](/sv/educations) för att se hur du sätter upp dem.
+
+## Hur lägger man till utbildningstillfälle?
+
+För att lägga till ett utbildningstillfälle, gå till **medarbetarlistan** eller en **medarbetares** **profil**. Om du går till medarbetarlistan kan du lägga till ett utbildningstillfälle på flera medarbetare på samma gång. Klicka på **Hantera - Lägg till utbildningstillfälle**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-23-2026-07-52-24-9785-AM.png?width=667&height=334&name=image-png-Jun-23-2026-07-52-24-9785-AM.png)
+
+Välj en utbildning och lägg in en **beskrivning** för detta specifika tillfälle. Välj ett **datum** och **varaktighet**. Du kan lägga till flera tillfällen på en och samma gång genom att klicka på **\+ Lägg till utbildningstillfälle**. Klicka sedan på **Spara**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-23-2026-07-54-18-6354-AM.png?width=670&height=339&name=image-png-Jun-23-2026-07-54-18-6354-AM.png)
+
+Utbildningstillfället kommer att registreras på varje vald medarbetare under tabben **Utbildning**. När du klickar på en utbildning kommer alla registrerade tillfällen att visualiseras.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-07-2026-07-01-51-6346-PM.png?width=666&height=357&name=image-png-May-07-2026-07-01-51-6346-PM.png)
+
+## Översikt utbildningar
+
+Om du har rätt att se utbildning på andra medarbetare än dig själv, kan du se en översikt på utbildningar genom att klicka på **Skills - Utbildningar** i huvudmenyn.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-07-2026-06-50-42-4018-PM.png?width=670&height=387&name=image-png-May-07-2026-06-50-42-4018-PM.png)
+
+Du kommer ha tillgång till tre vyer:
+
+- Utbildningsöversikt
+- Tillfällen
+- Per medarbetare
+
+**Utbildningsöversikten** visar totala antalet sessionstimmar, antal sessioner samt en lista över varje utbildning med respektive antal sessionstimmar samt sessioner.
+
+Du kan exportera denna vy genom att klicka på **Exportera** uppe i högra hörnet.
+
+<Tip>
+  **Tips!** Använd kalendern uppe i högra hörnet för att enkelt välja vilken period som ska visas.
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-23-2026-07-56-42-9362-AM.png?width=669&height=338&name=image-png-Jun-23-2026-07-56-42-9362-AM.png)
+
+Vyn **Tillfällen** hjälper dig med en översikt över varje specifika tillfälle som medarbetarna deltog på ett ubildningstillfälle.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-23-2026-07-58-38-6663-AM.png?width=669&height=337&name=image-png-Jun-23-2026-07-58-38-6663-AM.png)
+
+Genom att klicka på **de tre prickarna - Redigera**, kan du redigera deltagarna, datum, varaktighet och beskrivning på sessionen. Klicka sedan på **Spara**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-23-2026-07-55-57-8544-AM.png?width=669&height=337&name=image-png-Jun-23-2026-07-55-57-8544-AM.png)
+
+Vyn **Per medarbetare** är särskilt hjälpsam när du behöver följa det **senaste deltagandet** för olika utbildningar.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-23-2026-07-59-26-7071-AM.png?width=669&height=334&name=image-png-Jun-23-2026-07-59-26-7071-AM.png)
+
+<Tip>
+  **Tips!** Använd filtreringen till vänster för att enklare kunna navigera.
+</Tip>
+
+## Rättigheter
+
+- **Visa** på egen profil gör det möjligt att se det som ligger under fliken **Utbildningar** på ens egna profil.
+- **Visa** på andra medarbetare gör det möjligt att se det som ligger under fliken **Utbildningar** på medarbetarprofilen + tillgång till **Skills - Utbildningar** i huvudmenyn för medarbetare som omfattas.
+- **Visa & ändra** utbildningar gör det möjligt att visa, lägga till och ta bort tillagda utbildningar.
+- **Inställningar - Skapa utbildningar** ger full tillgång till att skapa upp nya och hantera redan tillagda utbildningar under **Inställningar**.
+
+Läs mer i guiden för Roller och rättigheter [HÄR.](/sv/roles-and-rights)

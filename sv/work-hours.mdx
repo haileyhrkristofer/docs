@@ -1,0 +1,38 @@
+---
+title: "Arbetstimmar"
+---
+
+Ska dina medarbetare rapportera tid i Hailey? Den här guiden hjälper dig att sätta igång med Arbetstimmarna!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="b6IUReh" title="Arbetstimmar" />
+
+## Vad är Arbetstimmar?
+
+När dina medarbetare ska rapportera tid i Hailey behöver de ha **Arbetstimmar** angivna under inställningarna för **Tid och frånvaro** på sin profil. Arbetstimmar representerar de timmar en medarbetare förväntas arbeta och därmed behöver rapportera tid för.
+
+## Skapa Arbetstimmar
+
+Börja med att klicka på **Inställningar - Tid och frånvaro - Lägg till - Arbetstimmar**. Lägg till ett namn och procent av heltid. Arbetstimmarna är automatiskt inställda till 8 timmar per dag måndag till fredag. Det här kan du ändra så att det passar er organisations behov. Klicka på **Spara**.
+
+<Note>
+  För att medarbetare ska kunna rapportera tid kräver det att de har **Arbetstimmar** kombinerat med en **Rapporteringspolicy** på sin profil. Se mer om hur **Rapporteringspolicy** fungerar [HÄR](/sv/create-reporting-policy).
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-29-2026-12-23-49-3959-PM.png?width=667&height=337&name=image-png-Apr-29-2026-12-23-49-3959-PM.png)
+
+De schemalagda arbetstimmarna kommer visas som en ljusblå markering på medarbetarens profil under **Tidsfliken**. Läs mer om att rapportera tid [HÄR](/sv/report-and-approve-time).
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-21-2026-09-56-51-8208-AM.png?width=668&height=384&name=image-png-Apr-21-2026-09-56-51-8208-AM.png)

@@ -1,0 +1,135 @@
+---
+title: "Medarbetarmappar"
+---
+
+Använd mappar för att hålla medarbetardokument organiserade och åtkomststyrda. Håll er GDPR-kompatibla med automatisk radering och anpassade rättigheter.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="1owePWv" title="Medarbetarmappar" />
+
+## Vad är medarbetarmappar?
+
+Medarbetarmappar erbjuder ett strukturerat sätt att organisera dokument i medarbetarprofiler. De gör det möjligt att kategorisera och gruppera dokument, vilket underlättar navigering och hantering.
+
+En enskild medarbetare kan ha ett stort antal tillhörande dokument. Vissa kan kräva begränsad åtkomst, medan andra behöver sparas under en viss tidsperiod. Mappar kan konfigureras med både behörigheter och automatiska regler för radering för att bidra till efterlevnad av GDPR.
+
+## Hur skapar man mappar?
+
+För att skapa en medarbetarmapp går du till **Inställningar - Anpassning** - **Lägg till**. Välj Medarbetarmapp.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-02-2026-07-03-58-8824-AM.png?width=670&height=370&name=image-png-Sep-02-2026-07-03-58-8824-AM.png)
+
+Fyll i mappens namn - Välj inställningarna för Tillgången till mappen - Spara.
+
+<Note>
+  Det är valfritt att omfatta mappen och att ställa in regler för radering av dokument. Läs mer om det [**HÄR**](#radering-dokument-omfattning).
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-02-2026-07-59-22-8792-PM.png?width=670&height=387&name=image-png-Sep-02-2026-07-59-22-8792-PM.png)
+
+## Hur ställer man in åtkomst till mappar?
+
+Som Admin i Hailey ges du **inte automatiskt åtkomst** till någon mapp. Om en administratör ska ha tillgång till en eller flera mappar måste detta ställas in, mapp för mapp. Detsamma gäller för övriga åtkomstinställningar då dessa sätts i respektive mapp.
+
+<Note>
+  Läs mer om hur du kan ställa in åtkomst för Admin till medarbetarmappar **[HÄR](#admin-tillgang)**.
+</Note>
+
+Först behöver du bestämma vem som ska kunna göra vad med dokumenten i mappen. De grundläggande behörighetsinställningarna kan göras för följande roller:
+
+- Medarbetaren
+- Alla chefer ovanför
+- Medarbetarens chef
+- Medarbetarens team lead
+
+<Note>
+  En förklaring av de fyra möjliga inställningarna:
+
+  - **Inga**: Mappen kommer inte att vara synlig alls.
+  - **Visa**: Mappen kommer att vara synlig tillsammans med all dokumentation i den.
+  - **Ladda upp**: Samma som för Visa samt möjligheten att lägga till dokumentation i mappen.
+  - **Full åtkomst**: Samma som för Visa, Ladda upp samt möjligheten att ta bort dokumentation.
+</Note>
+
+Utöver detta kan ni också lägga till **andra alternativ för vilka som ska få åtkomst**. Detta görs via knappen **Lägg till** och kan göras för:
+
+- Specifik medarbetare
+- Specifikt team
+- Specifik avdelning
+- Specifik arbetsgrupp
+
+<Note>
+  Team, avdelning och arbetsgrupp ställs in via Inställningar - Organisation. Du kan läsa mer om detta **[HÄR](/sv/admin-kom-igang#organisation)**.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-02-2026-08-02-29-8550-PM.png?width=670&height=1010&name=image-png-Sep-02-2026-08-02-29-8550-PM.png)
+
+**Följ stegen nedan för att ge dig själv som Admin tillgång till en mapp:**
+
+- Klicka på de tre prickarna till höger om den aktuella mappen - välj **Redigera**. Klicka därefter på **Lägg till.**
+- Välj alternativet **Specifik medarbetare** eller **Specifik arbetsgrupp** (om ni har skapat en sådan för administratörerna i ert konto). Välj därefter den/de medarbetare eller arbetsgrupp som ska ha tillgång till dokumenten i mappen.
+- Välj därefter vilka inställningar administratören/administratörerna ska kunna göra i mappen, enligt beskrivning [HÄR](#atkomst-till-mappar).
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-02-2026-08-10-12-9582-PM.png?width=670&height=424&name=image-png-Sep-02-2026-08-10-12-9582-PM.png)
+
+## Hur fungerar radering av dokument och omfattning?
+
+För att säkerställa att dokument inte sparas längre än nödvändigt kan du ställa in regler för när dokument ska raderas automatiskt. Reglerna gäller för hela mappen, så det kan vara fördelaktigt att skapa **flera mappar om olika dokument har olika behov av radering**.
+
+Reglerna för radering kan anges både för **Antal dagar efter uppladdning** och **Antal dagar efter avslut.** Det är även möjligt att inte ha någon regel för automatisk radering alls för en mapp.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-02-2026-08-23-45-9434-PM.png?width=670&height=396&name=image-png-Sep-02-2026-08-23-45-9434-PM.png)
+
+**Omfattning** avgör endast **var** mappen visas och påverkar inte åtkomsten. Med andra ord styr omfattningen mappens placering, inte vem som kan se eller interagera med dess innehåll.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-02-2026-08-22-03-2196-PM.png?width=670&height=422&name=image-png-Sep-02-2026-08-22-03-2196-PM.png)
+
+## Hur hanterar man mappar?
+
+När du börjar arbeta med medarbetarmapparna kommer du att se att det redan finns en typ av mapp, **Rotmappen**. Det är här alla dokument som ännu inte har organiserats hamnar, och de visas direkt som enskilda filer.
+
+Alla mappar som du har behörighet att komma åt visas på varje **medarbetarkort** under fliken **Dokument**. Även tomma mappar visas, förutsatt att du har rättighet att se dem.
+
+<Note>
+  Läs mer om hur du laddar upp dokument till medarbetarmapparna **[HÄR](/sv/upload-document-to-folders)**.
+</Note>
+
+## Rättigheter
+
+För att skapa och redigera medarbetarmappar i **Inställningarna** måste användaren ha behörigheten **Redigera medarbetarmappar** aktiverad. Läs mer om Roller & Rättigheter [HÄR](/sv/roles-and-rights).
+
+Möjligheten att visa och ladda upp dokument i medarbetarmappar styrs inte av Roller & Rättigheter. Tillgången hanteras i stället via de **åtkomstinställningar** som konfigureras för respektive mapp. Du kan läsa mer om detta [HÄR](#atkomst-till-mappar).
+
+## Vanliga fragor
+
+Nedan hittar du en lista med vanliga frågor som du kan använda för felsökning.
+
+**Fråga 1:** Kan jag få en översikt över alla medarbetardokument i en lista?
+
+Ja, du kan få en översikt över dokumenten via **HR Hub - Medarbetardokument**. Administratörer har automatiskt tillgång till denna vy. I översikten kan du filtrera dokumenten, anpassa kolumnerna och se information om gallring.
+
+Läs mer om HR-Hub och Medarbetardokument i guiden **[HÄR](/sv/hr-hub)**.
+
+**Fråga 2:** Vad gäller om regler har angetts både för Antal dagar efter uppladdning och Antal dagar efter avslut?
+
+Om medarbetaren förblir anställd under det antal dagar som har angetts i Antal dagar efter uppladdning, är det den regeln som gäller. Om medarbetarens anställning avslutas innan det angivna antalet dagar har passerat, tillämpas i stället regeln för Antal dagar efter avslutad anställning.
+
+**Fråga 3:** Vad händer om jag omfattar en mapp till chefer?
+
+Om du begränsar en mapp till Chefer kommer mappen endast att skapas och visas på **chefers profiler**. Vem som faktiskt kan se mappen styrs av de åtkomstinställningar som har konfigurerats för mappen.
+
+**Fråga 4:** Som administratör kan jag inte se dokument som inte är tilldelade en mapp. Varför?
+
+För att få åtkomst till dokument som inte har laddats upp till en medarbetarmapp måste du ha behörighet att visa **Rotmappen**. Redigera inställningarna för Rotmappen och lägg till dig själv med minst behörighetsnivån Visa, om du behöver åtkomst till alla dokument som inte är kopplade till någon specifik mapp.

@@ -1,0 +1,149 @@
+---
+title: "Manage salaries"
+---
+
+This guide walks you through how to manage employee salaries in Hailey, from adding and updating salaries to handling approvals.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="lVKiBjP" title="Manage salaries" />
+
+## Before you get started
+
+Before managing salaries, make sure that you have the necessary permissions to view and edit salary information. Users who should be able to manage salaries need access to **Compensation - Salary** with the **View & Edit** permission.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-11-10-51-7020-AM.png?width=670&height=267&name=image-png-Sep-21-2026-11-10-51-7020-AM.png)
+
+Please also note that salary-related changes may require approval depending on your organization's **approval principles**.
+
+## How to add a salary
+
+To add a new salary, open the employee profile and navigate to the **Compensation** tab. Click **Actions** in the top-right corner and select **Add new salary**.
+
+<Note>
+  Adding salaries for multiple employees? Importing salaries is often the easiest way to get started and allows you to include salary history. Read more about salary imports [**HERE**](/import-salaries).
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-11-02-16-0296-AM.png?width=670&height=346&name=image-png-Sep-21-2026-11-02-16-0296-AM.png)
+
+Fill in the required salary information. The end date should only be entered if the salary is expected to end on a specific date.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-11-03-49-1171-AM.png?width=670&height=347&name=image-png-Sep-21-2026-11-03-49-1171-AM.png)
+
+When you are satisfied with your choices, click **Send to approver**. The request is then sent to the chosen approver, who can choose to **Approve** or **Rejcect** it. You can see who the approver is at the top of the form.
+
+When a salary is pending approval or is being modified, information about the request is displayed directly on the salary card through a status label.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-11-04-48-5988-AM.png?width=670&height=259&name=image-png-Sep-21-2026-11-04-48-5988-AM.png)
+
+If a submitted request contains incorrect information, open the salary card, click **Actions**, and select **Cancel request**. Once the request has been cancelled, you can make the necessary changes and submit a new request.
+
+To view pending changes on salary details on the employee card, the employee needs the right to **View.**
+
+<Note>
+  If you have enabled the **Actual salary** feature, the actual salary will also be displayed in the salary card based on the employee’s employment scope. Read more about how it works [**HERE**](/salary-types#Manage_salary_types).
+</Note>
+
+## How to change a salary
+
+To change an employee's salary amount, open the employee profile and navigate to the **Compensation** tab. Click the relevant salary card, then select **Actions - Change salary amount**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-05-2026-01-45-55-5650-PM.png?width=1296&height=658&name=image-png-Oct-05-2026-01-45-55-5650-PM.png)
+
+Update the salary amount and select the effective date for when the change should take effect. Salary changes can also be made when you add a new employment for an employee. In this guide [HERE](/employment-wizard), we go through how to do it.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-05-2026-01-46-31-3961-PM.png?width=1294&height=656&name=image-png-Oct-05-2026-01-46-31-3961-PM.png)
+
+<Note>
+  If you have created custom Salary change reasons in **Settings**, you can select a reason when changing an employee's salary. If no custom reasons have been created, this option will not appear.
+
+  Read more about Salary change reasons **HERE**.
+</Note>
+
+### Edit salary information
+
+When you want to edit the salary information for a salary in Hailey (for example the salary name or salary type), you do it from the employee profile card under the **Compensation** tab. Click on the salary card you wish to change, and then click on the **pencil** to edit the salary information.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-11-20-22-1138-AM.png?width=670&height=343&name=image-png-Sep-21-2026-11-20-22-1138-AM.png)
+
+For this type of change, you can only adjust the salary title and salary type. This type of change **does not require approval**. Make the desired changes and then click **Save**. These changes will become visible and take effect immediately after you save.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-11-18-21-6398-AM.png?width=670&height=347&name=image-png-Sep-21-2026-11-18-21-6398-AM.png)
+
+### End a salary
+
+When you want to end an employee's salary in Hailey, you do it from the employee profile card under the **Compensation** tab. Click on the salary card you wish to terminate, then **Actions - End salary.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-11-22-04-6253-AM.png?width=670&height=344&name=image-png-Sep-21-2026-11-22-04-6253-AM.png)
+
+For this type of change, you can only adjust the end date. This type of change **requires approval**. Select the end date and then click **Save.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-11-22-52-8681-AM.png?width=670&height=344&name=image-png-Sep-21-2026-11-22-52-8681-AM.png)
+
+When a salary has been terminated or is about to be terminated, you will receive information about this on the salary card. <img src="https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-11-25-43-4091-AM.png?width=670&height=344&name=image-png-Sep-21-2026-11-25-43-4091-AM.png" alt="" />
+
+**Delete a salary**
+
+It is also possible to delete a salary in Hailey. Deleting a salary means that you remove it entirely from the account, whic will affect historical records and analytical capabilities. Therefore, we recommend that you only delete salaries that have been entered incorrectly for some reason.
+
+To delete a salary, click **Actions - Delete salary.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-11-23-40-2663-AM.png?width=670&height=348&name=image-png-Sep-21-2026-11-23-40-2663-AM.png)
+
+### Reactivate a salary
+
+You can reactivate a salary that has an end date, whether the end date is in the past or in the future. When the reactivation is submitted, the approver receives a task to approve it.
+
+- If the reactivation is approved, the end date is removed and the salary becomes active again with the same amount as before.
+- If the reactivation is rejected, the end date remains and no changes are made.
+
+Please note that this action is not shown in the salary history, as it is considered a correction of a previous change.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-11-27-39-3423-AM.png?width=670&height=343&name=image-png-Sep-21-2026-11-27-39-3423-AM.png)
+
+## How to approve salary changes
+
+When you, as an approver, receive a task to approve a new salary, a salary change, an end salary request, or a salary reactivation, you will receive both an email notification and a task in Hailey.
+
+Click on the task and decide whether to **approve** or **reject.**
+
+<Note>
+  Approver of salary is a role that an employee can have according to the approval principles you have established. [**HERE**](/approval-principles) we go through this.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-11-06-26-5596-AM.png?width=670&height=346&name=image-png-Sep-21-2026-11-06-26-5596-AM.png)
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Can I edit salary information without approval?">
+    Yes. Changes to a salary's title and salary type do not require approval. Once the changes are saved, they become visible and take effect immediately.
+  </Accordion>
+
+  <Accordion title="Why can't I see any salary types when adding a salary?">
+    If no salary types are available, salary types have likely not been created yet. Salary types must be configured before they can be assigned to employees when adding a salary.
+  </Accordion>
+
+  <Accordion title="Can I cancel a salary request after it has been submitted?">
+    Yes. If a salary request is incorrect, you can open the salary card and select **Actions - Cancel Request**. The request will then be withdrawn, allowing you to make the necessary changes and submit a new request.
+  </Accordion>
+
+  <Accordion title="What is a salary type?">
+    Salary types are used to categorize salaries, for example Base salary, Hourly salary, or Bonus.
+  </Accordion>
+
+  <Accordion title="Does the employee receive an email notification when their salary is changed?">
+    No, the employee does not receive an email notification when their salary is changed. Email notifications are sent only to the person responsible for approving the salary.
+  </Accordion>
+</AccordionGroup>

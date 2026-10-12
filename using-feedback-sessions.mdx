@@ -1,0 +1,124 @@
+---
+title: "Create one-to-one templates"
+---
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+Are you about to host a one-to-one, and want to ensure that all the right questions are asked? Then create a template in Hailey that can guide you along the way!
+
+<VaamVideo id="0HxKiSX" title="Create one-to-one templates" />
+
+## What is a one-to-one template?
+
+One-to-one templates in Hailey help you standardize and streamline your one-to-one conversations. By using One-to-one types, you can organize and categorize your templates while controlling access and defining who can manage and administer each type of one-to-one.
+
+Each one-to-one template lets you define the structure, content, and flow of the conversation, including questions, and instructions. This helps ensure a consistent, high-quality experience across all one-to-one sessions while making it easier to follow your organization's feedback process.
+
+## Before you get started
+
+Before you start creating your one-to-one templates, you first need to create your **one‑to‑one types**. In order to create one-to-one types navigate to **Settings - Feedback**, and click on the setting icon in the upper right corner. Then click **Add new** to create a one‑to‑one type.
+
+For more information on how to set the rights for one-to-one types read more [**HERE**](#rights).
+
+## How do you create a one-to-one template?
+
+To create your One-to-one template, go to **Settings - Feedback**, click **Add new** in the top right corner and choose **One-to-one**.
+
+![](/images/using-feedback-sessions/01.png)
+
+Name your template, fill in if you want to be able to send out preparing questions and add sections for the different topics of questions.
+
+You can also **scope** the one-to-one template to specific parts of the organization. For example, you may choose to make the template available only to a certain organizational affiliation within your Hailey environment.
+
+<Note>
+  If you **don't** have any preparing questions in your template, you won't be able to host a Prepared one-to-one with that template.
+</Note>
+
+![](/images/using-feedback-sessions/02.png)
+
+In each section, add your questions and choose how each question should be answered. If using preparing questions you will also get the option to chose when each question should be answered.
+
+It is also possible to add **Instructions:**
+
+- For the **Colleague**, which will be shown in the preparatory tasks.
+- For the **Employee**, which will be shown in the preparatory tasks.
+- Which will be shown **during the one-to-one** meeting.
+
+![](/images/using-feedback-sessions/03.png)
+
+## Key terms
+
+Here you will find explanations of concepts and features that may be useful to have a little extra insight into:
+
+- **Colleague:** The person leading the one-to-one.
+- **Employee:** The person the one-to-one is about and held with.
+- **Preparing questions:** Questions that are sent out before the one-to-one is held.
+
+## Rights
+
+When setting up a one-to-one type, you can define who should have access and what actions they can perform. Access can be configured for employees, team leads, managers, managers above, and selected task forces.
+
+Available access levels:
+
+- **None:** Cannot view one-to-ones with this type.
+- **View:** Can view one-to-ones with this type.
+- **Manage:** Can view, hold, prepare, edit, request approval, and finalize one-to-ones.
+- **Full access:** Includes all Manage permissions plus the ability to delete one-to-ones.
+
+You can give specific task forces access to one-to-ones within a one-to-one type by enabling **Task force with targeted access**. Select the task force, assign the appropriate access level, and optionally limit the access to a specific part of the organization, such as a legal entity, workplace, or department through scope
+
+<Note>
+  Note that admin users do not automatically have access to all one-to-ones. Access must be granted through a task force if needed.
+</Note>
+
+Other rights:
+
+To give these permissions to other roles, update the role settings under **Settings – Security – Roles and rights:**
+
+- **View & edit one-to-one types:** Allows users to create, edit, and manage access for one-to-one types.
+- **View & Edit Feedback Templates:** Allows users to create and edit one-to-one templates (and also 360° feedback templates).
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="I am not able to save my template. How come?">
+  When creating a new one-to-one template you have to make sure that all questions have a title and that questions with the answer type **single** **select** have options to choose from.
+  </Accordion>
+  <Accordion title="I want to create a template for a one-to-one that is only between HR and employee. How can I make sure that nobody else has access to those sessions?">
+  To enable this, create a separate one-to-one type with access set to **None** for everyone except the designated HR task force. If needed, you can grant employees **View** access, allowing them to answer preparing questions and access the notes afterwards.
+
+  The template(s) used for these sessions should then be connected to this specific one-to-one type.
+  </Accordion>
+  <Accordion title="What can I use one-to-one templates for?">
+  Here is a list of things you can use one-to-one templates for:
+
+  - Yearly performance review
+
+  - Monthly/Quarterly one-to-one
+
+  - Goal set-up
+
+  - Salary discussion
+
+  - Leadership review
+
+  - Rehabilitation discussion
+
+  - Feedback for completed projects
+
+  - Exit interview
+
+  - Follow up discussions
+  </Accordion>
+</AccordionGroup>

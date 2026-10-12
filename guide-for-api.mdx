@@ -1,0 +1,84 @@
+---
+title: "Hailey's API guide"
+---
+
+Do you want to build an integration to Hailey? Maybe you want pictures on your employees to be updated elsewhere once they have been updated in Hailey? This guide will let you know how Hailey's API can be set up.
+
+Hailey has an open API that allows you to programmatically read out your employees' data, enabling developers to connect other systems to Hailey.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="6r9xZ4f" title="Hailey's API guide" />
+
+## Retrieve API-key
+
+In Hailey, you can retrieve API keys that are later used to give you access to your employees' data. The API key can be retrived either by an administrator or someone that has the right to **View & edit** - **Integrations** in your account. Read more about rights in Hailey [HERE](/roles-and-rights).
+
+**To retrieve it, click on your profile picture/initials at the bottom left and "Access tokens".** Name the key and generate. You only have access to the API key in the moment when generated, so be sure to copy it immediately. When the window closes you will no longer be able to access this key.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Nov-22-2022-01-56-48-7654-PM.png?width=282&height=295&name=image-png-Nov-22-2022-01-56-48-7654-PM.png)
+
+## Who retrieves API-key
+
+Our API keys are personal, which means that the rights the account that retrieved the key has will be the rights that the key carries with it. Should the account that retrieved the key get changed rights, the same changes will be applied to the API key. Here are two options for how you can proceed:
+
+1. To avoid becoming too dependent on individuals in your self-built integrations, you can **create a service account** in Hailey that can be the account that retrieves API keys. This way, you will not be vulnerable if an employee who was responsible for an integration leaves the company.
+
+Create a role for the service account in the system with the rights that your API keys should carry.
+
+To create the service account, go to your employee list, click **Add Employee** and **Quick add**. Enter what your service account should be called and an email address that you will use to log in. Select the service account in the employee list, click **Action** and **Send invite**. Now, login as the service account and then add the account to the newly created role with the correct rights. Remember that the service account needs the right to View & edit Integrations to retrieve the API-key.
+
+2. Have an administrator retrieve the API keys, and in the event of a potential change of administrator on the account, generate new API keys if needed.
+
+## Generate new key
+
+Our API keys are valid for one year. Therefore, you need to generate new keys once a year. Then delete the old one, generate a new one, copy it directly when generated and replace the key in your existing integration.
+
+<Note>
+  An automatic reminder will be sent to all company admins + the user who generated the token before it expires. Two reminders will be sent in total, **one week before expiration and the day before expiration.**
+</Note>
+
+## API documentation
+
+Via the link [HERE](https://api.haileyhr.app/docs/index.html) you will find our API documentation.
+
+<Warning>
+  When pasting your access token to request data from Hailey's API, remember to type **Bearer** and a space before entering the value of the access token.
+</Warning>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Feb-29-2024-02-23-34-8176-PM.png?width=670&height=680&name=image-png-Feb-29-2024-02-23-34-8176-PM.png)
+
+## Possibilities with Hailey API
+
+**Activating Public Employee List**
+
+Hailey's API offers the option to open a public endpoint that provides basic employee information which is name and profile image URI. This public endpoint allows retrieving a list of employees with their essential details. You can use this feature to display or access your employees' information on your web page.
+
+You can activate this by going to Hailey, then navigate to **Settings** - **Integrations** - **API**, and flipping the switch. You can also choose additional information to include in the list.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Nov-03-2023-10-23-58-2349-AM.png?width=670&height=438&name=image-png-Nov-03-2023-10-23-58-2349-AM.png)
+
+## Webhooks
+
+A webhook serves as a means for one system to alert another system or application in real-time whenever a specific event or data change takes place.
+
+You have the option to configure webhooks to receive notifications when data changes, which is preferable if you integrate Hailey's API with your own application. Webhooks are sent when company data is modified or when an individual employee's data changes in Hailey. You can configure the webhook URI from the integrations section in Hailey's settings.
+
+Webhooks are sent using the POST method with a JSON in the body containing either the modified companyId or employeeId.
+
+<Tip>
+  By fetching an individual employee or the entire employee list through the API, you can determine whether there have been an update related to an employee, ensuring that your webhook remains up-to-date and doesn't miss any modifications.
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Nov-03-2023-10-26-08-8661-AM.png?width=670&height=180&name=image-png-Nov-03-2023-10-26-08-8661-AM.png)

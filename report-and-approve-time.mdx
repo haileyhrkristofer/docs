@@ -1,0 +1,145 @@
+---
+title: "Approve and manage time"
+---
+
+In this guide you will find information on how you approve and manage reported time.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="iJ9y5bV" title="Approve and manage time" />
+
+## What is approving and managing time?
+
+Reporting time helps organizations keep track of worked hours, overtime, project time, and other registered working time.
+
+As a manager or an admin, you can approve, edit, or remove time that has been reported by your employees. When employees report time, you can review their entries in the **Time overview** and ensure that the reported hours are correct before approving them.
+
+## Before you get started
+
+Before you can start approving and managing employee time, **Time & time off settings** need to be configured in your Hailey account. Make sure the following settings are in place:
+
+- [Reporting policies](/create-reporting-policy)
+- [Work hours](/work-hours)
+- [Non-working days](/non-working-days)
+- [Time cycles](/time-cycles) (if used by your company)
+- [Projects](/projects) (if time reporting on projects is needed)
+
+Each bullet point above takes you to the specific guide related to the topic.
+
+## How do you add reported time for an employee?
+
+Do you need to add time for an employee?
+
+Go to the employee’s profile, click **Actions - Report time**, and report the time.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/1-png-Sep-15-2026-11-23-37-6478-AM.png?width=670&height=371&name=1-png-Sep-15-2026-11-23-37-6478-AM.png)
+
+<Note>
+  Time **reported for another employee** is registered and **approved immediately**.
+</Note>
+
+If you are using time reporting on projects in your company, you can choose which projects time needs to be reported on by choosing the right projects in the drop down menu.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/3-png-Sep-15-2026-11-55-56-5127-AM.png?width=670&height=557&name=3-png-Sep-15-2026-11-55-56-5127-AM.png)
+
+You can see which projects time has been reported on by hovering over a specific day in the overview.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-19-2026-07-04-56-4031-AM.png?width=666&height=363&name=image-png-Aug-19-2026-07-04-56-4031-AM.png)
+
+<Note>
+  If you want to see more details, go to **Reports → Time report** in the main menu to view and filter all registered time entries, **for example by project.**
+
+  **Learn more about the Time report [HERE](/reports/time).**
+</Note>
+
+<Note>
+  If **comp time** is enabled, your comp time balance is also shown here.
+
+  Read more about comp time [HERE](/time-comp-time-balance).
+</Note>
+
+## How do you approve time
+
+To approve time, you as the approver can go to **Time** in the main menu. Here, select the employee or employees whose time you want to approve by ticking the checkbox next to their name. Then click **Approve** and choose the period you want to approve.
+
+In this overview, you can see the time that employees have reported. The icon indicates whether the time has already been approved or not. In addition, you can also see the total balance of scheduled/reported time per employee and month.
+
+<Note>
+  Do you use **Time cycles**? If so, you can easily approve time for the previous month via the sent tasks. Read more about how time cycles work [HERE](/time-cycles)!
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-20-2026-12-09-26-0680-PM.png?width=670&height=282&name=image-png-Jul-20-2026-12-09-26-0680-PM.png)
+
+## Delete reported time
+
+If the time has not yet been approved, you can delete it by going to the employee’s profile and opening the **Time** tab. Click on the trash bin icon in the top-right corner of the calendar to delete the reported time.
+
+**If the time has already been approved**, it can only be deleted by an **admin** or a user with the **View & Edit** permission under **Time & time off**.
+
+If the time was approved through a **time cycle**, the approved month can only be edited by an **admin** or a user with the **Edit an approved time cycle** permission.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/7-png-Sep-16-2026-07-54-42-5211-AM.png?width=670&height=380&name=7-png-Sep-16-2026-07-54-42-5211-AM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/8-png-Sep-16-2026-07-55-37-4958-AM.png?width=670&height=376&name=8-png-Sep-16-2026-07-55-37-4958-AM.png)
+
+## Rights
+
+To manage time, the following rights are required from others than admin:
+
+- **Time & time off - View**: gives access to the **Time** tab on the employee profile
+- **Time & time off - View & edit**: allows you to approve time from the **Time overview**, add automatically approved time, and remove approved time
+
+If you want to read more about how **Roles & rights** work in Hailey, click [HERE!](/roles-and-rights)
+
+## Common questions
+
+Here are answers to some frequently asked questions about reporting and approving time.
+
+<AccordionGroup>
+  <Accordion title="I want to report time, but I can't find the Report time button. What should I do?">
+    If the **Report time** button is missing, it's most likely because there is no **reporting policy** connected to your employment.
+
+    To enable time reporting, admin or someone with the right can update your **Time & time off settings** and assign the correct reporting policy.
+
+    Read more about how to update an employee's time & time off settings [HERE](/update-time-and-time-off-settings-on-employee).
+  </Accordion>
+
+  <Accordion title="Can I report time multiple times on the same day?">
+    Yes, but keep in mind that **only** **the most recent time entry is saved**. If you report time again for a day that already has a time entry, the new entry will overwrite the previous one.
+
+    If you need to report time for multiple projects on the same day, make sure to enter all of them at the same time.
+  </Accordion>
+
+  <Accordion title="Why can't I see the time I reported in the calendar?">
+    Check whether the day you reported time for is shown as **white** or **gray** in the calendar.
+
+    If the day is gray, it is set as a **non-working day** according to your work schedule. Time can't be reported on non-working days, so any time reported for that date won't appear in the calendar.
+  </Accordion>
+
+  <Accordion title="How can I approve an employee's time as an admin?">
+    You can only approve time for employees whose **time & time off** **approver** you are. It's not automatically possible to approve time for all employees even as an admin.
+
+    If you need to approve time for an employee you aren't assigned to approve, you can instead **report the time again** directly from the employee's profile. This will overwrite the existing time entry for that day. If you're an admin or have the **View & edit** right for time and time off, the time entry will be approved automatically when it is registered.
+  </Accordion>
+
+  <Accordion title="How can I delete a time entry I've reported?">
+    If the time entry has **not yet been approved**, you can delete it by going to your profile and opening the **Time** tab. Click the **trash can** icon in the top-right corner of the calendar to delete the entry.
+
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-21-2026-12-19-21-6969-PM.png?width=670&height=259&name=image-png-Jul-21-2026-12-19-21-6969-PM.png)
+
+    If the time **has already been approved**, only admin and the ones with the **View & edit** right can delete the time.
+
+    If the time has been approved through a **time cycle**, the approved month can only be edited by admin or those with the right to Edit an approved time cycle. Read more about Time cycles [HERE](/time-cycles).
+  </Accordion>
+</AccordionGroup>

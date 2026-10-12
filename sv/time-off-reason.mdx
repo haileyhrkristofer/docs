@@ -1,0 +1,57 @@
+---
+title: "Frånvaroanledningar"
+---
+
+Skapa Frånvaroanledningar för att enklare hantera dina medarbetares frånvaro. Den här guiden hjälper dig med att komma igång!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="9jaHeVq" title="Frånvaroanledningar" />
+
+## Vad är frånvaroanledningar?
+
+När dina medarbetare rapporterar frånvaro i Hailey behöver de välja en frånvaroanledning till sin frånvaro. En frånvaroanledning kan till exempel vara semester, läkarbesök eller vård av barn. De orsaker du ställer in blir valbara alternativ när medarbetarna rapporterar sin frånvaro.
+
+## Hur skapar man frånvaroanledningar?
+
+Börja med att klicka på **Inställningar - Tid & frånvaro - Lägg till ny - Frånvaroanlednignar**. Namnge anledningen och kategorisera den som antingen **Semester**, **Sjuk** eller **Övrigt**.
+
+Du kan välja om en frånvaroanledning ska kunna övergå till **Långtidsfrånvaro** efter ett antal dagar. Läs mer om hur du kommer igång med inställningar för långtidsfrånvaro [HÄR](/sv/settings-for-longterm-leave).
+
+Det är också möjligt att väja om en frånvaroanledning ska reducera en medarbetares **Komptid**. Läs mer om hur komptid fungerar [HÄR](/sv/time-comp-time-balance).
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-28-2026-06-24-04-5090-PM.png?width=669&height=338&name=image-png-Apr-28-2026-06-24-04-5090-PM.png)
+
+## Begränsningar
+
+En frånvaroanledning kan ha begränsningar, vilket innebär att du kan sätta gränser för hur mycket medarbetare får rapportera frånvaro med just denna specifika frånvaroanledning under en viss period.
+
+- **Begränsa antal dagar med frånvaro under en specifik period** - Toggla på denna om du vill begränsa användningen av frånvaroanledningen i antal dagar. Till exempel 3 dagar frånvaro inom en period på 365 dagar.
+- **Begränsa antal frånvarotillfällen under en specifik period** – Till exempel 12 tillfällen av sjukfrånvaro inom en period på 365 dagar.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-02-33-42-3192-PM.png?width=669&height=337&name=image-png-Aug-07-2026-02-33-42-3192-PM.png)
+
+## Omfattning
+
+Det är också möjligt att **omfatta en frånvaroanledning till en del av organisationen**. Detta innebär att endast de medarbetare som ingår i omfattningen kan välja denna frånvaroanledning när de rapporterar frånvaro. När du omfattar kan du välja mellan **Legal enhet, Arbetsplats, Avdelning, Affärsområde, Team** och **Titel**.
+
+## Översättningar
+
+Har din organisation medarbetare som använder flera olika språk? Du kan lägga till översättningar för varje frånvaroanledning. När en medarbetare använder Hailey på sitt användarspråk visas frånvaroanledningens namn automatiskt på det valda användarspråket.
+
+<Tip>
+  **Tips!** När dina medarbetare rapporterar frånvaro kan du enkelt följa varje frånvaroorsak i **Rapporten för Frånvaro**. Läs mer om rapporten [HÄR](https://app-eu1.hubspot.com/knowledge-article/8690880/editor/395762592956/content?redirectUrl=/knowledge/8690880/188995994644/articles/state/all).
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-28-2026-06-31-02-5714-PM.png?width=661&height=333&name=image-png-Apr-28-2026-06-31-02-5714-PM.png)

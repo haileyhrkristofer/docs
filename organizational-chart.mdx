@@ -1,0 +1,129 @@
+---
+title: "Create organizational chart"
+---
+
+In this guide, you can learn how to visualize your organization in Hailey using organizational charts.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="pdY7vsJ" title="Create organizational chart" />
+
+## What is the organizational chart in Hailey?
+
+In Hailey you can have two kinds of organizational charts. Both are found via **Company - Organization**. In the top left corner of the view you have a selector. Select which view to see:
+
+- The reporting structure
+- The organizational scheme
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2026-09-08-43-8595-AM.png?width=670&height=408&name=image-png-Jul-14-2026-09-08-43-8595-AM.png)
+
+## How do you create your organizational chart in Hailey?
+
+To set up your organizational charts in Hailey, you first need to set up your **reporting structure**. The reporting structure reflects **who reports to whom** and is set by adding Reports to on employees. This can be done by either [bulk updating](/employee-list#action_button) or employee card by employee card. Reports to is found under Employment, in the section named Job.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2026-09-09-47-1684-AM.png?width=670&height=192&name=image-png-Jul-14-2026-09-09-47-1684-AM.png)
+
+Does the view look like the picture below? Then you have created a **circle reference**, which means that you do not have an employee placed on top of the chart. The employee at the top of the chart should not be reporting to anyone.
+
+<Warning>
+  **Errors in the reporting structure can cause various trouble in the account**. This because many parts of Hailey rely on the reporting structure. It is therefore important to ensure that each employee reports to the right person.
+
+  ***Example**: If Manager A reports to Manager B - Manager B to Manager C - Manager C to Manager A, the managers' rights may be affected. In this case, for example, access to employee cards for the managers' reporting employees will be limited.*
+</Warning>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2026-09-10-47-0821-AM.png?width=670&height=194&name=image-png-Jul-14-2026-09-10-47-0821-AM.png)
+
+## Organizational chart
+
+The organizational scheme can have different looks depending on how you structure your business areas, departments and teams. You can chose to base your scheme on **[departments](#departments)** or **[business areas.](#business-areas)**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-19-2024-01-50-42-6866-PM.png?width=670&height=338&name=image-png-Jul-19-2024-01-50-42-6866-PM.png)
+
+### Departments as base
+
+If you want to structure your organizational scheme based on departments you start off at **Settings - Organization - Departments**. You must firstly decide on a department that should be in the top. That department should ***not*** belong to another department.
+
+Moving on, you now want to **relate other departments to the one in the top**. Open the editor for the departments in question and select which department it belongs to. If you want to, you can also **set a head of department**. Repeat the process for all the departments you want in the scheme.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2026-09-37-21-7384-AM.png?width=670&height=344&name=image-png-Jul-14-2026-09-37-21-7384-AM.png)
+
+If you have any **teams belonging to departments**, they can also be a part of the scheme. To set this up, move along to Teams, right next to Departments, and create or edit the teams regarded.
+
+<Note>
+  Departments or teams that are not related to any other department **will not show** in the organizational scheme.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2026-09-38-50-6495-AM.png?width=670&height=492&name=image-png-Jul-14-2026-09-38-50-6495-AM.png)
+
+The departments and teams will now be connected when viewing the organizational scheme!
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-31-2024-08-32-15-0762-AM.png?width=622&height=474&name=image-png-Jul-31-2024-08-32-15-0762-AM.png)
+
+### Business areas as base
+
+Each business area will create its own view in the organizational chart. This since **business areas can´t be connected to each other**. As a result of this, you will find each business area as an option in the dropdown in the organization chart view.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2026-09-15-08-1582-AM.png?width=670&height=301&name=image-png-Jul-14-2026-09-15-08-1582-AM.png)
+
+If you want to structure your organizational scheme based on business areas you start off at **Settings - Organization - Business areas**. Select the business area you want to start working with and open the editor by clicking on the three dots to the right.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-19-2024-09-58-07-3198-AM.png?width=670&height=294&name=image-png-Jul-19-2024-09-58-07-3198-AM.png)
+
+Connect departments to the business area by clicking on Add department. Select the department(s) you want and add head of department in business area. Repeat the process for each business area that you want to create a visual view for.
+
+<Note>
+  All selected departments will show in the business area overview. So will also the head of department in business area.
+</Note>
+
+<Note>
+  Subsidiaries (departments belonging to another department) will not appear in the dropdown when selecting departments belonging to a business area.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2026-09-17-04-7885-AM.png?width=527&height=700&name=image-png-Jul-14-2026-09-17-04-7885-AM.png)
+
+Now let´s turn to the visuals! When looking at a business area via Company - Organisation you first need to select the business area in question in the drop down. When selected, the departments, employees in business area and teams will start to line up.
+
+<Note>
+  Departments not belonging to any business area or department will be shown alongside the business areas in the drop down.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-19-2024-02-16-03-3685-PM.png?width=670&height=338&name=image-png-Jul-19-2024-02-16-03-3685-PM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-19-2024-02-18-03-0121-PM.png?width=552&height=481&name=image-png-Jul-19-2024-02-18-03-0121-PM.png)
+
+The general rule for the visuals is **that all criteria needs to be met for employees to be shown**. E.g an employee needs to belong to both the business area and the department connected in order to show in the scheme. Employees that don´t meet criteria will instead be placed under Employee's outside department.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-19-2024-02-17-01-1221-PM.png?width=639&height=493&name=image-png-Jul-19-2024-02-17-01-1221-PM.png)
+
+## Rights
+
+The right required to view the organizational chart in Hailey is:
+
+- **Other – View organizational chart**
+
+This right allows the employee to view the organizational chart when navigating to **Company - Organization.**
+
+The right required to **edit** the organizational structure, and thereby the reporting structure that affects the organizational charts, can be found:
+
+- **Settings** **– Edit Organization**
+
+**[HERE](/roles-and-rights)** you can read more about Roles & Rights in Hailey
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Why can’t I see our organizational chart in Hailey, even though we have set up our reporting structure?">
+  Either you have created a **circular reference**, which means there is no employee at the top of the reporting structure. Navigate to **Settings - Organization** to review and edit the structure. Alternatively, the right required to view the organizational chart may not be enabled.
+  </Accordion>
+</AccordionGroup>

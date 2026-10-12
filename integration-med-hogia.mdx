@@ -1,0 +1,334 @@
+---
+title: "Integration with HogiaLön Plus"
+---
+
+Through Haileys integration it's possible to access needed data in a GDPR compliant way and import into HogiaLön Plus!
+
+<Tip>
+  First time activating one of **Hailey's standard integrations**? Start by reading [**THIS**](/haileys-standard-integrations) guide to know what to keep in mind before you get started.
+</Tip>
+
+---
+
+## What does the integration do?
+
+Using this integration, you can easily export a file with the necessary employee data and time off data from Hailey to HogiaLön Plus. This means that the changes made in Hailey, such as salary changes, can be updated by file export in HogiaLön Plus directly. In this way, the new data does not have to be entered into two different systems manually, which reduces the time spent on administrative work.
+
+## How does the integration work?
+
+With a **file export** from Hailey, the included data will be updated in HogiaLön Plus according to the values in Hailey via the file transfer. You decide when the file should be exported and transferred.
+
+This means that:
+
+- Changes made in Hailey are updated in HogiaLön Plus via a file export/import.
+
+## What data is included in the integration?
+
+| **HAILEY** | **HOGIALÖN PLUS** |
+|---|---|
+| Employment number | Anställningsnummer |
+| First & Lastname | Förnamn, Efternamn, Namn |
+| Personal identity number | Sekel + personnr |
+| Company Email | E-post |
+| Postal code | Postadr |
+| Street Adress | Utd-adr |
+| Land | Land |
+| Employment date | Anställningsdatum |
+| Last employment date | Avgångsdatum |
+| Work phone | Telefon arbete |
+| Private phone | Telefon privat |
+| Scope (hours per week) | Arbetstid faktisk/v (P8) |
+| Clearing number | Clearingnr ISO |
+| Account number | Kontonr ISO |
+| Monthly salary (if salary type is not mapped) | Månadslön faktisk & Månadslön heltid |
+
+Time off:
+
+| **HAILEY** | **HOGIALÖN PLUS** |
+|---|---|
+| Time off | Frånvaro |
+
+<Note>
+  The time off file’s included data is based on the time off reasons you have set up in Hailey and HogiaLön Plus respectively.
+</Note>
+
+Custom fields:
+
+| **HAILEY** | **HOGIALÖN PLUS** |
+|---|---|
+| Cost center | Resultatenhet |
+| Custom employment field 1 | Avgångsorsak |
+| Custom employment field 2 | Urvalskategori |
+| Custom employment field 3 | Urvalskategori 2 |
+
+## What is required to be included in the integration?
+
+In order for an employee to be included in the integration, the employee must have:
+
+- Employment number
+  - that matches the employee number in Hogia
+  - that consists of numbers only
+  - that does not exceed 13 characters
+- Scope (hours per week) set on their profile in Hailey
+- A dedicated custom employment field for full-time equivalent (FTE) on their profile in Hailey.
+
+<Note>
+  If the employee is not registered in HogiaLön Plus, the employee will be created in HogiaLön Plus during the next file transfer if an employee number exists on the profile in Hailey.
+</Note>
+
+Employees with the following **employment status** are included in the integration:
+
+- In service
+- Leaving
+- Garden leave
+
+## What preparations are required in Hailey?
+
+Preparations in Hailey before activating the integration:
+
+- Create a dedicated employment field for full-time equivalent (mandatory)
+- Create custom employment fields (optional)
+
+- Salary & Salary types
+
+**Custom employment field for full-time equivalent (FTE)**
+
+In the integration, an employee’s actual monthly salary is calculated based on how many hours makes up for a full-time position. To enable this calculation, a custom employment field in Hailey is used where you specify your full-time hours. Create the field by going to:
+
+- Settings – Customization
+- Click Add – Employment field
+- Select answer type: **Selection**
+- Fill in options corresponding to the number of hours for a full-time position in your organization, e.g. 40. The option may only contain numbers (no letters or special characters).
+
+<Note>
+  Do you want to know how to create custom fields in Hailey? [**HERE**](/custom-fields)you can read more about it.
+</Note>
+
+If you have multiple different full-time equivalents, you can create several different answer options in the field, e.g. one option for 40 and one for 37.5.
+
+![hogiabild1](https://docs.haileyhr.com/hs-fs/hubfs/hogiabild1.png?width=670&height=457&name=hogiabild1.png)
+
+Once the field has been created, it must be filled in on **each employee’s profile**. The field should always contain the number of working hours for a full-time position, even if the employee works part-time.
+
+- The actual working hours per week should instead be entered in the field Scope (hours per week) in Hailey.
+
+<Note>
+  Do you want to update the information in the field in bulk across employees’ profiles? [**HERE**](/import-custom-employment-fields)you can read more about how to bulk update the employment field.
+</Note>
+
+Do you want to include additional fields in the integration? It is possible to include optional fields from Hailey to HogiaLön Plus, which is completely optional. The optional fields that can be mapped from Hailey to HogiaLön Plus are:
+
+- Reason for termination
+- Selection category
+- Selection category 2
+
+If you want to include these fields in the integration, you need to create them in Hailey in the same way as when you created the field for the number of working hours for a full-time position. The custom employment field must be of the answer type “Selection”.
+
+**Salary & Salary types**
+
+Salaries included in the integration should be specified as **full-time salaries**, regardless of the employee’s employment scope.
+
+- The actual salary is calculated in the integration using the field Scope (hours per week) and the custom employment field for the number of working hours for a full-time position.
+
+In order for the correct salary in Hailey to be mapped to the correct payroll type in HogiaLön Plus, salary types must be registered in Hailey. You can read more about salary types [HERE](/salary-types).
+
+- If salary types are missing, all salaries for an employee will be merged in the integration.
+
+## How is the integration activated?
+
+To activate the integration, you need to:
+
+<Steps>
+  <Step title="Add the integratio9n in Hailey">
+    Add the integratio9n in Hailey
+  </Step>
+  <Step title="Fill in the required data for the integration setup">
+    Fill in the required data for the integration setup
+  </Step>
+  <Step title="Save and activate">
+    Save and activate
+  </Step>
+</Steps>
+
+**Follow the instructions below to complete the activation of the integration.**
+
+The person setting up the integration needs to have access to an administrator account in both systems. **Or have access to integrations and reports in Hailey.**
+
+To activate the integration in Hailey:
+
+- Go to **Settings**
+- Click **Integrations** at the bottom of the menu bar
+- The click the payroll section
+- Click HogiaLön Plus and Add integration
+
+- Choose whether employees should be sorted by **first name** or **last name** in the employee export file.
+- Under the column Custom employment field mapped to full-time equivalent, you will get a dropdown list to select the custom employment field. Select the field you created for full-time equivalent from the dropdown list.
+
+![hogiggigigig](https://docs.haileyhr.com/hs-fs/hubfs/hogiggigigig.png?width=670&height=470&name=hogiggigigig.png)
+
+- Next, you will be given the option to include **Cost center** as well as the optional fields for the integration (Reason for termination, Selection category 1, and Selection category 2). This is optional.
+
+We recommend using **salary types** in Hailey to map salary information to specific fields in HogiaLön Plus. If salary types are not mapped in the integration, all monthly salaries will be transferred to **Actual Monthly Salary** and **Full-Time Monthly Salary** in HogiaLön Plus. If an employee has multiple salaries, they will be combined into a single total amount.
+
+Enable **Salary Types** and ensure the following when mapping salary types:
+
+- Map each salary type to the field where it should be transferred in HogiaLön Plus.
+- We recommend mapping your full time salary to P2 (Full-Time Monthly Salary) in HogiaLön Plus to ensure correct salary synchronization.
+- If certain salary types in Hailey **do not have a corresponding mapping** to a salary field in HogiaLön Plus, they will not be included in the integration.
+
+<Warning>
+  We advise **against** mapping salary types to P1 (Actual Monthly Salary) in HogiaLön Plus. It is not possible to map salary types to P8, P9, or P10.
+</Warning>
+
+To include **Time off** in the integration, you need to map your time off reasons in Hailey to the corresponding **salary codes** and **deviation codes** in HogiaLön Plus.
+
+- **We recommend reporting time off as a** **percentage** in Hailey for the most efficient time off management and accurate data transfer between Hailey and HogiaLön Plus.
+- Please ensure that the names of the time off reasons exactly match those used in HogiaLön Plus. The reasons must always begin with either:
+  - **A** for deviation
+  - **L** for Lönearter
+- If you are unsure how your specific codes are configured in Hogia, or if you have questions regarding your salary codes and deviation codes, please contact Hogia Support before mapping the time off reasons.
+
+By default, time off is exported day by day in the file. If desired, certain time off reasons can instead be exported as a continuous period. Select which time off reasons should be exported this way under **Time off reasons exported as period**.
+
+- This option is only available for time off reporting in percentages.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-09-2026-06-21-45-1983-AM.png?width=670&height=639&name=image-png-Jun-09-2026-06-21-45-1983-AM.png)
+
+Once the integration setup is complete, activate it by toggling Active at the top of the page. Then click Save in the bottom-right corner.
+
+You can now export reports for **employee data** and **time off data** whenever you need to. The steps for how to do this are explained below!
+
+## How are the file(s) exported and imported?
+
+With the integration, you have the option to export an employee file that includes employee data and salary information, and an time off file export.
+
+The export of data is carried out from the main menu by going to:
+
+- Reports
+- Click on **Hogia**
+
+In the overview on the right-hand side, you can choose to:
+
+- Export employee file
+- Export Time off file
+
+Follow the guide below to see how to export each file.
+
+![Hogiareports](https://docs.haileyhr.com/hs-fs/hubfs/Hogiareports.webp?width=670&height=270&name=Hogiareports.webp)
+
+![hogigogog](https://docs.haileyhr.com/hs-fs/hubfs/hogigogog.png?width=670&height=140&name=hogigogog.png)
+
+**Export employee & salary information:**
+
+A date range is displayed where you can choose from which date you want to export employee data and approved salary changes (monthly salary) in the file. The “To” date field is always set to today’s date.
+
+- If any change has been made to a monthly salary during the selected period, even if the start date of the salary is before the period, that change will also be included.
+- If there are multiple salary changes during the period, all changes will be included in the file.
+- We sync the total sum of monthly salaries if there are multiple active monthly salaries in Hailey (e.g., if someone has a base salary and a responsibility allowance).
+- If an employee has received a new employment in Hailey with a new Scope (hours per week), all changes to the scope during the selected period are included.
+- The export includes the data available within the selected export time interval. Save the export file so it can be transferred to HogiaLön Plus.
+- The information transferred via the file from Hailey will overwrite the existing information in HogiaLön Plus in all data fields. This means that the correct data must be present in these fields in Hailey before the export is carried out.
+- Employees included in the file are users who have an active employment within the selected time interval in the file.
+
+![timeoffeng](https://docs.haileyhr.com/hs-fs/hubfs/timeoffeng.png?width=670&height=489&name=timeoffeng.png)
+
+**Import employee file in HogiaLön Plus:**
+
+- Open HogiaLön Plus
+- Select the tab **File - Import - Employees**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-15-2026-08-28-18-9625-AM.png?width=670&height=388&name=image-png-May-15-2026-08-28-18-9625-AM.png)
+
+A dialog box will appear here.
+
+- Select the export file from Hailey that you have saved.
+- Then click OK.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-15-2026-08-29-21-6973-AM.png?width=670&height=723&name=image-png-May-15-2026-08-29-21-6973-AM.png)
+
+The changes are now registered in the employee data in HogiaLön Plus that was exported from Hailey.
+
+When **exporting** the **Time off file** a date range is displayed where you choose the start and end dates for exporting the time off file.
+
+- Only approved **Time Off** that have been registered during the selected export period are included in the file.
+  - This means that—in order to include all time off from the past month—the file needs to be exported on the last day or at the end of the month.
+
+- Time off types require some form of work schedule in HogiaLön Plus. These are created under General - Schedule. Here, you assign schedules for each employee. This is required by Hailey in order for the time off file to be imported into HogiaLön Plus.
+
+<Note>
+  A tip to help you remember to export the time off file is to create a recurring workflow. **[HERE](/create-workflows)** you will find the guide on how to do this.
+</Note>
+
+![hogatimeoff](https://docs.haileyhr.com/hs-fs/hubfs/hogatimeoff.png?width=670&height=485&name=hogatimeoff.png)
+
+Import time off file into HogiaLön Plus:
+
+- Go to **Arkiv**.
+- Import - Löneberedning.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-15-2026-08-42-44-0816-AM.png?width=670&height=422&name=image-png-May-15-2026-08-42-44-0816-AM.png)
+
+- Select the file you have exported from Hailey.
+- Click **OK**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-15-2026-08-43-41-1603-AM.png?width=670&height=575&name=image-png-May-15-2026-08-43-41-1603-AM.png)
+
+The imported time off from Hailey are now registered for the affected employees in HogiaLön Plus!
+
+## Does the integration not apply to the entire company?
+
+The there is an option to **scope** the integration!
+
+- The scope of the integration means that you can enable the integration to include only employees with a specific **workplace** and/or **legal entity.**
+- This is done when exporting the file(s).
+
+If these fields are left empty, all employees who meet the requirements for the integration will be included in the file(s).
+
+<Note>
+  The image below shows an example that only employees who belong to the selected legal entity and the selected workplace specified in the file export will be included in the integration with HogiaLön Plus.
+</Note>
+
+![exporttime](https://docs.haileyhr.com/hs-fs/hubfs/exporttime.png?width=670&height=786&name=exporttime.png)
+
+## How is the salary calculated in the employee file?
+
+In order for the integration to calculate the employee’s actual salary (P1), the base salary must be mapped to P2. The calculation uses the custom employment field **Full-Time Equivalent (FTE)**, which is automatically mapped to P9 in the file. The calculation is performed according to the following formula:
+
+**(P8 / P9) x P2 = P1**
+
+Explenation
+
+- **P8** = Actual working time per week
+- **P9** = Full-time working hours per week
+- **P2** = Full-time monthly salary
+- **P1** = Actual monthly salary
+
+<Note>
+  **Exampel** An employee has a full-time salary of 40,000 SEK (P2) and a working scope of 30 hours/week (P8), where full-time corresponds to 40 hours per week (P9). The integration then calculates the actual monthly salary (P1) as follows:
+
+  **(30 / 40) × 40,000 = 30,000 SEK.**
+
+  The actual monthly salary is therefore 30,000 SEK.
+</Note>
+
+---
+
+## Common questions
+
+**Question**: Can I export time off as a continuous period?
+
+Yes! You can choose which time off reasons should be exported as as one period. This setting can be configured in the integration settings under **Time off reasons exported as period**.
+
+**Question**: Does the export file include future employees?
+
+The export file includes employees with the employment statuses In service, Leaving, Garden leave.
+
+**Question**: What can I check if an employee is missing from the employee file?
+
+There are several things you can check. For example, make sure the employee has a started employment date and is currently active. Verify that the employee number contains only digits and is no longer than 13 characters. Also, confirm that the employee is included in the scope of the export.
+
+**Question**: What could cause an time off not to be included in the time off export file?
+
+Start by checking that the absence has been approved, that the time off reason is correctly mapped in the integration settings, that the time off is included in the export scope, and that the employee is included in the current export scope.
+
+*If you have any questions regarding the integration, please contact Hailey support.*

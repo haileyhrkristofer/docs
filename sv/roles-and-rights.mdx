@@ -1,0 +1,240 @@
+---
+title: "Roller och rättigheter"
+---
+
+Hantera roller och rättigheter för att ge användare olika behörigheter i systemet.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="RHlwjhg" title="Roller och rättigheter" />
+
+## Roller och rättigheter
+
+I Hailey använder vi begreppet *roll* för att beskriva en rättighetsroll – det vill säga vad en användare får se och göra i systemet. För att konfigurera roller och rättigheter, gå till **Inställningar → Säkerhet → Roller & rättigheter**.
+
+## Adminrollen
+
+Inställningarna för rollen Admin kan inte redigeras, eftersom denna roll har en fast uppsättning standardbehörigheter. Det är däremot möjligt att hantera vilka medarbetare som ska tilldelas rollen.
+
+För att lägga till en medarbetare i rollen, markera personens namn i listan till vänster och klicka på **pilen** → **Spara**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-22-2026-02-21-38-4631-PM.png?width=670&height=337&name=image-png-Jun-22-2026-02-21-38-4631-PM.png)
+
+## Rättigheter och behörigheter utanför adminrollen
+
+Vissa rättigheter och behörigheter ingår inte per automatik i adminrollen. Det innebär att du som Admin själv behöver tilldela dig kompletterande rättigheter och behörigheter för att få åtkomst till och kunna hantera specifika delar av systemet. Nedan följer en lista över de rättigheter och behörigheter som behöver tilldelas manuellt:
+
+- Rättigheten att **ge slutgiltigt godkännande i en lönerevision**.
+- Rättigheten att **vara** **signeringspart från företaget**.
+- Rättigheten att **vara kontraktsgranskare**.
+- Rättigheten till **one-to-one-typer**.
+- Tillgång till **medarbetarmappar**.
+- Tillgång till **HSE-avvikelser**.
+
+## Skapa en ny anpassad roll
+
+För att lägga till en ny anpassad roll går du till **Inställningar** → **Säkerhet** → **Roller & rättigheter**. Klicka på **Lägg till ny** i det övre högra hörnet och ge rollen ett namn. Välj sedan hur medlemmar ska tilldelas rollen. Denna inställning avgör hur medarbetare läggs till i rollen. Medlemmarna får alla behörigheter som har konfigurerats för rollen. Du kan tilldela rollmedlemmar antingen **automatiskt** eller **manuellt**.
+
+- **Automatiskt** – Tilldelar medarbetare automatiskt baserat på definierade villkor. Detta passar bäst för roller som behöver hållas uppdaterade över tid.
+- **Manuellt** – Du väljer själv vilka medarbetare som ska tilldelas rollen. Detta passar bäst för undantag, medlemskap som sällan ändras eller när du vill ha full kontroll över tilldelningen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-22-2026-09-42-40-9882-AM.png?width=670&height=346&name=image-png-Jun-22-2026-09-42-40-9882-AM.png)
+
+Välj därefter **Riktning**. Detta avgör för vilka medarbetare rollmedlemmarna ska ha behörigheter. Välj om riktningen ska vara relationell eller organisatorisk.
+
+- **Relationell** – Hanterar medarbetare utifrån vilken nivå rollen ska ha behörighet för. Du kan välja mellan fyra olika alternativ:
+  - **Egen profil** – De behörigheter som rollmedlemmen har för sin egen profil.
+  - **Teammedlemmar** – De behörigheter som rollmedlemmen har för sina teammedlemmar.
+  - **Alla medarbetare under** – De behörigheter som rollmedlemmen har för alla medarbetare under sig i organisationen.
+  - **Alla** – De behörigheter som rollmedlemmen har för samtliga medarbetare.
+- **Organisatorisk** – Hanterar medarbetare inom specifika organisatoriska enheter. Om detta är relevant för din organisation kan du skapa riktade roller där de tilldelade behörigheterna endast gäller för medarbetare inom de valda enheterna.
+
+När du är nöjd med inställningarna för rollen klickar du på **Starta** längst ned till höger.
+
+## Såhär tilldelar du rollmedlemmar automatiskt
+
+### Välj villkor
+
+Därefter väljer du vilka medlemmar som ska ingå i rollen genom att ange ett eller flera **villkor**. Villkoren avgör vilka som inkluderas i rollen, till exempel C**hefer** inom **Avdelningen** ekonomi.
+
+För automatisk tilldelning finns flera alternativ att välja mellan. Du kan exempelvis basera tilldelningen på organisatoriska enheter, vilket innebär att alla medarbetare inom en specifik enhet automatiskt läggs till i rollen.
+
+<Steps>
+  <Step title="Välj villkor, exempelvis Ledarskapsroll">
+    **Välj villkor**, exempelvis **Ledarskapsroll**.
+  </Step>
+  <Step title="Välj ett eller flera alternativ, exempelvis Chef">
+    **Välj ett eller flera alternativ**, exempelvis **Chef**.
+  </Step>
+</Steps>
+
+Du kan lägga till fler villkor vid behov. Om du till exempel klickar på **Lägg till villkor**, väljer Avdelning och sedan väljer Ekonomi, så innebär det att **alla chefer på Ekonomiavdelningen kommer att inkluderas i rollen**.
+
+<Tip>
+  Notera att om du lägger till ett villkor inom en villkorsgrupp och anger värden i flera fält, måste rollmedlemmarna uppfylla alla dessa kriterier för att inkluderas i rollen.
+
+  Om du anger flera värden inom samma fält behöver rollmedlemmarna bara matcha ett av dessa värden.
+
+  ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-22-2026-09-56-53-1393-AM.png?width=670&height=325&name=image-png-Jun-22-2026-09-56-53-1393-AM.png)
+</Tip>
+
+### Lägg till grupp av villkor
+
+Du har också möjlighet att lägga till **grupp av villkor**. Detta avgör vilken ytterligare grupp av medlemmar som ska inkluderas i rollen, till exempel Team leads inom ekonomiavdelningen. Det innebär att **alla Team leads och chefer inom ekonomiavdelningen kommer att inkluderas i rollen.**
+
+<Tip>
+  Observera att när du lägger till en grupp av villkor visas etiketten **eller** mellan villkorsgrupperna. Detta innebär att en rollmedlem endast behöver uppfylla kriterierna i **någon av villkorsgrupperna** för att inkluderas i rollen.
+
+  ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-27-2026-03-34-24-3672-PM.png?width=670&height=351&name=image-png-Aug-27-2026-03-34-24-3672-PM.png)
+</Tip>
+
+### Inkludera specifika medarbetare
+
+Om du vill inkludera medarbetare som inte matchar de valda villkoren kan du välja att inkludera dem i rollen. Det gör du genom att välja medarbetare i rollistan under **Inkludera även**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-27-2026-03-36-20-9638-PM.png?width=670&height=351&name=image-png-Aug-27-2026-03-36-20-9638-PM.png)
+
+## Såhär tilldelar du rollmedlemmar manuellt
+
+Om du vill tilldela medlemmar till en roll manuellt väljer du först vilka medarbetare som ska ingå i rollen. Det gör du genom att markera en eller flera medarbetare och klicka på **pilen** för att tilldela dem till rollen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-27-2026-03-37-34-4505-PM.png?width=670&height=351&name=image-png-Aug-27-2026-03-37-34-4505-PM.png)
+
+För att markera flera medarbetare samtidigt klickar du på **pilen** ovanför rullistan av medarbetare. Här har du möjlighet att **markera all data**, **markera nuvarande data** eller **invertera nuvarande sida**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-27-2026-03-38-15-6317-PM.png?width=670&height=351&name=image-png-Aug-27-2026-03-38-15-6317-PM.png)
+
+## Rättigheter
+
+Nu är det dags att välja vilka rättigheter rollens medlemmar ska ha. I menyn till vänster finns två alternativ: Medarbetarrättigheter och Företagsrättigheter. Dessa avgör var rättigheterna ska gälla.
+
+- **Medarbetarrättigheter** – rättigheter som gäller en medarbetares profil.
+- **Företagsrättigheter** – rättigheter som gäller olika delar av Hailey, inklusive flikar i *vänstermenyn*, knappen *Hantera* i medarbetarlistan samt åtkomst till *Inställningar*.
+
+Det finns flera val som styr vad medlemmarna i rollen får göra:
+
+- **Ingen** – Ingen data visas och avsnittet döljs för medlemmarna.
+- **Visa** – Data visas och användaren kan se innehållet i avsnittet.
+- **Visa & ändra** – Data visas och kan ändras, vilket innebär att användaren kan redigera och ta bort information.
+- **Inaktivera** – Medlemmarna kan varken se eller redigera innehållet.
+- **Aktivera** – Medlemmarna kan se eller redigera innehållet.
+
+## Sök efter rättigheter
+
+Om du letar efter en specifik rättighet kan du använda **sökfunktionen** för att hitta den snabbare. Klicka på **förstoringsglaset** i det övre vänstra hörnet och ange namnet på den rättighet du söker.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-22-2026-01-40-04-7070-PM.png?width=670&height=331&name=image-png-Jun-22-2026-01-40-04-7070-PM.png)
+
+När rollen har skapats kan du se en **översikt över alla rättigheter som ingår i den**. Klicka på rollen för att öppna dess detaljvy. Härifrån kan du även söka efter specifika rättigheter eller medlemmar för att verifiera att rollen är korrekt konfigurerad.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-22-2026-01-44-08-6712-PM.png?width=670&height=357&name=image-png-Jun-22-2026-01-44-08-6712-PM.png)
+
+## Exempel på roller att skapa i din organisation
+
+Nedan följer några exempel på hur du kan skapa anpassade roller och tilldela roller till medarbetares egna profiler, medarbetarrättigheter för andra medarbetare, team leads och chefer i din organisation.
+
+### Skapa en roll för medarbetares egna profil
+
+Om du vill skapa en medarbetarroll där medlemmarna kan visa eller visa & ändra på sin egen profil, börjar du med att välja om rollens medlemmar ska tilldelas automatiskt eller manuellt.
+
+- Välj **Relationell** under Riktning.
+- Välj sedan **Egen profil**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-22-2026-01-50-15-2339-PM.png?width=670&height=348&name=image-png-Jun-22-2026-01-50-15-2339-PM.png)
+
+Därefter väljer du vilka medarbetare som ska ingå i rollen. Om du vill att alla medarbetare i din organisation ska tilldelas rollen **väljer du din/dina legala enhet(er)**.
+
+Slutligen klickar du på **Rättigheter** för att ange vilka rättigheter medarbetarna ska ha för sin egen profil.
+
+### Skapa en roll för medarbetares rättigheter på andra medarbetare
+
+För att skapa en roll som definierar vad alla medarbetare kan se på andra medarbetares profiler börjar du med att välja att rollmedlemmar ska tilldelas automatiskt.
+
+- Välj **Relationell** under Riktning.
+- Välj sedan **Alla**.
+
+På så sätt kommer rollmedlemmarna tilldelas de rättigheter som ingår i rollen, för alla andra medarbetare.
+
+Därefter väljer du vilka medarbetare som ska ingå i rollen. Om du vill att alla medarbetare i din organisation ska tilldelas rollen väljer du din/dina **legala enhet(er)**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-22-2026-01-57-09-0618-PM.png?width=670&height=360&name=image-png-Jun-22-2026-01-57-09-0618-PM.png)
+
+Slutligen klickar du på **Rättigheter** för att ange vilka rättigheter rollmedlemmarna ska ha.
+
+### Skapa en roll för Team leads
+
+Välj att automatiskt tilldela rollmedlemmar till denna roll för att ge alla dina teamledare de rättigheter som ingår i rollen.
+
+- Välj **Relationell** under Riktning.
+- Välj sedan **Teammedlemmar**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-22-2026-02-01-45-4153-PM.png?width=670&height=345&name=image-png-Jun-22-2026-02-01-45-4153-PM.png)
+
+Därefter väljer du vilka medarbetare som ska ingå i rollen. Om du vill att alla Team leads i din organisation ska tilldelas rollen väljer du **Ledarskapsroll** som villkor och väljer sedan **Team lead**.
+
+Slutligen klickar du på **Rättigheter** för att ange vilka rättigheter rollmedlemmarna ska ha.
+
+### Skapa en roll för Chefer
+
+Välj att automatiskt tilldela rollmedlemmar till denna roll för att ge alla dina chefer de rättigheter som ingår i rollen.
+
+- Välj **Relationell** under Riktning.
+- Välj sedan **Alla medarbetare under**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-22-2026-02-13-05-7239-PM.png?width=670&height=347&name=image-png-Jun-22-2026-02-13-05-7239-PM.png)
+
+Därefter väljer du vilka medarbetare som ska ingå i rollen. Om du vill att alla chefer i din organisation ska tilldelas rollen väljer du **Ledarskapsroll** som villkor och därefter **Chef**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-22-2026-02-14-45-7540-PM.png?width=670&height=344&name=image-png-Jun-22-2026-02-14-45-7540-PM.png)
+
+Slutligen klickar du på **Rättigheter** för att ange vilka rättigheter rollmedlemmarna ska ha.
+
+## Viktiga begrepp
+
+Nedan följer en kort sammanfattning av de viktigaste begreppen som används i roller och rättigheter.
+
+- **Riktning** – Definierar för vem rollen ska ha rättigheter och vilka åtgärder som kan utföras.
+- **Relationell**/**Organisatorisk** – Riktningen kan definieras antingen på medarbetarnivå eller på en organisatorisk enhet.
+- **Rollmedlemmar** – Omfattar alla medarbetare som tilldelas rättigheter genom rollen.
+- **Villkor** – En regel som styr vem som automatiskt blir medlem i rollen och får dess rättigheter.
+- **Grupp av villkor** – En kombination av villkor som styr medlemskapet i gruppen.
+- **Ledarskapsroll** – Ett samlingsbegrepp för Chef och Team lead.
+
+## Vanliga fragor
+
+**Fråga 1:** Jag får inte upp en mall som jag skapat som alternativ när jag ska förbereda eller hålla en One-to-one. Varför ser jag inte den?
+
+Som admin behöver du ge dig själv behörighet till de olika **One-to-one-typerna** för att få tillgång till mallarna och samtalens innehåll. Läs mer om hur du gör det [HÄR!](/sv/using-feedback-sessions#Samtalstyper)
+
+**Fråga 2:** Jag ser inte innehållet i Medarbetarmapparna som jag skapat upp. Varför?
+
+Behörigheten för medarbetarmappar styrs utanför adminrollen. Det innebär att du behöver tilldela dig behörighet för att kunna se dokumenten du laddar upp i respektive mapp.
+
+Läs mer om hur du ger dig tillgång till medarbetarmappar [HÄR](/sv/employee-folders#rattighet-att-se-mappar)!
+
+**Fråga 3:** Varför ser jag inte samma Nyheter som mina medarbetare?
+
+Detta kan bero på att nyheten är riktad till en organisatorisk tillhörighet som du själv inte tillhör. Läs mer [HÄR](/sv/news#skapa-nyheter).
+
+**Fråga 4:** Jag kan inte se allt innehåll på vår Företagssida. Varför?
+
+Om du som admin inte kan se allt innehåll i företagshörnan beror det sannolikt på att du har omfattat ett dokument eller en artikel till en organisatorisk tillhörighet som du själv inte ingår i. Läs mer [HÄR](/sv/company-corner#skapa-innehall-till-foretagshornan).
+
+**Fråga 5:** Det dyker inte upp några alternativ under *Granskningssteg* när en chef initierar en anställning. Inte ens jag som admin. Hur gör jag för att få fram alternativen?
+
+Att vara **Kontraktsgranskare** är en rättighet! För att få fram alternativ i rullistan behöver ni ställa in vilka som får vara granskare och aktivera rättigheten - det gäller även admins.
+
+Ni hittar enkelt rättigheten genom att **Söka efter rättigheten** i rollen som ni vill tilldela rättigheten för (*se bild nedan*).
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-23-2026-09-13-16-1568-AM.png?width=670&height=202&name=image-png-Jun-23-2026-09-13-16-1568-AM.png)

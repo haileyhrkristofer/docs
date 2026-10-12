@@ -1,0 +1,155 @@
+---
+title: "Hantera löner"
+---
+
+I den här guiden går vi igenom hur du hanterar medarbetares löner i Hailey, från att lägga till och uppdatera löner till att godkänna löneändringar.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="lVKiBjP" title="Hantera löner" />
+
+## Innan du sätter igång
+
+För att kunna hantera löner behöver du ha rätt behörigheter i Hailey. Medarbetare som ska kunna visa och ändra löneinformation behöver behörigheten **Kompensation - Lön** med åtkomstnivån **Visa & ändra**.
+
+Tänk också på att ändringar av löner kan kräva godkännande, beroende på vilka godkännandeprinciper som gäller i er organisation.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-11-33-55-6579-AM.png?width=670&height=263&name=image-png-Sep-21-2026-11-33-55-6579-AM.png)
+
+## Så lägger du till en ny lön
+
+För att lägga till en ny lön går du till medarbetarens profil och öppnar fliken **Kompensation**. Klicka på **Hantera** uppe till höger och välj **Lägg till lön**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-11-35-05-1472-AM.png?width=670&height=346&name=image-png-Sep-21-2026-11-35-05-1472-AM.png)
+
+<Tip>
+  Ska du lägga till löner för flera medarbetare? Då är det ofta smidigare att importera lönerna. På så sätt kan du även få med tidigare lönehistorik. Läs mer om löneimporten [**HÄR**.](/sv/importera-loner)
+</Tip>
+
+Fyll i önskad information. Observera att slutdatum endast fylls i om ni vet att medarbetaren ska sluta och lönen därmed ska upphöra.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-11-36-09-7793-AM.png?width=670&height=344&name=image-png-Sep-21-2026-11-36-09-7793-AM.png)
+
+När du är nöjd med ditt val klickar du på **Skicka till godkännare**. Lönen skickas då för godkännande till [godkännaren](/sv/approval-principles) som kan välja att godkänna eller neka.
+
+<Note>
+  Dyker det inte upp något i fältet Lönetyper? Då har ni troligtvis inte skapat några. Läs mer om lönetyper **[HÄR](/sv/salary-types).**
+</Note>
+
+När en lön väntar på godkännande eller är under ändring kommer ni få information om detta på lönekortet i form av en status.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-11-38-57-5707-AM.png?width=670&height=299&name=image-png-Sep-21-2026-11-38-57-5707-AM.png)
+
+Om en inskickad förfrågan innehåller felaktig information öppnar du löneboxen, klickar på **Hantera** och väljer **Avbryt förfrågan**. När förfrågan har avbrutits kan du göra de ändringar som behövs och skicka in en ny förfrågan.
+
+För att kunna se väntande ändringar av löneuppgifter på medarbetarkortet behöver medarbetaren ha behörigheten **Visa**.
+
+<Note>
+  Om ni har aktiverat funktionen **Faktisk Summa** kommer den faktiska lönen att visas i lönerutan, baserat på medarbetarens anställningsomfattning. Läs mer om hur det fungerar [HÄR](/sv/salary-types#Hur_hanteras_lonetyper).
+</Note>
+
+## Så ändrar du en lön
+
+När du vill ändra en medarbetares lönesumma i Hailey så gör du det från medarbetarkortet och fliken Kompensation. Klicka på lönen du önskar att ändra och i rutan som dyker upp och välj **Hantera - Ändra lönebelopp**.
+
+Vid denna typ av ändring kan ni endast justera summa och gäller från-datum. Denna typ av förändring **kräver godkännande**. Gör de önskade ändringarna och klicka sedan på **Spara**.
+
+<Note>
+  Om du har lagt till egna alternativ för **Anledningar till löneändring** under **Inställningar**, kan du välja en anledning när du ändrar en medarbetares lön. Om du inte har lagt till några egna alternativ kommer detta val inte att visas.
+
+  Läs mer om **Anledningar till löneändring** [HÄR](/sv/create-salary-change-reason).
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-05-2026-01-43-33-4206-PM.png?width=670&height=341&name=image-png-Oct-05-2026-01-43-33-4206-PM.png)
+
+När en lön är under ändring kommer detta att synas på lönekortet. Lönens status ändras till Aktiv - Ändring begärd. Klicka på lönen för att få mer information.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-05-2026-01-44-22-7594-PM.png?width=670&height=336&name=image-png-Oct-05-2026-01-44-22-7594-PM.png)
+
+Har förslaget av någon anledning blivit fel? Klicka då på lönen **-** **Hantera - Avbryt förfrågan,** börja därefter om på nytt.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-11-42-11-1440-AM.png?width=670&height=343&name=image-png-Sep-21-2026-11-42-11-1440-AM.png)
+
+### Så redigerar du löneinformation
+
+När du vill redigera informationen om en medarbetares lön i Hailey så gör du det från medarbetarkortet och fliken **Kompensation**. Klicka på lönekortet för den lön du vill ändra och tryck på **pennan** till höger om rubriken **Löneinformation.**
+
+Vid denna typ av ändring kan du endast justera lönenamn samt lönetyp. Denna typ av förändring kräver inte godkännande. Gör de önskade ändringarna och klicka sedan på **Spara**. Dessa ändringar blir synliga och träder i kraft direkt när du sparat.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-11-44-48-9510-AM.png?width=670&height=342&name=image-png-Sep-21-2026-11-44-48-9510-AM.png)
+
+### Så avslutar du en lön
+
+När du vill avsluta en medarbetares lön i Hailey så gör du det från medarbetarkortet och fliken Kompensation. Klicka på lönen du önskar avsluta och välj **Hantera** och därefter **Avsluta lön**.
+
+<Tip>
+  Löner kan även avslutas i samband med att ni avslutar en anställning på en medarbetare. I denna [**GUIDE**](/sv/terminate-employee) går vi igenom hur ni gör det.
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-11-46-09-0888-AM.png?width=670&height=346&name=image-png-Sep-21-2026-11-46-09-0888-AM.png)
+
+Vid denna typ av ändring kan du endast justera slutdatum. Denna typ av förändring **kräver godkännande**. Välj slutdatum och klicka sedan på **Skicka till godkännare**.
+
+När ett avslutande av en lön väntar på godkännande eller har blivit godkänd och kommer att avslutas synliggörs detta av lönens status.
+
+### Så tar du bort en lön
+
+Det är även möjligt att ta bort en lön i Hailey. Att ta bort en lön innebär att ni tar bort den helt ur ert konto. Det får i sin tur följder för historik och analysmöjligheter. Vi rekommenderar därför att du endast tar bort löner som av någon anledning blivit fel.
+
+Klicka på lönen du önskar ta bort och välj **Hantera** och därefter **Ta bort lön**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-11-48-23-4383-AM.png?width=670&height=345&name=image-png-Sep-21-2026-11-48-23-4383-AM.png)
+
+## Så återaktiverar du en lön
+
+Du kan återaktivera en lön som har ett slutdatum, oavsett om slutdatumet ligger i dåtid eller framtid. När återaktiveringen skickas in får ansvarig godkännare en uppgift om att godkänna återaktiveringen.
+
+- Om återaktiveringen godkänns tas slutdatumet bort och lönen blir aktiv igen med samma belopp som tidigare.
+- Om återaktiveringen nekas ligger slutdatumet kvar och ingen förändring görs.
+
+Observera att denna åtgärd inte visas som historik på lönekortet, eftersom den ses som en korrigering av en tidigare ändring.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-11-49-30-6900-AM.png?width=670&height=344&name=image-png-Sep-21-2026-11-49-30-6900-AM.png)
+
+## Så godkänner du löneändringar
+
+Godkännare av lön är något en medarbetare kan vara enligt de **godkännadeprinciper** ni ställt in. [**HÄR**](/sv/approval-principles) går vi igenom detta.
+
+När du som godkännare får en uppgift att godkänna en ny lön, löneförändring, avslutande av en lön eller återaktivering av lön, får du ett mail samt en uppgift i Hailey. Du får sedan välja om du vill **godkänna** eller **neka** lönen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-11-51-13-2614-AM.png?width=670&height=345&name=image-png-Sep-21-2026-11-51-13-2614-AM.png)
+
+## Vanliga fragor
+
+<AccordionGroup>
+  <Accordion title="Vad är en lönetyp?">
+    Lönetyper används för att kategorisera löner, till exempel grundlön, timlön eller bonus.
+  </Accordion>
+
+  <Accordion title="Kan jag redigera löneinformation utan godkännande?">
+    Ja. Ändringar av en löns titel och lönetyp kräver inte godkännande. När ändringarna sparas blir de synliga och börjar gälla direkt.
+  </Accordion>
+
+  <Accordion title="Varför kan jag inte se några lönetyper när jag lägger till en lön?">
+    Om inga lönetyper visas har de troligen inte skapats ännu. Lönetyper behöver konfigureras innan de kan tilldelas medarbetare vid registrering av en lön.
+  </Accordion>
+
+  <Accordion title="Kan jag återkalla en lönebegäran efter att den har skickats in?">
+    Ja. Om en lönebegäran har blivit felaktig kan du öppna lönkortet och välja **Hantera - Återkalla begäran**. Därefter kan du göra nödvändiga ändringar och skicka in en ny begäran.
+  </Accordion>
+
+  <Accordion title="Får medarbetaren en mailnotis om att lönen har förändrats?">
+    Nej, medarbetaren får ingen avisering via mail när lönen ändras. Mailutskick skickas endast till den person som ska godkänna lönen.
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,122 @@
+---
+title: "Skapa One-to-one mallar"
+---
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+Ska ni hålla samtal och vill säkerställa att rätt frågor ställs? Skapa då en mall i Hailey som guidar er på vägen!
+
+<VaamVideo id="0HxKiSX" title="Skapa One-to-one mallar" />
+
+## Vad är en one-to-one-mall?
+
+One-to-one-mallar i Hailey hjälper dig att standardisera och effektivisera era samtal. Genom att använda one-to-one-typer kan du organisera och kategorisera dina mallar samtidigt som du styr åtkomsten och definierar vem som kan hantera och administrera varje typ av one-to-one.
+
+Varje one-to-one mall låter dig definiera samtalets struktur, innehåll och upplägg, inklusive frågor och instruktioner. Detta hjälper till att säkerställa en konsekvent upplevelse av hög kvalitet i alla one-to-ones och gör det enklare att följa organisationens feedbackprocess.
+
+## Innan du sätter igång
+
+Innan du börjar skapa dina one-to-one-mallar behöver du först skapa dina **one-to-one-typer**. För att skapa en one-to-one-typ går du till **Inställningar – Samtal** och klickar på inställningsikonen uppe till höger. Klicka sedan på **Lägg till** för att skapa en one-to-one-typ.
+
+För mer information om hur du konfigurerar behörigheter för one-to-one-typer kan du läsa mer [**HÄR**](#rättigheter).
+
+## Hur skapar man en one-to-one mall?
+
+För att skapa din one-to-one-mall går du till **Inställningar – Samtal**, klickar på **Lägg till** uppe till höger och väljer **One-to-one**.
+
+![](/images/sv/using-feedback-sessions/01.png)
+
+Ge din mall ett namn, ange om du vill kunna skicka ut förberedande frågor och lägg till sektioner för de olika ämnesområdena i frågorna.
+
+Du kan även begränsa one-to-one-mallen till specifika delar av organisationen. Du kan exempelvis välja att göra mallen tillgänglig endast för en viss organisatorisk tillhörighet inom er Hailey-miljö.
+
+<Note>
+  Om din mall inte innehåller några förberedande frågor kommer du inte att kunna hålla ett **förberedande one-to-one** med den mallen.
+</Note>
+
+![](/images/sv/using-feedback-sessions/02.png)
+
+I varje sektion lägger du till dina frågor och väljer hur varje fråga ska besvaras. Om du använder förberedande frågor får du även möjlighet att välja när varje fråga ska besvaras.
+
+Det är också möjligt att skriva **Instruktioner**:
+
+- För **Samtalshållare** som visar i förberedande uppgifter.
+- För **Medarbetaren** som visar i förberedande uppgifter.
+- Som visas **under one-to-one** samtalet.
+
+![](/images/sv/using-feedback-sessions/03.png)
+
+## Viktiga begrepp
+
+Här hittar du förklaringar av begrepp som kan vara bra att få lite extra insikt i:
+
+- **Samtalshållare:** Personen som leder det samtalet.
+- **Medarbetare:** Personen som samtalet gäller och genomförs med.
+- **Förberedande frågor:** Frågor som skickas ut innan samtalet genomförs.
+
+## Rättigheter
+
+När du konfigurerar en one-to-one-typ kan du definiera vem som ska ha åtkomst och vilka åtgärder de ska kunna utföra. Åtkomsten kan ställas in för medarbetare, teamledare, chefer, överordnade chefer och utvalda arbetsgrupper.
+
+**Tillgängliga åtkomstnivåer:**
+
+- **Ingen:** Kan inte se one-to-ones med denna typ.
+- **Visa:** Kan se one-to-ones med denna typ.
+- **Hantera:** Kan se, hålla, förbereda, redigera, begära godkännande för och slutföra one-to-ones.
+- **Full åtkomst:** Inkluderar alla behörigheter under Hantera samt möjligheten att radera one-to-ones.
+
+Du kan ge specifika arbetsgrupper åtkomst till one-to-ones inom en viss one-to-one-typ genom att aktivera **Arbetsgrupp** **med riktad åtkomst**. Välj arbetsgrupp, tilldela önskad åtkomstnivå och begränsa vid behov åtkomsten till en specifik del av organisationen, exempelvis en juridisk enhet, arbetsplats eller avdelning genom omfattning.
+
+Observera att admin inte automatiskt har åtkomst till alla one-to-ones. Om åtkomst behövs måste den tilldelas via en arbetsgrupp.
+
+**Övriga behörigheter:**
+
+För att ge dessa behörigheter till andra roller uppdaterar du rollinställningarna under **Inställningar – Säkerhet – Roller och rättigheter**:
+
+- **Visa och redigera one-to-one-typer:** Ger användare möjlighet att skapa, redigera och hantera åtkomst för one-to-one-typer.
+- **Visa och redigera samtalsmallar:** Ger användare möjlighet att skapa och redigera one-to-one-mallar (samt mallar för 360° feedback).
+
+## Vanliga frågor
+
+<AccordionGroup>
+  <Accordion title="Jag kan inte spara min mall. Varför inte?">
+  När du skapar en ny one-to-one-mall behöver du säkerställa att alla frågor har en titel och att frågor med svarstypen **envalfsfråga** har alternativ att välja mellan.
+  </Accordion>
+  <Accordion title="Jag vill skapa en mall för ett one-to-one som endast ska användas mellan HR och medarbetare. Hur säkerställer jag att ingen annan har åtkomst till dessa samtal?">
+  För att aktivera detta skapar du en separat one-to-one-typ där åtkomsten är inställd på **Ingen** för ala, förutom den utsedda HR arbetsgruppen. Vid behov kan du ge medarbetare åtkomsten **Visa**, vilket gör att de kan besvara förberedande frågor och ta del av anteckningarna efteråt.
+
+  Mallen eller mallarna som används för dessa samtal ska sedan kopplas till denna specifika **one-to-one-typ**.
+  </Accordion>
+  <Accordion title="Vad kan jag använda mallarna till?">
+  Här är en lista över saker du kan använda one-to-one-mallar för:
+
+  - Årlig utvärdering av prestation
+
+  - Månadsvisa/kvartalsvisa medarbetarsamtal
+
+  - Målsamtal
+
+  - Lönesamtal
+
+  - Utvärdering av ledarskap
+
+  - Rehabiliteringsdiskussion
+
+  - Feedback på genomförda projekt
+
+  - Exitsamtal
+
+  - Uppföljningssamtal x antal månader in i tjänsten
+  </Accordion>
+</AccordionGroup>

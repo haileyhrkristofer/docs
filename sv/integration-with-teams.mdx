@@ -1,0 +1,205 @@
+---
+title: "Integration med Microsoft Teams"
+---
+
+Vill ni få få påminnelser om födelsedagar, snabb tillgång till Att göra-listan och möjlighet att registrera frånvaro direkt i Teams? Då är det här integrationen för er!
+
+<Tip>
+  Första gången du aktiverar en av **Haileys standardintegrationer**? Börja med att läsa den [**HÄR**](/sv/haileys-standard-integrations) guiden för att veta vad du ska tänka på innan du sätter igång.
+</Tip>
+
+## Vad gör integrationen?
+
+Integrationen till Microsoft Teams består av två delar: **Haileys Teams-bot** och **Webhooks**. Det går jättebra att endast aktivera en av de eller båda om så önskas.
+
+**Haileys Teams-bot** gör det möjligt för medarbetare att frånvaroanmälan sig via Teams, se vilka kollegor som är frånvarande samt få notiser direkt i Teams när de har nya uppgifter **Att göra** i Hailey (inkluderade uppgifter finner ni [HÄR](#vilken-data-ar-inkluderad-i-integrationen)).
+
+Om **inkommande webhooks** aktiveras kan även notiser om födelsedagar, årsdagar och medarbetares första anställningsdag till en valfri Teams-kanal, vilket gör det enklare att uppmärksamma viktiga händelser tillsammans.
+
+## Hur fungerar integrationen?
+
+När Haileys **Teams-bot** har aktiverats får medarbetare automatiskt notiser i Teams när de tilldelas nya uppgifter i Hailey. Boten kan även användas när som helst för att rapportera frånvaro eller för att se vilka kollegor som är frånvarande en viss dag.
+
+Om **webhooks** aktiveras skickas notiser automatiskt en gång per dag till den Teams-kanal som valts vid uppsättningen. Notiserna innehåller relevanta händelser för dagen, exempelvis födelsedagar, årsdagar eller nya medarbetares första arbetsdag.
+
+## Vilken data är inkluderad i integrationen?
+
+### Haileys Teams bot
+
+- Rapportera sin egen sjukfrånvaro för idag (förutsatt att detta är inställt i uppsättningen)
+- Hämta sin Att göra-lista
+- Få kontaktuppgifter
+- Få information om vilka som är frånvarande idag.
+
+Oavsett om boten är aktiverad eller inte kommer medarbetaren få uppgifter automatiskt i Teams om integrationen är aktiv. De uppgifter som Teams skickar ut **automatiskt** relaterar till:
+
+- Löner
+- One-to-ones
+- Arbetsflöden
+- Signering av kontrakt
+- 360° review
+
+### Webhooks
+
+Följande notiser kan ni välja att skicka notiser för:
+
+- Födelsedagar
+- Årsdagar
+- Nya kollegor
+
+## Vad krävs för att ingå i integrationen?
+
+### Haileys Teams-bot
+
+För att kunna använda Haileys Teams-bot behöver varje medarbetare aktivera boten i Microsoft Teams. Instruktioner för hur aktiveringen går till finns [**HÄR**](#instruktioner-for-medarbetare).
+
+### Webhooks
+
+Som standard inkluderas alla medarbetare i webhook-notiserna. Om ni vill undanta specifika medarbetare eller vissa typer av händelser från utskicken kan detta enkelt konfigureras i Hailey. Instruktioner för hur ni exkluderar medarbetare eller särskilda händelser finns [**HÄR**](#uteslut_webhook).
+
+## Hur aktiverar man integrationen - Hailey Teams bot?
+
+För att aktivera Hailey Teams bot behöver du som administratör:
+
+<Steps>
+  <Step title="Förbereda uppsättningen i Hailey">
+    Förbereda uppsättningen i Hailey
+  </Step>
+  <Step title="Lägga till integrationen i Teams">
+    Lägga till integrationen i Teams
+  </Step>
+  <Step title="Lägga till integrationen i Hailey Därefter är det fritt fram">
+    Lägga till integrationen i Hailey Därefter är det fritt fram för varje medarbetare att aktiverar boten på egen hand i sin Teams.
+  </Step>
+</Steps>
+
+### Steg 1 - Förbereda uppsättningen i Hailey
+
+Gå till **Inställningar** - **Säkerhet** - **AI**. Aktivera **Boten** och **Spara.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-03-2026-12-22-14-0647-PM.png?width=670&height=301&name=image-png-Jul-03-2026-12-22-14-0647-PM.png)
+
+### Steg 2 - Lägg till integrationen i Teams
+
+Logga in i **Teams**. Gå **Appar** och sök efter **Hailey HR**. **Lägg till** Hailey HR appen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-03-2026-12-30-00-6236-PM.png?width=670&height=490&name=image-png-Jul-03-2026-12-30-00-6236-PM.png)
+
+En chatt med Hailey Teams bot kommer automatiskt att öppnas upp. Följ instruktionerna i chatten för att komma igång. Skriv **Connect.** Då kommer en knapp som säger **Connect to Hailey** skickas till dig. Klicka på knappen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-03-2026-12-32-59-4631-PM.png?width=670&height=413&name=image-png-Jul-03-2026-12-32-59-4631-PM.png)
+
+Du kommer då hänvisas till Haileys hemsida. När du har loggat in kommer du att få en bekräftelse på att Teams boten är kopplad till Hailey HR. Därefter är det klart!
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-03-2026-12-34-27-2090-PM.png?width=670&height=506&name=image-png-Jul-03-2026-12-34-27-2090-PM.png)
+
+### Steg 3 - Lägg till integrationen i Hailey
+
+Du har nu även möjligheten att koppla en frånvaroanledning till Teams-boten, om du önskar att era medarbetare ska kunna rapportera sjukfrånvaro i Teams, se instruktion nedan. Observera att endast en frånvaroanledning kan väljas som standard.
+
+Gå till **Inställningar - Integrationer.** Klicka på **Lägg till integration.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-03-2026-12-37-09-4518-PM.png?width=670&height=346&name=image-png-Jul-03-2026-12-37-09-4518-PM.png)
+
+**Aktivera** integrationen och välj sedan en standardanledning för sjukfrånvaro som kommer att användas när medarbetare rapporterar en sjukanmälan via Teams. Klicka sen på **Spara**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-03-2026-12-39-18-5512-PM.png?width=670&height=510&name=image-png-Jul-03-2026-12-39-18-5512-PM.png)
+
+### Steg 4 - Medarbetarnas uppsättning
+
+<Warning>
+  För att medarbetare ska kunna använda Haileys Teams bot behöver de följa stegen under rubriken **Lägg till integrationen i Teams**. Ni finner instruktionerna [HÄR](#instruktioner-for-medarbetare).
+</Warning>
+
+## Hur aktiverar man integrationen - Webhooks?
+
+För att aktivera **Webhooks** behöver du som administratör i båda systemen:
+
+<Steps>
+  <Step title="Förbereda uppsättningen i Teams">
+    Förbereda uppsättningen i Teams
+  </Step>
+  <Step title="Lägga till integrationen i Hailey">
+    Lägga till integrationen i Hailey
+  </Step>
+</Steps>
+
+### Steg 1 - Förbered uppsättningen i Teams.
+
+Logga in i Teams. I menyn på vänster sida finns det tre prickar. Klicka på prickarna och skriv in **Arbetsflöden** i sökrutan. Välj appen som dyker upp enligt bilden nedan.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-03-2026-12-50-46-2174-PM.png?width=670&height=444&name=image-png-Jul-03-2026-12-50-46-2174-PM.png)
+
+När du kommit in till **Arbetsflöden**, sök på Webhook och välj **Publicera i en kanal när en webhook-begäran tas emot** som ligger under rubriken **Starta med en populär Teams-mall.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-28-2025-11-00-14-4889-AM.png?width=688&height=371&name=image-png-Mar-28-2025-11-00-14-4889-AM.png)
+
+I nästa steg kan du välja att tilldela flödet ett **Flödesnamn**. Klicka på **Nästa** för att komma vidare.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-28-2025-03-03-42-4653-PM.png?width=670&height=367&name=image-png-Mar-28-2025-03-03-42-4653-PM.png)
+
+Nu är det dags att välja i vilket **Team**, och vilken **Teams-kanal** kortet ska publiceras i. När du valt både team och kanal klickar ni på **Skapa flöde**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-28-2025-03-22-57-9040-PM.png?width=670&height=375&name=image-png-Mar-28-2025-03-22-57-9040-PM.png)
+
+Snart är vi färdiga med uppsättningen i Teams! Allt du behöver göra nu är att **Kopiera** länken som genererats i och med att flödet har skapats - **för den länken vill vi ha med oss till Hailey.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-28-2025-03-26-33-4718-PM.png?width=670&height=357&name=image-png-Mar-28-2025-03-26-33-4718-PM.png)
+
+När du har **Kopierat** länken klickar du på **Klar** för att spara uppsättningen.
+
+### Steg 2 - Lägg till integrationen i Hailey
+
+Logga in i Hailey. För nu är det dags att aktivera er inkommande webhook! För att aktivera integrationen krävs tillgång till **Inställningar** - **Integrationer** i Hailey.
+
+Börja med att gå till **Inställningar** - **Integrationer** och leta upp alternativet som heter **Teams webhook** och klicka sen på **Lägg till integration +**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-03-2026-01-19-53-9299-PM.png?width=670&height=331&name=image-png-Jul-03-2026-01-19-53-9299-PM.png)
+
+Klicka toggeln som heter **Aktiv** så den blir påslagen. I fältet **Teams webhook URL** klistrar du in länken som kopierats från Teams.
+
+När länken är inklistrad och aktiveringsknappen påslagen klickar du på **Spara**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-03-2026-01-22-35-1000-PM.png?width=670&height=351&name=image-png-Jul-03-2026-01-22-35-1000-PM.png)
+
+Nu när integrationen är aktiverad kommer ni att få notiser om födelsedagar, årsdagar och medarbetares första dag direkt till er utvalda Teams-kanal!
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-01-2025-12-01-34-2341-PM.png?width=670&height=217&name=image-png-Apr-01-2025-12-01-34-2341-PM.png)
+
+## Uteslut medarbetare från Webhooks
+
+Har ni medarbetare som **inte** uppskattar att bli uppmärksammade kan ni utesluta dessa från webhooks. På samma sätt kan ni välja att exkludera **Nya kollegor, Årsdagar** eller **Födelsedagar** om ni inte vill att ett eller flera av dessa alternativ ska generera en notis i Teams.
+
+För att se över dessa inställningar går ni till **Inställningar** - **Allmänt - Culture corner.** De medarbetare som inte vill vara med och uppmärksammas överhuvudtaget ska således läggas in under **Uteslut specifika medarbetare**.
+
+Här kan ni även bestämma vilka notiser som är relevanta för er, och på så sätt styra vilka notiser som ska publiceras i vald kanal i Teams.
+
+<Note>
+  Dessa inställningar styr även det som visas under **Culture corner** på Haileys startsida.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-03-2026-01-31-30-3126-PM.png?width=670&height=352&name=image-png-Jul-03-2026-01-31-30-3126-PM.png)
+
+## Vanliga fragor
+
+**Fråga 1:** Medarbetare får inte upp boten i sin Teams?
+
+För att medarbetarna ska kunna använda Teams-boten behöver de på egen hand aktivera Teams-boten. Det är superenkelt och de gör det genom att följa instruktionerna [HÄR](#instruktioner-for-medarbetare).
+
+**Fråga 2:** Varför skickas inte notiser för vissa medarbetare i webhooksen?
+
+Dubbelkolla att ni inte har uteslutit medarbetaren från Culture corner och därmed även ur webhooksen till Teams. Utöver det kan medarbetarens anställningsstatus avgöra huruvida den inkluderas eller inte. Har medarbetaren anställningsstatus: **Har lämnat** eller **Arbetsbefriad** kommer inte medarbetaren inkluderas.
+
+**Fråga 3:** Kommer medarbetare kunna se personuppgifter i Teams-boten som de normalt inte har tillgång till i Hailey?
+
+Nej. Haileys Teams-bot följer samma inställningar för Roller och rättigheter som ni har konfigurerat i Hailey. Boten kommer därmed endast visa information som användaren har behörighet att se.
+
+**Fråga 4**: En medarbetare har inte aktiverat Teams-boten men får fortfarande uppgifter från den, ska det vara så?
+
+Ja, alla uppgifter som automatiskt skickas ut via boten kommer skickas ut oavsett om medarbetaren aktiverat boten i sin teams eller inte. För att kunna chatta med sin bot behöver dock medarbetaren aktivera boten i sitt konto.
+
+**Fråga 5**: Kan vi sätta upp olika webhooks till olika kanaler i Teams?
+
+Nej, i dagsläget kan vi välja **en** Teams **-** kanal som vi skickar notiserna från Culture corner till.
+
+_Om du har några frågor angående integrationen, vänligen kontakta din Customer Success kontaktperson på Hailey._

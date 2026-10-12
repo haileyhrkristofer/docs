@@ -1,0 +1,129 @@
+---
+title: "Skapa rapporteringspolicy"
+---
+
+I den här guiden visar vi hur du enkelt kommer igång med era tid & frånvaro rapporteringspolicys.
+
+Hur skapar man en [Rapporteringstyp för Tid och frånvaro?](#tid)
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="LIybbdU" title="Skapa rapporteringspolicy" />
+
+## Vad är Rapporteringspolicyer?
+
+Rapporteringspolicyer styr hur medarbetare rapporterar sin tid och frånvaro i Hailey. Medarbetare som ska rapportera tid eller frånvaro måste ha en rapporteringspolicy kopplad till sin anställning.
+
+- **Arbetstid** = den tid som medarbetaren arbetar.
+- **Frånvaro** = exempelvis semester, sjukfrånvaro och föräldraledighet.
+
+Rapporteringspolicyer behöver inte aktiveras för hela organisationen. Om endast en specifik avdelning eller ett visst team ska rapportera arbetstid eller frånvaro kan funktionen konfigureras enbart för den delen av organisationen.
+
+## Innan du börjar
+
+Följande aspekter är värda att överväga när du väljer hur **frånvaro** ska rapporteras:
+
+**Integrationer:** Vissa integrationer kräver ett specifikt format för att rapportera frånvaro i **timmar** eller som en **procentandel av anställningen**. Utvärdera de integrationer du planerar att använda och säkerställ att frånvaron rapporteras i det format som möjliggör synkronisering. Läs mer om integrationer [HÄR](/sv/haileys-standard-integrations#main-content).
+
+**Frånvaroanalys:** Om frånvaro ska rapporteras som en **procentandel** av anställningen och du vill att frånvaron ska inkluderas i analysen, är det viktigt att dina medarbetare har **Arbetstimmar** angiven på sin profil. Frånvaro som rapporteras i **timmar** inkluderas automatiskt i frånvaroanalysen. Läs mer om **Arbetstimmar** [HÄR](/sv/work-hours).
+
+## Hur skapar du en Rapporteringspolicy?
+
+För att använda Tid och frånvaro i Hailey behöver du skapa en eller flera **Rapporteringspolicys**. Detta gör du genom att klicka på **Inställningar - Tid & frånvaro**. Klicka på **Lägg till** och välj **Rapporteringspolicy**. Namnge rapporteringspolicyn, välj rapporteringstyp och ange om du vill att medarbetarna ska rapportera frånvaro i timmar eller i procent av anställningsgrad.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-28-2026-06-09-49-4562-PM.png?width=667&height=334&name=image-png-Apr-28-2026-06-09-49-4562-PM.png)
+
+## Hur skapar man en Rapporteringstyp för Frånvaro?
+
+Om du endast vill att medarbetare ska rapportera **Frånvaro** i Hailey, välj denna rapporteringstyp. Övriga inställningar som ni kan tänkas använda här är **Tidscykler**. Tidscykler resulterar i att medarbetare och godkännare i början på varje månad får en uppgift att godkänna sin rapporterade frånvaro. Läs mer om vad tidscykler är och hur det fungerar [HÄR](/sv/time-cycles).
+
+<Note>
+  **Observera** att om inställningen för Tidscykler aktiveras **mitt i en månad** kommer ni dagen efter aktivering att få uppgifter att skicka in och godkänna tid/frånvaro för föregående månad.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-10-2026-07-52-14-2113-AM.png?width=667&height=338&name=image-png-Aug-10-2026-07-52-14-2113-AM.png)
+
+## Hur skapar man en Rapporteringstyp för Tid och frånvaro?
+
+När du väljer rapporteringstyp **Tid och frånvaro** har du tre togglar som du kan aktivera:
+
+- Ska medarbetare ha ett **kompsaldo** på sina konton? Toggla på detta och läs mer om kompsaldo [HÄR](/sv/time-comp-time-balance).
+- **Ska era medarbetare stämpla in och ut sin rapporterade tid?** Toggla på detta för att ge medarbetare med denna rapporteringspolicy tillgång till en stämpelklocka på sin Dashboard. Med stämpelklockan kan medarbetaren stämpla in, registrera rast, avsluta rast och stämpla ut. Det är även möjligt att redigera den registrerade tiden i efterhand, med krav på en kommentar för alla justeringar. Tider som registreras via stämpelklockan **följer tidszonen för medarbetarens tilldelade arbetsplats**. Om arbetsplatsen inte har någon tidszon angiven används istället **företagets tidszon** under **Inställningar → Allmänt**. Om medarbetaren inte har någon tilldelad arbetsplats används också företagets tidszon.
+- Vill du använda **tidscykler**? Toggla på detta och läs med om vad tidscykler är och hur det fungerar [HÄR](/sv/time-cycles).
+
+<Note>
+  Om en medarbetares arbetsplats eller arbetsplatsens tidszon ändras efter att en stämpling har registrerats, påverkas inte redan registrerade tider. Den uppdaterade tidszonen börjar gälla nästa gång medarbetaren stämplar in.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-10-2026-07-53-08-2252-AM.png?width=669&height=334&name=image-png-Aug-10-2026-07-53-08-2252-AM.png)
+
+## Hur konfigurerar man Godkännandeprinciper?
+
+Det sista steget i uppsättningen är att ställa in dina **Godkännandeprinciper**. Du kan välja mellan **Chef, Team lead, Avdelningschef, Ansvarig för organisationen, Specifik(a) medarbetare, Arbetsgrupp** och **Chefens chef** som primär godkännare.
+
+Till sist kan du även välja en **reservgodkännare** för rapporteringspolicyn. Denna godkännare kan antingen vara en **Arbetsgrupp** eller en **Specifik medarbetare** och används för medarbetare som **inte** har den valda primära godkännaren.
+
+Om ni vill att vissa frånvaroorsaker godkännas automatiskt, välj dessa under **Undantag från godkännande**.
+
+<Tip>
+  **Tips!** Varierar godkännaren för tid och frånvaro mellan olika avdelningar i din organisation? I så fall kan du skapa flera rapporteringspolicys med olika godkännare och tilldela rätt policy till varje medarbetare.
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-10-2026-07-47-27-8980-AM.png?width=669&height=337&name=image-png-Aug-10-2026-07-47-27-8980-AM.png)
+
+## Vanliga fragor
+
+Här hittar du svar på vanliga frågor som kan hjälpa dig att konfigurera inställningarna för rapporteringspolicyn.
+
+<AccordionGroup>
+  <Accordion title="Om vi rapporterar frånvaro i procent kan vi fortfarande rapportera arbetstid i timmar?">
+    Ja. Valet mellan att rapportera i timmar eller procent påverkar endast **frånvaro**. Tid rapporteras alltid i timmar, oavsett vilken inställning som används.
+  </Accordion>
+
+  <Accordion title="Ska jag välja att rapportera frånvaro i procent eller timmar?">
+    Valet mellan att rapportera frånvaro i procent eller timmar beror på vad ni föredrar, hur er inställningar för Tid & Frånvaro ser ut och vilka krav som gäller.
+
+    Vissa integrationer kräver att frånvaro rapporteras i **procent**, så kontrollera vilka krav som gäller för den integration ni använder.
+
+    Om frånvaro ska rapporteras på en dag utan schemalagda **arbetstimmar** – till exempel om schemat innehåller _vissa_ dagar utan definierade arbetstimmar – måste frånvaron rapporteras i **procent**.
+
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-27-2026-08-38-24-0043-AM.png?width=488&height=318&name=image-png-Jul-27-2026-08-38-24-0043-AM.png)
+
+    Om schemat helt saknar arbetstimmar kan frånvaro rapporteras i timmar.
+
+    När frånvaro rapporteras i **timmar** kan ni se det exakta antalet timmar som en medarbetare har varit frånvarande.
+  </Accordion>
+
+  <Accordion title="Om jag aktiverar klocka in/klocka ut, kan medarbetare fortfarande rapportera tid manuellt?">
+    Ja, medarbetare kan fortfarande registrera tid manuellt även när **klocka in/klocka ut** är aktiverad.
+
+    Tänk på att endast den **senast registrerade** tiden sparas. Om tid rapporteras igen för en dag som redan har en tidsregistrering kommer den nya registreringen att ersätta den tidigare.
+
+    Observera att tid som registreras med klocka in/klocka ut inte kan kopplas till projekt. Om medarbetare behöver rapportera tid på projekt måste de göra det genom manuell tidsrapportering.
+  </Accordion>
+
+  <Accordion title="Hur anger jag vilken rapporteringspolicy en medarbetare ska ha?">
+    För att en medarbetare ska kunna rapportera **tid** eller **frånvaro** i Hailey måste en rapporteringspolicy vara tilldelad till medarbetarens anställning. När policyn har tilldelats kan medarbetaren rapportera enligt de inställningar som är definierade i den.
+
+    Läs mer om hur du tilldelar en rapporteringspolicy [HÄR](/sv/update-time-and-time-off-settings-on-employee).
+  </Accordion>
+
+  <Accordion title="Vilken tidszon används när en medarbetare ska stämpla in och ut?">
+    Organisationer med medarbetare i flera länder eller tidszoner kan stämpla in och ut med korrekta lokala tider för varje arbetsplats. Stämpelklockan använder i första hand tidszonen som är inställd på medarbetarens **arbetsplats** (under **Inställningar → Organisation**). Det innebär att medarbetare i olika länder eller regioner stämplar in och ut enligt sin lokala tid.
+
+    Om arbetsplatsen saknar en angiven tidszon används istället företagets tidszon som är inställd under **Inställningar - Allmänt**. Detsamma gäller om medarbetaren inte är kopplad till någon arbetsplats.
+
+    Observera att om en medarbetares arbetsplats eller dess tidszon ändras i efterhand påverkar det inte redan registrerade stämplingar. Den nya tidszonen börjar gälla nästa gång medarbetaren stämplar in.
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,123 @@
+---
+title: "Integration med Flex Lön"
+---
+
+Genom Haileys integration är det möjligt att exportera ditt företags medarbetar- och lönedata på ett GDPR-kompatibelt sätt och enkelt importera den in till Flex Lön.
+
+<Tip>
+  Första gången du aktiverar en av **Haileys standardintegrationer**? Börja med att läsa den [**HÄR**](/sv/haileys-standard-integrations) guiden för att veta vad du ska tänka på innan du sätter igång.
+</Tip>
+
+---
+
+## 1. Vad gör integrationen?
+
+Genom denna integration kan du smidigt exportera en fil med viktig medarbetarinformation och löneuppgifter från Hailey till Flex Lön. Det innebär att eventuella förändringar som görs i Hailey, såsom lönejusteringar, automatiskt uppdateras genom filöverföringen i Flex Lön. På så sätt slipper du manuellt mata in samma data i två olika system, vilket effektiviserar det administrativa arbetet.
+
+---
+
+## 2. Innan du aktiverar integrationen
+
+### Anställningsnummer
+
+Alla medarbetare som ska synkroniseras till FlexLön måste ha ett anställningsnummer i Hailey som matchar anställningsnumret i FlexLön.
+
+**Aktiv anställning**
+
+För att medarbetaren ska ingå i integrationen måste även medarbetaren ha en aktiv anställning under given vald period, likt bilden nedan.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2025-09-38-38-1572-AM.png?width=670&height=402&name=image-png-Jul-16-2025-09-38-38-1572-AM.png)
+
+### Löner
+
+För att medarbetarens lön ska synkroniseras till FlexLön måste lönen anges i SEK, och clearingnumret får innehålla max 5 tecken. Om lönedata och/eller valuta är ogiltig kommer dessa värden att uteslutas från integrationen, men den anställde kommer fortfarande att inkluderas.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2025-09-42-26-2257-AM.png?width=670&height=347&name=image-png-Jul-16-2025-09-42-26-2257-AM.png)
+
+<Warning>
+  ❗️Observera att varje lönepost behöver korrelera till en specifik anställningsperiod. Det är därför inte möjligt att ha olika slutdatum för en medarbetares lön och anställning inom denna integration.
+</Warning>
+
+---
+
+## 3. Aktivera integrationen
+
+För att aktivera integrationen, gå till Inställningar > Integrationer i Hailey, välj där Flex Lön.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2025-09-23-34-6113-AM.png?width=670&height=320&name=image-png-Jul-16-2025-09-23-34-6113-AM.png)
+
+Aktivera integrationen och välj **Spara**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2025-09-24-10-0341-AM.png?width=670&height=401&name=image-png-Jul-16-2025-09-24-10-0341-AM.png)
+
+---
+
+## 4. Exportera fil
+
+Exporten av data genomförs från fliken Rapporter **\>** FlexLön i huvudmenyn.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-01-2026-06-22-12-8234-AM.png?width=646&height=320&name=image-png-Apr-01-2026-06-22-12-8234-AM.png)
+
+- Välj sedan **Exportera medarbetarfil**.
+- En datumväljare dyker här upp där du bestämmer från vilket datum som du vill inkludera **godkända** löneförändringar (månadslön) i den exporterade filen - _observera att datumet i fältet "Till" alltid är dagens datum_. Om någon ändring har gjorts på en månadslön under perioden du valt, trots att startdatumet för lönen är innan perioden - kommer denna ändring också att inkluderas så länge det skett inom anställningsperioden. Välj därefter exportera
+
+<Warning>
+  ❗️Vänligen notera att löneförändringar som inträffar utanför anställningsperioden inte kommer att inkluderas i den exporterade filen.
+</Warning>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2025-09-27-28-7178-AM.png?width=670&height=274&name=image-png-Jul-16-2025-09-27-28-7178-AM.png)
+
+Efter att filen sparats ner så går ni till Flex Lön för att fortsätta med importen där. Det man gör i Flex Lön är att gå in under menyn Servicerutiner och väljer "importera personuppgifter". Då får man upp importrutan.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2025-09-28-39-7594-AM.png?width=670&height=382&name=image-png-Jul-16-2025-09-28-39-7594-AM.png)
+
+I importrutan är det sedan viktigt att man bockar i "tillåt uppdatering av befintliga anställda" <img src="https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2025-09-28-57-3757-AM.png?width=480&height=486&name=image-png-Jul-16-2025-09-28-57-3757-AM.png" alt="" />
+
+Välj därefter OK för att startar själva importen. Filen hämtas från **importmallsinställningarna** man satt upp sedan sedan tidigare.
+
+---
+
+## 5. I filen inkluderas följande data:
+
+## Medarbetardata
+
+| **HAILEY** | **FLEX LÖN** |
+| --- | --- |
+| Anställningsnummer | Anställningsnummer |
+| Förnamn + Efternamn | Namn |
+| Personnummer | Personnummer |
+| Anställningsdatum | Anställningsdatum |
+| Sista anställningsdag | Sista anställningsdag |
+| Omfattning (%) | Omfattning |
+| Gatuadress | Adress |
+| Postnummer | Postnummer |
+| Stad | Postort |
+
+## Lönedata
+
+| **HAILEY** | **FLEX LÖN** |
+| --- | --- |
+| Månadslön | Månadslön |
+| Timlön | Timlön |
+| Startdatum för lön | Månadslön fr.o.m. datum |
+| Clearingnummer | Bank (clearingnr) |
+| Kontonummer | Bankkonto |
+
+---
+
+## 6. Felsökning
+
+Stöter du på problem, eller är det något som inte fungerar enligt förväntat? Här är några saker du kan kika igenom på egen hand!
+
+- Har alla ett anställningsnummer i FlexLön, som stämmer överens med deras anställningsnummer i Hailey?
+  - Om nej, fyll i anställningsnumret i Hailey.
+- Medarbetare som inte följer med i exportfilen?
+  - För att en medarbetare ska inkluderas i exportfilen måste personen vara i tjänst, eller ha varit i tjänst, under den angivna tidsperioden för exporten. Det vill säga, medarbetare som kommer att börja inkluderas inte med i filen.
+- Medarbetarens lön följer inte med i exportfilen?
+  - Endast godkända löneförändringar (månadslön) följer med i den exporterade filen. Dubbelkolla därför att alla aktuella löneändringar är godkända innan du genomför exporten.
+- Är medarbetarens lön i annan valuta än SEK?
+  - Dessa kommer inte att inkluderas i filen.
+- Är medarbetarens clearingnummer i fler tecken än 5?
+  - Dessa kommer inte att inkluderas i filen.
+
+_Om du har några frågor angående integrationen, vänligen kontakta din Customer Success kontaktperson på Hailey._

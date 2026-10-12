@@ -1,0 +1,231 @@
+---
+title: "Skapa anställningsmallar"
+---
+
+Med anställningsmallar kan du anpassa kandidatupplevelsen. Skräddarsy varje mall så att den passar era behov!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="1PiW4uc" title="Skapa anställningsmallar" />
+
+## Vad är en anställningsmall?
+
+Med anställningsmallar i Hailey kan du skräddarsy kandidatupplevelsen. Genom kandidatportalen och preboardingportalen kan du välkomna kandidaten på ett personligt sätt, samtidigt som du samlar in all information som behövs för en smidig anställningsprocess.
+
+För att skräddarsy er egna kandidatupplevelse, följ guiden nedan!
+
+## Skapa en anställningsmall
+
+Din anställningsmall består av två delar: Kandidatportal och Preboardingportal. För att skapa din anställningsmall följ dessa steg:
+
+- **Inställningar** - **Anställningsmallar**
+- Klicka på **Lägg till**
+- Fyll i **titel**, **beskrivning**, **språk** och **omfatta** vid behov vem som kan använda mallen
+- Klicka på **Börja bygga.**
+
+<Tip>
+  Beskrivningen hjälper den som initierar anställningen att välja rätt mall. Detta är särskilt användbart om det finns flera anställningsmallar att välja mellan!
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2026-09-35-57-0918-AM.png?width=670&height=380&name=image-png-Jul-14-2026-09-35-57-0918-AM.png)
+
+<Note>
+  Om du väljer flera olika fält när du omfattar mallen måste användaren vara kopplad till **alla** dessa enheter för att kunna använda mallen.
+
+  Om du i stället väljer flera värden i **samma fält** räcker det att användaren är kopplad till **ett** av dem.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2026-09-37-02-4485-AM.png?width=670&height=384&name=image-png-Jul-14-2026-09-37-02-4485-AM.png)
+
+## Kandidatportalen
+
+**Kandidatportalen** är den första delen av anställningsmallen och det första kandidaten ser. Här välkomnar ni kandidaten med en omslagsbild och en välkomsttext, ger information om företaget eller teamet och samlar in den information som behövs för att skapa anställningsavtalet.
+
+I första steget **Om oss** skriver du en välkomsttext och väljer omslagsbild.
+
+<Note>
+  För att en omslagsbild och logga ska vara valbar behöver du ladda upp dessa under Inställningar - Allmänt - Branding. Läs mer om detta **[HÄR](/sv/admin-kom-igang#allmant).**
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-10-2026-11-26-08-4771-AM.png?width=670&height=381&name=image-png-Apr-10-2026-11-26-08-4771-AM.png)
+
+Under **Träffa kollegorna** väljer du vilka delar av organisationen som ska visas för kandidaten. Du kan enkelt slå på eller av varje sektion.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-10-2026-09-32-54-6595-AM.png?width=670&height=336&name=image-png-Apr-10-2026-09-32-54-6595-AM.png)
+
+Sista delen av kandidatportalen är **Din information.** Där samlar du in den personliga information som behövs för att skapa anställningsavtalet. Den här delen är obligatorisk.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2026-09-40-28-5176-AM.png?width=670&height=386&name=image-png-Jul-14-2026-09-40-28-5176-AM.png)
+
+I det här steget kan du välja att samla in ytterligare information från kandidaten genom att toggla på något av följande alternativ:
+
+- **Bankuppgifter** – Samla in kandidatens banknamn, clearingnummer och kontonummer.
+- **Övrig information** – Välj bland era egna fält och samla in den information ni behöver. Läs mer om hur du skapar egna fält **[HÄR](/sv/custom-fields).**
+- **Bilagor** – Samla in bilagor från kandidaten före signeringen. Ange en titel för bilagan och välj vilken **Medarbetarmapp** dokumentet ska sparas i efter att kandidaten laddat upp det.
+
+Vill ni hellre samla in **Bankuppgifter**, **Övrig information** och **Bilagor** efter att kandidaten signerat kontraktet går det lika bra att aktivera alternativen i **Preboardingportalen** istället.
+
+<Note>
+  Har ni inte skapat era **Medarbetarmappar** än? Läs den [HÄR](/sv/employee-folders) guiden för att komma igång!
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-07-2026-01-56-39-2808-PM.png?width=670&height=388&name=image-png-Jul-07-2026-01-56-39-2808-PM.png)
+
+När du är gjort dina val här är den första delen av anställningsmallen färdig. Klicka på **Preboardingportalen** i menyn till vänster för att fortsätta bygga din anställningsmall.
+
+## Preboardingportalen
+
+Den andra och sista delen av anställningsmallen är **Preboardingportalen.** Preboardingportalen skickas ut till den nya medarbetaren när anställningsavtalet är signerat av alla parter. Stegen liknar de som gjorts vid skapandet av kandidatportalen.
+
+Först väljer du en omslagsbild och skriver din välkomsttext.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-10-2026-11-27-47-9627-AM.png?width=670&height=385&name=image-png-Apr-10-2026-11-27-47-9627-AM.png)
+
+Under **Träffa kollegorna** får du återigen bestämma hur mycket av medarbetarens framtida kollegor du vill visa. Toggla på eller av sektionerna efter behov.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-10-2026-09-49-47-1467-AM.png?width=670&height=338&name=image-png-Apr-10-2026-09-49-47-1467-AM.png)
+
+Under **Mer information** kan du samla in uppgifter från den anställde inför den första arbetsdagen. Du kan välja att inkludera följande standardfält:
+
+- Bankuppgifter
+- Nödkontakt
+- Födelsedatum
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-07-2026-02-12-42-6242-PM.png?width=670&height=377&name=image-png-Jul-07-2026-02-12-42-6242-PM.png)
+
+Precis som i **Kandidatportalen** kan du även lägga till egna medarbetarfält och begära bilagor för att samla in ytterligare information, till exempel allergier eller skostorlek.
+
+<Tip>
+  Om du i **Kandidatportalen** redan samlar in bankuppgifter eller information till era egna fält, behöver du inte göra detta igen här.
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-07-2026-02-10-39-1696-PM.png?width=670&height=388&name=image-png-Jul-07-2026-02-10-39-1696-PM.png)
+
+Sista steget i Preboardingportalen är **Utrustning.** Här har du möjlighet att lägga till utrustning som den nya medarbetaren kan välja mellan. Detta gör det enklare för er att beställa utrustningen i ett tidigt skede, innan det är dags för medarbetarens första arbetsdag.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-07-2026-02-13-50-9755-PM.png?width=670&height=386&name=image-png-Jul-07-2026-02-13-50-9755-PM.png)
+
+För att lägga till utrustning:
+
+- Klicka på **Lägg till utrustning**.
+- Ange en **Titel** och eventuell **beskrivning** av alternativen.
+- Klicka på **Lägg till alternativ** och fyll i vad medarbetaren kan välja samt en beskrivning av alternativet.
+- Lägga till fler alternativ genom att klicka på **Lägg till alternativ** igen.
+- Klicka **Spara** när du känner dig klar.
+
+<Tip>
+  Det är även möjligt att lägga till en URL som länkar till exempelvis en sida med mer information om utrustningen.
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-07-2026-02-18-25-5109-PM.png?width=670&height=384&name=image-png-Jul-07-2026-02-18-25-5109-PM.png)
+
+<Tip>
+  Medarbetaren kommer kunna välja ett alternativ per utrustning ni skapar. Se därför till att skapa flera utrustningar om ni vill att medarbetaren ska kunna välja flera alternativ.
+</Tip>
+
+Här har du också möjlighet att generera en uppgift utifrån valet av utrustning. Om du gör detta får den/eller de valda personerna en uppgift på sin Startsida med informationen kring medarbetarens valda utrustning och kan ta relevanta åtgärder. Aktivera detta genom att toggla på **Skapa en uppgift** och välj vem som ska få uppgiften.
+
+Du kan skicka uppgiften till:
+
+- Personen som den anställde rapporterar till
+- En specifik medarbetare
+- Ett specifikt team
+- En specifik arbetsgrupp
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Nov-19-2025-01-09-48-9593-PM.png?width=670&height=519&name=image-png-Nov-19-2025-01-09-48-9593-PM.png)
+
+Om du väljer att inte koppla en uppgift till utrustningsvalet kan du hitta dessa via **HR-hub - Anställningsprocesser**. Välj den aktuella anställningsprocessen, och därefter hittar du utrustningen under rubriken **Preboardingportal.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2026-09-44-53-7243-AM.png?width=670&height=385&name=image-png-Jul-14-2026-09-44-53-7243-AM.png)
+
+När du känner dig nöjd med din mall, klicka på **Spara** i det övre högra hörnet. Din mall är nu redo att användas!
+
+<Note>
+  För information om hur du använder mallen när du anställer en nya medarbetare, klicka **[HÄR](/sv/iniate-hire).**
+</Note>
+
+## Rättigheter
+
+Som admin i Hailey har du alltid rättigheten att hantera anställningsmallar. Nedan listas rättigheter som är relevanta att aktivera om du vill att andra i organisationen också ska kunna göra detta:
+
+- **Visa & ändra – Anställningsmallar** ger medlemmarna i rollen rätten att skapa, ändra och radera anställningsmallar.
+- **Ja – Visa medarbetare som kommer** ger medlemmarna i rollen rätten att se nya medarbetare som snart ska börja. Personen som ansvarar för att beställa utrustning måste ha denna rättighet för att kunna se vilken medarbetare utrustningen ska beställas för.
+
+<Note>
+  [**HÄR**](/sv/roles-and-rights) kan du läsa mer om Roller & rättigheter.
+</Note>
+
+## Vanliga fragor
+
+Här hittar du vanliga frågor och svar kring anställningsmallar.
+
+<AccordionGroup>
+  <Accordion title="Hur ser kandidatportalen ut från kandidatens vy?">
+    När Kandidatportalen skickas iväg får kandidaten ett mail likt nedan:
+
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Nov-20-2025-08-24-29-7960-AM.png?width=670&height=239&name=image-png-Nov-20-2025-08-24-29-7960-AM.png)
+
+    Genom länken presenteras ert företag för kandidaten med er företagslogotyp, omslagsbild och välkomsttext, baserat på ert val av anställningsmall.
+
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-20-2026-08-38-18-8975-AM.png?width=666&height=522&name=image-png-Apr-20-2026-08-38-18-8975-AM.png)
+
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-20-2026-08-45-23-3588-AM.png?width=664&height=456&name=image-png-Apr-20-2026-08-45-23-3588-AM.png)
+
+    Kandidaten kommer att få ange sin personliga information samt godkänna att ni har rätt att använda informationen för att generera anställningsavtalet.
+
+    - I detta steg presenteras även Haileys Privacy policy för kandidaten. Det innebär alltså att personen redan här kan läsa på om hur dennes uppgifter behandlas i ert HR system.
+
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-08-2026-08-27-11-9614-AM.png?width=788&height=1048&name=image-png-Oct-08-2026-08-27-11-9614-AM.png)
+  </Accordion>
+
+  <Accordion title="Hur ser Preboardingportalen ut från den nya medarbetarens vy?">
+    När kontraktet skapats och signerats av samtliga parter skickas **Preboardingportalen** till den nya medarbetaren privata e-post. Informationen som presenteras i detta steg baseras på era inställningar i er anställningsmall.
+
+    Genom att klicka på länken i mailet kommer den nya medarbetaren till preboardingportalen och möts av välkomsttexten och omslagsbilden ni valt. Den nya medarbetaren kan också fylla i informationen som ni efterfrågat.
+
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-20-2026-09-14-34-1360-AM.png?width=666&height=533&name=image-png-Apr-20-2026-09-14-34-1360-AM.png)
+
+    I det sista steget kan den nya medarbetaren **välja utrustning,** exempelvis dator eller mobil, om ni valt att inkludera detta i anställningsmallen.
+
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-20-2026-09-19-20-3132-AM.png?width=667&height=474&name=image-png-Apr-20-2026-09-19-20-3132-AM.png)
+
+    Länken till preboardingportalen kommer att vara tillgänglig även efter att de efterfrågade uppgifterna har fyllts i och skickats in.
+
+    Om medarbetaren väljer att besöka preboardingportalen igen visas vyn nedan; en klocka som räknar ner till anställningens startdatum, välkomstinformationen samt möjlighet att se sina framtida kollegor.
+
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-20-2026-09-20-07-8863-AM.png?width=667&height=533&name=image-png-Apr-20-2026-09-20-07-8863-AM.png)
+  </Accordion>
+
+  <Accordion title="Kan jag skicka preboardingportalen igen till medarbetaren?">
+    Om ni vill skicka ut preboardingportalen på nytt till medarbetaren kan ni göra det genom att kopiera länken som finns under medarbetarens namn på medarbetarkortet och sedan skicka den manuellt. Den nya medarbetaren får då återigen en länk till preboardingportalen.
+
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-Apr-20-2026-09-29-47-9031-AM.png?width=670&height=248&name=undefined-Apr-20-2026-09-29-47-9031-AM.png)
+  </Accordion>
+
+  <Accordion title="Vad händer om vi inte skapar någon anställningsmall?">
+    Om du väljer att **inte** skapa och använda anställningsmallar i Hailey, kommer Haileys standardanställningsmall att skickas ut när ni anställer. Det innebär att:
+
+    - I kandidatportalen visas företagsinformation från Inställningar - Allmän - Företagsinformation - Om bolaget
+    - I preboardingportalen visas en välkomsttext som lyder; _Vi är så glada över att du har bestämt dig för att börja hos oss. Vi ser fram emot att ha med dig som en del av teamet._
+    - Information om medarbetarens framtida chef och kollegor
+    - Insamling av personuppgifter för anställningsavtalet
+    - Insamling av bankuppgifter och kontaktperson vid nödfall
+  </Accordion>
+
+  <Accordion title="Personen som ska beställa utrustningen som den nya medarbetaren valt i Preboardingportalen får uppgiften, men kan inte se vem utrustningen ska beställas för. Vad kan vara fel?">
+    Problemet är troligen kopplat till att personen som får uppgiften saknar rättigheten **Visa medarbetare som kommer börja.** Denna rättighet krävs för att kunna se nya medarbetare som snart ska börja — och därmed se _vem_ utrustningen ska beställas för.
+
+    För att åtgärda detta, gå till **Inställningar** - **Säkerhet** - **Roller** **& rättigheter** - öppna rollen som hanterar denna uppgift och välj **Ja** under **Visa medarbetare som kommer börja.**
+  </Accordion>
+</AccordionGroup>

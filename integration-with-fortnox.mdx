@@ -1,0 +1,276 @@
+---
+title: "Integration with Fortnox"
+---
+
+## The integration with Fortnox enables you to synchronize time off and salary from Hailey. This way you minimize potential errors, the employees don't need to report time off on two places and you make sure that personal data is handled GDPR-compliant
+
+<Tip>
+  First time activating one of **Hailey's standardintegrations?** Start by reading [**THIS**](/haileys-standard-integrations) guide to know what to keep in mind before you get started.
+</Tip>
+
+---
+
+### What does the integration do?
+
+he integration automatically transfers data from Hailey to Fortnox. It is used to:
+
+- **Create new employees in Fortnox when an employee exists in Hailey but does not yet exist in Fortnox, provided that the person has an employee number that does not already exist there**
+- **Update included employee information in Fortnox when the corresponding information is changed in Hailey**
+- **Update payroll information in Fortnox when salary is added or changed in Hailey, if payroll sync is activated**
+- **Transfer approved absence from Hailey to Fortnox, if absence sync is activated**
+
+Since Hailey is the master system for the integration, changes to the fields covered by the integration should be made in Hailey, not in Fortnox. Otherwise, they will be overwritten during the next synchronization.
+
+The integration syncs changes from Hailey to Fortnox **once every hour**. The sync is change-based, which means that only data that has been changed is transferred.
+
+In practice, this means that:
+
+- **Changes to employee data are updated in Fortnox during the next sync**
+- **Changed or new salaries are transferred if payroll sync is activated and the salary has a start date from the date you selected in the integration**
+- **Changed or new absence is transferred if absence sync is activated, the absence has been approved, and the registration is from the date you selected in the integration**
+
+---
+
+### Which data is included in the integration?
+
+Below you can see which data is synced from Hailey to Fortnox:
+
+**Employee data that can always be synced:**
+
+| **HAILEY** | **FORTNOX** |
+|---|---|
+| Work phone | Phone |
+| Company mail | E-mail |
+| Start date | Employee |
+| End date | Employment ends |
+| Employment number | Employment-ID |
+| First name | First name |
+| Last name | Surname |
+| Personal identity number | Personal identity number |
+| Private phone | Phone 2 |
+| Street adress | Postal adress |
+| Postal code | Postcode |
+| City | City |
+| Country | Country |
+| Clearing number | Clearing no. |
+| Account number | Bank account no. |
+
+**Selectable fields:**
+
+| **HAILEY** | **FORTNOX** |
+|---|---|
+| Cost center | Cost center |
+
+**When synchronizing with activated salary sync:**
+
+| **HAILEY** | **FORTNOX** |
+|---|---|
+| Monthly Salary | Monthly Salary |
+| Hourly salary | Hourly Salary |
+
+**When synchronizing with activated absence sync:**
+
+| **HAILEY** | **FORTNOX** |
+|---|---|
+| Time-off | Holiday |
+
+<Tip>
+  **Important to know:**
+
+  - All data in these fields is overwritten in Fortnox when the integration is active
+  - All salaries with the payment period monthly salary are combined in Fortnox on the employee’s card
+  - If the employee has more than one hourly wage in Hailey, none of these will be synced to Fortnox. Alternatively, the hourly wages will be cleared in Fortnox if hourly wages already existed there previously
+  - If incorrect bank details are sent from Hailey to Fortnox, the company administrator in Hailey will receive an email about this.
+  - For bank details to be transferred correctly, a personal identity number must be registered in the system, either a Swedish personal identity number or one of the type "Other".
+  - Hailey does not create cost centres in Fortnox. For a cost centre in Hailey to sync to an employee in Fortnox, the cost centre must already exist in Fortnox.
+</Tip>
+
+---
+
+### What is required to be a part of the integration?
+
+To use the integration, the person setting it up needs to have:
+
+- **an administrator account in Fortnox**
+- **permission in Hailey to view and manage integrations**
+- **payroll and integration licenses in Fortnox**
+
+For an employee to be included in the integration, the following requirements must be met:
+
+- **the employee must have an employment number in Hailey**
+- **the employee must have a company email address in Hailey**
+- **the employment number in Hailey must match the employee ID in Fortnox for existing employees**
+
+If an employee has an employment number in Hailey that does not exist in Fortnox, **the employee will be created as a new employee in Fortnox.** If the employment number is completely missing in Hailey, the employee will not be included in the integration.
+
+### Statuses to keep in mind:
+
+Hailey synchronizes data from all employees included in the integration, regardless of employment status. These statuses are:
+
+- **In service**
+- **Will join**
+- **Leaving**
+- **Garden Leave**
+
+### Before you activate the integration
+
+You need to ensure that all fields included in the integration contain correct data before activation, since the information in Hailey will overwrite the corresponding data in Fortnox.
+
+If you are synchronizing salary or absence data, you also need to select start dates for when each synchronization should begin. The start dates must be set correctly to ensure that the correct information is transferred.
+
+---
+
+### How do you activate the integration?
+
+**1. Add the integration in Hailey**
+
+Go to **Settings → Integrations** and click Add integration under Fortnox.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-21-2026-09-31-46-9078-AM.png?width=670&height=367&name=image-png-May-21-2026-09-31-46-9078-AM.png)
+
+**2. Authenticate the connection with Fortnox**
+
+Click **Authenticate Hailey in Fortnox.** You will then be redirected to Fortnox, where you log in with your company account and approve the connection between the systems.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-21-2026-09-31-58-0103-AM.png?width=670&height=449&name=image-png-May-21-2026-09-31-58-0103-AM.png)
+
+Click “Authenticate Hailey in Fortnox” and log in with your company account
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-28-2022-07-55-20-98-AM.png?width=547&name=image-png-Apr-28-2022-07-55-20-98-AM.png)
+
+Approve the connection between the systems
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-28-2022-07-54-36-12-AM.png?width=544&name=image-png-Apr-28-2022-07-54-36-12-AM.png)
+
+**3. Return to the integration in Hailey**
+
+Once the authentication is complete, go back to **Settings → Integrations → Fortnox** in Hailey. Activate the integration by enabling the toggle and completing the required settings. Finish by clicking **Save**.
+
+**4. Define the scope directly during setup**
+
+If the integration should not apply to the entire company, you need to specify which offices and/or legal entities should be included. This must be done immediately when setting up the integration, since the synchronization starts right away. If these fields are left empty, all employees with an employment number and company mail on their employee card will be included.
+
+**5. Activate salary synchronization if needed**
+
+If you want to synchronize salaries:
+
+- Activate salary synchronization
+- Select the date from which salaries should start being synchronized
+- Please note that only new or updated approved salaries from and including this date will be transferred
+- Please note that Hailey will overwrite the corresponding salary data in Fortnox from this date onward
+
+**6. Activate absence synchronization if needed**
+
+If you want to synchronize absences:
+
+- Activate absence synchronization
+- Select the date from which absences should start being synchronized
+- Only approved absences are synchronized
+- Both percentage-based and hour-based absences are supported
+- All approved absences after the selected date will overwrite the corresponding data in Fortnox
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-21-2026-09-32-12-5132-AM.png?width=670&height=449&name=image-png-May-21-2026-09-32-12-5132-AM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-21-2026-09-01-54-5073-AM.png?width=527&height=555&name=image-png-May-21-2026-09-01-54-5073-AM.png)
+
+<Note>
+  For the absence synchronization to work, you must map your absence reasons in Hailey to the correct Fortnox codes. The codes must be entered in uppercase letters. The code itself should be entered, not the name of the absence reason.
+</Note>
+
+**Code schema for absence reasons in Fortnox:**
+
+**ASK** – Arbetsskada
+**ATF** - Arbetstidsförkortning
+**FPE** – Föräldraledig
+**FRA**  – Frånvaro övrigt
+**HAV** – Graviditetspenning
+**KOM** – Kompledig
+**MIL** – Militärtjänst (max 60 dagar)
+**NAR** – Närståendevård
+**OS1** – Sjuk-OB 1
+**OS2** – Sjuk-OB 2
+**OS3** – Sjuk-OB 3
+**OS4** – Sjuk-OB 4
+**OS5** – Sjuk-OB 5
+**PAP** – Pappadagar
+**PEM** – Permission
+**PER** – Permitterad
+**SEM** – Semester
+**SJK** – Sjukfrånvaro
+**SMB** – Smittbärare
+**SVE** – Svenska för invandrare
+**TJL** – Tjänstledig
+**UTB**  – Facklig utbildning
+**VAB** – Vård av barn
+
+<Tip>
+  ### Important when mapping absences:
+
+  - If an incorrect absence code is entered, for example “Vacation” instead of “SEM”, the integration will be deactivated and the company administrator will receive an email notification.
+  - If an absence reason is deleted in Hailey and a new one is created, the corresponding setting must also be updated in the Fortnox settings in Hailey.
+</Tip>
+
+---
+
+### Multiple integrations if needed
+
+If you have multiple offices or legal entities, you can create several separate Fortnox integrations. **This makes it possible to connect different parts of the organization to different Fortnox accounts or to manage the scope more precisely.** New integrations are set up in the same way as the first one.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-21-2026-09-32-26-4397-AM.png?width=524&height=837&name=image-png-May-21-2026-09-32-26-4397-AM.png)
+
+You can see how many Fortnox integrations are activated by checking the integration card. Example: one integration will be displayed as “1 Active”.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-21-2026-09-33-28-0293-AM.png?width=358&height=218&name=image-png-May-21-2026-09-33-28-0293-AM.png)
+
+You can track which and how many integrations your company has active under the Active tab in Integrations. To add a new Fortnox integration, go to the All tab and set up a new integration in the same way as when you created the first integration.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-21-2026-09-34-26-0939-AM.png?width=670&height=362&name=image-png-May-21-2026-09-34-26-0939-AM.png)
+
+### Questions and answers
+
+<Note>
+  **Does everyone have an employee number in Fortnox that matches their employee number in Hailey?**
+
+  If no, add the employee number in Hailey.
+</Note>
+
+<Note>
+  **If the integration has a defined scope, is the employee in question included within that scope?**
+
+  If not, either update the scope or the employee’s affiliation in Hailey, and then reconfigure the integration.
+</Note>
+
+<Note>
+  **Has the synchronization date ever been changed?**
+
+  If yes, you need to configure the integration again for Hailey to include information prior to that date.
+</Note>
+
+<Note>
+  **If you are synchronizing absences, is the absence approved in Hailey?**
+
+  If no, the absence must first be approved for Hailey to synchronize it to Fortnox.
+</Note>
+
+<Note>
+  **Have hourly wages been cleared in Fortnox?**
+
+  It is only possible to synchronize one hourly wage from Hailey to Fortnox. If the hourly wages have already been cleared, the salary history can be restored by deleting one of the hourly wages from the employee card in Hailey and then adding a salary change to the regular hourly wage (you may enter the same hourly wage amount as before).
+</Note>
+
+<Note>
+  **Why am I receiving an "Invalid Bank Details" email from Hailey?**
+
+  This message is sent when the bank details in Hailey and Fortnox do not match. Correct the details so that they are identical in both systems to prevent further emails.
+</Note>
+
+<Tip>
+  Another reason why the integration may not work could be due to a setting in Fortnox. If this happens, you will receive an email notification specifying which employee is affected. You then need to:
+
+  - Go to the employee’s profile in Fortnox,
+  - Select “Personnel” from the list,
+  - Click on the “Salary Information” tab,
+  - Click the “Change salary” button. Here, you need to enter the start date “1970-01-01” in the “Valid from” field.
+</Tip>
+
+*If you have any questions regarding the integration, please contact your Customer Success specialist at Hailey.*

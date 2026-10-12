@@ -1,0 +1,86 @@
+---
+title: "Lägg till och hantera långtidsfrånvaro"
+---
+
+I denna guide hittar du hur du lägger till långtidfrånvaro i Hailey.
+
+Innan du börjar
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="lIiNme0" title="Lägg till och hantera långtidsfrånvaro" />
+
+## Vad är långtidsfrånvaro?
+
+När medarbetare är frånvarande under en längre period kan det vara bra att kunna skilja ut och hantera dessa frånvaro separat.
+
+Du kan själv definiera per frånvaroorsak om den ska räknas som långtidsfrånvaro, samt ange hur många sammanhängande dagar som krävs för att den ska klassas som det.
+
+## Funktioner för långtidsfrånvaro:
+
+- Kan filtreras i medarbetarlistan och tidsöversikten.
+- Hanteras som en sammanhängande period istället för enskilda dagar.
+- Medarbetare med långtidsfrånvaro visas inte i **”Vem är borta”**, **Chefsagenda** eller i semesterplaneringen.
+- Kunna skapa arbetsflöden på start- och slutdatum för långtidsfrånvaro. Läs gärna mer hur detta fungerar [HÄR.](/sv/create-workflows#franvaro_och_arbetsfloden)
+- Är du mer nyfiken hur ni kan jobba med detta? Se gärna vår [Office Hour](/sv/office-hours-kom-ig%C3%A5ng-med-l%C3%A5ngtidsfr%C3%A5nvaro-arbetsfl%C3%B6den) gällande detta!
+
+## Hur godkänner du långtidsfrånvaro?
+
+Frånvaron hanteras enligt **er godkännandeprocess** och **skickas automatiskt till den person som är utsedd som godkännare för tid och frånvaro enligt medarbetarens Rapporteringspolicy**. Läs mer om godkännandeprinciper kring rapporteringspolicyer [HÄR](/sv/create-reporting-policy).
+
+Därefter följer ni samma rutin som vanligt - antingen **godkänns eller nekas frånvaron**.
+
+## Hur ansöker du om långtidsfrånvaro?
+
+Medarbetaren ansöker om frånvaro precis som vanligt via **Lägg till frånvaro** på **startsidan**, där period, orsak och omfattning fylls i och ansökan skickas in.
+
+**Långtidsfrånvaro registreras även på arbetsfria dagar.**
+
+<Note>
+  - Långtidsfrånvaro gäller endast för 100 procentig frånvaro.
+  - Medarbetaren kan inte ansöka om frånvaro på dagar som redan har långtidsfrånvaro registrerat.
+</Note>
+
+## Hur hanterar du långtidsfrånvaro?
+
+För att korrigera en långtidsfrånvaro - Gå till **medarbetarens profil** och klicka på **kortet som ligger under namnet**. Här kan du justera datumen eller ta bort frånvaron.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/5-png-3.png?width=670&height=239&name=5-png-3.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/6-png-1.png?width=670&height=363&name=6-png-1.png)
+
+Om medarbetaren är på långtidsfrånvaro kan du gå in på medarbetarens **profil - Tid** - **hovra över frånvaron i översikten** för att se **hela perioden** som personen är borta
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/7-png.png?width=670&height=658&name=7-png.png)
+
+Få en överblick över medarbetare som är på långtidsfrånvaro i "Tid". Här kan du filtrera fram vilka som är på långtidsfrånvaro under **"Tid & frånvarofilter"**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/8-png.png?width=670&height=256&name=8-png.png)
+
+<Note>
+  Långtidsfrånvaron måste vara godkänd för att den ska synas i tidsöversikten.
+</Note>
+
+## Tidscykler vid långtidsfrånvaro
+
+Om en medarbetare är **delvis** långtidsfrånvarande under en månad skickas ett e-mail och en uppgift ut till den för att godkänna sin tidscykel. Om en medarbetare däremot är långtidsfrånvarande under en **hel månad** skickas varken e-mail eller uppgift ut.
+
+## Common questions
+
+**Fråga**: Varför registreras inte långtidsfrånvaro på medarbetaren?
+
+Långtidsfrånvaro registreras endast om följande krav uppfylls:
+
+- Frånvaron är registrerad i **Procent.**
+- Frånvaron är registrerad i **Timmar.** och medarbetaren har Arbetstimmar inställt under sina tid och frånvaro inställningar.

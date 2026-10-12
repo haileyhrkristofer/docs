@@ -1,0 +1,110 @@
+---
+title: "Importera egna medarbetarfält"
+---
+
+Håll era medarbetarprofiler kompletta och uppdaterade med importen för egna medarbetarfält. Genom att importera information i bulk kan du enkelt lägga till saknade uppgifter, uppdatera flera medarbetare samtidigt och fylla i nya fält på bara några minuter.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="33rD9Oc" title="Importera egna medarbetarfält" />
+
+## Innan du sätter igång
+
+Innan du importerar information till de egna medarbetarfälten måste du ha skapat dessa i Hailey. Har du inte skapat några **Egna medarbetarfält** än?
+
+- **[HÄR](/sv/custom-fields)** finns instruktioner för hur man skapar egna medarbetarfält.
+
+## Hur importerar du egna medarbetarfält?
+
+Först börjar du med att ladda ner importmallen genom att gå till **Medarbetare** - **Importera** - **Egna medarbetarfält**. Om du önskar att endast ladda ner importmallen för vissa medarbetare, kan du först bocka i dessa medarbetare i listan.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-30-2026-07-25-55-4170-AM.png?width=670&height=495&name=image-png-Jun-30-2026-07-25-55-4170-AM.png)
+
+Sedan kan du välja ifall du vill ladda ner importmallen **för alla medarbetare**, eller endast för **utvalda medarbetare**. Klicka på det alternativ du vill ha och mallen kommer att laddas ner.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-30-2026-07-32-06-7338-AM.png?width=670&height=277&name=image-png-Jun-30-2026-07-32-06-7338-AM.png)
+
+I mallen dyker medarbetarna upp med EmployeeID, Name och Company e-mail. **Det är viktigt att du inte ändrar någon data i dessa kolumner**. Övriga kolumner består av de egna medarbetarfälten. Fyll i den data du önskar att få in i Hailey, en medarbetare per rad.
+
+Det går bra att fylla i utvald information på enskilda medarbetare, och på så sätt välja vilken information respektive medarbetare ska ha i Hailey. Övriga kolumner där du inte har fyllt i någon data kan du låta vara.
+
+<Warning>
+  Viktigt att veta är att importen **ersätter** eventuell data som redan finns på berörda egna medarbetarfält.
+</Warning>
+
+När importfilen är ifylld är det dags att importera informationen. Gå till **Medarbetare** - **Importera** - **Egna medarbetarfält.** Ladda upp filen genom att klicka på **Klicka eller släpp filen här för att ladda upp** och välj din fil. Därefter kommer Hailey börja kontrollera så att all data i filen är korrekt.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-30-2026-08-06-23-8481-AM.png?width=670&height=433&name=image-png-Jun-30-2026-08-06-23-8481-AM.png)
+
+Skulle någon kolumn vara felaktigt ifylld kommer ett felmeddelande att dyka upp och informera vilken kolumn och vilken rad som kräver justering. Ändra det som är i behov av justering och ladda sedan upp filen på nytt.
+
+<Note>
+  Förekommer fel i importen kommer Hailey att **stoppa hela importen**. Du behöver alltså inte leta efter vilka medarbetare som importerats och vilka som inte gjort det.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-30-2026-08-16-42-7630-AM.png?width=670&height=563&name=image-png-Jun-30-2026-08-16-42-7630-AM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-30-2026-08-17-16-2933-AM.png?width=670&height=405&name=image-png-Jun-30-2026-08-17-16-2933-AM.png)
+
+När allt stämmer klickar du på **Importera** och nedan ruta dyker då upp. Importen kan ta en stund beroende på hur mycket information som ska importeras. Du kan stänga denna ruta, importen jobbar på ändå.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-30-2026-08-19-52-6822-AM.png?width=670&height=375&name=image-png-Jun-30-2026-08-19-52-6822-AM.png)
+
+När importen är slutförd får du som startade importen ett verifieringsmail:
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-30-2026-09-52-00-5614-AM.png?width=670&height=337&name=image-png-Jun-30-2026-09-52-00-5614-AM.png)
+
+## Format
+
+De egna medarbetarfälten måste fyllas i enligt den **Typ** du angett för fältet i Hailey. Nedan hittar ni alla format för de olika fälttyperna:
+
+| **COLUMN** | **FORMAT** |
+|---|---|
+| **Alternativ** | Måste skrivas in och stavas exakt som alternativen i Hailey. |
+| **Datum** | YYYY-MM-DD. |
+| **Email** | Accepterar inga mellanslag, Å, Ä eller Ö och måste innehålla "@". |
+| **Flervalsalternativ** | Måste skrivas in stavas exakt som alternativen i Hailey. Vid flera stycken, separera med kommatecken. |
+| **Ja/Nej** | TRUE för Ja och FALSE för Nej. |
+| **Medarbetare** | Kräver medarbetarens ID, kopiera och klistra in aktuell medarbetares "EmployeeID" från den första kolumnen i Excel-filen. |
+| **Nummer** | Endast siffror (tillåter inte 0 som första siffra). |
+| **Telefon** | Tillåter siffror, mellanslag och bindstreck (-). |
+| **Text** | Tillåter alla tecken. |
+
+<Note>
+  Om du skriver in en procentsats (t. ex. 4%) i fält av typerna Text, Alternativ och Flervalsalternativ, måste du ändra kolumnens format i Excel till **Text**. Detta för att tala om för Excel att konvertera filen på rätt sätt. Om detta inte görs kommer procentsatsen att konverteras till decimaler på berörda fält när de importeras till Hailey.
+</Note>
+
+## Rättigheter
+
+Om du vill att någon mer utöver admin ska kunna importera egna medarbetarfält krävs det att rättigheten **Hantera** - **Importera medarbetaredata** är aktiverad. Viktigt att veta är att denna rättighet även möjliggör import av medarbetare, anställning samt frånvarosaldo. Vill du läsa mer om Roller & rättigheter kan du göra det [**HÄR**](/sv/roles-and-rights).
+
+## Vanliga frågor
+
+**Fråga 1**: Jag får felmeddelande när jag importerar Excelfilen till Hailey. Vad gör jag för fel?
+
+För att informationen ska kunna importeras till Hailey på rätt sätt är det viktigt att du följer **formatkraven** som finns i guiden. Hailey berättar vad felet är samt i vilken rad felet finns på. Åtgärda detta och ladda sedan upp filen på nytt.
+
+**Fråga 2**: Vad händer med informationen som redan finns inlagd på en medarbetare i Hailey?
+
+Hailey går efter det som står i importfilen. Därför kommer tidigare information på profilen att skrivas över om något nytt finns i importen. Om du vill låta tidigare information vara kvar kan dessa fält i importfilen lämnas tomma, då överförs det inte någon ny information.
+
+**Fråga 3**: Jag vill bara uppdatera *ett* fält och importera. Går detta att göra?
+
+Det går jättebra att importera endast ett fält. Det du då gör är att fylla i det aktuella fältet och låta övriga fält vara tomma. Endast informationen i det ifyllda fältet importeras.
+
+**Fråga 4:** När jag försöker ladda upp min importfil får jag felmeddelandet *Invalid column heading* men Hailey anger inte vart felet ligger eller vad det handlar om. Vad ska jag göra?
+
+Ibland kan Excel tolka det som att text ligger inne i kolumnerna eller raderna utanför själva mallen. Hailey kan inte identifiera vart problemet ligger eftersom felet ligger utanför informationen som är inskriven i mallen.
+
+För att lösa detta problem finns det några saker du kan prova. Börja med att markera ett antal rader och kolumner utanför mallen och sedan trycka på Ta bort/Rensa innehåll. Om detta inte löser problemet kan du kopiera all din information i mallen och klistra in den i en ny nedladdad importmall. Ifall ingen av dessa metoder fungerar måste du gå igenom din fil och leta efter mellanslag i tomma fält, då även dessa kan orsaka felmeddelandet eftersom Hailey och Excel inte känner igen mellanslagen som ett inmatat värde.

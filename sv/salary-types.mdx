@@ -1,0 +1,80 @@
+---
+title: "Skapa lönetyper"
+---
+
+Lönetyper gör det enkelt att strukturera och hantera olika typer av ersättning, vilket hjälper dig att följa upp, analysera och överföra information när det behövs. Få koll på era löner från start!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="J5Yh8wm" title="Skapa lönetyper" />
+
+## Vad är lönetyper?
+
+Förekommer **olika typer av återkommande kompensation** i organisationen? Kanske olika **tillägg** utöver grundlöner? Haileys lönetyper är då ett utmärkt sätt att hantera och särskilja olika typer av kompensation. Lönetyper hjälper er **se, analysera samt överföra information** när det behövs.
+
+## Skapa lönetyper
+
+För att skapa era lönetyper går ni till **Inställningar** - **Kompensation** och klickar på **Lägg till** uppe i högra hörnet.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-30-2026-06-39-07-3955-AM.png?width=670&height=342&name=image-png-Jul-30-2026-06-39-07-3955-AM.png)
+
+Välj **Lönetyper** i modalen. **Namnge sedan lönetypen** och klicka på Spara när ni är klara.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-30-2026-06-59-23-5431-AM.png?width=670&height=339&name=image-png-Jul-30-2026-06-59-23-5431-AM.png)
+
+## Hur man hanterar lönetyper
+
+Om du vill **Redigera** eller **Ta bort** lönetypen, klicka på **de tre prickarna till höger** och gör de ändringar som behövs. Genom att välja **Redigera** får du möjlighet att ändra **Namn**, **Räkna ut faktisk summa utifrån medarbetarens anställningsomfattning**, **Tillåt årligt rörligt tillägg (%).** Du kan också lägga till **Översättningar** för din lönetyp
+
+## Räkna ut faktisk summa
+
+Genom att aktivera alternativet **Räkna ut faktisk summa utifrån medarbetarens anställningsomfattning** på en lönetyp kommer den faktiska summan att beräknas automatiskt när du lägger till en lön. Beräkningen baseras på medarbetarens **anställningsomfattning (%)** vid lönens start- eller förändringsdatum.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-31-2026-07-43-47-2730-AM.png?width=670&height=341&name=image-png-Jul-31-2026-07-43-47-2730-AM.png)
+
+## Tillåt årligt rörligt tillägg
+
+När du skapar en lönetyp har du möjligheten att tillåta årligt rörligt tillägg för den specifika lönetypen. Detta görs genom att aktivera **tillåt årligt rörligt tillägg (%)**.
+
+Klicka [HÄR/sv/importera-%C3%A5rlig-r%C3%B6rlig-ers%C3%A4ttning/sv/importera-%C3%A5rlig-r%C3%B6rlig-ers%C3%A4ttning](/sv/import-yearly-variable-addition) för att läsa mer om hur du importerar årligt rörligt tillägg.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-31-2026-07-44-19-7974-AM.png?width=670&height=341&name=image-png-Jul-31-2026-07-44-19-7974-AM.png)
+
+## Översättning av lönetyper
+
+Vid skapandet av lönetyper finns möjligheten att **lägga in översättningar** på dessa. Översättningen ni skapar styrs av det språk man använder i Hailey. Detta möjliggör att ni kan skapa upp en lönetyp oavsett vilka språk era medarbetare använder i systemet.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-31-2026-07-47-33-4789-AM.png?width=650&height=332&name=image-png-Jul-31-2026-07-47-33-4789-AM.png)
+
+## Använd lönetyper
+
+Lönetyper kan användas vid redigering av löner i Hailey. Nedan finner ni länkar till guider som kan guide er i ert användande av lönetyper:
+
+- Importera löner - [HÄR](/sv/import-salaries)
+- Ändra löner - [HÄR](/sv/salary-change)
+- Lönerapport - [HÄR](/sv/salary-report)
+- Löneförändringsrapport - [HÄR](/sv/l%C3%B6nef%C3%B6r%C3%A4ndring-rapport)
+- Kontraktsmallar - [HÄR](/sv/create-contract-templates#bygg-er-kontraktsmall)
+
+## Rättigheter
+
+Det är endast **Admin** i organisationen som har rättigheten att hantera och redigera lönetyper.
+
+## Vanliga fragor
+
+<AccordionGroup>
+  <Accordion title="Vad är skillnaden mellan Lönetyp och Lönenamn">
+    Lönetyp används för att hantera och särskilja olika typer av kompensation i din organisation. Lönenamn är det namn på en lön som visas direkt på medarbetarens profil.
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,87 @@
+---
+title: "GDPR"
+---
+
+Välkommen till vår GDPR-guide! Här kan du läsa om hur datalagring, personuppgifter och behörigheter hanteras i Hailey för att stödja ert arbete med GDPR.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="6Tlu8Md" title="GDPR" />
+
+## Hur fungerar GDPR-inställningar i Hailey?
+
+GDPR-inställningarna i Hailey gör det möjligt att definiera hur länge personuppgifter ska sparas i systemet innan de raderas. För medarbetardata baseras lagringstiden på medarbetarens sista anställningsdag, medan lagringstiden för kandidatuppgifter inom rekrytering baseras på när kandidaten skapades i systemet. Varje lagringsnivå kan konfigureras med en fördefinierad lagringsperiod som stödjer er organisations GDPR-policy och krav på datalagring.
+
+## Hur hanterar man datalagring i Hailey?
+
+För att ställa in hur datalagringen ska se ut i er Hailey, gå till **Inställningar - Säkerhet - GDPR.**
+
+I sektionen Datalagring kan ni bestämma **längden på de olika lagringsalternativen**. Detta avgör hur länge data kommer att finnas kvar på medarbetarens profil **efter sista anställningsdagen.** **Klicka på pennikonen** i det övre högra hörnet för att ställa in ditt företags datalagringspolicyer enligt vad omedelbar, kort sikt, medellång sikt och lång sikt innebär för er.
+
+<Note>
+  Det är en bra idé att ställa in GDPR-inställningarna i systemet tidigt, för att säkerställa att lagringsperioden följer er organisations policy från början.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-24-2026-02-43-43-9214-PM.png?width=670&height=354&name=image-png-Aug-24-2026-02-43-43-9214-PM.png)
+
+## Personlig data
+
+Personlig data visar en lista över alla standardfält och egna fält på en medarbetares profil som anses vara personuppgifter. Varje rad visar fältets position (tabb och sektion), vilket specifikt fält det gäller, om det är ett standard- eller eget fält samt datalagringspolicyn.
+
+Standardfält har en **fast datalagringspolicy** som är inställd av Hailey. Egna fält följer dock den datalagringspolicy ni väljer när ni skapar det egna fältet. Om ni vill läsa mer om **hur ni skapar egna fält,** kan ni läsa om det [HÄR](/sv/custom-fields).
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-24-2026-02-46-04-1465-PM.png?width=670&height=352&name=image-png-Aug-24-2026-02-46-04-1465-PM.png)
+
+När ni går in på en profil för en medarbetare som har lämnat er organisation, så kommer ett meddelande visas som informerar er om att viss personlig data om denna medarbetare har blivit otillgänglig till följd av era GDPR-inställningar.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-24-2026-02-47-36-2682-PM.png?width=670&height=352&name=image-png-Aug-24-2026-02-47-36-2682-PM.png)
+
+## Rekrytering
+
+I sektionen Rekrytering kan ni bestämma hur länge kandidatuppgifter ska lagras i systemet. När en lagringstid är inställd raderas kandidatuppgifter automatiskt i enlighet med vald inställning. Raderingen baseras på datumet då kandidaten skapades i systemet. **Klicka på pennikonen** i det övre högra hörnet för att ställa in lagringstiden för kandidatuppgifter.
+
+Följande uppgifter rensas automatiskt:
+
+- Namn och kontaktuppgifter
+- Svar på frågor i jobbannonser
+- Uppladdade filer
+- Anteckningar
+- Referenser och deras kontaktuppgifter
+- Referensers omdömen
+- Referensers meddelande till rekryteraren
+- Chatthistorik mellan kandidat & rekryteraren
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-15-2026-07-28-46-4878-AM.png?width=670&height=346&name=image-png-Jul-15-2026-07-28-46-4878-AM.png)
+
+Rättigheter
+
+Som admin har ni alltid tillgång till att redigera GDPR-inställningarna. Om du vill att någon annan ska ha rätten att redigera GDPR-inställningarna ställer du in detta under Roller & rättigheter. Under **Inställningar** väljer du **Aktivera** under **Redigera GDPR**.
+
+<Note>
+  Behöver du hjälp att komma igång med **Roller & rättigheter?** Klicka [HÄR!](/sv/roles-and-rights)
+</Note>
+
+## Vanliga fragor
+
+**Fråga 1:** Hur kan jag ställa in datalagring kopplat till dokumenten på medarbetares profiler?
+
+Raderingen av dokument ställer du in i inställningarna för era **medarbetarmappar** där ni organiserar dokumenten! Läs mer om inställningarna för medarbetarmappar **[HÄR](/sv/employee-folders#dokument)**.
+
+**Fråga 2:** Jag har aktiverat **Personlig data** på ett eget fält som jag skapade och valde lagringspolicyn **Omedelbar**. Kan jag ändra lagringspolicyn till **Kort sikt** i efterhand?
+
+Nej, när ett eget fält har skapats och en lagringspolicy har valts kan den inte ändras i efterhand. Om du behöver en annan lagringspolicy behöver du istället skapa ett nytt fält och välja önskad lagringspolicy vid skapandet. Läs mer om egna fält **[HÄR](/sv/custom-fields#skapa_egna_falt).**
+
+**Fråga 3**: Kan jag ändra vilken lagringspolicy som gäller för Standardfälten i Hailey?
+
+Du kan inte ändra lagringspolicyn, det vill säga den inställning som anges under **Typ** i listan över standardfält. Däremot kan du definiera lagringspolicyn utifrån hur er organisation förhåller sig till GDPR.

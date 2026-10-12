@@ -1,0 +1,72 @@
+---
+title: "Time off balances"
+---
+
+Time off balances help you track the number of days employees have available to take as time off. This guide help you get started with the settings!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="zHin5Ng" title="Time off balances" />
+
+## What are time off balances?
+
+Time off balances allow you to visualize and track employees' remaining leave days in Hailey. Each employee has their Time off balance visualized on their profile under the **Time tab**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-01-43-29-9643-PM.png?width=668&height=364&name=image-png-Aug-07-2026-01-43-29-9643-PM.png)
+
+## Before you get started
+
+Time off balances are only needed if you want to track and display employees' remaining leave balance in Hailey.
+
+Before creating a Time off balance, make sure that the relevant **Time off reasons** have been created. Read more about creating **Time off reasons** in the guide [HERE](/time-off-reason).
+
+## How do you create a Time off balance?
+
+Navigate to **Settings - Time & Time Off - Add new - Time Off Balance.** Start by adding a name for the balance. We recommend choosing a name that clearly reflects the agreement or reason it is connected to.
+
+Then configure the balance settings:
+
+- Which **Time off reasons** should reduce the balance.
+- When the balance should be **refilled**.
+- Any **carry-over limit** (if left empty, no limit on days will be applied).
+- Whether negative balances should be prevented. Click **Save** when done.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-29-2026-06-43-58-8356-AM.png?width=667&height=334&name=image-png-Apr-29-2026-06-43-58-8356-AM.png)
+
+<Tip>
+  **Tip!** When you later on are ready to work with time off balance, you can get an overview of all employees' time off balances in the **Time off balance** **report**. Read more about the report [HERE](/report/time-off-balance).
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-01-39-22-4432-PM.png?width=670&height=340&name=image-png-Aug-07-2026-01-39-22-4432-PM.png)
+
+## Rights
+
+- **Time & time off - View** - gives access to the **Time** **tab** on the employee profile.
+- **Time & Time Off - View & edit** - also allows adding automatically approved time off and deleting time and time off.
+
+Read more about how **Roles & rights** work in the guide [HERE](/roles-and-rights).
+
+## Common questions
+
+**Question**: Why can't I create a Time off balances?
+
+To create a Time off balance, you need the **View & edit** permission for **Settings - Time & Time Off**. You can manage this right under **Settings - Security - Roles & rights**.
+
+Note: Access to these settings is typically reserved for administrators.
+
+**Question**: Can I change a Time off balance after it has been created?
+
+Yes, you can edit the Time off balance settings under **Settings - Time & time off** if changes are needed.
+
+You can also adjust employees' balances manually or through an **import**. Read more how to **Import Time off balances** in the guide [HERE](/import-time-off-balance).

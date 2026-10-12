@@ -1,0 +1,86 @@
+---
+title: "Manage variable pay"
+---
+
+This guide shows you how to manage variable pay in Hailey. You will learn how to add variable pay manually, add new amounts and periods, delete amounts, and which right is required to work with variable pay.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="HEWbwaI" title="Manage variable pay" />
+
+## What is variable pay?
+
+Variable pay is compensation paid in addition to the employee’s base salary, such as a bonus, commission, or other performance-based compensation.
+
+In Hailey, variable pay is used to collect and track this type of compensation in a structured way. This makes it easier to see which type of variable pay the employee has, which periods it applies to, and which amounts have been registered.
+
+## Add new variable pay
+
+You can add new variable pay either by adding it manually on each employee’s profile or by importing it for multiple employees at once. Click [**HERE**](/import-variable-pay) to read the guide on importing variable pay.
+
+To add variable pay manually, go to the employee’s profile → **Compensation** and click **Actions** in the upper-right corner. Then select **Add variable pay**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-14-2026-12-52-57-9602-PM.png?width=621&height=294&name=image-png-Apr-14-2026-12-52-57-9602-PM.png)
+
+Select the variable pay type, enter the period and amount. The currency is set automatically based on the selected variable pay type. Click **Save** to add the variable pay.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-21-2026-12-16-13-3114-PM.png?width=388&height=352&name=image-png-Apr-21-2026-12-16-13-3114-PM.png)
+
+Once the variable pay has been added, you can find it on the employee profile, under the **Compensation** tab in the **Variable pay** section.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-21-2026-01-35-21-1487-PM.png?width=443&height=332&name=image-png-Apr-21-2026-01-35-21-1487-PM.png)
+
+## Add amount and period to existing variable pay
+
+To add an amount for specific period to a variable pay, click the variable pay card, then **Actions → Add amount** and enter the information.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-21-2026-12-50-14-2632-PM.png?width=487&height=216&name=image-png-Apr-21-2026-12-50-14-2632-PM.png)
+
+Every new period and amount you add is shown in the history when you click the variable pay card.
+
+## Delete amount
+
+To delete one or multiple amounts, click the **variable pay card**. Select **Actions → Delete amount**, choose the amount or amounts you want to delete, and click **Delete**. If all amounts are deleted, the variable pay card will be removed.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-21-2026-10-08-34-4151-AM.png?width=314&height=349&name=image-png-Apr-21-2026-10-08-34-4151-AM.png)
+
+<Note>
+  If all amounts are removed, the entire variable pay card will be removed.
+</Note>
+
+## Rights
+
+Admins have access to manage variable pay by default.
+
+If other roles should be able to manage variable pay, the following right needs to be activated for the relevant role:
+
+- **View & Edit** for **Variable Pay** under **Compensation** makes it possible to add variable pay, add new amounts and periods, and delete amounts for employees included in the role’s scope.
+
+<Tip>
+  Read more about how to set up roles and rights [**HERE**](/roles-and-rights).
+</Tip>
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Why are no variable pay types shown when I add variable pay to an employee?">
+    If no types are shown, you probably have not created any yet. Variable pay types are created under **Settings** → **Compensation** → **Variable Pay**. Once created, they will be available when you add variable pay to the employee profile. Click [**HERE**](/create-variable-pay) to open the guide on how to create variable pay types.
+  </Accordion>
+
+  <Accordion title="Should I add new variable pay or add a new amount to existing variable pay?">
+    If the employee already has the same variable pay type registered, you can add a new amount and period to the existing card. This keeps the history collected under the same variable pay.
+
+    If it is a different variable pay type, such as commission instead of bonus, add new variable pay.
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,88 @@
+---
+title: "Add and manage long term leave"
+---
+
+This guide shows you how to add and manage long term leave.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="lIiNme0" title="Add and manage long term leave" />
+
+## What is long term leave?
+
+When an employee is absent for a longer period, it can be helpful to group and manage these absences separately and add their time off as **long term leave**.
+
+**Long-term leave features:**
+
+- Is managed as one continuous period instead of separate days.
+- Ability to trigger workflows based on the start and end dates of long term leave. Please read more about how that works [HERE](/create-workflows#Time-off-and-Workflows).
+
+## Before you get started
+
+Before you get started using long term leave, it is important you have the correct time and time off settings. Read more about how to set this up [HERE.](/settings-for-longterm-leave)
+
+<Note>
+  Note that if you register **time off** in **hours**, make sure employees have **work hours** registered on their profiles for the long term leave to be activated once registered. Read more about work hours [HERE](/work-hours).
+</Note>
+
+## How do you add long term leave?
+
+Adding long term leave follows the same process as adding time off as usual. Read more about how to add time off in the guide [HERE](/time-off-submit).
+
+<Note>
+  Long term leave is also registered on non-working days.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-08-28-55-0427-AM.png?width=670&height=323&name=image-png-Aug-07-2026-08-28-55-0427-AM.png)
+
+## How do you approve Long term leave?
+
+The time off request will follow your approval principals settings. You can read more about how to set up your approval principles for time off [HERE.](/create-reporting-policy)
+
+The approver gets a task on their dashboard with information and option to **Reject** or **Accept**.
+
+<Note>
+  Long-term leave **only** applies to 100 percent absence.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-08-58-32-3015-AM.png?width=670&height=345&name=image-png-Aug-07-2026-08-58-32-3015-AM.png)
+
+When the employees long term leave if approved, this will be displayed below their profile picture. Go to the **employee** **profile - Time tab** and **hover over the leave period** in the overview to see more detailed information.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-08-34-36-6450-AM.png?width=670&height=372&name=image-png-Aug-07-2026-08-34-36-6450-AM.png)
+
+## Overview of long term leave
+
+Get an overview of employees on long term leave in the **Time overview**. Use the filter function  to see who is on longterm leave using the Time & time off filters.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-09-01-01-9189-AM.png?width=665&height=336&name=image-png-Aug-07-2026-09-01-01-9189-AM.png)
+
+## Time Cycles During Long Term Leave
+
+If an employee is **partially** on long term leave during a month, an email and a task will be sent to them to approve their time cycle. If an employee is on long term leave for an **entire** month, neither an email nor a task will be sent.
+
+## Common questions
+
+**Question**: Why doesn't long term leave register on the employee?
+
+The long term leave registers on the employee profile if it completes one of the following requirements:
+
+- The time off is registered in **Percentage**
+- The time off is registered in **Hours** and the employee has **Work hours** registered.
+
+<Note>
+  **Questions**: I don't want those employees to be visible for others.
+
+  Employees on long-term leave are hidden from **“Who’s away”**, **“Manager agenda”**, and the **Holiday plan**.
+</Note>

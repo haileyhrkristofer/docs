@@ -1,0 +1,73 @@
+---
+title: "Update time and time off settings on employee"
+---
+
+Follow this guide to update your employees' time & time off settings.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="6F84lVA" title="Update time and time off settings on employee" />
+
+How do you update employees' time & time off settings?
+
+Once your time & time off settings have been configured in **Settings - Time & time off**, they need to be assigned to the relevant employees' employments. You can do this either from an individual **employee's profile** or in bulk from the **Employee list**.
+
+- **Update settings in bulk from the employee list -** mark the employees whose settings you want to update and click **Action - Update time & time off settings**. Choose your settings and click **Save**.
+
+The settings will be updated on the **active** employment. If there is no active employment, the settings will apply to the employment that was last terminated or the employment that is planned to start.
+
+<Note>
+  **Note** that all four settings are included in the bulk update. If a field is left blank, its existing value will be **removed** from the selected employees' profiles.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-17-2026-12-47-12-6778-PM.png?width=670&height=373&name=image-png-Jul-17-2026-12-47-12-6778-PM.png)
+
+- Update settings directly on the **employee’s profile** - click on the employment you want to update and click on **Action - Edit time and time off - Save.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-12-19-50-0811-PM.png?width=668&height=381&name=image-png-Aug-07-2026-12-19-50-0811-PM.png)
+
+## Overview of time and time off settings
+
+To get an overview of the settings assigned to each employee, you can extract the relevant **columns** in the employee list.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-17-2026-01-42-55-5923-PM.png?width=670&height=372&name=image-png-Jul-17-2026-01-42-55-5923-PM.png)
+
+## Rights
+
+- **Employment** **-** **View & edit** allows you to edit time and time off settings on an employee's employment.
+- **Action - Bulk update organizational fields** allows you to update these settings for multiple employees at once from the employee list.
+
+<Note>
+  Please note that these rights also give access to update other fields within the employment.
+</Note>
+
+Read more about Roles & rights in the guide [HERE](/roles-and-rights).
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="One of our employees is about to get a new employment and will need to start reporting time and/or time off. How do I do this?">
+    Time and time off settings are linked to an **employment**, not to the employee as a person. If an employee changes role or receives updated employment terms that result in a **new employment** in Hailey, the time and time off settings can be updated in the **Add New Employment** workflow.
+
+    Read more about this process in the guide [**HERE**](/employment-wizard).
+  </Accordion>
+
+  <Accordion title="I want to update the work hours for an entire team. How do I do that?">
+    Go to the **Employee list**, filter the list by the team you want to update, select all employees, and choose **Actions - Update time & time off settings**.
+
+    **Keep in mind** that all Time & time off fields of the employment will be updated. If you only want to change the **Work hours**, you still need to fill in the other fields with their current values. If you leave a field empty, the current value will be removed from the employees' employment.
+
+    Tip: If possible, update employees who share the same time & time off settings in the same bulk update. This makes it easier to fill in all fields correctly.
+  </Accordion>
+</AccordionGroup>

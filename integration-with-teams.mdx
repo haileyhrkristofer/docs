@@ -1,0 +1,207 @@
+---
+title: "Integration with Microsoft Teams"
+---
+
+Would you like birthday reminders, quick access to your To-Do list, and the ability to register time-off directly in Teams? Then this is the integration for you!
+
+<Tip>
+  First time activating one of **Hailey's standard integrations**? Start by reading [**THIS**](/haileys-standard-integrations) guide to know what to keep in mind before you get started.
+</Tip>
+
+## What does the integration do?
+
+The Microsoft Teams integration consists of two components: **Hailey's Teams Bot** and incoming **Webhooks**. You can choose to enable either one of them or both, depending on your needs.
+
+**Hailey's Teams Bot** allows employees to report time off directly in Teams, see which colleagues are currently absent, and receive notifications in Teams when they have new tasks in Hailey's To-do list (you can find the included tasks [**HERE**](#what-data-s-included)).
+
+If **incoming webhooks** are enabled, notifications for birthdays, work anniversaries, and employees' first day of employment can also be posted to a selected Teams channel, making it easier to celebrate and recognize important events together
+
+## How does the integration work?
+
+Once **Hailey’s Teams Bot** has been enabled, employees will automatically receive notifications in Teams whenever they are assigned new tasks in Hailey. The bot can also be used at any time to report time-off or to see which colleagues are absent on a specific day.
+
+If **webhooks** are enabled, notifications are automatically sent once per day to the Teams channel selected during setup. These notifications include relevant events for the day, such as birthdays, work anniversaries, and the first working day of new employees.
+
+## What data is included in the integration?
+
+### Hailey’s Teams Bot
+
+- Report your own sick leave for today (provided this has been enabled in the setup)
+- Access your To-do list
+- Retrieve contact information
+- View which colleagues are absent today
+
+Whether or not the bot is actively used, employees will automatically receive task notifications in Teams as long as the integration is enabled. The tasks that are automatically sent through Teams relate to:
+
+- Salary
+- One-to-ones
+- Workflows
+- Contract signings
+- 360° Reviews
+
+### Webhooks
+
+You can choose to send notifications for the following events:
+
+- Birthdays
+- Work Anniversaries
+- New joiners
+
+## What is required to be included in the integration?
+
+### Hailey’s Teams Bot
+
+To use **Hailey’s Teams Bot**, each employee must activate the bot in Microsoft Teams. Instructions on how to complete the activation can be found [**HERE**.](#employees-setup)
+
+### Webhooks
+
+By default, all employees are included in webhook notifications. If you would like to exclude specific employees or certain types of events from these notifications, this can easily be configured in Hailey. Instructions on how to exclude employees or specific events can be found [**HERE**](#excluding-employees-from-webbhooks).
+
+## How to activate the integration - Hailey's Teams-bot
+
+To enable Hailey’s Teams Bot, you as an administrator need to:
+
+<Steps>
+  <Step title="Prepare the setup in Hailey">
+    Prepare the setup in Hailey
+  </Step>
+  <Step title="Add the integration in Microsoft Teams">
+    Add the integration in Microsoft Teams
+  </Step>
+  <Step title="Add the integration in Hailey">
+    Add the integration in Hailey
+  </Step>
+</Steps>
+
+Once these steps have been completed, each employee can activate the bot on their own in Microsoft Teams.
+
+### Step 1 - Prepare the setup in Hailey
+
+Go to Settings - **Security** - **AI**. Activate the **Bot** and **Save.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-03-2026-02-41-50-6142-PM.png?width=670&height=305&name=image-png-Jul-03-2026-02-41-50-6142-PM.png)
+
+### Step 2 - Add the integration in Microsoft Teams
+
+Login to **Teams.** Go to **Apps** and search for **Hailey HR. Add** Hailey HR
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Dec-14-2023-10-58-48-1689-AM.png?width=594&height=473&name=image-png-Dec-14-2023-10-58-48-1689-AM.png)
+
+A chat with **Hailey’s Teams Bot** will automatically open. Follow the instructions in the chat to get started. Type **Connect**. A button labeled **Connect to Hailey** will then be sent to you. Click the button to connect your account.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Dec-13-2023-02-38-03-7643-PM.png?width=461&height=447&name=image-png-Dec-13-2023-02-38-03-7643-PM.png)
+
+You will then be redirected to the Hailey website. Once you have signed in, you will receive a confirmation that the Teams Bot has been connected to Hailey HR.
+
+That's it, you're all set!
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-03-2026-12-34-27-2090-PM.png?width=670&height=506&name=image-png-Jul-03-2026-12-34-27-2090-PM.png)
+
+### Step 3 - Add integration in Hailey
+
+You now also have the option to link an **Time-off reason** to the Teams Bot if you would like your employees to be able to report sick leave directly in Teams. See the instructions below. **Note:** Only one absence reason can be selected as the default.
+
+Go to **Settings - Integrations.** Click **Add integration**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-03-2026-02-47-51-8145-PM.png?width=670&height=342&name=image-png-Jul-03-2026-02-47-51-8145-PM.png)
+
+Enable the integration and then select a **default Time-off reason** that will be used when employees report sick leave through Teams. Once you have made your selection, click **Save**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-03-2026-02-48-54-3643-PM.png?width=670&height=568&name=image-png-Jul-03-2026-02-48-54-3643-PM.png)
+
+### Step 4 - Employee setup
+
+<Warning>
+  For employees to use **Hailey’s Teams Bot**, they need to follow the steps described in the section **Add the Integration in Teams**. You can find the instructions [**HERE**](#employees-setup).
+</Warning>
+
+## How to activate the integration - Webhooks
+
+To enable **Webhooks**, you as an administrator need access to both systems and must complete the following steps:
+
+<Steps>
+  <Step title="Prepare the setup in Microsoft Teams">
+    Prepare the setup in Microsoft Teams
+  </Step>
+  <Step title="Add the integration in Hailey">
+    Add the integration in Hailey
+  </Step>
+</Steps>
+
+### Step 1 - Prepare the setup in Teams
+
+Sign in to Microsoft Teams. In the menu on the left-hand side, click the **three dots** and type **Workflows** in the search bar. Then select the **Workflows** app that appears.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-25-2025-09-24-08-1636-AM.png?width=670&height=1155&name=image-png-Apr-25-2025-09-24-08-1636-AM.png)
+
+Under the heading **Start with a popular Teams template** in the **Workflows** app there is an option named **Post to a channel when a webhook request is received**. Click that option!
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-25-2025-09-24-43-0575-AM.png?width=670&height=358&name=image-png-Apr-25-2025-09-24-43-0575-AM.png)
+
+Now it is time to **Create a flow**. Enter a **Flow name** and click **Next** to proceed.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-25-2025-09-25-32-2602-AM.png?width=670&height=362&name=image-png-Apr-25-2025-09-25-32-2602-AM.png)
+
+In the next step it is time to choose in which **Team** and **Channel** the notification card should be posted. After you’ve selected **Team** and **Channel** – click **Create flow**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-25-2025-09-26-43-1603-AM.png?width=670&height=357&name=image-png-Apr-25-2025-09-26-43-1603-AM.png)
+
+Once the flow is created, **copy the webhook URL** that is generated - you’ll need this for the next step in Hailey. When you’ve copied the URL-link, click **Done** to save!
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-25-2025-09-27-08-8313-AM.png?width=670&height=359&name=image-png-Apr-25-2025-09-27-08-8313-AM.png)
+
+When the Workflow is created, saved and the URL-link is copied, the setup in Teams is all done!
+
+### Step 2 - Add integrations in Hailey
+
+Sign in to **Hailey**. Now it's time to activate your **incoming webhook**! To enable the integration, you need access to **Settings - Integrations** in Hailey.
+
+Start by navigating to **Settings - Integrations**, select the option called **Teams Webhook**, and then click **\+ Add Integration**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-03-2026-02-54-33-3982-PM.png?width=670&height=343&name=image-png-Jul-03-2026-02-54-33-3982-PM.png)
+
+From here, all you need to do is to toggle on **Activate,** paste the **webhook URL** that you’ve copied from Teams and make sure to click **Save**. And that’s it!
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-03-2026-02-55-38-3646-PM.png?width=670&height=356&name=image-png-Jul-03-2026-02-55-38-3646-PM.png)
+
+Now that the integration has been activated, you will automatically receive notifications about **birthdays**, **work anniversaries**, and **employees’ first day** directly in your selected Teams channel!
+
+![](https://docs.haileyhr.com/hubfs/image-png-Apr-01-2025-12-01-34-2341-PM.png)
+
+## Excluding employees from Webhooks
+
+If you have employees who prefer not to be recognized publicly, you can exclude them from webhook notifications. Similarly, you can choose to exclude **New Colleagues**, **Work Anniversaries**, or **Birthdays** if you do not want one or more of these events to generate notifications in Teams.
+
+To review and manage these settings, navigate to **Settings - General - Culture Corner**.
+
+Employees who do not wish to be included in any notifications should be added under **Exclude Specific Employees**.
+
+From this page, you can also decide which types of notifications are relevant for your organization and control which events are published to your selected Teams channel.
+
+<Note>
+  These settings also control what is displayed in the Culture Corner section on Hailey’s homepage.
+</Note>
+
+## Common questions
+
+**Question 1:** Employees cannot find the Bot in Teams?
+
+For employees to use the **Hailey Teams Bot**, they must activate the bot themselves in Microsoft Teams. The setup process is quick and easy, employees simply need to follow the instructions [**HERE**](#employees-setup).
+
+**Question 2**: Why are webhook notifications not being sent for certain employees?
+
+First, check whether the employee has been excluded from **Culture Corner**, as employees excluded there are also excluded from Teams webhook notifications. In addition, the employee's employment status may affect whether they are included in notifications. Employees with the employment statuses **Has left** or **Garden leave** will not be included in webhook notifications.
+
+**Question 3:** Will employees be able to access personal data in the Teams Bot that they normally cannot see in Hailey?
+
+No. **Hailey’s Teams Bot** follows the same **Roles and rights** settings that you have configured in Hailey. As a result, the bot will only display information that the user is authorized to access and will not expose personal data or other information that the user would not normally be able to view in Hailey
+
+**Question 4**: An employee has not activated the Teams Bot but is still receiving tasks from It. Is that expected?
+
+Yes. Any tasks that are automatically sent through the Teams Bot will be delivered regardless of whether the employee has activated the bot in Microsoft Teams. However, if an employee wants to interact with the bot directly by chatting with it, reporting time-off they must first activate the bot in their Teams account.
+
+**Question 5:** Can we set up different Webhooks for different Teams channels?
+
+No. At the moment, it is only possible to select **one Teams channel** to receive notifications from **Culture Corner.**
+
+_If you have any questions regarding the integration, please contact your Customer Success specialist at Hailey._

@@ -1,0 +1,107 @@
+---
+title: "Komptid"
+---
+
+Aktivera komptid för att göra det enklare att hålla reda på hur många timmar komptid dina anställda har samlat på sig och när dessa tas ut som ledighet!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="IGD3ol3" title="Komptid" />
+
+## Vad är komptid?
+
+I Hailey baseras komptidssaldot på **skillnaden mellan schemalagda arbetstimmar och rapporterade arbetstimmar**. Positivt saldo kan användas för att ta ut frånvaro.
+
+Varje gång en medarbetare rapporterar fler arbetstimmar än schemalagt ökar saldot. Om medarbetaren rapporterar färre timmar än planerat minskar saldot.
+
+På medarbetarprofilen kan du se **det aktuella saldot**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-25-2026-02-08-22-6494-PM.png?width=665&height=438&name=image-png-Sep-25-2026-02-08-22-6494-PM.png)
+
+Om det finns ansökningar om kompensationsledighet som **ännu inte har godkänts** visas även kommande avdrag samt det beräknade saldot efter godkännande.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-25-2026-02-09-07-8748-PM.png?width=661&height=435&name=image-png-Sep-25-2026-02-09-07-8748-PM.png)
+
+Genom att **klicka** på Komptidssaldot kan du se historiken för saldot. Historiken visar alla **avvikelser** från medarbetarens schemalagda arbetstid. Om medarbetaren har rapporterat fler eller färre timmar än de schemalagda timmarna visas detta som en händelse i listan. Om medarbetaren däremot har rapporterat exakt det antal timmar som är schemalagt, visas ingen händelse i historiken.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-25-2026-02-10-35-6584-PM.png?width=668&height=441&name=image-png-Sep-25-2026-02-10-35-6584-PM.png)
+
+Innan du sätter igång
+
+För att aktivera komptid behöver du skapa en **rapporteringspolicy** där funktionen är **aktiverad** och sedan **tilldela den till de medarbetare det gäller**.
+
+Läs mer om uppsättningen [HÄR](/sv/tid-och-franvaro-installningar#rapporteringspolicyer).
+
+## Hur importerar man komptidssaldo?
+
+Det är vanligt att redan ha ett beräknat komptidssaldo för sina medarbetare. Därför finns **möjligheten att importera det aktuella saldot för varje medarbetare** när ni börjar använda komptid i Hailey.
+
+Om medarbetaren saknar komptidssaldo sedan tidigare ska saldot **sättas till 0** för att säkerställa korrekt uppföljning.
+
+Läs mer om importen [HÄR.](/sv/import-comp-balance)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-15-2026-01-50-07-4122-PM.png?width=670&height=377&name=image-png-Jul-15-2026-01-50-07-4122-PM.png)
+
+## Hur tar man ut komptid som frånvaro?
+
+För att medarbetarna i er organisation ska kunna ta ut sin ackumulerade komptid som frånvaro behöver du **skapa en frånvaroanledning som är kopplad till och minskar komptidssaldot.**
+
+Läs mer om hur du ställer in detta [HÄR](/sv/tid-fr%C3%A5nvaro#main-content).
+
+När detta är konfigurerat kan medarbetarna ansöka om att ta ut sin komptid som frånvaro. De gör detta genom att lägga till ny frånvaro via knappen **Lägg till frånvaro** och sedan välja rätt frånvaroanledning, det vill säga den anledning som är kopplad till att minska komptidssaldot.
+
+<Note>
+  När frånvaron skickas in går den igenom den vanliga godkännandeprocessen i enlighet med era [godkännandeprinciper](/sv/approval-principles).
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-15-2026-01-50-55-0760-PM.png?width=670&height=373&name=image-png-Jul-15-2026-01-50-55-0760-PM.png)
+
+## Vanliga fragor
+
+Här hittar du svar på vanliga frågor om komptidssaldo och hur det beräknas och hanteras i Hailey.
+
+<AccordionGroup>
+  <Accordion title="Mitt komptidssaldo stämmer inte. Varför?">
+    Det finns flera vanliga orsaker till att kompsaldot inte ser ut som du förväntar dig.
+
+    - Har du rapporterat tid för **idag**? Om du har rapporterat tid för idag uppdateras komptidssaldot först **dagen efter**. Saldot visar alltid förändringar fram till och med gårdagen.
+    - Har dina **arbetstimmar** ändrats? Om dina schemalagda arbetstimmar har ändrats, till exempel från heltid till deltid, räknar Hailey automatiskt om komptidssaldot utifrån ditt nya schema. Därför behöver det faktiska komptidssaldot importeras på nytt.
+    - Har du tagit komptid som **frånvaro**? Om du har registrerat frånvaro med en frånvaroanledning som är kopplad till komptidssaldot minskar saldot automatiskt.
+    - Stämmer dina arbetstimmar och arbetsdagar? Komptidssaldot beräknas genom att jämföra den rapporterade tiden med den schemalagda arbetstiden för dagen.
+    - Importerades saldot på rätt datum?
+    - Var det ingående saldot korrekt? Det importerade saldot ska motsvara medarbetarens faktiska komptidssaldo dagen innan ni började använda komptid i Hailey.
+  </Accordion>
+
+  <Accordion title="En medarbetares arbetstimmar ska ändras. Vad händer med komptidssaldot?">
+    När en medarbetares arbetstimmar ändras, till exempel från deltid till heltid, behöver du **importera** medarbetarens aktuella komptidssaldo.
+
+    Det beror på att Hailey räknar om komptidssaldot utifrån medarbetarens nya arbetsschema, vilket gör att saldot blir felaktigt.
+
+    För att säkerställa att saldot blir korrekt:
+
+    - Se till att medarbetaren har rapporterat all tid fram till dagen före ändringen och **notera** det aktuella komptidssaldot.
+    - Skapa en ny anställning för att behålla en korrekt anställningshistorik.
+    - Importera det aktuella komptidssaldot dagen före den nya anställningen börjar.
+
+    Därefter kommer saldot att beräknas korrekt utifrån medarbetarens nya arbetstimmar.
+  </Accordion>
+
+  <Accordion title="Jag har rapporterat tid för idag, men mitt komptidssaldo har inte uppdaterats. Varför?">
+    Komptidssaldot i Hailey visar alltid saldot till och med **igår**. Om du har rapporterar tid för **idag** kommer eventuell ökning eller minskning av saldot att visas **dagen efter**.
+
+    Detta är medvetet för att du inte ska börja arbetsdagen med ett negativt saldo.
+
+    Om du däremot rapporterar tid för en tidigare dag uppdateras saldot direkt.
+  </Accordion>
+</AccordionGroup>

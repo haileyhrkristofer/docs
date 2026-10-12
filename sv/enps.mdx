@@ -1,0 +1,125 @@
+---
+title: "eNPS"
+---
+
+Undersök det interna engagemanget genom att regelbundet mäta resultat över tid med eNPS. Verktyget bidrar bl.a. till att minska personalomsättningen, främja en positiv arbetsmiljö och öka trivsel.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="kBdL2wC" />
+
+## Vad är eNPS?
+
+Employee Net Promoter Score (eNPS) är ett mått som används för att mäta medarbetarnas lojalitet och nöjdhet inom en organisation. Det bygger på NPS-metoden (Net Promoter Score) som ofta används för att bedöma kundlojalitet. Beräkningen omfattar en enkel undersökning där medarbetarna får svara på en enda fråga:
+
+_"På en skala från 0 till 10, hur troligt är det att du skulle rekommendera vårt företag som en bra arbetsplats?"_
+
+Baserat på svaren kategoriseras medarbetarna i tre grupper:
+
+- **Promoters (betyg 9-10):** Det här är medarbetare som är mycket nöjda och som sannolikt kommer att marknadsföra företaget som en bra arbetsplats.
+- **Passiva (betyg 7-8):** Dessa medarbetare är nöjda men inte entusiastiska, och de betraktas som neutrala.
+- **Detractors (betyg 0-6):** Dessa är missnöjda medarbetare som kan ha negativa känslor för företaget.
+
+eNPS-resultat beräknas sedan genom att subtrahera andelen "Detractors" från andelen "Promoters". Formeln är följande:
+
+<Note>
+  **"Promoters" i procent av svarande - "Detractors" i procent av svarande = eNPS**
+</Note>
+
+Resultatet kan variera från **-100** till **+100**. En positiv eNPS indikerar att majoriteten av medarbetarna är Promoters, vilket i allmänhet anses vara ett positivt tecken på medarbetarnöjdhet och lojalitet. Omvänt innebär ett negativt eNPS att det finns fler Detractors än Promoters bland medarbetarna, vilket tyder på potentiella problem som kan behöva åtgärdas inom organisationen.
+
+## Skapa eNPS
+
+Haileys eNPS skapas från Prestation - eNPS. För att skapa er första eNPS klickar du på **Skapa eNPS.**
+
+![](/images/sv/enps/01.png)
+
+Den enda inställning som behöver göras är att bestämma om er eNPS ska vara övergripande för hela organisationen eller inte. Om ja, välj inte någon legal enhet. Om nej, välj den eller de legala enheter som ska inkluderas.
+
+<Note>
+  eNPS kommer endast att beröra medarbetare med status "I tjänst" och "Ska lämna". Vilka som berörs i den du skapar visas i avatargruppen längst ner i inställningarna.
+</Note>
+
+För att uppdatera din eNPS, klicka på **Uppdatera**. Återigen är de enda inställningarna titel och omfattning på legal enhet. Om du vill skicka ut en eNPS för t.ex. en annan legal enhet än tidigare klicka på **Uppdatera i högra hörnet** och ställ in omfattning. Sedan skicka ut eNPS på nytt. Då kommer bara de inom den legala enhet som ni nu har valt att få frågan.
+
+![](/images/sv/enps/02.png)
+
+## Skicka eNPS
+
+För att skicka eNPS-enkäten, klicka på **Skicka eNPS** i det övre högra hörnet. Undersökningen kommer nu att skickas till alla medarbetare som ingår i omfattningen. De medarbetare som är inbjudna att svara kan enkelt göra detta genom att klicka på ett betyg i e-postmeddelandet.
+
+![](/images/sv/enps/03.png)
+
+Medarbetaren kommer sedan att riktas vidare till en ny sida, där de kan skicka in sitt betyg med en valfri kommentar. Varje medarbetare kan bara svara en gång. Alla svar är anonyma. Efter att alla inkluderade medarbetare skickat in sitt svar kommer undersökningen stängas automatiskt.
+
+![](/images/sv/enps/04.png)
+
+![](/images/sv/enps/05.png)
+
+Om du vill skicka ut en ny eNPS kan du göra detta genom att klicka på **Skicka eNPS igen**.
+
+<Note>
+  Observera att din tidigare eNPS-undersökning automatiskt kommer att stängas när en ny skickas ut.
+</Note>
+
+## Se resultat
+
+I översikten kan du enkelt följa resultatet för ditt eNPS över tid. eNPS-poängen beräknas automatiskt för varje undersökning. Längst upp visas statistik från den senast skickade eNPS-undersökningen. Detta inkluderar:
+
+- Poängen – med jämförelse med föregående eNPS-poäng samt en informationsruta med förklarande hjälptext
+- Antal detractos
+- Antal passiva
+- Antal promoters
+- Antal svar
+
+![](/images/sv/enps/06.png)
+
+I listan under grafen kan du se svarsgraden för varje undersökning när en eNPS har skickats ut samt vilka medarbetare som har inkluderats. Om du klickar på en specifik undersökning får du tillgång till statistiken som listas ovan, en graf som visar fördelningen av poängen från den undersökningen, läsa kommentarer samt möjlighet att filtrera bland kommentarerna. Resultaten uppdateras i realtid!
+
+![](/images/sv/enps/07.png)
+
+## Lägg till historisk eNPS
+
+Om du vill inkludera historisk eNPS, dvs. resultat ni tidigare har samlat in utanför Hailey, klicka på de **tre punkterna** till höger om den eNPS du vill inkludera historisk data för, och välj **Lägg till historisk eNPS.**
+
+![](/images/sv/enps/08.png)
+
+Här ställer du in eNPS-poängen och datumet för den och lägger till hur många du vill. Du kan endast ange data för datum **före** dagens datum och **före** den första officiella eNPS-undersökningen som skickades ut av Hailey.
+
+![](/images/sv/enps/09.png)
+
+När det är tillagt kommer respektive eNPS-resultat att presenteras i samma graf.
+
+![](/images/sv/enps/10.png)
+
+## Rättigheter
+
+Admins har automatiskt rättighet att skapa och skicka eNPS undersökningar. Om du vill tilldela denna rättighet till andra roller kan du göra det genom att tillåta medlemmarna i den rollen, görs detta från **Företagsrättigheter** – **Prestation** – **eNPS.**
+
+En förklaring av de möjliga inställningarna:
+
+- **Ingen** – eNPS är inte synlig alls för användaren.
+- **Visa** – eNPS är synlig för användaren med samtliga undersökningar.
+- **Visa & ändra** – Samma som visa samt möjlighet att skapa eNPS och skicka den.
+
+## Vanliga frågor
+
+<AccordionGroup>
+  <Accordion title="Är det möjligt att skapa och skicka ut eNPS till enbart en specifik avdelning?">
+  Nej. När du har skapat en eNPS så är det bara möjligt att välja en eller flera legala enheter.
+  </Accordion>
+  <Accordion title="Vilket språk skickas en eNPS ut på?">
+  eNPS undersökningen kommer skickas ut på det språk som ni har ställt in under Företagsspråk. Om erat företagsspråk till exempel är svenska kommer den att skickas ut på svenska.
+  </Accordion>
+</AccordionGroup>

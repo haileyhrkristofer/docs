@@ -1,0 +1,57 @@
+---
+title: "Time off reasons"
+---
+
+Get started with Time off reasons so you easily can handle your employees different reasons of time off.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="9jaHeVq" title="Time off reasons" />
+
+## What is time off reasons?
+
+When your employees are reporting time off, they need to choose a reason for their time off. A time off reasons can for example be Holiday, Medical appointment or Care for child. These reasons you set up will become selectable options when employees are reporting their time off.
+
+## How do you create Time off reasons?
+
+Get started by clicking on **Settings -Time & time off - Add new - Time off reasons**. Name the reason and categorize it to either **Holiday**, **Sick leave** or **Other**.
+
+You can choose whether a time off reason should be able to become a **Long term leave** after a certain amount of days. Read mot about Long-term leave [HERE](https://app-eu1.hubspot.com/knowledge-article/8690880/editor/425606628585/content?redirectUrl=%2Fknowledge%2F8690880%2F188995994644%2Farticles%2Fstate%2Fall).
+
+It is also possible to choose if a time off reason should reduce the employees **Comp time balance**. Read more about Comp time balance [HERE](/time-comp-time-balance).
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-28-2026-06-23-31-3870-PM.png?width=669&height=337&name=image-png-Apr-28-2026-06-23-31-3870-PM.png)
+
+## Constraints
+
+A time off reason can have **constraints**, which means that you can limit how much employees report time off with this specific time off reason within a period.
+
+- **Limit days with time off during a specific period -** Toggle on if you want to restrict the usage of the time off reson on **days**. **For example** 3 days off within the period of 365 days.
+- **Limit time off occasions during a specific period.** **For example** 12 instances of sick leave within the period of 365 days.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-02-34-46-1311-PM.png?width=667&height=338&name=image-png-Aug-07-2026-02-34-46-1311-PM.png)
+
+## Scope
+
+It is also possible to **Scope** a time off reason. This means that only the employees within the scope can choose this time off reason when reporting time off. When scoping, choose between **Legal entity, Location, Department, Business area, Team** and **Title.**
+
+## Translations
+
+Does your organization have employees with multiple languages? You can add **translations** for each time‑off reason. When an employee uses Hailey in their preferred language, the time‑off reason title will automatically be shown in the users chosen language.
+
+<Tip>
+  **Tip!** When you employees report time off, you can easily follow each time off reason in the **Report** **for Time off**. Read more about the report [HERE](/time-off-report).
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-02-36-14-3521-PM.png?width=669&height=339&name=image-png-Aug-07-2026-02-36-14-3521-PM.png)

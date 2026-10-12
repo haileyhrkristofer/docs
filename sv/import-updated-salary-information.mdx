@@ -1,0 +1,120 @@
+---
+title: "Importera förändringar av löneinformation"
+---
+
+Spara tid genom att uppdatera lönetitel eller lönetyp för flera befintliga löner samtidigt genom att importera en fil till Hailey.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="HKasnpI" title="Importera förändringar av löneinformation" />
+
+## Innan du sätter igång
+
+Import av ändringar i löneinformation används för att uppdatera information för flera befintliga löner samtidigt. Denna import används endast när man vill ändra lönetitel eller lönetyp.
+
+Innan du importerar förändringar i löneinformationen behöver följande vara på plats:
+
+- Medarbetarna ska redan finnas i Hailey.
+- Medarbetarna ska ha en befintlig lön registrerad i Hailey.
+- De lönetyper du vill använda ska vara skapade under inställningarna i ert Hailey-konto.
+
+<Note>
+  Har medarbetarna ännu ingen lön i Hailey? Följ **Importera Lön** guiden [**HÄR**](/sv/import-salaries) innan du fortsätter.
+
+  Behöver du skapa en ny lönetyp? Följ guiden för hur du skapar och hanterar **Lönetyper [HÄR](/sv/salary-types)**.
+</Note>
+
+## Hur importerar man förändringar i löneinformation?
+
+Först behöver du ladda ner mallen genom att gå till **Medarbetare** - **Importera** - **Förändringar** **av** **löneinformation**. Om du endast vill ladda ner mallen för vissa anställda kan du börja med att markera dessa i listan.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-17-2026-08-00-08-6358-AM.png?width=670&height=496&name=image-png-Sep-17-2026-08-00-08-6358-AM.png)
+
+Här kan du välja om du vill ladda ner mallen **för alla medarbetare** eller endast för **utvalda** **medarbetare**. Klicka på det alternativ du föredrar och så laddas mallen ner.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-17-2026-08-01-48-2657-AM.png?width=670&height=306&name=image-png-Sep-17-2026-08-01-48-2657-AM.png)
+
+Följande befintliga information används för att identifiera rätt medarbetare och lön:
+
+- Employee ID
+- Employment number
+- Name
+- Company email
+- Salary ID
+- Current currency
+- Current pay period
+- Current salary amount
+- Current salary title
+- Current salary type
+
+Ändra inte informationen i ovan kolumner. Om uppgifterna ändras kan Hailey inte koppla förändringen till rätt medarbetare och lön. **Du behöver endast fylla i informationen för de lönerna som ska ändras**. Fyll i en eller båda av följande kolumner:
+
+- **New Salary Title:** Ange den nya titeln för lönen.
+- **New lönetyp:** Ange den nya lönetypen. Namnet måste vara exakt likadant som namnet på lönetypen i Hailey.
+
+<Note>
+  Namnet under **Ny lönetyp** måste överensstämma exakt med namnet i Hailey. Kontrollera särskilt stora och små bokstäver samt mellanslag före och efter namnet.
+</Note>
+
+När du har fyllt i mallen är det dags att importera. Gå till **Medarbetare** – **Importera** – **Förändringar** **av** **löneinformation**. Ladda upp filen genom att välja antingen **Klicka eller släpp filen här för att ladda upp**. Välj din fil och så börjar Hailey kontrollera att all information är korrekt. Om någon kolumn är felaktigt ifylld visas ett felmeddelande som anger vilken kolumn och rad som behöver justeras. Gör de nödvändiga ändringarna och ladda sedan upp filen på nytt.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-17-2026-08-10-41-6623-AM.png?width=670&height=330&name=image-png-Sep-17-2026-08-10-41-6623-AM.png)
+
+När allting är korrekt klickar du på **Importera** och fönstret nedan kommer upp. Importen kan ta en stund, beroende på hur mycket information som ska importeras. Du kan stänga fönstret, importen kommer att fortsätta köras i bakgrunden. När importen är klar visas den uppdaterade löneinformationen på respektive medarbetares profil.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-17-2026-08-13-52-1209-AM.png?width=670&height=266&name=image-png-Sep-17-2026-08-13-52-1209-AM.png)
+
+## Viktiga begrepp
+
+Här hittar du förklaringar av begrepp som används i importfilen:
+
+- **Current salary title:** Den titel som lönen har före importen.
+- **New salary title:** Den titel som ska ersätta den nuvarande lönetiteln.
+- **Current salary type:** Den lönetyp som lönen är kopplad till före importen.
+- **New salary type:** Den lönetyp som lönen ska kopplas till efter importen.
+- **Salary ID:** Det unika ID som används för att koppla förändringen till rätt lön.
+
+## Rättigheter
+
+Det är enbart **Admin** i systemet som kan genomföra import av förändringar av löneinformation. Om du vill veta mer om roller och rättigheter kan du göra det [**HÄR**](/sv/roles-and-rights).
+
+## Vanliga frågor
+
+**Fråga 1:** Kan jag använda importen för att lägga till en ny lön?
+
+Nej. Importen kan endast ändra information för löner som redan finns i Hailey. Använd **Importera - Löner** för att lägga till nya löner.
+
+**Fråga 2:** Kan jag ändra lönebeloppet med den här importen?
+
+Nej. Importen kan endast ändra lönetitel och lönetyp. Använd **Importera - Löneförändringar** för att uppdatera lönebelopp.
+
+**Fråga 3:** Måste den nya lönetypen redan finnas i Hailey?
+
+Ja. Lönetypen behöver vara skapad i ert Hailey-konto innan importen genomförs.
+
+**Fråga 4:** Varför hittar importen inte lönetypen som jag har angett?
+
+Kontrollera att namnet är skrivet exakt likadant som i Hailey. Stavning, stora och små bokstäver samt mellanslag måste överensstämma.
+
+**Fråga 5:** Behöver jag fylla i både Ny lönetitel och Ny lönetyp?
+
+Nej. Fyll endast i den information som ska ändras. Du kan ändra lönetiteln, lönetypen eller båda samtidigt.
+
+**Fråga 6:** Vad händer om jag ändrar den befintliga informationen i importfilen?
+
+Hailey använder den befintliga informationen för att identifiera rätt medarbetare och lön. Därför ska du inte ändra informationen i dessa kolumner.
+
+**Fråga 7:** Vad händer om importfilen innehåller ett fel?
+
+Hailey validerar filen och visar vilket fält som behöver korrigeras. Uppdatera filen och ladda sedan upp den igen.

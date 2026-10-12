@@ -1,0 +1,178 @@
+---
+title: "Importera anställningar"
+---
+
+Använd denna guide som stöd för att importen av era medarbetares anställningar ska bli så smidig som möjligt.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="PGgUIQS" title="Importera anställningar" />
+
+## Innan ni sätter igång
+
+Innan ni importerar era medarbetares anställningar behöver först *[importen av medarbetare](/sv/import-employees)* göras. Ni behöver även fatta beslut om **hur mycket historik ni vill ha med.**
+
+<Note>
+  Notera att om ni initialt importerar en sammanhängande anställningsperiod per medarbetare och senare vill importera detaljerad historik, måste detta justeras manuellt på varje profil.
+</Note>
+
+Vidare behöver **arbetsplatser**, **affärsområden** (om ni arbetar i affärsområden), **avdelningar, kostnadsställen, titlar och legala enheter** skapas. Hur dessa organisatoriska delar läggs till kan ni läsa mer om [HÄR](/sv/admin-kom-igang#organisation).
+
+<Note>
+  Om du importerar anställningar innehållande historisk data såsom avdelningar eller titlar ni inte längre har, kan ni markera dessa organisatoriska enheter som arkiverade. Klicka bara på de tre prickarna till höger om valda entitet - **Arkivera.**
+</Note>
+
+Importfilen ni nu ska göra behöver **spegla er organisation i Hailey**.
+
+![Organisation](https://docs.haileyhr.com/hs-fs/hubfs/Organisation.png?width=670&height=537&name=Organisation.png)
+
+<Warning>
+  Ett vanligt misstag är att råka lägga till ett extra mellanslag efter namnet på exempelvis en avdelning eller en titel i Hailey. Om importfilen inte har samma mellanslag kommer det inte att matcha. Detsamma gäller stora och små bokstäver – de måste vara exakt likadana i Hailey och i filen.
+
+  **Kom ihåg att** **arbetsplatser, avdelningar, kostnadsställen, titlar och legala enheter måste stavas EXAKT likadant i Hailey som i importfilen.**
+</Warning>
+
+## Hur skapar man en anställningsimport?
+
+Ladda ner importmallen genom att gå till Medarbetare i huvudmenyn, klicka på **Importera** - **Anställningar** och sedan Ladda ner **importmall**. Om du önskar att endast ladda ner importmallen för vissa medarbetare, kan du först bocka i dessa medarbetare i listan och sedan klicka på **Importera - Anställningar**. Öppna sedan mallen för att komma igång.
+
+<Tip>
+  **Hittar du inte dina medarbetare i listan?** Om du precis har importerat medarbetare har deras profiler fått status **Okänd** eftersom anställningsinformationen saknas. För att hitta dem: rensa alla filter i fältet **Anställningsstatus** i Filter-menyn till vänster i medarbetarlistan.
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-03-2026-11-58-13-7877-AM.png?width=670&height=386&name=image-png-Jul-03-2026-11-58-13-7877-AM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2025-09-15-16-6603-AM.png?width=670&height=450&name=image-png-Jul-14-2025-09-15-16-6603-AM.png)
+
+## Fyll i importmall
+
+I mallen kommer medarbetare radas upp med ID, anställningsnummer, namn och företagsmail. Detta för att Hailey ska kunna koppla anställningarna till rätt medarbetare. **Det är därför viktigt att inte ändra någon data i dessa kolumner!**
+
+Om ni har skapat några egna anställingsfält i Hailey, kommer även dessa finnas med längst till höger i filen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2025-09-04-54-5475-AM.png?width=670&height=139&name=image-png-Jul-14-2025-09-04-54-5475-AM.png)
+
+Importen av anställningar kan, som ovan nämnts, användas för att föra in historiska data kopplat till anställningar. Om ni använder importen för detta ska den **nuvarande anställningen anges först för varje medarbetare**. Tidigare anställningar läggs därefter till på efterföljande rader, i ordning från den senaste till den äldsta anställningen.
+
+<Tip>
+  Några exempel på varför det kan vara klokt att föra in detaljerad historik:
+
+  - Ger er korrekta data i olika typer av analyser
+  - Underlättar om ni ska använda systemet för att skapa arbetsgivarintyg m.m.
+  - Gör det smidigt att återanställa medarbetare
+  - Säkerställer att ni har rätt information i händelse av att ni skulle behöva ta ut anställningstider och dylikt
+  - Ger historisk information i analys och rapporter
+</Tip>
+
+När ni lägger till resterande anställningar görs det genom att infoga tomma rader under den rad där medarbetarens ID, namn och e-postadress finns. En rad per anställning/anställningsperiod.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2025-09-08-54-2383-AM.png?width=670&height=322&name=image-png-Jul-14-2025-09-08-54-2383-AM.png)
+
+<Warning>
+  Det är viktigt att både **startdatum** och **slutdatum** anges för de historiska anställningarna. Om **EndDate** lämnas tomt, tolkar Hailey det som att medarbetaren har parallella anställningar. **Se därför till att varje avslutad anställning har ett slutdatum.**
+</Warning>
+
+<Note>
+  **Har ni redan importerat information om nuvarande anställningar och vill lägga till historik i efterhand?**
+
+  Då behöver ni bara fylla i uppgifterna för de tidigare anställningarna. Kom ihåg att alltid ange både **start**- och **slutdatum** för anställningar som har avslutats.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2025-09-06-35-5990-AM.png?width=670&height=82&name=image-png-Jul-14-2025-09-06-35-5990-AM.png)
+
+*I exempelbilden ovan ser ni att vissa fält har lämnats tomma, det beror på att alla fält inte är relevanta för alla medarbetare. Ett exempel är då en medarbetare har en tillsvidareanställning. Här krävs ingen information i fält som slutdatum på tidsbegränsad anställning eller slut på provanställningsperiod osv.*
+
+## Format
+
+Många kolumner behöver fyllas i enligt specifika format för att importen ska gå igenom:
+
+- **Datum**: YYYY-MM-DD
+- **Anställningsform** (Employment Type): ProbationaryPeriod, Permanent, FixedTerm, Consultant eller Intern.
+  - Fylls fältet i som *Fixed Term* ska även fältet *Fixed term type* fyllas i enligt följande: GeneralTemporary, TemporarySubstitute eller SeasonalWork
+- **Omfattning % (** Scope Percentage): fylls i som decimal. Alltså **1** för 100 % och **0.5** för 50 % etc. (Använd punkt istället för komma)
+- **Omfattning timmar per vecka** (Scope Hours): vill man skriva in en decimal (t.ex. 37.5 timmar) ska man använda punkt istället för komma.
+- **Titles, Teams, Location, Department, Business Area, Cost center & Legal Entity**: Behöver stavas identiskt som era titlar, team, kontor, avdelningar, affärsområden och legala enheter i Hailey. Om flera titlar eller team på en medarbetare, separera med ett komma. Inga mellanslag!
+- **Rapporterar till:** Fylls i med medarbetar-ID under **Reports To** – *inte* med namn.
+
+<Note>
+  Du hittar medarbetar-ID i kolumn A i importfilen, förutsatt att personen som ska rapporteras till är inkluderad i den.
+  Är personen *inte* inkluderad i importfilen går det att hitta dennes medarbetar-ID i URL:en på deras medarbetarkort.
+
+  ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-15-2025-09-19-25-3072-AM.png?width=670&height=66&name=image-png-Oct-15-2025-09-19-25-3072-AM.png)
+
+  ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-15-2025-09-23-38-6470-AM.png?width=670&height=209&name=image-png-Oct-15-2025-09-23-38-6470-AM.png)
+
+  I nedan exempel rapporterar Abby till Aaron. Aarons medarbetar-ID är ifyllt i Abbys rad under **Reports To**.
+
+  ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-15-2025-01-14-34-4207-PM.png?width=670&height=49&name=image-png-Oct-15-2025-01-14-34-4207-PM.png)
+
+  ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-15-2025-01-14-39-3945-PM.png?width=670&height=50&name=image-png-Oct-15-2025-01-14-39-3945-PM.png)
+</Note>
+
+- **Uppsägningstid** (Notice Period): Fylls i med siffra. Om ni fyller i detta fält måste ni även fylla i uppsägningstidens enhet (se beskrivning nedan). *Har medarbetaren ingen uppsägningstid eller ni hänvisar* *kollektivavtal och inte vill ange detta här kan ni lämna detta fält tomt.*
+- **Uppsägningstidens enhet** ( Notice Period Unit): fylls i med Weeks (veckor) eller Months (månader), baserat på vilken enhet siffran du har angett i Notice Period avser.
+- **Egna fält**: [HÄR](/sv/custom-fields#format)hittar ni formaten som används för egna fält
+
+Nedan är ett exempel på hur en väl ifylld fil kan se ut:
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2025-09-02-48-1341-AM.png?width=670&height=83&name=image-png-Jul-14-2025-09-02-48-1341-AM.png)
+
+## Importera anställningar
+
+När mallen är redo att läsas in går ni tillbaka till Hailey och Medarbetarlistan. Klicka på **Importera - Anställningar**. Klicka på rutan i mitten "Klicka eller släpp filen här för att ladda upp" och välj er importfil.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2025-09-10-43-2799-AM.png?width=670&height=442&name=image-png-Jul-14-2025-09-10-43-2799-AM.png)
+
+Skulle någon kolumn vara felaktigt ifyllt, kommer ett felmeddelande att dyka upp och informera vilken kolumn och vilken rad som kräver justering. Ändra det som är i behov av justering, och ladda sedan upp filen på nytt igen.
+
+<Note>
+  Förekommer fel i importen kommer Hailey att **stoppa hela importen**. Ni behöver alltså inte leta efter vilka medarbetares anställningar som importerats och vilka som inte gjort det. Istället kan ni åtgärda enligt de felmeddelanden ni får och sedan köra hela filen på nytt!
+</Note>
+
+![Skärmavbild 2025-10-24 kl. 13.37.28](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202025-10-24%20kl.%2013.37.28.png?width=670&height=377&name=Sk%C3%A4rmavbild%202025-10-24%20kl.%2013.37.28.png)
+
+När allt stämmer klickar ni på Importera! Nedan ruta dyker då upp. Importen kan ta en stund beroende på hur många anställningar som ska importerats. Du kan stänga denna ruta - importen jobbar på ändå!
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2025-09-27-00-9625-AM.png?width=670&height=441&name=image-png-Jul-14-2025-09-27-00-9625-AM.png)
+
+När importen är slutförd har du som startat importen fått ett verifieringsmail:
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2025-09-28-10-3401-AM.png?width=670&height=526&name=image-png-Jul-14-2025-09-28-10-3401-AM.png)
+
+<Tip>
+  I unika fall kan mailet tala om att några anställningar inte lyckats importeras. Ni får då information om vilka medarbetare som misslyckats samt en informationstext om vad som gick fel. **Försök på nytt med endast de medarbetare som misslyckats.** Ett annat alternativ är att gå in på respektive berört medarbetarbetarkort för att komplettera.
+</Tip>
+
+## Uppdatera Rapporterar till
+
+Det går att uppdatera rapporterar till eller även lägga till det manuellt efter importen om man inte gjort det redan där. Gå till Medarbetare i huvudmenyn och använd filtreringsmenyn till vänster för att enkelt få fram personer som jobbar på t. ex. samma avdelning. **Bocka sedan i de personerna som ska rapportera till samma person,** **Hantera - Uppdatera fält**. Välj Rapporterar till och välj sedan rätt person i rullistan.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2025-09-29-34-4690-AM.png?width=670&height=276&name=image-png-Jul-14-2025-09-29-34-4690-AM.png)
+
+## Rättigheter
+
+Administratörer har automatiskt behörighet att importera anställningar.
+
+För att ge dessa behörigheter till andra roller, uppdatera rättigheterna under **Inställningar – Säkerhet – Roller & rättigheter** för **Importera medarbetardata**. [**HÄR**](/sv/roles-and-rights) kan du läsa mer om **Roller och rättigheter**.
+
+## Vanliga frågor
+
+<AccordionGroup>
+  <Accordion title="Går det att importera historiska anställningar i ett senare skede?">
+  Ja, det går bra - då behöver ni bara fylla i uppgifterna för de tidigare anställningarna. Kom ihåg att alltid ange både **start**- och **slutdatum** för anställningar som har avslutats. **Observera:** Om ni initialt importerar en sammanhängande anställningsperiod per medarbetare och senare vill importera detaljerad historik, måste detta justeras manuellt på varje profil.
+  </Accordion>
+  <Accordion title="Finns det fler fält än *Rapporterar till* som jag kan bulkuppdatera från medarbetarlistan i efterhand?">
+  Ja, du kan uppdatera arbetsplats, affärsområde, avdelning, legal enhet, titel, kostnadsställe och team från medarbetarlistan.
+  </Accordion>
+</AccordionGroup>

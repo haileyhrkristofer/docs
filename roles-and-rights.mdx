@@ -1,0 +1,242 @@
+---
+title: "Roles and rights"
+---
+
+Manage roles and rights to ensure that everyone has the appropriate rights in the system.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="RHlwjhg" title="Roles and rights" />
+
+## Roles and rights
+
+In Hailey, a “role” refers to the role a user is assigned to in the system, determining what they can see and do. To configure roles and rights, go to **Settings → Security →** **Roles** **& Rights**.
+
+## Admin role
+
+The settings for the **Admin** **role** cannot be edited, as this role has a fixed set of default rights. However, it is possible to manage which employees are assigned to this role.
+
+To add an employee to the role, select their name in the list on the left and click the **arrow** → **Save**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-22-2026-07-43-45-8073-AM.png?width=670&height=350&name=image-png-Jun-22-2026-07-43-45-8073-AM.png)
+
+## Rights and access outside the admin role
+
+Some rights and access rights are not automatically included in the admin role. This means that, as an Admin, you need to assign yourself additional rights and access rights to gain access to and manage specific parts of the system.
+
+Below is a list of rights and access rights that must be assigned manually:
+
+- Right to **give final approval in a salary review**.
+- Right to act as the **company signing party**.
+- Right to act as a **contract reviewer**.
+- Access to **one-to-one types**.
+- Access to **employee folders**.
+- Access to **HSE-deviations**.
+
+## Create a new custom role
+
+To add a new custom role, head over to **Settings** → **Security** → **Roles & rights**. Click **Add new** in the top‑right corner and give this role a name. Then choose how members should be assigned to the role. This setting determines how employees are added to the role. Members will receive all rights configured for the role. You can assign role members either automatically or manually.
+
+- **Automatically** – Assigns employees automatically based on defined conditions. This is best suited for roles that need to stay up to date over time.
+- **Manually** – Manually choose which employees are assigned to this role. This is best suited for exceptions, memberships that rarely change or when you want full control over the assignment.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-22-2026-07-44-43-9663-AM.png?width=670&height=349&name=image-png-Jun-22-2026-07-44-43-9663-AM.png)
+
+Next choose your **Target**. This determines which employees role members **will have rightsfor**. Choose if your target should be relational or organizational.
+
+**Relational** – Manages employees based on which level the role will have rightsfor. You can select one of the four different options:
+
+- **Own profile** – The rights the role member will have on their own profile.
+- **Team members –** The rights the role member will have on their team members.
+- **All employees below –** The rightsthe role member will have on all employees below.
+- **All** – The rights the role member will have on all employees.
+
+**Organizational** – Manage employees within specific organizational units. If this applies to your organization, you can create targeted roles where the assigned rights apply only to employees in the selected entities.
+
+When you are satisfied with the settings for your role, click **Start** in the bottom-right corner.
+
+## How to assign role members automatically
+
+### Select condition
+
+Next you select which members that should be included in the role by choosing one or several **conditions**. This determines who should be included in the role, for example **Managers** within the **Department** named Finance.
+
+For automatic assignment there are several options to choose from. For example, you can base the assignment on organizational units, which means that all employees within a specific unit are automatically added to the role.
+
+<Steps>
+  <Step title="Select condition, for example Leadership role">
+    **Select condition**, for example **Leadership role**.
+  </Step>
+  <Step title="Select on more more options, for example Manager">
+    **Select on more more options**, for example **Manager**.
+  </Step>
+</Steps>
+
+You can add new conditions as needed. For example, if you click **Add condition**, choose Department, and then choose Finance, **all managers** **within the Finance department will be included in the role.**
+
+<Note>
+  Please note that if you add a condition within a condition group and specify values in multiple fields, role members must meet all of those criteria to be included in the role. If you enter multiple values within the same field, role members only need to match one of those values.
+
+  ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-22-2026-07-48-24-4586-AM.png?width=670&height=350&name=image-png-Jun-22-2026-07-48-24-4586-AM.png)
+</Note>
+
+### Add condition group
+
+You also have the option to add a **new condition group.** This determines which additional group of members should be included in the role, for example Team leads within the Finance department. This means that **all Team leads and Managers within the Finance department will be included in the role.**
+
+<Note>
+  Please note that when you add a condition group, the label **or** appears between the condition groups. This indicates that a role member only needs to meet the criteria in **any** **of the condition groups** to be included in the role.
+
+  ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-27-2026-03-46-53-4120-PM.png?width=670&height=351&name=image-png-Aug-27-2026-03-46-53-4120-PM.png)
+</Note>
+
+### Include specific employees
+
+If you want to include employees who do not match the selected conditions, you can choose to include them in the role. You do this by selecting employees in the roll list under **Also include**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-27-2026-03-48-12-5890-PM.png?width=670&height=351&name=image-png-Aug-27-2026-03-48-12-5890-PM.png)
+
+## How to assign role members manually
+
+If you want to assign members to a role manually, you first choose which employees that should be included in the role. You do this by selecting one or several employees and click the **arrow** to assign them to the role.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-27-2026-03-49-10-6758-PM.png?width=670&height=351&name=image-png-Aug-27-2026-03-49-10-6758-PM.png)
+
+To select multiple employees in bulk, click the **arrow**. Here you have the option to **select all data**, **select current page** or **invert current page.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-27-2026-03-49-42-4692-PM.png?width=670&height=352&name=image-png-Aug-27-2026-03-49-42-4692-PM.png)
+
+Rights
+
+Now it's time to choose the rights that the role members should have. In the menu on the left, there are two options: Employee Rights and Company Rights. These determine where the rights will apply.
+
+- **Employee rights –** rights that apply to an employee's profile.
+- **Company rights –** rights that apply to different areas of Hailey including tabs in the *Main menu*, the *Actions* button in the employee list, and access to *Settings*.
+
+There are several options that determine what members of the role are allowed to do:
+
+- **None** – No data will be displayed, and the section will be hidden from the members.
+- **View** – Data will be displayed, and the user will be able to see the content of the section.
+- **View & edit** – Data will be displayed and can be changed, meaning the user can edit and delete the information.
+- **Disable** – The members can not view and edit the content.
+- **Enable** – The members can view or edit the content.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-22-2026-08-09-51-2121-AM.png?width=670&height=352&name=image-png-Jun-22-2026-08-09-51-2121-AM.png)
+
+## Search for rights
+
+If you are looking for a specific right, you can use the **search** **function** to find it more quickly. Click the **magnifying glass** in the upper-left corner and enter the name of the right you are looking for.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-27-2026-03-50-25-3583-PM.png?width=670&height=352&name=image-png-Aug-27-2026-03-50-25-3583-PM.png)
+
+Once the role has been created, you can view an **overview of all rights included in it.** Click the role to open its details view. From here, you can also **search** for specific rights or members to verify that the role is configured correctly.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-22-2026-08-13-59-8547-AM.png?width=670&height=349&name=image-png-Jun-22-2026-08-13-59-8547-AM.png)
+
+## Examples of roles to create in your organization
+
+Below are some examples of how you can create custom roles and assign roles to your employees own profile, employees rights for other employees, Team leads, and Managers within your organization.
+
+### Create a role for employees on own profile
+
+If you want to create an employee role where members can view or view & edit on their own profile, you first choose whether role members should be assigned automatically or manually.
+
+- Select **Relational** under Target.
+- Then you select **Own Profile**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-22-2026-08-19-40-9478-AM.png?width=670&height=348&name=image-png-Jun-22-2026-08-19-40-9478-AM.png)
+
+Next you select which employees should be included in the role. If you want all employees in your organization to be assigned to the role, **select your legal entity**/**entities**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-22-2026-08-21-36-2120-AM.png?width=670&height=350&name=image-png-Jun-22-2026-08-21-36-2120-AM.png)
+
+Finally, you click on **Rights** to assign what rights the employees should have on their own profile.
+
+### Create a role for employees rights on other employees
+
+To create a role that defines what all employees can view on all other employees' profiles, first choose to automatically assign role members.
+
+- Select **Relational** under Target
+- Then you select **Everyone**
+
+In this way, role members will manage the rights included in the role, for all other employees.
+
+Next you select which employees should be included in the role. If you want *all employees* in your organization to be assigned to the role, select your **legal entity/entities.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-22-2026-08-25-33-9306-AM.png?width=669&height=343&name=image-png-Jun-22-2026-08-25-33-9306-AM.png)
+
+Finally click on **Rights** and then select the rights that this role should have.
+
+### Create a role for Team Leads
+
+Choose to automatically assign role members to this role in order to give all of your Team leads the rights included in this role.
+
+- Select **Relational** under Target
+- Then you select **Team members**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-22-2026-08-26-27-7353-AM.png?width=670&height=351&name=image-png-Jun-22-2026-08-26-27-7353-AM.png)
+
+Next you select which employees that should be included in the role. If you want all Team leads in your organization to be assigned to the role you choose **Leadership** role as your condition, and then choose **Team lead.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-22-2026-08-27-37-1580-AM.png?width=670&height=357&name=image-png-Jun-22-2026-08-27-37-1580-AM.png)
+
+Finally click on **Rights** and then select the rights that this role should have.
+
+### Create a role for Managers
+
+Choose to automatically assign role members to this role in order to give all of your **Managers** the rights included in this role.
+
+- Select **Relational** under Target
+- Then you select **All employees below**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-22-2026-08-29-26-3145-AM.png?width=670&height=350&name=image-png-Jun-22-2026-08-29-26-3145-AM.png)
+
+Next you select which employees should be included in the role. If you want all Managers in your organization to be assigned to the role, choose **Leadership** **role** as your condition, and then choose **Managers**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-22-2026-08-30-10-2258-AM.png?width=670&height=348&name=image-png-Jun-22-2026-08-30-10-2258-AM.png)
+
+Finally click on **Rights** and then select the rights that this role should have.
+
+## Key concepts: summary
+
+Below is a brief summary of the key concepts used throughout roles and rights.
+
+- **Target** – Defines who the role will have rights for, and which actions can be performed.
+- **Relational/Organizational** – The target can be defined either on employee level or an organizational unit.
+- **Role members** – Includes all employees who are assigned rights through the role.
+- **Condition** – Rule that controls who automatically becomes a member of the role and receives its rights.
+- **Condition groups** – Combination of rules that controls the membership in the group.
+- **Leadership role** **–** General term for Manager and Team lead.
+
+## FAQ's
+
+**Question 1:** I can't see all content on our company corner. Why?
+
+If you, as an admin, cannot see all content in the company hub, it is likely because you have assigned a document or article to an organizational unit that you are not part of. Read more [HERE](/company-corner#Create-content).
+
+**Question 2:** Why can't I see the same news as my employees?
+
+This may be because the news item is targeted at an organizational entity that you do not belong to. Read more [HERE](/news#create-news).
+
+**Question 3:** I can't see the content in the employee folders I created. Why?
+
+Access to employee folders in managed outside of the admin role. This means you need to assign yourself the appropriate rights to view the documents you upload in each folder. Read more about how to do this [HERE](/employee-folders#employee-folder-rights).
+
+**Question 4:** I can't view the one-to-one template when preparing or conducting a one-to-one. Why?
+
+As an admin, you need to assign yourself access to the relevant one-to-one types in order to view their content. Read more [HERE](/using-feedback-sessions#Create-one-to-one-types).
+
+**Question 5:** How can I make my name selectable under the *Review step* field when a manager initiates a hiring process?
+
+Make sure you have assigned yourself the right to be a contract reviewer. If you, for example, want to have this right for the entire organization, we recommend creating a Company role and adding yourself as a member of that role. The right *Can be contract reviewer* can be found under **Company rights →** **Other**.

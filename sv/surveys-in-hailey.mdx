@@ -1,0 +1,113 @@
+---
+title: "Skapa undersökningsmallar"
+---
+
+I den här guiden visar vi hur du skapar undersökningsmallar i Hailey. Med hjälp av undersökningsmallar kan du enkelt skapa anonyma undersökningar och få värdefull feedback från din organisation.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="wfTf1hB" />
+
+## Vad är en undersökningsmall?
+
+En undersökningsmall är strukturen för en undersökning i Hailey. Den innehåller sektioner, frågor, svarstyper och inställningar som används när en undersökning skapas. När mallen är klar kan du använda den för att skapa och skicka undersökningar till medarbetare när du vill samla in feedback.
+
+<Note>
+  För att hjälpa dig komma igång innehåller ditt konto två färdiga undersökningsmallar. Dessa är redo att börja användas från start och behöver inte redigeras.
+</Note>
+
+## Hur skapar man en undersökningsmall?
+
+För att skapa en undersökningsmall, navigera till **Inställningar** - **Undersökning** och klicka på **Lägg** **till** upp i det högra hörnet. Här kan du antingen skapa en undersökning från grunden eller använda vå AI-funktion för att generera en mall åt dit (mer om detta längre ner i guiden).
+
+![cs2](/images/sv/surveys-in-hailey/01.png)
+
+Om du väljer att skapa en undersökningsmall från grunden börjar du med att ange ett namn och en beskrivning för mallen. Välj sedan hur många svar som krävs innan resultaten kan visas. Standardinställningen är **5 svar** och genom att hålla muspekaren över den svarta runda ikonen ser du antal svar.
+
+Du kan också välja att omfatta mallen till en specifik organisationstillhörighet. Om du anger en avgränsning kan endast användare som tillhör den valda gruppen skicka ut undersökningen. Om du lämnar fältet tomt kan alla användare med behörighet att skicka undersökningar använda mallen.
+
+När inställningarna är klara klickar du på **Börja bygga**.
+
+![Picture4-1](/images/sv/surveys-in-hailey/02.png)
+
+Undersökningsmallen är uppgyddd av sektioner, som i sin tur innehåller frågor. Följ stegen nedan för att bygga upp undersökningsmallen:
+
+- Namnge sektionen under **Sektionstitel**.
+- Lägg till en beskrivning för sektionen om du vill.
+- Lägg till frågor genom att trycka på **plustecknet**.
+- För varje fråga väljer du en **svarstyp** och ifall frågan ska vara obligatorisk eller valfri att svara på.
+- Svarstypen **Skala 1-5** kan illustreras som siffror eller ikoner. Svarstyperna 0-10 och 1-10 kan endast illustreras med siffror.
+- Du kan använda svarstypen **Text** för att samla in mer detaljerade svar (upp till 1000 tecken).
+- Med svarstypen **Envalsfråga** kan deltagarna välja ett av alternativen ni lägger till och svarstypen **Flervalsalternativ** tillåter deltagarna att välja flera alternativ.
+- Du kan också skapa frågor med svarsalternativen **Ja/Nej**.
+
+![Picture6-1](/images/sv/surveys-in-hailey/03.png)
+
+## Hur skapar du en undersökningsmall med AI?
+
+Du kan använda AI för att enkelt skapa undersökningsmallar. Innan du kan använda funktionen behöver AI aktiveras under **Inställningar** - **Säkerhet** - **AI**.
+
+Du kan läsa mer om hur AI fungerar i Hailey i vår guide för AI-inställningar [**HÄR**](/sv/ai-inställningar).
+
+![](/images/sv/surveys-in-hailey/04.png)
+
+För att skapa en undersökningsmall med hjälp av AI går du till **Undersökning** och klickar på **Lägg till.**
+
+![cs2](/images/sv/surveys-in-hailey/01.png)
+
+Här får du först välja minsta antal svar som krävs innan resultaten av undersökning visas. Fyll sedan i en beskrivning av undersökningen du vill skapa och klicka på **Generera**. AI skapar då en undersökningsmall baserat på informationen du har angett.
+
+![Picture2-2](/images/sv/surveys-in-hailey/05.png)
+
+När mallen har genererats kan du välja att antingen **Avbryta**, **Redigera** eller **Spara**. Om du väljer **Redigera** kan du anpassa mallen genom att lägga till eller ta bort sektioner och frågor, precis som när du skapar en mall från grunden. Klicka på **Spara** när du är nöjd med mallen.
+
+![Picture3-1](/images/sv/surveys-in-hailey/06.png)
+
+## Inspiration för undersökningsmallar
+
+Nedan finns lite inspiration på undersökningsmallar som du kan skapa:
+
+- **Medarbetarundersökning**: Mät medarbetarnas engagemang och identifiera områden som kan förbättras.
+- **Kulturundersökningar**: Få en bättre förståelse för hur medarbetarna upplever företagets kultur och värderingar.
+- **Onboardingundersökningar**: Samla in feedback från nyanställda för att förbättra onboardingprocessen.
+
+## Rättigheter
+
+Som admin i Hailey har du alltid behörighet att skapa undersökningsmallar.
+
+Du kan även ge andra användare behörighet att skapa, visa och redigera undersökningsmallar. Behörigheten kan ges till en **standardroll** genom att välja **Visa & ändra** undersökningsmallar. För en **anpassad roll** klickar du på **Aktivera** för att ge behörigheten att redigera undersökningsmallar.
+
+Läs mer om Roller & Rättigheter **[HÄR](/sv/roller-och-rattigheter)**.
+
+## Vanliga frågor
+
+Nedan har vi samlat svar på vanliga frågor om undersökningsmallar i Hailey för att hjälpa dig komma igång.
+
+**Fråga 1:** Kan jag ändra det minsta antal svar som krävs innan resultatet visas?
+
+Ja, du kan ändra det minsta antal svar som krävs genom att redigera undersökningsmallen. Öppna mallen, gå till undersökningsinställningarna och uppdatera det minsta antalet svar.
+
+Observera att ändringen **endast gäller framtida undersökningar** som skapas från mallen och inte påverkar undersökningar som redan har skickats ut.
+
+**Fråga 2:** Kan jag redigera en undersökningsmall efter att en undersökning har skickats ut?
+
+Ja, du kan när som helst redigera en undersökningsmall, men ändringarna påverkar endast framtida undersökningar.
+
+När en undersökning har skickats ut är frågorna och inställningarna för den undersökningen låsta och kan inte ändras. Om du vill göra ändringar redigerar du undersökningsmallen och använder den uppdaterade versionen nästa gång du skickar ut en undersökning.
+
+**Fråga 3:** Vad är skillnaden mellan en undersökningsmall och en undersökning?
+
+En **undersökningsmall** är undersökningens struktur och uppbyggnad. Den innehåller sektioner, frågor, svarstyper och inställningar som används varje gång en ny undersökning skapas.
+
+En **undersökning** skapas när en undersökningsmall skickas ut till medarbetare för att samla in svar och feedback.

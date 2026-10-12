@@ -1,0 +1,148 @@
+---
+title: "Tidscykler"
+---
+
+Med hjälp av Haileys tidscykler skapar du en påminnelse varje månad för både chef och medarbetare att attestera sin tid och frånvaro direkt i Hailey!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="Jh1F7aL" title="Tidscykler" />
+
+## Vad är tidscykler?
+
+Tidscykler är automatiserade månatliga påminnelser som hjälper till att säkerställa att all tid och frånvaro rapporteras och godkänns korrekt.
+
+Medarbetare uppmanas att registrera sin tid och frånvaro för föregående månad, medan godkännare får i uppgift att granska och godkänna registreringarna.
+
+När både medarbetaren och godkännaren har godkänt tidscykeln låses perioden och kan inte längre ändras.
+
+## Hur sätter man upp tidscykler?
+
+För att aktivera er tidscykel, navigera till **Inställningar - Tid & frånvaro - Rapporteringspolicy.** Här kan du antingen skapa en ny rapporteringspolicy eller redigera en befintlig genom att klicka på de tre prickarna.
+
+I rapporteringspolicyn aktiverar du tidscykler och ställer in:
+
+- Hur många dagar efter periodens slut medarbetare ska få en **påminnelse** om att registrera sin tid.
+- Hur många dagar efter periodens slut godkännare ska få en **påminnelse** om att godkänna.
+
+När tidscykeln är aktiverad och tilldelad till aktiva medarbetare skickas den automatiskt ut varje månad för föregående period.
+
+<Note>
+  Observera: Om ni aktiverar tidscykler **mitt i en månad** får ni uppgifterna för att skicka in och godkänna tid/frånvaro för föregående månad **dagen efter.**
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-23-2026-07-24-44-8059-AM.png?width=670&height=372&name=image-png-Jul-23-2026-07-24-44-8059-AM.png)
+
+## Hur skickar man in tidscykler?
+
+Den 1:a varje månad får du en **ny uppgift** på din Dashboard, tillsammans med ett **mail**.
+
+Du hittar uppgiften på din dashboard under **Att göra**, där du kan granska och slutföra den.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-23-2026-07-26-42-5378-AM.png?width=670&height=372&name=image-png-Jul-23-2026-07-26-42-5378-AM.png)
+
+När du öppnar uppgiften ser du din kalender för föregående månad. Gå igenom alla registreringar noggrant och **säkerställ** att allt stämmer innan du skickar in.
+
+Om du behöver lägga till eller justera tid eller frånvaro stänger du uppgiften och går tillbaka till din dashboard eller profilen. Där kan du välja **Registrera frånvaro** eller **Registrera tid** för att uppdatera dina egna registreringar. När du har gjort dina ändringar går du tillbaka till uppgiften och skickar in den.
+
+<Note>
+  Oavsett om du har någon rapporterad tid eller frånvaro eller inte så behöver du skicka in tidscykeln för godkännande.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-19-2026-07-49-53-7285-AM.png?width=670&height=379&name=image-png-Aug-19-2026-07-49-53-7285-AM.png)
+
+När du skickar in din tid eller frånvaro kommer din godkännare granska och godkänna den.
+
+När din tidscykel har godkänts **har du inte längre möjlighet att registrera eller ändra någon tid eller frånvaro för den månaden.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-19-2026-07-50-21-1441-AM.png?width=670&height=384&name=image-png-Aug-19-2026-07-50-21-1441-AM.png)
+
+## Hur godkänner man tidscykler?
+
+I början av varje månad får godkännare en ny uppgift på sin **Dashboard**.
+
+När du öppnar uppgiften ser du en översikt över medarbetares registrerade tid och frånvaro för föregående månad.
+
+Genom att godkänna tidscykeln för varje medarbetare **bekräftar du deras registrerade tid och frånvaro samt låser månaden**.
+
+När **månaden är låst kan medarbetare inte längre lägga till eller ändra någon tid eller frånvaro** för den perioden.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/SE-png.png?width=670&height=426&name=SE-png.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/3-png-Sep-22-2026-02-32-32-3179-PM.png?width=670&height=367&name=3-png-Sep-22-2026-02-32-32-3179-PM.png)
+
+<Note>
+  Notera att när en tidscykel är godkänd är det endast möjligt att redigera om en har rättigheten att **Ändra godkänd tidscykel.**
+</Note>
+
+Godkännare kan godkänna både inskickade och ej inskickade tidscykler.
+
+Om du godkänner en tidscykel som ännu inte skickats in av medarbetaren kommer medarbetarens uppgift att försvinna. De kommer inte längre kunna registrera någon tid eller frånvaro för den månaden.
+
+Efter att tidscykeln har godkänts skickas ett bekräftelsemejl automatiskt till medarbetaren.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-17-2026-11-41-33-6512-AM.png?width=670&height=329&name=image-png-Jul-17-2026-11-41-33-6512-AM.png)
+
+## Rättigheter
+
+Följande behörigheter kan vara användbara när ni arbetar med tidscykler:
+
+- **Tid & frånvaro - Visa:** ger åtkomst till fliken **Tid** på medarbetarens profil.
+- **Tid & frånvaro - Ändra godkänd tidscykel:** gör det möjligt att redigera registreringar i en redan godkänd månad.
+
+För att läsa mer om hur **Roller & rättigheter** fungerar i Hailey, klicka [HÄR](/sv/roles-and-rights)!
+
+## Vanliga fragor
+
+Nedan hittar du svar på de vanligaste frågorna om tidscykler. Oavsett om du är medarbetare eller admin kan dessa vanliga frågor hjälpa dig att lösa vanliga problem och få en bättre förståelse för hur tidscykler fungerar.
+
+<AccordionGroup>
+  <Accordion title="Varför ser jag ingen uppgift för att skicka in min tid/frånvaro?">
+    Det finns några anledningar till att uppgiften inte visas:
+
+    - Har du redan skickat in föregående månads tid/frånvaro? När du har skickat in den tas uppgiften bort.
+    - Har den nya tidscykeln startat? En ny uppgift skapas den **första dagen i varje månad** omkring **kl. 09:00 (svensk tid)**.
+    - Din tidscykel kan redan ha blivit godkänd. Även om du inte har skickat in via uppgiften kan din godkännare godkänna perioden. Kontrollera din e-post för att se om du har fått ett meddelande om att månaden har godkänts. <img src="https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-17-2026-11-39-02-2262-AM.png?width=445&height=218&name=image-png-Jul-17-2026-11-39-02-2262-AM.png" alt="" /> Om du behöver ändra dina registreringar, kontakta er admin, som kan göra ändringar i föregående månad.
+  </Accordion>
+
+  <Accordion title="Jag behöver rapportera tid och frånvaro för föregående månad, men systemet låter mig inte göra det. Vad ska jag göra?">
+    När en tidscykel har godkänts låses månaden och kan inte längre redigeras.
+
+    Endast admin och användare med rättigheten att **Ändra godkänd tidscykel** kan göra ändringar.
+
+    Admin kan granska och hantera dessa rättigheter under **Inställningar - Säkerhet - Roller & rättigheter.**
+  </Accordion>
+
+  <Accordion title="Min medarbetare har semester vid månadsskiftet och kan inte skicka in sin tidsperiod. Kan jag ändå godkänna den?">
+    Ja. Du kan godkänna en tidscykel även om medarbetaren inte har skickat in den via uppgiften.
+
+    Om en medarbetare kommer att vara ledig vid månadsskiftet är det bra att be dem kontrollera och komplettera sina tidregistreringar innan semestern börjar. Då kan du granska och godkänna tidscykeln som vanligt medan de är borta.
+  </Accordion>
+
+  <Accordion title="Jag hade inga registreringar förra månaden – behöver jag ändå skicka in tidscykeln?">
+    Även om du inte hade någon frånvaro eller arbetstimmar föregående månad behöver du fortfarande granska och skicka in tidscykeln. Det bekräftar att dina registreringar är korrekta och gör det möjligt för din godkännare att slutföra månaden.
+  </Accordion>
+
+  <Accordion title="Jag rapporterar bara frånvaro i Hailey. Varför står det i uppgiften att jag ska skicka in tid också?">
+    Uppgiften hänvisar alltid till både **tid** och **frånvaro**. Om du bara rapporterar **frånvaro** är det endast den du behöver granska.
+  </Accordion>
+
+  <Accordion title="Varför kan jag inte rapportera tid från uppgiften?">
+    Uppgiften är inte till för att rapportera tid eller frånvaro. Syftet med uppgiften är endast att du ska **granska och bekräfta** dina tid- och frånvaroregistreringar för föregående månad innan månaden låses.
+
+    Om du behöver rapportera tid eller ändra en registrering gör du det via **Rapportera tid** från dashboarden eller din profil.
+
+    När alla registreringar är korrekta kan du skicka in din tid och frånvaro. Det innebär att du har granskat och bekräftat registreringarna, och därefter kan din godkännare godkänna och slutföra månaden.
+  </Accordion>
+</AccordionGroup>

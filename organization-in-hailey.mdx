@@ -1,0 +1,240 @@
+---
+title: "Organization in Hailey"
+---
+
+Your organization structure is the foundation of many things in Hailey. This guide walks you through the different parts of the organization structure!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="9jlzv68" title="Organization in Hailey" />
+
+## What is the organization structure in Hailey?
+
+The organization structure in Hailey helps you organize employees and reflect how your business is structured.
+
+By setting up legal entities, locations, departments, teams, and other organizational components, you can create a structure that supports reporting, permissions, workflows, organizational charts, and more.
+
+How do you build your organization structure?
+
+To build your organization structure, navigate to **Settings - Organization** and click **Add New**.
+
+We recommend setting up your organization from the top down:
+
+<Steps>
+  <Step title="Legal entities">
+    Legal entities
+  </Step>
+  <Step title="Locations">
+    Locations
+  </Step>
+  <Step title="Cost center">
+    Cost center
+  </Step>
+  <Step title="Business areas">
+    Business areas
+  </Step>
+  <Step title="Departments">
+    Departments
+  </Step>
+  <Step title="Teams">
+    Teams
+  </Step>
+  <Step title="Titles">
+    Titles
+  </Step>
+  <Step title="Task forces">
+    Task forces
+  </Step>
+</Steps>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-22-2026-12-47-49-2122-PM.png?width=670&height=329&name=image-png-Jul-22-2026-12-47-49-2122-PM.png)
+
+## Key terms
+
+### Legal entities
+
+A legal entity represents a company within your organization. When creating a legal entity, you'll be asked to enter a legal entity name, company registration number, and an optional display name.
+
+We recommend creating one legal entity for each registered company within your organization.
+
+<Note>
+  **Legal entities are used for:**
+
+  - Scope and filtering
+  - Templates and content
+  - Contract templates
+  - Integrations
+  - Sender addresses for emails
+</Note>
+
+<Tip>
+  **Example of legal entity:** Nordic Innovate AB
+</Tip>
+
+### Locations
+
+Locations represent your organization's physical offices or workplaces. When creating a location, you'll enter information such as the location name, address, city, country, phone number, and time zone.
+
+Location names can also be translated if your organization operates in multiple languages.
+
+<Note>
+  **Locations are used for:**
+
+  - Scope and filtering
+  - Notifications
+  - Contract templates
+  - Integrations
+</Note>
+
+<Tip>
+  **Example of location:** Stockholm
+</Tip>
+
+### Business areas
+
+Business areas are used to group departments and create a more advanced organizational structure. They are particularly useful for organizations that want to organize their operations by region, business unit, or line of business.
+
+When creating a business area, you'll add a business area name, a business area manager (optional) and one or more departments.
+
+By connecting departments to business areas, you can build an organizational tree. Read more about it [**HERE.**](/organizational-chart)
+
+<Note>
+  **Business areas are used for:**
+
+  - Organizational charts
+  - Filtering in lists and views
+  - Templates, articles, and other content
+  - Employee templates
+  - Variables in contract templates
+</Note>
+
+<Tip>
+  **Example of business area:** Southern Region
+</Tip>
+
+### Departments
+
+Departments are typically used to represent functions within your organization, such as HR, Finance, Marketing, or IT.
+
+When creating a department, you'll add a department name, assign a head of department, and optionally connect the department to a parent department. This allows you to build a organizational structure and create relationships between departments. Read more about this [**HERE**.](/organizational-chart)
+
+<Note>
+  **Departments are used for:**
+
+  - Organizational charts
+  - Filtering in lists and views
+  - Templates, articles, and other content
+  - Employee templates
+  - Variables in contract templates
+  - Default view in the employee list
+  - Who's away
+  - Integrations
+  - Approval principle - Department managers
+</Note>
+
+<Tip>
+  **Example of department:** IT
+</Tip>
+
+### Cost centers
+
+Cost centers are used to track and allocate costs within your organization.
+
+When creating a cost center, you'll add a name and an optional code. Many organizations use cost centers for reporting and integrations with payroll or finance systems.
+
+<Note>
+  **Cost centers are used for:**
+
+  - Filtering in lists and views
+  - Integrations
+</Note>
+
+<Tip>
+  **Example of cost center:** IT (3010)
+</Tip>
+
+### Teams
+
+Teams are used to create flexible groupings of employees outside the formal organizational structure. For example, an employee may belong to the **IT department** while also being part of the **Digitalization Project** team. Teams are therefore useful for project groups, working groups, and other cross-functional collaborations.
+
+A team consists of a name and can optionally have a team lead assigned to it.
+
+Unlike departments, employees can belong to **multiple teams** at the same time.
+
+<Note>
+  **Teams are used for:**
+
+  - Filtering in lists and views
+  - Templates, articles, and other content
+  - Employee templates
+  - Variables in contract templates
+  - Separate permissions for team leads
+  - Approval principal - Team lead
+  - Who's away
+</Note>
+
+<Tip>
+  **Example of team:** Digitalization Project
+</Tip>
+
+### Titles
+
+Titles are used to describe an employee's role or function within the organization, such as Marketing Manager, Project Manager, or Software Developer. Unlike departments and teams, titles describe what an employee does rather than where they belong in the organization.
+
+When creating a title, you'll add:
+
+- A title name
+- An optional title description
+
+Titles and title descriptions can also be translated if your organization operates in multiple languages.
+
+An employee can have **multiple titles** connected to the same employment.
+
+<Note>
+  **Titles are used for:**
+
+  - Pay surveys
+  - Filtering in lists and views
+  - Templates, articles, and other content
+  - Employee templates
+  - Variables in contract templates
+  - Integrations
+</Note>
+
+<Tip>
+  **Example of title:** Marketing Manager
+</Tip>
+
+### Task forces
+
+Task forces are informal groups that are not connected to the organizational structure. They are commonly used to group employees based on responsibilities, permissions, or shared needs rather than organizational affiliation.
+
+Task forces can be used to:
+
+- Assign tasks in workflows
+- Manage access to employee folders
+- Control access to content in the Company corner
+
+Employees can belong to **multiple task forces**.
+
+<Tip>
+  **Examples of task forces:**
+
+  - Admin – all users with admin access
+  - IT
+  - Payroll
+  - External partners
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-22-2026-01-11-08-0812-PM.png?width=338&height=314&name=image-png-Jul-22-2026-01-11-08-0812-PM.png)

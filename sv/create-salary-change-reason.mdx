@@ -1,0 +1,68 @@
+---
+title: "Skapa Anledningar till löneförändring"
+---
+
+Den här guiden förklarar hur du som admin skapar och hanterar anledningar till löneförändringar under inställningar. Anledningar till löneförändringar bidrar till en tydligare och strukturerad dokumentation av justering av lön.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="9YH4fCh" title="Skapa Anledningar till löneförändring" />
+
+## Vad är Anledningar till löneförändringar?
+
+En anledning till löneförändring är den orsak som visas när en medarbetares lön ändras. Den hjälper organisationen att följa upp och förstå varför löneförändringar genomförs.
+
+Hailey har som standard två fördefinierade anledningar till löneförändring: Ny anställning och Lönerevision. Dessa standardanledningar kan inte redigeras, arkiveras eller tas bort. De tilldelas automatiskt när en löneförändring sker som en del av en ny anställning eller en lönerevision.
+
+Utöver dessa två anledningar kan administratörer skapa egna anpassade anledningar till löneförändringar utefter behov.
+
+## Hur skapar man anledningar till löneförändringar?
+
+För att skapa anledningar till löneförändringar, gå till **Inställningar** - **Kompensation** - **Lägg till** - **Anledning till löneförändring**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-24-2026-04-54-19-3393-PM.png?width=1254&height=698&name=image-png-Aug-24-2026-04-54-19-3393-PM.png)
+
+Fyll i Namn till anledning till löneförändring och Spara när du är klar.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-24-2026-04-54-57-4072-PM.png?width=1254&height=696&name=image-png-Aug-24-2026-04-54-57-4072-PM.png)
+
+## När kan man redigera, arkiverar eller radera?
+
+**Era eget skapade anledningar till löneförändringar kan redigeras, arkiveras eller tas bort:**
+
+- **Redigera** är alltid tillgängligt. Om du vill ändra namn, beskrivning, omfattning eller lägga till en översättning klickar du på de tre punkterna till höger, väljer **Redigera** och gör de ändringar som behövs.
+- **Arkivera** är alltid tillgängligt när man redigerar anledningen. Arkiverade anledningar visas inte längre i rullistan, men förblir synliga på historiska löneförändringar.
+- **Ta bort** är tillgängligt om anledningen aldrig har använts vid en löneförändring.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-24-2026-04-55-36-8722-PM.png?width=1254&height=698&name=image-png-Aug-24-2026-04-55-36-8722-PM.png)
+
+## Rättigheter
+
+För att **skapa** en ny anledning till löneförändring måste du ha administratörsbehörighet i Hailey.
+
+För att **använda** en anledning till löneförändring måste du ha behörighet att visa och redigera löneuppgifter för den aktuella medarbetaren.
+
+<Tip>
+  Läs mer om Roller och rättigheter [**HÄR.**](/sv/roles-and-rights)
+
+  Läs mer om att Hantera löner [**HÄR.**](/sv/salary-change)
+</Tip>
+
+## Vanliga fragor
+
+<AccordionGroup>
+  <Accordion title="Jag kan inte välja en specifik anledning till löneförändring när jag ändrar en medarbetares lön. Varför?">
+    Det beror troligtvis på att **anledningen till löneförändringen** har en omfattning som inte inkluderar den aktuella medarbetaren. Admin kan granska inställningarna för omfattningen och säkerställa att medarbetaren omfattas i den specifika anledningen till löneförändringen.
+  </Accordion>
+</AccordionGroup>

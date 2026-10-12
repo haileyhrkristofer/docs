@@ -1,0 +1,175 @@
+---
+title: "Visselblåsning"
+---
+
+Detta är en guide för vår visselblåsarfunktionalitet. Kom i gång på några minuter!
+
+[Lägg till extern](#before_you_start)hanterare
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="Dd0MBEN" title="Visselblåsning" />
+
+Gör det enkelt att ta emot, hantera och följa upp visselblåsningsärenden. I den här guiden går vi igenom hur du aktiverar visselblåsning, tilldelar hanterare och arbetar med inkomna rapporter. Du får också svar på vanliga frågor om behörigheter, ärendehantering och datalagring.
+
+## Om Haileys visselblåsarfunktion
+
+Med vår visselblåsarfunktion kan er organisation **tillhandahålla en personlig länk till interna och/eller externa parter** där de kan rapportera vissa typer av missförhållanden inom organisationen. Detta sker skriftligt och med fullständig anonymitet. Funktionen följer EU-direktivet vad gäller tillgänglighet, lagring och bevaring. Kom igång genom att följa stegen nedan.
+
+## Lägg till extern hanterare
+
+Har ni en **extern part** som ska hantera era visselblåsarärenden? Då behöver hanteraren ha en egen medarbetarprofil i Hailey. Om den som ska hantera era ärenden redan finns i Hailey kan ni hoppa över det här steget.
+
+Ska ni lägga till en extern part som hanterare går ni via:
+
+- **Medarbetare** i huvudmenyn.
+- Klicka på knappen **Lägg till medarbetare** uppe i högra hörnet.
+- Klicka på **Lägg till** sen fyller ni i den externa partens information.
+
+<Note>
+  **Förnamn**, **Efternamn** och **Företagsmejl** är obligatoriska fält vid Lägg till medarbetare. Övriga fält är frivilliga.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-28-2025-10-38-10-5120-AM.png?width=670&height=466&name=image-png-Oct-28-2025-10-38-10-5120-AM.png)
+
+När de som ska hantera era ärenden har lagts till i systemet **behöver de bjudas in** för att få tillgång till inkommande visselblåsarrapporter.
+
+Markera användarna i **Medarbetarlistan** och klicka på **Hantera - Skicka inbjudan**
+
+<Note>
+  Medarbetare utan ett **Startdatum** markeras med Anställningsstatus **Okänd.**
+
+  Om du inte kan hitta den som ska hantera era ärenden i Medarbetarlistan efter att de har lagts till, se till att rensa alla filter för **Anställningstatus** i listan - då kommer de att visas
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-28-2025-10-38-38-3519-AM.png?width=670&height=631&name=image-png-Oct-28-2025-10-38-38-3519-AM.png)
+
+## Ställ in era Visselblåsare inställningar
+
+För att ställa in visselblåsarfunktionen går du till **Incidenter** i menyraden längst till vänster. Klicka sedan på kugghjulet längst upp till höger.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-29-2026-01-37-46-7168-PM.png?width=670&height=71&name=image-png-Apr-29-2026-01-37-46-7168-PM.png)
+
+Klicka dig vidare till fliken **Visselblåsning** och sedan **Redigera** längst till höger i vyn.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-29-2026-01-39-47-3367-PM.png?width=670&height=500&name=image-png-Apr-29-2026-01-39-47-3367-PM.png)
+
+- Börjar med att aktivera visselblåsarfunktionen genom att toggla på **Aktivera visselblåsning**.
+- Visselblåsarfunktionen blir endast synlig när du väljer att länka till visselblåsarsidan på er webbplats, internt i Hailey eller på någon annan plats där du vill att den ska vara tillgänglig. Du hittar instruktioner längre ner i guiden om hur du kopierar länken.
+- Väljer sedan vilka personer som ska vara ansvariga för att hantera ärendena under **Välj hanterare**.
+- Fyll i en beskrivning av hur ni hanterar inkomna ärenden under **Beskrivning av hantering.** Denna text visas för visselblåsaren i samband med att ärendet rapporteras in.
+- Klicka på **spara** när du känner dig nöjd.
+
+<Note>
+  För din informationstext kring Visselblåsning är det bra att inkludera följande punkter:
+
+  - **En muntlig kontaktväg**, till exempel telefonnummer och en kontaktperson, ifall visselblåsaren föredrar ett telefonsamtal eller ett möte
+  - **Vem, eller vilken roll/funktion i företaget,** som tar emot och hanterar ärendet.
+  - Vad som kvalificeras som ett visselblåsarärende, det vill säga vilken typ av oetisktbeteende som omfattas
+  - Hur ert företag hanterar visselblåsarrapporter, inklusive process, sekretess och uppföljning
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-29-2026-01-46-58-7762-PM.png?width=670&height=451&name=image-png-Apr-29-2026-01-46-58-7762-PM.png)
+
+Kopiera sedan länken till er visselblåsarsida genom att klicka på **Visselblåsarsida.** Länken till er visselblåsarsida kan ni sedan lägga upp på er hemsida, internt i Hailey eller på annan plats där ni vill att den ska vara tillgänglig.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-29-2026-01-49-01-4384-PM.png?width=670&height=508&name=image-png-Apr-29-2026-01-49-01-4384-PM.png)
+
+<Warning>
+  **Har ert företag flera legala enheter?** Då behöver ni minst en hanterare per legal enhet. Tydliggör detta i er text och ge visselblåsaren att ange vilken legal enhet ärendet gäller.
+
+  **Har någon av dessa legala enheter fler än 249 anställda?** Då behöver denna enhet ett separat konto för att hantera sina visselblåsarrapporter.
+</Warning>
+
+## Hur en visselblåsare rapporterar ett ärende
+
+Via länken kan visselblåsarärenden rapporteras till och om ert företag. I portalen där ett ärende kan rapporteras möts visselblåsare av:
+
+- Ert företags logotyp och er egen text.
+- Ett fält där ärendet kan beskrivas.
+- Ett e-postfält.
+- En text som förklarar hur visselblåsarens e-postadress och anonymitet hanteras. Denna information tillhandahålls av Hailey.
+
+<Note>
+  **Visselblåsaren kan välja om hen vill ange en e-postadress eller inte.**
+
+  Om personen väljer att inte lämna en e-postadress har hen ändå möjlighet att, efter att ha skickat in sin rapport, kopiera en länk och spara den för att kunna följa eventuell kommunikation från personen som hanterar ärenden. Länken visas endast vid detta tillfälle.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2025-01-28-30-6467-PM.png?width=670&height=450&name=image-png-Aug-07-2025-01-28-30-6467-PM.png)
+
+När visselblåsaren har skickat in sitt ärende får hen en **bekräftelse enligt nedan**. Innehållet i meddelandet beror på om en e-postadress har angetts eller inte.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2025-01-29-55-5962-PM.png?width=670&height=349&name=image-png-Aug-07-2025-01-29-55-5962-PM.png)
+
+Visselblåsare som **inte har angett en e-postadress** har möjlighet att **kopiera** **och spara länken** på en lämplig plats **för att kunna följa ärendet.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2025-01-29-38-9004-PM.png?width=670&height=350&name=image-png-Aug-07-2025-01-29-38-9004-PM.png)
+
+## Ta emot och hantera en visselblåsarrapport
+
+När en oegentlighet skickas in får hanteren/hanterarna ett e-postmeddelande med information om rapporten. Visselblåsaren får också ett mejl med information om vad som händer härnäst, **förutsatt att en e-postadress har angetts.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-29-2026-01-58-00-8756-PM.png?width=662&height=528&name=image-png-Apr-29-2026-01-58-00-8756-PM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-29-2026-01-58-31-9531-PM.png?width=660&height=333&name=image-png-Apr-29-2026-01-58-31-9531-PM.png)
+
+Rapporten hamnar i Hailey under **Visselblåsning**, som du når via **Incidenter** i huvudmenyn.
+
+Varje rapport får ett unikt ID för visselblåsarärendet. Du ser även status, om visselblåsaren har angett en e-postadress eller inte, rapportdatum, datum för senaste svar samt vem som svarade senast.
+
+Statusen **Öppen** innebär att rapporten är aktiv och fortfarande ska hanteras.
+
+<Warning>
+  Denna visselblåsarrapport under **Incidenter** är endast tillgänglig för de medarbetare som du har valt ska hanterare. Om du som admin inte är angiven som hanterare, kommer du inte att ha tillgång till rapporterna.
+</Warning>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-09-2026-12-43-40-8870-PM.png?width=670&height=387&name=image-png-Mar-09-2026-12-43-40-8870-PM.png)
+
+- **Klicka på en rapport för att öppna den.** Det är här ärendet beskrivs.
+- Här kan du svara på rapporten och **föra en anonym dialog med visselblåsaren.**
+- Återkoppling och dialog kan ske oavsett om visselblåsaren har angett en e-postadress eller inte. **E-postadressen kommer inte att avslöjas för eller företaget.**
+- När du svarar på en oegentlighet får visselblåsaren ett mejl med en länk där hen kan läsa ditt svar och även svara på det, **förutsatt att en e-postadress har angetts.** Om visselblåsaren inte har angett en e-postadress, bygger fortsatt dialog på att personen har kopierat och sparat länken direkt efter att ha skickat in sin oegentlighet. Sannolikheten är lägre att visselblåsaren tar del av handläggarens svar, eftersom det kräver att hen aktivt använder den sparade länken för att följa sitt ärende.
+- **All rapporthistorik sparas** så att du alltid kan gå tillbaka och följa upp rapporten och meddelandena.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-09-2026-12-44-22-9410-PM.png?width=670&height=201&name=image-png-Mar-09-2026-12-44-22-9410-PM.png)
+
+## Stäng ett ärende
+
+- När en rapport har hanterats och anses vara avslutad kan du stänga ärendet via de tre prickarna till höger om rapporten. Därefter sorteras rapporten som **Stängd**. Alla stängda rapporter kan hittas genom att filtrera listan på statusen **Stängd** i menyn till vänster.
+- **Om visselblåsaren har angett en e-postadress** får hen ett mejl när du stänger rapporten.
+- När en rapport är stängd kommer du fortfarande att kunna se ärendets historik, men du kommer inte att kunna öppna rapporten igen. Det innebär att du inte längre kan nå visselblåsaren.
+- Rapporten och dess historik sparas i Hailey i **två år i enlighet med EU:s direktiv** gällande visselblåsning. Rapporten kommer rensas **två år efter den stängts.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-29-2026-02-05-01-9006-PM.png?width=670&height=296&name=image-png-Apr-29-2026-02-05-01-9006-PM.png)
+
+## Rättigheter
+
+Det finns inga specifika behörigheter kopplade till visselblåsning. För att kunna hantera visselblåsningsärenden behöver medarbetaren vara tilldelad som **hanterare**.
+
+## Vanliga fragor
+
+<AccordionGroup>
+  <Accordion title="Raderar Hailey rapporter?">
+    Två år efter ärendet har stängts raderar Hailey rapporten.
+  </Accordion>
+
+  <Accordion title="Kan du öppna ett stängt ärende?">
+    Du kan inte öppna ett ärende som är stängt eller kommunicera med visselblåsaren när det väl är stängt.
+  </Accordion>
+
+  <Accordion title="Försvinner tidigare ärenden om jag stänger av visselblåsarfunktionen?">
+    Nej, tidigare visselblåsningsärenden försvinner inte om du stänger av visselblåsarfunktionen. Ärendena finns kvar i systemet och kan fortfarande nås av utsedda hanterare.
+  </Accordion>
+</AccordionGroup>

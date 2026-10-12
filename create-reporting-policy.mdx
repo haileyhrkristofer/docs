@@ -1,0 +1,126 @@
+---
+title: "Create reporting policy"
+---
+
+In this guide, we will walk you through how to get started with your time and time off reporting policies.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="LIybbdU" title="Create reporting policy" />
+
+## What are reporting policies?
+
+Reporting policies determine how employees report their **time and time off** in Hailey. Employees who are required to report time or time off must have a **reporting policy** assigned to their employment.
+
+- **Time** = working time
+- **Time off** = abcence, for example holiday, sick leave and parental leave.
+
+Reporting policies do not need to be enabled for the entire organisation. If only a specific department or team is required to report time or time off, you can configure the functionality accordingly.
+
+Before you get started
+
+The following aspects are worth considering when choosing how to report **time off**:
+
+- **Integrations**: Some integrations require a specific format for reporting time off in **hours** or as a **percentage of employment**. Evaluate any integrations you intend to use and ensure that time off is reported in the format that allows synchronisation. Read more about integrations [HERE](/haileys-standard-integrations#main-content).
+- **Time off Analytics**: If time off is to be reported as a **percentage** of employment and you want the time off to be included in the analysis, it's important that your employees have **Work hours**. Time off reported in **hours** is automatically included in the time off analysis. Read more about **Work hours** [HERE](/work-hours).
+
+## How do you create reporting policies?
+
+To use time and time off in Hailey, you need to create one or more **Reporting policies**. This is done through **Settings - Time & time off.** Click on **Add new** - **Reporting policies**. Name the reporting policy, choose the reporting type and specify if you want employees to report time off in hours or in percentage of employment scope.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-28-2026-06-10-46-3866-PM.png?width=669&height=338&name=image-png-Apr-28-2026-06-10-46-3866-PM.png)
+
+How do you create a reporting policy for time off?
+
+If you only want employees to report **Time off**, choose this reporting type. Toggle on **Time cycles** if you want employees and approvers receiving a task at the beginning of each month to approve their reported time off. Read more about how time cycles works [HERE](/time-cycles).
+
+<Note>
+  Please note: If you activate **Time cycles** in the middle of a month, you will receive the tasks to submit and approve time/time off for the previous month on the following day.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-10-2026-07-50-09-1818-AM.png?width=670&height=339&name=image-png-Aug-10-2026-07-50-09-1818-AM.png)
+
+How do you create a reporting type time and time off?
+
+When choosing reporting type **Time and time off**, you have three toggles that you can activate:
+
+- Should your employees have a **comp time balance** in their account? Toggle this on and read more about comp time balance [HERE](/comp-time).
+- Are your employees going to **clock in and clock out their reported time?** Toggle this on to give employees with this reporting policy access to a clock-in/clock-out feature on their Dashboard. With the clock-in/clock-out feature, employees can clock in, register a break, end a break, and clock out. It is also possible to edit the recorded time afterwards, with a required comment for any adjustment. Clock-in and clock-out times follow the **time zone of the employee's assigned location**. If the location does not have a time zone set, the **company's time zone** under **Settings - General** is used instead. If the employee does not have an assigned location, the company's time zone is also used.
+- Do you want to use **time cycles**? Toggle this on and read more about how time cycles work HERE.
+
+<Note>
+  If an employee's location or its time zone is changed after a clock-in/out has been recorded, the time zone used for already recorded times will not change. The updated time zone will apply the next time the employee clocks in.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-10-2026-07-50-58-7743-AM.png?width=669&height=338&name=image-png-Aug-10-2026-07-50-58-7743-AM.png)
+
+## How to set up approval principles?
+
+The last step in the reporting policy is to set your **Approval principles**. You can choose between **Managers**, **Team leads**, **Head of department**, **Head of organization**, **Specific employee(s)**, **Task force** and **Managers manager** as primary approver.
+
+Lastly, you can also select a **fallback approver** for the reporting policy. This approver can either be a **Task force** or a **Specific employee**, and will apply to employees **without** the chosen primary approver.
+
+If you want some time off reasons to be auto approved, choose those under **Exceptions to approval**.
+
+<Tip>
+  **Tip!** Does the approver of time and time off vary between departments in your organization? If so, you can create multiple reporting policies with different approvers and assign the correct policy to each employee.
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-10-2026-07-48-21-9429-AM.png?width=665&height=336&name=image-png-Aug-10-2026-07-48-21-9429-AM.png)
+
+## Common questions
+
+Below you'll find answers to some frequently asked questions that can help you setting up reporting policies.
+
+<AccordionGroup>
+  <Accordion title="If we choose to report time off in percentage, can we still report time in hours?">
+    Yes. The setting only affects how **time off** is reported. Time is always reported in hours, regardless of whether time off is reported in percentages or hours.
+  </Accordion>
+
+  <Accordion title="Should I choose to report time off in percent or hours?">
+    Whether you should report time off in **percent** or **hours** depends on your time & time off setup and requirements.
+
+    Some integrations require time off to be reported in **percent**, so it's important to check what your integration supports.
+
+    If time off should be reported on a day with no scheduled **work hours**—for example, if a schedule includes _certain_ days without defined work hours—time off must be reported in **percent**.
+
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-27-2026-07-58-54-0975-AM.png?width=441&height=290&name=image-png-Jul-27-2026-07-58-54-0975-AM.png)
+
+    If you don't have any work hours in the schedule, time off can be reported in hours.
+
+    If you report time off in **hours**, you can see the exact number of hours an employee has been absent.
+  </Accordion>
+
+  <Accordion title="If I enable clock in/clock out can employees still report time manually?">
+    Yes, employees can also register time manually, even when this feature is enabled.
+
+    Keep in mind that **only** the most recent time entry is saved. If time is reported again for a day that already has a time entry, the new entry will overwrite the previous one.
+
+    Note that time recorded using clock in/clock out cannot be allocated to projects. If employees need to report time to projects, they must report those manually.
+  </Accordion>
+
+  <Accordion title="How do I apply a **Reporting policy** to an employee?">
+    A reporting policy must be assigned to an employee's employment if they are going to report **time** or **time off** in Hailey. Once the policy is assigned, the employee can report according to the settings defined in that policy.
+
+    Read more about how to assign a reporting policy [HERE](/update-time-and-time-off-settings-on-employee).
+  </Accordion>
+
+  <Accordion title="Which time zone is used when an employee clocks in and clocks out?">
+    Organizations with employees across multiple countries or time zones can use Clock in/Clock out with accurate local times for each location. The clock-in/clock-out feature primarily uses the time zone configured for the employee’s **Location** (under **Settings - Organization**). This means that employees in different countries or regions will clock in and out according to their local time.
+
+    If the location does not have a time zone configured, the company's time zone set under **Settings - General** will be used instead. The same applies if the employee is not assigned to a location.
+
+    Please note that if an employee’s location or its time zone is changed after clock-in/out records have already been created, those existing records will not be affected. The new time zone will be applied the next time the employee clocks in.
+  </Accordion>
+</AccordionGroup>

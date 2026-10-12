@@ -1,0 +1,374 @@
+---
+title: "Integration med AGDA PS"
+---
+
+Med hjälp av Haileys integration med AGDA PS kan ni smidigt hämta nödvändig medarbetardata och lönedata på ett GDPR-säkert vis och automatiskt importera in till AGDA PS.
+
+<Tip>
+  Första gången du aktiverar en av **Haileys standardintegrationer?** Börja med att läsa den [**HÄR**](/sv/haileys-standard-integrations)guiden för att få veta vad du ska tänka på innan du sätter igång.
+</Tip>
+
+---
+
+## Vad gör integrationen?
+
+Hailey tillhandahåller en automatiserad filintegration till AGDA PS. Integrationen för över fördefinierad medarbetardata och lönedata från Hailey till AGDA PS.
+
+Vid varje filöverföring kan inkluderad data i AGDA PS uppdateras med den information som finns i Hailey.
+
+**Det innebär i praktiken att integrationen kan:**
+
+- Uppdatera inkluderad medarbetardata i AGDA PS när motsvarande information ändras i Hailey.
+- Föra över anställningsuppgifter från Hailey till AGDA PS.
+- Föra över löneuppgifter från Hailey till AGDA PS, om lönesynk är aktiverad.
+- Skapa en ny person i AGDA PS om medarbetaren saknar anställningsnummer i AGDA PS men uppfyller kraven för integrationen.
+
+<Note>
+  Eftersom Hailey är master för den data som ingår i integrationen ska ändringar i dessa fält göras i Hailey. Annars riskerar informationen i AGDA PS att skrivas över vid nästa synkronisering.
+</Note>
+
+---
+
+## Hur fungerar integrationen?
+
+Integrationen fungerar som en **automatiserad filintegration** via SFTP.
+
+Hailey skapar en fil med inkluderad data och filen överförs till AGDA PS **en gång per dag**. Filen innehåller den data som är fördefinierad för integrationen och som listas längre ner i guiden.
+
+**Det innebär i praktiken att:**
+
+- Ändringar i inkluderad medarbetardata i Hailey förs över till AGDA PS vid nästa filöverföring.
+- Lönedata förs över om lönesynk är aktiverad.
+- AGDA PS importerar filen från den SFTP-plats som sätts upp i samband med integrationen.
+- Ni behöver först initiera integrationsprocessen hos AGDA PS för att få de SFTP-uppgifter som ska fyllas i i Hailey.
+
+<Note>
+  Innan integrationen kan aktiveras i Hailey behöver ni därför skapa ett ärende hos AGDA PS. AGDA PS hjälper er att sätta upp ett SFTP-konto och tillhandahåller de uppgifter som behövs för att konfigurera integrationen i Hailey.
+</Note>
+
+---
+
+## Vilken data är inkluderad i integrationen?
+
+**Nedan ser ni vilken data som synkroniseras från Hailey till AGDA PS.**
+
+| **HAILEY** | **AGDA PS** |
+| --- | --- |
+| Anställningsnummer | EmploymentNR |
+| Företagsmail | CompanyEmail |
+| Förnamn | Fornamn |
+| Efternamn | Efternamn |
+| Personnummer | PersNR |
+| Gatuadress | Adress |
+| Postnummer | Adress |
+| Stad | Adress |
+| Land | Adress |
+| Telefonnummer privat | Telefon alt1 |
+| Kontakt vid nödfall - Namn | Närstående namn |
+| Kontakt vid nödfall - Relation och telefonnummer | Närståendenotering |
+| Clearingnummer | Clearing |
+| Kontonummer | Clearing |
+| Anställningsdatum | Arbetstid arbetsfråntid |
+| Slutdatum | Arbetstidomtid |
+| Anställningsform | Anställningsform |
+| Omfattning (timmar per vecka) | Veckoarbetstid |
+
+**VALFRIA**
+
+| Kostnadsställe (eget anställningsfält) | Kontering |
+| --- | --- |
+| Checksiffra (eget anställningsfält) | Check digit |
+
+<Note>
+  Om **Kostnadsställe** och **Checksiffra** ställs in i uppsättningen av integrationen kommer datan att rensas i Agda om medarbetaren saknar data på dessa fält i Hailey
+</Note>
+
+**Vid synkronisering med aktiverad lönesynk:**
+
+| **HAILEY** | **AGDA PS** |
+| --- | --- |
+| Månadslön | Månadslön |
+| Timlön | Timlön |
+| Löneändringsdatum | Datum_in |
+| Slutdatum lön | Datum_ut |
+
+<Note>
+  Notera att AGDA PS kräver att faktisk lön är inlagd i Hailey.
+</Note>
+
+<Note>
+  Hailey synkar inte över fält som inte innehåller data till Agda PS.
+</Note>
+
+## Vad krävs för att ingå i integrationen?
+
+För att kunna aktivera integrationen behöver ni först ha fått **SFTP-uppgifter från AGDA PS.**
+
+Ni behöver också säkerställa att personen som sätter upp integrationen har **behörighet i Hailey att visa och ändra integrationer.**
+
+För att en medarbetare ska kunna ingå i integrationen behöver följande vara uppfyllt:
+
+**Medarbetaren måste ha:**
+
+- Ett unikt anställningsnummer i Hailey.
+- Ett anställningsnummer som endast innehåller siffror.
+- Ett anställningsnummer i Hailey som matchar anställningsnumret i AGDA PS, om personen redan finns i AGDA PS.
+- Korrekt anställningsform i Hailey.
+- Faktisk lön inlagd i Hailey, om lön ska synkroniseras.
+
+<Note>
+  Om en medarbetare har ett anställningsnummer i Hailey som inte finns i AGDA PS kommer en ny person att skapas i AGDA PS.
+</Note>
+
+Om **anställningsnumret innehåller bokstäver** kommer medarbetaren att exkluderas från integrationen.
+
+#### Anställningsformer
+
+Anställningsformer överförs automatiskt från Hailey till AGDA PS.
+
+För att detta ska fungera korrekt behöver anställningsformerna ha samma namn i båda systemen.
+
+Eventuella justeringar av anställningsformer görs i AGDA PS under:
+
+**Register → Grundregister → Anställningsformer**
+
+#### Anställningstatus som synkar från Hailey till Agda
+
+Hailey kan synka data för medarbetare som ingår i integrationen och har en anställning på sin profil. Kontrollera därför att de medarbetare som ska ingå har korrekt anställningsinformation i Hailey.
+
+**Vanliga anställningsstatusar att tänka på är:**
+
+- I tjänst
+- Börjar snart
+- Ska lämna
+- Arbetsbefriad
+- Har lämnat
+
+---
+
+## Hur aktiverar man integrationen?
+
+**För att aktivera integrationen behöver ni:**
+
+<Steps>
+  <Step title="Initiera integrationsprocessen hos AGDA PS">
+    Initiera integrationsprocessen hos AGDA PS.
+  </Step>
+  <Step title="Lägga till integrationen i Hailey">
+    Lägga till integrationen i Hailey.
+  </Step>
+  <Step title="Fylla i nödvändiga uppgifter från AGDA PS">
+    Fylla i nödvändiga uppgifter från AGDA PS.
+  </Step>
+  <Step title="Aktivera lönesynk vid behov">
+    Aktivera lönesynk vid behov.
+  </Step>
+  <Step title="Ange SFTP-inställningar">
+    Ange SFTP-inställningar.
+  </Step>
+  <Step title="Spara och aktivera integrationen">
+    Spara och aktivera integrationen.
+  </Step>
+</Steps>
+
+_Följ instruktionerna nedan för att genomföra aktiveringen._
+
+#### 1. Initiera integrationsprocessen hos AGDA PS
+
+Innan ni kan aktivera integrationen i Hailey behöver ni **skapa ett ärende hos AGDA PS**.
+
+AGDA PS hjälper er att sätta upp ett SFTP-konto och tillhandahåller de uppgifter som ska anges i Hailey.
+
+**Ni kommer att få:**
+
+- SFTP-adress
+- Användarnamn
+- Lösenord
+- Filsökväg
+
+<Note>
+  Observera att ärendet hos AGDA PS gäller uppsättningen av integrationen och SFTP-uppgifterna. Vilken data som ingår i den fördefinierade filen framgår i avsnittet “Vilken data är inkluderad i integrationen?”.
+</Note>
+
+#### 2. Lägg till integrationen i Hailey
+
+Gå till:
+
+**Inställningar → Integrationer → AGDA PS**
+
+Fyll i de uppgifter ni har fått från AGDA PS.
+
+**Ni behöver bland annat fylla i:**
+
+- Företagsnummer
+- Adress
+- Användarnamn
+- Lösenord
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-10-2026-11-35-00-7643-AM.png?width=670&height=783&name=image-png-Jun-10-2026-11-35-00-7643-AM.png)
+
+**Viktigt vid ifyllnad av adress:**
+
+- Adressen ska inte innehålla [www](http://www).
+- Adressen ska inte innehålla http.
+- Adressen ska inledas med ett alfanumeriskt tecken _(A-Z, 0-9)_.
+
+Ni kan fylla i och spara inställningarna utan att aktivera integrationen direkt.
+
+#### 3. Auktorisera integrationen
+
+När uppgifterna är ifyllda klickar ni på **Auktorisera** längst ner i integrationsinställningarna.
+
+När integrationen har auktoriserats läggs den till som tillagd, men den är ännu inte aktiv.
+
+Gå därefter till:
+
+**Integrationer → Tillagda → Visma AGDA PS**
+
+Här kan ni aktivera integrationen.
+
+#### 4. Aktivera lönesynk vid behov
+
+Om ni vill **inkludera löner** i integrationen aktiverar ni detta under Löneinställningar.
+
+**Här kan ni även lägga till:**
+
+- Kostnadsställe
+- Checksiffra
+
+Detta gäller om ert företag använder dessa uppgifter och har satt upp dem som egna fält i Hailey.
+
+Under Löneart anger ni vilken löneart ni använder i AGDA PS för:
+
+- Månadslön
+- Timlön
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-Jun-10-2026-11-37-16-3861-AM.png?width=670&height=707&name=undefined-Jun-10-2026-11-37-16-3861-AM.png)
+
+<Tip>
+  **Viktigt att tänka på:**
+
+  - **AGDA PS kräver att faktisk lön är inlagd i Hailey.**
+  - **Om ni använder lönetyper i Hailey kommer dessa att sammanställas mot den angivna lönearten.**
+</Tip>
+
+#### 5. Fyll i SFTP-inställningar
+
+Fyll i den filsökväg ni har fått från AGDA PS.
+
+Säkerställ att filsökvägen använder framåtvända snedstreck:
+
+**/**
+
+Använd inte bakåtvända snedstreck:
+
+\*_\*_
+
+**Om filsökvägen anges med fel snedstreck kan filöverföringen misslyckas.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-10-2026-11-44-00-8466-AM.png?width=670&height=195&name=image-png-Jun-10-2026-11-44-00-8466-AM.png)
+
+#### 6. Spara och aktivera integrationen
+
+När alla nödvändiga uppgifter är ifyllda och integrationsprocessen med AGDA PS är slutförd kan ni aktivera integrationen.
+
+När integrationen är aktiv kommer Hailey att skapa och överföra den fördefinierade filen till AGDA PS enligt integrationsuppsättningen.
+
+## Fler integration vid behov?
+
+Om ert företag har flera arbetsplatser och/eller legala enheter i Hailey kan det vara fördelaktigt att skapa separata integrationer mot AGDA PS.
+
+**Det gör det möjligt att:**
+
+- Koppla olika delar av organisationen till olika konton i AGDA PS.
+- Styra vilka arbetsplatser som ska ingå i respektive integration.
+- Styra vilka legala enheter som ska ingå i respektive integration.
+
+Om integrationen inte ska gälla hela företaget behöver ni ange vilka arbetsplatser och/eller legala enheter som ska omfattas när integrationen sätts upp.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-Jun-10-2026-11-44-24-9055-AM.png?width=624&height=896&name=undefined-Jun-10-2026-11-44-24-9055-AM.png)
+
+Om omfattningen lämnas tom inkluderas alla medarbetare som uppfyller kraven för integrationen.
+
+Ni kan se hur många integrationer mot AGDA PS som är aktiva under Integrationer.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-Jun-10-2026-11-44-38-4208-AM.png?width=670&height=291&name=undefined-Jun-10-2026-11-44-38-4208-AM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-Jun-10-2026-11-48-52-8356-AM.png?width=670&height=233&name=undefined-Jun-10-2026-11-48-52-8356-AM.png)
+
+För att lägga till ytterligare en AGDA PS-integration går ni till fliken Alla och sätter upp en ny integration på samma sätt som när ni satte upp den första.
+
+## Vanliga fragor
+
+<Note>
+  ##### Varför förs inte en medarbetare över till AGDA PS?
+
+  Kontrollera att medarbetaren har ett anställningsnummer i Hailey.
+
+  Anställningsnumret måste: Vara unikt, endast innehålla siffror och matcha anställningsnumret i AGDA PS, om medarbetaren redan finns där.
+
+  Om anställningsnumret innehåller bokstäver exkluderas medarbetaren från integrationen.
+</Note>
+
+<Note>
+  ##### Vad händer om medarbetaren inte finns i AGDA PS?
+
+  Om medarbetaren har ett anställningsnummer i Hailey som inte finns i AGDA PS kommer en ny person att skapas i AGDA PS.
+</Note>
+
+<Note>
+  ##### **Varför fungerar inte anställningsformen korrekt?**
+
+  Anställningsformerna behöver ha samma namn i Hailey och AGDA PS. Kontrollera anställningsformerna i AGDA PS under Register → Grundregister → Anställningsformer
+</Note>
+
+<Note>
+  ##### Varför synkas inte lön till AGDA PS?
+
+  Kontrollera följande: Är lönesynk aktiverad i integrationen? Finns faktisk lön inlagd i Hailey? Finns lönetyp inlagd på lönen? Är rätt löneart angiven för månadslön och timlön?
+
+  Om en lönetyp saknas på medarbetarens lön behöver den läggas till för att lönen ska kunna föras över till AGDA PS.
+</Note>
+
+<Note>
+  ##### Vad händer om vi använder lönetyper i Hailey?
+
+  Om ni använder lönetyper i Hailey kommer dessa att sammanställas mot den löneart som anges i integrationsinställningarna.
+</Note>
+
+<Note>
+  ##### Varför fungerar inte filöverföringen?
+
+  Kontrollera SFTP-inställningarna.
+
+  Säkerställ att:
+
+  Adressen inte innehåller [www](http://www).
+
+  - Adressen inte innehåller http.
+  - Adressen börjar med ett alfanumeriskt tecken.
+  - Filsökvägen använder framåtvända snedstreck: /
+  - Filsökvägen inte använder bakåtvända snedstreck:
+</Note>
+
+<Note>
+  ##### Varför rensas kostnadsställe eller checksiffra i AGDA PS?
+
+  Om kostnadsställe eller checksiffra är aktiverat i integrationen men saknas på medarbetaren i Hailey kan motsvarande data rensas i AGDA PS.
+
+  Kontrollera därför att medarbetarna har korrekt data i dessa fält i Hailey innan integrationen aktiveras.
+</Note>
+
+<Note>
+  ##### Behöver vi kontakta AGDA PS innan integrationen aktiveras?
+
+  Ja. Ni behöver initiera integrationsprocessen hos AGDA PS innan integrationen kan aktiveras i Hailey.
+
+  AGDA PS tillhandahåller de SFTP-uppgifter och det lösenord som ska användas i integrationsinställningarna.
+</Note>
+
+<Note>
+  ##### Vem kontaktar vi om vi har frågor?
+
+  Om ni har frågor om integrationen, kontakta er Customer Success-kontaktperson på Hailey.
+</Note>

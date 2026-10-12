@@ -1,0 +1,91 @@
+---
+title: "Quick tasks"
+---
+
+With Quick tasks in Hailey, you can easily create and send tasks directly from the employee list — no workflow needed. Ask employees to update fields, collect key information, and track progress in one place. Quick, simple, and efficient.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="m6a2nyS" title="Quick tasks" />
+
+## What are quick tasks?
+
+Quick Tasks are a feature in Hailey that allows admins and users with the related rights to send tasks directly to employees. Tasks can include instructions or requests to update specific profile information. Employees receive an email notification and see the task in their **To Do** list on the Hailey dashboard. If standard fields or custom fields are included, the information is automatically updated when the employee marks the task as completed. Common examples include updating emergency contacts, uploading a profile picture, or welcoming new employees to Hailey.
+
+## Send quick task
+
+When you want to send a quick task, go to Employees in the main menu. Select the employee(s) for whom you wish to create a quick task for. Click on **Action - Send quick task.** This can also be done directly from the employee card.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-11-2026-07-50-31-9457-AM.png?width=627&height=323&name=image-png-Aug-11-2026-07-50-31-9457-AM.png)
+
+Choose between sending a task with just text, or together with the fields in a specific section you want updated.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-11-2026-07-59-09-5286-AM.png?width=627&height=319&name=image-png-Aug-11-2026-07-59-09-5286-AM.png)
+
+## Manage tasks
+
+When an employee receives a task via a quick task, they **are notified by email**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-10-2025-02-07-23-5327-PM.png?width=627&height=538&name=image-png-Oct-10-2025-02-07-23-5327-PM.png)
+
+The task also appear under the employee's **To Do** list on the Hailey dashboard. Via the email, you can click on Go to Hailey to be taken directly to the dashboard and see your new task.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-11-2026-08-59-23-4091-AM.png?width=627&height=322&name=image-png-Aug-11-2026-08-59-23-4091-AM.png)
+
+Click on a quick task to get a more detailed view. If the task requires you to fill out fields, these fields will appear directly in the task.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-11-2026-09-04-03-9549-AM.png?width=627&height=321&name=image-png-Aug-11-2026-09-04-03-9549-AM.png)
+
+To **mark a task as completed**, click on Mark as done in the corner. If the task requires you to fill out fields, these fields will be **updated directly on your profile** when marking the task as completed.
+
+If an employee does not mark the task as completed before deadline, a **reminder** will be sent out by email the day **after deadline has passed**.
+
+## Follow and edit quick tasks
+
+In **HR Hub – Tasks**, you can see all the quick tasks that have been sent out. **Click on a task** to view who has completed it (marked it as done).
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-11-2026-09-06-27-7037-AM.png?width=627&height=320&name=image-png-Aug-11-2026-09-06-27-7037-AM.png)
+
+**Click Edit** to make changes to the task. From here, you can:
+
+- Update the task title, instructions, or deadline
+- Add or remove recipients
+- Remove employees who have already received the task
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-11-2026-09-08-06-0750-AM.png?width=627&height=321&name=image-png-Aug-11-2026-09-08-06-0750-AM.png)
+
+To remove the task, press **Delete** - it will then disappear from everyone’s to-do list.
+
+## Examples of quick tasks
+
+The quick tasks created can vary from one organization to another. To give you some inspiration, we've listed below some of the most commonly used fields among our customers:
+
+- Welcome to Hailey - when inviting your employees to the system, send a quick task to let them know what they should check out!
+- Update emergency contact
+- Upload a profile picture
+- Individual To Dos - You can send a quick task to yourself!
+
+## Rights
+
+As an Admin in Hailey, you always have the right to send a quick task. You can also assign this right to other roles within your organisation, for example, if you want managers to be able to send a quick task. This is done by navigating to **Settings - Security – Roles & Rights.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-11-2026-09-09-48-6800-AM.png?width=627&height=318&name=image-png-Aug-11-2026-09-09-48-6800-AM.png)
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="What fields can be updated through a quick task?">
+    **Answer:** Only fields that are included in the "Personal" section of an employees profile can be updated using quick tasks
+  </Accordion>
+</AccordionGroup>

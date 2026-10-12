@@ -1,0 +1,98 @@
+---
+title: "Manage benefits"
+---
+
+In this guide, you'll learn how to manage employee benefits in Hailey. We'll walk through how to add, update, end, and delete benefits.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="vp3iFyI" title="Manage benefits" />
+
+## What are benefits?
+
+Benefits are employee compensations provided in addition to salary, such as wellness allowances, company cars, and other taxable or non-taxable benefits. In Hailey, benefits can be added, updated, ended, and deleted directly from the employee profile.
+
+## How do you manage benefits?
+
+#### Add benefit
+
+#### Before employees can be assigned benefits in Hailey, benefit types must first be created. Benefits can then be added either through an import or manually. If you want to import benefits, follow the import guide [**HERE**](/import-benefits).
+
+To add a benefit manually, open the relevant employee profile and navigate to the **Compensation** tab. Click **Actions** in the top-right corner and select **Add new benefit**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-17-2026-01-18-39-6216-PM.png?width=651&height=311&name=image-png-Mar-17-2026-01-18-39-6216-PM.png)
+
+Enter the benefit start date, select the benefit type, and specify the benefit value. Only enter an end date if the benefit should be active for a limited period. Once all information has been entered, click **Save**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-17-2026-01-27-44-9581-PM.png?width=527&height=404&name=image-png-Mar-17-2026-01-27-44-9581-PM.png)
+
+#### Change benefit value
+
+To update the value of an existing benefit, open the employee profile and go to the **Compensation** tab. Select the benefit you want to update and click **Actions → Change benefit value**.
+
+Enter the new benefit amount and specify the effective date for the change. Benefit value changes do not require approval. When you are satisfied with the changes, click **Save**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-17-2026-01-37-42-2181-PM.png?width=612&height=482&name=image-png-Mar-17-2026-01-37-42-2181-PM.png)
+
+#### End benefit
+
+To end an employee's benefit, open the employee profile and navigate to the **Compensation** tab. Select the benefit you want to end and click **Actions → End benefit**.
+
+Choose the date when the benefit should end and click **Save**. For this type of change, only the end date can be adjusted. Ending a benefit does not require approval.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-17-2026-03-17-05-2635-PM.png?width=510&height=230&name=image-png-Mar-17-2026-03-17-05-2635-PM.png)
+
+Once a benefit has been ended, or is scheduled to end at a future date, this will be indicated on the benefit card. The benefit will remain visible in the employee's history but will no longer be active after the specified end date.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-17-2026-03-19-28-9311-PM.png?width=424&height=279&name=image-png-Mar-17-2026-03-19-28-9311-PM.png)
+
+#### Delete benefit
+
+If a benefit was added by mistake or should be permanently removed from the employee record, open the benefit and select **Actions → Delete benefit**.
+
+Deleting a benefit permanently removes it from the employee profile and cannot be undone.
+
+If you want to keep the benefit in the employee's history while making it inactive, use **End benefit** instead.
+
+## Rights
+
+To add, update, end, or delete benefits, users must have the appropriate permissions.
+
+Navigate to **Settings → Security → Roles and rights** and ensure that **Compensation → Benefits** is set to **View & Edit** for the relevant employee scope.
+
+<Tip>
+  Read more about roles and rights [**HERE**](/roles-and-rights)!
+</Tip>
+
+## Common questions
+
+Below you'll find answers to common questions about managing benefits in Hailey.
+
+<AccordionGroup>
+  <Accordion title="Why can't I see any benefit types?">
+    Benefit types must be created before benefits can be added to employee profiles. Read more [**HERE**](/benefits).
+  </Accordion>
+
+  <Accordion title="What is the difference between ending and deleting a benefit?">
+    Ending a benefit keeps the benefit in the employee's history while making it inactive from the selected end date. Deleting a benefit removes it permanently and cannot be undone.
+  </Accordion>
+
+  <Accordion title="Can I schedule a benefit to end in the future?">
+    Yes. When ending a benefit, you can select a future end date.
+  </Accordion>
+
+  <Accordion title="What permissions are required to manage benefits?">
+    Users must have **View & Edit** access under **Compensation → Benefits** in **Roles and rights**.
+  </Accordion>
+</AccordionGroup>

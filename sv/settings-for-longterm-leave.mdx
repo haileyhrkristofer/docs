@@ -1,0 +1,70 @@
+---
+title: "Inställningar för långtidsfrånvaro"
+---
+
+Den här guiden går igenom långtidsfrånvaro i Hailey: vad det är, hur du aktiverar funktionen och vad som behövs för att använda den.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="lIiNme0" title="Inställningar för långtidsfrånvaro" />
+
+## Vad är långtidsfrånvaro?
+
+Långtidsfrånvaro används för att hantera frånvaro som pågår under en längre period. Funktionen gör det möjligt att särskilja längre frånvaroperioder från vanlig frånvaro, vilket ger en tydligare överblick över vilka medarbetare som är borta.
+
+Med långtidsfrånvaro hanteras frånvaron som en sammanhängande period i stället för som enskilda frånvarodagar. Det gör det enklare att följa upp frånvaron, filtrera fram rätt medarbetare och hålla tidsöversikten uppdaterad.
+
+<Tip>
+  Visste du att du kan automatisera och standardisera era processer för långtidsfrånvaro med hjälp av arbetsflöden som triggas av **frånvaro** i Hailey? Klicka [**HÄR**](/sv/create-workflows#franvaro_och_arbetsfloden) för att komma igång.
+</Tip>
+
+## Hur aktiverar man långtidsfrånvaro?
+
+Långtidsfrånvaro ställs in på den frånvaroanledning som ska kunna räknas som långtidsfrånvaro. I inställningen anger du från vilken dag i frånvaroperioden som frånvaron ska börja hanteras som långtidsfrånvaro.
+
+<Tip>
+  **Exempel:**  Om du anger dag 15 räknas frånvaron som långtidsfrånvaro när medarbetarens frånvaroperiod har pågått i 15 dagar.
+</Tip>
+
+Gå till **Inställningar** - **Tid och frånvaro** - **Frånvaroanledningar**.
+
+Vill du redigera en befintlig frånvaroanledning klickar du på de tre prickarna vid aktuell frånvaroanledning.
+
+Vill du skapa en ny frånvaroanledning klickar du på **Lägg till** - **Frånvaroanledning**.
+
+Slå på **Långtidsfrånvaro** och välj från vilken dag frånvaron ska räknas som långtidsfrånvaro. Klicka på **Spara** när du är klar.
+
+<Note>
+  Tänk på att endast kategorierna **Övrig** och **Sjuk** kan användas för långtidsfrånvaro.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-26-2026-09-50-14-4281-AM.png?width=670&height=357&name=image-png-Jun-26-2026-09-50-14-4281-AM.png)
+
+## Vad behöver finnas på medarbetarprofilen?
+
+Admin kan registrera långtidsfrånvaro för en medarbetare så länge långtidsfrånvaro är aktiverat för den aktuella frånvaroanledningen.
+
+För att medarbetaren själv ska kunna rapportera långtidsfrånvaro behöver en rapporteringspolicy finnas registrerad på anställningen. Rapporteringspolicyn styr bland annat om frånvaron rapporteras i dagar eller timmar. Om frånvaron rapporteras i timmar behöver även **Arbetstimmar** vara registrerade på anställningen.
+
+Det beror på att långtidsfrånvaro endast kan registreras med 100 procents omfattning, alltså som en hel frånvarodag. Med hjälp av **Arbetstimmarna** kan Hailey beräkna hur många timmar som motsvarar en hel arbetsdag för medarbetaren.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-15-2026-01-33-03-1941-PM.png?width=670&height=467&name=image-png-Jul-15-2026-01-33-03-1941-PM.png)
+
+## Rättigheter
+
+Admin har som standard tillgång till att hantera frånvaroanledningar, inklusive att slå på långtidsfrånvaro.
+
+- **Inställningar** - **Redigera tid och frånvaro** ger övriga roller tillgång till frånvaroanledningar under inställningar. Med den här rättigheten kan användaren bland annat skapa, redigera och slå på långtidsfrånvaro på en frånvaroanledning.
+
+Läs mer om hur du ställer in Roller & rättigheter [**HÄR.**](/sv/roles-and-rights)

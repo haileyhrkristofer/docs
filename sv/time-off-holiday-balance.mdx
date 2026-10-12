@@ -1,0 +1,171 @@
+---
+title: "Hantera Frånvarosaldo"
+---
+
+Frånvarosaldon hjälper dig att hålla koll på kvarvarande ledighet i Hailey. Den här guiden förklarar hur saldon beräknas, vad som påverkar saldot samt hur du visar, importerar och justerar era frånvarosaldon.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="gMBHNxI" title="Hantera Frånvarosaldo" />
+
+## Vad är frånvarosaldon i Hailey?
+
+Frånvarosaldon visar hur många lediga dagar en anställd har tillgängliga att ansöka om i Hailey.
+
+En anställds saldo beräknas utifrån det antal dagar som har tilldelats genom den anställdes saldo för ledighet, minus den ledighet som har ansökts om eller registrerats.
+
+Du hittar den anställdes saldo för ledighet på personens profil under fliken **Tid**.
+
+I början av ett nytt semesterår fylls saldot automatiskt på enligt inställningarna för saldot för ledighet. Om en gräns för överföring av dagar har konfigurerats kan berättigade outnyttjade dagar även föras över till nästa semesterår.
+
+<Tip>
+  **Är du precis i början av din resa med Hailey?** Se till att i**mportera dina anställdas aktuella saldon** för ledighet innan ni börjar använda Hailey.
+
+  Läs mer om hur du importerar frånvarosaldon [HÄR](/sv/import-time-off-balance).
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Dec-08-2025-03-59-01-3169-PM.png?width=670&height=329&name=image-png-Dec-08-2025-03-59-01-3169-PM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/8-png-Sep-21-2026-02-06-07-5948-PM.png?width=670&height=368&name=8-png-Sep-21-2026-02-06-07-5948-PM.png)
+
+## Innan du sätter igång
+
+Innan du börjar använda saldon för ledighet behöver du säkerställa att:
+
+- Ett **Frånvarosaldo** har skapats under **Inställningar**.
+- Relevanta **Frånvaroanledningar** har kopplats till Frånvarosaldot.
+- Frånvarosaldo har tilldelats de berörda medarbetares på deras profiler. Detta görs under **Jobb - Anställningar - Tid & frånvaro**.
+- Befintliga saldon har importerats, om det är relevant.
+
+Frånvarosaldon börjar beräknas från det datum då de konfigureras. Tidigare registrerad ledighet inkluderas inte automatiskt. Om anställda redan har registrerad ledighet behöver du därför importera deras ingående saldon.
+
+<Tip>
+  Läs mer om inställningar för **Frånvarosaldon** [HÄR](/sv/rapport/franvarosaldo).
+
+  Läs mer om inställningar för **Frånvaroanledningar** [HÄR](/sv/time-off-reason).
+</Tip>
+
+## Hur fungerar frånvarosaldon?
+
+För att se en medarbetares frånvarosaldo:
+
+- Gå till den anställdes **profil**.
+- Öppna fliken **Tid.**
+- Klicka på kortet **Saldo för ledighet**.
+
+Här kan du se **framtida saldo**, som visar det förväntade saldot baserat på framtida ledighet, **Aktuellt saldo**, som visar den anställdes tillgängliga saldo just nu, samt **Saldohistorik**, som visar tidigare justeringar, påfyllningar och andra förändringar av saldot.
+
+Saldot kan minska på grund av:
+
+- Ansökningar om frånvaro
+- Registrerad frånvaro
+- Begränsningar för överföring av dagar
+- Manuella justeringar
+
+Saldot kan öka på grund av:
+
+- Automatiska påfyllningar
+- Manuella justeringar
+- Importerade saldon
+- Dagar som får föras över från föregående semesterår
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/11-png-2.png?width=670&height=286&name=11-png-2.png)
+
+Endast de **Frånvaroanledningar som är kopplade till ett Frånvarosaldo** påverkar saldoberäkningen.
+
+Du kan även se **kommande minskningar** **och påfyllningar** för **nästa semesterår.** Den estimerade påfyllningen fastställs utifrån det semesteravtal som gäller för den anställdes anställning.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/9-png-1.png?width=670&height=368&name=9-png-1.png)
+
+<Tip>
+  Om **en gräns för sparade dagar har angetts** beräknas även en förväntad minskning inför nästa semesterår. Beräkningen baseras på medarbetarens nuvarande saldo och framtida frånvaro som infaller innan nästa semesterår börjar. Prognosen uppdateras automatiskt om ny frånvaro registreras eller om saldot justeras.
+</Tip>
+
+## Hur importerar man frånvarosaldon?
+
+När ni börjar använda frånvarosaldon kan ni importera de anställdas aktuella saldon istället för att justera varje anställds saldo manuellt.
+
+När du importerar ett frånvarosaldo återställs den synliga saldohistoriken för den berörda anställda. Tidigare påfyllningar, justeringar och saldoreduceringar **kommer inte längre att visas i översikten**.
+
+Tidigare registrerad ledighet finns fortfarande tillgänglig under **fliken Tid** för den anställda och i rapporter
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/6-png-Sep-11-2026-07-45-10-7417-AM.png?width=670&height=401&name=6-png-Sep-11-2026-07-45-10-7417-AM.png)
+
+<Tip>
+  Läs mer om hur du **importerar Frånvarosaldon** [HÄR](/sv/import-time-off-balance).
+</Tip>
+
+## Hur justerar man ett frånvarosaldo?
+
+Du kan när som helst justera en enskild anställds frånvarosaldo manuellt. **Gå till den anställdes profil - fliken Tid - klicka på kortet Frånvarosalo - klicka på Redigera saldo** och ange det saldo du vill att medarbetaren ska ha från och med idag.
+
+Det påverkar inte något som redan är schemalagt, påfyllningar och rabatter kommer fortfarande att ske som planerat.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/4-png-Sep-21-2026-01-56-56-1750-PM.png?width=670&height=346&name=4-png-Sep-21-2026-01-56-56-1750-PM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/5-png-Sep-21-2026-01-57-23-0306-PM.png?width=670&height=345&name=5-png-Sep-21-2026-01-57-23-0306-PM.png)
+
+## Rättigheter
+
+Följande rättigheter kan vara relevanta när du arbetar med Frånvarosaldon:
+
+- **Tid & frånvaro - Visa:** Ger tillgång till fliken **Tid**, inklusive medarbetarens Frånvarosaldo. Ger även möjlighet att ta bort ej godkända frånvaroansökningar. Möjligheten att godkänna frånvaro styrs av era inställningar.
+- **Tid & frånvaro - Visa & ändra:** Ger även möjlighet att lägga till automatiskt godkänd frånvaro samt lägga till, ändra och ta bort registrerad tid och frånvaro.
+
+Läs mer om hur Roller & rättigheter fungerar i Hailey [HÄR](/sv/roles-and-rights).
+
+## Vanliga fragor
+
+**Fråga**: Varför minskar inte saldot när en frånvaroorsak används?
+
+Endast **Frånvaroorsaker** som är kopplade till ett frånvarosaldo påverkar saldot.
+
+Kontrollera inställningarna för frånvarosaldot och säkerställ att rätt Frånvaroorsaker har valts.
+
+**Fråga**: Varför har en medarbetare inget frånvarosaldo?
+
+En medarbetare ser endast ett frånvarosaldo om ett saldo har kopplats till medarbetarens profil.
+
+För att kontrollera eller uppdatera frånvarosaldot:
+
+<Steps>
+  <Step title="Gå till medarbetarens profil">
+    Gå till medarbetarens profil.
+  </Step>
+  <Step title="Öppna sektionen Anställning">
+    Öppna sektionen **Anställning**.
+  </Step>
+  <Step title="Kontrollera inställningarna under Tid & frånvaro">
+    Kontrollera inställningarna under **Tid & frånvaro**.
+  </Step>
+  <Step title="Klicka på Hantera - Korrigera Tid & frånvaro för att lägga t">
+    Klicka på **Hantera - Korrigera Tid & frånvaro** för att lägga till eller uppdatera medarbetarens frånvarosaldo.
+  </Step>
+</Steps>
+
+Endast användare med rätt behörighet kan ändra dessa inställningar.
+
+Observera: När du lägger till ett nytt frånvarosaldo på en medarbetare behöver du kontrollera att saldot är korrekt under fliken Tid. Där kan du justera saldot manuellt eller uppdatera det via en import vid behov.
+
+**Fråga**: Varför stämmer inte frånvarosaldot i Hailey med vårt lönesystem?
+
+Frånvarosaldon i Hailey används för att visa hur många dagar en medarbetare har kvar att ansöka om. Eftersom saldot minskas redan när en frånvaroansökan skickas in kan det skilja sig från hur saldot beräknas i ert lönesystem.
+
+**Fråga**: Varför minskar inte en frånvaroanledning saldot?
+
+Endast Frånvaroanledningar som är kopplade till ett Frånvarosaldo påverkar saldoberäkningen. Kontrollera att rätt Frånvaroanledningar har valts i inställningarna för Frånvarosaldot.
+
+**Fråga**: Vad händer om jag importerar ett nytt frånvarosaldo?
+
+När du importerar ett frånvarosaldo ersätts den synliga saldohistoriken för den berörda medarbetaren. **Tidigare justeringar, påfyllningar och saldominskningar visas inte längre i översikten**, men all tidigare registrerad frånvaro finns fortfarande kvar under fliken **Tid** och i rapporter.

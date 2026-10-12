@@ -1,0 +1,391 @@
+---
+title: "Integration with Visma AGDA PS"
+---
+
+With Hailey’s integration with AGDA PS, you can easily retrieve the necessary employee and salary data in a GDPR-compliant manner and automatically import it into AGDA PS.
+
+---
+
+## What does the integration do?
+
+Hailey provides an automated file integration with AGDA PS. The integration transfers predefined employee and salary data from Hailey to AGDA PS.
+
+With each file transfer, the included data in AGDA PS can be updated using the information registered in Hailey.
+
+In practice, this means that the integration can:
+
+- Update included employee data in AGDA PS when the corresponding information is changed in Hailey.
+- Transfer employment information from Hailey to AGDA PS.
+- Transfer salary information from Hailey to AGDA PS, provided that salary synchronisation is activated.
+- Create a new person in AGDA PS if the employee does not have an employment number in AGDA PS but meets the requirements for the integration.
+
+<Note>
+  As Hailey is the master system for the data included in the integration, changes to these fields should be made in Hailey. Otherwise, the information in AGDA PS may be overwritten during the next synchronisation.
+</Note>
+
+---
+
+## How does the integration work?
+
+The integration works as an automated file integration via SFTP.
+
+Hailey creates a file containing the included data, and the file is transferred to AGDA PS once per day. The file contains the data predefined for the integration, which is listed later in this guide.
+
+In practice, this means that:
+
+- Changes to included employee data in Hailey are transferred to AGDA PS during the next file transfer.
+- Salary data is transferred if salary synchronisation is activated.
+- AGDA PS imports the file from the SFTP location configured as part of the integration.
+- You must first initiate the integration process with AGDA PS to receive the SFTP details that need to be entered in Hailey.
+
+<Note>
+  Before the integration can be activated in Hailey, you must therefore create a support case with AGDA PS. AGDA PS will help you set up an SFTP account and provide the information required to configure the integration in Hailey.
+</Note>
+
+---
+
+## What data is included in the integration?
+
+Below, you can see which data is synchronised from Hailey to AGDA PS.
+
+Included data
+
+| **HAILEY** | **AGDA PS** |
+|---|---|
+| Employment number | EmploymentNR |
+| Company email | CompanyEmail |
+| Personal identity number | PersonalIdentiyNR |
+| Last name | Last name |
+| First name | First name |
+| Street adress | Adress |
+| Postal code | Adress |
+| City | Adress |
+| Country | Adress |
+| Private telephone | Telephone Alt1 |
+| Emergency contact - Name | Close relative |
+| Emergency contact - Relation and phone number | Close relative - note |
+| Clearingnumber | Clearing |
+| Account number | Clearing |
+| Date of joining | Date of joining |
+| End date | Termination date |
+| Employment type | Employment type |
+| Scope hours per week | Weekly working hours |
+
+<Note>
+  A fixed-term employment is only transferred when no employment type has been selected in Hailey. If an employment type has been specified, it is automatically transferred to AGDA PS.
+</Note>
+
+**OPTIONAL**
+
+| Cost center (employment field) | Account allocation |
+|---|---|
+| Check digit (employment field) | Check number |
+
+<Note>
+  If **Cost centre** and **Check digit** are configured in the integration settings, the data will be cleared in AGDA PS if the employee does not have any data registered in these fields in Hailey.
+</Note>
+
+**When synchronising with salary synchronisation activated**
+
+| **HAILEY** | **AGDA PS** |
+|---|---|
+| Monthly salary | Monthly salary |
+| Hourly salary | Hourly salary |
+| Salary change date | Date_in |
+| Salary end date | Date_out |
+
+<Note>
+  Please note that AGDA PS requires the employee’s actual salary to be registered in Hailey.
+</Note>
+
+<Note>
+  Hailey does not sync fields that do not contain any data to Agda PS.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-13-2025-12-40-27-5175-PM.png?width=434&height=485&name=image-png-May-13-2025-12-40-27-5175-PM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-13-2025-12-52-38-9319-PM.png?width=415&height=452&name=image-png-May-13-2025-12-52-38-9319-PM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-13-2025-12-52-59-6068-PM.png?width=440&height=125&name=image-png-May-13-2025-12-52-59-6068-PM.png)
+
+## What is required to be included in the integration?
+
+To activate the integration, you must first have received the **SFTP details from AGDA PS.**
+
+You must also ensure that the person setting up the integration has **the rights in Hailey to view and modify integrations.**
+
+For an employee to be included in the integration, the following requirements must be met.
+
+**The employee must have:**
+
+- A unique employment number in Hailey.
+- An employment number containing numbers only.
+- An employment number in Hailey that matches the employment number in AGDA PS, if the person already exists in AGDA PS.
+- The correct employment type in Hailey.
+- Their actual salary registered in Hailey, if salary information is to be synchronised.
+
+<Note>
+  If an employee has an employment number in Hailey that does not exist in AGDA PS, a new person will be created in AGDA PS.
+</Note>
+
+If the **employment number contains letters**, the employee will be excluded from the integration.
+
+#### Employment types
+
+Employment types are transferred automatically from Hailey to AGDA PS.
+
+For this to work correctly, the employment types must have the same names in both systems.
+
+Any adjustments to employment types must be made in AGDA PS under:
+
+**Registers → Basic registers → Employment types**
+
+#### Statuses to consider
+
+Hailey can synchronise data for employees who are included in the integration and have an employment registered on their profile. Therefore, make sure that the employees who should be included have the correct employment information registered in Hailey.
+
+**Common employment statuses to consider include:**
+
+- Employed
+- Starting soon
+- Leaving
+- Released from work duties
+
+## How do you activate the integration?
+
+To activate the integration, you need to:
+
+<Steps>
+  <Step title="Initiate the integration process with AGDA PS">
+    Initiate the integration process with AGDA PS.
+  </Step>
+  <Step title="Add the integration in Hailey">
+    Add the integration in Hailey.
+  </Step>
+  <Step title="Enter the necessary information provided by AGDA PS">
+    Enter the necessary information provided by AGDA PS.
+  </Step>
+  <Step title="Activate salary synchronisation if required">
+    Activate salary synchronisation if required.
+  </Step>
+  <Step title="Enter the SFTP settings">
+    Enter the SFTP settings.
+  </Step>
+  <Step title="Save and activate the integration">
+    Save and activate the integration.
+  </Step>
+</Steps>
+
+Follow the instructions below to complete the activation.
+
+#### 1. Initiate the integration process with AGDA PS
+
+Before you can activate the integration in Hailey, you must create a support case with AGDA PS.
+
+AGDA PS will help you set up an SFTP account and provide the information that must be entered in Hailey.
+
+You will receive:
+
+- SFTP address
+- Username
+- Password
+- File path
+
+Please note that the support case with AGDA PS concerns the setup of the integration and the SFTP details. The data included in the predefined file is described in the section **What data is included in the integration?**
+
+#### 2. Add the integration in Hailey
+
+Go to:
+
+**Settings → Integrations → AGDA PS**
+
+Enter the information you have received from AGDA PS.
+
+Among other things, you will need to enter:
+
+- Company number
+- Address
+- Username
+- Password
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-13-2025-12-40-27-5175-PM.png?width=434&height=485&name=image-png-May-13-2025-12-40-27-5175-PM.png)
+
+Important when entering the address:
+
+- The address must not contain `www`.
+- The address must not contain `http`.
+- The address must begin with an alphanumeric character: A–Z or 0–9.
+
+You can enter and save the settings without activating the integration immediately.
+
+#### 3. Authorise the integration
+
+Once the information has been entered, select **Authorise** at the bottom of the integration settings.
+
+Once the integration has been authorised, it will be added to your integrations, but it will not yet be active.
+
+Then go to:
+
+**Integrations → Added → Visma AGDA PS**
+
+You can activate the integration here.
+
+#### 4. Activate salary synchronisation if required
+
+To include salaries in the integration, activate salary synchronisation under **Salary settings**.
+
+You can also add:
+
+- Cost centre
+- Check digit
+
+This applies if your company uses this information and has configured it as custom fields in Hailey.
+
+Under **Pay code**, specify the pay code used in AGDA PS for:
+
+- Monthly salary
+- Hourly salary
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-13-2025-12-52-38-9319-PM.png?width=415&height=452&name=image-png-May-13-2025-12-52-38-9319-PM.png)
+
+Important considerations:
+
+- AGDA PS requires the employee’s actual salary to be registered in Hailey.
+- If you use salary types in Hailey, these will be consolidated under the specified pay code.
+
+#### 5. Enter the SFTP settings
+
+Enter the file path you have received from AGDA PS.
+
+Make sure that the file path uses forward slashes:
+
+`/`
+
+Do not use backslashes:
+
+`\`
+
+If the file path is entered using the wrong type of slash, the file transfer may fail.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-13-2025-12-52-59-6068-PM.png?width=440&height=125&name=image-png-May-13-2025-12-52-59-6068-PM.png)
+
+#### 6. Save and activate the integration
+
+Once all the necessary information has been entered and the integration process with AGDA PS has been completed, you can activate the integration.
+
+Once the integration is active, Hailey will create and transfer the predefined file to AGDA PS in accordance with the integration setup.
+
+## Multiple integrations if needed?
+
+If your company has several workplaces and/or legal entities in Hailey, it may be beneficial to create separate integrations with AGDA PS.
+
+This makes it possible to:
+
+- Connect different parts of the organisation to different accounts in AGDA PS.
+- Control which workplaces are included in each integration.
+- Control which legal entities are included in each integration.
+
+If the integration should not apply to the entire company, you must specify which workplaces and/or legal entities should be included when setting up the integration.
+
+![ScopeAgda-1](https://docs.haileyhr.com/hs-fs/hubfs/ScopeAgda-1.png?width=670&height=1075&name=ScopeAgda-1.png)
+
+If the scope is left empty, all employees who meet the requirements for the integration will be included.
+
+You can see how many integrations with AGDA PS are active under **Integrations**.
+
+![AddedAgda](https://docs.haileyhr.com/hs-fs/hubfs/AddedAgda.png?width=670&height=260&name=AddedAgda.png)
+
+![OverviewIntegrations](https://docs.haileyhr.com/hs-fs/hubfs/OverviewIntegrations.png?width=670&height=203&name=OverviewIntegrations.png)
+
+To add another AGDA PS integration, go to the **All** tab and set up a new integration in the same way as you set up the first integration.
+
+## Questions and answers
+
+<Note>
+  ##### Why is an employee not transferred to AGDA PS?
+
+  Make sure that the employee has an employment number in Hailey.
+
+  The employment number must:
+
+  - Be unique.
+  - Contain numbers only.
+  - Match the employment number in AGDA PS, if the employee already exists there.
+
+  If the employment number contains letters, the employee will be excluded from the integration.
+</Note>
+
+<Note>
+  ##### What happens if the employee does not exist in AGDA PS?
+
+  If the employee has an employment number in Hailey that does not exist in AGDA PS, a new person will be created in AGDA PS.
+</Note>
+
+<Note>
+  ##### Why is the employment type not working correctly?
+
+  The employment types must have the same names in Hailey and AGDA PS.
+
+  Check the employment types in AGDA PS under:
+
+  **Registers → Basic registers → Employment types**
+</Note>
+
+<Note>
+  ##### Why is the salary not synchronised with AGDA PS?
+
+  Check the following:
+
+  - Is salary synchronisation activated in the integration?
+  - Is the employee’s actual salary registered in Hailey?
+  - Has a salary type been added to the salary?
+  - Has the correct pay code been specified for monthly and hourly salaries?
+
+  If a salary type is missing from the employee’s salary, it must be added before the salary can be transferred to AGDA PS.
+</Note>
+
+<Note>
+  ##### What happens if we use salary types in Hailey?
+
+  If you use salary types in Hailey, these will be consolidated under the pay code specified in the integration settings.
+</Note>
+
+<Note>
+  ##### Why is the file transfer not working?
+
+  Check the SFTP settings.
+
+  Make sure that:
+
+  - The address does not contain `www`.
+  - The address does not contain `http`.
+  - The address begins with an alphanumeric character.
+  - The file path uses forward slashes: `/`
+  - The file path does not use backslashes: `\`
+</Note>
+
+<Note>
+  ##### Why is the cost centre or check digit cleared in AGDA PS?
+
+  If the cost centre or check digit is activated in the integration but is missing from the employee’s profile in Hailey, the corresponding data may be cleared in AGDA PS.
+
+  Therefore, make sure that employees have the correct data registered in these fields in Hailey before activating the integration.
+</Note>
+
+<Note>
+  ##### Do we need to contact AGDA PS before activating the integration?
+
+  Yes. You need to initiate the integration process with AGDA PS before the integration can be activated in Hailey.
+
+  AGDA PS will provide the SFTP details and password that must be used in the integration settings.
+</Note>
+
+<Note>
+  ##### Who should we contact if we have questions?
+
+  If you have questions about the integration, contact your Customer Success contact at Hailey.
+</Note>
+
+---
+
+*If you have any questions regarding the integration, please contact your Customer Success specialist at Hailey.*

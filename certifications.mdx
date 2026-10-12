@@ -1,0 +1,67 @@
+---
+title: "Create certifications"
+---
+
+Get started with certifications in Hailey! This guide shows how to create certificates.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="qFREemR" title="Create certifications" />
+
+## What is certifications?
+
+Certificates are uploaded documents that shows that an employee has a certain competence, education, or authorization. They can work as proof that the individual meets specific requirements for, for example, a title.
+
+## How do I set up the approval principles?
+
+When a certificate is added for an employee, a task will go to a verifier who needs to verify the certificate. To set up who your verifiers should be, navigate to **Settings - Security - Approval principles - Certificates.** Your options for choosing the verifier are:
+
+- **Managers**
+- **Team Leads**
+- **Head of organization**
+- **Head of department**
+- **Specific employee(s)**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-30-2026-06-51-38-3935-AM.png?width=670&height=338&name=image-png-Jun-30-2026-06-51-38-3935-AM.png)
+
+## How do you create certifications?
+
+Navigate to **Settings - Skills - Certifications** and click on **Add new**. Give the certificate a name and description.
+
+Toggle on if you want a **notification** to be sent out when the certification is about to expire. Choose who to notify, the **employee** to whom the certification is added on, their **manager** and/or a **Task force**. Also, set the number of days before the certification expires that the notification should be sent out. The notification is sent by email.
+
+<Note>
+  Note that a notification is only sent when the certificate is **required** from the employee.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-18-2026-08-20-04-9634-AM.png?width=669&height=337&name=image-png-Jun-18-2026-08-20-04-9634-AM.png)
+
+If a certificate should be visualized as **required** on employees profile, you can choose which **Legal entities**, **Locations**, **Departments**, **Teams**, **Titles** and/or **Specific** **employee(s)** to select, click **Save.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-18-2026-08-20-31-8885-AM.png?width=670&height=335&name=image-png-Jun-18-2026-08-20-31-8885-AM.png)
+
+All created certificates will be shown in the overview list including the scope for each certificate.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-29-2026-07-18-52-4156-PM.png?width=663&height=334&name=image-png-Apr-29-2026-07-18-52-4156-PM.png)
+
+## Rights
+
+- **View** on your own profile makes it possible to see all information under tab **Certification** on your own profile.
+- **View** on other employees makes it possible to see all information under tab **Certification** on the employee profiles + access to **Skills - Certification** in the main menu for employees who is scoped.
+- **View & edit** education gives you the right to view, add and delete certificates.
+- **Settings - Create** education gives full access to create new and manage already added certifications under **Settings**.
+
+<Tip>
+  Do you need help to get started with Roles & rights? Click [HERE](/roles-and-rights)!
+</Tip>

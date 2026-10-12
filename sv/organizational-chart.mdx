@@ -1,0 +1,129 @@
+---
+title: "Skapa organisationsträd"
+---
+
+I denna guide kan ni läsa om hur ni visualiserar er organisation i Hailey med organisationsträd.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="pdY7vsJ" title="Skapa organisationsträd" />
+
+## Vad är organisationsträd i Hailey?
+
+## I Hailey kan ni ha två typer av organisationsträd. Båda finns via **Företagssida** - **Organisation** i huvudmenyn. I det övre vänstra hörnet av vyn finns en väljare. Välj vilken vy ni vill se:
+
+- Rapporteringsstrukturen
+- Organisationsschemat
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2026-07-46-18-1195-AM.png?width=670&height=407&name=image-png-Jul-14-2026-07-46-18-1195-AM.png)
+
+## Hur skapar man upp organisationsträd i Hailey?
+
+För att skapa upp ert organisationsträd i Hailey behöver ni sätta upp er **rapporteringsstuktur**. Rapporteringsstrukturen visar **vem som rapporterar till vem** och ställs in genom att lägga till "Rapporterar till" på medarbetarna. Detta kan göras antingen genom [massuppdatering](/sv/employee-list#hanteraknappen) i medarbetarlistan, eller individuellt på varje medarbetarkort. Fältet "Rapporterar till" finns under Anställning, i avsnittet Jobb.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-Jul-14-2026-07-47-07-4485-AM.png?width=670&height=225&name=undefined-Jul-14-2026-07-47-07-4485-AM.png)
+
+Ser vyn för organisationsschemat ut som på bilden nedan? Då har ni skapat en **cirkelreferens,** det betyder att ni saknar medarbetare högst upp i rapporteringsträdet **.** Den medarbetare som ska vara högst upp i rapporteringsträdet ska inte rapportera till någon.
+
+<Warning>
+  **Fel i rapportstrukturen kan orsaka olika problem i kontot** eftersom många delar av Hailey är beroende av rapporteringsstrukturen. Det är därför viktigt att säkerställa att varje medarbetare rapporterar till rätt person.
+
+  ***Exempel**: Ifall Chef A rapporterar till Chef B - Chef B till Chef C - Chef C till Chef A kan dessa chefers rättigheter påverkas. I detta fall kommer exempelvis vyn på chefernas rapporterande medarbetares medarbetarkort begränsas.*
+</Warning>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2026-07-49-14-1585-AM.png?width=670&height=217&name=image-png-Jul-14-2026-07-49-14-1585-AM.png)
+
+## Organisationsschemat
+
+Organisationsträdet kan se olika ut beroende på hur ni strukturerar era affärsområden, avdelningar och team. Ni kan välja att basera trädet på **[avdelningar](#avdelningar)** eller **[affärsområden](#affarsomraden)**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-19-2024-01-48-39-5340-PM.png?width=670&height=294&name=image-png-Jul-19-2024-01-48-39-5340-PM.png)
+
+### Avdelningar som bas
+
+Om ni vill strukturera organisationsschemat baserat på avdelningar börjar ni i **Inställningar - Organisation - Avdelningar**. Ni måste först bestämma vilken avdelning som ska vara högst upp. Den avdelningen ska ***inte tillhöra*** någon annan avdelning.
+
+Gå vidare genom att **relatera andra avdelningar till den översta avdelningen**. Öppna redigeraren för de aktuella avdelningarna och välj vilken avdelning de tillhör. Om ni vill kan ni även **ange en avdelningsansvarig**. Upprepa processen för alla avdelningar ni vill ha med i organisationsträdet.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2026-09-35-58-4775-AM.png?width=670&height=371&name=image-png-Jul-14-2026-09-35-58-4775-AM.png)
+
+Om ni har **team som tillhör avdelningar** kan de också inkluderas i trädet. För att ställa in detta, gå vidare till Teams, bredvid Avdelningar, och skapa eller redigera de aktuella teamen.
+
+<Note>
+  Avdelningar eller team som inte är relaterade till någon annan avdelning kommer **inte att visas** i organisationsträdet.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-Jul-14-2026-07-50-57-6476-AM.png?width=670&height=216&name=undefined-Jul-14-2026-07-50-57-6476-AM.png)
+
+Avdelningarna och teamen kommer nu att vara kopplade när ni tittar på organisationsträdet!
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-31-2024-08-00-05-0528-AM.png?width=621&height=439&name=image-png-Jul-31-2024-08-00-05-0528-AM.png)
+
+### Affärsområden som bas
+
+Varje affärsområde kommer att skapa sin egen vy i organisationsschemat eftersom **affärsområden inte kan kopplas till varandra**. Som ett resultat av detta kommer du att hitta varje affärsområde som ett alternativ i dropdown-menyn i organisationsvyn.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-19-2024-02-15-13-2173-PM.png?width=670&height=340&name=image-png-Jul-19-2024-02-15-13-2173-PM.png)
+
+Om du vill strukturera ditt organisationsträd baserat på affärsområden börjar du i **Inställningar - Organisation - Affärsområden**. Välj det affärsområde du vill börja arbeta med och öppna redigeraren genom att klicka på de tre prickarna till höger.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-19-2024-02-08-29-0503-PM.png?width=670&height=259&name=image-png-Jul-19-2024-02-08-29-0503-PM.png)
+
+Koppla avdelningar till affärsområdet genom att klicka på Lägg till avdelning. Välj den eller de avdelningar du vill ha och lägg till avdelningsansvarig inom affärsområdet. Upprepa processen för varje affärsområde som du vill skapa en visuell vy för.
+
+<Note>
+  Alla valda avdelningar kommer att visas i översikten för affärsområdet. Detsamma gäller den affärsområdes ansvarige.
+</Note>
+
+<Note>
+  Dotterbolag (avdelningar som tillhör en legal enhet) kommer inte att visas i dropdown-menyn när du väljer avdelningar som tillhör ett affärsområde.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2026-07-59-54-1637-AM.png?width=344&height=500&name=image-png-Jul-14-2026-07-59-54-1637-AM.png)
+
+Nu tittar vi på **det visuella**! När du vill se på ett affärsområde via Företag - Organisation måste du först välja det aktuella affärsområdet i dropdown-menyn. När detta är valt kommer avdelningarna, medarbetare i affärsområdet och team att börja falla ut.
+
+<Note>
+  Avdelningar som inte tillhör något affärsområde eller någon avdelning kommer att visas bland affärsområdena i dropdown-menyn.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-19-2024-02-15-13-2173-PM.png?width=670&height=340&name=image-png-Jul-19-2024-02-15-13-2173-PM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-19-2024-02-18-44-1165-PM.png?width=547&height=477&name=image-png-Jul-19-2024-02-18-44-1165-PM.png)
+
+Den allmänna regeln för organisationsvyn är att **alla kriterier måste uppfyllas** för att medarbetare ska visas. Till exempel måste en medarbetare tillhöra både affärsområdet och den anslutna avdelningen för att visas i schemat. Medarbetare som inte uppfyller kriterierna kommer istället att placeras under Medarbetare utanför avdelningen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-19-2024-02-19-27-5020-PM.png?width=604&height=473&name=image-png-Jul-19-2024-02-19-27-5020-PM.png)
+
+## Rättigheter
+
+Rättigheten som är relevant för att ha möjligheten att visa organisationsträdet i Hailey:
+
+- **Övrigt - Visa organisationsträd**
+
+Rättigheten innebär att medarbetaren har rätt att visa organisationsträdet under **Företagssida - Organisation**
+
+Rättigheten för att **redigera** organisationsstrukturen, och därmed rapporteringsstukturen vilket påverkar organisationsträdet hittar ni:
+
+- **Inställningar - Redigera organisation**
+
+[**HÄR**](/sv/roles-and-rights) kan ni läsa mer om Roller & Rättigheter i Hailey
+
+## Vanliga fragor
+
+<AccordionGroup>
+  <Accordion title="Varför ser jag inget organisationsträd i Hailey, trots att vi satt upp vår rapporteringsstruktur?">
+  Antingen har ni skapat en **cirkelreferens,** vilket betyder att ni saknar medarbetare högst upp i rapporteringsträdet. Navigera till **Inställningar - Organisation** för att redigera. Alternativt har ni ej satt upp rättigheten att visa organisationsträdet.
+  </Accordion>
+</AccordionGroup>

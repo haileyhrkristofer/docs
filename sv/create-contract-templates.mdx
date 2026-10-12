@@ -1,0 +1,234 @@
+---
+title: "Skapa kontraktsmallar"
+---
+
+Följ stegen nedan för att skapa era kontraktsmallar – så är ni snart redo att börja signera avtal med både nuvarande stjärnor och framtida medarbetare.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="XrY4e8k" title="Skapa kontraktsmallar" />
+
+## Vad är en kontraktsmall?
+
+Alla olika typer av dokument som ni vill ska gå att signeras via Hailey behöver finnas i ert Kontraktsbibliotek, antingen som en kontraktsmall eller uppladdad som en PDF. Detta kan vara anställningsavtal, bilagor, policies m.m.
+
+## Hur skapar man en kontraktsmall?
+
+Gå till **Inställningar - Kontraktsbibliotek** och klicka på **Lägg till**. Då kommer två val att dyka upp: Skapa kontraktsmall och Lägg till dokument. För att skapa en kontraktsmall, klicka på **Skapa kontraktsmall**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-24-2026-09-35-34-9271-AM.png?width=670&height=373&name=image-png-Jun-24-2026-09-35-34-9271-AM.png)
+
+### Initiala inställningar
+
+- Ge mallen **en titel**
+- **Beskriv** när kontraktet ska användas
+- **Typ av mall:**
+  - **Kontraktsmall** - Skapa en mall där kontraktsinnehållet sparas och återanvänds vid varje signering.
+  - **Manuell uppladdning för varje signering** - Inget kontraktsinnehåll sparas i mallen. När detta alternativ väljs måste användaren ladda upp en fil varje gång en signering initieras.
+- Välj **språk**
+- Välj **var kontraktet ska finnas tillgängligt:**
+  - **Nyanställning** - Kontraktsmallen kommer att vara tillgänglig när du initierar en anställning och från en medarbetares profil
+  - **Signering med flera medarbetare** - Kontraktsmallen kommer att vara tillgänglig via hantera-knappen i medarbetarlistan och från en medarbetares profil.
+  - **Signering med en medarbetare** - Kontraktsmallen kommer att vara tillgänglig från en medarbetares profil.
+  - **Ny anställning för en befintlig medarbetare** - Kontraktsmallen kommer att vara tillgänglig från en medarbetares profil i samband med att en ny anställning läggs till.
+  - **Avsluta medarbetares anställning** - Kontraktsmallen kommer att vara tillgänglig från en medarbetares profil i samband med att ni avslutar medarbetaren.
+  - **Nyanställning & ny anställning på befintlig medarbetare** - Kontraktsmallen kommer att vara tillgänglig både för Nyanställning och Ny anställning för befintlig medarbetare.
+  - **Anställningsperiod** - Kontraktsmallen kommer att vara tillgänglig när ni lägger till en anställningsperiod på en medarbetare. Detta alternativ dyker enbart upp om ni har Behovsanställningar aktiverat i ert konto.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-24-2026-09-37-05-8407-AM.png?width=670&height=382&name=image-png-Jun-24-2026-09-37-05-8407-AM.png)
+
+<Tip>
+  Med funktionen **Kräv BankID för att se kontrakt** kan ni öka säkerheten genom att endast låta signerande parter öppna dokumentet efter legitimering med svenskt BankID. Slå på genom att klicka på **kugghjulet** i högra hörnet - aktivera **Kräv BankID för att se kontrakt.**
+
+  När funktionen är påslagen krävs det att alla parter har svenskt personnummer och det inte är möjligt att signera med digital autograf.
+
+  ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-24-2026-09-53-55-4211-AM.png?width=670&height=384&name=image-png-Jun-24-2026-09-53-55-4211-AM.png)
+</Tip>
+
+#### Omfattning
+
+Välj eventuell **omfattning** på vem som **kan skicka ut mallen för signering.** Om mallen ska användas av anställda oavsett vilken del av organisationen de tillhör, lämna alla fält tomma.
+
+<Note>
+  Läs mer om omfattning i Hailey [**HÄR**](/sv/scope)
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-05-2026-01-11-28-8475-PM.png?width=670&height=600&name=image-png-Oct-05-2026-01-11-28-8475-PM.png)
+
+#### Signeringsinställningar
+
+Nästa steg är att ställa in era signeringsinställningar.
+
+- **Kräv granskare** - Mallen kommer enbart gå att signera om en granskare blivit vald först.
+- **Efter signeringen** - Välj vilken mapp mallen ska landa i efter signering. Väljs ingen mapp kommer mallen landa i Rotmappen. Läs mer om medarbetarmappar [HÄR.](/sv/employee-folders)
+- **Meddela när signeringen är klar** – Här kan du välja om en eller flera mottagare ska notifieras när alla parter har signerat kontraktet.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-24-2026-09-34-25-0238-AM.png?width=670&height=383&name=image-png-Jun-24-2026-09-34-25-0238-AM.png)
+
+## Bygg er kontraktsmall
+
+Efter att ni valt era initiala inställningar är det dags att börja bygga er kontraktsmall! I den högra spalten finner ni information om:
+
+- **Visuella element** - Välj vilket typsnitt ni vill använda er av och huruvida ni vill ha automatisk numrering.
+- **Variabler** - Dessa används i er kontraktsmall för att plocka information direkt från medarbetarkorten.
+- **Lön** - Variabler för löner som används i er kontraktsmall för att plocka information direkt från medarbetarkorten.
+- **Fritextfält** - Fält som fylls i först när ni skickar ut er mall för signering.
+- **Bilagor** - Ytterligare dokument som kan inkluderas i kontraktet.
+
+<Tip>
+  Tips! Ni kan använda sökrutan för att enkelt hitta den variabel ni behöver.
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-24-2026-09-46-25-4079-AM.png?width=670&height=383&name=image-png-Jun-24-2026-09-46-25-4079-AM.png)
+
+### Lägg till innehåll
+
+Det är nu dags att fylla kontraktsmallen med innehåll. Under **Allmänt** i den vänstra panelen kan ni:
+
+- Ange en **kontraktstitel**.
+- Byta logotyp genom att klicka på den befintliga logotypen och välja en ny från mediebiblioteket.
+- Välja om **information om signeringsparter** ska visas i början av kontraktet. När alternativet är aktiverat inleds kontraktet med information om arbetsgivaren och medarbetaren.
+
+#### Skapa sektioner
+
+Bygg upp kontraktet genom att skapa sektioner. Varje sektion kan innehålla:
+
+- Sektionstitel
+- Rubrik (underrubrik)
+- Ett eller flera textstycken
+- Punktlista
+
+Lägg till så många sektioner som behövs för att skapa en tydlig struktur.
+
+<Note>
+  Om ni har flera varianter av samma innehåll kan ni göra en sektion **Valbar**. Då kan rätt version väljas när kontraktet används.
+
+  Ni kan även duplicera en sektion genom att klicka på **de tre prickarna** bredvid sektionen i den högra panelen.
+
+  Genom att använda **Valbara** och duplicerade sektioner kan samma kontraktsmall användas i flera olika situationer. Det minskar behovet av att skapa flera separata mallar.
+</Note>
+
+#### Använd variabler
+
+Variabler motsvarar olika fält på medarbetarkortet. Lägg till variabler i kontraktsmallen för att automatiskt hämta information från medarbetarkortet när ett kontrakt skapas utifrån mallen.
+
+Variablerna hittas i den högra menyn och är kategoriserade enligt följande:
+
+- **Medarbetare -** Här hittar ni information om medarbetaren som namn, privata kontaktuppgifter samt Egna medarbetarfält.
+- **Anställning - Organisation -** Här hittar ni styrkoder om organisatorisk tillhörighet så som titel, avdelning eller rapporterar till.
+- **Anställning - Villkor -** Här hittar ni information så som semesterdagar eller omfattning.
+- **Organisation -** Här hittar ni information om företagsnamn eller organisationsnummer.
+- **Arbetsplats -** Här hittar ni adressuppgifter och telefonnummer till arbetsplatsen.
+- **Lön -** Här hittar ni information om lön så som summa eller startdatum.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-24-2026-09-48-32-6058-AM.png?width=670&height=364&name=image-png-Jun-24-2026-09-48-32-6058-AM.png)
+
+#### Lägg till fritextfält
+
+Ett **Fritextfält** används för information som ska fyllas i manuellt i samband med att kontraktet skickas för signering. Det passar för information som inte finns som fält i Hailey.
+
+För att skapa ett fritextfält:
+
+- Klicka på **Fritextfält** i den högra panelen.
+- Ange ett namn som beskriver vilken information som ska fyllas i.
+- Lägg till en kommentar med instruktioner till den som ska använda mallen, till exempel vilket format informationen ska anges i eller något som är viktigt att tänka på.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-24-2026-09-49-28-6636-AM.png?width=670&height=384&name=image-png-Jun-24-2026-09-49-28-6636-AM.png)
+
+#### Lägg till bilaga
+
+Har ni bilagor som ni vill skicka med kontraktet? Lägg till dessa genom att klickar på **Bilagor** (gem-ikonen) i högra
+
+Här visas alla dokument som har laddats upp och taggats som **Bilaga kontraktsmall** via **Kontraktsbibliotek** - **Dokument**. Ni kan också ladda upp ett nytt dokument direkt från kontraktsmallen.
+
+Om bilagan inte alltid ska bifogas:
+
+- Markera **Valbar**.
+- Lägg gärna till en kommentar som beskriver när bilagan ska användas.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-24-2026-09-50-13-7721-AM.png?width=670&height=383&name=image-png-Jun-24-2026-09-50-13-7721-AM.png)
+
+#### Spara kontraktsmallen
+
+När ni känner er klara med kontraktsmallen klickar ni på **Spara** i det högra hörnet.
+
+Den färdiga kontraktsmallen visas sedan i listan över mallar tillsammans med titel och syfte.
+
+Från listan kan ni:
+
+- Förhandsgranska en mall genom att klicka på mallens namn.
+- Redigera en mall genom att klicka på **de tre prickarna** och välja **Redigera**.
+
+## Ladda upp signerbara dokument och bilagor
+
+Om ni har andra dokument som ska kunna signeras, behöver dessa laddas upp i **Kontraktsbiblioteket**.
+
+Gå till **Inställningar** - Kontraktsbibliotek - klicka på **Lägg till** - **Lägg till dokument**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-24-2026-09-51-41-8134-AM.png?width=670&height=384&name=image-png-Jun-24-2026-09-51-41-8134-AM.png)
+
+I rutan som öppnas:
+
+- Ladda upp en PDF-fil.
+- Ange ett namn på dokumentet.
+- Välj hur dokumentet ska användas:
+  - **Signerbart dokument** – dokumentet skickas för signering tillsammans med kontraktet.
+  - **Bilaga kontraktsmall** – dokumentet kan bifogas som en bilaga i en kontraktsmall.
+  - **Båda delarna** – dokumentet kan både signeras och användas som bilaga.
+
+<Tip>
+  Alla dokument som har taggats som Bilaga kontraktsmall är valbara i kontraktsmallen.
+</Tip>
+
+För dokument som är markerade som **Signerbart dokument** kan ni välja vilken mapp dokumentet ska sparas i efter signering.Ni kan även begränsa vem som ska kunna använda dokumentet genom att **Omfatta** det.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-24-2026-09-52-28-0984-AM.png?width=670&height=385&name=image-png-Jun-24-2026-09-52-28-0984-AM.png)
+
+De uppladdade dokumenten dyker sedan upp i listan.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-24-2026-09-53-06-3762-AM.png?width=670&height=385&name=image-png-Jun-24-2026-09-53-06-3762-AM.png)
+
+Om ny version av ett befintligt dokument behöver laddas upp, klicka på de **tre prickarna till höger** om dokumentet, välj **Redigera** - **Byt ut fil** och ladda upp den senaste versionen.
+
+## Viktiga begrepp
+
+Här hittar du förklaringar av begrepp och funktioner som kan vara viktiga att ha lite extra koll på när du skapar kontraktsmallar.
+
+- **Valbar sektion:** Innebär att den som skickar kontraktet själv kan välja om sektionen ska inkluderas. Det är användbart när vissa villkor varierar, till exempel mellan olika anställningsformer, men där kontraktet i övrigt innehåller samma information. Genom att lägga sådana villkor som valbara sektioner kan samma mall användas oavsett exempelvis anställningsform.
+- **Styrkoder:** Används för att automatiskt fylla i information som annars skulle behöva ändras vid varje signering — till exempel namn, startdatum eller lön. Styrkoderna är kopplade till medarbetarkortet och hämtar uppgifterna direkt därifrån in i kontraktet. Det gör att samma mall kan användas för olika personer oberoende startdatum, lön ect.
+- **Fritextfält:** Ett fält som låter användaren skriva in text manuellt i samband med att kontraktet ska skickas ut. Är användbart när man exempelvis vill inkludera information som varierar mellan varje signering, men där informationen inte finns att hitta på medarbetarkortet, och därmed inte kan vara en styrkod.
+
+## Vanliga fragor
+
+<AccordionGroup>
+  <Accordion title="Kontraktsmallen jag vill använda visas inte som ett alternativ. Varför?">
+    Om en kontraktsmall inte visas som ett alternativ när du skapar eller skickar ett kontrakt beror det oftast på att mallen har fel **användningsområde** under **Var ska kontraktet finnas tillgängligt?** i mallens inställningar.
+
+    Till exempel kommer en mall med användningsområdet **Avsluta medarbetares anställning,** inte att vara tillgänglig när du skickar ett kontrakt till en nyanställd som en del av anställningsprocessen.
+
+    Så här uppdaterar du användningsområdet:
+
+    1. Gå till **Inställningar** - **Kontrakt**.
+    2. Klicka på **de tre prickarna** bredvid kontraktsmallen och välj **Redigera**.
+    3. Klicka på **kugghjulsikonen**.
+    4. Under **Var ska kontraktet vara tillgängligt?** väljer du det användningsområde som passar hur du vill använda mallen.
+    5. Spara dina ändringar.
+
+    När kontraktsmallen har rätt användningsområde kommer den att vara tillgänglig i det aktuella kontraktsflödet.
+  </Accordion>
+
+  <Accordion title="I vilka länder kan man signera kontrakt med bankautentisering?">
+    Hailey stödjer bankautentisering i **Sverige, Norge, Finland** och **Danmark**.
+  </Accordion>
+</AccordionGroup>

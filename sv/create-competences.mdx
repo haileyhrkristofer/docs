@@ -1,0 +1,57 @@
+---
+title: "Skapa kompetenser"
+---
+
+Genom att definiera kompetenser och graderingar skapar ni en gemensam struktur som gör det enklare att följa upp prestationer och planera utveckling på ett mer träffsäkert sätt. Denna guide visar hur du skapar kompetenser!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="1vvlTz7" title="Skapa kompetenser" />
+
+## Vad är kompetenser?
+
+Kompetenser ger er en tydlig och samlad bild av vad organisationen kan idag och vad som behövs framåt. Det hjälper er att arbeta mer träffsäkert med utveckling, rekrytering och planering, samtidigt som ni skapar bättre möjligheter för medarbetare att växa. Kompetenser ger er gott underlag för informerade beslut och strategisk planering framåt.
+
+## Hur skapar man kompetenser
+
+För att skapa en kompetens, gå till **Inställningar - Skills**, klicka på **Lägg till - Kompetenser**. Namnge, ge en beskrivning samt en målgradering för kompetensen.
+
+Välj sedan om kompetensen ska kopplas till medarbetare som tillhör en specifik **Arbetsplats**, **Affärsområde**, **Avdelning**, **Team** eller **Titel**. Detta innebär att kompetensen visas under tabben **Kompetenser** på de medarbetarprofiler som omfattas. Klicka på **Spara**.
+
+<Note>
+  Om du anger värden i flera fält, till exempel både **Arbetsplats** och **Avdelning**, måste medarbetaren tillhöra **båda** för att kompetensen ska visas på deras profil.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-29-2026-04-41-42-3123-PM.png?width=665&height=336&name=image-png-Apr-29-2026-04-41-42-3123-PM.png)
+
+Alla skapade kompetenser och deras omfattning visas i en lista.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-28-2026-03-37-37-6326-PM.png?width=670&height=340&name=image-png-Apr-28-2026-03-37-37-6326-PM.png)
+
+Högst upp i översikten kan du redigera beskrivningarna för varje gradering så att de matchar organisationens språk. Klicka på pennan till höger, gör era ändringarna och klicka på **Spara ändringar**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-30-2026-07-09-36-6379-AM.png?width=669&height=337&name=image-png-Jun-30-2026-07-09-36-6379-AM.png)
+
+## Rättigheter
+
+Här listar vi rättigheter som kan vara relevanta för er som vill jobba med kompetenser i Hailey:
+
+- **Visa** på egen profil gör det möjligt att se det som ligger under fliken **Kompetenser** på ens egna profil.
+- **Visa** på andra medarbetare gör det möjligt att se det som ligger under fliken **Kompetenser** på medarbetarprofilen + tillgång till **Skills - Kompetenser** i huvudmenyn för medarbetare som omfattas.
+- **Visa & ändra** kompetenser gör det möjligt att visa, lägga till och ta bort tillagda kompetenser.
+- **Inställningar - Skapa kompetenser** ger full tillgång till att skapa upp nya och hantera redan tillagda kompetenser under **Inställningar**.
+
+Behöver du hjälp att komma igång med **Roller & rättigheter**? Klicka [HÄR](/sv/roles-and-rights)!
+
+Vill du **lägga till** eller **gradera** en kompetens på en medarbetare? Läs mer om hur du går tillväga i guiden [HÄR](/sv/competences).

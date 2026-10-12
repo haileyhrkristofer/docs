@@ -1,0 +1,65 @@
+---
+title: "Create education"
+---
+
+This guide helps you get started with creating your educations in Hailey!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="avOz0z6" title="Create education" />
+
+## What is education?
+
+Educations help you develop employees’ skills, knowledge, and competencies in a structured way. They are useful for ensuring compliance, onboarding, and continuous professional development. Education sessions are the occasions when an education takes place, making it easy to assign participation. In the system, you can manage educations and sessions to track attendance and ensure employees meet role requirements.
+
+## How do you create an education?
+
+To create an education, go to **Settings** - **Skills**, click **Add new** and choose **Education**. Set the name and a description of the education and **Save**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-28-2026-09-08-10-4435-AM.png?width=665&height=357&name=image-png-Jul-28-2026-09-08-10-4435-AM.png)
+
+All created educations will be visible in the list overview!
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-23-2026-09-31-39-5856-AM.png?width=669&height=337&name=image-png-Jun-23-2026-09-31-39-5856-AM.png)
+
+## Rights
+
+- **View** on your own profile makes it possible to see all information under tab **Education** on your own profile.
+- **View** on other employees makes it possible to see all information under tab **Education** on the employee profiles + access to **Skills - Education** in the main menu for employees who is scoped.
+- **View & edit** education gives you the right to view, add and delete certificates.
+- **Settings - Create** education gives full access to create new and manage already added education under **Settings**.
+
+<Tip>
+  Do you need more help with **Roles & rights**? Read more about it [HERE!](/roles-and-rights)
+</Tip>
+
+## Common questions
+
+Here are answers to some common questions that can help you when creating educations.
+
+<AccordionGroup>
+  <Accordion title="Where is the education description visible?">
+    The description is displayed when **adding** an education session, providing additional context about the education for the person registering the session.
+
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-24-2026-09-33-43-0669-AM.png?width=670&height=441&name=image-png-Jul-24-2026-09-33-43-0669-AM.png)
+
+    There is also a separate description that can be added by the participant when they register a session. To learn more about that process, click [HERE](/add-education-session).
+  </Accordion>
+
+  <Accordion title="What type of educations is the feature meant for?">
+    The education feature in Hailey is primarily intended for tracking education **sessions**, such as trainings, courses, and workshops.
+
+    Since education sessions are registered in hours and can span a maximum of one day, the feature isn't designed to track long-term education, such as employees' academic degrees.
+  </Accordion>
+</AccordionGroup>

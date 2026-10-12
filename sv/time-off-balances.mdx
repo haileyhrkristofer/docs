@@ -1,0 +1,84 @@
+---
+title: "Frånvarosaldo"
+---
+
+Frånvarosaldo hjälper dig att hålla koll på hur många dagar medarbetare har kvar att ta ut som frånvaro. I den här guiden går vi igenom vad frånvarosaldon är, hur saldot beräknas och hur du skapar och hanterar saldon i Hailey.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="zHin5Ng" title="Frånvarosaldo" />
+
+## Vad är frånvarosaldon?
+
+Frånvarosaldo gör det möjligt att visualisera och följa medarbetares återstående frånvarodagar i Hailey. Varje medarbetare kan se sitt frånvarosaldo på sin profil under tabben **Tid**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-01-44-11-7829-PM.png?width=670&height=343&name=image-png-Aug-07-2026-01-44-11-7829-PM.png)
+
+## Innan du sätter igång
+
+Frånvarosaldon behövs endast om du vill följa upp och visa medarbetares återstående frånvarosaldo i Hailey.
+
+Innan du skapar ett frånvarosaldo behöver du säkerställa att de relevanta **frånvaroanledningarna** har skapats. Läs mer om hur du skapar **frånvaroanledningar** i guiden HÄR.
+
+## Hur skapar man ett frånvarosaldo?
+
+Navigera till **Inställningar - Tid & Frånvaro - Lägg till ny - Frånvarosaldo**.
+
+Börja med att ange ett namn för frånvarosaldot. Vi rekommenderar att du väljer ett namn som tydligt beskriver det avtal eller den frånvaroanledning som saldot är kopplat till.
+
+Välj därefter inställningarna för frånvarosaldot:
+
+<Steps>
+  <Step title="Vilka frånvaroanledningar som ska minska saldot">
+    Vilka **frånvaroanledningar** som ska minska saldot.
+  </Step>
+  <Step title="När frånvarosaldot ska fyllas på">
+    När frånvarosaldot ska **fyllas på**.
+  </Step>
+  <Step title="Eventuell gräns för överföring av saldo till nästa period">
+    Eventuell **gräns för överföring av saldo** till nästa period (om fältet lämnas tomt tillämpas ingen begränsning av antalet dagar).
+  </Step>
+  <Step title="Om negativa saldon ska förhindras">
+    Om negativa saldon ska förhindras. Klicka på **Spara** när du är klar.
+  </Step>
+</Steps>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-29-2026-07-12-33-3099-AM.png?width=670&height=337&name=image-png-Apr-29-2026-07-12-33-3099-AM.png)
+
+<Tip>
+  **Tips!** När ni är igång med era frånvarosaldon kan ni få en översikt på alla medarbetares frånvarosaldo med själv av **Rapporten** **Frånvarosaldo**. Läs mer om hur rapporten fungerar i guiden [HÄR](/sv/rapport/franvarosaldo).
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-01-44-36-2706-PM.png?width=669&height=337&name=image-png-Aug-07-2026-01-44-36-2706-PM.png)
+
+## Rättigheter
+
+- **Tid & frånvaro - Visa** - ger åtkomst till tabben **Tid** på medarbetarprofilen.
+- **Tid & frånvaro - Visa och redigera** - ger möjlighet att lägga till automatiskt godkänd frånvaro samt ta bort registrerad tid och frånvaro.
+
+Läs mer om hur **Roller & rättigheter** fungerar i Hailey [HÄR](/sv/roles-and-rights).
+
+## Vanliga fragor
+
+**Fråga**: Varför kan jag inte skapa ett frånvarosaldo?
+
+För att skapa ett frånvarosaldo behöver du rättigheten **Visa och redigera** för **Inställningar - Tid & frånvaro**. Detta hanteras under **Inställningar - Säkerhet - Roller & rättigheter**.
+
+Observera: Åtkomst till dessa inställningar är vanligtvis reserverad för administratörer.
+
+**Fråga**: Kan jag ändra ett frånvarosaldo efter att det har skapats?
+
+Ja, du kan redigera inställningarna för frånvarosaldot under **Inställningar - Tid & frånvaro** om ändringar behövs.
+
+Du kan även justera medarbetares saldon manuellt eller genom en import. Läs mer om hur du importerar frånvarosaldon [/sv/importera-franvaro-saldoHÄR](/sv/import-time-off-balance).

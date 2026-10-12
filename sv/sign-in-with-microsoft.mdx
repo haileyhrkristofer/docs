@@ -1,0 +1,76 @@
+---
+title: "Logga in med Microsoft SSO"
+---
+
+Med single sign on för Microsoft kan du använda samma autentiseringsuppgifter för att logga in på Hailey som du använder för din jobbmail och andra Microsoft-tjänster.
+
+## Aktivera inloggning med Microsoft SSO
+
+I den här guiden får du steg-för-steg instruktioner om hur du aktiverar inloggning med Microsoft SSO.
+
+## Inställningar
+
+Aktivera Microsoft SSO genom att gå till **Inställningar** - **Säkerhet** - **Inloggning** - **Microsoft SSO** - Klicka på **Aktivera** - **Spara.**
+
+<Note>
+  Det är möjligt att ha **flera aktiva alternativ** om så är nödvändigt.
+</Note>
+
+<Note>
+  Vi rekommenderar starkt att ni **testar att ert nya inloggningsalternativ fungerar** innan ni inaktiverar det gamla för att undvika att ni låser er själva ute. Detta gör ni genom att logga ut och sedan logga in med det nya alternativet. När ni sett att detta fungerar är det bara inaktivera det gamla inloggningsalternativet.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-03-2026-01-21-10-8534-PM.png?width=670&height=346&name=image-png-Jun-03-2026-01-21-10-8534-PM.png)
+
+Inloggning med Microsoft SSO förutsätter att:
+
+- **Företagsmejl i Hailey överensstämmer med Email i Entra ID.**
+- **Mejladressen för Email och UPN i Entra ID har samma domän**. Om mailadressen för Email och UPN skiljer sig i form av olika domäner kan ni whitelista ert Entra ID. Längre ner i denna guide hittar ni mer information om hur ni lägger till whitelisted Tenant ID.
+
+<Note>
+  Vid inloggning med Microsoft SSO matchas företagets e-postadress i Hailey mot den e-postadress som är kopplad till användaren i Entra.
+
+  Om det inte finns någon e-postadress tillgänglig i Entra och användaren endast har en UPN, matchas företagets e-postadress i Hailey istället mot användarens UPN.
+
+  Om företagets e-postadress i Hailey matchar e-postadressen eller UPN:en i Entra kan användaren logga in.
+</Note>
+
+## Lägg till whitelisted Tenant ID
+
+**Om domänen för era företagsmail skiljer sig från användares UPN,** behöver ni lägga till **whitelisted Tenant ID**. I det syfte, gå till ditt Entra ID - Översikt och kopiera Tenant ID.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Feb-28-2024-11-02-32-7541-AM.png?width=670&height=983&name=image-png-Feb-28-2024-11-02-32-7541-AM.png)
+
+Gå sedan tillbaka till Hailey och klista in er Tenant I i fältet Whitelisted Tenant IDs, klicka Spara.
+
+<Note>
+  Maildomäner som är anslutna till whitelisted IDs **behöver inte matcha** er standard domän för Microsoft Entra ID vid inloggning.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Feb-28-2024-11-12-50-1414-AM.png?width=670&height=1125&name=image-png-Feb-28-2024-11-12-50-1414-AM.png)
+
+## Logga in
+
+För att logga in med hjälp av Microsoft SSO **klicka på Microsoft-logotypen** på inloggningssidan.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-16-2024-01-58-52-8813-PM.png?width=562&height=454&name=image-png-May-16-2024-01-58-52-8813-PM.png)
+
+Första gången du gör detta måste du fylla i dina autentiseringsuppgifter.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Feb-28-2024-11-15-23-5913-AM.png?width=670&height=332&name=image-png-Feb-28-2024-11-15-23-5913-AM.png)
+
+Om din organisation kräver _multifaktorsautentisering_ appliceras även detta här.
+
+När konfigurationen är klar kommer du framöver att logga in genom att bara klicka på Microsoft-logotypen från denna enhet.
+
+<Tip>
+  **Tips!**
+
+  För att förbereda för att bjuda in dina kollegor och göra det ännu enklare för dem kan **admin i ert Microsoft Entra ID** ge sitt samtycke för de nödvändiga behörigheterna. Detta eliminerar behovet av att varje användare individuellt måste godkänna dem när de loggar in för första gången. Så här går du tillväga:
+
+  1. Logga in i Hailey via SSO med samma e-postadress som är registrerad som administratör i Entra.
+  2. Gå till Microsoft Entra ID -> Enterprise applications.
+  3. Sök efter Hailey HR Sign-in (application ID: dce4b1a0-1f12-4059-b8a5-27c80f36e9d5).
+  4. Under Security - Permissions, välj "Grant admin consent for Hailey HR."
+  5. Klart! Nu kommer medarbetare inte att se en ruta första gången de loggar in på Hailey. Ni har förenklat processen genom adminsamtycke i Microsoft Entra ID.
+</Tip>

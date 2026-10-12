@@ -1,0 +1,1275 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "luma",
+  "name": "Hailey HR knowledge base",
+  "colors": {
+    "primary": "#FFB2B2",
+    "light": "#FFB2B2",
+    "dark": "#FFB2B2"
+  },
+  "navigation": {
+    "pages": [
+      {
+        "group": "Getting Started",
+        "pages": [
+          "index",
+          "quickstart"
+        ]
+      },
+      "claude-2",
+      "claude",
+      "my-test-page"
+    ],
+    "languages": [
+      {
+        "language": "en",
+        "tabs": [
+          {
+            "tab": "Setting it up",
+            "pages": [
+              "index",
+              {
+                "group": "Account",
+                "icon": "building-2",
+                "pages": [
+                  {
+                    "group": "Organization",
+                    "pages": [
+                      "organization-in-hailey",
+                      "import-organization",
+                      "legal-entities",
+                      "organizational-chart"
+                    ]
+                  },
+                  {
+                    "group": "Customization",
+                    "pages": [
+                      "custom-fields",
+                      "standard-fields",
+                      "employee-folders"
+                    ]
+                  },
+                  {
+                    "group": "Security",
+                    "pages": [
+                      "approval-principles",
+                      "gdpr",
+                      "roles-and-rights",
+                      "scope"
+                    ]
+                  },
+                  {
+                    "group": "AI",
+                    "pages": [
+                      "ai"
+                    ]
+                  },
+                  {
+                    "group": "Sign in",
+                    "pages": [
+                      "sign-in-options",
+                      "sign-in-with-google",
+                      "sign-in-with-microsoft",
+                      "sign-in-with-okta"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Import",
+                "icon": "upload",
+                "pages": [
+                  {
+                    "group": "Employee information",
+                    "pages": [
+                      "import-employees",
+                      "import-additional-information"
+                    ]
+                  },
+                  {
+                    "group": "Employment information",
+                    "pages": [
+                      "import-employments",
+                      "import-casual-employments",
+                      "import-custom-employment-fields"
+                    ]
+                  },
+                  {
+                    "group": "Balances",
+                    "pages": [
+                      "import-time-off-balance",
+                      "import-comp-balance"
+                    ]
+                  },
+                  {
+                    "group": "Salaries & benefits",
+                    "pages": [
+                      "import-salaries",
+                      "import-salary-changes",
+                      "import-updated-salary-information",
+                      "import-benefits",
+                      "import-variable-pay",
+                      "import-yearly-variable-addition"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Time & time off",
+                "icon": "clock",
+                "pages": [
+                  {
+                    "group": "General settings",
+                    "pages": [
+                      "non-working-days",
+                      "update-time-and-time-off-settings-on-employee"
+                    ]
+                  },
+                  {
+                    "group": "Settings for time & time off",
+                    "pages": [
+                      "create-reporting-policy",
+                      "work-hours",
+                      "projects"
+                    ]
+                  },
+                  {
+                    "group": "Settings for time off",
+                    "pages": [
+                      "time-off-reason",
+                      "time-off-balances",
+                      "settings-for-longterm-leave"
+                    ]
+                  },
+                  {
+                    "group": "Get to know",
+                    "pages": [
+                      "time-cycles",
+                      "time-comp-time-balance"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Workflows & tasks",
+                "icon": "workflow",
+                "pages": [
+                  {
+                    "group": "Workflows",
+                    "pages": [
+                      "create-workflows"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Employee data",
+                "icon": "database",
+                "pages": [
+                  {
+                    "group": "Reports",
+                    "pages": [
+                      "manage-reports",
+                      "export-data-from-hailey"
+                    ]
+                  },
+                  {
+                    "group": "Analytics",
+                    "pages": [
+                      "analytics/analyticspage"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Skills",
+                "icon": "award",
+                "pages": [
+                  {
+                    "group": "Certifications",
+                    "pages": [
+                      "certifications"
+                    ]
+                  },
+                  {
+                    "group": "Competences",
+                    "pages": [
+                      "create-competences"
+                    ]
+                  },
+                  {
+                    "group": "Education",
+                    "pages": [
+                      "educations"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Performance",
+                "pages": [
+                  {
+                    "group": "One-to-ones",
+                    "pages": [
+                      "using-feedback-sessions"
+                    ]
+                  },
+                  {
+                    "group": "Three sixty",
+                    "pages": [
+                      "create-three-sixty"
+                    ]
+                  },
+                  {
+                    "group": "Surveys",
+                    "pages": [
+                      "surveys-in-hailey",
+                      "pulse-surveys",
+                      "enps"
+                    ]
+                  }
+                ],
+                "icon": "target"
+              },
+              {
+                "group": "Recruitment",
+                "icon": "user-plus",
+                "pages": [
+                  {
+                    "group": "Career page",
+                    "pages": [
+                      "career-page"
+                    ]
+                  },
+                  {
+                    "group": "Recruitment",
+                    "pages": [
+                      "message-templates"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Handbooks & news",
+                "icon": "book-open",
+                "pages": [
+                  {
+                    "group": "Company handbooks",
+                    "pages": [
+                      "company-corner"
+                    ]
+                  },
+                  {
+                    "group": "News",
+                    "pages": [
+                      "news"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Employee lifecycle",
+                "icon": "refresh-cw",
+                "pages": [
+                  {
+                    "group": "Contracts",
+                    "pages": [
+                      "create-contract-templates"
+                    ]
+                  },
+                  {
+                    "group": "Hiring",
+                    "pages": [
+                      "hiring-templates",
+                      "employee-templates"
+                    ]
+                  },
+                  {
+                    "group": "Other",
+                    "pages": [
+                      "quick-add-employee"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Compensation",
+                "icon": "wallet",
+                "pages": [
+                  {
+                    "group": "Salaries",
+                    "pages": [
+                      "salary-types",
+                      "create-salary-change-reason",
+                      "create-variable-pay"
+                    ]
+                  },
+                  {
+                    "group": "Benefits",
+                    "pages": [
+                      "benefits"
+                    ]
+                  },
+                  {
+                    "group": "Salary review",
+                    "pages": [
+                      "salary-review"
+                    ]
+                  },
+                  {
+                    "group": "Pay survey",
+                    "pages": [
+                      "pay-survey"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Incidents",
+                "icon": "shield-alert",
+                "pages": [
+                  {
+                    "group": "Whistleblowing",
+                    "pages": [
+                      "how-to-use-haileys-whistleblower-service"
+                    ]
+                  },
+                  {
+                    "group": "HSE-deviations",
+                    "pages": [
+                      "hse-deviations"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Integrations",
+                "icon": "plug",
+                "pages": [
+                  {
+                    "group": "Get to know",
+                    "pages": [
+                      "haileys-standard-integrations",
+                      "guide-for-api",
+                      "guide-for-haileys-mcp"
+                    ]
+                  },
+                  {
+                    "group": "Payroll",
+                    "pages": [
+                      "netvisor-integration",
+                      "integration-with-fortnox",
+                      "integration-med-hogia",
+                      "integration-with-crona",
+                      "integration-with-agda",
+                      "integration-with-kontek",
+                      "integration-with-kleer",
+                      "integration-with-kleer-salary-and-employee-data",
+                      "visma-net-payroll-no",
+                      "integration-with-mepco",
+                      "integration-with-flex-lon",
+                      "integration-with-visma-lon-600",
+                      "integrasjon-til-nav/altinn"
+                    ]
+                  },
+                  {
+                    "group": "User provisioning",
+                    "pages": [
+                      "integration-with-okta",
+                      "integration-with-entra-id",
+                      "integration-with-google-workspace"
+                    ]
+                  },
+                  {
+                    "group": "ATS",
+                    "pages": [
+                      "integration-with-teamtailor"
+                    ]
+                  },
+                  {
+                    "group": "Docs",
+                    "pages": [
+                      "integration-with-kivra"
+                    ]
+                  },
+                  {
+                    "group": "Collaboration",
+                    "pages": [
+                      "integration-with-slack",
+                      "integration-with-teams",
+                      "integration-with-outlook"
+                    ]
+                  }
+                ]
+              },
+              "support"
+            ],
+            "icon": "anchor"
+          },
+          {
+            "tab": "Using Hailey",
+            "groups": [
+              {
+                "group": "Get started",
+                "icon": "rocket",
+                "pages": [
+                  {
+                    "group": "Hailey as a manager",
+                    "pages": [
+                      "hr-hub"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Time & time off",
+                "icon": "clock",
+                "pages": [
+                  {
+                    "group": "Time",
+                    "pages": [
+                      "report-and-approve-time"
+                    ]
+                  },
+                  {
+                    "group": "Time off",
+                    "pages": [
+                      "time-off-submit",
+                      "time-off-approve-and-change",
+                      "long-term-leave",
+                      "plan-your-holidays-in-hailey",
+                      "time-off-holiday-balance"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Employee data",
+                "icon": "database",
+                "pages": [
+                  {
+                    "group": "Employee list",
+                    "pages": [
+                      "employee-list"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Workflows & tasks",
+                "icon": "workflow",
+                "pages": [
+                  {
+                    "group": "Manage workflows",
+                    "pages": [
+                      "start-and-follow-workflows"
+                    ]
+                  },
+                  {
+                    "group": "Tasks",
+                    "pages": [
+                      "quick-tasks"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Performance",
+                "pages": [
+                  {
+                    "group": "One-to-ones",
+                    "pages": [
+                      "host-one-to-one"
+                    ]
+                  },
+                  {
+                    "group": "Three sixty",
+                    "pages": [
+                      "start-and-follow-360-review"
+                    ]
+                  },
+                  {
+                    "group": "Goals",
+                    "pages": [
+                      "employee/goals",
+                      "goals-company-department-team"
+                    ]
+                  },
+                  {
+                    "group": "Surveys",
+                    "pages": [
+                      "start-and-follow-your-surveys"
+                    ]
+                  }
+                ],
+                "icon": "target"
+              },
+              {
+                "group": "Skills",
+                "icon": "award",
+                "pages": [
+                  {
+                    "group": "Certifications",
+                    "pages": [
+                      "add-and-verify-certificates"
+                    ]
+                  },
+                  {
+                    "group": "Competences",
+                    "pages": [
+                      "competences"
+                    ]
+                  },
+                  {
+                    "group": "Education",
+                    "pages": [
+                      "add-education-session"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Recruitment",
+                "icon": "user-plus",
+                "pages": [
+                  {
+                    "group": "Recruitments & job ads",
+                    "pages": [
+                      "start-and-manage-recruitment",
+                      "create-and-manage-job-ads"
+                    ]
+                  },
+                  {
+                    "group": "Candidates",
+                    "pages": [
+                      "candidate-management",
+                      "referencecheck",
+                      "candidate-application-process"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Employee lifecycle",
+                "icon": "refresh-cw",
+                "pages": [
+                  {
+                    "group": "Hiring",
+                    "pages": [
+                      "iniate-hire",
+                      "rehiring-wizard",
+                      "casual-employments"
+                    ]
+                  },
+                  {
+                    "group": "Employments",
+                    "pages": [
+                      "employment-wizard",
+                      "assign-substitute",
+                      "add-new-employments-in-bulk",
+                      "employment-statuses",
+                      "terminate-employee"
+                    ]
+                  },
+                  {
+                    "group": "Documents and signings",
+                    "pages": [
+                      "send-contract-to-one-existing-employee",
+                      "send-contract-to-several-employees",
+                      "upload-document-to-folders"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Compensation",
+                "icon": "wallet",
+                "pages": [
+                  {
+                    "group": "Salaries",
+                    "pages": [
+                      "salary-change",
+                      "manage-variable-pay",
+                      "manage-yearly-variable-additions"
+                    ]
+                  },
+                  {
+                    "group": "Benefits",
+                    "pages": [
+                      "benefit-change"
+                    ]
+                  },
+                  {
+                    "group": "Salary review",
+                    "pages": [
+                      "salary-review-for-managers",
+                      "s",
+                      "salary-review-for-the-managers-manager"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "icon": "users"
+          },
+          {
+            "tab": "Mobile",
+            "pages": [
+              "mobile/test",
+              "mobile-app"
+            ],
+            "icon": "smartphone"
+          },
+          {
+            "tab": "Learn",
+            "pages": [
+              "learn/test"
+            ],
+            "icon": "graduation-cap"
+          }
+        ]
+      },
+      {
+        "language": "sv",
+        "tabs": [
+          {
+            "tab": "Sätt upp Hailey",
+            "pages": [
+              "sv/index",
+              {
+                "group": "Konto",
+                "icon": "building-2",
+                "pages": [
+                  {
+                    "group": "Organisation",
+                    "pages": [
+                      "sv/organization-in-hailey",
+                      "sv/import-organization",
+                      "sv/legal-entities",
+                      "sv/organizational-chart"
+                    ]
+                  },
+                  {
+                    "group": "Anpassning",
+                    "pages": [
+                      "sv/custom-fields",
+                      "sv/standard-fields",
+                      "sv/employee-folders"
+                    ]
+                  },
+                  {
+                    "group": "Säkerhet",
+                    "pages": [
+                      "sv/approval-principles",
+                      "sv/gdpr",
+                      "sv/roles-and-rights",
+                      "sv/scope"
+                    ]
+                  },
+                  {
+                    "group": "AI",
+                    "pages": [
+                      "sv/ai"
+                    ]
+                  },
+                  {
+                    "group": "Inloggning",
+                    "pages": [
+                      "sv/sign-in-options",
+                      "sv/sign-in-with-google",
+                      "sv/sign-in-with-microsoft",
+                      "sv/sign-in-with-okta"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Import",
+                "icon": "upload",
+                "pages": [
+                  {
+                    "group": "Medarbetarinformation",
+                    "pages": [
+                      "sv/import-employees",
+                      "sv/import-additional-information"
+                    ]
+                  },
+                  {
+                    "group": "Anställningsinformation",
+                    "pages": [
+                      "sv/import-employments",
+                      "sv/import-casual-employments",
+                      "sv/import-custom-employment-fields"
+                    ]
+                  },
+                  {
+                    "group": "Saldon",
+                    "pages": [
+                      "sv/import-time-off-balance",
+                      "sv/import-comp-balance"
+                    ]
+                  },
+                  {
+                    "group": "Löner & förmåner",
+                    "pages": [
+                      "sv/import-salaries",
+                      "sv/import-salary-changes",
+                      "sv/import-updated-salary-information",
+                      "sv/import-benefits",
+                      "sv/import-variable-pay",
+                      "sv/import-yearly-variable-addition"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Tid & frånvaro",
+                "icon": "clock",
+                "pages": [
+                  {
+                    "group": "Allmänna inställningar",
+                    "pages": [
+                      "sv/non-working-days",
+                      "sv/update-time-and-time-off-settings-on-employee"
+                    ]
+                  },
+                  {
+                    "group": "Inställningar för tid & frånvaro",
+                    "pages": [
+                      "sv/create-reporting-policy",
+                      "sv/work-hours",
+                      "sv/projects"
+                    ]
+                  },
+                  {
+                    "group": "Inställningar för frånvaro",
+                    "pages": [
+                      "sv/time-off-reason",
+                      "sv/time-off-balances",
+                      "sv/settings-for-longterm-leave"
+                    ]
+                  },
+                  {
+                    "group": "Lär känna",
+                    "pages": [
+                      "sv/time-cycles",
+                      "sv/time-comp-time-balance"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Arbetsflöden & uppgifter",
+                "icon": "workflow",
+                "pages": [
+                  {
+                    "group": "Arbetsflöden",
+                    "pages": [
+                      "sv/create-workflows"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Medarbetardata",
+                "icon": "database",
+                "pages": [
+                  {
+                    "group": "Rapporter",
+                    "pages": [
+                      "sv/manage-reports",
+                      "sv/export-data-from-hailey"
+                    ]
+                  },
+                  {
+                    "group": "Analys",
+                    "pages": [
+                      "sv/analytics/analyticspage"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Kompetens",
+                "icon": "award",
+                "pages": [
+                  {
+                    "group": "Certifikat",
+                    "pages": [
+                      "sv/certifications"
+                    ]
+                  },
+                  {
+                    "group": "Kompetenser",
+                    "pages": [
+                      "sv/create-competences"
+                    ]
+                  },
+                  {
+                    "group": "Utbildning",
+                    "pages": [
+                      "sv/educations"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Prestation",
+                "pages": [
+                  {
+                    "group": "One-to-ones",
+                    "pages": [
+                      "sv/using-feedback-sessions"
+                    ]
+                  },
+                  {
+                    "group": "360° utvärdering",
+                    "pages": [
+                      "sv/create-three-sixty"
+                    ]
+                  },
+                  {
+                    "group": "Undersökningar",
+                    "pages": [
+                      "sv/surveys-in-hailey",
+                      "sv/pulse-surveys",
+                      "sv/enps"
+                    ]
+                  }
+                ],
+                "icon": "target"
+              },
+              {
+                "group": "Rekrytering",
+                "icon": "user-plus",
+                "pages": [
+                  {
+                    "group": "Karriärsida",
+                    "pages": [
+                      "sv/career-page"
+                    ]
+                  },
+                  {
+                    "group": "Rekrytering",
+                    "pages": [
+                      "sv/message-templates"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Handböcker & nyheter",
+                "icon": "book-open",
+                "pages": [
+                  {
+                    "group": "Företagshandböcker",
+                    "pages": [
+                      "sv/company-corner"
+                    ]
+                  },
+                  {
+                    "group": "Nyheter",
+                    "pages": [
+                      "sv/news"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Medarbetarresan",
+                "icon": "refresh-cw",
+                "pages": [
+                  {
+                    "group": "Avtal",
+                    "pages": [
+                      "sv/create-contract-templates"
+                    ]
+                  },
+                  {
+                    "group": "Anställning",
+                    "pages": [
+                      "sv/hiring-templates",
+                      "sv/employee-templates"
+                    ]
+                  },
+                  {
+                    "group": "Övrigt",
+                    "pages": [
+                      "sv/quick-add-employee"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Ersättning",
+                "icon": "wallet",
+                "pages": [
+                  {
+                    "group": "Löner",
+                    "pages": [
+                      "sv/salary-types",
+                      "sv/create-salary-change-reason",
+                      "sv/create-variable-pay"
+                    ]
+                  },
+                  {
+                    "group": "Förmåner",
+                    "pages": [
+                      "sv/benefits"
+                    ]
+                  },
+                  {
+                    "group": "Lönerevision",
+                    "pages": [
+                      "sv/salary-review"
+                    ]
+                  },
+                  {
+                    "group": "Lönekartläggning",
+                    "pages": [
+                      "sv/pay-survey"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Incidenter",
+                "icon": "shield-alert",
+                "pages": [
+                  {
+                    "group": "Visselblåsning",
+                    "pages": [
+                      "sv/how-to-use-haileys-whistleblower-service"
+                    ]
+                  },
+                  {
+                    "group": "HMS-avvikelser",
+                    "pages": [
+                      "sv/hse-deviations"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Integrationer",
+                "icon": "plug",
+                "pages": [
+                  {
+                    "group": "Lär känna",
+                    "pages": [
+                      "sv/haileys-standard-integrations",
+                      "sv/guide-for-api",
+                      "sv/guide-for-haileys-mcp"
+                    ]
+                  },
+                  {
+                    "group": "Lön",
+                    "pages": [
+                      "sv/integration-with-fortnox",
+                      "sv/integration-med-hogia",
+                      "sv/integration-with-crona",
+                      "sv/integration-with-agda",
+                      "sv/integration-with-kontek",
+                      "sv/integration-with-kleer",
+                      "sv/integration-with-kleer-salary-and-employee-data",
+                      "sv/integration-with-flex-lon"
+                    ]
+                  },
+                  {
+                    "group": "Användarprovisionering",
+                    "pages": [
+                      "sv/integration-with-okta",
+                      "sv/integration-with-entra-id",
+                      "sv/integration-with-google-workspace"
+                    ]
+                  },
+                  {
+                    "group": "ATS",
+                    "pages": [
+                      "sv/integration-with-teamtailor"
+                    ]
+                  },
+                  {
+                    "group": "Dokument",
+                    "pages": [
+                      "sv/integration-with-kivra"
+                    ]
+                  },
+                  {
+                    "group": "Samarbete",
+                    "pages": [
+                      "sv/integration-with-slack",
+                      "sv/integration-with-teams",
+                      "sv/integration-with-outlook"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "icon": "anchor"
+          },
+          {
+            "tab": "Använda Hailey",
+            "groups": [
+              {
+                "group": "Kom igång",
+                "icon": "rocket",
+                "pages": [
+                  {
+                    "group": "Hailey som chef",
+                    "pages": [
+                      "sv/hr-hub"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Tid & frånvaro",
+                "icon": "clock",
+                "pages": [
+                  {
+                    "group": "Tid",
+                    "pages": [
+                      "sv/report-and-approve-time"
+                    ]
+                  },
+                  {
+                    "group": "Frånvaro",
+                    "pages": [
+                      "sv/time-off-submit",
+                      "sv/time-off-approve-and-change",
+                      "sv/long-term-leave",
+                      "sv/plan-your-holidays-in-hailey",
+                      "sv/time-off-holiday-balance"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Medarbetardata",
+                "icon": "database",
+                "pages": [
+                  {
+                    "group": "Medarbetarlista",
+                    "pages": [
+                      "sv/employee-list"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Arbetsflöden & uppgifter",
+                "icon": "workflow",
+                "pages": [
+                  {
+                    "group": "Hantera arbetsflöden",
+                    "pages": [
+                      "sv/start-and-follow-workflows"
+                    ]
+                  },
+                  {
+                    "group": "Uppgifter",
+                    "pages": [
+                      "sv/quick-tasks"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Prestation",
+                "pages": [
+                  {
+                    "group": "One-to-ones",
+                    "pages": [
+                      "sv/host-one-to-one"
+                    ]
+                  },
+                  {
+                    "group": "360° utvärdering",
+                    "pages": [
+                      "sv/start-and-follow-360-review"
+                    ]
+                  },
+                  {
+                    "group": "Mål",
+                    "pages": [
+                      "sv/employee/goals",
+                      "sv/goals-company-department-team"
+                    ]
+                  },
+                  {
+                    "group": "Undersökningar",
+                    "pages": [
+                      "sv/start-and-follow-your-surveys"
+                    ]
+                  }
+                ],
+                "icon": "target"
+              },
+              {
+                "group": "Kompetens",
+                "icon": "award",
+                "pages": [
+                  {
+                    "group": "Certifikat",
+                    "pages": [
+                      "sv/add-and-verify-certificates"
+                    ]
+                  },
+                  {
+                    "group": "Kompetenser",
+                    "pages": [
+                      "sv/competences"
+                    ]
+                  },
+                  {
+                    "group": "Utbildning",
+                    "pages": [
+                      "sv/add-education-session"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Rekrytering",
+                "icon": "user-plus",
+                "pages": [
+                  {
+                    "group": "Rekryteringar & jobbannonser",
+                    "pages": [
+                      "sv/start-and-manage-recruitment",
+                      "sv/create-and-manage-job-ads"
+                    ]
+                  },
+                  {
+                    "group": "Kandidater",
+                    "pages": [
+                      "sv/candidate-management",
+                      "sv/referencecheck",
+                      "sv/candidate-application-process"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Medarbetarresan",
+                "icon": "refresh-cw",
+                "pages": [
+                  {
+                    "group": "Anställning",
+                    "pages": [
+                      "sv/iniate-hire",
+                      "sv/rehiring-wizard",
+                      "sv/casual-employments"
+                    ]
+                  },
+                  {
+                    "group": "Anställningar",
+                    "pages": [
+                      "sv/employment-wizard",
+                      "sv/assign-substitute",
+                      "sv/add-new-employments-in-bulk",
+                      "sv/employment-statuses",
+                      "sv/terminate-employee"
+                    ]
+                  },
+                  {
+                    "group": "Dokument och signering",
+                    "pages": [
+                      "sv/send-contract-to-one-existing-employee",
+                      "sv/send-contract-to-several-employees",
+                      "sv/upload-document-to-folders"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Ersättning",
+                "icon": "wallet",
+                "pages": [
+                  {
+                    "group": "Löner",
+                    "pages": [
+                      "sv/salary-change",
+                      "sv/manage-variable-pay",
+                      "sv/manage-yearly-variable-additions"
+                    ]
+                  },
+                  {
+                    "group": "Förmåner",
+                    "pages": [
+                      "sv/benefit-change"
+                    ]
+                  },
+                  {
+                    "group": "Lönerevision",
+                    "pages": [
+                      "sv/salary-review-for-managers",
+                      "sv/s",
+                      "sv/salary-review-for-the-managers-manager"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "icon": "users"
+          },
+          {
+            "tab": "Mobil",
+            "pages": [
+              "sv/mobile/test",
+              "sv/mobile-app"
+            ],
+            "icon": "smartphone"
+          },
+          {
+            "tab": "Lär dig",
+            "pages": [
+              "sv/learn/test"
+            ],
+            "icon": "graduation-cap"
+          }
+        ]
+      }
+    ]
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Support",
+        "href": "/support"
+      }
+    ]
+  },
+  "contextual": {
+    "options": [
+      "copy"
+    ],
+    "display": "toc"
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "favicon": {
+    "light": "/favicon.svg",
+    "dark": "/favicon.svg"
+  },
+  "appearance": {
+    "default": "dark"
+  },
+  "metadata": {
+    "timestamp": true
+  },
+  "search": {
+    "prompt": "Fråga Peep "
+  },
+  "background": {
+    "color": {
+      "dark": "#262626"
+    }
+  },
+  "icons": {
+    "library": "lucide"
+  }
+}

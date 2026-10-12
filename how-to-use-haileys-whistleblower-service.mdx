@@ -1,0 +1,176 @@
+---
+title: "Whistleblower service"
+---
+
+Set up your whistleblowing function directly in Hailey in just a few minutes with the help of this guide!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="Dd0MBEN" title="Whistleblower service" />
+
+Make it easy to receive, manage, and follow up on whistleblowing cases. In this guide, you'll learn how to enable whistleblowing, assign handlers, and work with incoming reports. You'll also find answers to common questions about permissions, case management, and data retention.
+
+## About Hailey's whistleblowing feature
+
+With our whistleblowing feature, your organization will be able to **provide a personal link to internal and/or external parties** where they can report certain types of wrongdoing. This will be done in writing and under total anonymity. The feature follows the EU directive with regards to availability, storage and retention. Get started by following the steps below.
+
+## Create an external user
+
+Do you have an **external provider** that will handle whistleblower cases? The individuals or employees responsible for managing whistleblowing cases need to be created as users in your account in order to access the system. **If the handler is already exists in Hailey, this step can be skipped!**
+
+How to create a user:
+
+- Go to **Employees** in the main meny.
+- Click on **Add Employee.**
+- Click on **Quick add** and fill out the employee information.
+
+<Note>
+  The minimum information needed to quick add an employee is **First name**, **Last name**, and **Company email** - all other fields are optional.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-28-2025-10-34-33-4059-AM.png?width=670&height=481&name=image-png-Oct-28-2025-10-34-33-4059-AM.png)
+
+Once your handlers are added to the system, **they need to be invited** in order to get access to incoming whistleblowing reports.
+
+**Select the user in the employee list** and click **Action** - **Send invite**.
+
+<Note>
+  Employees without a **Start date** are labled with employment status **Unknown**.
+
+  If you can't find the handlers in the Employee list after they've been added, make sure to clear all **Employment status** filters in the Employee list, and they will appear!
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-28-2025-10-35-29-9326-AM.png?width=670&height=631&name=image-png-Oct-28-2025-10-35-29-9326-AM.png)
+
+## How to set up Whistleblowing in Hailey
+
+To set up the whistleblower feature, go to **Incidents** in the from the homescreen. Then click the **settings icon** in the **top-right corner.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-20-2026-01-27-48-8231-PM.png?width=670&height=100&name=image-png-Apr-20-2026-01-27-48-8231-PM.png)
+
+Navigate to the **Whistleblowing** tab and then **Edit**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-17-2026-07-06-58-4273-AM.png?width=2030&height=891&name=image-png-Jul-17-2026-07-06-58-4273-AM.png)
+
+- In the settings, start by **activating the whistleblower feature**.
+- The whistleblowing function will only become visible once you choose to link the whistleblowing page on your website, internally in Hailey, or in any other location where you want it to be accessible. **You can find instructions further down in the guide on how to copy the link.**
+- **Choose handlers,** meaning the individuals who will be responsible for managing the cases.
+- Under **Description of handling** you describe how incoming cases are managed. This text will be shown to the whistleblower when submitting a report.
+- Click **Save** when you are satisfied.
+
+<Note>
+  For your whistleblowing text, some good points to include are:
+
+  - **A verbal option where the whistleblower can turn to**, such as a phone number and a contact person in case the whistleblower wishes to have a phone call/meeting.
+  - **Who, or which position/function in the organisation**, receives and handles the case.
+  - What qualifies as a whistleblower case.
+  - How your company handles whistleblowing reports.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-20-2026-01-41-49-8215-PM.png?width=670&height=451&name=image-png-Apr-20-2026-01-41-49-8215-PM.png)
+
+Then copy the link to the whistleblowing page by clicking on **“Link to the whistleblowing page**”. This is the link you will use on your website, internally in Hailey, or in any other location where you want it to be accessible.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-20-2026-01-43-38-9459-PM.png?width=670&height=500&name=image-png-Apr-20-2026-01-43-38-9459-PM.png)
+
+<Warning>
+  **Does your company include multiple legal entities?** Then you will need at least one handler per legal entity. Clarify this in your text and make sure to ask the whistleblower to clarify which legal entity the whistleblowing concerns.
+
+  **Does one of these legal entities have more than 249 employees?** Then you will need a separate account for this legal entity to handle their whistleblowing reports in.
+</Warning>
+
+## How whistleblowers report concerns
+
+Through the link, **whistleblowing concerns can be reported** to and about your company. In the portal where concerns are reported the whistleblower will include:
+
+- Your logo and your text
+- A field where the concern can be described
+- An email field
+- A text regarding how the whistleblower’s email and anonymity are handled. This text is provided by Hailey.
+
+<Note>
+  The whistleblower can **choose whether they want to provide an email address or not.**
+
+  If the individual chooses not to provide an email address, they still have the opportunity, after submitting their report, to copy a link and save it in order to follow up on potential communication from the handler. The link is displayed only on this occasion.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2025-02-20-02-4695-PM.png?width=670&height=450&name=image-png-Aug-07-2025-02-20-02-4695-PM.png)
+
+When the whistleblower has submitted their case, **they will receive a confirmation** as follows. The content of the message depends on whether an email address has been provided or not.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2025-02-20-57-0992-PM.png?width=667&height=392&name=image-png-Aug-07-2025-02-20-57-0992-PM.png)
+
+Whistleblowers who **have not provided an email address** have the opportunity to **copy and save the link somewhere to enable following the case.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2025-02-21-09-7701-PM.png?width=670&height=393&name=image-png-Aug-07-2025-02-21-09-7701-PM.png)
+
+## Receiving and handling a whistleblowing report
+
+When a report is made **an email is sent to the handlers regarding the report.** The whistleblower also gets an email describing what happens next (given the whistleblower provided an email).
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2025-02-22-22-9574-PM.png?width=664&height=418&name=image-png-Aug-07-2025-02-22-22-9574-PM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-20-2026-01-51-12-4157-PM.png?width=665&height=456&name=image-png-Apr-20-2026-01-51-12-4157-PM.png)
+
+The report ends up in Hailey under **Whistleblowing**, which you access via **Incidents** in the main menu.
+
+Each report gets a unique whistleblowing report ID. You’ll also see the **status**, whether the whistleblower has provided an email address or not, **the report date,** **when the last reply was sent**, and **who replied last**.
+
+The status **Open** implies that the report is active and should still be handled.
+
+<Note>
+  This Whistleblowing report in **Incidents** is only available for the employees you chose as handlers. If you, the admin, are not a handler, you will not have access to this report.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-09-2026-12-51-03-6269-PM.png?width=670&height=386&name=image-png-Mar-09-2026-12-51-03-6269-PM.png)
+
+- **Click on a report** to view the reported case.
+- This is where you can reply to the report and **have a dialogue with the whistleblower anonymously.**
+- Feedback and dialogue can occur regardless of whether the whistleblower has provided an email address or not. **The email address will not be revealed to the handler or company.**
+- When you reply to a concern, the whistleblower will receive an email with a link through which they can **view your response and reply to it.**
+- If the whistleblower **has not provided an email address,** any further communication relies on the whistleblower having copied and saved the link at the time the report was submitted. In such cases, it is less likely that the whistleblower will see the case handler’s responses, as they must actively use the link to follow up on the case.
+- **All report history is saved** to make sure you can always go back and track the report and messages.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-20-2026-02-07-04-2794-PM.png?width=670&height=458&name=image-png-Apr-20-2026-02-07-04-2794-PM.png)
+
+## Close a report
+
+- When a report has been handled and is considered done, you can **close the report through the three dots on the right-hand side of the report.** The report is thereafter sorted as Closed. All closed reports can be found if you filter the list on status Closed to the left.
+- If the whistleblower has provided an email, they will get an email when you close the report.
+- When a report is closed, **you will still be able to see the history of the report**, however, you will not be able to open the report again. Meaning you will not be able to reach the whistleblower again.
+- The report and it's history is **saved in Hailey for two years** in accordance with the EU’s whistleblowing directive. The report will be deleted **two years after the report is being closed.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-20-2026-02-04-56-0392-PM.png?width=670&height=215&name=image-png-Apr-20-2026-02-04-56-0392-PM.png)
+
+## Rights
+
+Following rights are relevant to gain access to the **Whistleblowing function.**
+
+- There are no specific Rights tied to **Whistleblowing**. To manage whistleblowing cases, a user must be assigned as a **handler**.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Does Hailey delete whistleblowing reports?">
+    Hailey deletes a report two years after it has been closed.
+  </Accordion>
+
+  <Accordion title="Can you open a closed report?">
+    You cannot open a closed report or communicate with the Whistleblower once its closed.
+  </Accordion>
+
+  <Accordion title="Will previous reports disappear if I disable the whistleblowing feature?">
+    No, previous whistleblowing reports are not removed if you disable the whistleblowing feature. Existing reports remain in the system and can still be accessed by designated handlers.
+  </Accordion>
+</AccordionGroup>

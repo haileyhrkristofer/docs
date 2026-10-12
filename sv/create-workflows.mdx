@@ -1,0 +1,257 @@
+---
+title: "Skapa arbetsflöden"
+---
+
+## Vill du automatisera dina HR-processer och se till att inget faller mellan stolarna? Läs då den här guiden för att få tips och instruktioner för hur du skapar ett Arbetsflöde
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="PIdeVo0" title="Skapa arbetsflöden" />
+
+### Vad är arbetsflöden?
+
+Arbetsflöden i Hailey är automatiserade processer som hjälper till att hantera HR-relaterade uppgifter och aktiviteter. De består av steg och uppgifter som kan tilldelas medarbetare, chefer eller team. Arbetsflöden kan startas manuellt, baserat på frånvaro, specifika eller återkommande datum. De hjälper till att automatisera processer som onboarding, offboarding och påminnelser, vilket säkerställer att uppgifter utförs vid rätt tidpunkt. Arbetsflöden kan också använda egna fält och omfattning för att säkerställa att rätt uppgifter når rätt personer.
+
+Det finns **fyra typer av triggers för arbetsflöden**:
+
+- Datumrelaterade
+- Frånvaro
+- Manuella
+- Återkommande
+
+De **automatiserade och återkommande arbetsflödena startar per automatik** baserat på den tidsinställning ni valt (upp till 8h fördröjning vid registrering samma dag). De arbetsflöden som aktiveras av **frånvaroanledning** startas baserat på den **trigger** du har valt. De **manuella startas enbart via medarbetarlistan.**
+
+### Skapa ett arbetsflöde
+
+För att skapa ett arbetsflöde, gå till **Inställningar** - **Arbetsflöden** och klicka på **Lägg till** uppe i det högra hörnet. Börja med att ge ditt arbetsflöde en **Titel** och ange en **Beskrivning**. Därefter ska du också välja **Hur arbetsflödet aktiveras**.
+
+Du kan välja mellan fyra olika aktiverare:
+
+- **Datumrelaterat medarbetarfält** - arbetsflödet startas automatiskt utifrån ett datum som finns inlagt på ett medarbetarkort.
+- **Frånvaro** - arbetsflödet startas automatiskt utifrån fördefinierade kriterier för frånvaro. Därefter anger du vilken typ av frånvaro det gäller utifrån de frånvaroanledningar du har skapat.
+- **Manuellt** - arbetflödet startas manuellt via medarbetarlistan eller ett medarbetarkort.
+- **Återkommande** - arbetsflödet startar per automatik på utsatt datum.
+
+När allt är ifyllt, klicka på **Spara** för att börja lägga till **Steg** och **Uppgifter** i arbetsflödet!
+
+<Tip>
+  Håll aktiveraren som **Manuell** under tiden arbetsflödet är under uppbyggnad, och ändra till en automatisk aktiverare först när ni ska gå live med era processer.
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-26-2026-12-35-28-3848-PM.png?width=650&height=330&name=image-png-Aug-26-2026-12-35-28-3848-PM.png)
+
+När du klickat **Spara** hamnar du automatiskt i arbetsflödets redigeringsvy. Härifrån har du möjlighet att lägga till olika **Steg**. Och varje steg du lägger till ska innehålla **Uppgifter**.
+
+- **Steg** = används för att tidsbestämma när uppgifter ska skickas ut, vill man att uppgifter ska skickas ut vid olika tidpunkter ska uppgifterna placeras i olika steg.
+- **Uppgift** = en uppgift tilldelas alltid någon, och innehåller detaljer som beskriver vad som ska göras.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-24-2025-11-27-47-7598-AM.png?width=650&height=326&name=image-png-Sep-24-2025-11-27-47-7598-AM.png)
+
+### Skapa steg
+
+Hailey döper per automatik varje steg som läggs till. Börja därför med ändra namnet på ditt steg. Det gör du genom att klicka på **Step 1**, och sedan ange ett nytt namn som känns passande.
+
+<Note>
+  Att namnge ett steg är ett bra sätt att beskriva var i processen man befinner sig, eller för att ge kontext till vilka uppgifter steget innehåller.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-24-2025-11-31-59-8243-AM.png?width=650&height=320&name=image-png-Sep-24-2025-11-31-59-8243-AM.png)
+
+Steg fungerar som en tidslinje. Vill man att uppgifter ska skickas ut vid olika tillfällen ska man lägga till flera steg. Det gör du genom att klicka på **Lägg till steg** till vänster i redigeringsvyn. Alla uppgifter som ska skickas ut samtidigt ska placeras i samma steg.
+
+### När ska steget aktiveras?
+
+Varje steg har en egen aktiverare. Välj vilken aktiverare varje steg ska ha via rullistan som finns under rubriken **När ska steget aktiveras?** i respektive steg.
+
+Aktiveraren styr när uppgifter i det specifika steget ska skickas ut. Det finns totalt fyra aktiverare att välja mellan.
+
+- **När arbetsflödet startas** - ska alltid användas som aktiverare på det första steget!
+- **Datumrelaterat medarbetarfält** - steget aktiveras av ett datum som finns angett på en medarbetarprofil.
+- **När föregående steg är klara** - steget aktiveras när alla uppgifter i föregående steg har markerats som klara.
+- **Tid efter arbetsflödet startade** - bestäm hur många dagar efter arbetsflödets start steget ska aktiveras.
+
+Notera att **varje steg ska ha en aktiverare**, och att ni själva väljer aktiverare för varje steg!
+
+<Note>
+  Klicka [**HÄR**](https://app.vaam.io/share/4xEdO2H) för att se en kort video som förklarar hur aktiverare fungerar
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-24-2025-11-37-02-9918-AM.png?width=650&height=323&name=image-png-Sep-24-2025-11-37-02-9918-AM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-24-2025-07-57-11-5972-AM.png?width=650&height=314&name=image-png-Sep-24-2025-07-57-11-5972-AM.png)
+
+### Lägg till uppgifter i steg
+
+Alla steg består av uppgifter. En uppgift tilldelas alltid till någon, och består av detaljer som förklarar vad uppgiften innebär. **Lägg till en uppgift** genom att klicka på plustecknet under fågeln.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-24-2025-11-38-28-8779-AM.png?width=650&height=324&name=image-png-Sep-24-2025-11-38-28-8779-AM.png)
+
+När du klickar på plustecknet slussas du direkt in till vyn för att **Skapa en uppgift**.
+
+Börja med att lägga till ett namn i fältet **Uppgift**. Namnet på uppgiften visas för den som har fått den skickad till sig. Efter det alltid bra att ange en **Deadline** för uppgiften!
+
+<Note>
+  Sätter man en **Deadline** kommer det att skickas ut en extra påminnelse till den som har fått uppgiften tilldelat till sig - om deadline har passerat.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-26-2026-12-39-50-1835-PM.png?width=650&height=329&name=image-png-Aug-26-2026-12-39-50-1835-PM.png)
+
+Nu är det dags att fylla i **Detaljer**. Här anger du instruktioner till den som ska utföra uppgiften!
+
+Innehållet i detaljerna är synliga för den som får uppgiften skickad till sig. Så var tydlig med vad som förväntas! Använd gärna **punktlistor**/**understrykning**/**fetmarkering** eller **hyperlänkar** för att göra instruktionerna extra pedagogiska.
+
+Du kan även välja att inkludera mer information om medarbetaren som arbetsflödet körs för. Du inkluderar ytterligare information genom att slå på toggeln (_är knappen svart är datumet inkluderat_).
+
+I exemplet nedan kommer uppgiften att visa medarbetarens **Anställningsdatum**.
+
+<Tip>
+  I ett offboardingflöde kan det vara bra att inkludera information om medarbetarens **Sista anställningsdag**. Medan **Anställningsdatum** är bra att inkludera i ett pre- eller onboardingflöde.
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-24-2025-11-47-41-8489-AM.png?width=650&height=379&name=image-png-Sep-24-2025-11-47-41-8489-AM.png)
+
+Sen ska uppgiften tilldelas till någon. Under **Tilldelad** visas alla möjliga alternativ i en rullista.
+
+- **Den som arbetsflödet körs på** - uppgiften skickas till medarbetaren som flödet har triggats på, har flödet startats på en nyanställd medarbetare är det alltså den nya medarbetaren som får uppgiften.
+- **Personen som medarbetaren rapporterar till** - ett flöde körs alltid på en medarbetare, väljer man det här alternativet skickas uppgiften till den som medarbetaren rapporterar till.
+- **Specifik medarbetare** - här kan du välja en specifik medarbetare som alltid ska utföra den utskickade uppgiften (_oavsett vilken medarbetare det är som flödet körs på_).
+- **Specifikt team** - alla medarbetare som ingår i teamet får uppgiften skickad till sig (_endast en i teamet kan/behöver klarmarkera uppgiften_).
+- **Specifik arbetsgrupp** - alla medarbetare som ingår i arbetsgruppen får uppgiften skickad till sig (_endast en i arbetsgruppen kan/behöver klarmarkera uppgiften_).
+
+<Tip>
+  För att undvika att uppgifter i ett arbetsflöde blir personberoende rekommenderar vi **Arbetsgrupper** framför **Specifik medarbetare**. Skapa hellre en arbetsgrupp med den specifika medarbetaren + ytterligare valfri person för att inget ska falla mellan stolarna.
+</Tip>
+
+### Omfattning
+
+Det finns två olika varianter av omfattning i arbetsflöden. Det går dels att omfatta ett helt flöde, dels enstaka uppgifter i ett arbetsflöde. Syftet med **Omfattning** är att säkerställa att rätt flöden skickas till rätt personer – så att uppgifterna som tilldelas är relevanta och aktuella.
+
+- **Omfatta arbetsflöde:** era processer ser helt olika ut och ni vill styra vilket flöde som ska startas för en specifik del av organisationen - då ska ni omfatta ett helt arbetsflöde.
+- **Omfatta uppgift:** era processer ser överlag identiska ut, det är bara enstaka delar som skiljer sig åt - då ska ni omfatta uppgifter.
+
+Se nedan exempel på när man ska omfatta ett arbetsflöde, och när man ska omfatta en uppgift!
+
+<Note>
+  **Exempel på när man ska omfatta ett arbetsflöde:**
+
+  Om era onboardingprocesser ser helt olika ut beroende på vilken **Anställningsform** nyanställda medarbetare har rekommenderar vi att omfatta **hela arbetsflödet**.
+</Note>
+
+<Note>
+  **Exempel på när man ska omfatta en uppgift:**
+
+  Ni har tre legala enheter. En av enheterna har en extern lönepart. Den externa löneparten behöver bara informeras om medarbetare som anställs på den specifika legala enheten. Då ska ni omfatta uppgiften på **Legal enhet**.
+
+  På bilden är uppgiften omfattad på **Legal enhet** - **Nordic Innovate AB**. Det betyder att den externa löneparten bara får uppgiften **Säkerställ att alla löneuppgifter är på plats!** om medarbetaren som arbetsflödet körs på tillhör den legala enheten Nordic Innovate AB.
+
+  ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-26-2026-12-54-47-4175-PM.png?width=650&height=329&name=image-png-Aug-26-2026-12-54-47-4175-PM.png)
+</Note>
+
+### Frånvaro och Arbetsflöden
+
+Starta ett **arbetsflöde** med **frånvaro som aktiverare** för arbetsflödet.
+
+När du skapar ett arbetsflöde kopplat till frånvaro görs det enligt samma principer som ovan, men här väljer du aktiveraren **Frånvaro**. Här kommer du få fem olika alternativ vad aktiveraren ska baseras på:
+
+- **Tillfällen under en viss period** - används för att se hur ofta frånvaro inträffar, exempelvis för att identifiera återkommande mönster.
+- **Antal dagar under en viss period** - visar den totala omfattningen av frånvaro under en definierad tidsram.
+- **Antal dagar i följd**
+- **Startdatum för långtidsfrånvaro**
+- **Slutdatum för långtidsfrånvaro**
+
+Därefter får du välja vilken av dessa orsaker till frånvaro som arbetsflödet ska baseras på. Dessa alternativ styrs efter hur du har satt upp dina Frånvaroanledningar i Hailey genom **Inställningar** – **Tid & Frånvaro** – **Frånvaroanledningar**. Se mer hur du sätter upp dessa **[HÄR](/sv/tid-och-franvaro-installningar#franvaroanledningar).**
+
+### Egna fält och Arbetsflöden
+
+Har ni skapat **Egna fält** av typen **Datum** eller **Medarbetare** kan ni använda dessa för att göra era arbetsflöden ännu mer djupgående.
+
+- **Eget fält (Datum) -** väljer ni **Datumrelaterat medarbetarfält** som aktiverare har ni möjlighet att trigga arbetsflödet på alla egna fält som har typen **Datum.**
+- **Eget fält (Medarbetare)** - har ni lagt till egna fält av typen **Medarbetare** dyker fältet upp som alternativ i rullistan när ni ska **Tilldela** en uppgift.
+
+<Tip>
+  **Exempel på arbetsflöde som aktiveras av eget datumfält:**
+
+  För att hålla koll på ID-handlingar som håller på att löpa ut har det skapats ett **Eget fält** som heter **Gör ny ID-kontroll** och är av typen **Datum**.
+
+  I det här exemplet kommer arbetsflödet att aktiveras 30 dagar före datumet som finns inlagt i fältet Gör ny ID-kontroll på medarbetarprofilen.
+
+  ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-11-2025-09-15-11-0775-AM.png?width=670&height=336&name=image-png-Jul-11-2025-09-15-11-0775-AM.png)
+
+  I det här fallet hade arbetsflödet startats på Albin 30 dagar innan 2025-01-26.
+
+  ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-26-2026-12-57-02-0738-PM.png?width=1254&height=642&name=image-png-Aug-26-2026-12-57-02-0738-PM.png)
+</Tip>
+
+<Tip>
+  **Exempel på uppgift som tilldelats ett Eget fält av typen Medarbetare:**
+
+  Uppgiften i det här arbetsflödet **Tilldelas** den som finns angiven i fältet **Onboarding-kompis** på medarbetarprofilen som arbetsflödet körs på.
+
+  ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-11-2025-09-20-53-2559-AM.png?width=670&height=351&name=image-png-Jul-11-2025-09-20-53-2559-AM.png)
+
+  Låt oss säga att det körs ett onboardingflöde på Hanna, och att det finns en uppgift i flödet som ska **Tilldelas** - **Onboarding-buddy**.
+
+  Adam är inlagd som **Medarbetare** i fältet **Onboarding-buddy** på Hannas profil. Det betyder att uppgiften **Planera välkomstlunch** skickas till Adam!
+
+  ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-26-2026-12-58-00-3340-PM.png?width=650&height=333&name=image-png-Aug-26-2026-12-58-00-3340-PM.png)
+</Tip>
+
+### Inspiration till arbetsflöden
+
+Här är några exempel på arbetsflöden som ni kan skapa:
+
+- Påminnelse inför att provanställning eller tidsbegränsad anställning löper ut
+- Påminnelse under och när en medarbetare återvänder till arbetet efter en längre frånvaro, som tjänsteledighet eller föräldraledighet
+- En återkommande påminnelse om rutinmässig säkerhetsinspektion
+- Påminnelse för alla händelser som ingår i ert HR-årshjul
+- Påminnelse till chefer om att planera in sina medarbetarsamtal
+
+Webhookuppgifter i Arbetsflöden
+
+I arbetsflöden kan ni även skapa uppgifter som skickar en webhook till ett annat system. Detta innebär att **Hailey kan meddela det andra systemet i realtid** när steget som innehåller denna uppgift triggas.
+
+När du skapar en uppgift av denna typ börjar du med att namnge uppgiften. Uppgiftstiteln kommer endast synas i Hailey, så ni kan se att uppgiften slutförts och webhooken skickats. Till näst lägger du in **den URL du vill att uppgiften ska skickas till** då den triggas. Du kan även inkludera egna variabler genom att klicka på "Lägg till variabler"
+
+Webhooks skickas med användning av POST-metoden med JSON i kroppen som innehåller medarbetar-ID:t för den person arbetsflödet körs på samt de eventuella variabler ni lagt upp i uppgiften. Om webhooken inte kan skickas pga exempelvis en felaktig URL kommer ett mail skickas från Hailey till företagsadmin, där vi beskriver vilken uppgift som misslyckats.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-26-2026-02-21-09-4653-PM.png?width=650&height=321&name=image-png-Aug-26-2026-02-21-09-4653-PM.png)
+
+### Rättigheter
+
+Det finns olika rättigheter kopplade till arbetsflöden i Hailey. Samtliga ställs in via Inställningar - Säkerhet - Roller och rättigheter. **Nedan redogör vi för de rättigheter som påverkar arbetsflöden:**
+
+- **Starta arbetsflöde**
+- **Följa arbetsflöden**
+- **Se och slutföra uppgifter åt andra**
+
+<Note>
+  Vill ni läsa mer om **Roller & rättigheter** i Hailey? Klicka då [HÄR](/sv/roles-and-rights).
+</Note>
+
+## Vanliga fragor
+
+<AccordionGroup>
+  <Accordion title="Hur får jag notifikationer i Teams eller Slack?">
+    **Svar:** Om ni vill få notiser om nya uppgifter i Teams eller Slack kan ni kika på våra guider över hur ni kan koppla ihop Hailey och Teams/Slack:
+
+    - [TEAMS](/sv/integration-with-teams)
+    - [SLACK](/sv/integration-with-slack)
+  </Accordion>
+
+  <Accordion title="Hur kan vi konfigurera arbetsflödet så att endast en av medlemmarna i en arbetsgrupp behöver slutföra uppgiften?">
+    **Svar:** Genom att välja alternativet **Specifik arbetsgrupp** under fliken **Tilldelad** får alla medlemmar i arbetsgruppen uppgiften tilldelad. Det räcker dock att **en person** markerar uppgiften som slutförd för att den ska anses vara genomförd.
+
+    Läs mer om hur du tilldelar uppgifter [HÄR](#Tilldelad).
+  </Accordion>
+</AccordionGroup>

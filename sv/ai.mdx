@@ -1,0 +1,174 @@
+---
+title: "AI-inställningar"
+---
+
+Upptäck hur AI fungerar i Hailey, vilka faktorer att beakta och de möjligheter som finns!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="8gnfTFI" title="AI-inställningar" />
+
+## Hur AI fungerar i Hailey
+
+Hailey erbjuder AI-funktioner som kan hjälpa till med bland annat informationssökning, innehållsgenerering och automatisering. AI kan användas i chatboten Peep, för att skapa kontraktsmallar, jobbannonser och undersökningsmallar samt för att förbättra botfunktioner i exempelvis Teams och Slack. AI är frivilligt, avstängt som standard och har endast tillgång till information som finns i Hailey och dess godkända datakällor.
+
+<Note>
+  Hailey, som ett system, är inte ansvarigt för innehållet som genereras av AI:n.
+</Note>
+
+- AI:n bygger på den öppna modellen Gemma från Google och levereras av den europeiska tjänsteleverantören Scaleway S.A.S.
+- Det är viktigt att notera att användningen av AI är helt frivillig och inte obligatorisk. AI-inställningarna är som standard inaktiverade i Hailey.
+- Ansvaret för att informera medarbetare om hur AI används inom Hailey åligger er som organisation.
+
+Om du är intresserad av att få mer information om leverantörerna av de AI-funktioner som Hailey använder, kan du hitta mer information via länkarna nedan:
+
+- [Google Gemma](https://ai.google.dev/gemma/docs/core)
+- [Scaleway Managed Inference](https://www.scaleway.com/en/inference/)
+
+Du hittar Haileys AI-inställningar under **Inställningar** - **Säkerhet** - **AI**. Här konfigurerar du era AI-preferenser. Nedan hittar du mer information om varje specifik funktion.
+
+<Note>
+  AI-inställningar kan endast redigeras av Admin-användare i Hailey.
+</Note>
+
+## Peep - AI-Chatbot
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-15-2026-12-06-19-1067-PM.png?width=670&height=311&name=image-png-Jul-15-2026-12-06-19-1067-PM.png)
+
+Peep finns tillgängligt för samtliga medarbetare i mobilappen. Det är ett hjälpmedel för att snabbt hitta information om företagets medarbetare, samt för att räkna och sammanställa medarbetardata, exempelvis uppdelat per avdelning, kontor eller annan tillgänglig information.
+
+**Vad kan Peep göra?**
+
+- Söka upp information från medarbetarlistan
+- Hämta information om enskild medarbetare
+- Räkna och sammanställa **antal medarbetare**
+- Söka bland och lista **artiklar** från Company Corner
+- Svara på frågor baserat på innehållet i **Company Corner-artiklar**
+
+**Vilken information har Peep tillgång till?**
+
+- All information man kan hitta i medarbetarlistan förutom Löner
+- Alla publicerade **Artiklar** i företagshörnan
+
+<Note>
+  Peep kan inte ta fram och sammanställa era medarbetares löner, läsa innehållet i uppladdade dokument i Företagshörnan eller svara på frågor som kräver information utanför de datakällor den har tillgång till.
+</Note>
+
+## Kontrakt
+
+Om du tillåter AI i kontrakt innebär det att vid skapande av kontraktsmallar kan ditt team använda AI för att hjälpa till med att utforma innehållet.
+
+<img src="https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-15-2026-12-05-09-6206-PM.png?width=651&height=303&name=image-png-Jul-15-2026-12-05-09-6206-PM.png" alt="" /> Användare kan nu använda detta genom att gå till **Inställningar** - **Kontraktsbibilotek**, klicka på **Lägg** **till** och välja **AI-generera**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-07-11-51-4425-PM.png?width=670&height=355&name=image-png-Sep-21-2026-07-11-51-4425-PM.png)
+
+Användare behöver sedan ange den information som krävs för att skapa önskad mall. När användaren klickar på **Generera** kommer mallen att skapas.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-07-12-29-1530-PM.png?width=670&height=355&name=image-png-Sep-21-2026-07-12-29-1530-PM.png)
+
+När mallen är genererad kommer en förhandsgranskning av den genererade mallen att visas. Här finns möjligheten att välja mellan att **Avbryta**, **Redigera** eller **Spara** den.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-07-14-52-6713-PM.png?width=670&height=355&name=image-png-Sep-21-2026-07-14-52-6713-PM.png)
+
+Om användare väljer att redigera kan de justera mallen genom att till exempel lägga till koder och fritextrutor. Från denna vy kan användare redigera mallen på samma sätt som när de skapar den från grunden.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-07-15-40-1459-PM.png?width=670&height=355&name=image-png-Sep-21-2026-07-15-40-1459-PM.png)
+
+## Bot
+
+När du pratar med vår bot i valfri kanal (Teams, Slack eller annan), kommer vår Hailey Bot att kunna hjälpa er med en mängd olika frågor. Om detta är inaktivt kan boten bara svara på vissa fördefinierade kommandon.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-15-2026-12-05-53-3550-PM.png?width=670&height=311&name=image-png-Jul-15-2026-12-05-53-3550-PM.png)
+
+Nedan ser ni ett exempel på hur detta ser ut i Teams.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-28-2024-08-54-44-7989-AM.png?width=670&height=227&name=image-png-May-28-2024-08-54-44-7989-AM.png)
+
+<Note>
+  Det är viktigt att integrationen för respektive system måste vara aktiverad för att boten ska kunna användas. Läs gärna mer om Hailey Teams bot **[H](/sv/integration-with-teams)ÄR** och Hailey Slack bot [**HÄR!**](/sv/integration-with-slack)
+</Note>
+
+Rekrytering
+
+Om du aktiverar AI för rekrytering har du möjlighet att skapa detaljerade arbetsbeskrivningar samt generera AI-baserade CV-sammanfattningar med hjälp av Peep. Klicka på **Rekrytering** för att aktivera AI-inställningen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-15-2026-12-06-04-4032-PM.png?width=670&height=311&name=image-png-Jul-15-2026-12-06-04-4032-PM.png)
+
+### Generera en arbetsbeskrivning
+
+När inställningen är aktiverad låter den medarbetare som har tillgång till rekrytering i Hailey att skapa kreativa och detaljerade arbetsbeskrivningar. Klicka på **AI-assistans** för att generera en arbetsbeskrivning.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-07-17-21-8896-PM.png?width=670&height=356&name=image-png-Sep-21-2026-07-17-21-8896-PM.png)
+
+Användare behöver sedan ange den information som krävs för att skapa önskad arbetsbeskrivning. När användaren klickar på **Generera** kommer arbetsbeskrivningen skapas utifrån de instruktioner ni har fyllt i.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-07-18-08-5296-PM.png?width=670&height=355&name=image-png-Sep-21-2026-07-18-08-5296-PM.png)
+
+När mallen är genererad kommer ett förslag av den genererade arbetsbeskrivningen att visas. Här finns möjligheten att välja mellan att **Avbryta**, **Regenerera** eller **Infoga** arbetsbeskrivningen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-07-19-10-2278-PM.png?width=670&height=355&name=image-png-Sep-21-2026-07-19-10-2278-PM.png)
+
+Om användaren väljer att Infoga arbetsbeskrivningen går det att från denna vy redigera arbetsbeskrivningen på samma sätt som när den skapas från grunden. Läs mer om hur man skapar jobbannonser **HÄR!**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-07-20-02-2856-PM.png?width=670&height=354&name=image-png-Sep-21-2026-07-20-02-2856-PM.png)
+
+### Generera en CV-summering från Peep
+
+När inställningen är aktiverad kommer Peep att generera en CV-sammanfattning för kandidater i en rekryteringsprocess. CV-sammanfattningar skapas både för kandidater som ansöker via rekryteringsprocessen och för kandidater som läggs till manuellt. Efter att ett CV har laddats upp kan det ta upp till en minut innan sammanfattningen visas.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-07-29-04-9937-PM.png?width=670&height=356&name=image-png-Sep-21-2026-07-29-04-9937-PM.png)
+
+<Note>
+  Peep sammanfattar endast dokument som laddas upp via fält för **CV, Resumé** eller **Curriculum Vitae** (eller liknande). Dokument som laddas upp via andra fält, exempelvis **Passkopia**, sammanfattas inte.
+</Note>
+
+## Undersökningar
+
+Om du aktiverar AI för Undersökningar kan du använda AI för att skapa undersökningsmallar samt generera Peep-sammanfattningar baserade på dina resultat. Klicka på **Undersökningar** för att aktivera funktionen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-15-2026-12-06-19-1067-PM.png?width=670&height=311&name=image-png-Jul-15-2026-12-06-19-1067-PM.png)
+
+### Generera en undersökningsmall
+
+När inställningen är aktiverad kan alla användare som har rätt att Visa & ändra **Undersökningsmallar** generera dem med AI. När du lägger till en ny undersökningsmall får du sedan möjlighet att generera med AI.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-07-20-43-8940-PM.png?width=670&height=355&name=image-png-Sep-21-2026-07-20-43-8940-PM.png)
+
+Börja med att välja det antal svar som krävs innan du kan se resultaten av din undersökning. Fyll sedan i den information som behövs för att skapa den undersökningsmall du vill ha. När du klickar på **Generera** kommer din mall att skapas. Detta kan ta upp till en minut.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-21-2026-07-21-21-1434-PM.png?width=670&height=356&name=image-png-Sep-21-2026-07-21-21-1434-PM.png)
+
+När mallen har genererats kan du välja att avbryta, redigera eller spara mallen. När mallen har sparats kommer den att kunna väljas när du skickar ut en undersökning via medarbetarlistan. Läs mer om hur du skickar undersökningar [**HÄR!**](/sv/start-and-follow-your-surveys)
+
+### Generera en Peep-sammanfattning från dina resultat
+
+När inställningen är aktiverad får du möjlighet att **Generera Peep-sammanfattning** av resultaten när du avslutar din undersökning.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-03-2026-02-56-57-4731-PM.png?width=670&height=351&name=image-png-Jul-03-2026-02-56-57-4731-PM.png)
+
+Det är också möjligt att generera en AI-sammanfattning för undersökning som redan har stängts. Klicka på **Hantera - Sammanfatta undersökningen med Peep**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-03-2026-03-00-13-4969-PM.png?width=665&height=348&name=image-png-Jul-03-2026-03-00-13-4969-PM.png)
+
+Peep genererar en sammanfattning för varje sektion på företagsspråket. Du kan sedan ge feedback på sammanfattningen genom att klicka på **tummen upp** eller **tummen ner** och lämna en kommentar.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-30-2026-09-04-26-1109-AM.png?width=670&height=350&name=image-png-Aug-30-2026-09-04-26-1109-AM.png)
+
+## Vanliga fragor
+
+<AccordionGroup>
+  <Accordion title="Kan Haileys AI hämta information utanför systemet?">
+    Nej, Haileys AI är ett textgenereringsverktyg som endast har tillgång till information som finns tillgänglig i systemet. Den kan inte hämta eller söka efter information från externa källor.
+  </Accordion>
+</AccordionGroup>

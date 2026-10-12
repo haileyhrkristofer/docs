@@ -1,0 +1,87 @@
+---
+title: "Haileys standard integrations"
+---
+
+In this guide you'll get an introduction to Hailey's standard integrations – what they are, what they can do for you, and what's worth keeping in mind before activating one.
+
+FAQ's
+
+## What are standard integrations in Hailey?
+
+These are ready to use integrations built by Hailey that connect Hailey to other systems – either via API or file transfer. They are free of charge and our customers can activate them on their own.
+
+The integrations are built to suit as many customers as possible, with a focus on covering the most common needs for syncing and keeping employee data updated between systems.
+
+In most cases, Hailey acts as the *master* – meaning changes are made in Hailey first, and then updated data will pass on to other systems. And not the other way around.
+
+You'll find the available integrations via **Settings** - **Integrations** in Hailey. Information and relevant instructions for each integration can be found **[HERE](/haileys-standard-integrations)**.
+
+## Hailey as master
+
+In almost every standard integration, Hailey is the master. This means Hailey is acting as the source of truth for included data, and that the corresponding system will *receive* data *from* Hailey.
+
+<Note>
+  Each integration guide shows a table with **Included data** that lists what fields Hailey acts as master for. Any data not listed in the table is not affected by the integration.
+</Note>
+
+When activating a standard integration where Hailey acts as master it's important that all changes and administration of included data is made in Hailey - not in the other system.
+
+Having one single place where it's easy to manage employee data is an important part of keeping it up to date. Hailey is built to be used by everyone in the organisation – not just HR.
+
+If managers and employees manage their own data directly in Hailey – based on the rights they have – data is more likely to stay accurate. And with Hailey as the master, you only need to update information in one place. This saves time and reduces the risk of inconsistencies across systems.
+
+## What can standard integrations do for you?
+
+Standard integrations connect Hailey to other systems to relieve our customers from basic, time consuming and repetitive work, by making sure you don't have to update the same information in multiple places.
+
+Here are some examples of what a standard integration can do for you:
+
+- Automatically create or deactivate users
+- Sync changes in employee or salary data
+- Sync time off data to another system
+- Send reminders for birthdays or new employees
+
+<Note>
+  Every integration works differently. Always read through the integration guide to confirm which data is included, how it's transferred, and what steps are required to activate it.
+</Note>
+
+We know that not everyone has the resources to build their own integration – that's why we offer standard integrations that are free to activate and ready to use.
+
+If a standard integration doesn't fully cover your needs, there are a few options:
+
+- **Build your own:** Use Hailey's API to build a custom integration, either with your own team or with the help of a third-party partner.
+- **Let Hailey help:** We have our own integration department that can help you build a tailored solution based on your needs.
+
+<Tip>
+  Want Hailey to help you customise an integration? Reach out to your **Customer Success contact** to get started.
+</Tip>
+
+<Tip>
+  Prefer to build your own integration? Check out our **API** documentation **[HERE](https://api.haileyhr.app/docs/index.html)** and learn how to retrieve access tokens and get started [/guide-for-api](/guide-for-api)**HERE**.
+</Tip>
+
+## Best practices before activating
+
+With the right preparation, activating an integration takes no more than 10 minutes. Here's what we recommend keeping in mind before you get started:
+
+- **Make sure all data is in place:** It's easier to get it right and do it properly from the start, so make sure all relevant data (*including historical data*) is in place before you activate.
+- **Involve the right people:** Activating an integration is often a team effort! IT or payroll admins may need to be involved since they often have admin access in the other system.
+- **Pick the right time:** If the integration includes time off or salary data, avoid activating close to a payroll run. Give yourself some breathing room.
+- **Name things consistently:** Use names for e.g. time off reasons and salary types that everyone involved will recognise. It makes mapping between systems a lot easier.
+- **Double-check names and formatting:** If the integration requires specific fields to be created in Hailey, make sure spelling matches exactly what's specified in the guide before activating.
+- **Spread the word:** Before activating, make sure everyone who manages included data knows in what platform changes should be made.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Can we manage included data in both Hailey and the other system we've integrated to?">
+  No, if you've activated an integration where Hailey acts as master all changes to included data must be made in Hailey. Otherwise, any changes made directly in the other system will be overwritten the next time data is transferred from Hailey.
+  </Accordion>
+  <Accordion title="Is it possible to add more custom data to a standard integration?">
+  No, the fields in the **Included data** are fixed and cannot be changed. If you need more than what the standard integration offers, there are two options:
+
+  - Build a custom integration that complements the standard one using our **API**. Find the documentation [HERE](https://api.haileyhr.app/docs/index.html).
+
+  - Reach out to your **Customer Success contact** to learn more about how Hailey's integration department can help you build a tailored solution.
+  </Accordion>
+</AccordionGroup>

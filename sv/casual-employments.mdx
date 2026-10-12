@@ -1,0 +1,307 @@
+---
+title: "Initiera behovsanställning"
+---
+
+Har ni medarbetare som anställs för att arbeta när behov uppstår? Med Haileys behovsanställningar tillgängliggör ni medarbetare och signerar kontrakt för arbetstillfällen.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="GjAPJWa" title="Initiera behovsanställning" />
+
+## Vad är en behovsanställning?
+
+Behovsanställningar är ett sätt att göra medarbetare tillgängliga för arbete vid behov. I Hailey används behovsanställningen som en ram under en bestämd period. När det blir aktuellt för medarbetaren att arbeta kan ni enkelt skapa och signera en ny anställningsperiod inom den fördefinierade perioden.
+
+<Note>
+  Behovsanställningar är inte påslaget i ert Hailey per automatik. Kontakta Customer Success om ni vill komma igång med funktionaliteten.
+</Note>
+
+## Innan du sätter igång
+
+För att kunna komma igång med behovsanställningar behöver vissa funktionaliteter finnas på plats. Vi rekommenderar att kika på dessa funktionaliteter nedan. Se till att följa instruktionerna i följande guider:
+
+- **Kontraktsmallar:** Läs mer [HÄR](/sv/create-contract-templates)
+- **Medarbetarmappar:** Läs mer [HÄR](/sv/employee-folders)
+- **Anställningsmallar:** Läs mer [HÄR](/sv/hiring-templates)
+- **Medarbetarmallar** (valfritt)**:** Läs mer [HÄR](/sv/employee-templates)
+
+Standardfälten **Avtalad omfattning (%)** och **Avtalade timmar** är valfria fält att visualisera i anställningsperioden för behovsanställningen. För att de ska visas behöver du aktivera dem som standardfält i Hailey.
+
+- [**HÄR**](/sv/standard-fields) hittar du hur du aktiverar standardfält i Hailey.
+
+## Hur initierar man en helt ny behovsanställning?
+
+Första steget i processen när du initierar en anställning i Hailey är att ange kandidatens grundläggande uppgifter och organisationstillhörighet. Därefter kommer kandidaten att fylla i den information som behövs för att skapa kontraktet, med hjälp av en anställningsmall. När anställningsprocessen är klar är det dags att skicka ut signering för den avtalade perioden.
+
+### Steg 1 - Initiera anställning
+
+Om ni vill skapa upp en ny medarbetare gör ni detta genom initiera anställningsprocess. För att initiera en behovsanställning via en anställningsprocess, följ dessa steg:
+
+- Gå till fliken Medarbetare från huvudmenyn
+- Klicka **Lägg till medarbetare**
+- Välj **Initiera anställning**
+
+Eller,
+
+- Gå till din startsida
+- Klicka på **Initiera anställning**
+
+**Välj Behovsanställning** för att komma vidare. När ni gjort enligt ovan kommer en wizard öppnas.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Nov-20-2025-07-32-19-0879-AM.png?width=670&height=486&name=image-png-Nov-20-2025-07-32-19-0879-AM.png)
+
+Ni kommer nu att guidas genom anställningswizarden. I det första steget väljer ni om ni vill skapa anställningen med hjälp av en **Medarbetarmall** eller fortsätta utan.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-05-2026-11-38-17-8853-AM.png?width=670&height=430&name=image-png-Jun-05-2026-11-38-17-8853-AM.png)
+
+Om ni har skapat **Anställningsmallar** i Hailey kommer ni att få välja vilken av mallarna ni vill använda er av.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-05-2026-11-38-53-2465-AM.png?width=670&height=452&name=image-png-Jun-05-2026-11-38-53-2465-AM.png)
+
+Fyll sedan i grundläggande information om kandidaten, samt ramen för anställningsperioden.
+
+Om ni vill signera med BankID behöver alternativet **Behöver du kandidatens personnummer?** vara aktiverat i detta steg.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-05-2026-11-40-32-4787-AM.png?width=670&height=468&name=image-png-Jun-05-2026-11-40-32-4787-AM.png)
+
+Fylla sedan i information om **Var er nya medarbetare kommer att arbeta**.
+
+<Note>
+  En medarbetare kan ha obegränsat antal behovsanställningar!
+
+  Ska medarbetaren vara tillgänglig för arbete inom ex. olika avdelningar eller på olika arbetsplatser? Då skapar ni en behovsanställning per organisationstillhörighet. Detta går att göra när själva anställningen är färdigställd.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-05-2026-11-41-23-6794-AM.png?width=670&height=612&name=image-png-Jun-05-2026-11-41-23-6794-AM.png)
+
+Fylla i eventuella [**egna anställningsfält**](/sv/custom-fields) av relevans. Annars kan ni lämna fälten tomma. När allt fyllts i klickar ni på den turkosa **Pilen**.
+
+- När du klickat på den turkosa **Pilen** kommer medarbetarens profil att skapas upp i Hailey, och **ett mail** skickas till kandidaten som uppger att ni efterfrågat uppgifter för att färdigställa anställningsavtalet.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-05-2026-11-41-57-0474-AM.png?width=670&height=509&name=image-png-Jun-05-2026-11-41-57-0474-AM.png)
+
+### Steg 2 - Samla in information från kandidaten
+
+I mailet hänvisas kandidaten att ange sin personliga information, samt godkänna att ni har rätt att använda informationen för att generera anställningsavtalet.
+
+<Note>
+  Vill du se mer hur anställningsmallens kandidatportal kan se ut från ett kandidatperspektiv? Kolla på videon högst upp i denna guide eller klicka [**HÄR**](/sv/hiring-templates#kandidatportal).
+</Note>
+
+### Steg 3 - Slutför anställning
+
+När kandidaten har skickat in sina uppgifter får den som initierat anställningen ett mail gällande att denne har en ny uppgift i Hailey att slutföra anställningen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Nov-17-2025-04-03-08-9024-PM.png?width=670&height=134&name=image-png-Nov-17-2025-04-03-08-9024-PM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Nov-20-2025-08-29-38-7397-AM.png?width=670&height=420&name=image-png-Nov-20-2025-08-29-38-7397-AM.png)
+
+Det första steget i denna process är att skapa upp den nya **medarbetarens lön**.
+
+- För behovsanställningar finns endast möjlighet att välja betalningsperioden **Timlön.** Göra val vad gäller Lönens namn, Lönetyp och Summa. Läs mer om lönetyper [**HÄR.**](/sv/salary-types)
+- Lönen kommer ha samma aktiva datum som den behovsanställning ni precis skapat för den nya medarbetaren. Ni behöver därav inte välja några datum för lönen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Nov-20-2025-09-37-16-4928-AM.png?width=670&height=424&name=image-png-Nov-20-2025-09-37-16-4928-AM.png)
+
+Därefter visas en **Sammanfattningen** av de val ni gjort under anställningsprocessen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Nov-20-2025-09-38-10-0880-AM.png?width=665&height=548&name=image-png-Nov-20-2025-09-38-10-0880-AM.png)
+
+I wizardens sista steg kan ni, om ni vill, starta ett arbetsflöde och/eller skicka en länk till preboardingportalen till den nya medarbetaren.
+
+När ni gjort era val klickar ni på turkosa **Bocken** för att fortsätta.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Nov-20-2025-09-38-50-1776-AM.png?width=670&height=418&name=image-png-Nov-20-2025-09-38-50-1776-AM.png)
+
+Den nya medarbetarens profilen är nu skapad i Hailey och all registrerad information finns sparad på profilen.
+
+- Ramen för behovsanställningen hittar ni på medarbetarens profil under **Jobb**, och den skapade lönen under fliken **Kompensation**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-05-2026-11-24-17-6276-AM.png?width=664&height=361&name=image-png-Jun-05-2026-11-24-17-6276-AM.png)
+
+<Note>
+  Vill du följa anställnignsprocessen? Om du vill följa rekryteringsprocessen kan du göra det via **HR Hub - Anställningsprocesser**, förutsatt att du har rättigheten att se fliken.
+</Note>
+
+## Hur lägger man till anställningsperioder för behovsanställda?
+
+När ni har färdigställt den nya medarbetarens behovsanställning kan ni nu signera anställningsperioder. För att signeringen ska vara möjlig behöver följande **tre krav vara uppfyllda:**
+
+> 1. Att den anställningsperiod ni signerar ligger inom datumen för behovsanställningen
+> 2. Att ni har ett kontrakt som används för Anställningsperiod behovsanställning.
+> 3. Att medarbetaren har en timlön.
+
+När samtliga krav är uppfyllda kan ni nu **lägga till en anställningsperiod** på behovsanställningen.
+
+För att **lägga till en anställningsperiod** går ni till medarbetarens profil, klicka på den behovsanställning ni vill skicka ett kontrakt för, slutligen klicka på **Lägg till anställningsperiod**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-05-2026-07-33-36-3978-AM.png?width=670&height=436&name=image-png-Jun-05-2026-07-33-36-3978-AM.png)
+
+Nu öppnas en wizard som kommer hjälpa er genom hela processen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-05-2026-07-49-05-7946-AM.png?width=668&height=423&name=image-png-Jun-05-2026-07-49-05-7946-AM.png)
+
+Det första steget låter er sätta datumen inom vilka den aktuella anställningsperioden ska pågå. Här kan ni fritt välja hur många dagar perioden ska löpa.
+
+Ni kan även fylla i avtalade timmar och omfattning för den kontrakterade anställningsperioden under sektionen Arbetsvillkor (förutsatt att standardfälten för dessa är aktiverade). Saknar ni dessa fält?
+
+- [**HÄR**](/sv/standard-fields) hittar du hur du aktiverar standardfält i Hailey.
+
+<Note>
+  Endast datum som ligger inom anställningens start- och slutdatum kommer att vara valbara vid skapande av anställningsperioder i senare skede.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-08-2026-01-12-53-5497-PM.png?width=670&height=427&name=image-png-Jun-08-2026-01-12-53-5497-PM.png)
+
+Välj sedan om anställningsperioden är en kortare visstid eller vikariat. Om det avser ett vikariat behöver ni ange vem medarbetaren vikarierar för och anledning för vikariatet.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-05-2026-07-35-47-3013-AM.png?width=660&height=417&name=image-png-Jun-05-2026-07-35-47-3013-AM.png)
+
+Nästkommande steg avser att välja vilken lön som gäller för anställningsperioden. Har ni bara en lön på medarbetaren behöver inget val göras, utan då väljer Hailey den som finns.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-05-2026-07-40-03-4566-AM.png?width=661&height=418&name=image-png-Jun-05-2026-07-40-03-4566-AM.png)
+
+När valet av lön är gjort går vi vidare till att välja vilken [**kontaktsmall**](/sv/create-contract-templates#allmant) som ska användas. Har ert valda kontrakt valbara sektioner och/eller fritextrutor? Välj vilka **sektioner** som ska ingå för att gå vidare.
+
+<Note>
+  De kontraktsmallar som kan väljas i detta steg är de kontraktsmallar som har **Anställningsperiod – behovsanställning,** i kontraktsmallens allmänna inställningar.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-05-2026-07-42-49-2980-AM.png?width=670&height=427&name=image-png-Jun-05-2026-07-42-49-2980-AM.png)
+
+Välj sedan signeringsmetod: **Digital** **autograf** eller **BankID**.
+
+Lägg sedan till de personer som eventuellt ska granska och signera kontraktet, samt i vilket ordning. Detta gör du genom att sätta upp signeringsstegen.
+
+- Om du väljer en granskare skickas kontraktet till granskaren för godkännande innan det skickas ut för signering.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-05-2026-07-50-33-9508-AM.png?width=665&height=508&name=image-png-Jun-05-2026-07-50-33-9508-AM.png)
+
+Innan ni skickar iväg kontraktet till potentiell granskare eller signeringspart, får ni en sammanfattning av anställningsperioden.
+
+Här kan ni även förhandsgranska det färdigställda kontraktet genom att klicka på **Förhandsgranska kontrakt.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-08-2026-01-19-01-2943-PM.png?width=670&height=427&name=image-png-Jun-08-2026-01-19-01-2943-PM.png)
+
+Den signerade (eller väntande) anställningsperioden kommer att vara synlig på behovsanställningen under **Anställningsperioder**.
+
+När avtalet granskats och alla parter har signerat kommer avtalet landat på den behovsanställda medarbetarens **Dokument-flik.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-08-2026-01-18-39-2683-PM.png?width=665&height=496&name=image-png-Jun-08-2026-01-18-39-2683-PM.png)
+
+## Viktiga begrepp
+
+- **Behovsanställning:** kan även benämnas som ramanställning, timanställning och intermittent anställning.
+- **Anställningsperiod:** den kontrakterade tidsperioden för den behovsanställde.
+
+## Rättigheter
+
+Som admin i Hailey har du alltid rättigheten att initiera och lägga till en behovsanställning. Om du vill att någon annan, exempelvis chefer, kan du utöka rättigheterna utifrån vad personen ska göra.
+
+<Note>
+  [**HÄR**](/sv/roles-and-rights) kan du läsa om Roller & rättigheter.
+</Note>
+
+**Initiera anställning av behovsanställning**
+
+För att initiera en ny behovsanställning, det vill säga att kunna skapa en anställningsprocess för en helt ny behovsanställd behövs rättigheten; Hantera - Initiera anställning av behovsanställda - Ja.
+
+För att att initiera behovsanställningar med medarbetarmallar - det vill säga att skapa en anställning baserat på fördefinierade värden - behövs rättigheten; Hantera - Initiera behovsanställda med medarbetarmallar - Ja.
+
+#### Lägg till behovsanställning
+
+Rättigheten att Lägga till behovsanställningar, det vill säga att lägga till en behovsanställning manuellt på medarbetarkortet hittar du under: Hantera - Lägg till behovsanställning - Ja.
+
+Därtill krävs rättigheten Visa & Ändra på behovsanställningar. Visa & Ändra ger möjlighet att visa och justera befintliga behovsanställningar.
+
+**Signeringspart från företaget**
+
+Att kunna vara signeringspart från företaget är en rättighet som behöver ställas in **både för** **admin**, och för eventuella övriga medarbetare. Du finner detta under Roller & rättigheter, Andra rättigheter - Kan vara signeringspart från företaget.
+
+---
+
+## Vanliga fragor
+
+### Anställning
+
+**Fråga**: Vad är skillnaden mellan en "vanlig" anställning i Hailey och en behovsanställning?
+
+En vanlig anställning avser oftast en mer långsiktig anställning där anställningsavtalet tecknas en gång och gäller tills vidare eller under en bestämd period.
+
+**Fråga**: Kan jag kombinera behovsanställningar med en "vanlig" anställning?
+
+Ja! En medarbetare kan ha flera behovsanställningar i kombination med vanliga anställningar i Hailey.
+
+**Fråga:** Var kan jag följa anställningsprocessen?
+
+Om du vill följa anställningsprocessen kan du göra det via HR-hub anställningsprocesser, förutsatt att du har rättigheten att se fliken.
+
+**Fråga**: Kan jag skicka ut Kandidatportalen på nytt till kandidaten om det kandidaten inte hittar det ursprungliga mejlet?
+
+Ja, detta kan du göra genom att gå till startsida och öppna den pågående anställningen under **Mina uppdateringar**. Kopiera sedan länken till kandidatportalen och skicka den manuellt till kandidaten.
+
+**Fråga**: Jag vill ta bort/avbryta anställningsprocessen, hur gör jag då?
+
+Om en anställningsprocess har påbörjats men inte slutförts får medarbetaren statusen **I anställningsprocess** i Hailey. För att ta bort denna status behöver du först avbryta anställningsprocessen och därefter, om det behövs, ta bort den övergripande processen.
+
+För att få bort status I anställningsprocess behöver du:
+
+<Steps>
+  <Step title="Gå till medarbetarens profil">
+    Gå till **medarbetarens profil**.
+  </Step>
+  <Step title="Klicka på Hantera - Avbryt anställningsprocess">
+    Klicka på **Hantera** - **Avbryt anställningsprocess**.
+  </Step>
+</Steps>
+
+När anställningsprocessen har avbrutits försvinner statusen **I anställningsprocess**. Medarbetaren får i stället en annan anställningsstatus som exempelvis, Ska börja,  I tjänst, Ska lämna eller Arbetsbefriad. Vilken status som visas beror på vilka **start- och slutdatum** som finns registrerade på medarbetarens anställning.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-03-2026-12-58-03-4561-PM.png?width=670&height=446&name=image-png-Jul-03-2026-12-58-03-4561-PM.png)
+
+Om du även vill ta bort den anställningsprocessen, exempelvis kontraktssignering eller andra steg i anställningsflödet, gör du så här:
+
+<Steps>
+  <Step title="Gå till HR-hub - Anställningsprocess">
+    Gå till **HR-hub - Anställningsprocess**.
+  </Step>
+  <Step title="Klicka på de tre prickarna längst till höger om den aktuella">
+    Klicka på **de tre prickarna** längst till höger om den aktuella processen.
+  </Step>
+  <Step title="Välj Ta bort">
+    Välj **Ta bort**.
+  </Step>
+</Steps>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-03-2026-12-58-34-2966-PM.png?width=670&height=176&name=image-png-Jul-03-2026-12-58-34-2966-PM.png)
+
+Om medarbetaren inte längre ska finnas kvar i systemet kan du ta bort medarbetaren permanent genom att gå medarbetarens profil. Klicka på **Hantera** - **Ta bort medarbetare**. Observera att om du tar bort medarbetaren kommer medarbetaren att tas bort permanent och informationen går inte att återskapa.
+
+### Signering
+
+**Fråga:** Jag får inte upp några kontraktsmallar att välja på när jag ska skapa kontraktet?
+
+De kontraktsmallar som dyker upp i wizarden måste ha kontraktsmall som har **Anställningsperiod – behovsanställning,** i kontraktsmallens allmänna inställningar. Se över om kontraktsmallen är omfattad. Endast se som matchar omfattningen på kontraktsmallen får upp kontraktsmallarna i rullistan.
+
+**Fråga:** Kan jag följa signeringsprocessen någonstans i Hailey?
+
+Ja, du vill **följa signeringsprocessen** via **HR-hub** - **Signeringar** om avtalet fortfarande inväntar granskning eller signering, förutsatt att du har rättigheten att se fliken.
+
+**Fråga**: Var hittar jag det signerade avtalet?
+
+När avtalet har signerats av alla parter kommer avtalet hittas på den behovsanställdes **Dokument-flik** på sitt medarbetarkort. Om du **inte** ser något avtal på medarbetarkortet kan det vara bra att se över rättigheterna för medarbetarmappen. [**HÄR**](/sv/employee-folders) kan du läsa mer om medarbetarmappar.
+
+**Fråga:** Vilka länder stöder signering med BankID?
+
+Signering med BankID fungerar endast för Sverige, Norge, Danmark och Finland i Hailey.

@@ -1,0 +1,200 @@
+---
+title: "Employee templates"
+---
+
+Hiring a new employee requires filling in a lot of information. With Hailey's employee templates, you can prefill common employment details and limit the available options to what is relevant to ensure a smooth hiring experience.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="swzpd61" title="Employee templates" />
+
+## What is an employee template?
+
+Employee templates help streamline the hiring process by predefining employment details such as organizational settings, vacation days, notice period, salary, and other commonly used values. Instead of entering the information manually for every new hire, you can use a template and have these fields filled in automatically.
+
+This not only saves time and reduces administrative work, but also helps ensure consistency across hires. Employee templates are especially useful when managers or multiple people are involved in the hiring process, as key employment details can be prepared and locked in advance.
+
+## How to configure the general settings for employee templates
+
+To create your employee templates, navigate to **Settings** - **Employee.** Click **Add new** in the top right corner.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-13-2026-07-34-40-4703-AM.png?width=670&height=388&name=image-png-May-13-2026-07-34-40-4703-AM.png)
+
+Hailey offers two different types of employment templates — those used for **regular employments** and those used for **casual employments**. Choose witch type of employee templet you want to add.
+
+<Note>
+  The option for casual employments only appears if this feature is enabled in your account. For more information about casual employments, click [**HERE**](/casual-employments).
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-13-2026-07-39-48-6836-AM.png?width=670&height=388&name=image-png-May-13-2026-07-39-48-6836-AM.png)
+
+Give the template a **Name,** select an **Emoji** (optional), and provide a **Description** for the template (optional). All of this is displayed to the user when they are hiring a new employee, to help in choosing the correct one.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-13-2026-08-00-54-5770-AM.png?width=670&height=388&name=image-png-May-13-2026-08-00-54-5770-AM.png)
+
+If needed, you can also choose to scope the template.
+
+If the field is left empty, the template will be available to everyone with the right to initiate hire in Hailey.
+
+<Note>
+  **Note:** The scope applies to the user of the template, not the employee being hired. This means that the template will only be available in the **Initiate hire** wizard to users who belong to the defined scope — for example, Legal Entity, Location, Department, Business Area or Team.
+</Note>
+
+![Skärmavbild 2026-07-28 kl. 14.04.16](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202026-07-28%20kl.%2014.04.16.png?width=670&height=351&name=Sk%C3%A4rmavbild%202026-07-28%20kl.%2014.04.16.png)
+
+The general settings for the template can be adjusted afterward. This can be done by clicking on **Settings** in the upper right corner of the template.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-13-2026-08-17-11-4654-AM.png?width=670&height=266&name=image-png-May-13-2026-08-17-11-4654-AM.png)
+
+## How to define options for employee templates
+
+Once the general settings have been configured, it's time to build the structure of the employee template. The template consists three parts:
+
+- [**Organization**](#Organization)
+- [**Employment definitions**](#employment-definition)
+- [**Salaries**](#Salaries)
+
+Follow the guide to set up each part of the employee template.
+
+**Organization**
+
+<Note>
+  The settings for organization is created for both regular employments and casual employments.
+</Note>
+
+Here, you configure the options available to the template user regarding the new employee's organizational settings. You will encounter up to four different types of settings.
+
+- **Any**: This allows the template user to choose from all options available in the field (e.g., all your different titles)
+- **Selection**: This allows the template user to choose from a selection of options predefined by you
+- **User's ...**: This means the template user cannot make a choice. Instead, the field is populated with the same organizational belonging as the template user
+- **Fixed Value**: This means the template user cannot make a choice. Instead, the value is set to what you have locked the template to
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-13-2026-08-32-49-8233-AM.png?width=670&height=387&name=image-png-May-13-2026-08-32-49-8233-AM.png)
+
+The exception to the options mentioned above is in the settings for **Reports to**. Here, the only available choices are:
+
+- **Any**: This allows the template user to choose from all options available in the field (all employees in your Hailey).
+- **User**: This means the template user will become the person to whom the new employee reports.
+
+**Employment definitions**
+
+<Note>
+  Settings for employment definitions is only created for **regular employment templates.**
+</Note>
+
+To make things easier for your managers, among others, you also have the option to create various employment definitions. Click on the plus icon to add at least one employment definition.
+
+![Skärmavbild 2026-07-28 kl. 14.14.31](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202026-07-28%20kl.%2014.14.31.png?width=670&height=357&name=Sk%C3%A4rmavbild%202026-07-28%20kl.%2014.14.31.png)
+
+Start by selecting an **Emoji** (optional), giving the definition a **Name**, and providing a **Description** (optional).
+
+Then we move on to the first component of the employment definition: **Employment Terms**. Here, you have the opportunity to limit the choices the person hiring can make.
+
+The first things you need to decide on are **Employment definitions.** Choose between
+
+- **Any -** all options available
+- **Fixed value**
+
+The next setting refers to the number of **Hours** per week the template should be set to. Here, you can choose either
+
+- **Any** - free choice
+- **Calculated from scope** - predefine working hours based on the employment rate
+
+![Skärmavbild 2026-07-28 kl. 14.22.35](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202026-07-28%20kl.%2014.22.35.png?width=670&height=403&name=Sk%C3%A4rmavbild%202026-07-28%20kl.%2014.22.35.png)
+
+The **Hours** setting made above is usually combined with our next setting: **Percentage**.
+
+- Here, you decide whether the template user should be allowed to **freely choose the percentage** or if they should have **a selection of options** to choose from. You can also lock the employment definition to a **fixed value**.
+
+<Note>
+  If you have chosen hours for a full-time week, these will be calculated according to the percentage selected.
+
+  For example, if you have set the full-time week to 37.5 hours, and the new employee is to work 50%, this will result in 18.75 hours per week.
+</Note>
+
+![Skärmavbild 2026-07-28 kl. 14.32.04](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202026-07-28%20kl.%2014.32.04.png?width=670&height=352&name=Sk%C3%A4rmavbild%202026-07-28%20kl.%2014.32.04.png)
+
+The final setting for the employment terms refers to the number of **Vacation days.**
+
+- Here as well, you can allow the template user to **choose freely**, **select from your available options**, or lock it to **a fixed value**.
+
+Lastly, you can also define values for **time and time off settings**.
+
+<Note>
+  The available choices in this part of the employment definition are governed by the settings you have made for Time and Time-off. For more information, click [**HERE**](/time-and-time-off-settings).
+</Note>
+
+For the template settings related to time and time off, we have also added the option **No value**. This can be useful if you only use certain or none of the time and time-off options in Hailey.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-13-2026-09-16-06-4436-AM.png?width=450&height=534&name=image-png-May-13-2026-09-16-06-4436-AM.png)
+
+Click **Add** in the lower right corner when your done with the employment definition.
+
+You can **create as many definitions as you need.** To add a new employment definition click one the **plus icon** under the definition.
+
+![Skärmavbild 2026-07-28 kl. 14.35.52](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202026-07-28%20kl.%2014.35.52.png?width=670&height=347&name=Sk%C3%A4rmavbild%202026-07-28%20kl.%2014.35.52.png)
+
+**Salaries**
+
+<Note>
+  The settings for salaries are created for both **regular employments** and **casual employments.**
+</Note>
+
+To make it easier to set the correct salary for new hires, you can define salary ranges yourself using the employee template.
+
+![Skärmavbild 2026-07-28 kl. 14.37.34](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202026-07-28%20kl.%2014.37.34.png?width=670&height=346&name=Sk%C3%A4rmavbild%202026-07-28%20kl.%2014.37.34.png)
+
+Write a **description of the salary**, and then choose whether it should be possible to **select an amount** or **if the amount should be fixed**.
+
+- A fixed amount is typically used only for hourly paid employees but it can, of course, be used in other cases as well. If you choose **Fixed Amount**, you will also need to enter the amount in question.
+
+![Skärmavbild 2026-07-28 kl. 14.43.16](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202026-07-28%20kl.%2014.43.16.png?width=670&height=353&name=Sk%C3%A4rmavbild%202026-07-28%20kl.%2014.43.16.png)
+
+Then, make the appropriate settings for the salary and link it to one or more of the employment definitions you have created.
+
+<Note>
+  When creating an employee template linked to a **casual employment**, the payment period is always **fixed to hourly pay.**
+</Note>
+
+Once you are satisfied, click on **Add**. You can create as many salary settings as you want for your employee template.
+
+![Skärmavbild 2026-07-28 kl. 14.41.24](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202026-07-28%20kl.%2014.41.24.png?width=670&height=327&name=Sk%C3%A4rmavbild%202026-07-28%20kl.%2014.41.24.png)
+
+Once you’re satisfied with the overall setup of the employee template, click **Save** in the top right corner.
+
+## Rights
+
+As an admin in Hailey, you can always initiate hiring using employee templates. If you want other users, such as managers, to be able to initiate hiring with employee templates, they need the right to **Initiate hire with employee template.**
+
+The right to initiating employment **without** a template can be found in the same place. You can read more about Initiate hire in Hailey [**HERE**](/iniate-hire).
+
+<Note>
+  Read more about roles and rights [HERE](/roles-and-rights).
+</Note>
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="can I edit an employee template afterwards?">
+    Yes. You can update both the general settings and the template configuration at any time. Your changes will apply to hiring processes initiated going forward. Ongoing hiring processes using this template will not be affected.
+
+    **Question**: What's the difference between a regular and a casual employment template?
+
+    Employment definitions are only available for regular employment templates.
+  </Accordion>
+
+  <Accordion title="How can I ensure that a manager can only use employee templates intended for their own department?">
+    By applying a **scope** to the employee template, you can control who has access to it. A scoped template is only available to users who belong to the selected scope, such as a Legal Entity, Location, Department, Business Area, or Team.**The scope applies to the user initiating the hire, not to the employee being hired.**
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,108 @@
+---
+title: "Import custom employment fields"
+---
+
+Keep employment information up to date without unnecessary administrative work. With the custom employment fields import, you can quickly import information for multiple employees at once. An efficient way to ensure accurate information in Hailey.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="nCKhzbW" title="Import custom employment fields" />
+
+## Before you get started
+
+Before importing information into the custom employment fields, you must first create these fields in Hailey. Haven't created any custom employment fields yet?
+
+- You can find a guide for creating custom employment fields **[HERE](/custom-fields)**.
+
+## How do you import custom employment fields?
+
+First you need to download the template by going to **Employees** - **Import** - **Custom employment fields**. If you want to download the template for only certain employees, you can start by checking their boxes in the list.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-26-2026-09-30-02-1111-AM.png?width=670&height=466&name=image-png-Aug-26-2026-09-30-02-1111-AM.png)
+
+Here, you can choose whether to download the template **for all employees** or only for the **selected employees**. Click on the option you prefer and the template will download.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-26-2026-09-31-12-6448-AM.png?width=670&height=310&name=image-png-Aug-26-2026-09-31-12-6448-AM.png)
+
+In the template, employees will appear with their EmployeeID, Employment number, Name, Company e-mail, Employment ID, Start- and End date. **It’s important that you do not modify any data in these columns**. The other columns include your own custom employment fields. Enter the data you wish to import into Hailey, one employee per row. Some of the custom employment fields needs to follow a certain format which you can read about [**HERE**](#format).
+
+You can fill in selected information for individual employees, allowing you to choose which data to import into Hailey for each person. Rows where no data has been entered can be left as they are.
+
+<Warning>
+  It’s important to know that the custom employment fields import will **overwrite** any existing data in the affected custom fields.
+</Warning>
+
+Once you have finished filling out the template, it’s time to import. Go to **Employees** - **Import** - **Custom employment fields**. Upload your file by selecting **Click or drag the file here to upload**. Choose your file, and Hailey will begin verifying that all the data in the file is correct.
+
+If any column is incorrectly filled in, an error message will appear indicating which column and row need correction. Make the necessary adjustments and upload the file again.
+
+<Note>
+  If there are errors in the import, Hailey will **stop the entire import process** so that you do not need to search for which employees that got affected.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-26-2026-09-32-56-2238-AM.png?width=670&height=433&name=image-png-Aug-26-2026-09-32-56-2238-AM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-26-2026-09-33-14-5490-AM.png?width=670&height=282&name=image-png-Aug-26-2026-09-33-14-5490-AM.png)
+
+When everything is correct, click **Import**. The window below will appear. The import may take some time depending on how much information needs to be imported. You can close this window, the import will continue running in the background.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-26-2026-09-33-44-6813-AM.png?width=670&height=286&name=image-png-Aug-26-2026-09-33-44-6813-AM.png)
+
+When the import is complete, the person who initiated the import will receive a verification email:
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-26-2026-09-34-35-7898-AM.png?width=670&height=414&name=image-png-Aug-26-2026-09-34-35-7898-AM.png)
+
+## Format
+
+The custom employment fields must be filled in according to the **Type** you specified for the field in Hailey. Below you will find all the formats for the different field types:
+
+| COLUMN | FORMAT |
+|---|---|
+| Date | YYYY-MM-DD |
+| E-mail | Does not accept spaces, Å, Ä, or Ö, and must contain “@”. |
+| Employee | Requires the employee’s ID; copy and paste the relevant employee’s “EmployeeID” from the first column of the Excel file. |
+| Multiple selection | Must be entered and spelled exactly as the options in Hailey. If there are multiple options, separate them with commas. |
+| Number: | Numbers only (does not allow 0 as the first digit). |
+| Phone | Allows numbers, spaces, and hyphens (-). |
+| Selection | Must be entered and spelled exactly as the options in Hailey. |
+| Text | Allows all characters. |
+| Yes/No | TRUE for Yes and FALSE for No. |
+
+<Note>
+  If you put a percentage (e.g. 4%) in the file regarding custom fields with the type Text, Selection or Multiple selection, you have to change the column in Excel to Text. This in order to tell Excel to convert the file in the right way when importing your file to Hailey, otherwise it will convert to decimals.
+</Note>
+
+## Rights
+
+Only an admin can import information into custom employment fields. This is because of the sensitive information contained in the import file. If you’d like to learn more about Roles & rights, you can do so [**HERE**.](/roles-and-rights)
+
+## Common questions
+
+**Question 1**: I receive an error message when importing the Excel file into Hailey. What am I doing wrong?
+
+To ensure that the information is imported correctly into Hailey, it is important to follow the formatting requirements outlined in this guide. If there is an issue with the file, Hailey will display an error message indicating what the problem is and which row contains the error. Correct the issue and then upload the file again.
+
+**Question 2**: What happens to the information already stored on an employee's profile in Hailey?
+
+Hailey follows the information provided in the import file. This means that any existing information on an employee's profile will be overwritten if new values are included in the import. If you want to keep existing information, simply leave those fields blank in the import file. Blank fields will not overwrite the existing data.
+
+**Question 3**: I only want to update and import *one* field. Is that possible?
+
+Yes, it is possible to import only one field. In that case, you simply fill in the relevant field and leave the other fields blank. Only the information in the filled-in field will be imported.
+
+**Question 4**: When trying to upload my import file I get the error message *Invalid column heading* but Hailey doesn't tell me where or what the error is. What am I doing wrong?
+
+Sometimes Excel thinks that something is written in the columns and rows outside of the template. Hailey can't register where the problem is, because of the error being outside of what is included in the template.
+
+To fix this problem there are a few things you can try. Start by first selecting a number of rows and columns outside of the template and then Delete/Clear contents. If this doesn't solve the issue you can copy all your information in the template and paste it to a new downloaded template. If none of these methods works, you need to go through your file and look for spaces in empty fields as they also can cause this error message as Hailey and Excel doesn't recognize it as a written value.

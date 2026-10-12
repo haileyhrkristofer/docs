@@ -1,0 +1,112 @@
+---
+title: "Egna fält"
+---
+
+Skapa egna fält för att skräddarsy era medarbetarkort i Hailey. Olika behov i olika delar av organisationen? Inga problem! Läs vidare nedan och kom igång redan idag.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="iIHn1nc" title="Egna fält" />
+
+## Ställ in rättigheter
+
+Som Admin i Hailey har du alltid möjlighet att skapa och redigera egna fält. Du kan också tilldela denna rättighet till andra roller inom din organisation. Detta görs genom att navigera till **Inställningar - Säkerhet – Roller & Rättigheter.** När du sedan redigerar eller skapar en ny företagsroll, hittas denna rättighet under **Företagsrättigheter – Inställningar – Egna fält**.
+
+## Skapa egna fält
+
+Lägg till ett eget fält genom att gå till **Inställningar - Anpassning** **- Lägg till.** Bestäm om fältet ska vara ett **medarbetarfält** eller **anställningsfält**. Skillnaden mellan medarbetarfält och anställningsfält är att medarbetarfält ofta inte uppdateras i förhållande till anställningar. Anställningsfälten däremot kan ha olika data mellan olika anställningar.
+
+<Note>
+  Till exempel kan en medarbetare omfattas av ett annat kollektivavtal vid ny anställning, medan dennes skostorlek knappast förändras av anställningsförändringen.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-06-2026-03-39-55-0241-PM.png?width=865&height=514&name=image-png-May-06-2026-03-39-55-0241-PM.png)
+
+- Döp fältet till ett passande namn.
+- **Medarbetarfält**: Under Tabb och Sektion väljer ni var detta fält ska placeras på medarbetarkortet.
+- **Anställningsfält**: Här behöver ni inte ange tabb och sektion utan de landar under *Anställningar - Villkor*.
+- Under **Typ** väljer ni hur fältet kan fyllas i
+  - **Text** = Tillåter alla tecken
+  - **Ja/Nej** = Välj mellan Ja eller Nej
+  - **Nummer** = Siffror (inga decimaler och tillåter inte 0 som första siffra)
+  - **Email** = Tillåter emailformat med @.
+  - **Telefonnummer** = Tillåter siffror, mellanslag samt + och -
+  - **Datum** = Välj datum i en kalender.
+  - **Alternativ** = Skapa upp de alternativ mellan vilka ni kan välja ett (1) alternativ.
+  - **Flervalsalternativ** = Skapa upp de alternativ mellan vilka ni kan välja fler alternativ.
+  - **Medarbetare** = Välj en medarbetare från en lista.
+- Ta sedan ställning till om informationen som fylls i i fältet kommer vara personlig data. Om inte, bockar ni ur detta fält. Lämnar ni fältet markerat behöver ni även välja en **lagringspolicy**, alltså hur länge denna data ska sparas efter att en medarbetare slutat. Läs mer om GDPR och hur vi lagrar persondata i systemet [HÄR](/sv/admin-kom-ig%C3%A5ng#GDPR).
+
+När fältet är rätt inställt klickar ni Spara. Fältet har nu skapats på **respektive medarbetarkort**.
+
+<Note>
+  När ni väljer vart på medarbetarkortet som fälten ska landa kan det vara bra att ha i åtanke vilken tabb och sektion som medarbetarna/cheferna ska ha tillgång till att se och eventuellt kunna ändra.
+</Note>
+
+<Warning>
+  Vänligen observera att Typ samt Personlig data **inte** kan ändras efter att fältet skapats. Det kan därför vara klokt att fundera lite extra över detta.
+</Warning>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2025-02-07-46-5360-PM.png?width=670&height=496&name=image-png-Jul-16-2025-02-07-46-5360-PM.png)
+
+## Omfatta egna fält
+
+Vid skapandet av Egna fält finns även möjligheten att omfatta fältet. Detta innebär att **fältet enbart kommer vara synligt på de medarbetare som omfattas** av det/de val som gjorts.
+
+<Warning>
+  Vänligen notera att val i flera av fälten gör att medarbetaren måste omfattas av samtliga val. Exempelvis om ni väljer Bolag A i legal enhet samt Avdelning 1 i avdelning - då kommer medarbetaren behöva finnas i båda dessa för att fältet ska finnas på denne.
+</Warning>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-06-2026-03-40-38-7170-PM.png?width=443&height=854&name=image-png-May-06-2026-03-40-38-7170-PM.png)
+
+## Översätt egna fält
+
+Vid skapandet av egna fält finns möjligheten att **lägga in översättningar** på dessa. Översättningen ni skapar styrs av det språk man använder i Hailey. Detta möjliggör att ni kan skapa upp ett fält oavsett vilka språk era medarbetare använder i systemet.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-06-2026-03-42-17-0315-PM.png?width=455&height=372&name=image-png-May-06-2026-03-42-17-0315-PM.png)
+
+## Importera egna fält
+
+När ni skapat era egna fält har ni möjlighet att antingen importera data till dem i **samband med medarbetarimporten** om det gäller egna medarbetarfält **eller anställningsimporten** om det gäller egna anställningsfält.
+
+Importer kan även **göras separat**. [HÄR](/sv/import-additional-information)går vi igenom hur ni går tillväga för att importera egna medarbetarfält, och [HÄR](/sv/import-custom-employment-fields)finner ni en guide över hur egna anställningsfält importeras.
+
+## Egna fält och arbetsflöden
+
+Egna fält öppnar även upp för ytterligare funktionalitet i Hailey:
+
+- Att skapa arbetsflöden som aktiveras i förhållande till egna fält av datumtyp
+- Att tilldela uppgifter i arbetsflöden kopplat till egna fält av medarbetartyp
+
+Vill ni läsa mer om arbetsflöden? Kika då [HÄR](/sv/create-workflows)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2025-01-59-08-4815-PM.png?width=670&height=111&name=image-png-Jul-16-2025-01-59-08-4815-PM.png)
+
+## Inspiration för egna fält
+
+Vilka fält som skapas kan variera från organisation till organisation. För att ge er lite inspiration har vi nedan listat några av de vanligast förekommande fälten bland våra kunder:
+
+- Allergi/Specialkost
+- Utrustning (dator, telefon, nyckelkort etc)
+- Storlekar arbetskläder
+- Körkort
+- Förmånsbil (Ja/Nej eller olika modeller som alternativ)
+- Reg.nr bil
+- Friskvårdsbidrag
+- Tjänstepension
+- Provisionsmodell
+- Ytterligare nödkontakt
+- Startdatum föräldraledighet/tjänstledighet
+- Slutdatum föräldraledighet/tjänstledighet
+- Fadder/Buddy

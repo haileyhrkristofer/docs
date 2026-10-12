@@ -1,0 +1,159 @@
+---
+title: "Starta och följ undersökningar"
+---
+
+Vill du få ut mesta av dina medarbetarundersökningar? I den här guiden får du lära dig hur du skickar ut undersökningar, följer upp svar, analyserar resultat, genererar AI-sammanfattningar och exporterar insikter från dina resultat i Hailey!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="AY7s5YL" />
+
+## Vad är en undersökning i Hailey?
+
+Undersökningar hjälper dig att fånga upp medarbetarnas åsikter, upplevelser och feedback. Genom att följa svar och resultat i Hailey kan du få värdefulla insikter som stödjer organisationens utveckling.
+
+<Note>
+  För att kunna skicka ut en undersökning behöver du först skapa en undersökningsmall. Läs mer om hur du gör det [**HÄR**](/sv/surveys-in-hailey).
+</Note>
+
+## Hur skickar man ut en undersökning?
+
+- För att skicka ut en undersökning, markera de ni vill skicka denna till i medarbetarlistan.
+- När ni markerat medarbetarna, klicka på **Hantera** och **Skicka undersökning.**
+
+<Note>
+  Kom ihåg att kontrollera att samtliga deltagare du vill skicka undersökningen till finns med i listan!
+</Note>
+
+![](/images/sv/start-and-follow-your-surveys/01.png)
+
+- Välj vilken undersökning ni vill skicka ut i listan över era mallar under Undersökningsmall.
+- Döp sedan undersökningen under Namn på undersökning.
+- Sätt en deadline för när medarbetarna senast ska ha svarat på undersökningen. Det går att svara på den även om deadline har passerat.
+- Klicka på Skicka för att skicka ut undersökningen.
+
+![](/images/sv/start-and-follow-your-surveys/02.png)
+
+<Note>
+  Undersökningar skickas ut som uppgifter i systemet och hamnar på medarbetarens dashboard. Det går även ut ett mejl som informerar om att medarbetaren har fått en undersökning skickad till sig, här kan medarbetaren klicka för att ta sig till undersökningen.
+</Note>
+
+## Hur besvarar medarbetare en undersökning?
+
+När du har en undersökning att besvara skickas ett mail och en uppgift dyker upp på din startsida. Det är möjligt att besvara undersökningen på båda sätt.
+
+![](/images/sv/start-and-follow-your-surveys/03.png)
+
+![](/images/sv/start-and-follow-your-surveys/04.png)
+
+När du klickar på uppgiften i Hailey eller på länken i mailet kommer du att skickas till en ny flik i din webbläsare. Här möts du av er logotyp, en text om anonymiteten, en potentiell beskrivning av undersökningen och en deadline. Klicka på Svara på undersökning för att börja svara.
+
+![](/images/sv/start-and-follow-your-surveys/05.png)
+
+Undersökningen besvaras sektionsvis med inkluderade frågor i respektive sektion. När alla frågor är besvarade klickar du på Skicka.
+
+![](/images/sv/start-and-follow-your-surveys/06.png)
+
+När du har skickat in ditt svar på undersökningen får du en bekräftelse och uppgiften om att svara på undersökningen försvinner från din startsida.
+
+![](/images/sv/start-and-follow-your-surveys/07.png)
+
+## Se och analysera resultaten från din undersökning
+
+Resultaten från undersökningar hittar ni under fliken **Prestation** i huvudmenyn, och vidare till **Undersökningar**. För att svar ska kunna presenteras krävs det att minst 3-10 svar från medarbetare har inkommit, beroende på vilken inställning ni har ställt in i mallen som används. Detta för att upprätthålla anonymitet.
+
+![](/images/sv/start-and-follow-your-surveys/08.png)
+
+Svaren i en undersökning presenteras fråga för fråga tillsammans med en procentsats för hur många som valt respektive svarsalternativ.
+
+I den vänstra kolumnen kan du filtrera resultaten utifrån organisatorisk tillhörighet, kön och om medarbetaren är chef. Filtreringen baseras på den information som gällde när undersökningen skickades ut. För att säkerställa anonymiteten måste det valda filtret innehålla minst det antal svar som har definierats i undersökningsmallen, innan resultaten kan visas.
+
+<Note>
+  Deltagare med tillhörande profilbild/initialer står inte för vilka som har svarat, utan vilka som har blivit inbjudna till undersökningen.
+</Note>
+
+![](/images/sv/start-and-follow-your-surveys/09.png)
+
+Möjligheten att skicka påminnelse finns, vilket innebär att om ni klickar på **Hantera -** **Skicka påminnelse** - kommer ett mail att skickas ut till de medarbetare som ännu inte har besvarat undersökningen med en uppmaning om att göra det så snart som möjligt. Påminnelse kan endast skickas en gång per dag och datum för när det senast skickats hittar ni i resultatet.
+
+![](/images/sv/start-and-follow-your-surveys/10.png)
+
+## Avsluta din undersökning
+
+Undersökningar kan raderas eller avslutas via de tre prickarna i hörnet på undersökningskortet. Du kan även avsluta undersökningen genom att gå till **Hantera - Avsluta undersökning.**
+
+En raderad undersökning tas bort helt, medan en avslutad undersökning sparas under statusen **Avslutad** till vänster och tar inte längre emot några svar. När en undersökning har avslutats går det inte längre att skicka påminnelser.
+
+![](/images/sv/start-and-follow-your-surveys/11.png)
+
+![](/images/sv/start-and-follow-your-surveys/12.png)
+
+## Sammanfatta undersökningen med Peep
+
+Om AI-inställningar för undersökningar är aktiverade i ditt konto kan du generera en AI-sammanfattning av resultaten från undersökningen. När en undesökning har stängts för ytterligare svar (givet att anonymitetströskeln har uppnåtts) har du möjlighet att skapa en AI-genererad sammanfattning. När du stänger din undesökning får du alternativet **Generera Peep-sammanfattning**.
+
+![](/images/sv/start-and-follow-your-surveys/13.png)
+
+Det är också möjligt att generera en AI-sammanfattning för undersökning som redan har stängts. Klicka på **Hantera - Sammanfatta undersökningen med Peep**.
+
+![](/images/sv/start-and-follow-your-surveys/14.png)
+
+Peep genererar en sammanfattning för varje sektion på företagsspråket. Du kan sedan ge feedback på sammanfattningen genom att klicka på **tummen upp** eller **tummen ner** och lämna en kommentar.
+
+![](/images/sv/start-and-follow-your-surveys/15.png)
+
+<Note>
+  Notera att om du filtrerar svaren i undersökningen kommer sammanfattningen att döljas.
+</Note>
+
+## Exportera data från din undersökning
+
+Om du vill exportera rådata från dina medarbetarundersökningar går du till den undersökning du vill ladda ner data från. Klicka sedan på **Hantera** uppe i högra hörnet. Du får då följande alternativ:
+
+- Ladda ner till **Excel (xlsx)**
+- Ladda ner till **Powerpoint**
+
+![](/images/sv/start-and-follow-your-surveys/16.png)
+
+<Note>
+  Om filtrering har gjorts när ni hämtar resultatet kommer det att följa med i exporten. Detta gör det enkelt att hämta resultat per avdelning till exempel, som vidare kan delas med berörda personer utan att se hela undersökningens resultat.
+</Note>
+
+## Rättigheter
+
+Om ni vill att någon utöver Admin i ert konto ska kunna starta och följa undersökningar är dessa rättigheter relevanta:
+
+- **Skicka undersökningar** - **Aktivera** ger rättigheten att skicka ut en undersökning från medarbetarlistan.
+- **Se alla undersökningar** - **Aktivera** ger rättigheten att se alla undersökningar i kontot.
+- **Se mina undersökningar** - **Aktivera** ger rättigheten att se undersökningar som skickas ut av sig själv
+
+<Note>
+  [**HÄR**](/sv/roller-och-rattigheter) kan ni läsa mer om Roller & Rättigheter i Hailey!
+</Note>
+
+## Vanliga frågor
+
+**Fråga 1:** Jag vill veta vad alla mina chefer har svarat och därefter kunna dela resultaten med dem, utan att de får tillgång till svaren för hela undersökningen. Hur gör jag?
+
+I vänsterkolumnen, under **Övriga filter**, kan du välja **Ja** i fältet **Är chef**. Då filtreras resultaten så att endast svar från chefer visas.
+
+När filtret är applicerat kan du exportera resultaten till **Excel (xlsx)** eller **PowerPoint** och dela resultatet med dina chefer. På så sätt får de ta del av de filtrerade resultaten utan att få tillgång till hela undersökningens svar!
+
+**Fråga 2:** Jag vill filtrera på **Team**, men när jag klickar på fältet visas **Ingen data**. Varför?
+
+När du skapar en undersökningsmall anger du hur många svar som krävs innan resultat kan visas. Denna inställning gäller även när du filtrerar resultaten.
+
+Om du exempelvis har valt att minst **5 svar** krävs för att visa resultat, behöver det finnas minst 5 svar inom det team du filtrerar på. Om teamet har färre svar än så kommer **Ingen data** att visas. Detta görs för att säkerställa anonymiteten.
+
+Läs mer om detta [**HÄR**](/sv/surveys-in-hailey#skapa_och_redigera)!

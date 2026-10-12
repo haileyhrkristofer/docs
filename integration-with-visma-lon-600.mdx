@@ -1,0 +1,102 @@
+---
+title: "Integration with Visma Lön 600"
+---
+
+Haileys integration with Visma Lön 600 make it possible to access needed data in a GDPR compliant way and import into Visma Lön 600!
+
+<Tip>
+  First time activating one of **Hailey's standardintegrations?** Start by reading [**THIS**](/haileys-standard-integrations) guide to know what to keep in mind before you get started.
+</Tip>
+
+## What does the integration do?
+
+Using this integration, you can easily export a file with employee and time off data from Hailey to Visma Lön 600. This means that changes made for employees regarding time off data made in Hailey can be updated by file export in Visma Lön 600 directly. In this way, the new data does not have to be entered into two different systems manually, which reduces the time spent on administrative work.
+
+## How does the integration work?
+
+Through a file transfer containing Time off data for the relevant employees, data is transferred from Hailey to the correct location in Visma Lön 600.
+
+## What data is included in the organisation?
+
+Time off data for the relevant employees is included in the integration.
+
+| **Hailey HR** | **Visma Lön 600** |
+| --- | --- |
+| Time off | Time off |
+
+## What is required to be part of the integration?
+
+- An **employment** **number** that matches in both systems
+- Time off that is reported in **Hours**
+
+<Note>
+  Ensure that employees who work part-time report their time off correctly. Depending on each employee's working hours in Visma Lön 600, their absence requests in Hailey should reflect the same schedule. For example, if an employee works 6 hours per day (80% of full-time), they should submit an absence request for 6 hours when reporting an absence.
+</Note>
+
+## How is the integration activated?
+
+To set up the integration you start in Hailey under Settings > Integrations > Visma Lön 600
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-29-2026-01-17-49-8744-PM.png?width=627&height=336&name=image-png-Jul-29-2026-01-17-49-8744-PM.png)
+
+Activate the integration and map your   codes from Visma Lön 600 into the fields in Hailey. Please observe that these fields are mandatory in order for the integration to work. You can find your absence codes under **Arkiv > Inställningar > Företagsinställningar**
+
+![bild (6)-png](https://docs.haileyhr.com/hs-fs/hubfs/bild%20\(6\)-png.png?width=370&height=296&name=bild%20\(6\)-png.png)
+
+Under Company Settings you then go to integrations. You can start with checking the box under **Import** _'Use TLU file for importing time and expense records.'_
+
+![bild (7)-png](https://docs.haileyhr.com/hs-fs/hubfs/bild%20\(7\)-png.png?width=491&height=326&name=bild%20\(7\)-png.png)
+
+After that, go to the option **Tidkoder.**
+
+![bild (12)-png](https://docs.haileyhr.com/hs-fs/hubfs/bild%20\(12\)-png.png?width=486&height=323&name=bild%20\(12\)-png.png)
+
+You'll now see a list with your absence types. **Go to time codes and copy the time codes så that they match with the given absence reasons in Hailey and paste.** Then choose Save in Hailey.
+
+![bild (8)-png-2](https://docs.haileyhr.com/hs-fs/hubfs/bild%20\(8\)-png-2.png?width=404&height=317&name=bild%20\(8\)-png-2.png)
+
+After this you can go back to the previous view in **Visma Lön 600 and pick** **Spara, to save the Import setting**.
+
+Hurray! You're all settled to start using the file export.
+
+How do you transfer the file from Hailey to Visma?
+
+To import your time off file into Visma Lön 600 you go to **Insights > Reports** in Hailey, there you'll find Visma Lön 600.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-29-2026-01-18-20-9764-PM.png?width=627&height=339&name=image-png-Jul-29-2026-01-18-20-9764-PM.png)
+
+Once you navigate to the next page, you will have the option to export your time off data. Simply **select the desired time interval** for the file and click on the **Export button.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-29-2026-01-28-45-2308-PM.png?width=627&height=335&name=image-png-Jul-29-2026-01-28-45-2308-PM.png)
+
+Go to Visma Lön 600 to **Lönearbete > Lönekörningar > Ny**. To be able to import the file within a salary run you have to check the box _'**Importera tider/utlägg från fil'.**_ Choose to Create.
+
+![bild (9)-png](https://docs.haileyhr.com/hs-fs/hubfs/bild%20\(9\)-png.png?width=481&height=339&name=bild%20\(9\)-png.png)
+
+You'll now get a file browser, pick the created file from Hailey, open.
+
+You'll be presented with the option to import the selected file. Choose "Yes" to proceed with the import.
+
+A log will now be displayed. Simply close it to proceed.
+
+Ta da - your time off file is now imported! The info from the file will now appear in the chart.
+
+![bild (15)-png](https://docs.haileyhr.com/hs-fs/hubfs/bild%20\(15\)-png.png?width=670&height=56&name=bild%20\(15\)-png.png)
+
+## Does the integration not apply to the entire organisation?
+
+If an employee has no recorded absence during the selected period, they will not be included in the file.
+
+Employees without an employee ID will not be included in the file.
+
+## Questions and answers (FAQ)
+
+**Question:** Why isn't a specific employee included in the file sent to Visma?
+
+**Answer:** If an employee is not included in the file, it may be because they do not have an employee ID on their profile in Hailey, or because they are not reporting their time off in hours. If your employees are not set up to report absence in hours, **click [HERE](/create-reporting-policy)** to learn how to create reporting policies.
+
+An employee is also not included in the file if no reported time off has been requested in the chosen time period.
+
+**Question:** Why aren't our part-time employees included in the file?
+
+**Answer:** Make sure that part-time employees report their time off correctly. Depending on each employee's working hours in Visma Lön 600, their time off requests in Hailey should reflect the same schedule. For example, if an employee works 6 hours per day (80% of full-time), they should submit a time off request for 6 hours when reporting an absence. Otherwise, the employee may not be included in the file exported to Visma Lön 600.

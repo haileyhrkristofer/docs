@@ -1,0 +1,107 @@
+---
+title: "Skicka dokument för signering till flera medarbetare"
+---
+
+Den här guiden visar hur ni effektivt skickar kontrakt och signerbara dokument till flera befintliga medarbetare samtidigt.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="cRj7Mra" title="Skicka dokument för signering till flera medarbetare" />
+
+## Om att skicka dokument för signering till flera medarbetare
+
+Effektivisera ert arbete genom att skicka kontrakt, policyer och andra viktiga dokument för signering till flera befintliga medarbetare på en och samma gång.
+
+## Innan du sätter igång
+
+För att kunna skicka dokument för signering måste följande information vara ifyllt på medarbetarens profil:
+
+- **Företagsmail**
+- **Personnummer** och **Utfärdare av personnummer** (gäller vid signering med BankID)
+
+Kontrollera även att ni har en **Kontraktsmall** eller ett **Signerbart dokument** redo. Läs mer om hur ni skapar dessa **[/sv/skapa-era-kontraktsmallarHÄR](/sv/create-contract-templates).**
+
+## Hur skickas dokument för signering?
+
+För att skicka dokument till flera av era befintliga medarbetare på samma gång behöver ni först gå till fliken **Medarbetare** i huvudmenyn.
+
+**Markera medarbetarna** som ska signera dokumentet, klicka på **Hantera** och välj **Skicka dokument för signering.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-16-2026-11-35-11-7732-AM.png?width=670&height=394&name=image-png-Apr-16-2026-11-35-11-7732-AM.png)
+
+- Välj vilken **Kontraktsmall** som ska skickas för signering.
+
+<Note>
+  Endast kontraktsmallar som är tillgängliga för **Signering med flera medarbetare** kommer att synas som alternativ.
+</Note>
+
+- Välj **Signeringsmetod** för dokumentet - **BankID** eller **Digital Autograf**. Observera att signering med BankID endast fungerar för Sverige, Norge, Danmark och Finland.
+- Välj en **Deadline** för signering av dokumentet.
+- Under **Signeringsordning** väljer ni vem som ska signera avtalet och i vilken ordning genom att lägga till **Signeringssteg**. Om ni t.ex. vill att medarbetaren ska signera dokumentet först, och därefter medarbetarens chef, väljer ni två signeringssteg likt bilden nedan.
+- Om kontraktsmallen innehåller **Valbara sektioner** eller **Valbara bilagor**, markera de delar som ska inkluderas i dokumentet. Fyll även i eventuella **Fritextrutor** manuellt.
+- Klicka på **Förhandsgranska** för att kontrollera att allt ser rätt ut, och **Skicka** sedan dokumentet. Den valda **signeringsordningen** avgör om dokumentet skickas ut till **alla signeringsparter direkt** eller om signeringsprocessen sker i **flera steg**.
+
+<Note>
+  **Observera** att eventuella **Styrkoder** som finns i kontraktsmallen kommer att hämta den nuvarande informationen som finns ifylld på respektive medarbetarkort. **Fritextrutor** kommer fyllas i med samma värde i alla dokument i samma utskick.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-16-2026-11-48-47-9024-AM.png?width=670&height=450&name=image-png-Apr-16-2026-11-48-47-9024-AM.png)
+
+När dokumentet har skickats ut kan ni **följa signeringsprocessen** via **HR-hub - Signeringar.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-16-2026-11-58-05-4070-AM.png?width=670&height=181&name=image-png-Apr-16-2026-11-58-05-4070-AM.png)
+
+<Tip>
+  Om signeringen skulle **behöva avbrytas**, klicka på de **tre prickarna till höger om signeringen** och **Avbryt**. Då är det inte längre möjligt för signeringsparterna att signera dokumentet och **signeringsprocessen raderas.**
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-16-2026-11-58-43-6818-AM.png?width=670&height=185&name=image-png-Apr-16-2026-11-58-43-6818-AM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-16-2026-11-59-03-2493-AM.png?width=670&height=318&name=image-png-Apr-16-2026-11-59-03-2493-AM.png)
+
+## Hur signeras dokument?
+
+När ett dokument har skickats för signering får medarbetaren både **en uppgift på sin startsida i Hailey** och **ett mail** med informationen. Dokumentet kan signeras från båda ställen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-16-2026-12-05-32-0601-PM.png?width=670&height=142&name=image-png-Apr-16-2026-12-05-32-0601-PM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-16-2026-12-00-39-9830-PM.png?width=670&height=638&name=image-png-Apr-16-2026-12-00-39-9830-PM.png)
+
+När **involverade parter** har signerat dokumentet landar det under fliken **Dokument** på medarbetarens profil.
+
+<Tip>
+  Läs mer om **Medarbetarmappar** och inställningar för **Dokument** fliken [**HÄR**](/sv/employee-folders).
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-16-2026-12-08-25-9720-PM.png?width=670&height=275&name=image-png-Apr-16-2026-12-08-25-9720-PM.png)
+
+## Rättigheter
+
+För att **Skicka dokument för signering** behöver rättigheten vara aktiverad i inställningarna för Roller & rättigheter under **Hantera.**
+
+För att se översikten på signeringarna krävs även rättigheten **Visa** eller **Visa & ändra**, som hittas under **Roller & rättigheter,** **HR Hub - Signeringar.**
+
+<Note>
+  [**HÄR**](/sv/roles-and-rights) kan du läsa mer om Roller & rättigheter.
+</Note>
+
+## Vanliga fragor
+
+<AccordionGroup>
+  <Accordion title="Varför kan jag inte hitta signeringen i översikten på HR Hub?">
+    Om signeringen inte hittas i HR Hub under signeringar kan det bero på att översikten har ett filter aktiverat. Kolla att inga filter är aktiverade i översikten.
+
+    Det kan även bero på att signeringen har slutförts och på grund av det inte längre syns i översikten under Signeringar. I sådana fall hittas det signerade dokumentet i stället i **medarbetarens profil** under **Dokument** fliken.
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,61 @@
+---
+title: "Skapa 360° mallar"
+---
+
+Ska ni hålla samtal eller 360° och vill säkerställa att rätt frågor ställs? Skapa då en mall i Hailey som guidar er på vägen!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="WYCy9SP" />
+
+## Vad är en 360° utvärdering?
+
+Feedbackmallar i Hailey är återanvändbara strukturer som hjälper dig att effektivisera feedbacksamtal, såsom individuella avstämningar (one-to-ones) och 360° utvärderingar. De gör det möjligt att definiera format, innehåll och upplägg för dina samtal, inklusive frågor och instruktioner, så att du kan säkerställa konsekvens och hög kvalitet i din feedbackprocess.
+
+## Hur skapar jag en 360° utvärdering?
+
+För att skapa dina 360° utvärderingsmall, gå till **Inställningar - Samtalsmallar**, klicka på **Lägg till** i det övre högra hörnet och välj **360° utvärdering**.
+
+![](/images/sv/create-three-sixty/01.png)
+
+Du kan välja att aktivera **uppgiften** för att **justera kollegor** i 360° utvärderingen. När denna funktion är aktiverad får chefer en specifik uppgift där de kan granska och vid behov ändra vilka kollegor som har valts av medarbetaren. Detta gör det möjligt att justera urvalet innan 360°-utvärderingen fortsätter.
+
+Det är även möjligt att definiera **omfattningen** av mallen inom organisationen. Du kan exempelvis konfigurera mallen så att den endast är tillgänglig för medarbetare i en specifik organisatorisk enhet i Hailey.
+
+När du är nöjd med inställningarna klickar du på **Börja bygga** i det nedre högra hörnet.
+
+![](/images/sv/create-three-sixty/02.png)
+
+Nu kan du skapa sektioner och lägga till frågor i varje sektion. Du kan namnge dina sektioner, lägga till en beskrivning och skapa ytterligare sektioner vid behov. För att lägga till frågor i en sektion klickar du helt enkelt på **plustecknet** i mitten.
+
+Skriv din fråga och bestäm hur den ska besvaras. Du väljer även vem som ska ge feedback på frågan. Du kan också ange om frågan ska vara obligatorisk eller valfri.
+
+![](/images/sv/create-three-sixty/03.png)
+
+När du är nöjd med din mall, klicka på **Spara**. För information om hur du använder mallen, klicka **[HÄR](/sv/start-and-follow-360-review).**
+
+## Rättigheter
+
+Alla admins har automatiskt behörighet att skapa och redigera samtalsmallar. Om du vill ge denna behörighet till andra roller kan du göra det genom att tillåta medlemmarna i den aktuella rollen att **redigera samtalsmallar** under **Företagsrättigheter – Inställningar**.
+
+## Vanliga frågor
+
+<AccordionGroup>
+  <Accordion title="Vad gör inställningen **Uppgift att justera kollegor**?">
+  När funktionen är aktiverad får chefen en uppgift att granska och justera de kollegor som den medarbetare som utvärderas har föreslagit.
+  </Accordion>
+  <Accordion title="Kan jag använda mallen där även direktrapporterande medarbetare ska besvara vissa frågor, även om personen inte har några direktrapporterande medarbetare, eller är det bättre att skapa en separat mall?">
+  Du kan fortfarande använda samma mall även om medarbetaren inte har några direktrapporterande medarbetare. Hailey skickar då ut frågor till övriga deltagare enligt hur mallen är konfigurerad.
+  </Accordion>
+</AccordionGroup>

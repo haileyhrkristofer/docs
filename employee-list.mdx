@@ -1,0 +1,128 @@
+---
+title: "Employee list"
+---
+
+In this guide, you will learn how to use the employee list in a quick, convenient, and easy-to-access way.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="XGAOYZr" title="Employee list" />
+
+## What is the employee list?
+
+The **Employee List** brings all employees together in one place and gives you access to various types of information. From there, you can view the information on each employee’s profile and filter for specific groups of employees. Through the Employee List, you can also import and export information to and from Hailey.
+
+## How is the employee list used?
+
+You can find the **Employee List** under the **Employees** tab in the main menu. Here, you will see several default views, such as My department, My team, and Reports to me. These views appear provided that you are part of a department or team or have subordinates. You can switch between views and adjust the filters.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-12-51-37-6314-PM.png?width=670&height=334&name=image-png-Aug-07-2026-12-51-37-6314-PM.png)
+
+## Filtering
+
+Under **Filter** you can filter employees by name, employment status and organizational belonging. By default, employees with the employment statuses **In service and Leaving are displayed.** You can also choose to filter by the statuses Will join, Has Left, Being hired, Garde leave and Unknown. An employee is assigned the employment status Unknown when **no employment has been registered for that employee**. [**HERE**](/employment-wizard) is a guide on how to manage employments.
+
+Under **Organization filters** you can filter by various types of organizational information, such as office, department, and team. This filter can be used to identify employees within specific parts of the organization.
+
+Under **Other filters** you can filter by, for example, employment type, account status, and custom fields of the types Alternative, Multiple Choice, and Yes/No. You can also include specific employees in the list, even if they do not match the selected filters.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-12-52-09-5593-PM.png?width=670&height=336&name=image-png-Aug-07-2026-12-52-09-5593-PM.png)
+
+## Columns
+
+In addition to the information displayed by default in the Employee List, you can also view additional details from the employee card directly in the list. Click on **Columns** and select the fields you want to display in the list.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-12-53-21-6801-PM.png?width=670&height=334&name=image-png-Aug-07-2026-12-53-21-6801-PM.png)
+
+## Save & Favorite Filters
+
+If you want to save a filter and the view you have set up, for example with specific columns such as Contact Information, you can create a saved filter. Click **Save filter** at the bottom of the filter menu, name the filter and click **Save**. This view will then be saved under **Views**.
+
+You can mark a saved filter or a default view as a favorite by clicking the three dots to the right of the view and selecting **Add view as favorite**. The selected favorite view will then become your default view and will appear automatically when you open the employee list.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-12-54-36-9381-PM.png?width=670&height=336&name=image-png-Aug-07-2026-12-54-36-9381-PM.png)
+
+<Note>
+  **💡Tip!** We recommend saving a view that includes all employees in the organization. From there, you can easily filter by department or other organizational unit, for example, without having to create multiple filters.
+</Note>
+
+<Tip>
+  **Here are some suggestions for lists to save:** Emergency contacts, Contact information, Birthdays, Benefits
+</Tip>
+
+## Export
+
+You can export the employee list to **Excel (.xlsx).** The view and filters selected at the time of export are included in the downloaded file. Click **Export** and select **To Excel (.xlsx)** to download the information. You can also copy the email addresses of the selected employees by choosing **Export - Emails to clipboard.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-12-55-13-0548-PM.png?width=670&height=331&name=image-png-Aug-07-2026-12-55-13-0548-PM.png)
+
+## Action
+
+Using the **Actions** option in the Employee list, you can initiate and manage processes for multiple employees at the same time in Hailey. Before selecting any of the options under **Actions** you must select the employees to be included from the list. You can do this by checking the box next to each employee or by selecting all employees in the list.
+
+Below are links to guides for each function.
+
+- [**Send document for signature**](/send-contract-for-signature-to-several-employees)
+- [**Add new employments in bulk**](/add-new-employments-in-bulk)
+- [**Run custom workflow**](/create-start-and-follow-workflows#start_workflow)
+- [**Send quick task**](/quick-tasks)
+- [**Send out a survey**](/start-and-follow-your-surveys)
+- [**Prepare a one-to-one**](/host-one-to-one)
+- [**Start 360° review**](/start-and-follow-360-review)
+- [**Add an education session**](/educations)
+- [**Start a holiday plan**](/plan-your-holidays-in-hailey)
+- [**Start salary review**](/salary-review)
+- [**Update time & time off settings**](/time-and-time-off-settings)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-12-55-53-4311-PM.png?width=670&height=336&name=image-png-Aug-07-2026-12-55-53-4311-PM.png)
+
+The other options under **Actions** are explained below:
+
+- **Update organizational belonging in bulk** - Select the field to be updated, fill in the selection, and then click **Update.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-12-56-26-9632-PM.png?width=670&height=336&name=image-png-Aug-07-2026-12-56-26-9632-PM.png)
+
+<Note>
+  When you perform a bulk update of **teams**, employees’ existing teams are replaced with the team or teams selected during the update. If an existing team is to be retained, both the new team and the current team must be selected during the update.
+</Note>
+
+- **Send invitation** - An invitation email is sent to the selected employees' email addresses so they can log in.
+- **Lock employee Hailey accounts** - Used when an employee should no longer have access to their Hailey account, for example, upon termination of employment.
+- **Unlock employee Hailey accounts** - Used when a previously locked account needs to be unlocked so that the employee can log in to Hailey again.
+
+<Note>
+  **💡 Tip!** To see which employees have a locked account, you can filter by **Account locked** under **Other filters** in the employee list. Also, be sure to check which employment statuses are selected in the filter, as these affect which employees are displayed in the list.
+</Note>
+
+- **Generate employment number -** Use this feature if you want Hailey to automatically generate employment numbers. If you use this feature again at a later time, the numbering will continue from the most recently created employment number. **Please note that this action cannot be undone**. If an employment number needs to be changed after the fact, it must be done manually in the employee’s profile. The sequence used for generation is configured under **Settings - General - Employment number settings.**
+
+## Rights
+
+All employees have access to the **Employee List** regardless of their assigned rights. By default, everyone can view all employees and the information that appears automatically in the list: Employee, Department, Location, Titles, and Reports To. The information displayed in the Employee List when filtering is determined by the user’s rights and which employees that user is authorized to view information for.
+
+In addition to the permissions that all employees have by default, you can grant specific users the right to **Import employee data** and **Export lists**. The features available under **Manage** and **Add Employee** are also determined by the user’s assigned permissions.
+
+Read more in the guide for Roles & rights **[HERE](/roles-and-rights).**
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Why are not contact details showing up in the list when I filter by **Personal - Contact details** under Columns?">
+    Either there is no data entered in these fields on the employee cards for these employees, or you do not have the necessary rights to view this section of the employees.
+  </Accordion>
+
+  <Accordion title="Why are not all custom fields visible under **Other Filters?">
+    Only custom fields of the types Selection, Multiple selection and Yes/No can be used as filter criteria.
+  </Accordion>
+</AccordionGroup>

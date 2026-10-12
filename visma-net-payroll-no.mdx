@@ -1,0 +1,139 @@
+---
+title: "Integration with Visma.net Payroll NO"
+---
+
+The integration with Visma.net Payroll NO enables you to smoothly synchronize employment and salary data from Hailey in a GDPR-compliant way.
+
+---
+
+## What does the integration do?
+
+Using the integration, data will be automatically transferred from Hailey to Visma.net Payroll NO. It's important to note that Hailey serves as the reference in this context. In practice, this means that during each synchronization, included data that doesn't have the same value in Hailey and Visma.net Payroll NO will adopt the value present in Hailey. This saves you time as you won't need to maintain both systems when there are changes to the data managed by the integration.
+
+---
+
+## Before activating integration
+
+The person at your company that is in charge of the integration between Hailey and Visma.net Payroll NO is required access to an administrator account in both of the systems.
+
+## What is required to be included in the integration?
+
+#### Employment number
+
+All employees who are to be synchronized with Visma.net Payroll NO must have an **employment number** in Hailey that matches the employment number in Visma.net Payroll NO.
+
+In cases where the employee is not yet registered in Visma.net Payroll NO, they will be created during the next file transfer, provided that an employment number is specified in their Hailey profile.
+
+<Warning>
+  ❗️Employees who are missing an employee number will not be included in the integration.
+</Warning>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2025-08-33-09-5118-AM.png?width=670&height=261&name=image-png-Jul-14-2025-08-33-09-5118-AM.png)
+
+#### Personal identity number
+
+All employees that you wish to be included need to have a **Norwegian issuer of identity number**, or a **D-number.** This is filled out on the employee profile in Hailey under Personal - Sensitive information - Personal identity number.
+
+<Warning>
+  ❗️Employees who are missing a personal identity number or have a number that is not validated as Norwegian or Other in Hailey will not be included in the integration.
+</Warning>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-16-2025-12-28-01-3718-PM.png?width=670&height=203&name=image-png-Sep-16-2025-12-28-01-3718-PM.png)
+
+#### Custom employment fields
+
+When synchronizing employments you need to set up four custom employment fields in Hailey: **Type of work (yrkeskode), Work time agreement (arbeidstidsordning), Reason for resignation (sluttårsak)** and **Tax unit (virksomhet)**. To ensure this works correctly. Follow these steps:
+
+- Go to **Settings > Customization > Add > Employment Field**.
+- Select field type: **Selection**.
+- Add options that are named _identical_ to the options in Visma.net Payroll NO.
+
+<Warning>
+  ❗️All employments must have a value filled out on each custom employment field except for Reason for resignation (sluttårsak), regardless of how many employments an employee have. This can be done through an [import file](/custom-fields#import-custom-fields) if necessary.
+</Warning>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-16-2025-12-54-38-9657-PM.png?width=670&height=251&name=image-png-Sep-16-2025-12-54-38-9657-PM.png)
+
+- All employees need to have an **effectual employment** to be included with added scope.
+- All included employees needs to have an active Yearly, monthly or hourly salary set.
+- All included employees needs to have an Account number and Name of bank
+
+<Note>
+  **NOTE:**
+
+  - The salary start date **must** match with the start date for the employment of the employee.
+  - When having multiple salaries on one employee, these **must not overlap** on dates.
+  - If using hourly salary, there can only be **one** Hourly salary per employee in order for it to sync.
+</Note>
+
+#### Scope in % for all employments
+
+To be included in the synchronization, all employees must have scope % on **all employments.** You can fill this out from the **Employee profile** -**\>** **Job** -**\> Terms -> Scope**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-15-2026-11-49-40-0659-AM.png?width=670&height=418&name=image-png-May-15-2026-11-49-40-0659-AM.png)
+
+---
+
+## How does the integration work?
+
+Every hour a sync between Hailey and Visma.net Payroll NO starts based on the changes made. This means that if a change has been made to an employee linked to the employee or salary data fields listed in the bottom of this article, this information will be updated.
+
+<Warning>
+  ❗️Please keep in mind that salaries are linked to the employees' employment. Therefore, you cannot end a salary for an active employment without also terminating the employment itself.
+</Warning>
+
+The integration is designed to handle yearly, monthly and hourly salaries, thus the Contract salary type in Visma.net Payroll NO will automatically be set up to one of these three types, set up in Hailey.
+
+---
+
+## Activate integration
+
+Retrieve your Tenant ID from Visma by going to your Visma App Store. To find it, please go to the drop-down menu located in the top right corner. Copy the Tenant ID and then paste it into the designated field within the integration settings in Hailey. Navigate to Settings > Integrations > Visma.net Payroll NO to complete this step.
+
+![Skärmavbild 2024-08-07 kl- 13-23-50-png-1](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202024-08-07%20kl-%2013-23-50-png-1.png?width=215&height=353&name=Sk%C3%A4rmavbild%202024-08-07%20kl-%2013-23-50-png-1.png)
+
+Under Apps, search for the Hailey app and add it.
+
+After getting the Tenant ID, please go to the integration drawer in Hailey and add the Tenant ID from Visma.net Payroll NO.
+
+Please select a sync from date for salaries and employment forms. You can pick a date with the date picker.
+
+![Skärmavbild 2024-08-07 kl- 13-00-13-png-2](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202024-08-07%20kl-%2013-00-13-png-2.png?width=428&height=444&name=Sk%C3%A4rmavbild%202024-08-07%20kl-%2013-00-13-png-2.png)
+
+<Warning>
+  ❗️Ensure that Hailey is the primary source of salary and employment information from your chosen sync date onwards to prevent any errors. This means that all updates and management of such data should be done exclusively in Hailey.
+</Warning>
+
+Select your chosen employment custom fields for the following: Type of work, Work time agreement, Tax unit IDs. **Ensure that the fields are named identically to those in Visma.net Payroll NO.**
+
+Once all the required information is entered in the integration drawer, you can activate the integration by toggling the 'Active' switch at the top of the drawer and Save. You are now ready to go!
+
+## Multiple integrations
+
+If there is a need for multiple Visma Payroll clients being integrated to Hailey, this has to be set up seperately, each with their respective Tenant-ID's and scopes.  <img src="https://docs.haileyhr.com/hs-fs/hubfs/image-png-Dec-17-2024-09-08-38-4627-AM.png?width=576&height=256&name=image-png-Dec-17-2024-09-08-38-4627-AM.png" alt="" />
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Dec-17-2024-09-03-43-4660-AM.png?width=574&height=363&name=image-png-Dec-17-2024-09-03-43-4660-AM.png)
+
+---
+
+## The data included
+
+| **HAILEY** | **VISMA.NET PAYROLL NO** |
+| --- | --- |
+| Employment number | Employee ID |
+| First name | First name |
+| Last name | Last name |
+| Personal Identity Number (NO only) D-Number | National ID |
+| Company email | E-mail |
+| Country code (NO only) or (Other) for D-numbers | National ID |
+| Account number | Bank account number |
+| Employment form | Employment form |
+| Employment start date | Start date |
+| Employment end date | End date |
+| Scope (%) | Part time factor |
+| Yearly, Monthly salary or Hourly salary | Yearly, Monthly salary or Hourly salary |
+| Type of work (custom field) | Type of work |
+| Work time agreement (custom field) | Work time agreement |
+| Tax unit (custom field) | Tax unit |
+
+_If you have any questions regarding the integration, please contact your Customer Success specialist at Hailey._

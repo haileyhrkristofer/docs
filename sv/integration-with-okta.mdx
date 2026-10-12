@@ -1,0 +1,132 @@
+---
+title: "Integration med Okta"
+---
+
+Vill du att nya medarbetare automatiskt ska skapas i Okta när de läggs till i Hailey? Med vår integration till Okta är detta möjligt – tillsammans med automatisk synkronisering av medarbetardata och smidig hantering av användarkonton!
+
+<Tip>
+  Första gången du aktiverar en av **Haileys standardintegrationer**? Börja med att läsa den [**HÄR**](/sv/haileys-standard-integrations) guiden för att veta vad du ska tänka på innan du sätter igång.
+</Tip>
+
+## Vad gör integrationen?
+
+Med hjälp av integrationen förs data automatiskt över från Hailey till Okta. Om ett värde skiljer sig mellan systemen kommer värdet i Hailey att skriva över motsvarande värde i Okta vid nästa synkronisering. Detta minskar den administrativa hanteringen eftersom ni endast behöver underhålla informationen i Hailey.
+
+Integrationen möjliggör även automatiserad användarhantering. När en ny medarbetare skapas i Hailey och ett företagsmejl anges på medarbetarkortet, skapas användaren automatiskt upp i Okta. Om en medarbetare inte längre har en aktiv anställning i Hailey kan ni även välja att denne automatiskt ska inaktiveras i Okta.
+
+## Hur fungerar integrationen?
+
+Med API-överföring sker en synkronisering mellan Hailey och Okta **varje timme** baserat på förändringar. Det innebär att:
+
+- Inkluderad data som inte överensstämmer mellan Hailey och Okta kommer att uppdateras med den information som finns i Hailey varje timme.
+
+## Vilken data är inkluderad?
+
+Den data som kommer att överföras till Okta listas nedan. Datafälten synkroniseras varje timme, från Hailey till Okta.
+
+| **HAILEY** | **OKTA** |
+| --- | --- |
+| Förnamn | First name |
+| Efternamn | Last name |
+| Förnamn + Efternamn | Display name |
+| Företagsmail | Primary mail |
+| Företagsmail | Username |
+| Telefonnummer jobb | Mobile phone |
+| Avdelning | Department |
+| Gatuadress | Street address |
+| Postnummer | Postal code |
+| Stad | City |
+
+## Vad krävs för att ingå i integrationen?
+
+För att en användare ska ingå/skapas upp i integrationen behöver medarbetaren ha:
+
+- **Företagsmail** inlagd i Hailey
+
+Medarbetare behöver även ha någon av följande **anställningsstatusar**:
+
+- Ska börja
+- I tjänst
+- Ska lämna
+
+## Hur aktiverar man integrationen?
+
+För att aktivera integrationen behöver du:
+
+<Steps>
+  <Step title="Säkerställa rätt behörigheter">
+    Säkerställa rätt behörigheter
+  </Step>
+  <Step title="Förbereda uppsättningen av integrationen i Okta">
+    Förbereda uppsättningen av integrationen i Okta.
+  </Step>
+  <Step title="Förbered uppsättningen av integrationen i Hailey">
+    Förbered uppsättningen av integrationen i Hailey
+  </Step>
+</Steps>
+
+### Steg 1 - Säkerställ rätt behörigheter
+
+För att konfigurera integrationen mellan Hailey och Okta behövs tillgång till **administratörsbehörigheter** i båda systemen.
+
+- Om någon annan, exempelvis IT, ska ansvara för att sätta upp integrationen, kan du ge dem de rättigheter som krävs genom att följa guiden för roller och rättigheter [**HÄR**](/sv/roles-and-rights). IT behöver rättigheten att Visa & ändra integrationer.
+
+### Steg 2 - Uppsättning i Okta
+
+Logga in i Okta och gå till Your Org.
+
+![image-png-Mar-23-2023-09-04-01-2328-AM](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-23-2023-09-04-01-2328-AM.png?width=670&height=348&name=image-png-Mar-23-2023-09-04-01-2328-AM.png)
+
+Gå till fliken Security på vänster sida och scrolla ner till API och gå till Tokens.
+
+![image-png-Mar-23-2023-09-06-27-2092-AM](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-23-2023-09-06-27-2092-AM.png?width=670&height=319&name=image-png-Mar-23-2023-09-06-27-2092-AM.png)
+
+Klicka på Create token, namnge den och klicka på Create token igen. Se till att kopiera token när den visas då du senare behöver lägga in den i Hailey.
+
+![image-png-Mar-23-2023-09-08-04-3052-AM](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-23-2023-09-08-04-3052-AM.png?width=663&height=640&name=image-png-Mar-23-2023-09-08-04-3052-AM.png)
+
+Gå nu till ditt högra hörn i Okta för att kopiera din Okta-domän. Nedan kan du se vad som är tänkt. Sen går du vidare till Hailey.
+
+![image-png-Mar-23-2023-09-14-43-1018-AM](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-23-2023-09-14-43-1018-AM.png?width=654&height=466&name=image-png-Mar-23-2023-09-14-43-1018-AM.png)
+
+### Steg 3 - Uppsättning i Hailey
+
+Gå till **Inställningar - Integrationer**. Klicka på Okta och klistra här in den kopierade domänen i fältet Okta-domän. Din kopierade token från Okta lägger du även till i fältet **Åtkomsttoken**. Sedan **Aktiverar** du synkroniseringen.
+
+Här finns även möjlighet att **Inaktivera** användare utan en aktiv anställning. Att aktivera denna innebär att medarbetare som har en anställning där slutdatumet har passerat, blir inaktiverade i Okta. I Okta får medarbetaren då statusen **Suspended**.
+
+När du är klar klickar du på Spara. Integrationen är nu aktiverad!
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-30-2026-12-39-38-3285-PM.png?width=670&height=960&name=image-png-Apr-30-2026-12-39-38-3285-PM.png)
+
+## Gäller integrationen inte hela företaget?
+
+Då finns det möjlighet att **omfatta** integrationen!
+
+Om dessa fält lämnas tomma kommer alla anställda som uppfyller krav för integrationen att synkas över.
+
+<Note>
+  **Exempelbilden** nedan visar att endast medarbetare som tillhör den valda legala enheten LE1 och den valda arbetsplatsen Gällivare som anges i integrationsuppsättningen, kommer att inkluderas i integrationen mot Okta.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-30-2026-12-36-11-5721-PM.png?width=670&height=963&name=image-png-Apr-30-2026-12-36-11-5721-PM.png)
+
+Ni kan se hur många integrationer mot Entra ID som ni har aktiverat genom att navigera till **Inställningar** - **Integrationer** - **Tillagda**. Här ser ni även omfattningen per aktiv integration.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-30-2026-12-38-09-5188-PM.png?width=670&height=355&name=image-png-Apr-30-2026-12-38-09-5188-PM.png)
+
+## Vanliga fragor
+
+**Fråga 1:** Varför inaktiveras inte medarbetarens konto i Okta när slutdatum har passerat i Hailey?
+
+Dubbelkolla att ni har aktiverat inställningen **Inaktivera medarbetare utan aktiv anställning** i uppsättningen i Hailey. Om ni har gjort det och allt ser korret ut där, dubbelkolla att medarbetaren inte har utökade rättigheter/licenser i Okta. Det kan göra att vi inte kan inaktivera denna medarbetare.
+
+**Fråga 2:** Hur kommer användare som redan finns i vårt Okta att matchas och hanteras när synkroniseringen aktiveras, skapas det dubbletter av användarna?
+
+Integrationen identifierar medarbetare utifrån deras företagsmail. Om mejladressen redan finns i Okta kommer **inte** dubbletter att skapas ut utan integrationen identifierar och matchar till användarens redan uppsatta profil.
+
+**Fråga 3:** Vad händer om jag ändrar en medarbetares företagsmail i Hailey, hur påverkar det integrationen?
+
+När ni ändrar företagsmejladressen på en medarbetare i Hailey skapas en ny profil i Okta. Detta beror på att e-postadressen används som identifiering vid skapandet av medarbetarens konto och fungerar som kopplingen mellan systemen.
+
+_Om du har några frågor angående integrationen, vänligen kontakta din Customer Success kontaktperson på Hailey._

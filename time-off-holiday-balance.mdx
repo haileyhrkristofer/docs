@@ -1,0 +1,183 @@
+---
+title: "Manage Time off balance"
+---
+
+Time off balances helps to keep track of remaining leave in Hailey. This guide explains how balances are calculated, what affects the balance, and how to view, import, and adjust Time off balances.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="gMBHNxI" title="Manage Time off balance" />
+
+## What are time off balances?
+
+Time Off Balances show how many leave days an employee has available to request in Hailey.
+
+An employee’s balance is calculated based on the number of days assigned to them through their Time Off Balance, minus any time off that has been requested or registered.
+
+You can find an employee’s Time Off Balance on their profile under the **Time** tab.
+
+At the start of a new holiday year, the balance is automatically refilled according to your Time Off Balance settings. If a carry-over limit has been configured, eligible unused days may also be carried over to the next holiday year.
+
+<Tip>
+  **Are you at the beginning of your journey with Hailey?** Make sure to **import your employees' current time off balance** before you go live with Hailey. Read more about how to import time off balances [HERE](/import-time-off-balance).
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-11-2026-06-37-41-8979-AM.png?width=666&height=328&name=image-png-Sep-11-2026-06-37-41-8979-AM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/1-png-Sep-21-2026-02-00-22-9453-PM.png?width=670&height=369&name=1-png-Sep-21-2026-02-00-22-9453-PM.png)
+
+Before you get started
+
+Before using Time Off Balances, make sure that:
+
+- A **Time Off Balance** has been created in **Settings**.
+- The relevant **Time Off Reasons** have been connected to the balance.
+- The Time Off Balance has been assigned to the relevant employees on their profiles. This can be done under **Job - Employments - Time & Time Off**.
+- Existing balances have been imported, if applicable.
+
+Time Off Balances start calculating from the date they are configured. **Previously registered time off is not included automatically**. If employees already have registered time off, make sure to import their initial balances.
+
+<Tip>
+  Read more about settings for **Time off balances** [HERE](/time-off-balances).
+
+  Read more about settings for **Time off reasons** [HERE](/time-off-reason).
+</Tip>
+
+## How do Time Off Balances work?
+
+To view an employee’s Time Off Balance:
+
+<Steps>
+  <Step title="Go to the employee’s profile">
+    Go to the employee’s **profile**.
+  </Step>
+  <Step title="Open the Time tab">
+    Open the **Time** tab.
+  </Step>
+  <Step title="Click the Time Off Balance card">
+    Click the **Time Off Balance** card.
+  </Step>
+</Steps>
+
+Here, you can see the **Future balance**, which shows the expected balance based on future time off, the **Current balance**, which shows the employee’s available balance at the moment, and the **Balance history**, which shows previous adjustments, balance refills, and other changes to the balance.
+
+The balance may decrease because of:
+
+- Time off requests
+- Registered time off
+- Carry-over limits
+- Manual adjustments
+
+The balance may increase because of:
+
+- Automatic refills
+- Manual adjustments
+- Imported balances
+- Eligible carry-over from the previous holiday year
+
+<img src="https://docs.haileyhr.com/hs-fs/hubfs/12-png-1.png?width=670&height=286&name=12-png-1.png" alt="" />Only **time off reasons that reduces the time off balance** impact the balance for each employee.
+
+You can also view **predicted reductions** and refills for the **next holiday year**. The predicted refill will be set according to the holiday agreement on the employees employment.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/13-png.png?width=670&height=369&name=13-png.png)
+
+<Tip>
+  A predicted reduction is calculated if the time off agreement has a **carry-over limit**. In this case the calculation will be made based on current balance and future time off that occurs before the next holiday year. The prediction will be updated in case new time off is added or an adjustment is made.
+</Tip>
+
+## How do you import Time Off Balances?
+
+If you are starting to use Time off balances, you can import employees' current balances instead of adjusting each employee manually.
+
+Importing a Time off balance resets the visible balance history for the affected employee. Previous refills, adjustments, and balance reductions **will no longer appear in the overview**.
+
+Previously registered Time off will still be available on the employee's **Time** tab and in reports.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/1-png-Sep-11-2026-07-20-28-5658-AM.png?width=670&height=422&name=1-png-Sep-11-2026-07-20-28-5658-AM.png)
+
+<Tip>
+  Read more about **importing Time off balances** [HERE](/import-time-off-balance).
+</Tip>
+
+## How do you adjust a Time Off Balance?
+
+You can manually adjust an individual employee's Time off balance. Go to the **Employee profile**  - **Time** **tab - click on the Time off balance card - click Edit balance** and enter the balance you want the employee to have as of today.
+
+This won't affect anything already scheduled, refills and reductions will still happen as planned. <img src="https://docs.haileyhr.com/hs-fs/hubfs/2-png-Sep-21-2026-01-59-53-1420-PM.png?width=670&height=343&name=2-png-Sep-21-2026-01-59-53-1420-PM.png" alt="" />
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/3-png-Sep-21-2026-02-00-03-3954-PM.png?width=670&height=346&name=3-png-Sep-21-2026-02-00-03-3954-PM.png)
+
+## Rights
+
+The following rights may be relevant when working with Time off balances:
+
+- **Time & Time Off - View:** Allows viewing time and time off, and deleting unapproved requests including the Time off balance.
+- **Time & Time Off - View & edit:** The rights above and also allows adding automatically approved time off and deleting time & time off.
+
+Read more about how **Roles & rights** work in the guide [HERE](/roles-and-rights).
+
+## Common questions
+
+**Question**: Why does the the days I applied for reduce my Time off balance, they are in the future?
+
+Applied days will reduce the balance instantly and not after the actual requested days has taken place.m
+
+**Question**: My employee has registered time off, altough it os on a **non working day**, why does it not get registered and edit the time off balance?
+
+Time off added on non-working days are **not registered and, therefore, do not decrease the time off balance**.
+
+**Question**: What happens if I request time off for next **holiday year**?
+
+These days will not be counted until next holiday year begins. Therese days will still be visual in the approving process and on the employees calendar under **Time tab**.
+
+**Question**: Why is a Time off reason not reducing the balance?
+
+Only Time off reasons that are connected to a Time off balance will affect the balance.
+
+Check the Time off balance settings to make sure the correct Time off reasons have been selected.
+
+**Question**: Why does an employee not have a Time off balance?
+
+An employee will only see a Time off balance if one has been assigned to their profile.
+
+To check or update the assigned Time off balance:
+
+<Steps>
+  <Step title="Go to the employee's profile">
+    Go to the employee's profile.
+  </Step>
+  <Step title="Open the Employment section">
+    Open the **Employment** section.
+  </Step>
+  <Step title="Check the settings under Time & Time Off">
+    Check the settings under **Time & Time Off**.
+  </Step>
+  <Step title="Click Actions - Edit Time & time off to add or update the em">
+    Click **Actions - Edit Time & time off** to add or update the employee's Time off balance.
+  </Step>
+</Steps>
+
+Note: When adding a new Time off balance to an employment, make sure that the initial balance is correct. You can adjust the balance manually or update it through an import if needed.
+
+**Question**: Why doesn't the Time off balance match our payroll system?
+
+Time Off Balances in Hailey are designed to visualize the number of leave days an employee has available to request. Because the balance is reduced when a Time Off request is submitted, it may differ from how leave balances are calculated in your payroll system.
+
+**Question**: Why isn't a Time off reason reducing the balance?
+
+Only Time Off Reasons connected to a Time Off Balance affect the calculation. Check that the correct Time Off Reasons have been selected in the Time Off Balance settings.
+
+**Question**: What happens if I import a new Time off balance?
+
+Importing a Time off balance replaces the employee's visible balance history. **Previous adjustments**, refills, and balance reductions **will no longer appear in the overview**, but all registered Time Off will remain available on the employee's **Time** tab and in reports.

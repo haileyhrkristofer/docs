@@ -1,0 +1,291 @@
+---
+title: "Integration med Fortnox"
+---
+
+Integrationen med Fortnox gör det möjligt för er att synkronisera frånvaro samt lön från Hailey. På detta sätt minimerar ni risken för fel, medarbetarna slipper registrera frånvaro dubbelt och ni säkerställer att uppgifter behandlas GDPR-säkert.
+
+<Tip>
+  Första gången du aktiverar en av **Haileys standardintegrationer?** Börja med att läsa den [**HÄR**](/sv/haileys-standard-integrations)guiden för att få veta vad du ska tänka på innan du sätter igång.
+</Tip>
+
+---
+
+## Vad gör integrationen?
+
+Vid varje synkronisering kommer [**inkluderad data**](#vilken-data-ar-inkluderad)att **automatiskt** uppdateras via **API överföring** **till Fortnox** och få samma värde som finns i Hailey, eftersom **Hailey är master** (facit).
+
+- Skapa nya medarbetare i Fortnox. när en medarbetare finns i Hailey men ännu inte finns i Fortnox, förutsatt att personen har ett anställningsnummer som inte redan finns där
+- Uppdatera inkluderad medarbetardata i Fortnox när motsvarande uppgifter ändras i Hailey
+- Uppdatera löneuppgifter i Fortnox. när lön läggs till eller ändras i Hailey, om lönesynk är aktiverad
+- Föra över godkänd frånvaro från Hailey till Fortnox, om frånvarosynk är aktiverad
+
+Eftersom Hailey är master för integrationen ska ändringar i de fält som omfattas göras i Hailey, inte i Fortnox. Annars skrivs de över vid nästa synkronisering.
+
+Med API-överföringen sker en synkronisering mellan Hailey och Fortnox **varje heltimme** baserat på förändringar.
+
+Det innebär i praktiken att:
+
+- Ändringar i medarbetardata uppdateras i Fortnox vid nästa synk.
+- Ändrade eller nya löner förs över om lönesynk är aktiverad och lönen har startdatum från det datum ni valt i integrationen.
+- Ändrad eller ny frånvaro förs över om frånvarosynk är aktiverad, frånvaron är godkänd och registreringen ligger från det datum ni valt i integrationen.
+
+---
+
+## Vilken data är inkluderar i integrationen?
+
+Nedan ser ni vilken data som synkroniseras från Hailey till Fortnox:
+
+**Medarbetardata som synkroniseras:**
+
+| **HAILEY** | **FORTNOX** |
+|---|---|
+| Telefonnummer | Telefon |
+| Företagsmail | E-post |
+| Anställningsdatum | Anställd |
+| Sista anställningsdag | Anställd t.o.m |
+| Anställningsnummer | Anställnings-ID |
+| Förnamn | Förnamn |
+| Efternamn | Efternamn |
+| Personnummer | Personnummer |
+| Telefonnummer privat | Telefon 2 |
+| Gatuadress | Postadress |
+| Postnummer | Postnr |
+| Stad | Ort |
+| Land | Land |
+| Clearingnummer | Clearingnr |
+| Kontonummer | Bankkontonummer |
+
+**Valbart fält:**
+
+| **HAILEY** | **FORTNOX** |
+|---|---|
+| Kostnadsställe | Kostnadsställe |
+
+**Lönedata som synkroniseras när lönesynk är aktiverad:**
+
+| **HAILEY** | **FORTNOX** |
+|---|---|
+| Månadslön | Månadslön |
+| Timlön | Timlön |
+
+**Frånvarodata som synkroniseras när frånvarosynk är aktiverad:**
+
+| **HAILEY** | **FORTNOX** |
+|---|---|
+| Frånvaro | Frånvaro |
+
+<Note>
+  **Viktigt att känna till:**
+
+  - All data i dessa fält skrivs över i Fortnox när integrationen är aktiv - inklusive valbart fält om tillagt
+  - Alla löner med betalningsperioden månadslön slås ihop i Fortnox på medarbetarens kort
+  - Har medarbetaren fler än en timlön i Hailey kommer **ingen** av dessa synkroniseras till Fortnox alternativt kommer timlönerna rensas i Fortnox om det funnits timlöner där sedan tidigare.
+  - Om felaktiga bankuppgifter skickas från Hailey till Fortnox får företagsadministratören i Hailey ett mejl om detta.
+  - För att bankuppgifter ska kunna överföras korrekt måste ett personnummer vara registrerat i systemet, antingen ett svenskt personnummer eller ett personnummer av typen "Other".
+  - Hailey skapar inte kostnadsställen i Fortnox. För att ett kostnadsställe i Hailey ska kunna synka till en medarbetare i Fortnox måste kostnadsstället redan vara upplagt i Fortnox.
+</Note>
+
+---
+
+## Vad krävs för att ingå i integrationen?
+
+För att kunna aktivera **integrationen** behöver medarbetare i Hailey ha:
+
+- **Administratörskonto i Fortnox**
+- **behörighet i Hailey att visa och ändra integrationer**
+- **löne- och integrationslicens i Fortnox**
+
+För att en medarbetare ska inkluderas i integrationen behöver dessa fält vara ifyllda i Hailey:
+
+- **Anställningsnummer** (*som matchar anställnings-ID i Fortnox*)
+- **Företagsmail**
+
+Medarbetare behöver även ha en av följande **Anställningsstatusar** för att ingå i integrationen:
+
+- **I tjänst**
+- **Börjar snart**
+- **Ska lämna**
+- **Arbetsbefriad**
+
+<Note>
+  Om en medarbetare uppfyller kraven för att ingå i integrationen men saknar ett matchande **Anställnings-ID** i Fortnox, skapas det automatiskt en ny användare i Fortnox.
+</Note>
+
+## Innan du aktiverar integrationen
+
+Innan aktivering av integrationen behöver alla fält under inkluderade fält som omfattas av integrationen säkerställas innehåller korrekt data innan aktivering, eftersom uppgifterna i Hailey kommer att skriva över motsvarande data i Fortnox.
+
+Om ni ska synkronisera lön eller frånvaro behöver ni dessutom välja startdatum för när respektive synk ska börja gälla. Startdatumen måste vara korrekt satta för att rätt information ska föras över.
+
+---
+
+## Hur aktiverar man integrationen?
+
+För att aktivera integrationen behöver du:
+
+<Steps>
+  <Step title="Lägg till integrationen i Hailey">
+    Lägg till integrationen i Hailey
+  </Step>
+  <Step title="Fylla i nödvändig data för integrationsuppsättningen">
+    Fylla i nödvändig data för integrationsuppsättningen
+  </Step>
+  <Step title="Omfatta integrationen vid behov">
+    Omfatta integrationen vid behov
+  </Step>
+  <Step title="Spara och aktivera!">
+    Spara och aktivera!
+  </Step>
+</Steps>
+
+**Följ instruktionerna nedan för att gå genomföra aktivering av integrationen.**
+
+**1. Lägg till integrationen i Hailey**
+
+Gå till **Inställningar → Integrationer** och klicka på **Lägg till integration** under Fortnox.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-14-2026-03-10-44-1625-PM.png?width=670&height=411&name=image-png-Apr-14-2026-03-10-44-1625-PM.png)
+
+**2. Autentisera kopplingen mot Fortnox**
+
+Klicka på **Autentisera Hailey i Fortnox**. Ni skickas då vidare till Fortnox, där ni loggar in med ert företagskonto och godkänner kopplingen mellan systemen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-14-2026-03-11-32-5835-PM.png?width=670&height=490&name=image-png-Apr-14-2026-03-11-32-5835-PM.png)
+
+Klicka på "Autensiera Hailey i Fortnox" och logga in med ert företagskonto
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-28-2022-07-55-20-98-AM.png?width=547&height=969&name=image-png-Apr-28-2022-07-55-20-98-AM.png)
+
+*Godkänn kopplingen mellan systemen*
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-28-2022-07-54-36-12-AM.png?width=544&height=1007&name=image-png-Apr-28-2022-07-54-36-12-AM.png)
+
+**3. Gå tillbaka till integrationen i Hailey**
+
+När autentiseringen är klar går ni tillbaka till **Inställningar → Integrationer → Fortnox** i Hailey. Aktivera integrationen genom att slå på toggeln och fylla i de inställningar som krävs. Avsluta med att klicka på **Spara**.
+
+**4. Ange omfattning direkt vid uppsättning**
+
+Om integrationen inte ska gälla hela företaget behöver ni ange vilka kontor och/eller legala enheter som ska omfattas. Detta behöver göras direkt när integrationen sätts upp, eftersom synkroniseringen startar omedelbart. Om dessa fält lämnas tomma inkluderas alla medarbetare som har ett anställningsnummer och företagsmail på medarbetarkortet.
+
+**5. Aktivera lönesynk vid behov**
+
+Om ni vill synkronisera löner:
+
+- Aktivera lönesynk
+- Välj från vilket datum löner ska börja synkroniseras
+- Tänk på att endast nya eller ändrade godkända löner från och med detta datum förs över
+- Tänk på att Hailey skriver över motsvarande lönedata i Fortnox från detta datum och framåt
+
+**6. Aktivera frånvarosynk vid behov**
+
+Om ni vill synkronisera frånvaro:
+
+- Aktivera frånvarosynk
+- Välj från vilket datum frånvaro ska börja synkroniseras
+- Endast godkänd frånvaro synkroniseras
+- Både frånvaro registrerad i procent och timmar stöds
+- All godkänd frånvaro efter valt datum skrivs över i Fortnox
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-14-2026-03-12-08-2023-PM.png?width=670&height=490&name=image-png-Apr-14-2026-03-12-08-2023-PM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-21-2026-08-57-10-4642-AM.png?width=436&height=508&name=image-png-May-21-2026-08-57-10-4642-AM.png)
+
+<Note>
+  För att frånvarosynken ska fungera måste ni mappa era frånvaroanledningar i Hailey till rätt Fortnox-koder. Koderna ska anges med versaler. Det är koden som ska anges, inte namnet på frånvaroanledningen.
+</Note>
+
+**Kodschema för frånvaroanledningar i Fortnox:**
+
+**ASK** – Arbetsskada
+**ATF** - Arbetstidsförkortning
+**FPE** – Föräldraledig
+**FRA**  – Frånvaro övrigt
+**HAV** – Graviditetspenning
+**KOM** – Kompledig
+**MIL** – Militärtjänst (max 60 dagar)
+**NAR** – Närståendevård
+**OS1** – Sjuk-OB 1
+**OS2** – Sjuk-OB 2
+**OS3** – Sjuk-OB 3
+**OS4** – Sjuk-OB 4
+**OS5** – Sjuk-OB 5
+**PAP** – Pappadagar
+**PEM** – Permission
+**PER** – Permitterad
+**SEM** – Semester
+**SJK** – Sjukfrånvaro
+**SMB** – Smittbärare
+**SVE** – Svenska för invandrare
+**TJL** – Tjänstledig
+**UTB**  – Facklig utbildning
+**VAB** – Vård av barn
+
+<Tip>
+  **Viktigt vid mappning av frånvaro:**
+
+  - Om ni anger fel frånvarokod, till exempel skriver “Semester” i stället för “SEM”, inaktiveras integrationen och företagsadministratören får ett mejl.
+  - Om en frånvaroanledning raderas i Hailey och en ny läggs upp behöver motsvarande inställning uppdateras i Fortnox-inställningarna i Hailey
+</Tip>
+
+## Fler integrationer vid behov?
+
+Om ni har flera kontor eller legala enheter kan ni skapa flera separata Fortnox-integrationer. **Det gör det möjligt att koppla olika delar av organisationen till olika Fortnox-konton eller att styra omfattningen mer exakt**. Nya integrationer sätts upp på samma sätt som den första.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-14-2026-03-13-57-2607-PM.png?width=522&height=714&name=image-png-Apr-14-2026-03-13-57-2607-PM.png)
+
+Ni kan se hur många integrationer mot Fortnox som ni har aktiverat genom att kika på kortet. Exempel: en integration kommer stå som "1 Aktiv".
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-14-2026-03-14-20-1156-PM.png?width=290&height=209&name=image-png-Apr-14-2026-03-14-20-1156-PM.png)
+
+Du kan följa vilka/hur många integrationer som ert företag har aktiva under Aktiv-tabben under Integrationer. För att lägga till en ny Fortnox-integration så går du till tabben Alla och sätter upp en ny integration, på samma sätt som när du satte upp den första integrationen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-14-2026-03-15-02-8250-PM.png?width=670&height=407&name=image-png-Apr-14-2026-03-15-02-8250-PM.png)
+
+## Vanliga fragor
+
+<Note>
+  **Har alla ett anställningsnummer i Fortnox, som stämmer överens med deras anställningsnummer i Hailey?**
+
+  Om nej, fyll i anställningsnumret i Hailey.
+</Note>
+
+<Note>
+  **Om integrationen har omfattats, är medarbetaren i fråga inkluderad i omfattningen?**
+
+  Om inte, ändra antingen omfattningen eller tillhörigheten i Hailey och gör sedan om inställningen av integrationen.
+</Note>
+
+<Note>
+  **Har synkroniseringsdatumet någonsin ändrats?**
+
+  Om ja, måste du konfigurera integrationen igen för att Hailey ska inkludera informationen före detta datum.
+  Om nej, måste du först godkänna detta för att Hailey ska kunna synkronisera frånvaro till Fortnox.Om du synkroniserar frånvaro, är frånvaron godkänd i Hailey?
+</Note>
+
+<Note>
+  **Har timlönerna rensats i Fortnox?**
+
+  Det är endast möjligt att synkronisera en timlön från Hailey till Fortnox. Om timlönerna redan har rensats går det att återställa lönehistoriken genom att radera ena timlönen från medarbetarkortet i Hailey och därefter lägga till en löneförändring på den ordinarie timlönen (*det går bra att ange samma summa på timlönen som förut).*
+</Note>
+
+<Note>
+  **Vad krävs för att frånvaro ska registeras över helgdagar i Fortnox?**
+
+  För att helgdagar ska registeras från Hailey till Fortnox krävs det att frånvaron i Hailey klassas som en långtidsfrånvaro. Läs mer om långtidsfrånvaro i Hailey **[HÄR](/sv/settings-for-longterm-leave)**. Då kommer frånvaro dagar under lördagar, söndagar och arbetsfria dagar synkas över till Fortnox från Hailey.
+</Note>
+
+<Note>
+  **Varför får jag ett mail om "Invalid Bank Detalis" från Hailey?**
+
+  Detta meddelande skickas när bankuppgifterna i Hailey och Fortnox inte överensstämmer. Korrigera uppgifterna så att de är identiska i båda systemen för att undvika ytterligare utskick.
+</Note>
+
+En annan anledning till varför integrationen kanske inte fungerar kan bero på en inställning i Fortnox. Om detta inträffar får du ett meddelande via e-post om vilken anställd det gäller. Du behöver då:
+
+- Gå till den anställdes profil i Fortnox,
+- Välj "Personal" från listan,
+- Klicka på fliken "Löneinformation",
+- Klicka på knappen "Ändra lön". Här behöver du fylla i startdatumet "1970-01-01" i fältet "Gäller från".
+
+*Om du har några frågor angående integrationen, vänligen kontakta din Customer Success kontaktperson på Hailey.*

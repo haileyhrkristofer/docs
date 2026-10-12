@@ -1,0 +1,112 @@
+---
+title: "Assign substitute"
+---
+
+Is an employee temporarily absent and in need of a substitute for a short period? With the Assign substitute feature, this can be easily managed and visualized.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="51eqAFA" title="Assign substitute" />
+
+## What is Assign substitute?
+
+Assign Substitute allows you to temporarily assign a substitute for an employee who is absent. Using this feature, the substitute will temporarily inherit the rights and approval principles of the employee they are covering for.
+
+## Before you get started
+
+To temporarily transfer rights to the substitute employee, you can use **Assign Substitute** via the **Actions** button on the employee card.
+
+You can also **Add an** **employment** to preserve historical records and visualize the substitute employment after the substitute period has ended. When adding a substitute employment, a **Substitute reason** must be specified. These reasons need to be configured before a substitute employment can be added for an employee.
+
+You can read more about how to create substitute reasons [**HERE.**](/template-new-article-7-0-0)
+
+## How to assign a substitute?
+
+To Assign a substitute, follow these steps:
+
+- Go to the employee card **of the employee who will be absent.**
+- Click **Actions**
+- Select **Assign substitute**
+
+![](https://docs.haileyhr.com/hubfs/image-png-Nov-18-2025-07-57-54-4024-AM.png)
+
+Then select **Who should be the substitute** and specify the **From** **and To dates** of the substitute period. Once you are satisfied, click Save.
+
+<Note>
+  By assigning a substitute, the absent employee’s **Roles & rights** and **Approval principles** are transferred to the substitute employee for the duration of the substitution period.
+</Note>
+
+![](https://docs.haileyhr.com/hubfs/image-png-Nov-18-2025-08-05-05-2937-AM.png)
+
+Once the selections have been saved, this will be clearly indicated on both the absent employee's and the substitute's employee cards. This is shown with **a box under each profile picture**, where the start and end dates are also displayed. All employees can see the box in the employee profiles.
+
+<Note>
+  For the employee acting as the substitute, this will only be visible on their profile **once the substitution period begins.**
+</Note>
+
+![](https://docs.haileyhr.com/hubfs/image-png-Nov-18-2025-08-02-02-2335-AM.png)
+
+Need to **edit or remove the substitution?** Go to the absent employee's profile, click on the box under their profile picture, and make the necessary changes.
+
+<Note>
+  If needed, one employee can have multiple substitutes. This is achieved by repeating the above process.
+</Note>
+
+<Note>
+  When a substitution period ends, **the rights will automatically revert to the employee who was absent**. The box under the profile pictures will disappear after the last day of the substitution.
+</Note>
+
+<Note>
+  If you need to **change the substitute,** the current substitution must first be removed. Then, add the new substitute as described above.
+</Note>
+
+![](https://docs.haileyhr.com/hubfs/image-png-Nov-18-2025-08-00-21-1049-AM.png)
+
+## How to add a substitute employment?
+
+**Add a new employment** to preserve historical records and visualize the substitution after the substitution period has ended.
+
+Follow the instructions [**HERE**](/employment-wizard) to add employment.
+
+To create a substitute employment, you must fill in certain fields under **Employment information** in the wizard:
+
+- Under **Employment type,** select **Fixed term**. Then select **Temporary substitute** as the **Fixed term type.**
+- Enter an end date for the fixed term.
+- Select **who the employee is substituting for** and a **Substitute reason.**
+
+After filling in the employment information, continue through the wizard as usual.
+
+## Rights
+
+As an admin in Hailey, you can always assign a substitute. You can give the right to assign substitutes to other roles in **Roles and rights.**
+
+- **Assign substitute through the action button**: Actions - Assign substitute - Yes.
+
+<Note>
+  [**HERE**](/roles-and-rights) you can read more about **Roles & rights**
+</Note>
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Why can't I see the the box with information about the substitution in the employee's profile?">
+    No worries. For the employee acting as the substitute, the box **only becomes visible** **once the substitution period starts.** On the absent employee’s profile, the box is displayed immediately after the substitution has been assigned.
+  </Accordion>
+
+  <Accordion title="Why can't I select a substitute reason when adding a new employment for an employee?">
+    This is likely because no substitution reasons have been configured yet. To select a reason from the dropdown list, the reasons must first be created in Hailey.
+
+    Create substitute reasons by following the instructions [**HERE.**](/template-new-article-7-0-0)
+  </Accordion>
+</AccordionGroup>

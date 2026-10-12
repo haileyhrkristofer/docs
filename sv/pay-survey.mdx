@@ -1,0 +1,218 @@
+---
+title: "Lönekartläggning"
+---
+
+Läs den här guiden för att lära dig hur du förbereder, initierar och genomför en lönekartläggning i Hailey. Du får även veta hur du analyserar lika och likvärdigt arbete, dokumenterar avvikelser och slutför kartläggningen.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="CvMle09" title="Lönekartläggning" />
+
+Vad är lönekartläggning?
+
+Lönekartläggning i Hailey hjälper er att analysera löner och förmåner mellan kvinnor och män, både inom lika och likvärdigt arbete. Funktionen ger en samlad överblick över underlaget, vilket gör det enklare att identifiera löneskillnader, dokumentera avvikelser och arbeta vidare med analysen.
+
+## Innan du sätter igång
+
+Innan du initierar lönekartläggningen behöver du gå igenom underlaget och se till att all information som ska ingå är korrekt ifylld. Det är viktigt eftersom lönekartläggningen endast baseras på den information som finns tillgänglig när kartläggningen startas.
+
+Information som läggs till eller uppdateras efter att kartläggningen har startats kommer inte att visas i lönekartläggningen. För att en medarbetare ska ingå i analysen behöver följande information finnas på plats:
+
+- Titel/Titlar
+- Lön/Löner (godkända)
+- Eventuella förmåner (godkända)
+- Födelsedatum
+- Total anställningstid
+- Legal enhet
+- Kön (man eller kvinna)
+
+## Hur initierar du en lönekartläggning?
+
+När du är nöjd med datan är det dags att initiera lönekartläggningen! Gå till **HR Hub - Lönekartläggningar - Initiera.** Då öppnas en wizard som guidar dig steg för steg genom uppsättningen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-06-2026-08-16-14-3283-AM.png?width=670&height=349&name=image-png-Jul-06-2026-08-16-14-3283-AM.png)
+
+Börja med att ange ett namn för lönekartläggningen. Välj sedan vilken eller vilka legala enheter som ska inkluderas. Medarbetare som tillhör de valda legala enheterna inkluderas i kartläggningen. Om det inte finns några legala enheter i kontot inkluderas samtliga medarbetare.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-06-2026-08-21-20-5982-AM.png?width=664&height=415&name=image-png-Jul-06-2026-08-21-20-5982-AM.png)
+
+Fortsätt processen genom att **välja ett utvärderingsdatum.** Det valda datumet kommer att visa medarbetarnas data från den tidpunkten.
+
+<Warning>
+  Kartläggningen utgår från de löner och den organisatoriska tillhörighet som gäller på det valda datumet. Förändringar som sker efter detta datum inkluderas inte.
+</Warning>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-06-2026-08-19-44-7959-AM.png?width=664&height=413&name=image-png-Jul-06-2026-08-19-44-7959-AM.png)
+
+Därefter väljer du om kompensationen ska beräknas månadsvis eller årligen. Valet styr hur beloppen räknas om i lönekartläggningen och gör att de kan jämföras på ett enhetligt sätt.
+
+Om ni vill inkludera timlöner aktiverar du valet **Inkludera timlöner.** Ange sedan hur många timmar per vecka som motsvarar en heltid i företaget, till exempel 40 timmar. Uppgiften används för att räkna om timlöner enligt det beräkningssätt som valts, månadsvis eller årligen. Om timlöner inte ska ingå lämnar du valet avstängt.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-07-2026-09-14-25-0032-AM.png?width=664&height=412&name=image-png-Jul-07-2026-09-14-25-0032-AM.png)
+
+Därefter väljer du vilka typer av rörlig lön som ska ingå i lönekartläggningen. Som standard är alla aktiva typer av rörlig lön markerade, men du kan avmarkera de typer som inte ska tas med.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-24-2026-11-10-14-2508-AM.png?width=670&height=391&name=image-png-Sep-24-2026-11-10-14-2508-AM.png)
+
+I nästa steg väljer du vilka förmåner som ska ingå i lönekartläggningen. Som standard är alla förmåner som omfattar de valda legala enheterna markerade, men du kan avmarkera de förmåner som inte ska tas med. Om det inte finns några förmåner för de valda legala enheterna hoppas steget över.<br /><img src="https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-06-2026-08-27-08-1533-AM.png?width=664&height=411&name=image-png-Jul-06-2026-08-27-08-1533-AM.png" alt="" />
+
+## Börja
+
+När lönekartläggningen har initierats öppnas steget **Börja**. Här får du en översikt över kartläggningens grunduppgifter, till exempel vilka legala enheter, medarbetare och förmåner som ingår, vilket utvärderingsdatum som används och när kartläggningen startades.
+
+Under **Fakta** visas även en sammanfattning av löneunderlaget, till exempel fördelning mellan kvinnor och män, genomsnittlig och medianbaserad kompensation samt lönegapet mellan könen. Beloppen visas utifrån det beräkningssätt som valdes vid initieringen, det vill säga månadsvis eller årligen.
+
+Under **Konsekvenser av ert lönegap** visas även exempel på vad det aktuella lönegapet motsvarar, till exempel hur mycket tidigare under arbetsdagen kvinnor i genomsnitt slutar få betalt, hur många extra dagar per år kvinnor skulle behöva arbeta för att nå motsvarande lön samt årets Equal Pay Day.
+
+Till höger finns en kort översikt över de steg som ingår i lönekartläggningen. Använd denna vy för att få en första bild av underlaget innan du går vidare till **Förberedelse.**
+
+## Förberedelse
+
+När lönekartläggningen har initierats är det dags att förbereda den. Detta görs genom att granska och uppdatera kartläggningens parametrar. Kartläggningen har som standard fyra parametrar, som alla väger lika med 25 %.
+
+Klicka på **Uppdatera parametrar** för att:
+
+- **Lägga till en ny parameter**
+- **Byta namn på befintliga parametrar**
+- **Ta bort parametrar**
+- **Ändra vikten i procent**
+
+Vid behov kan du gruppera två eller fler titlar i en titelgrupp, till exempel om ni har närliggande roller som ni vill analysera tillsammans. Du skapar en titelgrupp genom att klicka på **Hantera titlar** - **Lägg till titelgrupp**.
+
+Avsluta förberedelserna genom att poängsätta varje parameter per titel eller titelgrupp. Skalan är 0 till 5. När du är klar klickar du på **Spara förberedelser** innan du går vidare till nästa steg.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-07-2026-09-19-44-0683-AM.png?width=670&height=356&name=image-png-Jul-07-2026-09-19-44-0683-AM.png)
+
+Om medarbetare har löner i olika valutor hämtas växelkurserna från företagsinställningarna. Vid behov kan du justera växelkurserna direkt i lönekartläggningen.
+
+Klicka på **de tre prickarna** - **Uppdatera växelkurser**. Välj sedan basvaluta och ange rätt växelkurs. Avsluta genom att klicka på **Spara**.
+
+Läs mer om hur du lägger till valutor [här](/sv/admin-kom-igang#allmant-valutor).
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-07-2026-09-23-05-3602-AM.png?width=670&height=271&name=image-png-Jul-07-2026-09-23-05-3602-AM.png)
+
+## Analys
+
+När lönekartläggningen har förberetts är det dags att påbörja analysen. Du kan analysera underlaget på två sätt: **lika arbete** och l**ikvärdigt arbete.** Lika arbete utgår från titlar och titelgrupper, medan likvärdigt arbete utgår från poängsättningen som gjordes i förberedelsen. Det innebär att du kan jämföra arbeten som har fått samma eller liknande poäng, även om de inte har samma titel.
+
+I analysen visas beloppen utifrån det val du gjorde vid initieringen, det vill säga månadsvis eller årligen. Om timlöner inkluderades räknas de om och ingår i löneunderlaget. Om förmåner inkluderades visas de som ett eget alternativ i analysvyn och kan visas separat eller tillsammans med löner.
+
+Under fliken **Lika arbete** visas analysen baserat på titlar och de titelgrupper du har skapat i de tidigare stegen. Här ser du antalet kvinnor/män, procentandel kvinnor samt löneskillnaden mellan könen för varje titel/grupp.
+
+För en mer detaljerad analys, klicka på en titeln/titelgrupp. Detta öppnar en vy som visar antalet män och kvinnor, procentandelen kvinnor, genomsnittlig ålder, genomsnittlig lön, medianlön och löneskillnaden mellan könen i procent.
+
+I analysvyn kan du välja vilka delar av underlaget som ska ingå i beräkningarna. Du kan välja att inkludera lön, rörlig lön, förmåner eller samtliga. Valet påverkar de värden som visas i analysen, till exempel genomsnitt, median, grafer och diagram.
+
+Här hittar du även en graf och ett diagram. Grafen visar löner efter kön i relation till det totala anställningstiden eller ålder, och diagramet är ett boxdiagram som visar löner efter kön.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-06-2026-11-53-56-6418-AM.png?width=670&height=596&name=image-png-Jul-06-2026-11-53-56-6418-AM.png)
+
+Under **Likvärdigt arbete** visas analysen på liknande sätt som under Lika arbete. Här ser du antal kvinnor och män, andel kvinnor samt löneskillnaden mellan könen för varje titel eller titelgrupp.
+
+Här visas även en poäng som baseras på bedömningen av parametrarna i föregående steg. Poängen hjälper dig att identifiera titlar och titelgrupper som kan ses som likvärdiga.
+
+För en mer detaljerad analys väljer du två eller fler titlar eller titelgrupper och klickar på **Starta analys**. Då öppnas samma analysvy som för lika arbete.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-06-2026-11-54-37-8780-AM.png?width=670&height=559&name=image-png-Jul-06-2026-11-54-37-8780-AM.png)
+
+<Note>
+  - En positiv löneskillnad, till exempel 15 %, innebär en skillnad till kvinnors nackdel.
+  - En negativ löneskillnad, till exempel -15 %, innebär en skillnad till mäns nackdel.
+</Note>
+
+## Identifiera och hantera avvikelser
+
+Under analysen kan du lägga till avvikelser vid behov. Klicka på **Lägg till avvikelse** i analysvyn. Då öppnas ett fönster där du kan beskriva avvikelsen och klassificera den som **Berättigad**, **Oberättigad** eller **I behov av utredning**.
+
+När du är klar klickar du på **Spara**. Sparade avvikelser visas under **Dokumentation** - **Avvikelser**. Här kan du även redigera en avvikelse genom att klicka på den.
+
+<Note>
+  För att kunna slutföra lönekartläggningen behöver alla avvikelser vara klassificerade som **Berättigad** eller **Oberättigad**. Avvikelser som är markerade som **I behov av utredning** behöver uppdateras innan kartläggningen kan slutföras.
+</Note>
+
+## Slutför lönekartläggningen
+
+När analysen är klar och alla avvikelser har klassificerats går du till **Dokumentation - Avslutande kommentarer.** Här kan du lägga till ytterligare dokumentation, utöver det som finns under varje avvikelse.
+
+Klicka sedan på **Slutför lönekartläggning** i det övre högra hörnet. När lönekartläggningen har slutförts kan den inte längre redigeras.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-07-2026-09-49-01-9320-AM.png?width=670&height=300&name=image-png-Jul-07-2026-09-49-01-9320-AM.png)
+
+Pågående och avslutade lönekartläggningar visas under **HR-Hub - Lönekartläggningar** och sorteras efter datum.
+
+## Viktiga begrepp
+
+Nedan hittar du korta förklaringar av begrepp som är bra att känna till när du arbetar med lönekartläggningen.
+
+**Utvärderingsdatum:** Det datum som styr vilket underlag lönekartläggningen utgår från. Löner och organisatorisk tillhörighet baseras på hur det såg ut vid det valda datumet.
+
+**Titelgrupp:** En samling titlar som analyseras tillsammans i lönekartläggningen.
+
+**Parametrar:** Kriterier som används för att poängsätta titlar och titelgrupper.
+
+**Lika arbete:** Arbeten som analyseras tillsammans utifrån titel eller titelgrupp.
+
+**Likvärdigt arbete:** Arbeten som jämförs utifrån poängsättningen i förberedelsen.
+
+**Avvikelse:** En identifierad löneskillnad som behöver beskrivas och klassificeras i analysen.
+
+**Berättigad:** En klassificering som används när det finns en saklig och dokumenterad förklaring till avvikelsen.
+
+**Oberättigad:** En klassificering som används när det saknas en saklig och dokumenterad förklaring till avvikelsen.
+
+**I behov av utredning:** En klassificering som används när en avvikelse behöver undersökas vidare innan den kan bedömas som berättigad eller oberättigad.
+
+## Rättigheter
+
+Admin har som standard tillgång till att hantera lönekartläggningar. För övriga roller behöver rättigheten Hantera lönekartläggning aktiveras.
+
+Läs mer om hur du ställer in roller och rättigheter **[HÄR](/sv/roles-and-rights).**
+
+- **Hantera lönekartläggning** gör det möjligt att hantera lönekartläggningar i kontot.
+
+<Warning>
+  Observera att rättigheten **Hantera lönekartläggning** ger tillgång till innehållet i samtliga **Lönekartläggningar**, inklusive alla löner för medarbetare som är inkluderade.
+</Warning>
+
+## Vanliga fragor
+
+Nedan listas vanligt förekommande frågor kopplade till lönekartläggning.
+
+<AccordionGroup>
+  <Accordion title="Hur hanteras medarbetare som är registrerade som **Ickebinär** eller **Annat** i fältet \*\*Kön?">
+    I den här versionen av lönekartläggningen inkluderas endast medarbetare som är registrerade som **Kvinna** eller **Man** i fältet **Kön.** Medarbetare som är registrerade som **Ickebinär** eller **Annat** ingår därför inte i den nuvarande analysen.
+
+    Det beror på att analysen i nuläget utgår från de juridiska könskategorierna i Sverige. Vårt mål är att utveckla en mer inkluderande analys som stödjer rättvis och jämlik lönesättning för alla medarbetare, oavsett könsidentitet. Har ni idéer eller förslag på hur detta kan utvecklas får ni gärna kontakta oss.
+  </Accordion>
+
+  <Accordion title="Vilka parametrar ska vi använda i lönekartläggningen?">
+    Det väljer ni själva utifrån hur ni vill värdera rollerna i er organisation. Parametrarna som finns i systemet är endast förslag och kan justeras efter era behov. Ni kan lägga till egna parametrar, byta namn på befintliga parametrar, ta bort parametrar och ändra viktningen i procent.
+  </Accordion>
+
+  <Accordion title="Kan vi ändra poängskalan, till exempel till 1 till 10?">
+    Nej, det går inte att ändra poängskalan i nuläget. Poängsättningen görs på en skala från 0 till 5.
+  </Accordion>
+
+  <Accordion title="Jag gör en lönekartläggning för 2023, varför kommer inte en medarbetare med?">
+    För att en medarbetare ska ingå i lönekartläggningen behöver anställningen ha varit aktiv vid det valda utvärderingsdatumet. Kontrollera därför att medarbetaren hade en aktiv anställning vid det datum som valdes när lönekartläggningen initierades.
+
+    Kontrollera även att all data som krävs för kartläggningen fanns på plats när lönekartläggningen startades, till exempel titel, godkänd lön, födelsedatum, total anställningstid, legal enhet och kön registrerat som Kvinna eller Man. Data som har lagts till eller uppdaterats efter att kartläggningen startades kommer inte att visas i lönekartläggningen.
+  </Accordion>
+
+  <Accordion title="En medarbetare har varit anställd i tre år, varför visas bara ett års total anställningstid?">
+    Den totala anställningstiden i lönekartläggningen visar hur länge medarbetaren har varit anställd inom den legala enhet som medarbetaren tillhör vid utvärderingsdatumet.
+
+    Om medarbetaren tidigare har tillhört andra legala enheter räknas den anställningstiden inte med i den aktuella beräkningen
+  </Accordion>
+</AccordionGroup>

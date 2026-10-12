@@ -1,0 +1,70 @@
+---
+title: "Import comp time balance"
+---
+
+Ensure that every employee starts with the correct comp time balance. With this import, you can easily upload current balances in bulk when introducing comp time in Hailey, ensuring a smooth transition and accurate balances from day one.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="Dwi1Nxc" title="Import comp time balance" />
+
+## Before you get started
+
+Before you can import the comp time balances into Hailey, you must first set up a **Reporting Policy** with **Comp Time** enabled. Hailey calculates the comp time balance starting from the employee’s first day of employment, provided that the employee’s **Time and time off** settings are correct.
+
+- [**HERE**](/create-reporting-policy#timeandtimeoff) you can find information on how to set up your **Reporting Policy**.
+
+## How do you import comp time balance?
+
+First, you need to download the template by navigating to **Employees** - **Import** - **Comp time balance**. If you want to download the template for only certain employees, you can check the boxes next to those employees in the list and then click **Import** - **Comp time balance**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2026-09-07-42-7919-AM.png?width=670&height=500&name=image-png-Jul-10-2026-09-07-42-7919-AM.png)
+
+You can then choose whether to download the template **for all employees** or for **selected employees**. Click the option you want, and the template will download.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2026-09-13-29-7100-AM.png?width=670&height=369&name=image-png-Jul-10-2026-09-13-29-7100-AM.png)
+
+In the template, employees are listed with their Employee ID, Employment Number, Name and Company Email. **It is important that you do not change any data in these columns.** If you have employees who do not repport their time, and therefore will not have a comp time activated, you can delete the row containing their data. Once this is done, you can begin filling out the template.
+
+Enter the current balance in the **New Comp Time Balance** column. Here, you specify the number of hours the employee has. A negative balance is indicated by a minus sign (-) before the number. Fractions of hours can be entered by using a period (.).
+
+The **Effective Date** defines when employees start reporting time in Hailey. The comp time balance is calculated **up to the day before** the effective date. Any time or time off registered on or after the effective date affects the balance.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-07-2026-05-34-54-0445-AM.png?width=670&height=350&name=image-png-Sep-07-2026-05-34-54-0445-AM.png)
+
+Once the template is filled out, it's time to import the information. Go to **Employees** - **Import** - **Comp** **time balance**. Upload the file by clicking **Click or drag file here to upload** and selecting your file. Once the file has been validated and the import is complete, the balance on the **Time** tab will be updated for each concerned employee.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2026-09-20-05-9018-AM.png?width=670&height=383&name=image-png-Jul-10-2026-09-20-05-9018-AM.png)
+
+<Note>
+  When comp time is imported, time reported retroactively will not affect the comp time on the employee’s profile.
+</Note>
+
+## Rights
+
+Only an admin can import the comp time balance. If you'd like to learn more about Roles & rights, you can do so [**HERE**](/roles-and-rights).
+
+## Common questions
+
+**Question 1**: I've imported my employees' comp time balances, but nothing appears when I go to their profiles under the **Time** tab. Why can't I see the balance?
+
+To view the imported balance, the employees in question must have a **Reporting Policy** with **Comp Time** enabled. You can add this by going to **Employees** - **Select the relevant employees** - **Action** - **Update time & time off settings**. After that, the balance will appear under **Time** on the employee’s profile.
+
+**Question 2**: I’m a bit confused about when to import the comp time balance. Do I need to do this before or after the employee starts reporting time in Hailey?
+
+It’s important that you import the comp time balance the day *before* the employee starts reporting their time in Hailey. Otherwise, the balance will be calculated incorrectly.
+
+**Question 3**: Can I update the comp time balances for the employees later on?
+
+Yes, this is possible. Before starting the import, make sure that the employees has registered all of their time up to and including the day you are performing the import. This ensures that all reported time is included correctly.

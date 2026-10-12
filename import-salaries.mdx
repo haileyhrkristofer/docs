@@ -1,0 +1,165 @@
+---
+title: "Import salaries"
+---
+
+Import salaries to get a good overview of employees current and historical salary data.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="UyypPwH" title="Import salaries" />
+
+## Before you get started
+
+Before importing salaries, your employees must be imported into Hailey and your **salary types** must be created in settings.
+
+- You can read more about how to import employees into Hailey [**HERE**](/import-employees).
+- You can read more about how to create salary types [**HERE**.](/salary-types)
+
+In addition, it is important to consider the following:
+
+- Any **currencies** that will be used must be activated in the account.
+- You need to decide whether **historical salary data** should be included.
+- Any payroll integrations, as well as their requirements regarding salary information, should be identified and reviewed in advance.
+
+## How do you import salaries?
+
+Download the import template by going to **Employees** in the main menu, clicking **Import → Salary**, and then selecting **Download Import Template**.
+
+Open the template to get started and enter the relevant salary information for each employee.
+
+![import_EN](https://docs.haileyhr.com/hs-fs/hubfs/import_EN.png?width=670&height=303&name=import_EN.png)
+
+<Note>
+  The import file contains employee information in columns **A-D**. It is important that you do not modify the information in these columns.
+
+  If any of this information is changed, Hailey will not be able to match the salary data to the correct employee.
+</Note>
+
+## Fill in the Import Template
+
+Fill in the following information for each salary that should be imported. The import template follows a specific format, and all information must be entered exactly as required. Otherwise, the data may not be imported correctly.
+
+## Format
+
+To register a salary and its historic changes the following data should be filled out:
+
+- **Salary Title**: What you wish to name your salaries. There are no restrictions here, in the picture below we named it Base salary.
+- **Pay Period**: Write **Yearly**, **Monthly,** **Hourly** or **Biweekly** depending on what kind of salary it is.
+- **Amount**: Provide the employee's salary amount in numbers. No spaces or -´s. If the salary includes decimals, use a dot (.) — for example: 30554.5 SEK.
+- **Start Date**: The date when the amount was activated. The date format is **YYYY-MM-DD**.
+- **End Date**: Usually this field should be left empty. An end date must only be specified if a salary has, or will stop being paid out completely. This is therefore not relevant when a salary change is to be registered.
+- **Currency Code**: Here you enter the currency of the salary in the form of the currency code that applies. E.g. SEK, EUR, USD, NOK, DKK and GBP. To be able to use different currencies in your account, go to **Settings - General - Currencies** and add the currencies that are allowed in your account.
+- **Salary Type**: Is filled out in accordance to the [salary types](/salary-types) you have in Hailey. Must be spelled the exact same way as in Hailey.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-27-2026-02-18-32-8544-PM.png?width=670&height=141&name=image-png-Jul-27-2026-02-18-32-8544-PM.png)
+
+## How do you import historical salary data?
+
+You can import both **current** and **historical salaries** in the same file. Start by entering the employee’s original salary on the first row. For each historical salary change, add a **new row** directly below and enter the updated salary amount along with the date the salary became effective. The changes should be entered in chronological order, from the oldest salary to the most recent.
+
+Please note that columns **A–F** and **J–K** should only be completed on the first row for each employee. For rows containing historical salary changes, only enter the new salary amount and its effective date.
+
+<Note>
+  Do not enter an end date for each historical salary amount. An end date should only be used when the entire salary record has ended or is scheduled to end.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-22-2025-01-36-21-7157-PM.png?width=670&height=199&name=image-png-Jul-22-2025-01-36-21-7157-PM.png)
+
+## Add several salaries for one employee
+
+An employee can have multiple separate salary records, such as a base salary and an additional responsibility allowance.
+
+To add another salary, create a new row in the import file and copy the employee’s ID, employee number, name, and company email address to that row. Then enter a new **Salary Title** and complete the salary details, including **Pay Period**, **Amount**, **Start Date**, **Currency Code**, and **Salary Type**. An **End Date** can also be added if applicable.
+
+Each separate salary must be registered on its own row with the employee information completed.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-22-2025-01-35-37-9884-PM.png?width=670&height=121&name=image-png-Jul-22-2025-01-35-37-9884-PM.png)
+
+<Note>
+  If an employee is part of the file but is not getting a new salary? You can just delete this row.
+</Note>
+
+## Import the salaries
+
+Once you have entered the information into the file, it’s time to import it. Go to **Employees** in the main menu and click **Import → Salary**. Then click the box in the middle that says **"Click or drop file here to upload"** and select your completed import file.
+
+![wohoo-Sep-16-2026-06-56-15-5959-PM](https://docs.haileyhr.com/hs-fs/hubfs/wohoo-Sep-16-2026-06-56-15-5959-PM.png?width=670&height=289&name=wohoo-Sep-16-2026-06-56-15-5959-PM.png)
+
+<Warning>
+  If a field is filled out incorrectly, the system will warn of where and why something is wrong. Should an employee already have a salary registered in Hailey, the system will also inform you about this to avoid duplicates.
+</Warning>
+
+When the import has started, the box below appears informing that the salaries are being imported. The import may take a while depending on how many salaries have been imported.
+
+![import_salaries3](https://docs.haileyhr.com/hs-fs/hubfs/import_salaries3.png?width=670&height=295&name=import_salaries3.png)
+
+An email is sent to you who carried out the import when it is completed and the salaries will appear on each employee’s employee card.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-22-2025-01-33-42-4128-PM.png?width=670&height=359&name=image-png-Jul-22-2025-01-33-42-4128-PM.png)
+
+## Add salaries manually
+
+Through the employee card, you can also add salaries **manually**. Go to the employee's employee card, click **Actions →  Add new salary**.
+
+![add-salary](https://docs.haileyhr.com/hs-fs/hubfs/add-salary.png?width=670&height=281&name=add-salary.png)
+
+Fill in the correct information. End date is only filled out if the salary has been or is going to be terminated. Click Send to approver when you are done.
+
+The salary will then be sent for approval to the approver who can either **Approve** or **Reject** the new salary.
+
+![manual-1](https://docs.haileyhr.com/hs-fs/hubfs/manual-1.png?width=670&height=327&name=manual-1.png)
+
+## How do I edit an existing salary?
+
+To change the amount of an existing salary, follow the guide **Import salary changes** [**HERE**](/import-salary-changes).
+
+To change a salary’s title or salary type, follow the guide **Import salary information changes** [**HERE**.](/import-updated-salary-information)
+
+## Rights
+
+Only **admins** in the system can perform salary imports in **Hailey**.
+
+## Common questions
+
+**Question 1: Can I import salaries before importing employees?**
+No. Employees must already exist in Hailey, as salaries are linked to their existing employee profiles.
+
+**Question 2: Can I import historical salaries?**
+Yes. Add historical salary amounts on separate rows below the original salary and enter the changes in chronological order.
+
+**Question 3: Should I enter an end date when an employee receives a salary increase?**
+No. An end date should only be used when the entire salary record has ended or will end. When a salary amount changes, add the new amount with a new effective start date instead.
+
+**Question 4: Can the same employee have multiple salaries?**
+Yes. Each separate salary should be entered on its own row, with the employee information completed for each salary record.
+
+**Question 5: Does the salary type need to exist in Hailey before the import?**
+Yes. The salary type must be created in Hailey before the import, and the name in the import file must match the name in the system exactly.
+
+**Question 6: Which values can be entered in the Pay Period field?**
+Use one of the following values:
+
+- Yearly
+- Monthly
+- Biweekly
+- Hourly
+
+**Question 7: How do I enter a salary amount with decimals?**
+Use a period as the decimal separator, for example: 30554.5.
+
+**Question 8: What happens if an employee already has a salary?**
+Hailey will notify you that a salary record already exists to help prevent duplicates. Review the existing salary before proceeding with the import.
+
+**Question 9: What happens if the import file contains an error?**
+Hailey validates the file and shows where the error is located and why the information cannot be imported. Correct the error in the file and then upload it again.

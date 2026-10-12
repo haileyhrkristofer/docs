@@ -1,0 +1,130 @@
+---
+title: "Medarbetarlistan"
+---
+
+I den här guiden får du lära dig att använda medarbetarlistan på ett snabbt, smidigt och lättillgängligt sätt.
+
+Vanliga frågor & svar
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="XGAOYZr" title="Medarbetarlistan" />
+
+## Vad är medarbetarlistan?
+
+Medarbetarlistan samlar alla medarbetare på ett ställe och ger dig tillgång till olika typer av information. Därifrån kan du ta del av uppgifter som finns på medarbetarkortet samt filtrera fram specifika grupper av medarbetare. Via Medarbetarlistan kan du även importera och exportera information till och från Hailey.
+
+## Hur används medarbetarlistan?
+
+Via fliken **Medarbetare** i huvudmenyn hittas **Medarbetarlistan**. Här visas några standardvyer såsom Min avdelning, Mitt team och Rapporterar till mig. Dessa vyer dyker upp med förutsättning att man ingår i en avdelning/ team eller har rapporterande. Det går att byta vilken vy man kollar på samt filtreringen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-08-48-56-0203-AM.png?width=670&height=336&name=image-png-Aug-07-2026-08-48-56-0203-AM.png)
+
+## Filtrering
+
+Under **Filter** kan du filtrera medarbetare utifrån namn, anställningsstatus och organisatorisk tillhörighet. Som standard visas medarbetare med anställningsstatusarna I tjänst och Ska lämna. Du kan även välja att filtrera på statusarna Börjar snart, Har lämnat, I anställningsprocess, Arbetsbefriad och Okänd. En medarbetare får anställningsstatusen Okänd när ingen anställning har registrerats på medarbetaren. [HÄR](/sv/employment-wizard) finns en guide för hur anställningar hanteras.
+
+Under **Organisationsfilter** kan ni filtrera på olika typer av organisatorisk information, exempelvis kontor, avdelning och team. Filtret kan användas för att ta fram medarbetare inom specifika delar av organisationen.
+
+Under **Övriga filter** kan ni filtrera på exempelvis anställningsform, kontostatus samt egna fält av typen Alternativ, Flervalsalternativ och Ja/Nej. Ni kan även inkludera specifika medarbetare i listan, även om de inte matchar de valda filtren.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-08-55-06-1697-AM.png?width=670&height=336&name=image-png-Aug-07-2026-08-55-06-1697-AM.png)
+
+## Kolumner
+
+Utöver den information som visas som standard i Medarbetarlistan kan ni även visa ytterligare uppgifter från medarbetarkortet direkt i listan. Klicka på **Kolumner** och markera de fält som ni vill ska visas i listan.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-09-08-40-7737-AM.png?width=670&height=337&name=image-png-Aug-07-2026-09-08-40-7737-AM.png)
+
+## Spara filter
+
+Om ni vill spara en filtrering och den vy som ni har ställt in, exempelvis med specifika kolumner som **Kontaktuppgifter**, kan ni skapa ett sparat filter. Klicka på **Spara filter** längst ned i filtermenyn, namnge filtreringen och **Spara**. Denna vy finns sedan sparad under **Vyer.**
+
+Du kan markera ett sparat filter eller en standardvy som favorit genom att klicka på de tre prickarna till höger om vyn och välja **Lägg till vy som favorit**. Den valda favoritvyn blir därefter din standardvy och visas automatiskt när du öppnar medarbetarlistan.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-09-20-17-6299-AM.png?width=670&height=334&name=image-png-Aug-07-2026-09-20-17-6299-AM.png)
+
+<Tip>
+  **Tips** är att spara en vy med alla medarbetare i organisationen. Därifrån kan ni enkelt filtrera på exempelvis avdelning eller annan organisationsenhet utan att skapa flera olika filter.
+</Tip>
+
+<Tip>
+  Några förslag på listor att spara: Nödkontakter, Kontaktuppgifter, Födelsedagar, Förmåner.
+</Tip>
+
+## Exportera
+
+Det är möjligt att exportera medarbetarlistan till **Excel (.xlsx)**. Den vy och de filter som är valda vid exporttillfället inkluderas i den nedladdade filen. Klicka på **Exportera** och välj **Till Excel (.xlsx)** för att ladda ner informationen. Det går även att kopiera e-postadresser för de valda medarbetarna genom att välja **Exportera** - **Emails till urklipp.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-09-29-50-9979-AM.png?width=670&height=334&name=image-png-Aug-07-2026-09-29-50-9979-AM.png)
+
+## Hantera
+
+Via **Hantera** i medarbetarlistan kan ni starta och hantera processer för flera medarbetare samtidigt i Hailey. Innan någon av valen väljs under **Hantera** behöver de medarbetare som ska omfattas markeras i listan. Det görs genom att kryssa i rutan framför respektive medarbetare eller genom att markera samtliga medarbetare i listan.
+
+Nedan hittar ni länkar till **guider för respektive funktion**.
+
+- [**Skicka dokument för signering**](/sv/send-contract-to-several-employees)
+- [**Lägg till ny anställning i bulk**](/sv/add-new-employments-in-bulk)
+- [**Starta arbetsflöde**](/sv/skapa-starta-och-f%C3%B6lj-arbetsfl%C3%B6den#starta_arbetsflode_manuellt)
+- [**Skicka direktuppgift**](/sv/quick-tasks)
+- [**Skicka undersökning**](/sv/start-and-follow-your-surveys)
+- [**Förbered one-to-one**](/sv/host-one-to-one)
+- [**Starta 360° review**](/sv/start-and-follow-360-review)
+- [**Lägg till utbildningstillfälle**](/sv/educations)
+- [**Starta semesterplanering**](/sv/plan-your-holidays-in-hailey)
+- [**Starta lönerevision**](/sv/salary-review)
+- [**Uppdatera inställningar för tid och frånvaro**](/sv/tid-och-franvaro-installningar)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-09-31-44-8938-AM.png?width=670&height=336&name=image-png-Aug-07-2026-09-31-44-8938-AM.png)
+
+De övriga valen under **Hantera** förklaras nedan:
+
+- **Uppdatera organisationstillhörighet i bulk -** Välj vilket fält som ska uppdateras, fyll i valet och sedan klicka på **Uppdatera.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-09-43-41-0337-AM.png?width=670&height=337&name=image-png-Aug-07-2026-09-43-41-0337-AM.png)
+
+<Note>
+  När ni bulkuppdaterar **team** ersätts medarbetarnas befintliga team med det eller de team som väljs vid uppdateringen. Om ett befintligt team ska behållas behöver både det nya och det nuvarande teamet väljas i samband med uppdateringen.
+</Note>
+
+- **Skicka inbjudan -** Ett inbjudningsmail skickas till de valda medarbetarnas mailadresser om att kunna logga in.
+- **Lås medarbetarkonton** - Används när en medarbetare inte längre ska ha tillgång till sitt konto i Hailey, exempelvis vid avslutad anställning.
+- **Lås upp medarbetarkonton** - Används när ett tidigare låst konto behöver låsas upp för att medarbetaren ska kunna logga in i Hailey igen.
+
+<Note>
+  **Tips!** För att se vilka medarbetare som har ett låst konto kan ni filtrera på **Konto låst** under **Övriga filter** i medarbetarlistan. Tänk även på att kontrollera vilka anställningsstatusar som är valda i filtreringen, eftersom dessa påverkar vilka medarbetare som visas i listan.
+</Note>
+
+- **Generera anställningsnummer** - Använd denna funktion om ni vill att Hailey automatiskt ska generera anställningsnummer. Om ni använder funktionen igen vid ett senare tillfälle fortsätter numreringen från det senast skapade anställningsnumret. **Observera att åtgärden inte kan ångras.** Om ett anställningsnummer behöver ändras i efterhand måste det göras manuellt på medarbetarens profil. Serien som används för genereringen konfigureras under **Inställningar - Allmänt - Inställningar för anställningsnummer**.
+
+## Rättigheter
+
+Alla medarbetare har tillgång till **Medarbetarlistan** oavsett inställda rättigheter. Som standard kan alla se samtliga medarbetare och den information som visas automatiskt i listan: Medarbetare, Avdelning, Arbetsplats, Titlar och Rapporterar till. Den information som visas i medarbetarlistan vid filtrering styrs av användarens rättigheter och vilka medarbetare den användaren får se information på.
+
+Utöver de rättigheter som alla medarbetare har som standard går det att ge specifika användare rätt att **Importera medarbetardata** och **Exportera listor**. Vilka funktioner som är tillgängliga under **Hantera** och **Lägg till medarbetare** styrs också av användarens tilldelade rättigheter.
+
+Läs mer i guiden för Roller och rättigheter [HÄR.](/sv/roles-and-rights)
+
+## Vanliga frågor & svar / FAQ
+
+Här hittar du svar på vanliga frågor som kan hjälpa dig när du använder Medarbetarlistan.
+
+**Fråga:** Varför ser jag inte kontaktuppgifter i listan när jag har filtrerat på **Personligt - Kontaktuppgifter** under Kolumner?
+
+Antingen finns ingen data ifylld i dessa fält på medarbetarkorten för dessa medarbetare eller så handlar det om att du inte har rättigheter att se denna sektion på medarbetarna.
+
+**Fråga:** Varför syns inte alla egna fält under **Övriga filter?**
+
+Det är endast egna fält med typen Alternativ, Flervalsalternativ och Ja/Nej som går att filtrera på.

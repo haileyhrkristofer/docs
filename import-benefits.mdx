@@ -1,0 +1,122 @@
+---
+title: "Import benefits"
+---
+
+In this guide, we'll walk you through how to import benefits into your employees' profiles in Hailey!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="TOVpIyk" title="Import benefits" />
+
+## What is the benefits import?
+
+With the Benefits Import, you can easily register employee benefits, such as company car benefits, wellness allowances, and other benefits, in Hailey.
+
+Using the import, you can add multiple benefits at once through a single file instead of registering them manually. The information is displayed directly in the employee profile and enables efficient tracking and analysis of benefits data across the organization.
+
+In this guide, we’ll show you how to import benefits data into Hailey in a simple and structured way.
+
+## Before you get started
+
+Before you begin importing benefits, you first need to ensure that the benefit types used within your organization have been created.
+
+To do this, navigate to **Settings → Compensation → Benefits**.
+
+Benefit types act as categories that help you structure and classify the different kinds of benefits offered by your organization, such as **Wellness Allowance**, **Insurance Benefits**, **Company Car**, **Lunch Subsidy**, or any other company-specific benefits.
+
+![add-benefit](https://docs.haileyhr.com/hs-fs/hubfs/add-benefit.png?width=670&height=426&name=add-benefit.png)
+
+<Note>
+  When you create a benefit type, you also select a **Frequency** — either **Monthly** or **Yearly**. The frequency controls how the benefit will be displayed and handled in reporting and summaries, and is important for the import to be interpreted correctly by the system.
+</Note>
+
+## Get started with the import!
+
+Download the import template by navigating to **Employees** in the main menu, then click **Import → Benefits → Download Import Template**. Open the file to get started.
+
+![import-benefit](https://docs.haileyhr.com/hs-fs/hubfs/import-benefit.png?width=670&height=427&name=import-benefit.png)
+
+![import2-1](https://docs.haileyhr.com/hs-fs/hubfs/import2-1.png?width=670&height=264&name=import2-1.png)
+
+## Fill out the import template
+
+It's now time to fill in the import template!
+
+The template contains four pre-populated columns (**A-D**) with information for each employee: **Employee ID, Employment Number, First and Last Name, and Company Email Address**. These columns must not be modified or deleted.
+
+Complete the remaining columns with information about each employee's benefits. To ensure that the import is processed successfully, it is important that you follow the formatting requirements outlined below.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-16-2026-12-35-52-0428-PM.png?width=670&height=127&name=image-png-Mar-16-2026-12-35-52-0428-PM.png)
+
+<Note>
+  The template supports importing multiple benefits for the same employee. In that case, add a new row for each benefit and repeat the employee's information on each row.
+</Note>
+
+## Format
+
+- **Benefit name**: What the benefit is called. Has to be exactly as it is named in Hailey.
+- **Start Date**: The date when the value was activated. The date format is **YYYY-MM-DD**.
+- **Value**: Provide the employee's salary amount in numbers. If the value includes decimals, use a dot (.) — for example: 30554.5 SEK.
+- **Currency Code**: Here you enter the currency of the salary in the form of the currency code that applies. E.g. SEK, EUR, USD, NOK, DKK and GBP. To be able to use different currencies in your account, go to **Settings - General - Currencies** and add the currencies that are allowed in your account.
+- **End Date (optional)**: Usually this field should be left empty. An end date must only be specified if a salary has, or will stop being paid out completely. This is therefore not relevant when a salary change is to be registered.
+
+Import the benefits
+
+Once the template has been completed with the data you wish to import, save the file to your computer. Then return to Hailey and navigate to the **Employee List**. Click **Import → Benefits**.
+
+Next, click the box in the center labeled **"Click or drop a file here to upload"** and select your import file.
+
+Once the import has been completed, an email confirmation will be sent to the user who performed the import. The imported benefits will then be visible in the employees' profiles under **Compensation → Benefits**.
+
+![done](https://docs.haileyhr.com/hs-fs/hubfs/done.png?width=670&height=315&name=done.png)
+
+<Note>
+  If any field is entered incorrectly, the system will display a warning showing what needs to be corrected and why.
+
+  The system also checks for existing benefits. If an employee already has the same benefit registered in Hailey, a warning will be shown to highlight a potential duplicate.
+
+  These are informational warnings only, meaning the import can still be completed if the data is correct.
+</Note>
+
+## Add benefits manually
+
+You can also add benefits manually via employee cards. In that case, go to the employee's employee card, click **Manage** - **Add benefit**.
+
+![manual](https://docs.haileyhr.com/hs-fs/hubfs/manual.png?width=670&height=194&name=manual.png)
+
+<Tip>
+  Need to update or manage existing benefits? Read more [**HERE**](/benefit-change) about how to manage benefits.
+</Tip>
+
+## Rights
+
+Only an admin can import benefits. This is because of the sensitive information contained in the import file. If you’d like to learn more about Roles & rights, you can do so **[HERE](/roles-and-rights)**.
+
+## Common questions
+
+Below, we've listed some of the most frequently asked questions about importing benefits.
+
+**Question 1:** Can you import multiple benefits for the same employee?
+
+Yes, absolutely! If you want to import multiple benefits for the same employee, simply create a new row for each benefit. Copy the employee's information to a new row and then enter the details for the additional benefit in the same way as before.
+
+See the example below for how the template should be completed:
+
+![template](https://docs.haileyhr.com/hs-fs/hubfs/template.png?width=670&height=87&name=template.png)
+
+**Question 2:** When do I need to fill in the End Date?
+
+The **End Date** should only be completed if the benefit has ended and should no longer be provided to the employee.
+
+If the benefit is still active, leave the **"End Date"** column blank.

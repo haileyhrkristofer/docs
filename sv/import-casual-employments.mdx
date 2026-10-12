@@ -1,0 +1,124 @@
+---
+title: "Importera behovsanställningar"
+---
+
+Hur ni importerar behovsanställningar och dess information på era medarbetare.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="wrIpnyk" title="Importera behovsanställningar" />
+
+## Innan ni sätter igång
+
+Innan du importerar timanställningar behöver du ha lagt upp din organisation i Hailey, och importen av medarbetare måste vara genomförd innan du går vidare med detta steg.
+
+- Läs mer om hur du bygger upp din organisation **[/sv/att-bygga-sin-organisation-i-hailey](/sv/organization-in-hailey)[HÄR](/sv/organization-in-hailey)!**
+- Läs mer om hur du importerar medarbetare **[/sv/importera-medarbetare](/sv/import-employees)[HÄR](/sv/import-employees)!**
+
+<Tip>
+  Om du ännu inte har bekantat dig med hur behovsanställningar fungerar i Hailey rekommenderar vi att du läser [DEN HÄR](/sv/casual-employments) guiden innan du påbörjar importen.
+</Tip>
+
+## Hur importerar jag behovsanställningar?
+
+När din organisation är redo och medarbetarna har importerats till Hailey är det dags att ladda ner och fylla i mallen. Gå till **Medarbetare** - **Importera - Behovsanställningar**.
+
+Du kan antingen inkludera **alla medarbetare** eller **valda medarbetare**. Om du bara vill importera timanställningar för ett fåtal personer markerar du dem i medarbetarlistan genom att kryssa i rutan innan du laddar ner mallen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-15-2026-06-59-26-9680-AM.png?width=670&height=375&name=image-png-Sep-15-2026-06-59-26-9680-AM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-15-2026-07-02-26-2665-AM.png?width=670&height=370&name=image-png-Sep-15-2026-07-02-26-2665-AM.png)
+
+<Note>
+  Notera att du inte kan flytta om kolumnerna eller döpa om dem i Excelfilen.
+</Note>
+
+**Fyll i mallen:**
+I mallen kommer medarbetare radas upp med ID, anställningsnummer, namn och företagsmail. Detta för att Hailey ska kunna koppla behovsanställningarna till rätt medarbetare. **Det är därför viktigt att inte ändra någon data i dessa kolumner!**
+
+Vidare kommer **Startdatum**, **Slutdatum**, **organisatorisk tillhörighet** samt **numrering av anställningssekvensnummer** att finnas som fält i importfilen.
+
+Om ni har skapat några egna anställingsfält i Hailey kommer även dessa finnas med längst till höger i filen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Feb-12-2026-10-54-30-2288-AM.png?width=670&height=148&name=image-png-Feb-12-2026-10-54-30-2288-AM.png)
+
+Importen av behovsanställningar kan användas för att föra in data om tidigare behovsanställningar. Gör ni detta ska varje första rad om en medarbetare vara den *första behovsanställningen ni vill föra in i systemet.*
+
+När ni lägger till flera behovsanställningar görs det genom att infoga tomma rader under den rad där medarbetarens ID, namn och e-postadress finns. En rad per behovsanställning.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-20-2026-02-45-03-1741-PM.png?width=670&height=467&name=image-png-Apr-20-2026-02-45-03-1741-PM.png)
+
+<Warning>
+  Det är viktigt att både **startdatum** och **slutdatum** anges för behovsanställningarna. Om **EndDate** lämnas tomt kommer inte importen att gå igenom. **Se därför till att varje behovsanställning har ett slutdatum.**
+</Warning>
+
+Notera att det endast är möjligt att importera själva tidsspannet för behovsanställningen med tillhörande organisationsinformation. Den kontrakterade anställningsperioden behöver läggas till i efterhand när behovsanställningen väl är på plats.
+
+<Note>
+  Om du importerar behovsanställningar innehållande historisk data såsom avdelningar eller titlar ni inte längre har, kan ni markera dessa organisatoriska enheter som arkiverade. Klicka bara på de tre prickarna till höger om valda entitet - **Arkivera.**
+</Note>
+
+När mallen är redo att läsas in går ni tillbaka till Hailey och Medarbetarlistan. Klicka på **Importera - Behovsanställningar**. Klicka på rutan i mitten "Klicka eller släpp filen här för att ladda upp" och välj er importfil. Förekommer fel i importen kommer Hailey att **stoppa hela importen**. Ett felmeddelande dyker upp och informerar vilken kolumn och vilken rad som kräver justering. Ändra det som är i behov av justering, och ladda sedan upp filen på nytt igen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-20-2026-02-52-13-1448-PM.png?width=584&height=742&name=image-png-Apr-20-2026-02-52-13-1448-PM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-20-2026-02-54-17-7169-PM.png?width=577&height=461&name=image-png-Apr-20-2026-02-54-17-7169-PM.png)
+
+När allt stämmer klickar ni på Importera! Nedan ruta dyker då upp. Importen kan ta en stund beroende på hur många anställningar som ska importerats. Du kan stänga denna ruta - importen jobbar på ändå!
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-20-2026-02-50-26-4425-PM.png?width=670&height=339&name=image-png-Apr-20-2026-02-50-26-4425-PM.png)
+
+När importen är slutförd får du som skapat importen ett verifieringsmejl.
+
+<Note>
+  I unika fall kan mailet tala om att några behovsanställningar inte lyckats importeras. Ni får då information om vilka medarbetare som misslyckats samt en informationstext om vad som gick fel. **Försök på nytt med endast de medarbetare som misslyckats.** Ett annat alternativ är att gå in på respektive berört medarbetarbetarkort för att komplettera.
+</Note>
+
+## Format
+
+Många kolumner behöver fyllas i enligt specifika format för att importen ska gå igenom:
+
+- **Datum**: YYYY-MM-DD
+- **Titles, Teams, Location, Department, Business Area, Cost center & Legal Entity**: Behöver stavas identiskt som era titlar, team, kontor, avdelningar, affärsområden, kostnadsställen och legala enheter i Hailey. Om flera titlar eller team på en medarbetare, separera med ett komma. Inga mellanslag!
+- **Egna fält**: [HÄR](/sv/custom-fields#format)hittar ni formaten som används för egna fält
+
+Nedan är ett exempel på hur en väl ifylld fil kan se ut:
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-20-2026-02-45-35-8282-PM.png?width=670&height=80&name=image-png-Apr-20-2026-02-45-35-8282-PM.png)
+
+## Rättigheter
+
+Administratörer har automatiskt behörighet att importera behovsanställningar.
+
+För att ge dessa behörigheter till andra roller, uppdatera rättigheterna under **Inställningar – Säkerhet – Roller & rättigheter** för **Importera medarbetardata**. [**HÄR**](/sv/roles-and-rights) kan du läsa mer om **Roller och rättigheter**.
+
+## Vanliga frågor
+
+**Fråga**: Jag får felmeddelande när jag importerar Excelfilen till Hailey. Vad gör jag för fel?
+
+För att informationen ska kunna importeras till Hailey på rätt sätt är det viktigt att du följer **formatkraven** som finns i guiden. Hailey berättar vad felet är samt i vilken rad felet finns på. Åtgärda detta och ladda sedan upp filen på nytt.
+
+<AccordionGroup>
+  <Accordion title="När jag försöker ladda upp min importfil får jag felmeddelandet Invalid column heading men Hailey anger inte vart felet ligger eller vad det handlar om. Vad ska jag göra?">
+  Ibland kan Excel tolka det som att text ligger inne i kolumnerna eller raderna utanför själva mallen. Hailey kan inte identifiera vart problemet ligger eftersom felet ligger utanför informationen som är inskriven i mallen.
+
+  För att lösa detta problem finns det några saker du kan prova. Börja med att markera ett antal rader och kolumner utanför mallen och sedan trycka på Ta bort/Rensa innehåll. Om detta inte löser problemet kan du kopiera all din information i mallen och klistra in den i en ny nedladdad importmall. Ifall ingen av dessa metoder fungerar måste du gå igenom din fil och leta efter mellanslag i tomma fält, då även dessa kan orsaka felmeddelandet eftersom Hailey och Excel inte känner igen mellanslagen som ett inmatat värde.
+  </Accordion>
+  <Accordion title="Kan jag importera anställningsperioder inom anställningen genom importfilen?">
+  Den kontrakterade anställningsperioden behöver läggas till i efterhand när behovsanställningen väl är på plats och görs inte i importfilen.
+  </Accordion>
+  <Accordion title="Kan jag importera flera behovsanställningar på samma medarbetare?">
+  Ja! När ni lägger till flera behovsanställningar görs det genom att infoga tomma rader under den rad där medarbetarens ID, namn och e-postadress finns. En rad per behovsanställning.
+  </Accordion>
+</AccordionGroup>

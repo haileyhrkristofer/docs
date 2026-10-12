@@ -1,0 +1,78 @@
+---
+title: "Exportera data från Hailey"
+---
+
+Behöver du exportera data från Hailey till en Excel-fil? Nedan hittar du instruktioner på hur du går tillväga för att göra det så smidigt som möjligt!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="MOZL88W" title="Exportera data från Hailey" />
+
+## Exportera medarbetardata
+
+Om du vill **exportera medarbetardata** från Hailey går du till medarbetarlistan. Genom att använda filtreringsmenyn till vänster och kolumnerna ovanför medarbetarlistan skapar du en lista med den information du vill exportera. Klicka därefter på **Exportera - Till Excel/xlsx.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jan-15-2026-10-31-50-3148-AM.png?width=670&height=270&name=image-png-Jan-15-2026-10-31-50-3148-AM.png)
+
+## Exportera förändringsdata
+
+Om du vill exportera data gällande **förändringar** som skett under en specifik period går du till **Rapporter** via huvudmenyn. Använd filtreringsmenyn och kalenderväljaren för att få fram de förändringar som du behöver. Klicka sedan på **Exportera.** Se guide [**HÄR**](/sv/all-changes) för hur förändringsrapporten fungerar.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-08-44-24-5458-AM.png?width=670&height=338&name=image-png-Aug-07-2026-08-44-24-5458-AM.png)
+
+## Hantera CSV-fil
+
+Information som exporteras från Hailey exporteras ut i en **CSV-fil.** Detta innebär att alla data är separerad med komma och ligger i en och samma kolumn. För att få ut datan i flera kolumner **markerar du kolumn A**, där all data just nu ligger.
+
+![](https://docs.haileyhr.com/hubfs/image-png-Apr-25-2023-09-41-17-0082-AM.png)
+
+Gå till **Data** i huvudmenyn och klicka på **Text till kolumner**. Då dyker rutan på bilden nedan upp. Klicka på **Nästa** i rutan.
+
+![](https://docs.haileyhr.com/hubfs/image-png-Apr-25-2023-09-42-05-8548-AM.png)
+
+Du hamnar nu här där ni väljer era avgränsare. Tabb är det enda markerade alternativet i listan. Låt **Tabb fortsätta vara markerad men markera också Komma**. Klicka på Slutför alternativt Nästa.
+
+![](https://docs.haileyhr.com/hubfs/image-png-Apr-25-2023-09-42-40-1853-AM.png)
+
+<Note>
+  Om du har data som du vill att excel formaterar på ett speciellt sätt, t.ex. om datan börjar med siffran "0" eller innehåller bindestreck t ex anställningsnummer och clearingnummer, se nedan för att välja rätt formatering.
+</Note>
+
+Om ni har data som börjar med "0" eller innehåller bindestreck klickar ni på Nästa. Markera de kolumner som ni vill ändra samt **markera kolumndataformatet Text**. Klicka på Slutför.
+
+![](https://docs.haileyhr.com/hubfs/image-png-Sep-04-2023-08-36-42-8175-AM.png)
+
+Nu är datan i Excel-filen separerad ut till respektive kolumn. Nu är det viktigt att se till att filen sparas i rätt format!
+
+<Note>
+  Initialt kommer din dator förmodligen vilja spara filen som en ”CSV-UTF-8 (kommaavgränsad) (_.CSV)”. Här är det viktigt att ni byter format till formatet på bilden nedan:  ”\*\*Excel-arbetsbok (_.xlsx)”\*\*
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-25-2023-09-43-14-7091-AM.png?width=670&height=156&name=image-png-Apr-25-2023-09-43-14-7091-AM.png)
+
+## Exportera emails till urklipp
+
+Behöver du skicka ett mail till alla medarbetare eller kanske bara till en viss avdelning? Filtrera då fram de personer du vill ta fram emailadresserna på i filtreringsmenyn till vänster och klicka sedan på **Exportera - Emails till urklipp**. Då kopieras företagsmailen på de personer du filtrerat fram och du kan enkelt klistra in de i en mottagarlista.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jan-12-2026-03-48-01-9557-PM.png?width=670&height=276&name=image-png-Jan-12-2026-03-48-01-9557-PM.png)
+
+## Rättigheter
+
+Som administratör i Hailey har du automatiskt behörighet att exportera medarbetardata från medarbetarlistan.
+
+Medarbetare som får rättigheten kan endast exportera den information som de har behörighet att se i Hailey. Den rättighet som krävs för att kunna exportera både medarbetarlistan och e-postadresser är:
+
+- **Andra rättigheter – Exportera medarbetarlista**
+
+[**HÄR**](/sv/roles-and-rights) kan du läsa mer om **Roller och rättigheter** i Hailey.

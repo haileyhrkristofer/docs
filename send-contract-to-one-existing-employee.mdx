@@ -1,0 +1,122 @@
+---
+title: "Send document for signing to an existing employee"
+---
+
+This guide shows you how to send documents for signing to an existing employee.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="aLY3Y7s" title="Send document for signing to an existing employee" />
+
+## About sending a document for signing to an existing employee
+
+Sending documents for signing to an existing employee allows you to send contracts and other signable documents to an employee directly from their employee profile.
+
+<Tip>
+  Follow [**THIS**/send-contract-to-several-employees](/send-contract-to-several-employees)guide if you would like to send a document for signing to several employees at the same time.
+</Tip>
+
+## Before you get started
+
+To be able to send a document for signing, ensure that the following information is registered on the employees profile:
+
+- **Company email**
+- **Personal identity number** and **Issuer of the personal identity number** (for signing with BankID)
+
+Also, make sure that you have a **Contract** **template** or a **Signable document** ready. Read more about setting them up [**HERE.**](/create-contract-templates)
+
+<Note>
+  If the agreement is to apply to a future employment for an existing employee, use the **employment wizard** for easy management and go to [**THIS**](/employment-wizard) guide to learn more.
+</Note>
+
+## How do you send a document for signing?
+
+To send a document for signing, go to the **employees profile** and click **Actions -** **Sign document**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-17-2026-08-05-53-0108-AM.png?width=670&height=320&name=image-png-Apr-17-2026-08-05-53-0108-AM.png)
+
+- Select the **Contract template** or document you want to send for signing.
+- Choose **Signing method** for the document - **BankID** or **Digital Autograph.** Please note that signing with BankID is only available in Sweden, Norway, Denmark, and Finland.
+- Set a **Deadline** for signing the document.
+- Under **Who should receive the contract?** you can choose whether the document should be **reviewed** by someone before signing. Then choose who should sign the contract and in which order by adding **Signing steps.** For example, if the employee should sign the document first and then the employee's manager.
+  - If you have selected a reviewer, the contract will be sent to the reviewer for approval before it is sent out for signature.
+- Choose which **Employment** the document should apply to.
+  - The information from the chosen employment is filled into the document based on the variables found in the selected contract template.
+- Choose which **Salaries** to include, if the contract template contains **Salary** **variables.**
+- If the contract template contains **Optional sections** or **Optional attachments**, select the parts that should be included in the document. Also fill in possible **Input fields** manually.
+- Click **Preview** to see the document in its entirety and **Send** the document when you are satisfied. The chosen **signing order determines** whether the document is sent out to **all** **signing parties directly** or if there **are multiple** steps.
+
+<Note>
+  If the contract template contains **Salary variables** and the employee **has an upcoming approved salary change,** you can choose **which amount** should be included in the document.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-17-2026-08-12-32-0078-AM.png?width=670&height=450&name=image-png-Apr-17-2026-08-12-32-0078-AM.png)
+
+## How do you sign a document?
+
+When you have a document to sign, you will receive both a **task in Hailey** and **an email** with this information. The document can be signed from both places.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-17-2026-08-19-38-0723-AM.png?width=670&height=127&name=image-png-Apr-17-2026-08-19-38-0723-AM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-17-2026-08-16-46-0178-AM.png?width=670&height=526&name=image-png-Apr-17-2026-08-16-46-0178-AM.png)
+
+When all the **parties involved have signed the document**, the document lands on the employee's profile under the **Docs** tab.
+
+<Tip>
+  Read more about **Employee folders** and settings for the **Docs** tab [**HERE**](/employee-folders).
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-17-2026-07-38-21-6932-AM.png?width=670&height=321&name=image-png-Apr-17-2026-07-38-21-6932-AM.png)
+
+## Where can you follow the signing process in Hailey?
+
+When a document has been sent for signing, you can **follow the signing process** in: **HR Hub - Signings.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-29-2026-01-56-22-0105-PM.png?width=670&height=262&name=image-png-Jul-29-2026-01-56-22-0105-PM.png)
+
+There you can se an **overview** and more detailed information about **ongoing** signings.
+
+<Note>
+  If the signing has been **completed**, it will no longer appear in the Signings overview. In that case, the contract can instead be found in the employee’s profile under **Docs**.
+</Note>
+
+**If the signing needs to be canceled,** click on the **three dots** to the right of the signing and **Cancel**. Then it is no longer possible for the signing parties to sign the document and the signing process is deleted.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-17-2026-08-14-26-9695-AM.png?width=670&height=175&name=image-png-Apr-17-2026-08-14-26-9695-AM.png)
+
+Klick on the signing to view the status or **Resend contract.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-29-2026-02-00-22-0397-PM.png?width=670&height=237&name=image-png-Jul-29-2026-02-00-22-0397-PM.png)
+
+## Rights
+
+To **Send documents for signature**, the right for this must be enabled under **Roles & rights** - **Actions.**
+
+To access the signing overview in the HR Hub, the right to either **View** or **View & edit** has to be enabled in **Roles & rights** - **HR Hub - Signings.**
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="I want to cancel the signing process. How do I do that?">
+    **If the signing needs to be canceled,** go to **HR Hub - Signings** and click on the **three dots** to the right of the signing and **Cancel**. Then it is no longer possible for the signing parties to sign the document and the signing process is deleted.
+
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-17-2026-08-14-26-9695-AM.png?width=670&height=175&name=image-png-Apr-17-2026-08-14-26-9695-AM.png)
+  </Accordion>
+
+  <Accordion title="Can I resend the document if the employee cannot find the document for signing?">
+    Yes! Go to **HR Hub - Signings** and klick on the signing you want to resend. Then klick on the **three dots** and **Resend contract**.
+
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-29-2026-02-00-22-0397-PM.png?width=670&height=237&name=image-png-Jul-29-2026-02-00-22-0397-PM.png)
+  </Accordion>
+</AccordionGroup>

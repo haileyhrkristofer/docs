@@ -1,0 +1,88 @@
+---
+title: "Import time off balance"
+---
+
+In this guide, we'll show you how to import current time off balances for your employees.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="ycXnt9r" title="Import time off balance" />
+
+## Before you get started
+
+Initially, the system assumes that you have configured your time-off balances in your settings. Please read more about this in the guide [HERE.](/time-off-balances)
+
+Before importing time-off balances for your employees, you need to make sure that time-off balances are registered on each employee’s profile. To check this, go to the employee’s profile and open the employment. At the bottom, you will see **Time and Time Off**.
+
+To import a time-off balance, the employee must already have a balance linked to their profile. If this is missing, you can add one by opening the employment and then clicking **Actions** in the upper-right corner, followed by **Edit time and time off**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-28-2026-07-53-16-9907-AM.png?width=670&height=367&name=image-png-Aug-28-2026-07-53-16-9907-AM.png)
+
+<Tip>
+  **Tip:** If you want to add holiday balances for multiple employees at the same time, you can do this via the **Employee List** by selecting **Update time & time off settings**.
+
+  Keep in mind that you need to fill in all fields that should apply to the employees, including the **Reporting policy**, **Non-working days,** and **Work hours**.
+</Tip>
+
+## How do you import time off balances?
+
+Go to the Employees tab in the main menu, click on Import and select time off balance. If you wish to only import for certain employees, start by selecting those employees in the employee list before following the other steps.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-28-2026-07-57-34-5113-AM.png?width=670&height=342&name=image-png-Aug-28-2026-07-57-34-5113-AM.png)
+
+Now you can choose if you wish to download the template for all employees, or only the selected employees. Click the option you want. The template is loaded as an excel file and will include all employees, or your selected employees, registered in your account.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-28-2026-07-59-20-7284-AM.png?width=670&height=352&name=image-png-Aug-28-2026-07-59-20-7284-AM.png)
+
+The import template includes columns for Employee ID, Employment number, Employee, Company email, Time off balance ID and Time off balance name on each employee, you leave these columns untouched. There will be several rows for an employee, if they have several time off balances in their profile. The column you fill out to import the relevant time off balance is the one called New Time Off Balance, **enter the number for how many days the employee has left to claim**.
+
+You usually import time off balance in the first year when you start using the time off in Hailey. You can also use the import to bulk update the time off balance for your employees.
+
+<Tip>
+  It is also possible to manually update the time off balance for each employee. Read more about how to do this [HERE.](/time-off-holiday-balance#adjust_holiday_balance)
+</Tip>
+
+When the import template is filled out, go back to the employee list, click on **Import** - **Time Off** **balance** - **Upload the file in the box**; Click or drop the file here to upload.
+
+When the import is done, this will be registered on the respective employee profile.
+
+<Warning>
+  When you import time off balance, this will reset the history of the affected employee's balances, if there is any. This means that previous reductions, refills och adjustments to the balance will no longer be shown in the overview. All previous time off will still be saved on the Time tab and be available in reports.
+</Warning>
+
+<Note>
+  In order for the time off balances to be visible in the employee profile, the employees in question have to have a time off balance connected to their active employment.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-28-2026-08-08-04-5523-AM.png?width=670&height=354&name=image-png-Aug-28-2026-08-08-04-5523-AM.png)
+
+## Rights
+
+Admins automatically have the right to import time off balances.
+
+To give these permissions to other roles, update the role settings under **Settings – Security – Roles and rights** for **Import employee data. [HERE](/roles-and-rights)** you can read more about **Roles and rights.**
+
+## Common questions
+
+**Question**: I get an error message when I import the Excel file into Hailey. What am I doing wrong?
+
+Make sure that there are no spaces after the numbers in the **New time off balance** column. The other columns should also be left unchanged for the file to be imported correctly.
+
+**Question**: We have employees who have several different time-off balances linked to their employment. Can these be imported at the same time?
+
+Yes, all the balances that have been added for the employee will appear in the import file!
+
+**Question**: My employee has several time-off balances, but I only want to update the balance for one of them. What happens to the other one?
+
+The other balance will not be updated, and its original balance will remain unchanged.

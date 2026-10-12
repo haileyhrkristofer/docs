@@ -1,0 +1,112 @@
+---
+title: "Add new employments in bulk"
+---
+
+Do you have multipel employees that starts a new employment and want that updated in one go? Then bulk add employments is the tool for you!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="bX1ngMp" title="Add new employments in bulk" />
+
+## What is add new employments in bulk?
+
+Add new employments in bulk allows you to easily and efficiently update multiple employees’ employment in one go. This can be useful during organizational changes where, for example, several employees change roles or employments and you want to update them in bulk.
+
+<Note>
+  Do you only want to add an employment to one employee? Click [**HERE**](/employment-wizard) to learn more.
+</Note>
+
+## How do I add employments in bulk?
+
+Do the following:
+
+- Go to the **Employees** in the left menu.
+- Select the employees in the employee list that should receive the same new employment value/values.
+- Click on **Actions -** **Add new employment in bulk.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-03-2026-01-26-54-4858-PM.png?width=670&height=307&name=image-png-Jul-03-2026-01-26-54-4858-PM.png)
+
+An overview will now open, showing the employees you have selected under the section **For.**
+
+Choose a **Start date** for the new employments.
+
+<Note>
+  Any employment that is active on the selected date will automatically end the day before. Employments with a start date on or after the selected date will remain unchanged.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-24-2026-07-24-35-7413-AM.png?width=670&height=513&name=image-png-Jun-24-2026-07-24-35-7413-AM.png)
+
+Under **Employment fields to update**, click **\+ Add field** to choose which fields should be updated in the new employment for all selected employees. You can update fields within:
+
+- **Organization** settings
+- **Terms** of the employment
+- **Time and Time Off** settings
+
+Select the fields you want to update and click **Add**.
+
+<Note>
+  You only need to select the fields you want to update. Any fields left unselected will automatically keep the values from the employee's previous employment.
+</Note>
+
+Fill in the new values for the selected fields. All new employments created will receive the same new value. Once everything looks correct, click **Confirm.**
+
+<Note>
+  Once you click **Confirm**, the changes made to the employments cannot be undone.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-24-2026-12-39-45-7232-PM.png?width=670&height=552&name=image-png-Jun-24-2026-12-39-45-7232-PM.png)
+
+After clicking **Confirm**, the new employment will be registered and added to the employee's profile.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-24-2026-12-44-19-6077-PM.png?width=670&height=434&name=image-png-Jun-24-2026-12-44-19-6077-PM.png)
+
+## Rights
+
+Admin always has the right to add new employments in bulk.
+
+If you want to give access to other employees to bulk add employments they need the right to and right to **Add employment,** find under **Action - Add employment** (or Life cycle - Add employment).
+
+<Note>
+  [**HERE**](/roles-and-rights) you can read more on Roles & rights.
+</Note>
+
+---
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="When should I use Add new employments in bulk?">
+    Use Add new employments in bulk when multiple employees need the same employment terms at the same time, for example during organizational changes or role changes in one go.
+  </Accordion>
+
+  <Accordion title="What happens to the employees existing employment?">
+    Any active employment on the selected start date will end the day before. Employments starting on or after that date will remain unchanged.
+  </Accordion>
+
+  <Accordion title="Do I need to update all employment fields?">
+    No, only the fields you select will be updated. All other fields will keep the existing values from the previous employment.
+  </Accordion>
+
+  <Accordion title="Can I undo the employment after confirming?">
+    Once you click **Confirm**, the changes cannot be undone. If you need to make adjustments to the employment you added, you can update it manually from the employee's profile. Click on the employment, select **Actions**, and choose the section you want to edit.
+  </Accordion>
+
+  <Accordion title="Do I get a confirmation once the new employment has been created?">
+    Yes, when all new employments have been created a confirmation email will be send to the user that performed the action.
+
+    **Question**: What happen if I select a field and leave it empty with information?
+
+    If you choose to include a field but do not provide a new value, that field will be left blank in the new employment.
+  </Accordion>
+</AccordionGroup>

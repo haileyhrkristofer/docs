@@ -1,0 +1,184 @@
+---
+title: "Integration med Kleer - Frånvarodata"
+---
+
+Slipp onödigt dubbelarbete och frigör värdefull tid med Haileys integration mot Kleer där frånvaroregistrering och skapande av medarbetare sker automatiskt!
+
+<Tip>
+  Första gången du aktiverar en av **Haileys standardintegrationer**? Börja med att läsa den [**HÄR**](/sv/haileys-standard-integrations) guiden för att veta vad du ska tänka på innan du sätter igång.
+</Tip>
+
+---
+
+## Vad gör integrationen?
+
+Vid varje synkronisering kommer [**inkluderad data**](#vilken-data-ar-inkluderad)att **automatiskt** uppdateras via **API överföring** **till Kleer** och få samma värde som finns i Hailey, eftersom **Hailey är master** (facit).
+
+<Note>
+  **Vill ni även synka** **lön och medarbetardata?** - Se vår guide [**HÄR**](/sv/integration-with-kleer-salary-and-employee-data) för integration med Kleer - Lön och medarbetardata.
+</Note>
+
+## Hur fungerar integrationen?
+
+Med API-överföringen sker en synkronisering mellan Hailey och Kleer **varje timme** baserat på förändringar. Detta innebär att:
+
+- Om en ändring har gjorts på en medarbetare i den inkluderade medarbetardatan kommer informationen att uppdateras i Kleer.
+- Om en medarbetares **frånvaro blir godkänd i Hailey** kommer frånvaron att **uppdateras i Kleer.**
+
+## Vilken data är inkluderad i integrationen?
+
+### Medarbetardata:
+
+| **HAILEY** | **KLEER** |
+| --- | --- |
+| Företagsmail | E-post |
+| Förnamn, Efternamn | Namn |
+
+### Frånvarosynk:
+
+| **HAILEY** | **KLEER** |
+| --- | --- |
+| Frånvaro | Frånvaro |
+
+## Vad krävs för att ingå i integrationen?
+
+För att en medarbetare **ska ingå i integrationen** behöver medarbetaren ha:
+
+- Företagsmail
+
+Om en medarbetare i Hailey har en företagsmail som ännu inte finns i Kleer, kommer en användare skapas upp i Kleer. Därför är det **viktigt** att alla nya medarbetare alltid skapas i Hailey först.
+
+Företagsmail för era befintliga medarbetare måste vara identiska i både Hailey och Kleer, och stämmer överens med den befintliga profilen i Kleer.
+
+<Note>
+  Om en medarbetare får sin **företagsmail ändrad i Hailey** innebär det att integrationen kommer **skapa upp en ny profil i Kleer** med den ändrade företagsmailen.
+</Note>
+
+För att **frånvaro** ska synkas behöver följande fält vara ifyllda på medarbetarens profil:
+
+- Företagsmail
+- För- och efternamn
+- Svenskt personnummer
+
+Medarbetare med följande **anställningsstatus** ingår i integrationen:
+
+- Okänd
+- I tjänst
+- Börjar snart
+- Ska lämna
+- Arbetsbefriad
+- Har lämnat
+
+**Bra** **att ha i åtanke** vid **frånvarosynk**:
+
+- Rapporterar en medarbetare i Hailey **frånvaro i %** måste medarbetaren ha **Arbetstimmar** på sin profil i Hailey. Detta för att systemet ska förstår hur mycket omfattningen av frånvaron innebär.
+- Rapporterar en medarbetare i Hailey **frånvaro i timmar** så behöver medarbetaren **inte** ha Arbetstimmar på sin profil.
+- Frånvaroanledningen för **semester** måste alltid **rapporteras in** för en **hel dag** eftersom Kleer inte tillåter rapporterad semester som är kortare än en arbetsdag.
+
+## Hur aktiveras integrationen?
+
+För att aktivera integrationen behöver du:
+
+<Steps>
+  <Step title="Kontakta er kontaktperson hos Kleer för att få API-nyckeln">
+    Kontakta er kontaktperson hos Kleer för att få API-nyckeln.
+  </Step>
+  <Step title="Lägga till integrationen i Hailey">
+    Lägga till integrationen i Hailey.
+  </Step>
+  <Step title="Fyll i nödvändig data för integrationsuppsättningen">
+    Fyll i nödvändig data för integrationsuppsättningen.
+  </Step>
+  <Step title="Omfatta integrationen vid behov">
+    Omfatta integrationen vid behov.
+  </Step>
+  <Step title="Spara och aktivera!">
+    Spara och aktivera!
+  </Step>
+</Steps>
+
+**Följ instruktionerna nedan för att gå genomföra aktivering av integrationen.**
+
+Innan ni aktiverar integrationen är det viktigt att ni **kontaktar er kontaktperson hos Kleer**, som ger er **API-nyckeln** som krävs för uppsättningen. Den som sätter upp integrationen behöver ha tillgång till ett **administratörskonto i båda systemen.**
+
+För att aktivera integrationen i Hailey:
+
+- Gå till **Inställningar.**
+- Klicka på **Integrationer** längst ner i menyraden.
+- Klicka därefter på rubriken **Lön.**
+- Klicka på **Kleer** och **Lägg till integration.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-04-2026-08-27-34-3918-AM.png?width=670&height=366&name=image-png-May-04-2026-08-27-34-3918-AM.png)
+
+Klistra in **företagsnummer** samt **åtkomsttoken** som ni **fått från er kontaktperson på Kleer.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-04-2026-08-16-16-3217-AM.png?width=670&height=305&name=image-png-May-04-2026-08-16-16-3217-AM.png)
+
+Vid aktivering av frånvarosynken måste ni välja ett **startdatum** för **när ni vill att frånvarodata ska föras över från Hailey till Kleer**.
+
+Säkerställ detta innan aktivering:
+
+- **Frånvaroanledningar i Hailey måste** motsvara **frånvaroaktiviteten i Kleer.** Ni hittar era frånvaroanledningar i Kleer under **Löner - Månadsrapport.**
+- Om ni lägger till **nya aktiviteter i Kleer** måste **aktiviteten ha ett unikt namn** utöver standardaktiviteterna för att integrationen ska fungera.
+- Om ni fyller i en aktivitet som **inte** finns i Kleer, eller stavar fel på aktiviteten, så kommer admin hos er få ett mail om att frånvarosynken **avaktiverats.**
+- Frånvaroanledningen för **semester** måste alltid rapporteras in för en **hel dag** eftersom Kleer inte tillåter rapporterad semester som är kortare än en arbetsdag.
+- **Aktiviteterna från Kleer** måste **fyllas i på svenska** i konfigurationen för integrationen.
+- För att en **medarbetare ska kunna rapportera frånvaro** behöver medarbetaren ha ett **anställningsavtal i Kleer.**
+- När frånvaron har blivit **Attesterad/godkänd i Kleer** kan frånvaron **endast korrigeras i Kleer.**
+
+<Note>
+  [**HÄR**](/sv/tid-och-franvaro-installningar) kan du läsa mer om hur ni sätter upp era frånvaroinställningar och frånvaroanledningar i Hailey.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-04-2026-08-19-44-3674-AM.png?width=670&height=593&name=image-png-May-04-2026-08-19-44-3674-AM.png)
+
+När samtliga steg av uppsättningen av integrationen är klara klickar ni på **Spara**.
+
+- _Gäller inte integrationen för hela företaget?_ - Läs nästa steg i guiden om omfattning **innan** **ni klickar på spara.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-04-2026-08-22-03-9613-AM.png?width=670&height=1068&name=image-png-May-04-2026-08-22-03-9613-AM.png)
+
+Nu när integrationen är aktiverad kommer Hailey automatiskt att läsa av alla användare från ert Kleer-konto som uppfyller kraven för integrationen. Ni kan se vilka/hur många integrationer som ert företag har aktiva under Aktiv-fliken under Integrationer.
+
+## Gäller integrationen inte hela företaget\*\*?
+
+Då finns det möjlighet att **omfatta** integrationen!
+
+- Omfattning av integrationen innebär att ni kan möjliggöra att **endast medarbetare med specifik arbetsplats och/eller legal enhet,** **inkluderas i integrationen.**
+- Detta är viktigt att göra **direkt när ni sätter upp integrationen**. Varför detta måste göras direkt i uppsättningen av integrationen är för att säkerställa att rätt medarbetare synkas från Hailey till Kleer **eftersom synkroniseringen inleds omedelbart.**
+
+Om dessa fält lämnas tomma kommer alla anställda med en företagsmail att inkluderas i integrationen.
+
+<Note>
+  **Exempelbilden** nedan visar att endast medarbetare som tillhör den valda legala enheten och den valda arbetsplatsen som anges i integrationsuppsättningen, kommer att inkluderas i integrationen mot Kleer.
+</Note>
+
+### Det är även möjligt att skapa upp flera integrationer mot olika/flera konton i Kleer.
+
+- Om ert företag har flera arbetsplatser och/eller legala enheter i Hailey kan det vara fördelaktigt att skapa separata integrationer med Kleer till olika/flera Kleer konton.
+
+Om ni **vill ha flera uppsättningar av integrationen mot olika Kleer konton** gör ni om samma process som beskrivit ovan. Med andra ord, navigera till rubriken **Lön** sedan gör du på samma sätt som när du satte upp den första integrationen.
+
+Du kan följa vilka/hur många integrationer som ert företag har aktiva under Aktiv-fliken under Integrationer.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-04-2026-08-26-59-6343-AM.png?width=670&height=435&name=image-png-May-04-2026-08-26-59-6343-AM.png)
+
+---
+
+## Vanliga fragor
+
+<AccordionGroup>
+  <Accordion title="Vad behöver jag tänka på om jag använder tidsfrånvaro rapporterad i procent i Hailey?">
+    Om en medarbetare rapporterar frånvaro i procent behöver medarbetaren ha arbetstimmar angivna i sin profil i Hailey. Detta gör att systemet kan beräkna omfattningen av frånvaron korrekt.
+  </Accordion>
+
+  <Accordion title="Vad kan jag dubbelkolla om en medarbetarens frånvaro inte synkroniseras korrekt?">
+    Kontrollera att aktiviteterna i Kleer matchar frånvaroanledningarna i Hailey och att det inte finns några dubbletter av aktiviteter med samma namn i Kleer. Kontrollera även att medarbetarens frånvaro är godkänd i Hailey.
+  </Accordion>
+
+  <Accordion title="En medarbetare kan inte rapportera frånvaro i Kleer, vad bör jag dubbelkolla?">
+    Kontrollera att medarbetaren har ett giltigt anställningsavtal registrerat i Kleer. Ett giltigt anställningsavtal krävs för att medarbetaren ska kunna rapportera frånvaro.
+
+    _Om du har några frågor angående integrationen, vänligen kontakta Hailey support._
+  </Accordion>
+</AccordionGroup>

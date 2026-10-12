@@ -1,0 +1,117 @@
+---
+title: "News"
+---
+
+In this guide, you can learn about using Hailey's news feature and how to publish current and relevant news for your employees when entering the dashboard.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="r21sfFc" title="News" />
+
+## What is news in Hailey?
+
+Through the News feature in Hailey, you have the opportunity to share current and relevant information with employees, which is displayed directly on the dashboard. News can also be **scoped** to specific parts of the organization, ensuring that the right employees have access to the right information. Why not publish your monthly newsletter in Hailey? Or inform employees about the next kick-off?
+
+## How do you add news?
+
+To Add news, go to **Home** and click the **pencil** in the left corner.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-25-2026-12-47-09-2469-PM.png?width=670&height=303&name=image-png-Aug-25-2026-12-47-09-2469-PM.png)
+
+From here, click **Add new.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-25-2026-12-47-50-3449-PM.png?width=670&height=392&name=image-png-Aug-25-2026-12-47-50-3449-PM.png)
+
+You can now add an **image** to the news you are creating. If you do not choose an image, Hailey will provide one for you. You can also choose to describe the image to screen reader users by filling in the **Image alt text.**
+
+Continue by writing the desired **headline**. After this, you can start writing the **content** of the news (or simply copy and paste).
+
+Then you can decide the date the news should be **Visible from**. On the news that have a set date, once the **Visible from** date is reached, the news will appear under **Published.**
+
+News with a **Visible from date in the future** or **No date** will be saved under the heading **Will be published** or **Drafts**. News **without** a visible from-date will not be shown on the dashboard until they have a date.
+
+Then you can also select a **Visible to** date. After that day has passed, the news will not be shown on the dashboard anymore, but instead transferred to the **Archive.**
+
+<Note>
+  Note that you need to select a **Visible from** date to be able to select a **Visible to** date.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-25-2026-12-49-10-9326-PM.png?width=670&height=427&name=image-png-Aug-25-2026-12-49-10-9326-PM.png)
+
+After that, you have the option to **scope** the news. You can choose whether the news should only be visible to **certain organizational units** or **For managers.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-25-2026-12-49-50-7366-PM.png?width=1254&height=812&name=image-png-Aug-25-2026-12-49-50-7366-PM.png)
+
+When you are done, click **Save**. The news will be visible on the dashboard from the date you set and according to potential scoping. All relevant employees will also receive an email about the news. Along with this the **author** of the news will be displayed through their avatar in the bottom left corner of the news.
+
+<Note>
+  If you want to publish a news item without triggering an email notification to employees, you can set a **visible-from** date that has already passed.
+</Note>
+
+The first time a news is published, everyone able to view it will get an **email** containing information about the news:
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-29-2026-11-51-04-4679-AM.png?width=670&height=243&name=image-png-Jun-29-2026-11-51-04-4679-AM.png)
+
+## Update and delete news
+
+In order to update news from the dashboard, go to **Home.** Then click on the **pencil icon** in the top left corner. From there click on the three dots on the news post you want to update, then click **Edit**. Once you are in the editor, make your updates. When you're finished, click **Save**.
+
+Would you like to delete the news item instead? Navigate to the **three dots** on the news item you want to remove and select **Delete**.
+
+<Note>
+  News posts that you don’t want to publish yet can be saved as drafts. All you need to do is leave the **Visible from** date empty and then click **Save as draft**. The news post will then be stored under **Drafts**.
+</Note>
+
+## Read and react to news
+
+To read a news post, click on it so you can read the full content. You can react to news posts both from the homepage and while viewing the news post itself.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-25-2026-12-51-24-5438-PM.png?width=1254&height=724&name=image-png-Aug-25-2026-12-51-24-5438-PM.png)
+
+## Rights
+
+As an Admin in Hailey, you always have the right to publish and edit news. To be able to manage news in Hailey you need the following right:
+
+- **Other - Edit news**
+
+This right allows the employee to:
+
+- Create news items
+- Delete news items
+- View news drafts (including those created by other employees)
+- Archive news items
+
+[**HERE**](/roles-and-rights) you can read more about Roles & Rights in Hailey
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="I have published a news item, but I can't see it on my dashboard. Why is that?">
+    It may be that you have selected a **Visible From** date in the future. If so, the news item will instead appear under the **Will be published** in News.
+
+    To be able to see the news post on the dashboard, you must be included in the selected **scope**. The scope is chosen when the news post is created, but it can also be adjusted afterwards by clicking the pencil icon to the right of News.
+  </Accordion>
+
+  <Accordion title="What does **For Managers** mean in the scope settings? Who will be able to see it?">
+    Enabling **For Managers** under **Scope** means that the news item will only be visible to employees with reportees. A good use case for this could be a news post about a leadership training program, which should only be available for employees with reportees.
+
+    **Question**: Why am I not receiving an email when I publish a news item?
+
+    It depends on the publish date you choose for the news item. If you select today's date as the publish date, an email will be sent to the employees included in the news post's target at the **next full hour**. If you select a future publish date, an email will be sent the night before the news item is published. If you select a publish date in the past, no email notification will be sent.
+  </Accordion>
+
+  <Accordion title="Whose profile picture is displayed on the news post?">
+    The employee who **publishes** the news item will have their profile picture displayed on the news post, regardless of whether another employee originally created it. If another employee edits the news post after it has been published, the profile picture will be updated to show the employee who made the edit.
+  </Accordion>
+</AccordionGroup>

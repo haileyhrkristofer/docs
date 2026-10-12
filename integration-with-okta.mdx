@@ -1,0 +1,136 @@
+---
+title: "Integration with Okta"
+---
+
+Do you want new employees to be automatically created in Okta when they are added to Hailey? With our Okta integration, this is possible – along with automatic synchronization of employee data and seamless user account management!
+
+<Tip>
+  First time activating one of **Hailey's standard integrations**? Start by reading [**THIS**](/haileys-standard-integrations) guide to know what to keep in mind before you get started.
+</Tip>
+
+## What does the integration do?
+
+With the integration, data is automatically transferred from Hailey to Okta. If a value differs between the two systems, the value in Hailey will overwrite the corresponding value in Okta during the next synchronization. This reduces administrative effort, as you only need to maintain the information in Hailey.
+
+The integration also enables automated user management. When a new employee is created in Hailey and a company email address is added to their employee profile, a user account is automatically created in Okta. If an employee no longer has an active employment in Hailey, you can also choose to have their Okta account automatically decomissioned.
+
+## How does the integration work?
+
+With API-based data transfer, Hailey and Okta are synchronized **every hour** based on detected changes. This means that:
+
+- Any included data that differs between Hailey and Okta will be updated in Okta with the value from Hailey during the next hourly synchronization.
+
+## What data is included?
+
+The data that will be transferred to Okta is listed below. The data fields are synced hourly, from Hailey to Okta.
+
+| **HAILEY** | **OKTA** |
+| --- | --- |
+| First name | First name |
+| Last name | Last name |
+| First name + Last name | Display name |
+| Company email | Primary email |
+| Company email | Username |
+| Work phone | Mobile phone |
+| Department | Department |
+| Street address | Street address |
+| Postal code | Zip code |
+| City | City |
+
+## What is required to be included in the integration?
+
+For a user to be included in and/or created through the integration, the employee must have:
+
+- A company email address registered in Hailey
+
+The employee must also have one of the following employment statuses:
+
+- **Will join**
+- **In service**
+- **Will leave**
+
+## How is the integration activated?
+
+To activate the integration, you need to:
+
+<Steps>
+  <Step title="Ensure the correct permissions are in place">
+    Ensure the correct permissions are in place.
+  </Step>
+  <Step title="Prepare the integration setup in Okta">
+    Prepare the integration setup in Okta.
+  </Step>
+  <Step title="Prepare the integration setup in Hailey">
+    Prepare the integration setup in Hailey.
+  </Step>
+</Steps>
+
+### Step 1 - Ensure the correct permissions
+
+Before activating the integration, the person setting up the integration **must have administrator rights in Entra ID**. As a Hailey admin, you automatically have the required rights to set up the integration.
+
+- If someone else, such as your IT, will be responsible for setting up the integration, you can give them the required rights by following the roles & rights guide [**HERE**](/roles-and-rights). The IT will need **View & Edit** integrations.
+
+### Step 2 - Setup in Okta
+
+Log into your Okta environment and go to Your Org.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-23-2023-09-04-01-2328-AM.png?width=670&height=348&name=image-png-Mar-23-2023-09-04-01-2328-AM.png)
+
+Go to the left side tab Security and scroll down to API and go to Tokens.
+
+![](https://docs.haileyhr.com/hubfs/image-png-Mar-23-2023-09-06-27-2092-AM.png)
+
+Click Create token, name it and click Create token again. Make sure to copy the token once it is displayed and save somewhere for the time being.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-23-2023-09-08-04-3052-AM.png?width=539&height=520&name=image-png-Mar-23-2023-09-08-04-3052-AM.png)
+
+Now, go to your to right corner in Okta to copy your Okta domain, as shown below. When this is done, let's move over to Hailey.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-23-2023-09-14-43-1018-AM.png?width=549&height=391&name=image-png-Mar-23-2023-09-14-43-1018-AM.png)
+
+### Step 3 - Setup in Hailey
+
+Go to **Settings** - **Integrations**. Open the Okta integrations and paste the copied domain in the field **Okta domain**. Fetch your copied token from Okta and paste it in the field **Access token**. **Activate** the synchronization.
+
+There is also an option to **decommission users without an active employment**. When enabled, employees whose employment end date has passed will automatically be deactivated in Okta. In Okta, these users will receive the status **Suspended**.
+
+When done, click **Save**. Your integration is now up and running.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-30-2026-12-41-21-9300-PM.png?width=670&height=959&name=image-png-Apr-30-2026-12-41-21-9300-PM.png)
+
+## Does the integration not apply to the entire company?
+
+In that case, it is possible to **scope the integration**.
+
+- Scoping the integration allows you to ensure that only employees belonging to specific **workplaces** and/or **legal entities** are included in the integration.
+- It is important to configure the scope during the initial setup, as synchronization starts immediately once the integration is activated. Defining the scope from the start ensures that only the correct employees are synchronized from Hailey to Okta.
+- This also makes it possible to set up multiple integrations connected to different Okta tenants or environments.
+
+If these fields are left blank, all employees who meet the integration requirements will be synchronized.
+
+<Note>
+  In the example below, only employees belonging to the selected legal entity **LE1** and the selected workplace **Gällivare**, as specified in the integration setup, will be included in the synchronization to Okta.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-30-2026-12-45-36-7103-PM.png?width=642&height=936&name=image-png-Apr-30-2026-12-45-36-7103-PM.png)
+
+You can view how many integrations with Okta you have activated by navigating to **Settings** - **Integrations** - **Added**. Here, you can also see the scope for each active integration.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-30-2026-12-47-36-4905-PM.png?width=670&height=323&name=image-png-Apr-30-2026-12-47-36-4905-PM.png)
+
+## Common questions
+
+**Question 1:** Why isn't the employee's Okta account being deactivated when the employment end date has passed in Hailey?
+
+First, verify that the **Decommission employees without an active employment** setting is enabled in the integration setup in Hailey. If the setting is enabled and everything appears to be configured correctly, check whether the employee has any elevated permissions or licenses assigned in Okta. In some cases, this may prevent the employee from being automatically deactivated through the integration.
+
+**Question 2:** How will users who already exist in Okta be matched and managed when synchronization is activated? Will duplicate users be created?
+
+The integration identifies employees based on their **company email address**. If the email address already exists in Okta, no duplicate user will be created. Instead, the integration will recognize and match the employee to their existing Okta profile.
+
+**Question 3:** What happens if I change an employee’s company email address in Hailey? How does it affect the integration?
+
+If you change an employee’s company email address in Hailey, a new user profile will be created in Okta. This is because the email address is used as the unique identifier when creating the employee’s account and serves as the link between Hailey and Okta. As a result, changing the email address breaks the existing connection between the systems, causing the integration to create a new profile based on the updated email address.
+
+_If you have any questions regarding the integration, please contact your Customer Success specialist at Hailey._

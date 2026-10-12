@@ -1,0 +1,69 @@
+---
+title: "Import yearly variable addition changes"
+---
+
+In this guide, you’ll learn how to import yearly variable additions or how to it add manually.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="jsbUYEM" title="Import yearly variable addition changes" />
+
+## Before you begin
+
+Before you import your yearly variable addition your employees and salaries must have been [imported](/import-employees)first.
+
+What you also want to do before you start importing yearly variable addition is to toggle on **Allow yearly variable addition** in **Settings - Customisation - Salary types**. If you want to know more about creating salaries go [HERE](/salary-types#create-salary-types).
+
+![1-Sep-16-2026-07-28-52-3310-PM](https://docs.haileyhr.com/hs-fs/hubfs/1-Sep-16-2026-07-28-52-3310-PM.png?width=670&height=326&name=1-Sep-16-2026-07-28-52-3310-PM.png)
+
+## Get and fill out template
+
+Now we are ready to import yearly variable addition changes. Go to the employee list under **Employees** in the main menu, click **Import - Yearly variable addition changes**.
+
+![2-Sep-16-2026-07-29-01-8204-PM](https://docs.haileyhr.com/hs-fs/hubfs/2-Sep-16-2026-07-29-01-8204-PM.png?width=670&height=331&name=2-Sep-16-2026-07-29-01-8204-PM.png)
+
+Here you can choose if you wish to download the template for all employees, or only the employees that you have selected in the list. Click the option you want and open the file.
+
+![3-Sep-16-2026-07-29-14-8187-PM](https://docs.haileyhr.com/hs-fs/hubfs/3-Sep-16-2026-07-29-14-8187-PM.png?width=670&height=295&name=3-Sep-16-2026-07-29-14-8187-PM.png)
+
+In the file, you will find all your employees, or the selected employees, that are registered in your Hailey account with an **ID, name, salary ID** and **salary title**. This information guides both you and Hailey regarding who the yearly variable addition changes concerns. Therefore it is important that you **don't change** any data in these columns.
+
+Fill out the columns E and F:
+
+- **Yearly variable addition (% of salary):** Filled in as a decimal. For example 1 for 100% and 0.5 for 50%, etc.
+- **Yearly variable addition (effective date):** From which date the yearly variable addition should be effective. The date format is **YYYY-MM-DD**.
+
+![Excel](https://docs.haileyhr.com/hs-fs/hubfs/Excel.png?width=670&height=64&name=Excel.png)
+
+## Import
+
+To import the template, go back into Hailey and the Employee list. Click on **Import - Yearly variable addition changes** and upload the file. When the file is validated and the import is complete, the balance will be updated on the Time tab for each concerned employee.
+
+![4-Sep-16-2026-07-29-26-2850-PM](https://docs.haileyhr.com/hs-fs/hubfs/4-Sep-16-2026-07-29-26-2850-PM.png?width=670&height=303&name=4-Sep-16-2026-07-29-26-2850-PM.png)
+
+## Add Yearly variable addition manually
+
+Through the employee card, you can also add yearly variable addition **manually**. Go to the employee's employee card, click **Compensation** **- Click the compensation box - Actions - Add yearly variable addition.**
+
+![10-2](https://docs.haileyhr.com/hs-fs/hubfs/10-2.png?width=670&height=313&name=10-2.png)
+
+Fill in the effective date and percentage of salary, and save.
+
+![6-3](https://docs.haileyhr.com/hs-fs/hubfs/6-3.png?width=670&height=250&name=6-3.png)
+
+When a variable addition is added or changed, a task is automatically created and an email is sent to the approver. Just like for other salary changes. The approver can then choose to approve or reject the allowance.
+
+The yearly variable addition will now be visible on the compensation card.
+
+![7-2](https://docs.haileyhr.com/hs-fs/hubfs/7-2.png?width=670&height=360&name=7-2.png)

@@ -1,0 +1,199 @@
+---
+title: "Integration with Outlook"
+---
+
+Would you like employee absences to be automatically transferred from Hailey to Outlook? With our integration, this is possible, ensuring that reported time off are seamlessly synchronized to employees’ calendars!
+
+<Tip>
+  First time activating one of **Hailey's standard integrations**? Start by reading [**THIS**](/haileys-standard-integrations) guide to know what to keep in mind before you get started.
+</Tip>
+
+## What does the integration do?
+
+At each synchronization, employee time off is automatically transferred via API from Hailey to Outlook calendars, ensuring that absence information is always up to date.
+
+When time off is registered in Hailey, the integration automatically creates an **Out of Office** event in the employee's Outlook calendar.
+
+The integrations syncs hourly.
+
+## What data is included in the integration?
+
+This integration synchronizes employee time off from Hailey to Outlook. Only time off that is **full-day** will be transfered in the integration.
+
+During setup, you can select which time off reasons should be included, ensuring that only relevant absence types are transferred to employees' calendars.
+
+## What is required to be included in the integration?
+
+For a user to be included in the integration, the employee must have:
+
+- A company email address that matches your domain
+
+Employees are synchronized between Hailey and Outlook by matching the company email address in Hailey with the UPN in Entra ID.
+
+Employees with the following employment statuses are included in the integration:
+
+- **In service**
+- **Leaving**
+
+## How is the integration activated?
+
+To activate the integration, you need to:
+
+- Prepare the integration setup in Entra ID
+- Add the integration in Hailey
+- Fill in the required data for the integration setup
+- Include the integration where applicable
+- Save and activate
+
+Follow the instructions below to complete the activation of the integration.
+
+### Step 1 - Preparation
+
+Before activating the integration, the person setting up the integration **must have administrator rights in Entra ID**. As a Hailey admin, you automatically have the required rights to set up the integration.
+
+- If someone else, such as your IT, will be responsible for setting up the integration, you can give them the required rights by following the roles & rights guide [**HERE**](/roles-and-rights). The IT will need View & Edit integrations.
+
+#### Steg 2 - Entra ID setup
+
+Start by signing in to Microsoft Entra ID.
+
+- Go to App registrations.
+- Click on **\+ New registration.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-11-32-18-6624-AM.png?width=670&height=404&name=image-png-Jul-10-2025-11-32-18-6624-AM.png)
+
+<Steps>
+  <Step title="Start by naming your application">
+    Start by naming your application. We suggest you name it "Hailey HR - Outlook/Calendar" for clarity. Under supported account types; select Accounts in this organizational directory only.
+  </Step>
+  <Step title="Under Redirect URI, select Web in the drop down and enter th">
+    Under Redirect URI, select **Web** in the drop down and enter the value [https://haileyhr.app/settings?item=integrations](https://haileyhr.app/settings?item=integrations) (you can copy this link, make sure there is no space before or after).
+  </Step>
+  <Step title="Click on Register">
+    Click on **Register**.
+  </Step>
+</Steps>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-11-39-54-9081-AM.png?width=670&height=440&name=image-png-Jul-10-2025-11-39-54-9081-AM.png)
+
+When the app registration has been created;
+
+- Go to **API Permissions** in the left menu
+- Click **\+ Add a permission.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-11-40-59-0866-AM.png?width=670&height=401&name=image-png-Jul-10-2025-11-40-59-0866-AM.png)
+
+Proceed by clicking on **Microsoft Graph.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-11-35-36-1210-AM.png?width=670&height=329&name=image-png-Jul-10-2025-11-35-36-1210-AM.png)
+
+Click on **Application permissions.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-11-35-16-9547-AM.png?width=670&height=317&name=image-png-Jul-10-2025-11-35-16-9547-AM.png)
+
+Under **Select permissions,** search for "calendar", expand the list and select **Calendar.ReadWrite**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-06-2026-06-25-04-5914-AM.png?width=670&height=320&name=image-png-Oct-06-2026-06-25-04-5914-AM.png)
+
+Search for "**User**", expand the User.
+
+Select User.Read.All and click on **Add permissions.**
+
+![User-read-all](https://docs.haileyhr.com/hs-fs/hubfs/User-read-all.png?width=670&height=373&name=User-read-all.png)
+
+In the tab API permissions, click Grant admin consent for _Your-Company-Name_, and then click **Yes**.
+
+In the list of API / Permissions you will now see that three rights have the status **Granted.**
+
+![granted](https://docs.haileyhr.com/hs-fs/hubfs/granted.png?width=670&height=363&name=granted.png)
+
+Go back to:
+
+- the **Overview** **tab** and Copy the ID under **Directory (tenant) ID** and the **Application (client) ID**.
+- Save it for later use in Hailey.
+
+![ID](https://docs.haileyhr.com/hs-fs/hubfs/ID.png?width=670&height=357&name=ID.png)
+
+Go to:
+
+- **Certificates & Secrets** in the main menu and make sure that you are in the tab **Client secrets**.
+- Click on **\+ New client secret**.
+- Under description you choose a name, we suggest "Hailey HR secret". We recommend that you set Expires to 24 months.
+- Click **Add**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2025-11-54-25-7396-AM.png?width=670&height=451&name=image-png-Jul-10-2025-11-54-25-7396-AM.png)
+
+Copy the code under Value and save for later use in Hailey.
+
+![client secret](https://docs.haileyhr.com/hs-fs/hubfs/client%20secret.png?width=670&height=407&name=client%20secret.png)
+
+After 24 months, the **integration will need to be renewed**.
+
+- When it is time for this, you will receive an email from Hailey notifying you about this.
+
+### Step 3 - Active the integration in Hailey
+
+- Go to **Settings - Integrations**.
+- Click on the heading **All**
+- Click on **Outlook** and **Add integration**.
+
+![Add-1](https://docs.haileyhr.com/hs-fs/hubfs/Add-1.png?width=670&height=371&name=Add-1.png)
+
+Paste the **Tenant ID** and **Client ID** values that you copied from the previous steps in Entra ID, and then click **Authorize**.
+
+![Outlook-3](https://docs.haileyhr.com/hs-fs/hubfs/Outlook-3.png?width=670&height=454&name=Outlook-3.png)
+
+Log in to your Entra account and **Accept.**
+
+Click on the **Outlook** integration once authentication is complete to finish the remaining setup of the integration and to activate it.
+
+When you have reopened the integration setup, you can choose to toggle the **Active** button on.
+
+- The integration will not become active until you click **Save** in the bottom-right corner. This is done as the final step once the entire integration setup has been completed.
+
+Paste the **Client Secret** value that you copied from Entra ID. Then enter a name for the **Event Title**. This title will be displayed in employees' Outlook calendars.
+
+Select which **Time Off Reasons** should be included in the integration, and choose the **date from** which time off data should be synchronized to Outlook calendars.
+
+![Outlook](https://docs.haileyhr.com/hs-fs/hubfs/Outlook.png?width=670&height=947&name=Outlook.png)
+
+After the above steps have been completed, simply click **Save** and the Outlook- integration will be activated!
+
+If you want to make adjustments to the setup, this can be done through the active integration found under **Settings - Integrations - Added**.
+
+![Added2](https://docs.haileyhr.com/hs-fs/hubfs/Added2.png?width=670&height=355&name=Added2.png)
+
+## Does the integration not apply to the entire company?
+
+You can also define the scope of the integration.
+
+- The scope allows you to limit the integration to employees belonging to specific **locations** and/or **legal entities**. This ensures that only the relevant employees are included in the synchronization between Hailey and Outlook.
+- It is important to configure the scope during the initial setup, as synchronization begins immediately once the integration is activated. Defining the scope from the start helps ensure that the correct employees are included from the very beginning.
+
+If no locations or legal entities are selected, all employees who meet the integration requirements will be included in the synchronization.
+
+<Note>
+  The image below shows and example that only employees belonging to the selected location specified in the integration setup will be included in the integration with Outlook.
+</Note>
+
+---
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="1: Why isn't the time off sync working for some of my employees?">
+    If time off is not syncing for one employee, check the following:
+
+    - Is the time off request approved?
+    - Does the employee meet the criteria for the integration?
+    - Is the time off registered as a full-day absence?
+  </Accordion>
+
+  <Accordion title="2: Is the time off reason visible in Outlook?">
+    No, the time off reason is not displayed in the Outlook event. The only information visible in the calendar entry is the **Event Title** that you have configured in the integration settings.
+
+    ![Calendar-outlook](https://docs.haileyhr.com/hs-fs/hubfs/Calendar-outlook.png?width=670&height=216&name=Calendar-outlook.png)
+
+    _If you have any questions regarding the integration, please contact your Customer Success specialist at Hailey._
+  </Accordion>
+</AccordionGroup>

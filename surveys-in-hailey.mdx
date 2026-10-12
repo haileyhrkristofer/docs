@@ -1,0 +1,113 @@
+---
+title: "Create survey templates"
+---
+
+In this guide, you'll learn how to create survey templates in Hailey. Using survey templates, you can easily create anonymous surveys and gather valuable feedback from your organization.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="wfTf1hB" />
+
+## What is a survey template?
+
+A survey template is the structure of a survey in Hailey. It includes the questions, sections, answer types, and settings that will be used when a survey is created. Once the template is ready, you can use it to create and send surveys to employees whenever you want to collect feedback.
+
+<Note>
+  To help you get started, your account comes with two ready-to-use survey templates! You can use them as they are, edit them, or delete them if needed.
+</Note>
+
+## How do you create survey templates?
+
+To create a survey, navigate to **Settings** in the main menu, select **Survey**, and click on **Add** **new** in the top right corner.
+
+Here, you can either create a survey from scratch or use or use our AI feature to generate one for you (more about this later in the guide).
+
+![](/images/surveys-in-hailey/01.png)
+
+![cs1](/images/surveys-in-hailey/02.png)
+
+If you choose to create the survey from scratch, you will start preparing the survay by adding a name and description for the template.
+
+Next, choose how many responses are required before the survey result can be viewed. The default setting is 5 responses, which can be seen by hovering over the black dot.
+
+You can also choose to scope the survey. If you add a scope, only employees who belong to that scope can send the survey. If you leave the scope blank, anyone with permission to send surveys can access and send it.
+
+When the preparation is done, click on **Start building**.
+
+![Picture7-1](/images/surveys-in-hailey/03.png)
+
+The survey template is structured into sections, which are then filled with questions.
+
+- Enter a name in the **Section title** field.
+- Add a description to each section if desired.
+- Add questions by clicking the **plus icon.**
+- For each question, select an answer type and choose whether the questions is mandatory or optional.
+- The answer type **range 1-5** can be represented as numbers or icons. However, 0-10 and 1-10 ranges can only be shown as numbers.
+- You can add a Test answer type for more detailed responses (up to 1000 characters).
+- The **Single** **select** answer type allows participants to choose one of the provided options, while **Multi** **select** allows them to choose multiple options.
+- You can also create questions with **Yes/No** answers.
+
+![](/images/surveys-in-hailey/04.png)
+
+## How to create a survey template with AI?
+
+You have the opportunity to create a survey template using AI. Before generating a survey template with AI, you must enable this feature under **Settings** - **Security** - **AI**. You can read more about how AI works in Hailey in our AI settings guide **[HERE.](/ai)**
+
+![](/images/surveys-in-hailey/05.png)
+
+To create a survey template using AI, go to **Survey** and click **Add new.**
+
+![cs1](/images/surveys-in-hailey/02.png)
+
+Next, select the minimum number of answers required before results of your survey can be viewed and describe what kind of survey you want to create. Click **Generate**, and AI will create a survey template based on the information you provided.
+
+![Picture7-1](/images/surveys-in-hailey/03.png)
+
+Once the template has been generated, you can choose to either **Cancel**, **Edit**, or **Save**. If you choose **Edit**, you can modify the template by adding or removing sections and questions, just as you would when creating a survey from scratch. Click **Save** when you are satisfied.
+
+![Picture9](/images/surveys-in-hailey/06.png)
+
+## Inspiration for Surveys
+
+Here is some examples of survey templates you can create:
+
+- **Employee Engagement Surveys**: Measure employee engagement and identify areas for improvement.
+- **Culture Surveys**: Understand how employees perceive your company's culture and values.
+- **Onboarding Surveys:** Collect feedback from new hires to improve the onboarding experience.
+
+## Rights
+
+As an admin in Hailey, you always have the right to create survey templates.
+
+You can also give other users permission to create, view, and edit survey templates. The permission can be granted to a **Standard role** by enabling **View & Edit Survey Templates**. For a **Custom Role**, you click on **Activate** to give permission to edit survey templates.
+
+Read more about Roles & Rights **[HERE](/roles-and-rights)**.
+
+## FAQ's
+
+Below, we have collected answers to common questions about survey templates in Hailey to help you get started.
+
+**Question 1:** Can I edit the minimum responses required before viewing results of the survey?
+
+Yes, you can change the minimun number of responses required by editing the survey template. When editing the survey, click on survey settings, and chenge the minimum required answers. Note, that these changes **will only apply for future surveys**, and will not affect ongoing surveys.
+
+**Question 2:** Can I edit a survey template after it has been sent out?
+
+Yes, you can always edit the survey template, but changes will only affect future surveys. Once a survey has been sent to employees, the questions and settings for that survey are locked and cannot be changed. To make updates, edit the survey template and use the updated version the next time you send out a survey.
+
+**Question 3: What is the difference between a survey template and a survey?**
+
+A **survey template** is the setup and structure of the survey. It contains the sections, questions, answer types, and settings that will be used each time the survey is sent out.
+
+A **survey** is created when a survey template is sent to employees to collect responses.

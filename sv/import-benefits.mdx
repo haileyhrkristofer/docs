@@ -1,0 +1,118 @@
+---
+title: "Importera förmåner"
+---
+
+I denna guide går vi igenom hur ni importerar förmåner till medarbetarnas profiler i Hailey!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="TOVpIyk" title="Importera förmåner" />
+
+## Vad innebär förmånsimporten?
+
+Med importen av förmåner kan du enkelt registrera medarbetarförmåner, såsom bilförmån, friskvårdsbidrag och andra förmåner, i Hailey.
+
+Med hjälp av importen kan du lägga till flera förmåner samtidigt via en fil i stället för att registrera dem manuellt. Uppgifterna visas direkt på medarbetarens profil och möjliggör smidig uppföljning och analys av organisationens förmånsdata.
+
+I den här guiden visar vi hur du importerar förmånsdata till Hailey på ett enkelt och strukturerat sätt.
+
+## Innan du sätter igång
+
+Innan du sätter igång med importen av förmåner behöver du först se till att du skapat de förmånstyper som ni använder i er organisation.
+
+För att göra detta går du till **Inställningar → Kompensation → Förmåner.**
+
+Förmånstyperna fungerar som kategorier och hjälper er att strukturera och klassificera de olika typer av förmåner som förekommer, till exempel **Friskvårdsbidrag**, **Försäkringar,** **Förmånsbil**, **Lunchsubvention** eller andra företagsunika förmåner.
+
+![Förmåner](https://docs.haileyhr.com/hs-fs/hubfs/F%C3%B6rm%C3%A5ner.png?width=670&height=373&name=F%C3%B6rm%C3%A5ner.png)
+
+<Tip>
+  När ni skapar en förmånstyp väljer ni även **Frekvens** — antingen **Månadsvis** eller **Årligen**. Frekvensen styr hur förmånen kommer att visas och hanteras i rapportering och sammanställningar, och är viktig för att importen ska kunna tolkas korrekt av systemet.
+</Tip>
+
+## Kom igång med importen!
+
+Ladda ner importmallen genom att gå till Medarbetare i huvudmenyn, klicka på **Importera** - **Förmåner** och sedan Ladda ner **importmall**. Öppna sedan mallen för att komma igång.
+
+![Import-4](https://docs.haileyhr.com/hs-fs/hubfs/Import-4.png?width=670&height=373&name=Import-4.png)
+
+![Mall](https://docs.haileyhr.com/hs-fs/hubfs/Mall.png?width=670&height=272&name=Mall.png)
+
+## Fyll i importmall
+
+Nu är det dags att fylla i importmallen!
+
+Mallen innehåller fyra förifyllda kolumner (**A-D**) med information om varje medarbetare: **Medarbetar-ID, Anställningsnummer, För- och efternamn samt Företagsmejl**. Dessa kolumner är systemgenererade och ska inte ändras eller raderas.
+
+Fyll i resterande kolumner med information om respektive medarbetares förmåner. För att säkerställa att importen genomförs korrekt är det viktigt att du följer formatkraven nedan.
+
+<Note>
+  Mallen stödjer att du lägger in flera förmåner per medarbetare. Lägg då till en ny rad per förmån, och repetera medarbetarens uppgifter.
+</Note>
+
+## Format
+
+- **Benefit Name:** Här anger du namnet på den förmån du önskar registrera. Namnet är valfritt, men bör följa ert interna namnschema för att underlätta rapportering och administration. Exempel: _Friskvårdsbidrag_.
+- **Start Date:** Det datum då denna förmån börjar gälla. Datumformatet ska vara ÅÅÅÅ‑MM‑DD. Exempel: 2026-01-01.
+- **Value:** Här fyller du i värdet för förmånen. Detta anges i **siffror**, utan mellanslag eller övriga tecken. Om värdet innehåller decimaler, använd punkt (.) — till exempel: 500.5 SEK.
+- **Currency Code**: Här fyller du i valutan för värdet. Valutakoden ska anges i ISO-format, t.ex. SEK, EUR, USD, NOK, DKK. Endast valutor som är tillåtna i ert konto kan användas.
+- **End Date:** Ett slutdatum används endast om förmånen ska upphöra eller ersättas. Om förmånen inte har ett bestämt slutdatum lämnas fältet tomt. Formatet är även här ÅÅÅÅ‑MM‑DD.
+
+## Importera förmåner
+
+När mallen är ifylld med den data ni önskar importera sparar ni filen på er dator. Gå därefter tillbaka till Hailey och Medarbetarlistan. Klicka på **Importera → Fömåner**. Klicka på rutan i mitten _"Klicka eller släpp filen här för att ladda upp"_ och välj er importfil.
+
+När importen är klar skickas ett mail till dig som genomförde importen, och de importerade förmånerna kommer nu att vara synliga på medarbetarnas profiler under fliken för **Kompensation** **→ Förmåner.**
+
+![Importera förmåner](https://docs.haileyhr.com/hs-fs/hubfs/Importera%20f%C3%B6rm%C3%A5ner.png?width=670&height=250&name=Importera%20f%C3%B6rm%C3%A5ner.png)
+
+<Note>
+  Om något fält är felaktigt ifyllt kommer systemet att visa en tydlig varning som förklarar både **vilket fält som behöver korrigeras och varför**.
+
+  Systemet kontrollerar även om en medarbetare redan har samma förmån registrerad i Hailey. Om så är fallet får ni en varning för att uppmärksamma eventuella dubbletter.
+
+  Detta är dock endast en informationsvarning – importen kan fortfarande genomföras. Informationen visas så att ni själva kan ta ställning till om uppgifterna är korrekta eller om några justeringar behöver göras innan ni fortsätter.
+</Note>
+
+## Lägg till förmåner manuellt
+
+Ni kan även lägga till förmåner manuellt via medarbetarkorten. Gå isåfall till medarbetarens medarbetarkort, klicka **Hantera → Lägg till förmån.**
+
+![lagg-till](https://docs.haileyhr.com/hs-fs/hubfs/lagg-till.png?width=670&height=259&name=lagg-till.png)
+
+<Tip>
+  Behöver du uppdatera eller hantera befintliga förmåner? Läs mer [**HÄR**](/sv/benefit-change) om hur du hanterar förmåner.
+</Tip>
+
+## Rättigheter
+
+Att importera förmåner är något som endast en admin kan göra. Detta är på grund av den känsliga informationen som visas i importfilen. Vill du läsa mer om Roller & rättigheter kan du göra det [**HÄR**](/sv/roles-and-rights).
+
+## Vanliga frågor
+
+Här nedan har vi listat vanligt förekommande frågor om import av förmåner.
+
+**Fråga 1:** Kan man importera flera förmåner åt samma medarbetare?
+
+Ja, absolut! Om du vill importera flera förmåner för samma medarbetare behöver du skapa en ny rad för varje förmån. Kopiera medarbetarens uppgifter till en ny rad och fyll sidan i informationen för den aktuella förmånen på samma sätt som tidigare.
+
+Se exemplet nedan för hur detta ska fyllas i:
+
+![import3](https://docs.haileyhr.com/hs-fs/hubfs/import3.png?width=640&height=102&name=import3.png)
+
+**Fråga 2:** När behöver jag fylla i _End Date_ (Slutdatum)?
+
+**End date** ska endast fyllas i om förmånen har avslutats och inte längre ska betalas ut till medarbetaren.
+
+Om förmånen fortfarande är aktiv lämnar du kolumnen **"End date"** tom.

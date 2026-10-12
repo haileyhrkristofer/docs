@@ -1,0 +1,68 @@
+---
+title: "Skapa rörliga löner"
+---
+
+## Upptäck och lägg enkelt till rörliga löner i Hailey!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="WbHYw4I" title="Skapa rörliga löner" />
+
+### Vad är rörlig lön?
+
+Rörlig lön i Hailey används för att hantera prestationsbaserad ersättning, såsom bonusar, provisioner och andra typer av rörliga utbetalningar. Funktionen hjälper organisationer att strukturera och följa upp olika typer av rörlig ersättning på ett och samma ställe.
+
+Varje typ av rörlig lön kan ha ett eget namn, en egen beskrivning och valuta, vilket gör det enkelt att skilja mellan olika ersättningskategorier. När en rörlig lönetyp har skapats kan den tilldelas medarbetare, vilket ger både HR och medarbetare en tydlig överblick över ersättningen.
+
+Detta skapar en smidigare och mer transparent process för att hantera rörlig lön i hela organisationen.
+
+### Varför använda rörliga löner?
+
+Arbetar din organisation med rörliga löner som bonusar, provisioner eller andra prestationsbaserade ersättningar? Rörliga löner hjälper dig att strukturera och särskilja dessa utbetalningar. Genom att samla dem i Hailey får både du och medarbetarna en tydlig överblick och en enklare hantering av alla rörliga löner.
+
+### Skapa rörliga lönetyper
+
+För att skapa en rörlig lön går du till **Inställningar** - **Kompensation** och klicka på **Lägg till**. Välj sedan **Rörlig lön**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-28-2026-07-56-47-5569-AM.png?width=650&height=328&name=image-png-Aug-28-2026-07-56-47-5569-AM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-28-2026-07-57-18-1479-AM.png?width=650&height=330&name=image-png-Aug-28-2026-07-57-18-1479-AM.png)
+
+Ge den rörliga lönetypen ett **namn** och en **beskrivning** som förklarar vilken ersättningen den avser och i vilket sammanhang den används. Beskrivningen visas när du väljer bland de rörliga lönetyper du har skapat. Välj därefter vilken **valuta** den rörliga lönen ska ha.
+
+<Note>
+  Om du har rörlig ersättning som betalas ut i olika valutor kan du skapa en separat typ av rörlig ersättning för varje valuta.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-28-2026-07-58-49-7554-AM.png?width=650&height=330&name=image-png-Aug-28-2026-07-58-49-7554-AM.png)
+
+### Hantera en rörlig lönetyp
+
+Om du vill redigera eller ta bort en rörlig lönetyp går du till **Inställningar** - **Kompensation** - **Rörlig lön** och klickar på de **tre prickarna** till höger om den rörliga lön du vill redigera. Därefter gör du de förändringar som du behöver.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-28-2026-07-59-24-0554-AM.png?width=650&height=330&name=image-png-Aug-28-2026-07-59-24-0554-AM.png)
+
+<Note>
+  När du har skapat dina rörliga lönetyper är nästa steg att lägga till rörlig lön på medarbetarna. Du hittar mer information om hur du gör detta [**HÄR**](/sv/template-new-article-5).
+</Note>
+
+## Vanliga fragor
+
+<AccordionGroup>
+  <Accordion title="Kan jag ta bort en rörlig lönetyp?">
+    **Svar:** Du kan inte ta bort en rörlig lönetyp som har registrerats på en medarbetares profil. Om du vill ta bort den rörliga lönetypen måste du först gå till de medarbetare som har en aktiv lön kopplad till den rörliga lönen och ändra den till en annan lönetyp/rörlig lön.
+
+    När detta är gjort och ingen medarbetare längre har en aktiv lön med den aktuella rörliga lönen kan du ta bort den.
+  </Accordion>
+</AccordionGroup>

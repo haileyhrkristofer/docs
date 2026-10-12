@@ -1,0 +1,118 @@
+---
+title: "Create custom fields"
+---
+
+Create custom fields to tailor your employee cards in Hailey. Different needs in different parts of the organization? No problem! Read more below and get started today.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="PvE1l7G" title="Create custom fields" />
+
+## What are Custom Fields?
+
+Custom fields are fields that can be created in Hailey to store information that is specific to each employee. There are two types of custom fields: **employee fields** and **employment fields**.
+
+With **employee fields**, you can collect information related to your employees and their compensation. Employee fields are best suited for storing information that remains the same regardless of employment. They can be placed in specific sections of the employee profile and can be limited to certain employees through scope settings.
+
+**Employment fields** is suitable for information that vary between different employments and are automatically placed in the *Terms* section of the employment record. By using employment fields, you can maintain relevant historical information related to an employee’s different employments.
+
+## Create your custom fields
+
+Add a custom field by going to **Settings – Customisation – Add new**. Decide whether the field should be an employee field or an employment field. The difference between employee fields and employment fields is that employee fields typically do not change based on employment. Employment fields, on the other hand, can contain different data for different employments.
+
+<Note>
+  For example, an employee may be covered by a different collective agreement in a new employment, whereas their shoe size is unlikely to change due to the employment change.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-06-2026-12-46-53-6467-PM.png?width=627&height=318&name=image-png-Aug-06-2026-12-46-53-6467-PM.png)
+
+- Name the field.
+- **Employee field**: Under Tab and Section you choose where this field should be placed on the employee card.
+- **Employment field:** Here you do not need to enter tab nor section, they always end up on the employment information.
+- Under **Type**, you select which type of data that should be filled in.
+  - **Text** = Allows all characters
+  - **Yes/No** = Choose between Yes or No
+  - **Number** = Only allows numbers (does not allow 0 as first digit)
+  - **Email** = Set an email adress
+  - **Phone number** = Allows numbers, spaces, + and -
+  - **Date** = Select date in a calendar
+  - **Selection** = Create the options from which you can choose one (1) option
+  - **Multiple selection** = Create the options from which you can choose several options
+  - **Employee** = Select an employee from dropdown
+- Then decide whether the information filled in in the field should be defined as personal data. If not, uncheck this field. If you leave the field marked, you also need to choose **Retention policy**, i.e. how long this data should be saved after an employee has left. Read more about GDPR and how we store personal data in the system [HERE.](/admin-get-started#GDPR-)
+
+When you are done, click Save. The field has now been created on **each employee card**.
+
+<Note>
+  When choosing where on the employee card the fields should appear, it's a good idea to consider which tab and section employees/managers should have access to view and potentially edit.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-05-2026-07-18-44-4108-AM.png?width=627&height=318&name=image-png-Aug-05-2026-07-18-44-4108-AM.png)
+
+## Examples of custom fields
+
+The fields created can vary from one organization to another. To give you some inspiration, we've listed below some of the most commonly used fields among our customers:
+
+- Allergy
+- Equipment (computer, phone, access card, etc.)
+- Workwear sizes
+- Driver's license
+- Health care allowance
+- Occupational pension
+- Commission model
+- Additional emergency contact
+- Start date of parental leave/leave of absence
+- End date of parental leave/leave of absence
+- Mentor/Buddy
+
+## Scope & Translate custom fields
+
+When creating Custom Fields, there is also the option to scope the field. This means **the field will only be visible for employees who meet the selected criteria**. Selecting multiple values in different fields means the employee must meet *all* selected criteria. For example, if you choose Company A under Legal Entity and Department 1 under Department, the employee must belong to *both* in order for the field to be visible to them.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-05-2026-07-23-33-6511-AM.png?width=670&height=340&name=image-png-Aug-05-2026-07-23-33-6511-AM.png)
+
+When creating a custom field, you have the option **to add translations**. The translations will vary depending on the language being used in the system, which is useful if you have employees using Hailey in different languages.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-05-2026-07-26-46-4504-AM.png?width=670&height=343&name=image-png-Aug-05-2026-07-26-46-4504-AM.png)
+
+## Import custom fields
+
+When you have created your own fields, you have the option to import data into them either **during the employee import** if they are custom employee fields, or **during the employment import** if they are custom employment fields.
+
+Imports can also **be done separately**. [HERE](/import-additional-information) we explain how to proceed to import custom employee fields, and [HERE](/import-custom-employment-fields) you will find a guide on how to import custom employment fields.
+
+## Custom fields and Workflows
+
+Custom fields also unlock additional functionality in Hailey:
+
+- Create workflows triggered by custom fields of the *date* type
+- Assign tasks within workflows based on custom fields of the *employee* type
+
+Want to learn more about workflows? Check it out [HERE](/create-workflows).
+
+## Rights
+
+As an Admin in Hailey, you always have the possibility to create and edit custom fields. If you want someone other than the Admin of your account to be able to **view and edit** the custom fields, you need the following right:
+
+- **Settings - Edit Custom fields**
+
+**[HERE](/roles-and-rights)** you can read more about Roles & Rights in Hailey
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Can i make changes to the type and personal data once i create my custom field?">
+  **Answer:** Please note that the Type and Personal Data settings cannot be changed after the field has been created. It’s therefore wise to give these some extra thought before proceeding.
+  </Accordion>
+</AccordionGroup>

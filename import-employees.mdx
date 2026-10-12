@@ -1,0 +1,110 @@
+---
+title: "Import employees"
+---
+
+Use this article as support to ensure that the import of your employees runs as smooth as possible.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="7ZtejZb" title="Import employees" />
+
+## Before you get started
+
+Before you import employees we recommend you prepare by gathering all your employee data beforehand. An employee is imported once, so we recommend including as much data as possible in the initial import. We also recommend that you have a look at the standard fields and setting up your custom fields:
+
+- **[HERE](/standard-fields)** you can read more on how to activate, deactivate and scope **Standard fields**.
+- **[HERE](/custom-fields)** you can read more on how to set up and add your **Custom fields**.
+
+## How do you import employees?
+
+Download the import template by going to **Employees** in the main menu, clicking on I**mport – Employees**, and then selecting **Download template**. Then open the template to get started. In the template, fill in as much relevant information as possible for each employee.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-20-2026-02-05-37-7183-PM.png?width=670&height=331&name=image-png-Aug-20-2026-02-05-37-7183-PM.png)
+
+For the import to be successful, the following three fields must be filled in at least:
+
+- **CompanyEmail**
+- **FirstName**
+- **LastName**
+
+Some columns need to be follow a certain format in order for you to be able to import your employees. [**HERE**](#format) you can see what formats you have to follow. Below is an example of what a properly completed file might look like:
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-09-2025-07-43-09-3622-AM.png?width=670&height=209&name=image-png-Jul-09-2025-07-43-09-3622-AM.png)
+
+Once you’ve completed the file, it’s time to import! This will create an employee profile for each employee listed in the file. Go to **Employees** in the main menu and click on **Import – Employees**. Then click the box in the center that says **“Click or drag file here to upload”**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-11-2025-01-09-08-5855-PM.png?width=670&height=517&name=image-png-Jul-11-2025-01-09-08-5855-PM.png)
+
+If any column is incorrectly filled in, an error message will appear indicating which column and row need to be corrected. Make the necessary adjustments and then upload the file again.
+
+Once everything is correct, upload the updated file and click on Import! The import may take some time depending on how many employees are being imported. You can close this window since the import will continue running in the background! When the import is complete, the person who started the import will receive a verification email:
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-09-2025-07-59-17-3550-AM.png?width=670&height=566&name=image-png-Jul-09-2025-07-59-17-3550-AM.png)
+
+## Formats
+
+The import file has certain formatting requirements. Below is a list of the different required formats:
+
+| **COLUMN** | **FORMAT** |
+|---|---|
+| **E-mail** | Valid email address, does not accept spaces, Å, Ä or Ö |
+| **EmploymentNumber** | Allowed characters are a-z, A-Z and 0-9. No special characters allowed |
+| **Date** | YYYY-MM-DD |
+| **PersonalIdentityNumber** | Swedish identity number: YYYYMMDD-XXXX Norwegian identity number: DDMMYYXXXXX Danish identity number: DDMMYY-XXXX Finnish identity number: DDMMÅÅ-XXXX All other identity numbers are allowed in any format. |
+| **Issuer of Personal Identity Number** | SWE, NOR, DNK, DEU, FIN, USA, or Other. *Only specify this if you have provided a personal identity number*. **Must be filled in in English and is required for BankID signing**. |
+| **Gender** | Filled in as Female, Male, NonBinary or Other. |
+| **Phone number** | Allowed characters are numbers, +, - and spaces. E.g. +46 72-123 12 34 |
+| **Custom** **fields** | [HERE](/custom-fields#formats) you can find the formats for your custom fields. |
+
+<Note>
+  For those using several sequences for employment numbers column B will be **EmploymentNumberSequenceName**. The employment number sequence name must be filled in if you want to add the employment number in the import. You can find these under **Settings -** **General - Employment number settings**.
+</Note>
+
+## Rights
+
+Admins automatically have the right to import employees.
+
+To give these permissions to other roles, update the role settings under **Settings – Security – Roles and rights** for **Import employee data. [HERE](/roles-and-rights)** you can read more about **Roles and rights.**
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="I received the following error message. What should I do?">
+  ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-30-2026-08-02-28-5346-AM.png?width=670&height=119&name=image-png-Jun-30-2026-08-02-28-5346-AM.png)
+
+  If the error message says "Invalid column header", it may be because new values have been entered into row 1. In that case, the issue is often resolved by downloading a new import template and trying the import again, as there may be hidden formatting causing the problem.
+
+  In the Excel file, it may also help to select each header cell in row 1 and set the cell format to **Text** again.
+
+  If the issue persists, please contact your Customer Success Specialist or our Support team, and we'll be happy to help you further.
+  </Accordion>
+  <Accordion title="Is it possible to import employee information at a later stage, such as personal identity numbers (national ID-numbers) and street addresses?">
+  Employee data can only be imported once. Therefore, we recommend including as much information as possible in the initial import to avoid having to manually add this information to your colleagues profiles later.
+  </Accordion>
+  <Accordion title="We would like employees to update their own personal information (f*or example, emergency contact details*) once they have access to the system. Is that possible?">
+  Absolutely! You can leave these fields blank in the import file and allow employees to complete the relevant information themselves, provided they have the appropriate permissions.
+
+  **Question:** I have imported employees but can't find them in the employee list. Why?
+
+  When employees are created via import, they do not yet have any employments. By default, the **employee** **list** shows employees with the statuses *In service* and *Leaving*, which come from their employments.
+
+  To display the imported employees, go to **Employees – Filter** and **uncheck In service and Leaving**.
+  </Accordion>
+  <Accordion title="I only want to add a few employees. Do I have to use the import?">
+  If you prefer not to import and instead want to add employees manually in Hailey, go to the Employees tab in the main menu and click Add Employee in the top right corner. Then select Quick add.
+  </Accordion>
+  <Accordion title="Will the employees be invited once I import them?">
+  Creating an employee in Hailey **does not** automatically grant them access to their account or send them a notification. They will only gain access once you actively send an invitation, which takes place as the final step of the implementation process.
+  </Accordion>
+</AccordionGroup>

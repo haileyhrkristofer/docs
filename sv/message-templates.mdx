@@ -1,0 +1,54 @@
+---
+title: "Skapa meddelandemallar"
+---
+
+Den här guiden visar hur du skapar meddelandemallar så att du slipper skriva om samma sak varje gång du hör av dig till en kandidat.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="yAXhS4I" title="Skapa meddelandemallar" />
+
+## Vad är meddelandemallar?
+
+Meddelandemallar gör det enklare att kommunicera med kandidater genom hela rekryteringsprocessen **.** Mallarna samlar vanligt förekommande meddelanden på ett och samma ställe, vilket gör kommunikationen mer enhetlig och minskar behovet av att skriva samma meddelanden flera gånger. På så sätt sparar ni tid och gör det enklare att få med viktig information i varje utskick.
+
+## Hur skapar man meddelandemallar?
+
+För att skapa en meddelandemall går ni till **Rekrytering** i huvudmenyn och klickar på inställningsikonen i det övre högra hörnet. Därefter klickar ni på **Lägg till** och ger den nya meddelandemallen ett **Namn**. Namnet är endast synligt för användare med åtkomst till rekryteringen och visas inte för kandidaten.
+
+Skapa sedan ert meddelande i textfältet. Över textfältet ser ni de tillgängliga styrkoder som ni kan använda er utav. Styrkoderna gör det möjligt att skapa en generell mall som automatiskt hämtar specifik information för varje enskild rekrytering och kandidat. När ni klickar på en styrkod läggs den till i textfältet.
+
+När ni är nöjda med mallen klickar ni på **Spara**.
+
+I listan över era meddelandemallar kan ni välja mellan att redigera eller ta bort en befintlig mall. För att redigera en befintlig mall klickar ni på de tre pickarna till höger om mallen och väljer **Redigera**. För att ta bort en befintlig mall klickar ni på de tre prickarna och väljer istället **Ta bort.**
+
+Läs mer om hur ni kommunicerar med era kandidater med hjälp av **Meddelandemallar** i den [**HÄR**](/sv/candidate-management) guiden.
+
+## Rättigheter
+
+Som Admin i Hailey har du per automatik rättigheten **Åtkomst till rekryteringar**. Läs mer om **Roller & rättigheter** i den [**HÄR**](/sv/roles-and-rights) guiden.
+
+- **Inga** - Rekryteringar i huvudmenyn är **dolda** för användaren.
+- **Visa** - Ger åtkomst till att **se innehållet** i fliken **Rekrytering** i huvudmenyn, inklusive **Karriärsidan**, **Rekrytering** och **Jobbannonser**.
+- **Visa och ändra** - Ger användaren **full åtkomst** till att **hantera rekryteringsmodulen**, inklusive möjligheten att skapa, redigera och ta bort **Meddelandemallar**, **Karriärsidor, Rekryteringar** och **Jobbannonser.**
+
+## Vanliga frågor
+
+<AccordionGroup>
+  <Accordion title="Vem är rekryteraren om jag använder mig av styrkoden Rekryterarens fullständiga namn eller Rekryterartitel?">
+    Rekryteraren, i det här sammanhanget, är den medarbetare som skickar meddelandet till kandidaten. Om du använder styrkoder som **Rekryterarens fullständiga namn** eller **Rekryterartitel** kommer dessa alltså att fyllas med information från den medarbetare som skickar meddelandet. På så sätt kan samma meddelandemall användas av flera rekryterare utan att innehållet behöver uppdateras manuellt.
+
+    Läs mer om hur ni kommunicerar med era kandidater med hjälp av **Meddelandemallar** i den [**HÄR**](/sv/candidate-management) guiden.
+  </Accordion>
+</AccordionGroup>

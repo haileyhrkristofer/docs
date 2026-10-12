@@ -1,0 +1,110 @@
+---
+title: "Integration med Teamtailor"
+---
+
+Ingen mer manuell inmatning av nya medarbetare i systemet! Tack vare Haileys integration till Teamtailor möjliggörs sömlös och GDPR-säker överföring av persondata. Ni väljer själva när i rekryteringsprocessen ni vill att uppgifterna överförs.
+
+## Vad gör integrationen?
+
+Denna integration automatiserar övergången från rekrytering till anställningsprocess genom att koppla samman Teamtailor och Hailey. När en kandidat når ett steg som ni har valt i rekryteringsprocessen aktiveras en trigger i Teamtailor som automatiskt överför kandidatens personuppgifter till Hailey.
+
+På så sätt finns den blivande medarbetaren redan upplagd i Hailey när det är dags att initiera anställningsprocessen. Det minskar behovet av manuellt arbete, sparar tid och skapar en smidig och effektiv övergång från kandidat till medarbetare.
+
+## Hur fungerar integrationen?
+
+Ni väljer själva i vilket steg av rekryteringsprocessen kandidatens information ska överföras till Hailey. När en kandidat flyttas till det valda steget i Teamtailor aktiveras en trigger som automatiskt skapar medarbetarens profil i Hailey.
+
+Samtidigt skapas en uppgift på ansvarig persons **Att-göra lista** i Hailey. Där kan användaren välja att snabbt **lägga till** kandidaten, **initiera en anställning** eller **ta bort** kandidaten från listan.
+
+## Vilken data är inkluderad i integrationen?
+
+När en kandidat flyttas från Teamtailor till Hailey kommer data från ifyllda fält i Teamtailor (_dessa_ _listas i tabellens högra spalt_) att överföras till motsvarande fält i Hailey.
+
+| Förnamn | Förnamn |
+| --- | --- |
+| Efternamn | Efternamn |
+| Telefonnummer privat | Telefonnummer |
+| Email privat | Email |
+
+## Hur aktiverar man integrationen?
+
+Under ert företagsnamn i Teamtailor, gå till Add-on features. Välj **Triggers** och **Active**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-26-2022-09-04-19-5229-AM.png?width=645&height=467&name=image-png-Oct-26-2022-09-04-19-5229-AM.png)
+
+Gå till Settings i Teamtailor och scrolla ner i vänstermenyn till Integrations. Välj API keys och klicka på + New API key.
+
+![](https://docs.haileyhr.com/hubfs/image-png-Oct-26-2022-09-09-58-9127-AM.png)
+
+Döp din API nyckel, i detta fall döper vi den till **Admin** – **Hailey** – **Key**. Ställ in Admin under API scope och välj Read. Klicka på Create.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-02-2022-12-24-51-67-PM.png?width=379&name=image-png-Mar-02-2022-12-24-51-67-PM.png)
+
+Din skapade nyckel har nu dykt upp i listan under Settings och API keys. Kopiera den genererade nyckeln och logga in i Hailey.
+
+![](https://docs.haileyhr.com/hubfs/image-png-Oct-26-2022-09-11-59-5074-AM.png)
+
+Gå till **Inställningar -** **Integrationer** nere till vänster. Välj **Teamtailor**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-02-2026-02-14-46-7575-PM.png?width=670&height=333&name=image-png-Jul-02-2026-02-14-46-7575-PM.png)
+
+Klistra in din API nyckel under Teamtailor API nyckel. Välj en standardgranskare. Denna person kommer få notiser när en kandidat skickas från Teamtailor OM den granskare ni valt i Teamtailor inte existerar i Hailey. Kopiera Haileys API nyckel och klicka **Spara**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-02-2026-02-16-19-0199-PM.png?width=670&height=353&name=image-png-Jul-02-2026-02-16-19-0199-PM.png)
+
+Tillbaka till Teamtailor. Gå till Marketplace, välj HR system i vänstermenyn och välj Hailey HR. Väl här klickar ni på Activate.
+
+![](https://docs.haileyhr.com/hubfs/image-png-Mar-02-2022-12-22-57-96-PM.png)
+
+Denna ruta öppnas då där ni klistrar in Haileys API nyckel och klicka utanför fältet för att spara. Välj er skapade Teamtailor-API-nyckel och sedan **Finish installation**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-08-2022-08-30-27-82-AM.png?width=442&name=image-png-Jun-08-2022-08-30-27-82-AM.png)
+
+## Aktivera trigger
+
+Nu är de två systemen sammankopplade. Det är dock inte färdigt utan nu behöver ni, för varje position ni rekryterar till, aktivera en trigger som gör att slutkandidaten skickas till Hailey.
+
+Gå till **Jobs** och välj den rekryteringsprocess där ni vill att en slutkandidat automatiskt ska skickas in i Hailey. Väl inne i den rekryteringsprocessen, klicka på trollstaven till höger.
+
+![](https://docs.haileyhr.com/hubfs/image-png-Oct-26-2022-09-07-00-0510-AM.png)
+
+Välj det steg där ni vill aktivera triggern. I detta fall väljer vi Hired genom att klicka på plustecknet under Hired.
+
+![](https://docs.haileyhr.com/hubfs/image-png-Oct-26-2022-09-08-14-5952-AM.png)
+
+Välj Send Webhook Hailey HR.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-02-2022-12-40-36-18-PM.png?width=318&name=image-png-Mar-02-2022-12-40-36-18-PM.png)
+
+Ställ nu in en reviewer/granskare som kommer få en notis när en kandidat skickas från Teamtailor till Hailey. Klicka **Add trigger.**
+
+<Note>
+  Om den mejl du ställer in här inte finns registrerad i Hailey kommer personen ni satte som Default reviewer/Standardgranskare få notisen istället.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-02-2022-12-40-48-74-PM.png?width=350&name=image-png-Mar-02-2022-12-40-48-74-PM.png)
+
+Hur ser det ur när en kandidat skickats till Hailey?
+
+När en kandidat flyttas till steget där ni aktiverat triggern skickas en notis till granskaren via Hailey och kandidaten kommer skapas upp i Hailey. Öppna uppgiften i Hailey, fyll i informationen och välj huruvida ni vill **avbryta importen**, **lägga till** medarbetaren eller **initiera en anställning**.
+
+- Väljer ni att **initiera anställning** är det viktigt att välja en anställningsmall samt välja om ni vill begära personnummer från kandidat. För att läsa mer om anställningsprocessen, klicka [HÄR](/sv/iniate-hire).
+- Väljer ni att **lägga till** medarbetare dyker denne upp i medarbetarlistan och ni är klara med detta förfarande.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-02-2026-02-19-29-8231-PM.png?width=670&height=580&name=image-png-Jul-02-2026-02-19-29-8231-PM.png)
+
+## Vanliga fragor
+
+**Fråga 1:** Kan man ha flera Teamtailor integrationer aktiverade till samma Hailey-konto?
+
+Nej det går inte. Om ni har olika Teamtailor-konton så får ni välja ett konto som ni vill synkronisera till Hailey.
+
+**Fråga 2:** Vad händer om vi återanställer en medarbetare som redan finns i Hailey via Teamtailor?
+
+Kandidaten kommer att importeras på nytt till Hailey. Notera att det kan resultera i dubbletter av medarbetarens profil.
+
+**Fråga 3:** När skapas medarbetarprofilen upp i Hailey?
+
+Profilen skapas upp med anställningsstatusen I anställningsprocess direkt då ni flyttar kandidaten till steget där ni placerat triggern.
+
+_Om du har några frågor angående integrationen, vänligen kontakta din Customer Success kontaktperson på Hailey._

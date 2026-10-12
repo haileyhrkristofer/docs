@@ -1,0 +1,135 @@
+---
+title: "Import casual employments"
+---
+
+How to import casual employments and their information on your employees.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="wrIpnyk" title="Import casual employments" />
+
+## Before you get started
+
+Before you Import casual employments, you need to have your Organization in place in Hailey, and the Import of employees has to be done before you get going with this step.
+
+- Read more about how to **Build your organization** [HERE](/organization-in-hailey)!
+- Read more about how to **Import employees** [HERE](/import-employees)!
+
+<Tip>
+  If you haven’t already gotten to know how **Casual employments** works in Hailey, we recommend you to read [THIS](/casual-employments) guide before you get started with the import.
+</Tip>
+
+## How do you import casual employments?
+
+When your organisation is all set, and the employees are imported to Hailey it's time to download and fill in the template. Head over to **Employees** in the main menu and click **Import** - **Casual employments** to download your template!
+
+You can either include **All employees** or **Selected employees**. If you only want to import casual employments for a few employees, just select the employees by marking the checkbox in the employee list *before* you download the template.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-12-2026-09-25-03-1447-AM.png?width=670&height=352&name=image-png-Mar-12-2026-09-25-03-1447-AM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-12-2026-09-24-38-5391-AM.png?width=670&height=353&name=image-png-Mar-12-2026-09-24-38-5391-AM.png)
+
+When you've downloaded the template it is time to fill in the casual employment information.
+
+<Note>
+  Note that you cannot rename or rearrange any columns included in the template!
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-06-2026-09-12-38-7901-AM.png?width=670&height=194&name=image-png-May-06-2026-09-12-38-7901-AM.png)
+
+In the template, employees are listed with ID, employment number, name, and company email. This is so that Hailey can match the casual employments to the correct employee. **It is therefore important not to modify any data in these columns!**
+
+Additionally, **start date**, **end date**, **organizational settings**, and **the numbering of the employment** will be included as fields in the import file.
+
+If you've added **Custom employment fields** in Hailey, these will also be included in the template.
+
+Besides of **Start Date** and **End date**, all other fields are optional to fill in. But we recommend you to add as much data as possible when filling in the template!
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Feb-12-2026-10-54-30-2288-AM.png?width=670&height=148&name=image-png-Feb-12-2026-10-54-30-2288-AM.png)
+
+The import of casual employments can be used to enter data about previous casual employments. If you do this, the first row for each employee should be the first casual employment you want to enter into the system.
+
+When adding multiple casual employments, do so by inserting empty rows below the row where the employee’s ID, name, and email address are listed. One row per casual employment.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-06-2026-09-29-20-3652-AM.png?width=670&height=213&name=image-png-May-06-2026-09-29-20-3652-AM.png)
+
+<Warning>
+  It’s important that both the **start date** and **end date** are provided for casual employments. If **EndDate** is left blank, the import will fail. **Make sure that every casual employment has an end date.**
+</Warning>
+
+Please note that it is only possible to import the time span of the casual employment along with the associated organizational information. The contracted employment period must be added afterwards once the casual employment has been set up.
+
+<Note>
+  If you import casual employments containing historical data such as departments or titles that you no longer use, you can mark these organizational units as archived. Simply click the three dots to the right of the selected entity and choose **Archive**.
+</Note>
+
+When the template is ready, head over to **Employees** in the main menu and click **Import** - **Casual employment** to upload your template!
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-06-2026-11-09-17-2962-AM.png?width=670&height=479&name=image-png-May-06-2026-11-09-17-2962-AM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2025-01-04-31-1769-PM.png?width=670&height=431&name=image-png-Jul-14-2025-01-04-31-1769-PM.png)
+
+If any of the columns are filled in incorrectly, you'll get an error message with information about what adjustments need to be made. But don't stress! Just go back to the template and make the adjustments, and then upload the file again!
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-06-2026-11-15-22-8796-AM.png?width=670&height=834&name=image-png-May-06-2026-11-15-22-8796-AM.png)
+
+When everything is correct the window below will appear, then click **Import.** The import may take some time depending on how many records need to be imported. You can close this window—the import will continue running in the background.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-06-2026-11-11-06-6097-AM.png?width=670&height=515&name=image-png-May-06-2026-11-11-06-6097-AM.png)
+
+When the import is complete, you who started the import will receive a verification email.
+
+<Note>
+  In rare cases, the email may indicate that some casual employments were not successfully imported. You will then receive information about which employees failed, along with a message explaining what went wrong. Try again with only the employees that failed. Alternatively, you can go into each affected employee profile to complete the information.
+</Note>
+
+## Format
+
+These are all the formats you need to follow to be able to successfully import casual employments to Hailey:
+
+- **Dates**: YYYY-MM-DD
+- **Titles,** Teams, Locations, Departments, Business Area, Cost Center & Legal Entity: Must be spelled exactly the same as your titles, teams, offices, departments, business areas, and legal entities in Hailey. If an employee has multiple titles or teams, separate them with a comma. No spaces!
+- **Custom employment fields**: you can find the formats for custom fields [HERE!](/custom-fields#formats)
+
+Below is an example of what a correctly completed file can look like:
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-20-2026-02-45-35-8282-PM.png?width=670&height=80&name=image-png-Apr-20-2026-02-45-35-8282-PM.png)
+
+A common mistake is accidentally adding an extra space after the name of, for example, a department or a title in Hailey. If the import file doesn’t have the same space, it will not match. The same applies to uppercase and lowercase letters – they must be exactly the same in Hailey and in the file.
+
+## Rights
+
+Admins automatically have the right to import employees.
+
+To give these permissions to other roles, update the role settings under **Settings – Security – Roles and rights** for **Import employee data. [HERE](/roles-and-rights)** you can read more about **Roles and rights.**
+
+## Common questions
+
+**Question**: I get an error message when I import the Excel file into Hailey. What am I doing wrong?
+
+To ensure that the information can be imported into Hailey correctly, it is important that you follow the **format requirements** provided in the guide. Hailey will tell you what the error is and which row it occurs in. Correct the error and then upload the file again.
+
+<AccordionGroup>
+  <Accordion title="When I try to upload my import file, I get the error message *“Invalid column heading”*, but Hailey does not indicate where the error is or what it concerns. What should I do?">
+  Sometimes Excel may interpret text as being present in columns or rows outside the actual template. Hailey cannot identify where the problem is because the error is located outside the information entered in the template.
+
+  There are a few things you can try to resolve this issue. Start by selecting a number of rows and columns outside the template and then click Delete/Clear Contents. If this does not resolve the issue, you can copy all your information from the template and paste it into a newly downloaded import template. If neither of these methods works, you will need to go through your file and look for spaces in empty fields, as these can also cause the error message because Hailey and Excel do not recognize spaces as an entered value.
+  </Accordion>
+  <Accordion title="Can I import employment periods within the employment through the import file?">
+  The contracted employment period needs to be added afterwards, once the casual employment has been set up, and is not added through the import file.
+  </Accordion>
+  <Accordion title="Can I import multiple casual employments for the same employee?">
+  Yes! When adding multiple casual employments, this is done by inserting blank rows below the row containing the employee’s ID, name, and email address. One row per employment.
+  </Accordion>
+</AccordionGroup>

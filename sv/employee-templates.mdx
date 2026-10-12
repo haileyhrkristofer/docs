@@ -1,0 +1,198 @@
+---
+title: "Medarbetarmallar"
+---
+
+Vid anställning av en ny medarbetare behöver många uppgifter fyllas i. Med Haileys medarbetarmallar kan du fördefiniera återkommande anställningsvillkor, begränsa valmöjligheterna till det som är relevant samt skapa en smidigare och mer enhetlig anställningsprocess.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="swzpd61" title="Medarbetarmallar" />
+
+## Vad är en medarbetarmall?
+
+Medarbetarmallar i Hailey förenklar anställningsprocessen genom att fördefiniera värden
+
+såsom organisatorisk tillhörighet, semesterdagar, uppsägningstid, lön och andra vanligt förekommande värden. Istället för att ange samma information manuellt vid varje nyanställning kan du använda en mall och få dessa fält ifyllda automatiskt.
+
+Det sparar inte bara tid och minskar administrativt arbete, utan bidrar också till en mer enhetlig och konsekvent anställningsprocess. Medarbetarmallar är särskilt användbara när chefer eller flera personer är involverade i anställningsprocessen, eftersom anställningsuppgifter kan anges och låsas i förväg.
+
+## Hur konfiguerar man allmänna inställningarna för medarbetarmallen?
+
+För att skapa dina medarbetarmallar, gå till **Inställningar** - **Medarbetare**. Klicka på **Lägg till** i det över högra hörnet.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-12-2026-12-55-40-8853-PM.png?width=670&height=384&name=image-png-May-12-2026-12-55-40-8853-PM.png)
+
+Hailey har två olika former av medarbetarmallar, en för vanliga **anställningar** och en för **behovsanställningar**. Välj vilken typ av mall du vill skapa upp.
+
+<Note>
+  Behovsanställning dyker endast upp om detta är påslaget i ert konto. För mer information om behovsanställningar, klicka **[HÄR](/sv/casual-employments).**
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-12-2026-12-56-53-3052-PM.png?width=670&height=383&name=image-png-May-12-2026-12-56-53-3052-PM.png)
+
+Ge mallen en **Titel**, **välj en emoji** (valfritt) och ge mallen en **Beskrivning** (valfritt). Detta visas för den som ska anställa en ny medarbetare med medarbetarmallar.
+
+![Skärmavbild 2026-07-30 kl. 10.35.49](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202026-07-30%20kl.%2010.35.49.png?width=670&height=351&name=Sk%C3%A4rmavbild%202026-07-30%20kl.%2010.35.49.png)
+
+Du kan även välja att omfatta mallen.  Om fältet lämnas tom kommer mallen att vara tillgänglig för alla som har rätt att initiera en anställning i Hailey.
+
+<Note>
+  **Omfattningen avser** **användarens tillhörighet,** **inte medarbetaren** som ni kommer att anställa. Det vill säga, omfattning gör att mallen enbart finns tillgänglig i Initiera anställnings wizarden de som tillhör omfattningen för t.ex. Legal Enhet, Arbetsplats, Avdelning, Affärsområde eller Team.
+</Note>
+
+![Skärmavbild 2026-07-30 kl. 10.39.50](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202026-07-30%20kl.%2010.39.50.png?width=670&height=350&name=Sk%C3%A4rmavbild%202026-07-30%20kl.%2010.39.50.png)
+
+Inställningarna för mallen kan justeras i efterhand om så önskas. Detta görs genom att klicka på Inställningar i mallens övre högra hörn.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-12-2026-01-30-10-6686-PM.png?width=670&height=191&name=image-png-May-12-2026-01-30-10-6686-PM.png)
+
+## Hur bygger man upp medarbetarmallen?
+
+När de grundläggande inställningarna är valda är det dags att bygga upp medarbetarmallens struktur. Mallen består av tre delar:
+
+- [**Organisation**](#Organisation)
+- [**Anställning**](#anstallningsdefinition)
+- [**Lön**](#lon)
+
+Följ guiden för att bygga upp de olika delarna för medarbetarmallen.
+
+### Organisation
+
+<Note>
+  Inställningarna för organisation finns både för skapandet av medarbetarmallar av **vanlig anställning** och **behovsanställningar**.
+</Note>
+
+I organisationsuppsättningen ställer ni in de val som användaren av mallen får välja bland, angående den nya medarbetarens organisatoriska tillhörighet. Här finner ni fyra typer av inställningar:
+
+- **Alla**: Innebär att mallanvändaren får välja mellan alla alternativ ni har för fältet (ex. alla era olika titlar).
+- **Alternativ**: Innebär att mallanvändaren får välja bland era valda alternativ.
+- **Användarens ...**: Innebär att mallanvändaren inte får göra ett val. Istället populeras fältet med samma tillhörighet som mallanvändaren har.
+- **Låst värde**: Innebär att mallanvändaren inte får göra ett val. Istället blir värdet det ni låst mallen till.
+
+![Skärmavbild 2026-07-30 kl. 10.47.26](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202026-07-30%20kl.%2010.47.26.png?width=670&height=344&name=Sk%C3%A4rmavbild%202026-07-30%20kl.%2010.47.26.png)
+
+Undantaget från de ovan nämnda alternativen avser inställningen för **Rapporterar till.** Här finns enbart valen:
+
+- **Alla**: Innebär att mallanvändaren får välja mellan alla alternativ ni har för fältet (alla era medarbetare).
+- **Användare**: Innebär att mallanvändren kommer bli den som den nya medarbetaren kommer att rapportera till.
+
+#### Anställning
+
+<Note>
+  Inställningarna för anställningen finns för skapandet av medarbetarmallar av **vanlig anställning.**
+</Note>
+
+För att underlätta anställningsprocessen får ni möjlighet att skapa olika val av **anställningsdefinitioner**. Klicka på plustecknet för att börja skapa anställningsdefinitionen.
+
+![Skärmavbild 2026-07-30 kl. 11.40.40](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202026-07-30%20kl.%2011.40.40.png?width=670&height=339&name=Sk%C3%A4rmavbild%202026-07-30%20kl.%2011.40.40.png)
+
+Börja med att **Namnge definitionen**, **välj en emoji** (valfritt) och **Lägg till en beskrivning** (valfritt).
+
+Ange sedan mallens **Anställningsvillkor**. Här har du möjlighet att begränsa vilka val den som anställer kan göra.
+
+Det första du behöver ta ställning till är **Anställningstyp**. Här kan du välja mellan:
+
+- **Valfritt** – alla alternativ är tillgängliga.
+- **Fast värde** – ett fördefinierat alternativ används.
+
+Nästa inställning gäller **Timmar** per vecka medarbetaren ska arbeta. Här kan du välja mellan:
+
+- **Valfritt** – användaren kan själv ange antalet timmar.
+- **Beräknat från omfattning%** - beräknas utifrån sysselsättningsgraden.
+
+![Skärmavbild 2026-07-30 kl. 14.20.32](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202026-07-30%20kl.%2014.20.32.png?width=670&height=367&name=Sk%C3%A4rmavbild%202026-07-30%20kl.%2014.20.32.png)
+
+De ovan gjorda **Timmar** inställningarna kombineras vanligen med vår nästa inställning **Procent**.
+
+- Här kan ni välja om mallanvändaren ska kunna ange **omfattning i procent fritt,** välja mellan **alternativ** eller ha ett **låst värde**.
+
+<Note>
+  Om ni har valt timmar för heltidsvecka kommer dessa att beräknas enligt den omfattning i procent som väljs.
+
+  Till exempel, har ni valt att heltidsveckan är 37.5 timmar, och den nya medarbetaren ska att arbeta 50% så kommer det att resultera i värdet 18.75 timmar per vecka.
+</Note>
+
+![Skärmavbild 2026-07-30 kl. 11.55.00](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202026-07-30%20kl.%2011.55.00.png?width=670&height=345&name=Sk%C3%A4rmavbild%202026-07-30%20kl.%2011.55.00.png)
+
+Sista inställningen avser antal **Semesterdagar**.
+
+- Här kan ni tillåta mallanvändaren av mallen att **välja fritt**, välja bland era **alternativ** eller ett **låst värde**.
+
+**Innan ni sparar** kan ni även bestämma värden för **inställningar för tid och frånvaro.**
+
+<Note>
+  De val som är möjliga i denna del av anställningsdefinitionen styrs av de inställningar ni gjort för **Tid och frånvaro**. Läs mer tid och frånvaroinställningar [**HÄR**](/sv/tid-fr%C3%A5nvaro#main-content).
+</Note>
+
+Mallens inställningar kopplade till tid och frånvaro finns även alternativet **Inget värde.** Detta kan ni med fördel använda er av om ni endast använder vissa delar av tid- och frånvaromöjligheterna i Hailey.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-12-2026-02-32-28-7661-PM.png?width=395&height=426&name=image-png-May-12-2026-02-32-28-7661-PM.png)
+
+Klicka på **Lägg till** i det nedre högra hörnet när ni är klara med anställningsdefinitionen.
+
+Ni kan skapa **flera olika anställningsdefinitioner** genom att **klicka på plustecknet.** Här har ni möjlighet att skapa så många definitioner som ni behöver.
+
+![Skärmavbild 2026-07-30 kl. 14.28.02](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202026-07-30%20kl.%2014.28.02.png?width=670&height=322&name=Sk%C3%A4rmavbild%202026-07-30%20kl.%2014.28.02.png)
+
+### Lön
+
+<Note>
+  Inställningarna för lön finns både för skapandet av medarbetarmallar av **vanlig anställning** och **behovsanställningar**.
+</Note>
+
+För att göra det enklare att sätta rätt **Lön** vid nyanställning kan ni själva bestämma ramarna för lönen med hjälp av medarbetarmallen.
+
+Skriv en **Beskrivning** av lönen och välj om mallanvändaren ska kunna välja **valfritt belopp** eller **fast belopp.**
+
+- Fast belopp används vanligtvis för timavlönade medarbetare, men kan såklart även användas i andra fall. Väljer ni **Fast belopp** får ni skriva in summan i fråga.
+
+Gör sedan de inställningar som stämmer för lönen, och koppla den till en eller flera av de anställningsdefinitioner ni skapat.
+
+![Skärmavbild 2026-07-30 kl. 14.35.06](https://docs.haileyhr.com/hs-fs/hubfs/Sk%C3%A4rmavbild%202026-07-30%20kl.%2014.35.06.png?width=670&height=375&name=Sk%C3%A4rmavbild%202026-07-30%20kl.%2014.35.06.png)
+
+<Note>
+  Vid skapandet av en medarbetarmall kopplad till **behovsanställningar** så är betalningsperioden **alltid låst till timlön.**
+</Note>
+
+När ni känner er nöjda klickar ni på **Lägg till.** Ni kan skapa så många löner ni vill för er medarbetarmall.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-12-2026-02-58-28-6602-PM.png?width=664&height=475&name=image-png-May-12-2026-02-58-28-6602-PM.png)
+
+När ni är nöjda med den totala uppsättningen av medarbetarmallen klickar ni slutligen på **Spara** uppe i höger hörn.
+
+## Rättigheter
+
+Som admin i Hailey har du alltid rättigheten att initiera anställning med medarbetarmallar. Om du vill att någon annan, exempelvis chefer, ska ha rättigheten att initiera anställning med medarbetarmallar behöver de rättigheten att  **Initiera anställning med medarbetarmall.**
+
+Om du vill ge rättigheten att **Initiera anställning utan en mall** så finns du denna rättighet på samma ställe. Läs mer om initiera anställning **[HÄR](/sv/iniate-hire).**
+
+<Note>
+  Läs mer om roller och rättigheter [HÄR](/sv/roles-and-rights).
+</Note>
+
+## Vanliga fragor
+
+<AccordionGroup>
+  <Accordion title="Kan jag redigera en medarbetarmall i efterhand?">
+    Ja. Du kan när som helst uppdatera både de allmänna inställningarna och konfigurationen av medarbetarmallen. Dina ändringar kommer att gälla för nya anställningsprocesser som initieras efter att ändringarna har sparats. Pågående anställningsprocesser som redan använder mallen påverkas inte.
+
+    **Fråga**: Vad är skillnaden mellan en vanlig medarbetarmall och en medarbetarmall för behovsanställningar?
+
+    Anställningsdefinitioner är endast tillgängliga för vanliga anställningsmallar.
+
+    **Fråga**: Hur gör jag för att en chef bara ska kunna använda medarbetarmallar som är menade för sin egen avdelning?
+
+    Genom att **omfatta** mallen, så kan du styra vem som kan använda mallen. Omfattningen gör att mallen enbart finns tillgänglig att använda för de som tillhör omfattningen för t.ex. Legal Enhet, Arbetsplats, Avdelning, Affärsområde eller Team. **Omfattningen avser** **användarens tillhörighet,** **inte medarbetaren som anställs.**
+  </Accordion>
+</AccordionGroup>

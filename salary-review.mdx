@@ -1,0 +1,214 @@
+---
+title: "Start, manage, and update a salary review"
+---
+
+This guide shows you how to start and manage a salary review in Hailey. You will also learn how to change the review settings and which rights may be relevant. The feature brings the entire process together in one system and makes it easier to follow.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="KkYbgQI" title="Start, manage, and update a salary review" />
+
+## What is a salary review?
+
+A salary review is a feature that helps you collect and manage salary proposals in Hailey. Instead of working in separate documents, managers can submit proposals, forward them for approval, and then update salaries directly in the system.
+
+The feature gives you a clear overview of the process and makes it easier to follow each step. You can see what has been completed, what is awaiting approval, and what remains before the salary review can be finalized.
+
+<Note>
+  If you are participating in the salary review, click your role below to access the relevant guide:
+
+  - [Manager](/salary-review-for-managers)
+  - [Manager's manager](/s)
+  - [Final approver](/salary-review-for-the-managers-manager)
+</Note>
+
+## Start a salary review
+
+To start a salary review, go to **Employees** in the main menu and select the employees you want to include in the salary review. Then click **Action – Start a salary review.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jan-07-2026-02-01-33-2611-PM.png?width=670&height=365&name=image-png-Jan-07-2026-02-01-33-2611-PM.png)
+
+A wizard will open, where you can configure the salary review step by step. In the first step, name the salary review and add instructions for the immediate manager who will submit salary proposals.
+
+<Note>
+  Hailey allows you to enter a large amount of text in this field, so feel free to add clear instructions that help managers understand what they need to do.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jan-07-2026-02-02-12-9221-PM.png?width=670&height=289&name=image-png-Jan-07-2026-02-02-12-9221-PM.png)
+
+In the next step, enter a target raise as a percentage that managers can use as a starting point when submitting their salary proposals. You also select whether the target raise should be set at the **Company, Department**, or **Business Area** level.
+
+The target raise is applied to all salaries included in the salary review. The immediate manager can then adjust the salary proposal if needed.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jan-07-2026-02-02-24-2546-PM.png?width=670&height=370&name=image-png-Jan-07-2026-02-02-24-2546-PM.png)
+
+If you choose to set the target raise by department or business area, enter both a target raise for the entire company and a separate target raise for each department or business area. If an employee is not assigned to a department or business area, the company-wide target raise is applied.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jan-07-2026-02-02-36-5408-PM.png?width=670&height=333&name=image-png-Jan-07-2026-02-02-36-5408-PM.png)
+
+If your organization has salaries in different currencies, you will be able to select a **reference currency** for the salary review.
+
+You can then set the **exchange rates.** These are used to convert all salaries into the selected reference currency when totals are calculated. The exchange rates can be adjusted after the salary review has been started.
+
+If the salary review only includes salaries in one currency, you only need to select the reference currency.
+
+<Note>
+  By default, Hailey uses the exchange rates defined under **Settings - General - Company**. You can update the exchange rates within the salary review if needed.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jan-07-2026-02-02-50-6175-PM.png?width=670&height=303&name=image-png-Jan-07-2026-02-02-50-6175-PM.png)
+
+In the next step, you can exclude **salary types** or include **custom employee fields** if needed. The custom employee fields must already be created and contain relevant data. Read more about custom fields **[HERE](/custom-fields).**
+
+<Tip>
+  These could, for example, be fields for previous experience, performance review, or relevant education, depending on your needs.
+</Tip>
+
+If you want to make salary adjustments without affecting the target raise, you can add and name an **Additional adjustment.** Managers can then add a separate amount when submitting salary proposals.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jan-07-2026-02-03-02-1804-PM.png?width=670&height=398&name=image-png-Jan-07-2026-02-03-02-1804-PM.png)
+
+In the final step of the wizard, enter three dates and select one or more final approvers.
+
+Enter:
+
+- A deadline for receiving salary proposals from the immediate managers.
+- A deadline for approving the proposed salary changes.
+- The date when the salaries should be updated. This date can be set in the future or retroactively.
+
+You also select who should approve the salary proposals: **Proposer’s Manager** or **All Managers Above.** If you select **All Managers Above,** all managers above the immediate manager must approve the salary proposals before the salary review can be finalized.
+
+The final approvers must approve the entire salary review before it can be finalized. Once all final approvers have approved the salary review, one of them can finalize it.
+
+If the list is empty, it is likely that no employee has been assigned the right **Give final approval.** Read more about this right in the **Rights** section of this guide.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jan-07-2026-02-03-58-5960-PM.png?width=670&height=375&name=image-png-Jan-07-2026-02-03-58-5960-PM.png)
+
+Once you have completed all the steps, a summary of your selections is displayed. If everything looks correct, click the **green checkmark** to start the salary review.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jan-07-2026-02-04-12-4818-PM.png?width=670&height=428&name=image-png-Jan-07-2026-02-04-12-4818-PM.png)
+
+## Summary of the steps in the salary review
+
+Here you will find a summary of the steps included in the salary review.
+
+<Steps>
+  <Step title="Start salary review - The wizard guides you through all the">
+    **Start salary review** - The wizard guides you through all the steps required to start your salary review.
+  </Step>
+  <Step title="Propose salary changes - The immediate manager  receives a t">
+    **Propose salary changes** - The immediate manager (Reports to in Hailey) receives a task under **My updates** on the dashboard. The manager can propose salary changes and then forward the proposals for approval to their manager or to all managers above, depending on the salary review settings.
+  </Step>
+  <Step title="Approve proposals - The manager or managers who are required">
+    **Approve proposals** - The manager or managers who are required to approve the proposals, based on the salary review settings, then receive a task under **My updates** on the dashboard. There, they can review, comment on, and approve the proposals.
+  </Step>
+  <Step title="Approve the salary review - Once the previous steps have bee">
+    **Approve the salary review** - Once the previous steps have been completed, the final approver can approve the salary review. If several final approvers have been selected, all of them must approve it.
+  </Step>
+  <Step title="Finalize salary review - Once the final approver has approve">
+    **Finalize salary review -** Once the final approver has approved the salary review, or all final approvers if several have been selected, the salary review must be finalized before the salary changes become visible to employees. You can also choose whether employees should be notified of the salary change.
+  </Step>
+  <Step title="Updated salaries - Hailey updates all salaries on the select">
+    **Updated salaries -** Hailey updates all salaries on the selected salary change date once all the steps above have been completed.
+  </Step>
+</Steps>
+
+<Note>
+  For a step-by-step guide, click your role below to access the relevant guide:
+
+  - [Manager](/salary-review-for-managers)
+  - [Manager's manager](/s)
+  - [Final approver](/salary-review-for-the-managers-manager)
+</Note>
+
+## Update salary review
+
+As an admin, you can find running and finalized salary reviews under **HR Hub - Salary Reviews.** Click a salary review to open and manage it.
+
+If you started the salary review, you can also find it under **My updates** on the dashboard. Click the **Manage salary review** task, then click **Action** within the review.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-13-2026-01-20-57-9085-PM.png?width=670&height=348&name=image-png-Jul-13-2026-01-20-57-9085-PM.png)
+
+Click **Action** to update or delete the salary review, or to export the proposed salary changes to Excel. The export includes all data in the salary review, regardless of any filters applied.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-13-2026-01-22-18-4197-PM.png?width=670&height=347&name=image-png-Jul-13-2026-01-22-18-4197-PM.png)
+
+The following can be updated after the salary review has been started:
+
+- Name of the salary review
+- Add or remove employees
+- Instructions
+- Target raise
+- Deadlines
+- The date when the new salaries will take effect
+- Final approvers
+- Currency exchange rates
+
+<Note>
+  The salary review can be updated until final approval has been given. After that, no further changes can be made.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-13-2026-01-23-39-4315-PM.png?width=670&height=405&name=image-png-Jul-13-2026-01-23-39-4315-PM.png)
+
+## Key terms
+
+Here you will find brief explanations of terms that may be helpful when working with salary reviews.
+
+- **Target raise:** The percentage increase set when the salary review is started and used as a basis for the salary proposals. The target raise can be set for the entire company, by department, or by business area.
+- **Additional adjustment:** A separate salary adjustment that can be added on top of the calculated increase, for example, for adjustments related to a completed pay survey. The manager enters the adjustment, if needed, when submitting salary proposals.
+- **Final approver:** A person responsible for approving the entire salary review before it can be finalized. If multiple final approvers are selected, all of them must approve the review before one of them can finalize it.
+
+## Rights
+
+Below are the rights that may be relevant when working with salary reviews. If you need help setting up rights, read more in the Roles & rights guide [**HERE.**](/roles-and-rights)
+
+Admins can always start and manage all salary reviews.
+
+- **Start salary review** allows an employee to start a new salary review. The employee can also manage salary reviews they have started.
+- **Manage salary reviews** provides access to salary reviews started by other employees. With this right, an employee can update, export, and delete salary reviews. Please note that this right applies to all salary reviews in HR Hub. This means that salary information for all employees included in these salary reviews will be visible.
+- **Give final approval** allows an employee to be selected as a final approver in a salary review. An admin must also have this right to give final approval.
+
+<Note>
+  Managers can participate in the salary review without any specific rights, as long as they only submit and approve salary proposals.
+</Note>
+
+## Common questions
+
+Below is a list of frequently asked questions about salary reviews.
+
+<AccordionGroup>
+  <Accordion title="Why isn’t the **Business area** option available when I set the target increase?">
+    A target increase by **Business area** can only be selected if you have created business areas in Hailey. If the option is not displayed, it is likely because no business areas have been created. Read more about business areas [**HERE.**](/organization-in-hailey)
+  </Accordion>
+
+  <Accordion title="Why isn’t an employee’s salary included in the salary review, even though the employee is included?">
+    This may be because the salary becomes effective after the date set for the new salaries. The salary review only includes salaries that are active by this date. Salaries that become effective later are therefore not included.
+  </Accordion>
+
+  <Accordion title="Why doesn’t an employee appear in the list for final approval?">
+    This may be because the employee does not have the right to **Give final approval.** Only employees with this right can be selected as final approvers in the salary review. Read more in the **Rights section** of this guide.
+  </Accordion>
+
+  <Accordion title="Why don’t the salaries change when I update the target increase?">
+    When you update the target increase in an ongoing salary review, only the percentage shown in the overview is updated. The new target increase is not automatically applied to the salaries.
+  </Accordion>
+
+  <Accordion title="What happens if an employee changes manager during an ongoing salary review?">
+    The salary review is based on the person listed in the **Reports to** field on the employee’s employment. If a manager has a substitute in Hailey, the substitute does not take over as the proposing manager in the salary review. Responsibility for the salary proposal remains with the person listed in **Reports to**.
+  </Accordion>
+
+  <Accordion title="Can a substitute manager submit salary proposals in the salary review?">
+    The salary review is based on the person listed in the **Reports to** field on the employee’s employment. If a manager has a substitute in Hailey, the substitute does not take over the role of proposing manager in the salary review. Responsibility for the salary proposal remains with the person listed in **Reports to**.
+  </Accordion>
+</AccordionGroup>

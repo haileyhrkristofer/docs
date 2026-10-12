@@ -1,0 +1,223 @@
+---
+title: "Integration with Crona Lön"
+---
+
+With the integration to Crona Lön, you can ensure that data transferred between the systems is handled in a GDPR-compliant and secure manner. At the same time, you save time, as the integration automatically ensures that changes made in Hailey are synchronized with Crona Lön.
+
+<Tip>
+  First time activating one of **Hailey's standardintegrations?** Start by reading [**THIS**](/haileys-standard-integrations) guide to know what to keep in mind before you get started.
+</Tip>
+
+---
+
+## What does the integration do?
+
+With each synchronization, the included data is automatically updated in **Crona Lön** via API transfer and will be assigned the same values as in Hailey, since Hailey serves as the master system (source of truth).
+
+<Tip>
+  You can transfer **employee data, salaries, and time off** from Hailey to **Crona Lön**.
+</Tip>
+
+## How does the integration work?
+
+Using the API transfer, synchronization between Hailey and **Crona Lön** takes place every hour based on detected changes. This means that:
+
+- Included data that does not match between Hailey and **Crona Lön** will be updated every hour with the information stored in Hailey.
+
+## What data is included in the integration?
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-15-2026-01-44-30-8303-PM.png?width=670&height=670&name=image-png-Jul-15-2026-01-44-30-8303-PM.png)
+
+ **When synchronizing with activated salary sync:**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-15-2026-01-46-01-3511-PM.png?width=670&height=104&name=image-png-Jul-15-2026-01-46-01-3511-PM.png)
+
+<Warning>
+  - Please note that Hailey synchronizes the **base salary** through the integration. Any information related to **working hours, or scope,** must be entered manually in the employee register within **Crona Lön**.
+  - If an employee has more than one **hourly salary** in Hailey, none of these will be synchronized to **Crona Lön**.
+  - Please also note that all salary entries with the pay period **monthly salary** will be consolidated into a single salary record on the employee’s profile in **Crona Lön**.
+</Warning>
+
+**During synchronization with time-off sync enabled:
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-20-2026-11-41-12-2278-AM.png?width=670&height=88&name=image-png-Jul-20-2026-11-41-12-2278-AM.png)**
+
+## What is required to be part of the integration?
+
+For an employee to be part of the integration, the employee must have:
+
+<Note>
+  An **employment number** in Hailey that matches **AnställningsID** in Crona Lön
+</Note>
+
+If an employee in Hailey has an employment number that does not yet exist in Crona Lön, a user account will be created in Crona Lön. Therefore, it is important that all new employees are always created in Hailey first.
+
+Employees who do not have an employment number at all will never be included in the integration.
+
+## Person Templates and Job Codes (Mallpersoner & Befattningskoder)
+
+<Note>
+  The integration also provides the option to enable synchronization of **person templates** and **job codes** if these are used in your Crona Lön setup.
+
+  This means that when a new employee is hired and created in Hailey, you can specify on the employee profile which **person template** the new employee should be assigned in Crona Lön. The same applies to **job codes**.
+
+  To enable synchronization of these fields, you must first create **Employee Fields** for person templates and **Employment Fields** for job codes. Follow the guide [**HERE**](/custom-fields) for instructions on how to set up your employee and employment fields.
+</Note>
+
+For **person templates**, you must create a custom **Employee Field** and select the field type **Selection**, where each option represents a person template in Crona.
+
+In practice, this means that if you use, for example, **8 different person templates** in Crona, you should create **8 corresponding options** in the custom field.
+
+Each option must be named using the **ID** of the person template in Crona (**not** the name of the person template). See the examples in the images below.
+
+The option value in Hailey and the **ID** of the person template in Crona must be **identical**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-May-15-2026-12-07-48-0230-PM.png?width=670&height=198&name=undefined-May-15-2026-12-07-48-0230-PM.png)
+
+Using the same logic as described above, the field type must be set to **Selection**, and each option you create should correspond to a **job code** that exists in Crona.
+
+The option value in Hailey must match the corresponding job code in Crona.
+
+<Warning>
+  ❗️**If you have chosen to include person templates in the integration, please keep the following in mind:**
+
+  When onboarding a new employee and you want them to be included in the integration and created in Crona, you must first select which **person template** the employee should be assigned to on the employee profile.
+
+  It is important to do this **before assigning an employment number** to the employee in Hailey. This is because new employees are created in Crona as soon as they are assigned an employment number in Hailey, and the associated **person template** is applied at the same time.
+</Warning>
+
+## How is the integration activated?
+
+To activate the integration, you need to:
+
+<Steps>
+  <Step title="Generate and retrieve the API key in Crona Lön">
+    Generate and retrieve the **API key** in Crona Lön.
+  </Step>
+  <Step title="Add the integration in Hailey and paste the API key from Cro">
+    Add the integration in Hailey and paste the API key from Crona Lön.
+  </Step>
+  <Step title="Enter the required information for the integration setup">
+    Enter the required information for the integration setup.
+  </Step>
+  <Step title="Include employees in the integration as needed">
+    Include employees in the integration as needed.
+  </Step>
+  <Step title="Save and activate the integration">
+    Save and activate the integration. ✅
+  </Step>
+</Steps>
+
+Start by logging into Crona Lön.
+
+![](https://docs.haileyhr.com/hubfs/image-png-Sep-23-2022-01-29-36-72-PM.png)
+
+Click on Inställningar -> Kopplingar.
+
+![](https://docs.haileyhr.com/hubfs/image-png-Sep-23-2022-01-31-50-01-PM.png)
+
+Click on Inställningar and check the box for "Tillåt kopplingar att skapa nya anställda", **this box must be filled in for the integration to work**. Then click save.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-23-2022-01-32-15-87-PM.png?width=552&name=image-png-Sep-23-2022-01-32-15-87-PM.png)
+
+Then click on the row that has been created.
+
+![](https://docs.haileyhr.com/hubfs/image-png-Sep-23-2022-01-32-57-28-PM.png)
+
+Select Koppling and then API-koppling. Under "Benämning" you name what the connection should be called, for example "Hailey HR - Integration".
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-23-2022-01-33-29-14-PM.png?width=648&name=image-png-Sep-23-2022-01-33-29-14-PM.png)
+
+Then click Spara.
+
+![](https://docs.haileyhr.com/hubfs/image-png-Sep-23-2022-01-36-08-79-PM.png)
+
+An activation code will then appear. Copy the activation code.
+
+![](https://docs.haileyhr.com/hubfs/image-png-Sep-23-2022-01-36-30-39-PM.png)
+
+Go to Hailey - Settings - Integrations and click on Crona.
+
+- Paste the activation code into the field for authorization code. ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-15-2026-09-36-31-2843-AM.png?width=559&height=379&name=image-png-May-15-2026-09-36-31-2843-AM.png)
+- **Activate the synchronization for employments:** To activate the synchronization of employments, select a date from which you want the employee data to be synced from Hailey to Crona. This means that all employments prior to this date will remain unchanged, while Hailey will take precedence for any data updates after this date.
+
+<Note>
+  If you select a synchronization date that is **later than** the employee's start date in Crona, the part of the employment prior to the synchronization date will be moved to history and remain unchanged. The part we manage will become the active employment record, **with the synchronization date serving as the new start date.**
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-13-2025-12-32-02-8353-PM.png?width=670&height=275&name=image-png-May-13-2025-12-32-02-8353-PM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-13-2025-12-34-12-0367-PM.png?width=670&height=249&name=image-png-May-13-2025-12-34-12-0367-PM.png)
+
+- **Activate the synchronization for employee templates:** If you want to syncronize your employee templates from Hailey to Crona, you need to choose which fields these are connected to (the ones you created in the previous steps of this guide).
+- **Activate the synchronization for salaries:** To activate the synchronization of salaries, select a date from when you want salaries to be synchronized from Hailey to Crona. Before activating salary synchronization, please note that Hailey is the master and will therefore overwrite payroll data in Crona after the selected date.
+
+<Note>
+  If you select a synchronization date in Hailey that is **later than the salary start** date in Crona, **a new row will be created** for the salary in Crona with a new start date. However, if the salary history is not available in Crona, the salary will be given the start date that you select for salary synchronization in Hailey.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2025-11-41-15-3832-AM.png?width=670&height=335&name=image-png-Jul-16-2025-11-41-15-3832-AM.png)
+
+- **Activate the synchronization for time off:** To activate the synchronization of time off, enter a start date for when you want the time off data to be transferred from Hailey to Crona. Note that only time off added or changed after this date will be included in the sync. Time off registered before this date will not be transferred. It is important to note that Hailey is the master, which means that all Time off data in Crona will be updated with information from Hailey after the specified date. The next step is to map your reasons for time off in Hailey to your respective reasons for time off in Crona. ![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-Apr-04-2025-02-29-23-8446-PM.png?width=414&height=322&name=undefined-Apr-04-2025-02-29-23-8446-PM.png)
+
+Click save.
+
+---
+
+## Does the integration not apply to the entire company?
+
+You can now define the scope of the integration!
+
+- Defining the scope of the integration allows you to include only employees belonging to specific workplaces and/or legal entities in the integration.
+- It is important to configure this when you initially set up the integration. This needs to be done during the initial setup to ensure that the correct employees are synchronized from Hailey to Crona Payroll, as the synchronization starts immediately.
+
+If these fields are left blank, all employees who meet the integration requirements will be synchronized.
+
+**Things to keep in mind regarding employments and the integration scope:**
+
+- Only employments that fall within the defined integration scope will be synchronized to Crona Payroll.
+- For example, if you scope the integration to a specific workplace, the **Workplace** field must be populated for every employment that should be synchronized. This also applies to historical employments.
+
+<Tip>
+  The example below shows that only employees who belong to the selected legal entity and the selected workplace specified in the integration setup will be included in the integration.
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-20-2026-12-21-38-8863-PM.png?width=574&height=281&name=image-png-Jul-20-2026-12-21-38-8863-PM.png)
+
+It is also possible to set up multiple integrations with different Crona Payroll accounts.
+
+- If your company has multiple workplaces and/or legal entities in Hailey, it may be beneficial to create separate integrations with different Crona Payroll accounts.
+
+To set up additional integrations for different Crona Payroll accounts, simply repeat the same process described above. In other words, navigate to the **Payroll** section and follow the same steps you used to set up the first integration.
+
+You can view and manage all active integrations for your company under the **Active** tab in the **Integrations** section.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-20-2026-12-23-22-4345-PM.png?width=670&height=331&name=image-png-Jul-20-2026-12-23-22-4345-PM.png)
+
+## Questions and answers
+
+<Note>
+  **How are employees linked between Hailey and Crona?**
+
+  Through the employee number, which must be the same in both systems. Go through your employees in Hailey and make sure each one has the same employee number as in Crona.
+</Note>
+
+<Note>
+  **Which salary changes are synced to Crona?**
+
+  Only salary changes on active and approved salaries that fall within your sync-from date, and only if salary sync is turned on in the integration. A retroactive salary change that takes effect before the sync-from date is not included. Check that salary sync is turned on and that the change's effective date is within the range.
+</Note>
+
+<Note>
+  **What happens to information from before the sync-from date if the date has been changed?**
+
+  It is not included automatically. If you have moved the sync-from date back, the integration needs to be reconfigured so that Hailey includes information from the new date.
+</Note>
+
+<Note>
+  **Which absences are synced to Crona?**
+
+  Only approved absences. If an absence doesn't show up in Crona, check that it has been approved in Hailey.
+</Note>
+
+*If you have any questions about the integration, please contact your Customer Success contact at Hailey.*

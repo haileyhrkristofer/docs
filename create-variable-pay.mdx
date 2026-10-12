@@ -1,0 +1,60 @@
+---
+title: "Create variable pay"
+---
+
+## Discover and create variable pay with ease in Hailey!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="WbHYw4I" title="Create variable pay" />
+
+### What is Variable Pay?
+
+Variable Pay in Hailey is used to manage performance-based compensation such as bonuses, commissions, and other variable payments. It helps organizations structure and track different types of variable compensation in one place. Each variable pay type can have its own name, description, and currency, making it easy to distinguish between different payment categories. Once created, variable pay types can be assigned to employees, providing both HR and employees with a clear overview of compensation. This creates a smoother and more transparent process for managing variable pay across the organization.
+
+### Why use variable pay
+
+Does your organization work with variable pay such as bonuses, commissions, or other performance-based compensation? Variable pay helps you structure and differentiate these payments. By managing them in Hailey, both you and your employees get a clear overview and a smoother process for handling all variable pay.
+
+### Create variable pay
+
+To create a variable pay type, go to **Settings** - **Compensation** - **Variable** **Pay** and click **Add new**. Then select **Variable Pay**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-28-2026-07-33-44-5790-AM.png?width=650&height=331&name=image-png-Aug-28-2026-07-33-44-5790-AM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-28-2026-07-34-48-0978-AM.png?width=650&height=330&name=image-png-Aug-28-2026-07-34-48-0978-AM.png)
+
+Give the variable pay type a **name** and a **description** that explains what the compensation refers to and in which context it is used. The description will appear when you select from the variable pay types you have created. Then select the **currency** it will be paid in.
+
+<Note>
+  If you have variable pay that is paid out in different currencies, you can create a separate variable pay type for each currency.
+</Note>
+
+### Edit or delete a variable pay type
+
+If you want to edit or delete a variable pay type, go to **Settings - Compensation -** **Variable Pay** and click the **three dots** to the right of the pay type you want to edit. From there, make the changes you need.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-28-2026-07-45-00-4789-AM.png?width=650&height=323&name=image-png-Aug-28-2026-07-45-00-4789-AM.png)
+
+<Note>
+  Once you have created your variable pay types, the next step is to register them on your employees. You can find more information about this [**HERE**](/template-new-article-5).
+</Note>
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Can i delete a variable pay type?">
+    **Answer:** You can't delete a variable pay type that has been registered on an employee’s profile. If you want to delete the variable pay type, you should first go to the employee's that have an active salary with that pay type and change it to a new pay type. Once that is done and no employees have an active salary with the pay type, you may delete it.
+  </Accordion>
+</AccordionGroup>

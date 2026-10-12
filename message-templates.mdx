@@ -1,0 +1,56 @@
+---
+title: "Create message templates"
+---
+
+This guide covers how to set up message templates so you don't have to write the same messages from scratch every time you communicate with a candidate.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="yAXhS4I" title="Create message templates" />
+
+## What are message templates?
+
+Message templates make it easier to communicate with candidates throughout the recruitment process. They bring commonly used messages together in one place, making communication more consistent and reducing the need to write the same messages repeatedly. This saves time and helps ensure that important information is included in every message you send.
+
+## How do you create message templates?
+
+To create a message template, go to **Recruitment** in the main menu and click the settings icon in the upper-right corner. Then click **Add new** and give the new message template a **Name**. The name is only visible to users with access to the recruitment process and is not shown to the candidate.
+
+Next, create your message in the text field. Above the text field, you will see the available variables that you can use. These variables allow you to create a general template that automatically pulls in specific information for each recruitment process and candidate. When you click a variable, it is inserted into the text field.
+
+When you are satisfied with the template, click **Save**.
+
+In the list of your message templates, you can choose to edit or delete an existing template. To edit a template, click the three dots to the right of the template and select **Edit**. To delete a template, click the three dots and select **Delete** instead.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-07-2026-07-48-43-9465-AM.png?width=670&height=392&name=image-png-Aug-07-2026-07-48-43-9465-AM.png)
+
+Read more about how to communicate with your candidates using **Message Templates** in **[/application-and-management#communicate-candidates](/application-and-management#communicate-candidates)[THIS](/candidate-management)** guide.
+
+## Rights
+
+As an Admin in Hailey, you automatically have the **Access to Recruitments** right. Read more about **Roles and rights** in [**THIS**](/roles-and-rights) guide.
+
+- **None** - The **Recruitment** section in the main menu is **hidden** from the user.
+- **View** - Grants the right to **view the content** of the **Recruitment** section in the main menu, including the **Career Site**, **Recruitment**, and **Job Ads** tabs.
+- **View & edit** - Grants the user **full rights** to **manage the Recruitment module**, including the ability to create, edit, and delete **Message Templates**, **Career Sites**, **Recruitments**, and **Job Ads**.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Who is the recruiter when I use the variables Recruiters full Name or Recruiter title?">
+    In this context, the recruiter is the employee who sends the message to the candidate. If you use variables such as **Recruiters full name** or **Recruiter title**, these fields will automatically be populated with information from the employee sending the message. This allows the same message template to be used by multiple recruiters without requiring any manual updates to the content.
+
+    Read more about how to communicate with your candidates using **Message Templates** in **[/application-and-management#communicate-candidates](/application-and-management#communicate-candidates)[THIS](/candidate-management)** guide.
+  </Accordion>
+</AccordionGroup>

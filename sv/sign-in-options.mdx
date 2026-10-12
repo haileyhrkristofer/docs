@@ -1,0 +1,159 @@
+---
+title: "Hantera inloggning"
+---
+
+Här lär du dig hur du ställer in olika inloggningsalternativ, bjuder in medarbetare till Hailey och vad du gör när någon inte lyckas logga in.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="BcpAk0J" title="Hantera inloggning" />
+
+## Inställningar
+
+Ni som bolag kan **styra vilken inloggningsmetod som används** för att logga in i Hailey. Genom att gå till **Inställningar** - **Säkerhet** - **Inloggning** kan ni välja mellan fyra alternativ:
+
+- Microsoft (SSO)
+- E-postinloggning
+- Google (SSO)
+- Okta (SSO).
+
+Välj vilket eller vilka inloggningsmetoder som ni vill göra tillgängliga för er organisation. Vid behov kan flera inloggningsalternativ vara aktiva samtidigt!
+
+<Note>
+  **Vi** **rekommenderar** **starkt** att ni testar att ert nya inloggningsalternativ fungerar innan ni inaktiverar det gamla för att undvika att ni låser ute er från Hailey. För att testa en ny inloggningsmetod: Aktivera den nya inloggningsmetoden, logga ut från Hailey, logga in igen med den nya metoden och kontrollera att allt fungerar som det ska. När ni har bekräftat att den nya metoden fungerar kan ni inaktivera den gamla.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-07-2026-09-32-19-5302-AM.png?width=670&height=354&name=image-png-May-07-2026-09-32-19-5302-AM.png)
+
+## E-postinloggning
+
+E-postinloggning är inloggningsalternativet som är aktiverat som standardinställning i Hailey. För att logga in med detta alternativ, **ange din e-postadress och sedan ditt lösenord**. Detta ger ditt konto ytterligare säkerhet genom att kräva både ditt lösenord och en engångskod när du loggar in.
+
+Du aktiverar detta genom att navigera till **Inställningar** - **Säkerhet** - **Epost** - **toggla** **på** **Tvåfaktorsautentisering**.
+
+För extra säkerhet rekommenderar vi att ni aktiverar Tvåfaktorsautentisering. När den är aktiverad måste alla användare ange en verifieringskod som skickas till deras e-postadress efter att de har loggat in med e-postaddress och lösenord.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-07-2026-09-33-26-4518-AM.png?width=670&height=358&name=image-png-May-07-2026-09-33-26-4518-AM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-07-2026-09-34-33-1262-AM.png?width=670&height=356&name=image-png-May-07-2026-09-34-33-1262-AM.png)
+
+## Logga in med SSO
+
+**Single Sign-On (SSO)** gör det möjligt för användare att logga in i Hailey med sin **befintliga företags-login**. När SSO är aktiverat behöver alltså medarbetare inte ha separata inloggningsuppgifter för Hailey, vilket sparar tid och gör inloggningen både enklare och säkrare.
+
+Klicka på länkarna nedan för att hitta mer information om våra olika **SSO alternativ**.
+
+- [**Microsoft SSO**](/sv/sign-in-with-microsoft)
+- [**Google SSO**](/sv/sign-in-with-google)
+- [**Okta SSO**](/sv/sign-in-with-okta)
+
+## Flera inloggningar med samma mailadress
+
+Om ni tillhör en koncern eller om ni har underkonsulter i ert Hailey-konto kan det vara användbart att ha flera Hailey-konton kopplade till samma e-postaddress.
+
+Funktionen för flera inloggningar gör det **möjligt för användare att ha flera Hailey-konton kopplade till samma företagsmail**. Om en användares företagsmail är kopplat till mer än ett konto kommer peronen få välja vilket konto de vill logga in på.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-16-2024-02-01-23-3082-PM.png?width=574&height=338&name=image-png-May-16-2024-02-01-23-3082-PM.png)
+
+Om organisationerna som är kopplade till din e-postaddress inte har samma inloggningsmetoder aktiverade, kommer du däremot inte få välja konto. I stället loggas du automatiskt in i den organisation som har aktiverat den inloggningsmetoden du använde.
+
+## Bjud in medarbetare
+
+För att medarbetare ska kunna logga in i Hailey, behöver alla medarbetare ha en e-postaddress inlagd i fältet **Företagsmail** på sin profil samt fått en **inbjudan** till Hailey. Så börja med att lägga till en företagsmail på era medarbetare innan ni skickar inbjudan!
+
+Det finns två sätt att bjuda in medarbetare till Hailey. Antingen gör man det via Medarbetarlistan eller direkt från Medarbetarens profil **.**
+
+1. Gå till Medarbetare i huvudmenyn och klicka på **Hantera** - **Bjud in medarbetare till Hailey.**
+2. Öppna medarbetarens profil, klicka på **Hantera** - **Bjud in medarbetaren till Hailey.**
+
+<Tip>
+  Ska ni bjuda in flera medarbetare samtidigt? Det gör ni enklast via medarbetarlistan!
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-07-2026-02-08-46-4043-PM.png?width=670&height=357&name=image-png-May-07-2026-02-08-46-4043-PM.png)
+
+När en medarbetare har blivit inbjuden, skickas det iväg ett inbjudningsmail till e-postadressen som lagts till som företagsmail på medarbetarens profil. Allt medarbetaren behöver göra för att komma igång, är att klicka på länken **Gå till Hailey** som finns i mailet och logga in med det inloggningsalternativ som ni valt att aktivera för organisationen.
+
+<Tip>
+  Är ni osäkra på vilka medarbetare som redan blivit inbjudna? Gå till **Medarbetare** i huvudmenyn och välj **Övriga filter** och filtrera på **Kontostatus**. Då kan du enkelt se vilka medarbetare som har blivit injudna till plattformen.
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-07-2026-02-12-02-9131-PM.png?width=670&height=330&name=image-png-May-07-2026-02-12-02-9131-PM.png)
+
+## Vanliga fragor
+
+Här nedan har vi listat vanligt förekommande frågor som både **Medarbetare** och **Admin** kan ta hjälp av för att komma vidare om man har problem med att logga in!
+
+Observera att Hailey inte har tillgång till ert konto och kan varken se vilken typ av inloggningsmetod du förväntas använda eller vilken e-postadress som finns inlagd på din medarbetarprofil.
+
+Vill du få information om vilken inloggningsmetod eller mailadress du ska använda dig av för att logga in, rekommenderar vi att du vänder dig till den som är administratör hos er.
+
+**Fråga 1:** Hur vet jag att jag blivit inbjuden, och vilken mailadress ska jag logga in med?
+
+När admin bjuder in dig skickas ett mail från avsändaren [**noreply@haileyhr.com**](mailto:noreply@haileyhr.com) till den mailadress som finns angiven i fältet **Företagsmail** på din medarbetarprofil - och det är den mailen du ska använda för att logga in i Hailey.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-07-2026-01-29-43-0011-PM.png?width=670&height=301&name=image-png-May-07-2026-01-29-43-0011-PM.png)
+
+**Fråga 2:** Vår administratör har bjudit in mig, men jag hittar inte min inbjudan?
+
+Inbjudan skickas till den mailadress som finns angiven i fältet **Företagsmail** på din medarbetarprofil i Hailey.
+
+- Kan inbjudan ha skickats till din privata mail, jobbmail eller annan adress?
+- Dyker det upp ett inbjudningsmail om du söker efter avsändaren [**noreply@haileyhr.com**](mailto:noreply@haileyhr.com) i någon av dina inkorgar?
+
+Om svaret är nej rekommenderar vi att du kontaktar er Hailey-administratör så att den kan säkerställa att du har blivit inbjuden, och se vilken mailadress inbjudan har skickats till.
+
+**Fråga 3:** Jag får ett felmeddelande när jag loggar in med SSO. Vad beror det på?
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-04-2026-01-16-03-6794-PM.png?width=670&height=353&name=image-png-May-04-2026-01-16-03-6794-PM.png)
+
+Får du felmeddelandet "_The email address associated with your external identity provider doesn't match any registered users in Hailey HR_" handlar det antingen om att:
+
+- SSO inte är en giltig inloggningsmetod i er organisation.
+- Du försöker logga in med en annan mailadress än den som finns angiven under **Företagsmail** på din profil i Hailey.
+- Din företagsmail matchar inte mailadressen som används för att logga in på ditt Microsoft, Okta eller Google-konto i organisationen.
+
+Därför rekommenderar vi att du antingen testar att logga in med **Epost + mail** eller ber er Hailey-administratör att dubbelkolla så att rätt mailadress är inlagd under **Företagsmail**.
+
+**Fråga 4:** Det står ”_Invalid email address or password_” när jag loggar in. Vad beror det på?
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-04-2026-01-17-00-7894-PM.png?width=670&height=351&name=image-png-May-04-2026-01-17-00-7894-PM.png)
+
+Det handlar antingen om att du angett fel mailadress eller lösenord vid inlogg, eller att **Email & Password** inte är en tillåten inloggningsmetod i er organisation. Dubbelkolla så att du:
+
+- Loggar in med mailen som finns inlagd under **Företagsmail** på din profil i Hailey.
+- Angett rätt lösenord vid inlogg.
+- Använder en inloggningsmetod som er organisation tillåter.
+
+Är du osäker på ditt lösenord kan du alltid klicka _Don’t remember your Hailey HR password_ för att återställa ditt lösenord. När du återställt ditt lösenord kommer ett nytt att skickas till den mailadress som finns inlagd under **Företagsmail** på din Hailey-profil!
+
+Är du osäker på vilken inloggningsmetod som tillåts i er organisation? Då rekommenderar vi att du vänder dig till den som är Hailey-administratör hos er.
+
+**Fråga 5:** Jag lyckas inte logga in, sidan blir bara vit och snurrar när jag väljer att logga in. Varför?
+
+Detta kan bero på en brandvägg eller nätverksblockering i er IT-miljö som blockerar anslutningen till tjänsten. Detta kan du göra:
+
+- Kontrollera att URL:en är rättstavad
+- Gör en **hard refresh** av sidan
+
+Om problemet kvarstår:
+
+- Testa att ansluta via ett annat nätverk
+- Testa att använda en annan webbläsare
+- Rensa webbläsarens cache och cookies
+
+Om du fortfarande inte kan logga in, kontakta er IT-avdelning och be dem att whitelista följande domäner:
+
+- **hhr.app**
+- **haileyhr.app**

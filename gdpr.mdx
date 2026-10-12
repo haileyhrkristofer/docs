@@ -1,0 +1,89 @@
+---
+title: "GDPR"
+---
+
+Welcome to our GDPR guide! Here, you can learn how to set your data retention preferences to ensure compliance with GDPR regulations.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="6Tlu8Md" title="GDPR" />
+
+## How do GDPR settings work in Hailey?
+
+GDPR settings in Hailey allow you to define how long personal data should be stored in the system before it is deleted. For employee data, the retention period is based on the employee's last day of employment, while the retention period for candidate data in recruitment is based on when the candidate was created in the system. Each retention level can be configured with a predefined retention period to support your organization's GDPR policy and data retention requirements.
+
+## How is data retention managed in Hailey?
+
+To set up data retention for your organization, go to **Settings - Security - GDPR**.
+
+In the Data retention section, you can determine the **length of various retention periods.** This determines how long the data will remain on the employee profile after the last day of employment has occured. **Click the pen icon** in the top right corner to set your company’s data retention policies according to what immediate, short-term, mid-term, and long-term mean for your organization.
+
+<Note>
+  It's a good idea to set up the GDPR settings in the system early, to make sure the retention period complies with your organizations policy from the start.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-25-2026-04-44-14-4970-PM.png?width=670&height=357&name=image-png-Aug-25-2026-04-44-14-4970-PM.png)
+
+## Personal data fields
+
+**Personal data fields** You have a list of all fields on an employee profile that are considered personal data, including both standard and custom fields. Each row shows the field's position (tab and section), the specific field it pertains to, whether it is a standard or custom field, and the data retention policy.
+
+Standard fields have a **fixed data retention policy** set by Hailey. Custom fields however, follow the data retention policy you select when creating the custom field. If you want to read more about how to create custom fields, read about this [HERE.](/custom-fields)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-15-2026-07-18-43-7543-AM.png?width=670&height=317&name=image-png-Jul-15-2026-07-18-43-7543-AM.png)
+
+When viewing the profile of an employee who has left your organisation, **a message appears** informing you that some personal data about this employee has become unavailable due to your GDPR Settings.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-25-2026-04-52-43-3630-PM.png?width=670&height=356&name=image-png-Aug-25-2026-04-52-43-3630-PM.png)
+
+## Recruitment
+
+In the Recruitment section, you can define how long applicant data should be stored in the system. Once a retention period is set, applicant data is automatically deleted in accordance with the selected setting. Data shredding is based on the date the applicant was created in the system. **Click the pen icon** in the top right corner to configure the retention period for applicant data.
+
+Several retention options are available, ranging from **one day** to **never**. Select the retention period that best matches your organization's requirements for storing and automatically deleting applicant data.
+
+The following data will be automatically shredded:
+
+- Name and contact details
+- Answers to job application questions
+- Uploaded files
+- Notes
+- References and their contact details
+- Reference assessments
+- Messages from references to the recruiter
+- Chat history between the candidate and the recruiter
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-15-2026-07-11-08-2979-AM.png?width=670&height=347&name=image-png-Jul-15-2026-07-11-08-2979-AM.png)
+
+## Rights
+
+As an admin, you always have right to edit the GDPR settings. If you want others to have the right to edit the GDPR settings, this can be configured under Roles & Rights. Under **Settings**, select **Enable** for **Edit** **GDPR**.
+
+<Note>
+  Do you need help getting started with **Roles & rights?** Click **[HERE](/roles-and-rights)**!
+</Note>
+
+## Common questions
+
+**Question 1:** How can I configure data retention for documents stored on employee profiles?
+
+Document retention is configured in the settings for your **employee folders**, where your documents are organized! Read more about employee folder settings **[HERE](/employee-folders)**.
+
+**Question 2:** I have activated **Personal data** when I created a custom field, and chose the retention policy **Immediate**. Can I later change the retention policy to **Short term**?
+
+Once a custom field has been created and a retention policy has been selected, it cannot be changed afterwards. If you need a different retention policy, you need to create a new field and select the desired retention policy during the creation process. Read more about custom fields **[HERE](/custom-fields)**.
+
+**Question 3:** Can I change the retention policy applied to Hailey's standard fields?
+
+You cannot change the retention policy in the list of standard fields. However, you can define the retention period in accordance with your organization's GDPR policy.

@@ -1,0 +1,125 @@
+---
+title: "Omfattning"
+---
+
+I den här guiden går vi igenom omfattning: vad det är, hur du lägger till det och hur det fungerar när du kombinerar flera val – så att rätt innehåll når rätt personer i organisationen.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="I6ICD7A" title="Omfattning" />
+
+## Vad är omfattning?
+
+Omfattning är en inställning som styr vilka delar av organisationen en viss typ av innehåll ska vara tillgängligt för. Du kan ange omfattning för exempelvis en mall, ett dokument eller en uppgift i ett arbetsflöde. På så sätt blir Hailey mer relevant och användbart för varje medarbetare, eftersom de endast ser och har tillgång till det som gäller för dem.
+
+Det är ett sätt att anpassa systemet och styra så att rätt innehåll når rätt medarbetare. Beroende på var i Hailey du arbetar kan du ange omfattning utifrån:
+
+- Legal enhet
+- Arbetsplats
+- Affärsområde
+- Avdelning
+- Team
+- Titel
+- Anställningsform
+
+I vissa delar av systemet kan du även välja att något endast ska gälla för chefer.
+
+<Note>
+  Omfattning används för att styra och anpassa innehåll, medan roller och rättigheter styr vad medarbetare kan se och göra i Hailey. Läs mer om hur du hanterar rättigheter [**HÄR.**](/sv/roles-and-rights)
+</Note>
+
+## Så omfattar du
+
+Omfattning kan läggas till i samband med att du skapar, redigerar eller publicerar något i Hailey. Det kan till exempel handla om en mall, inställning, nyhet eller annan funktionalitet.
+
+När omfattning är tillgängligt visas valet under **Omfattning.** Där visas en lista med de val som är möjliga för den del av Hailey du arbetar i. Välj vilka delar av organisationen som ska ingå i omfattningen och spara sedan dina ändringar.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-23-2026-01-10-06-9223-PM.png?width=398&height=481&name=image-png-Jun-23-2026-01-10-06-9223-PM.png)
+
+## Hur fungerar omfattning?
+
+När du lägger till omfattning kan du göra val inom olika kategorier, till exempel **Arbetsplats, Avdelning** eller **Titel.** Vilka kategorier som är tillgängliga beror på var i Hailey du befinner dig.
+
+Hailey använder dina val för att avgöra vilka medarbetare som ska kunna se innehållet. Medarbetare som inte uppfyller villkoren i omfattningen har inte tillgång till det, även om de själva har skapat det.
+
+<Note>
+  Du kan fortfarande hitta och redigera innehåll med angiven omfattning där det skapades, men det visas inte där det är avsett att användas.
+</Note>
+
+Om du väljer flera alternativ inom samma kategori behöver medarbetaren endast omfattas av ett av alternativen. Om du gör val inom flera olika kategorier behöver medarbetaren däremot omfattas av minst ett alternativ i varje kategori för att kunna se innehållet.
+
+<Note>
+  Kategorier som lämnas tomma påverkar _inte_ omfattningen. Lämnar du fältet **Avdelning** tomt spelar det ingen roll vilken avdelning medarbetaren tillhör, så länge medarbetaren uppfyller de andra valen i omfattningen kommer innehållet att visas för den.
+</Note>
+
+Om du till exempel väljer **Stockholm** och **Oslo** under **Arbetsplats** blir innehållet endast tillgängligt för medarbetare på någon av dessa arbetsplatser.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2026-06-52-11-5088-AM.png?width=670&height=282&name=image-png-Jul-16-2026-06-52-11-5088-AM.png)
+
+Om **Oslo** och **Stockholm** har valts under **Arbetsplats** och **IT** under **Avdelning**, måste medarbetaren tillhöra avdelningen **IT** och samtidigt ha **Oslo** eller **Stockholm** som arbetsplats.
+
+En medarbetare som tillhör avdelningen **IT** men har **London** som arbetsplats kan därför inte se innehållet. Medarbetaren uppfyller villkoret för **Avdelning**, men inte för **Arbetsplats**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2026-06-55-12-2123-AM.png?width=670&height=285&name=image-png-Jul-16-2026-06-55-12-2123-AM.png)
+
+Om du gör ett val inom ytterligare en kategori, till exempel **Legal enhet -** **Företag BD**, blir omfattningen ännu mer riktad. För att omfattas behöver medarbetaren då tillhöra **Företag BD** och samtidigt uppfylla villkoren för **Arbetsplats** och **Avdelning.**
+
+<Note>
+  Desto fler kategorier du gör val inom, desto mer riktad blir omfattningen. Det innebär att färre medarbetare kan se innehållet, eftersom de behöver uppfylla fler villkor.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-16-2026-06-57-15-3605-AM.png?width=670&height=282&name=image-png-Jul-16-2026-06-57-15-3605-AM.png)
+
+## Vanliga fragor
+
+Här hittar du vanliga frågor och svar som rör omfattning.
+
+<AccordionGroup>
+  <Accordion title="Jag är admin i Hailey och har skapat en anställningsmall för rekryterande chefer inom Ekonomi. När jag ska initiera en anställning hittar jag inte mallen. Varför dyker den inte upp?">
+    Du som admin behöver också uppfylla villkoren för omfattningen för att kunna se mallen. Om anställningsmallen har avgränsats till **För chefer** inom **Ekonomi** behöver du ha medarbetare som rapporterar till dig i Hailey och själv tillhöra avdelningen. Annars visas mallen inte när du ska initiera en anställning.
+
+    För att testa mallen kan du antingen:
+
+    - Ta tillfälligt bort omfattningen - kontrollera om mallen dyker upp - lägg sedan till omfattningen igen.
+    - Skapa en **Kopia** av mallen och ange en omfattning som inkluderar dig själv.
+
+    Om du är osäker på hur omfattningen är inställd går du till **Inställningar - Anställning.** Där ser du omfattningen i översikten.
+
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-15-2026-09-34-56-9837-AM.png?width=670&height=129&name=image-png-Jul-15-2026-09-34-56-9837-AM.png)
+
+    Samma princip gäller i hela plattformen. Om något inte visas där du förväntar dig att hitta det är det bra att kontrollera och vid behov justera omfattningen.
+  </Accordion>
+
+  <Accordion title="När är det bra att omfatta?">
+    Det är bra att omfatta när något bara ska kunna användas av, vara synligt för eller gälla vissa delar av organisationen.
+
+    Exempel: Om du har en samtalsmall som bara är aktuell för en viss legal enhet och vissa avdelningar kan du lägga till omfattning på mallen. I exemplet har **Legala enheter** satts till Demo BD SWE och **Avdelning** satts till Rekrytering och Ekonomi.
+
+    Det betyder att mallen kan användas av medarbetare som tillhör Demo BD SWE och samtidigt tillhör antingen Rekrytering eller Ekonomi.
+
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-24-2026-06-33-52-7496-AM.png?width=413&height=419&name=image-png-Jun-24-2026-06-33-52-7496-AM.png)
+  </Accordion>
+
+  <Accordion title="När behövs inte omfattning?">
+    Om något ska vara synligt, kunna användas eller gälla för alla medarbetare i ert Hailey-konto behöver ni inte lägga till någon omfattning. Lämna i stället omfattningen tom. Ni behöver alltså **inte** välja alla legala enheter, arbetsplatser, avdelningar eller andra kategorier.
+  </Accordion>
+
+  <Accordion title="Varför kan jag inte se eller välja innehållet trots att det finns i Hailey?">
+    Det kan bero på att du själv inte ingår i omfattningen.
+
+    Exempel: Du har skapat en artikel i Företagshörnan och omfattat den till **Arbetsplats:** Stockholmskontoret och **Avdelning:** Ekonomi. Då visas artikeln bara för medarbetare som tillhör både Stockholmskontoret och Ekonomi.
+
+    Om du själv tillhör en annan arbetsplats eller avdelning kommer artikeln inte att visas för dig, även om du är admin och har skapat artikeln. Kontrollera därför att du själv ingår i omfattningen om du ska kunna ta del av artikeln. Samma princip gäller för alla funktionaliteter i Hailey där omfattning används.
+  </Accordion>
+</AccordionGroup>

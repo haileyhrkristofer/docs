@@ -1,0 +1,73 @@
+---
+title: "Sign in with Okta"
+---
+
+Do you want your company to log in to Hailey through Okta? In this guide we go through the necessary steps to make it happen!
+
+## Activate sign in with Okta
+
+This guide provides step-by-step instructions on how to activate sign-in with Okta. The first thing you need to do is to make sure that you have **Admin access to both of the systems**.
+
+<Warning>
+  We strongly recommend trying your new option for log in **before** deactivating the old one. This just to make sure that you don´t lock yourself out from the system. You can easily try the new option by logging out and then log in with the new one. Once you can confirm that this is working you can deactivate the old option.
+</Warning>
+
+## Step 1 - Get your Company ID from Hailey
+
+Log in to your account in Hailey.
+
+Navigate to **Settings** - **Security** - **Log in**. Click on the **Okta symbol** and copy your **Company ID.** You will need the ID in step two.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-03-2026-01-17-24-3112-PM.png?width=670&height=348&name=image-png-Jun-03-2026-01-17-24-3112-PM.png)
+
+## Step 2 – Add Hailey App to Okta
+
+Log in to your Okta account and click “Your org”.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-17-2023-09-48-02-7998-AM.png?width=555&height=555&name=image-png-Mar-17-2023-09-48-02-7998-AM.png)
+
+Navigate to **Applications** - **Applications**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-17-2023-09-53-28-2096-AM.png?width=487&height=460&name=image-png-Mar-17-2023-09-53-28-2096-AM.png)
+
+Here you choose Browse App Catalog. Search for Hailey HR, click on the application and then on the button named Add Integration.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-17-2023-09-52-21-9668-AM.png?width=346&height=124&name=image-png-Mar-17-2023-09-52-21-9668-AM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-17-2023-09-53-50-9165-AM.png?width=282&height=136&name=image-png-Mar-17-2023-09-53-50-9165-AM.png)
+
+Give the app your preferred name by typing it in to the field Application label. The name you type in here is the name under which you will be able to find the Hailey HR app in your Okta Applications tab.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-17-2023-09-54-34-3852-AM.png?width=504&height=243&name=image-png-Mar-17-2023-09-54-34-3852-AM.png)
+
+Navigate to the **Sign On tab** and fill in the field regarding **Company ID** with the company ID you got from Hailey in step one. Then press **Done**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-17-2023-09-56-51-8276-AM.png?width=506&height=161&name=image-png-Mar-17-2023-09-56-51-8276-AM.png)
+
+Copy your **Client ID** and your **Client Secret** on the same page. You will need both in step three.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-17-2023-10-56-38-0508-AM.png?width=581&height=337&name=image-png-Mar-17-2023-10-56-38-0508-AM.png)
+
+Click on you **Account name** in the upper right corner and copy your Okta sub domain, e.g. “mycompany.okta.com”. This is also something you will need in step three.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-17-2023-10-57-23-2335-AM.png?width=447&height=349&name=image-png-Mar-17-2023-10-57-23-2335-AM.png)
+
+## Step 3 – Add Okta SSO in Hailey
+
+Log in to your account in Hailey again and navigate to **Settings** - **Security** - **Log in**.
+
+Click on the **Okta symbol.** Activate the integration by enabling the switch. Then enter the **Okta sub domain**, **Client ID** and **Client Secret** that you got from Okta in step two. Press **Save**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-17-2023-12-02-10-3465-PM.png?width=524&height=481&name=image-png-Mar-17-2023-12-02-10-3465-PM.png)
+
+Ensure that the Okta log in got the status **Active**.
+
+## Step 4 - Assign users
+
+In order to use Okta for log in you need to assign users.
+
+This is done by clicking on the Hailey app in **Okta** - **Assignments**. Click on **Assign** and pick **Assign to People**. Here you pick every user that you want to be able to sign in with Okta SSO
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-17-2023-02-56-38-9865-PM.png?width=533&height=268&name=image-png-Mar-17-2023-02-56-38-9865-PM.png)
+
+Now the Okta SSO is ready for use!

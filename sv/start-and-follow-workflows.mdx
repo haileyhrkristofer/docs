@@ -1,0 +1,172 @@
+---
+title: "Starta och följ arbetsflöden"
+---
+
+I denna artikel finner du information om hur du startar och följer arbetsflöden i Hailey.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="w0LIudB" title="Starta och följ arbetsflöden" />
+
+## Vad är arbetsflöden?
+
+Arbetsflöden i Hailey är automatiserade processer som hjälper till att hantera HR-relaterade uppgifter och aktiviteter. De består av steg och uppgifter som kan tilldelas medarbetare, chefer eller team. Arbetsflöden kan startas manuellt, baserat på frånvaro, specifika eller återkommande datum. De hjälper till att automatisera processer som onboarding, offboarding och påminnelser, vilket säkerställer att uppgifter utförs vid rätt tidpunkt. Arbetsflöden kan också använda egna fält och omfattning för att säkerställa att rätt uppgifter når rätt personer.
+
+Det finns **fyra typer av triggers för arbetsflöden**:
+
+- Datumrelaterade
+- Frånvaro
+- Manuella
+- Återkommande
+
+De **automatiserade och återkommande arbetsflödena startar per automatik** baserat på den tidsinställning ni valt (upp till 8h fördröjning vid registrering samma dag). De arbetsflöden som aktiveras av **frånvaroanledning** startas baserat på den **trigger** du har valt. De **manuella startas enbart via medarbetarlistan.**
+
+## Starta arbetsflöden manuellt
+
+När du vill starta ett arbetsflöde manuellt går du till **Medarbetarlistan** i huvudmenyn. Markera de medarbetare som du vill starta ett arbetsflöde för. Klicka sedan på **Hantera → Starta arbetsflöde.**
+
+Om du vill köra ett arbetsflöde för en enskild medarbetare kan du istället gå till medarbetarens profil. Klicka på **Hantera → Starta arbetsflöde** och välj det arbetsflöde som du vill starta.
+
+<Warning>
+  En förutsättning för att ni ska kunna starta **arbetsflöden** är att ni skapat dem. [HÄR](/sv/create-workflows) går vi igenom hur arbetsflöden skapas.
+</Warning>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-20-2026-08-04-16-5608-AM.png?width=650&height=335&name=image-png-Aug-20-2026-08-04-16-5608-AM.png)
+
+Under Arbetsflöde väljer ni vilket flöde ni önskar starta. Klicka **Skicka** i det nedre vänstra hörnet för att starta arbetsflödet.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-20-2026-08-15-11-5709-AM.png?width=650&height=333&name=image-png-Aug-20-2026-08-15-11-5709-AM.png)
+
+## Hantera och tilldela sig själv uppgifter
+
+Har du många uppgifter på din dashboard? Klicka då på **Visa alla** **uppgifter**. Här får du en sammanställd vy av alla uppgifter du har att göra.
+
+Vyn grupperar **olika typer** av uppgifter, tillåter dig att söka på **specifika uppgifter** eller välja de som **passerat deadline**. Dessutom finns möjlighet att **sortera** efter:
+
+- Nyast
+- Äldst
+- Mest brådskande
+- Minst brådskande
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-20-2026-08-24-59-3959-AM.png?width=650&height=333&name=image-png-Aug-20-2026-08-24-59-3959-AM.png)
+
+Klicka på en uppgift för att få en mer detaljerad vy. Här kan du bland annat se om uppgiften finns tydligare förklarad under Detaljer.
+
+För att **markera en uppgift som slutförd** klickar ni på **Markera** **som klar** nere i hörnet. Vissa uppgifter kommer även försvinna genom att genomföra uppgifte, exempelvis signera kontrakt eller föreslå en ny lön i lönerevisionen.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-20-2026-08-26-12-4701-AM.png?width=650&height=333&name=image-png-Aug-20-2026-08-26-12-4701-AM.png)
+
+### Tilldela en uppgift till sig själv
+
+Vill du ta ansvar för en uppgift som är tilldelad ditt team eller din arbetsgrupp? När en uppgift inte är tilldelad en specifik person kan vem som helst i teamet eller arbetsgruppen tilldela den till sig själv.
+
+För att tilldela en uppgift till dig själv gör du såhär: Gå till din **Att göra** och öppna uppgiften genom att klicka på den. Klicka sedan på **Tilldela uppgiften till dig**. När du har gjort detta kommer andra i teamet eller arbetsgruppen att kunna se att du har tagit uppgiften när de öppnar den från sin dashboard.
+
+<Note>
+  Att tilldela en uppgift till sig själv låser den inte. Andra teammedlemmar kan fortfarande ta över uppgiften eller markera den som klar vid behov.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-20-2026-09-32-23-2912-AM.png?width=650&height=360&name=image-png-Aug-20-2026-09-32-23-2912-AM.png)
+
+## Överlåt och slutför uppgifter åt någon annan
+
+Vill ni följa hur det går med specifika uppgifter eller specifika medarbetares uppgifter? Gå då till **HR Hub - Uppgifter**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-20-2026-08-58-03-9331-AM.png?width=650&height=323&name=image-png-Aug-20-2026-08-58-03-9331-AM.png)
+
+Här får ni en **översikt över alla aktiva uppgifter**, även de som inte tillhör ett arbetsflöde. I spalten till vänster har ni möjlighet att filtrera fram uppgifter baserat på en rad fördefinierade alternativ.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-20-2026-08-59-16-8408-AM.png?width=650&height=361&name=image-png-Aug-20-2026-08-59-16-8408-AM.png)
+
+Personer med utökad rättighet kan härifrån även **slutföra vissa uppgifter åt andra**. Klicka på vald uppgift och markera den som klar för att slutföra åt någon annan.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-20-2026-11-24-44-8225-AM.png?width=650&height=360&name=image-png-Aug-20-2026-11-24-44-8225-AM.png)
+
+Uppgifter som kommer från ett arbetsflöde kan också överlåtas. Detta görs genom att klicka på en uppgift och sedan **penn-symbolen** högst upp i högra hörnet. När uppgiften har blivit omfördelad skickas ett automatiskt e-postmeddelande till den nya ägaren ut. För att göra detta behöver du den relaterade rättigheten, läs mer om det [HÄR](#Rattigheter).
+
+<Note>
+  Detta är användbart då en specifik medarbetare som tilldelats en uppgift är frånvarande men vi vill säkerställa att en uppgift ändå blir genomförd.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-20-2026-09-26-42-3985-AM.png?width=650&height=360&name=image-png-Aug-20-2026-09-26-42-3985-AM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-20-2026-09-27-32-4459-AM.png?width=650&height=361&name=image-png-Aug-20-2026-09-27-32-4459-AM.png)
+
+## Följa och hantera arbetsflöden
+
+Det går även att följa hela arbetsflöden via fliken **HR-Hub -** **Arbetsflöden**. Här visas en **översikt över era arbetsflöden** och ni kan bland annat se vem ett flöde körs för och när det startats. I menyn till vänster kan ni filtrera baserat på en rad fördefinierade alternativ.
+
+**Klicka på ett arbetsflöde för att få en mer detaljerad vy**. Ljusgråa tasks har antingen slutförts eller ligger i kommande steg. Aktiva tasks är skarpare till utseendet.
+
+Kolumnen Deadline talar om hur den som tilldelats uppgiften ligger till i förhållande till den tidsram ni satt. I kolumnen Avklarad ser ni huruvida uppgiften är klarmarkerad eller inte. Hovra över en slutförd uppgift för att se när den blivit slutförd och av vem.
+
+<Note>
+  Påminnelser skickas per automatik till medarbetare när en uppgift passerar sin deadline. Vill ni skicka ytterligare en påminnelse görs detta genom era interna kanaler.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-20-2026-09-47-40-0080-AM.png?width=650&height=362&name=image-png-Aug-20-2026-09-47-40-0080-AM.png)
+
+När **samtliga uppgifter i ett arbetsflöde är slutförda** får personen som startade arbetsflödet ett mejl. Arbetsflödet markeras nu även som Avslutat.
+
+<Note>
+  När ett arbetsflöde startat automatiskt kommer inget mail om slutfört flöde att skickas.
+</Note>
+
+Behöver ni ta bort ett pågående arbetsflöde? Klicka då på de tre punkterna till höger om det och välj **Ta bort.** Flödet samt alla dess uppgifter kommer då försvinna.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-20-2026-09-49-26-7582-AM.png?width=650&height=360&name=image-png-Aug-20-2026-09-49-26-7582-AM.png)
+
+## Rättigheter
+
+Det finns olika rättigheter kopplade till arbetsflöden i Hailey. Samtliga ställs in via Inställningar - Säkerhet - Roller och rättigheter. **Nedan redogör vi för de rättigheter som påverkar arbetsflöden:**
+
+- **Starta arbetsflöde**
+- **Följa arbetsflöden**
+- **Se och slutföra uppgifter åt andra**
+
+<Note>
+  Vill ni läsa mer om **Roller & rättigheter** i Hailey? Klicka då [HÄR](/sv/roles-and-rights).
+</Note>
+
+## Vanliga frågor
+
+<AccordionGroup>
+  <Accordion title="Kan jag starta ett automatiskt arbetsflöde, manuellt?">
+    **Svar:** Ja, även automatiserade flöden kan startas manuellt via medarbetarlistan eller via medarbetarens profil. Görs detta kommer arbetsflödet inte starta automatisk på samma person igen. Hailey förstår att flödet redan startat och hjälper er undvika dubbletter.
+  </Accordion>
+
+  <Accordion title="Kan jag slutföra alla uppgifter i HR-Huben?">
+    **Svar:** Uppgifter som härstammar från processer i Hailey går enbart att slutföra genom att tilldelad person gör den faktiska uppgiften i Hailey. Det kan här röra sig om sådant som svara på frågor inför one-to-ones eller att godkänna frånvaro.
+  </Accordion>
+
+  <Accordion title="Hur vet jag att jag har fått en uppgift?">
+    **Svar:** När en medarbetare får en uppgift via ett arbetsflöde **notifieras medarbetaren genom ett mail**. Uppgifter som startar samtidigt kommer i samma mail. När ett nytt steg med nya uppgifter startar kommer ett nytt mail att skickas.
+
+    Uppgifterna trillar även in under medarbetarens **Att göra** på dashboarden i Hailey. Via mailet som skickas kan ni därav klicka på HAILEY för att skickas direkt in i Hailey och se er nya uppgift.
+
+    Mailet kan se ut såhär:
+
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-30-2025-07-46-56-3361-AM.png?width=519&height=367&name=image-png-Oct-30-2025-07-46-56-3361-AM.png)
+  </Accordion>
+
+  <Accordion title="Varför kan jag inte se slutförda arbetsflöden i HR-Hub?">
+    **Svar:** När du öppnar fliken **Arbetsflöden** i HR-HUB tillämpar Hailey filtret **Pågående** som standard. Det innebär att endast pågående arbetsflöden visas.
+
+    Om du även vill se slutförda arbetsflöden kan du ta bort standardfiltret **Pågående**. Därefter visas även arbetsflöden som har slutförts.
+  </Accordion>
+
+  <Accordion title="När startar arbetsflödet om jag har en automatisk trigger för mitt arbetsflöde?">
+    **Svar:** Automatiska och återkommande arbetsflöden startar automatiskt baserat på den tidsinställning som du har valt. Det förekomma en fördröjning på upp till **8 timmar** innan arbetsflödet startar om triggern är satt till samma dag.
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,187 @@
+---
+title: "Integration med Kleer - Lön och medarbetardata"
+---
+
+## Spar tid och administrativt arbete med Haileys integration till Kleer. Integrationen möjliggör att medarbetare skapa upp automatiskt i Kleer samt synkronisera över lön. På detta sätt minimerar ni risken för fel
+
+<Tip>
+  Första gången du aktiverar en av **Haileys standardintegrationer**? Börja med att läsa den [**HÄR**](/sv/haileys-standard-integrations) guiden för att veta vad du ska tänka på innan du sätter igång.
+</Tip>
+
+---
+
+### Vad gör integrationen?
+
+Vid varje synkronisering kommer [**inkluderad data**](#vilken-data-ar-inkluderad)att **automatiskt** uppdateras via **API överföring** **till Kleer** och få samma värde som finns i Hailey, eftersom **Hailey är master** (facit).
+
+<Note>
+  **Vill ni även synka frånvarodata? -** Se vår guide [HÄR](/sv/integration-with-kleer)för integration med Kleer - Frånvarodata.
+</Note>
+
+### Hur fungerar integrationen?
+
+Med API-överföringen sker en synkronisering mellan Hailey och Kleer **varje timme** baserat på förändringar. Detta innebär att:
+
+- Inkluderad data som inte överensstämmer mellan Hailey och Kleer kommer att uppdateras med den information som finns i Hailey varje timme.
+
+### Vilken data är inkluderad i integrationen?
+
+#### Medarbetardata:
+
+| **HAILEY** | **KLEER** |
+| --- | --- |
+| Företagsmail Förnamn, Efternamn Personnummer Anställningsdag Sista anställningsdag Telefonnummer jobb Gatuadress Postnummer Stad Land Clearingnummer Kontonummer | E-post Namn Personnummer Anställningsdatum Avgångsdatum Telefon Adress Postnummer Postort Landskod Clearing Kontonummer |
+
+#### Lönedata:
+
+| **HAILEY** | **KLEER** |
+| --- | --- |
+| Månadslön | Månadslön |
+
+### Vad krävs för att ingå i integrationen?
+
+För att en medarbetare **ska ingå i integrationen** behöver medarbetaren ha:
+
+- Företagsmail
+- För- och efternamn
+
+Om en medarbetare i Hailey har en företagsmail som ännu inte finns i Kleer, kommer en användare skapas upp i Kleer. Därför är det **viktigt** att alla nya medarbetare alltid skapas i Hailey först.
+
+<Note>
+  Om en medarbetare får sin **företagsmail ändrad i Hailey** innebär det att integrationen kommer **skapa upp en ny profil i Kleer** med den ändrade företagsmailen.
+</Note>
+
+För att **anställning** samt **lönedata** ska synkas behöver medarbetare ha:
+
+- Svenskt personnummer
+- Lönetyper i Hailey och att varje lön har en tillskriven lönetyp
+
+Se guide för hur ni skapar lönetyper [**HÄR**](/sv/salary-types) samt hur ni kan importera denna information på befintliga löner **[HÄR](/sv/import-updated-salary-information).**
+
+Medarbetare med följande **anställningsstatus** ingår i integrationen:
+
+- I tjänst
+- Ska lämna
+- Har lämnat
+
+### Hur aktiveras integrationen?
+
+För att aktivera integrationen behöver du:
+
+<Steps>
+  <Step title="Kontakta er kontaktperson hos Kleer för att få API-nyckeln">
+    Kontakta er kontaktperson hos Kleer för att få API-nyckeln.
+  </Step>
+  <Step title="Lägga till integrationen i Hailey">
+    Lägga till integrationen i Hailey.
+  </Step>
+  <Step title="Fyll i nödvändig data för integrationsuppsättningen">
+    Fyll i nödvändig data för integrationsuppsättningen.
+  </Step>
+  <Step title="Omfatta integrationen vid behov">
+    Omfatta integrationen vid behov.
+  </Step>
+  <Step title="Spara och aktivera!">
+    Spara och aktivera!
+  </Step>
+</Steps>
+
+**Följ instruktionerna nedan för att gå genomföra aktivering av integrationen.**
+
+Innan ni aktiverar integrationen är det viktigt att ni **kontaktar er kontaktperson hos Kleer**, som ger er **API-nyckeln** som krävs för uppsättningen. Den som sätter upp integrationen behöver ha tillgång till ett **administratörskonto i båda systemen.**
+
+För att aktivera integrationen i Hailey:
+
+- Gå till **Inställningar.**
+- Klicka på **Integrationer** längst ner i menyraden.
+- Klicka därefter på rubriken **Lön.**
+- Klicka på **NY** **Kleer Standard** och **Lägg till integration.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-30-2026-11-47-02-2064-AM.png?width=670&height=390&name=image-png-Apr-30-2026-11-47-02-2064-AM.png)
+
+Klistra in **företagsnummer** samt **åtkomsttoken** som ni fått från er kontaktperson på Kleer. Klicka på **Autentisera**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-04-2026-08-08-15-6334-AM.png?width=670&height=305&name=image-png-May-04-2026-08-08-15-6334-AM.png)
+
+##### Överför anställningar och löner
+
+När ni sätter upp integrationen är det viktigt att ni väljer **ett av nedanstående alternativ för överföringsdatum**. Det valda datumet styr synkroniseringen mellan systemen och säkerställer att löneposter och anställningsuppgifter från Hailey till Kleer blir korrekt.
+
+Det finns två alternativ för val av överföringsdatum, där ni kan välja det alternativ som passar er bäst:
+
+**Alternativ 1:**
+
+- Fältet för överföringsdatumet i Hailey måste vara den **första för nuvarande månaden.** Det vill säga, om du sätter upp integrationen under oktober månad måste överföringsdatumet att vara den 1/10.
+
+**Alternativ 2:**
+
+- Fältet för överföringsdatumet i Hailey måste vara innan första anställningsdagen eller innan första registrerade lönen **i Kleer**. Viktigt att tänka på är att all historik efter detta datum behöver också finnas i Hailey, eftersom **Hailey är master** för data från och med det datumet.
+
+##### Välj lönetyper
+
+Välj de lönetyper som ska ingå i integrationen. Notera att om en medarbetare har flera löner av samma lönetyp kommer dessa klumpas ihop.
+
+- Enbart **månadslön** inkluderas i synken mellan Hailey och Kleer.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-04-2026-08-09-21-6067-AM.png?width=670&height=680&name=image-png-May-04-2026-08-09-21-6067-AM.png)
+
+När samtliga steg av uppsättningen av integrationen är klara klickar ni på **Spara**.
+
+- _Gäller inte integrationen för hela företaget?_ - Läs nästa steg i guiden om omfattning **innan** **ni klickar på spara.**
+
+Nu när integrationen är aktiverad kommer Hailey automatiskt att läsa av alla användare från ert Kleer-konto som uppfyller kraven för integrationen. Ni kan se vilka/hur många integrationer som ert företag har aktiva under Aktiv-fliken under Integrationer.
+
+### Gäller integrationen inte hela företaget?
+
+Då finns det möjlighet att **omfatta** integrationen!
+
+- Omfattning av integrationen innebär att ni kan möjliggöra att **endast medarbetare med specifik arbetsplats och/eller legal enhet,** **inkluderas i integrationen.**
+- Detta är viktigt att göra **direkt när ni sätter upp integrationen**. Varför detta måste göras direkt i uppsättningen av integrationen är för att säkerställa att rätt medarbetare synkas från Hailey till Kleer **eftersom synkroniseringen inleds omedelbart.**
+
+Om dessa fält lämnas tomma kommer alla anställda som uppfyller krav för integrationen att synkas över.
+
+##### Bra att ha i åtanke om **anställning och omfattning**:
+
+- Endast de anställningar som omfattas av integrationen kommer att synkas över till Kleer.
+- Om en medarbetare har **flera anställningar,** är det enbart de som uppfyller integrationsvillkoren som följer med. Ny anställning som inte uppfyller integrationsvillkoren kommer nolla lönen.
+- Exempelvis: Omfattar ni integrationen mot en arbetsplats måste fältet arbetsplats vara ifyllt på samtliga anställningar som ska synkas. Detta gäller även **historiska anställningar**.
+
+<Note>
+  **Exempelbilden** nedan visar att endast medarbetare som tillhör den valda legala enheten och den valda arbetsplatsen som anges i integrationsuppsättningen, kommer att inkluderas i integrationen mot Kleer.
+</Note>
+
+#### Det är även möjligt att skapa upp flera integrationer mot olika/flera konton i Kleer.
+
+- Om ert företag har flera arbetsplatser och/eller legala enheter i Hailey kan det vara fördelaktigt att skapa separata integrationer med Kleer till olika/flera Kleer konton.
+
+Om ni **vill ha flera uppsättningar av integrationen mot olika Kleer konton** gör ni om samma process som beskrivit ovan. Med andra ord, navigera till rubriken **Lön** sedan gör du på samma sätt som när du satte upp den första integrationen.
+
+Du kan följa vilka/hur många integrationer som ert företag har aktiva under Aktiv-fliken under Integrationer.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-04-2026-08-26-59-6343-AM.png?width=662&height=430&name=image-png-May-04-2026-08-26-59-6343-AM.png)
+
+---
+
+## Vanliga fragor
+
+**Fråga**: Vad kan det bero på om en medarbetare inte synkas till Kleer?
+
+Börja med att kontrollera att integrationen är aktiverad, att medarbetaren uppfyller kraven för att synkas och att personen tillhör en organisatorisk tillhörighet som omfattas av integrationen (om ni använder omfattning i integrationen). Om den organisatoriska tillhörigheten inte stämmer kommer medarbetaren inte att synkas över till Kleer.
+
+**Fråga**: Jag har fått följande mejl från Hailey, vad innebär det?
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-02-2025-01-21-50-5511-PM.png?width=582&height=469&name=image-png-Jun-02-2025-01-21-50-5511-PM.png)
+
+Detta innebär att medarbetaren inaktiverats i Kleer och återaktiverats i samband med exempelvis en återanställning i Hailey.
+
+**Fråga**: Vi har en medarbetare vars lön har nollats i Kleer, vad kan det bero på?
+
+Har medarbetarens nuvarande anställning inte korrekt organisatorisk tillhörighet för att omfattas av integrationen kommer detta påverka även lönen. Uppdatera medarbetarens anställning med rätt organisatorisk enhet för att lönen ska uppdateras i Kleer nästa heltimme. Detta gäller även för historiska anställningar.
+
+**Fråga**: En medabetares slutdatum uppdateras inte i Kleer, varför då?
+
+Har en medarbetares slutdatum passerat synkas detta inte retroaktivt, fyll därför i detta manuellt i Kleer.
+
+**Fråga:** Vad händer om en medarbetare saknar Svenskt personnummer när den                             synkas till Kleer från Hailey? Om en medarbetare saknar svenskt personnummer i Hailey kommer för-efternamn och mail att synkas över till Kleer. Anställningskort kommer att behövas sättas upp "manuellt" direkt i Kleer
+
+_Om du har några frågor angående integrationen, vänligen kontakta Hailey support._

@@ -1,0 +1,151 @@
+---
+title: "Referenskontroll"
+---
+
+Referenskontroll gör att du på ett enkelt och smidigt sätt får möjlighet att samla in referenser från kandidater från en rekrytering.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="L7OmL5c" title="Referenskontroll" />
+
+## Vad är referenskontroll i Hailey?
+
+Referenskontroll är ett inbyggt digitalt flöde som gör det möjligt att begära, ta emot och hantera referenser direkt i rekryteringsprocessen.
+
+Med funktionen får ni en tydlig översikt över vilka referenser som har registrerats av kandidaten och vilka referenspersoner som har lämnat in sin bedömning till er som rekryterare.
+
+All information sparas automatiskt i rekryteringen, vilket ger en smidig och samlad hantering på ett och samma ställe.
+
+## Innan du sätter igång
+
+För att ni ska kunna använda referenskontrollen behöver ni först skapa en **Rekrytering**. Läs mer om hur ni skapar er **Rekrytering** i den [**HÄR**](/sv/start-and-manage-recruitment) guiden.
+
+## Hur begär man referenser?
+
+För att begära referenser behöver ni gå till **Rekrytering** i huvudmenyn, klicka på den aktuella rekryteringen och sedan klicka på den kandidat ni vill ha referenser från. Klicka sedan på **Referenskontroll** - **Begär referenser** - skriv **Meddelande till kandidat** - **Begär referens**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-14-2026-12-54-38-7390-PM.png?width=670&height=389&name=image-png-Sep-14-2026-12-54-38-7390-PM.png)
+
+Kandidaten får sedan ett mail till sin e-postadress där det står att du som rekryterare har skickat ett meddelande angående kandidatens jobbansökan.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-14-2026-12-57-55-9753-PM.png?width=670&height=379&name=image-png-Sep-14-2026-12-57-55-9753-PM.png)
+
+När kandidaten klickar på **Gå till Hailey** kommer den till meddelandechatten. I denna chatt kommer kandidaten att läsa det meddelande som ni skrev i föregående steg och klicka på knappen **Lägg till referenser.**
+
+Kandidaten förväntas ange referensgivarens **Namn**, **Email** och **Telefonnummer**. Därefter behöver kandidaten ange vilken **Relation** som den har till denna referensen. Kandidaten kan välja mellan:
+
+- **Chef**
+- **Kollega**
+- **Annan**
+
+Om kandidaten väljer **Annan** visas ett nytt fält där kandidaten ombeds att beskriva relationen med egna ord.
+
+Kandidaten har även möjlighet att lämna en övrig **Kommentar** till rekryteraren och **Lägga till ytterligare en referens.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-14-2026-01-10-39-8846-PM.png?width=670&height=389&name=image-png-Sep-14-2026-01-10-39-8846-PM.png)
+
+När kandidaten har skickat in uppgifter om sina referenser blir informationen synlig för rekryteraren under fliken **Meddelanden** på kandidatens profil i rekryteringen. Referenserna visas även under fliken **Referenskontroll**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-14-2026-01-13-33-7690-PM.png?width=670&height=389&name=image-png-Sep-14-2026-01-13-33-7690-PM.png)
+
+## Hur lägger man till referenser manuellt?
+
+Ibland kan det vara smidigare att lägga till referenser manuellt istället för att begära dem från kandidaten. Då har ni full kontroll och kan snabbt komplettera informationen direkt i systemet.
+
+Klicka på kandidaten som ni vill lägga till en referens på - **Referenskontroll** - **Lägg till referens**. Följande uppgifter är obligatoriska fält att fylla i:
+
+- **Namn** - referensgivarens fullständiga namn.
+- **Email** - referensgivarens e-postadress.
+
+Därefter har ni även möjlighet att fylla i följande uppgifter:
+
+- **Telefon** - referensgivarens telefonnummer.
+- **Relation** - välj relation (Chef, Kollega eller Övrigt). Om du väljer **Övrigt** går det att specificera relationen mer detaljerat.
+- **Kommentar** - lägg till valfri information eller anteckning om referensen.
+
+För att lägga till ytterligare en referens klickar ni på **Lägg till ytterligare referens**. När ni har fyllt i samtliga uppgifter för referensen/referenserna klickar ni på **Lägg till referenser.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-14-2026-01-32-20-9570-PM.png?width=670&height=386&name=image-png-Sep-14-2026-01-32-20-9570-PM.png)
+
+## Hur begär man bedömning?
+
+När referenserna är tillagda under **Referenskontroll** på kandidatens profil blir nästa steg att **Begära bedömning**. För att göra detta markerar ni referenserna i rutan bredvid deras namn och klickar på **Begär bedömning.**
+
+Här får ni valet att välja vilket **Språk** e-postmeddelandet ska skickas på och **Lägga till de frågor** som referensen ska besvara. Formatet på frågorna kan vara:
+
+- **Text**
+- **Envalsfråga**
+- **Flervalsalternativ**
+- **Skal 1-5**
+- **Ja/Nej**
+
+Sedan har ni möjlighet att välja om frågan ska vara **Obligatorisk** eller inte för referensen. När ni är klara med era frågor klickar ni på **Begär bedömning** - **Ja, jag är säker.**
+
+Ett e-postmeddelande kommer att skickas till de utvalda referenserna. Referenserna kan välja mellan att:
+
+- Besvara frågorna digitalt
+- Begära ett samtal
+- Avvisa bedömningen
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-14-2026-01-54-18-8030-PM.png?width=670&height=386&name=image-png-Sep-14-2026-01-54-18-8030-PM.png)
+
+<Tip>
+  Era frågor sparas automatiskt som standard (default) när ni begär referenser för andra kandidater i samma rekrytering. Ni kan alltid ändra, lägga till eller ta bort frågor vid behov.
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-14-2026-01-59-41-0723-PM.png?width=670&height=389&name=image-png-Sep-14-2026-01-59-41-0723-PM.png)
+
+### Gå till bedömning
+
+Väljer referensgivaren att **Gå till bedömning** kommer den att få svara på de frågor som skapade i föregående steg.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-14-2026-02-02-50-0216-PM.png?width=670&height=389&name=image-png-Sep-14-2026-02-02-50-0216-PM.png)
+
+### Begär ett telefonsamtal
+
+Väljer referensgivaren att **Begära ett telefonsamtal** kommer den att få ändra / skriva in sitt telefonnummer och ha möjlighet att lämna ett meddelande till rekryteraren.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-14-2026-02-04-21-6891-PM.png?width=670&height=389&name=image-png-Sep-14-2026-02-04-21-6891-PM.png)
+
+### Avvisa bedömning
+
+Väljer referensgivaren att **Begära ett telefonsamtal** kommer den ha möjlighet att lämna ett meddelande till rekryteraren.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-14-2026-02-06-28-6091-PM.png?width=670&height=389&name=image-png-Sep-14-2026-02-06-28-6091-PM.png)
+
+### Sammanställning av referensernas svar
+
+Under fliken **Referenskontroll** får ni en tydlig sammanställning av referensernas svar. Här kan du se vilka som har svarat, om du väntar på fler svar, om någon har avböjt, samt när en bedömning har inkommit.
+
+Genom att klicka på referensgivarens namn kan du läsa hela deras bedömning.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-14-2026-02-12-07-2081-PM.png?width=670&height=380&name=image-png-Sep-14-2026-02-12-07-2081-PM.png)
+
+## Hur lägger man till bedömning manuellt?
+
+Det är även möjligt att **Lägga till en bedömning manuellt**. Det är praktiskt om ni till exempel har pratat med referensgivaren över telefon eller fått information på annat sätt.
+
+För att göra detta klickar ni på de tre prickarna bredvid referensen - **Lägg till bedömning manuellt -** skriv bedömningen i textrutan - **Spara**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-14-2026-02-54-38-0256-PM.png?width=670&height=380&name=image-png-Sep-14-2026-02-54-38-0256-PM.png)
+
+## Vanliga fragor
+
+**Fråga 1:** Måste jag skapa samma frågor varje gång jag begär en referensbedömning?
+
+Nej, frågorna sparas automatiskt inom samma rekrytering. När du begär en ny bedömning finns tidigare skapade frågor kvar och kan återanvändas eller redigeras.
+
+**Fråga 2:** Behöver alla uppgifter vara ifyllda för att [lägga till en referens manuellt](/sv/template-new-article-0-0#laggtillreferens)?
+
+För att lägga till en referens manuellt är det referensens **namn** och **mailadress** som behöver fyllas i.

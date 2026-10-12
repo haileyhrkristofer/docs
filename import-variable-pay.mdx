@@ -1,0 +1,112 @@
+---
+title: "Import Variable pay"
+---
+
+Import Variable pay to get a good overview of employees current and historical variable pay data.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="szWOSJj" title="Import Variable pay" />
+
+## What is the variable pay import?
+
+With the variable pay import, you can easily register variable compensation components, such as bonuses, commissions, and other types of variable pay, in Hailey.
+
+The import can also be used to register historical variable pay data. This information is displayed directly in the employee profile and can be used for payroll reporting and compensation analysis across the organization.
+
+In this guide, we’ll show you how to import variable pay data into Hailey in a simple and structured way.
+
+## Before you get started
+
+Before importing variable pay, your employees must first be imported, as all variable pay entries need to be linked to an employee.
+
+Before you begin importing variable pay, you also need to create the variable pay types used within your organization. You can do this under **Settings → Compensation → Add → Variable Pay**.
+
+Variable pay types act as categories that help you structure and classify the different kinds of variable compensation used in your organization, such as **bonuses**, **commissions**, or other company-specific forms of variable pay.
+
+![create-VP](https://docs.haileyhr.com/hs-fs/hubfs/create-VP.png?width=670&height=260&name=create-VP.png)
+
+## Get started with the import
+
+Now we're ready to import! Download the import template by navigating to **Employees** in the main menu, then click **Import → Variable Pay**.
+
+![template-1](https://docs.haileyhr.com/hs-fs/hubfs/template-1.png?width=670&height=351&name=template-1.png)
+
+f you have created multiple variable pay types, you will be able to choose which one you want to import. Select the variable pay type you would like to import and **Download Import Template**. Then open the template to get started.
+
+![VP2](https://docs.haileyhr.com/hs-fs/hubfs/VP2.png?width=670&height=372&name=VP2.png)
+
+## Fill out the import template
+
+Now it's time to fill in the import template!
+
+The template contains five pre-populated columns (A-E) with information about each employee: **Employee ID, Employment Number, Full Name, Company Email**, and the name of the selected **Variable Pay** type. This information is required so the system can identify which employee the variable pay belongs to, so **do not make any changes to these columns**.
+
+Complete the remaining columns with details about each employee’s variable pay. To ensure the import is successful, please make sure to follow the formatting requirements outlined below.
+
+![template1](https://docs.haileyhr.com/hs-fs/hubfs/template1.png?width=670&height=93&name=template1.png)
+
+To add historical variable pay data, insert blank rows directly below the row containing the employee’s **Employee ID, Employment Number, Name, Company Email,** and **Variable Pay Type**. In these blank rows, only complete the **From**, **To**, and **Amount** fields with the relevant historical information.
+
+![Template3](https://docs.haileyhr.com/hs-fs/hubfs/Template3.png?width=670&height=109&name=Template3.png)
+
+## Format
+
+To register a variable pay and its historic changes the following data should be filled out:
+
+- **From**: Starting date for the amount. The date format is **YYYY-MM-DD**.
+- **To**: End date for the amount. The date format is **YYYY-MM-DD**.
+- **Amount**: Provide the employee's variable pay amount in numbers. No spaces or -´s. If the salary includes decimals, use a dot (.) — for example: 30554.5 SEK. The currency that will be displayed is the one specified in the setup of the variable pay type.
+
+Import the variable pay
+
+Once the template has been completed with the data you wish to import, save the file to your computer. Then return to Hailey and navigate to the **Employee List**. Click **Import → Variable Pay**. Select the box in the center labeled **"Click or drop file here to upload"** and choose your import file.
+
+Once the import is complete, an email confirmation will be sent to the user who performed the import. The imported variable pay records will then be visible in employees’ profiles under **Compensation → Variable Pay**.
+
+<Note>
+  If a field is filled out incorrectly, the system will warn of where and why something is wrong. Should an employee already have variable pay registered in Hailey, the system will also inform you about this to avoid duplicates.
+</Note>
+
+![import-Jul-16-2026-12-06-52-4748-PM](https://docs.haileyhr.com/hs-fs/hubfs/import-Jul-16-2026-12-06-52-4748-PM.png?width=670&height=261&name=import-Jul-16-2026-12-06-52-4748-PM.png)
+
+## Add variable pay manually
+
+You can also add variable pay manually from an employee profile. To do this, open the employee’s profile and click **Manage → Add → Variable Pay**. Then select the variable pay type you want to add from the menu, enter the **from** and **to** dates as well as the **amount**, and click **Save**.
+
+![add-manually-1](https://docs.haileyhr.com/hs-fs/hubfs/add-manually-1.png?width=670&height=276&name=add-manually-1.png)
+
+<Tip>
+  Need to update or manage existing variable pay? Read more [**HERE**](/template-new-article-5) about how to manage variable pay.
+</Tip>
+
+## Rights
+
+Only an admin can import variable pay to the employees. This is because of the sensitive information contained in the import file. If you’d like to learn more about Roles & rights, you can do so [**HERE**](/roles-and-rights).
+
+## Common questions
+
+**Question 1:** Can you import historical variable pay data?
+
+Yes, absolutely! If you want to import multiple historical variable pay records for the same employee, simply enter the **From**, **To**, and **Amount** values on the rows directly below the employee’s main row.
+
+See the example below for how this should be completed:
+
+![Template3](https://docs.haileyhr.com/hs-fs/hubfs/Template3.png?width=670&height=109&name=Template3.png)
+
+**Question 2:** Can you add historical variable pay data at a later stage?
+
+No. If you want to include historical records for a variable pay, the history must be imported when the variable pay is initially created. It is not possible to add historical records later to an existing variable pay entry.
+
+However, any future changes to the variable pay will be recorded automatically, just as they are for regular salaries.

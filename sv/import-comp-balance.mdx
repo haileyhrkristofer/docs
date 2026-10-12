@@ -1,0 +1,70 @@
+---
+title: "Importera komptidssaldo"
+---
+
+Säkerställ att varje medarbetare har rätt komptidssaldo från start. Med denna import kan du enkelt importera aktuella saldon i bulk när ni börjar använda komptid i Hailey, vilket ger en smidig övergång och korrekt saldo redan från dag ett.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="Dwi1Nxc" title="Importera komptidssaldo" />
+
+## Innan du sätter igång
+
+Innan du kan importera komptidssaldo till Hailey behöver du först ha satt upp en **Rapporteringspolicy** där **Komptid** är påslaget. Hailey beräknar komptidssaldot från en medarbetares första anställningsdag, förutsatt att anställningen har korrekta inställningar för **Tid och frånvaro**.
+
+- Uppsättning av **Rapporteringspolicy** kan du läsa mer om **[HÄR](/sv/create-reporting-policy#tid)**.
+
+## Hur importerar du komtidssaldo?
+
+För att ladda ner importmallen går du till **Medarbetare** - **Importera** - **Komptidssaldo**. Om du önskar att endast ladda ner importmallen för vissa medarbetare, kan du först bocka i dessa medarbetare i listan.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2026-06-35-24-7575-AM.png?width=670&height=493&name=image-png-Jul-10-2026-06-35-24-7575-AM.png)
+
+Sedan kan du välja ifall du vill ladda ner importmallen **för alla medarbetare**, eller endast för **utvalda medarbetare**. Klicka på det alternativ du vill ha och mallen kommer att laddas ner.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2026-06-36-29-4649-AM.png?width=670&height=387&name=image-png-Jul-10-2026-06-36-29-4649-AM.png)
+
+I mallen dyker medarbetarna upp med Employee ID, Employment Number, Name och Company e-mail. **Det är viktigt att du inte ändrar någon data i dessa kolumner**. Har du medarbetare som inte rapporterar tid och därför inte kommer att ha ett komptidssaldo kan du då ta bort den raden med deras data. När detta är gjort kan du börja fylla i mallen.
+
+Fyll i det aktuella saldot i kolumnen **New Comp Time Balance**. Här anger du antalet timmar medarbetaren antingen har. Negativt saldo markeras med ett minustecken (-) framför siffran. Delar av timmar kan importeras genom att använda en punkt (.).
+
+**Effective Date** anger när medarbetarna börjar rapportera tid i Hailey. Det komptidssaldo som förs över till Hailey gäller **fram till och med dagen innan** effective date. All tid och frånvaro som registreras från och med effective date påverkar därefter saldot.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-07-2026-05-46-36-7121-AM.png?width=670&height=350&name=image-png-Sep-07-2026-05-46-36-7121-AM.png)
+
+När importfilen är ifylld är det dags att importera informationen. Gå till **Medarbetare** - **Importera** - **Komptidssaldo**. Ladda upp filen genom att klicka på **Klicka eller släpp filen här för att ladda upp** och välj din fil. När filen har validerats och importen är klar, uppdateras saldot på fliken **Tid** för varje berörd medarbetare.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-10-2026-06-48-34-3559-AM.png?width=670&height=395&name=image-png-Jul-10-2026-06-48-34-3559-AM.png)
+
+<Note>
+  När komptiden importeras kommer retroaktivt rapporterad tid inte att påverka komptiden på medarbetarens profil.
+</Note>
+
+## Rättigheter
+
+Att importera komptidssaldo är något som endast en admin kan göra. Vill du läsa mer om Roller & rättigheter kan du göra det [**HÄR**](/sv/roles-and-rights).
+
+## Vanliga frågor
+
+**Fråga 1**: Jag har importerat komptidssaldo för mina anställda men får inte upp något när jag går in på deras profil under fliken Tid. Varför kan jag inte se saldot?
+
+För att kunna se saldot som har importerats måste berörda medarbetare ha en **Rapporteringspolicy** med **Komptid** aktiverat på sig. Detta lägger du till genom att gå till **Medarbetare** - **Markera medarbetarna det gäller** - **Hantera** - **Uppdatera inställningar för tid och frånvaro**. Därefter kommer saldot att visas under **Tid** på medarbetarens profil.
+
+**Fråga 2**: Jag känner mig lite förvirrad gällande när jag ska importera komptidssaldot. Behöver jag göra detta innan eller efter att medarbetaren ska rapportera tid i Hailey?
+
+Det är viktigt att du importera komptidssaldot dagen *innan* medarbetaren ska börja med att rapportera sin tid i Hailey. Annars kommer saldot att bli felräknat.
+
+**Fråga 3**: Kan jag uppdatera medarbetarnas komptidssaldo i efterhand?
+
+Ja, det går bra. Innan du gör importen är det viktigt att säkerställa att medarbetarna har registrerat all sin tid fram till och med den dag då importen genomförs. På så sätt säkerställer du att all registrerad tid kommer med.

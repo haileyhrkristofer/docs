@@ -1,0 +1,68 @@
+---
+title: "Create salary change reasons"
+---
+
+This guide explains how you as admin can create and manage Salary change reasons in settings. Using salary change reasons helps with documentation of compensation decisions.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="9YH4fCh" title="Create salary change reasons" />
+
+## What are salary change reasons?
+
+A **Salary change reason** is the reason displayed when an employee's salary is changed. It helps organizations track and understand why salary changes are made.
+
+Hailey includes two standard reasons by default: **New employment** and **Salary review**. These cannot be edited, archived, or deleted. The two standard reasons are automatically assigned when a salary change is made as part of a new employment or a salary review.
+
+In addition, Admins in Hailey can create custom salary change reasons as needed.
+
+## How do you create Salary change reasons?
+
+To create Salary change reasons, navigate to Settings - Compensation - Add new - Salary change reason.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-24-2026-04-35-11-5335-PM.png?width=670&height=370&name=image-png-Aug-24-2026-04-35-11-5335-PM.png)
+
+Enter a **Name** for the salary change reason and **Save** when done.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-24-2026-04-36-27-8483-PM.png?width=670&height=373&name=image-png-Aug-24-2026-04-36-27-8483-PM.png)
+
+## When can you edit, archive or delete?
+
+**Custom salary change reasons can be edited, archived or deleted:**
+
+- **Edit** is always available. If you want to change the name, description, scope or add a translation click on the three dots to the right and edit and make the changes needed.
+- **Archive** is always available. Archived reasons will no longer appear in dropdowns but remain visible on historical salary changes.
+- **Delete** is available if the reason never has been used on a salary change.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-24-2026-04-37-01-1119-PM.png?width=670&height=374&name=image-png-Aug-24-2026-04-37-01-1119-PM.png)
+
+## Rights
+
+To **create** a new salary change reason, you must have Admin access in Hailey.
+
+To **use** a salary change reason, you must have permission to view and edit compensation for the relevant employee.
+
+<Tip>
+  You can read more about Roles and rights [**HERE.**](/roles-and-rights)
+
+  You can read more about how to manage salaries [**HERE.**](/salary-change)
+</Tip>
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="I cannot choose a specific salary change reason when changing an employee's salary. Why is that?">
+    This is most likely due to the salary change reason being scoped in a way that does not include this employee. An Admin can review the scope settings for the salary change reason to ensure the employee is included.
+  </Accordion>
+</AccordionGroup>

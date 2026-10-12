@@ -1,0 +1,61 @@
+---
+title: "Create 360°-template"
+---
+
+Are you about to host a 360° review, and want to ensure that all the right questions are asked? Then create a template in Hailey that can guide you along the way!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="WYCy9SP" />
+
+## What is a 360° template?
+
+Feedback templates in Hailey are reusable structures that help you streamline feedback sessions such as one-to-ones and 360° reviews. They allow you to define the format, content, and flow of your sessions, including questions, and instructions, so you can ensure consistency and quality in your feedback process.
+
+## How to create a 360° template
+
+To create your 360° review template, go to **Settings - Feedback**, click **Add new** in the top right corner and pick **360° review**.
+
+![](/images/create-three-sixty/01.png)
+
+You can choose to enable the **Task to adjust peers** in the 360° review. When this feature is activated, managers will receive a specific task where they can review and, if necessary, modify which peers selected by the employee should be included in the process. This allows adjustments to be made before the 360° review continues.
+
+It’s also possible to define the **scope** of the feedback template within your organization. For example, you can configure the template so that it’s only available to employees in a specific organizational unit in your Hailey.
+
+When you’re satisfied with the settings, click **Start building** in the bottom-right corner.
+
+![](/images/create-three-sixty/02.png)
+
+Now you can create sections and add questions to each section. You can name your sections, add a description, and create additional sections as needed. To add questions to a section, simply click the **plus sign** in the center.
+
+Write your question and decide on how it should be answered. You also decide who should provide feedback on the question. You can also choose whether the question should be **Required** or optional.
+
+![](/images/create-three-sixty/03.png)
+
+When you are satisfied with your template, click **Save**. In order to learn how to start a 360° review you can read more **[HERE.](/start-and-follow-360-review)**
+
+## Rights
+
+All admin users automatically have the right to create and edit feedback templates. If you want to assign this rights to other roles, you can do so by allowing the members of said role to **Edit** **Feedback templates** under **Company rights - Settings**.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="What does the option **Task to adjust peers** do?">
+  When toggled on the manager will get a task to adjust peers suggested by the employee the review concerns.
+  </Accordion>
+  <Accordion title="Can I use the template where questions also are supposed to be answered by reportees, even if the person doesn't have any direct reportees, or should I create a separate one?">
+  You can still use the same template even if the employee does not have any reportees. Hailey will send out questions to everyone else, depending on the template set-up.
+  </Accordion>
+</AccordionGroup>

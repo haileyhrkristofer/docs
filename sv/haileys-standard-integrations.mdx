@@ -1,0 +1,91 @@
+---
+title: "Standardintegrationer i Hailey"
+---
+
+I den här guiden får du en introduktion till Haileys standardintegrationer – vad det är, vad de kan göra och vad som är bra att tänka på innan du aktiverar en.
+
+## Vad är standardintegrationer i Hailey?
+
+Det är färdiga integrationer byggda av Hailey som kopplar samman Hailey med andra system, antingen via API eller filöverföring.
+
+Integrationerna är byggda för att passa så många kunder som möjligt, med fokus på att täcka de vanligaste behoven för att hålla medarbetardata uppdaterad mellan system.
+
+<Note>
+  Standardintegrationerna är kostnadsfria och kunden aktiverar dem helt på egen hand.
+</Note>
+
+I de flesta fall är Hailey master. Det betyder att ändringar görs i Hailey och sedan förs uppdaterad  data vidare till andra system – inte tvärtom.
+
+Du hittar alla tillgängliga standardintegrationer under **Inställningar** - **Integrationer** i Hailey. Information om hur respektive integration fungerar och aktiveras hittar du **[HÄR](/sv/haileys-standard-integrations)**.
+
+## Hailey som master
+
+I nästan alla standardintegrationer är Hailey master. Det innebär att Hailey är facit för inkluderad data och att systemet man integrerar till tar emot data *från* Hailey.
+
+Därför är det viktigt att all administration och alla ändringar som görs i inkluderad data görs i Hailey – inte i det andra systemet.
+
+<Tip>
+  I varje integrationsguide finns en tabell med **Inkluderad data** som visar vilka fält Hailey är master för. Data som *inte* finns med i tabellen påverkas *inte* av integrationen.
+</Tip>
+
+Att ha ett och samma ställe där det är enkelt att hantera medarbetardata är en viktig del av att hålla data uppdaterad. Hailey är byggt för att användas av alla i organisationen – inte bara HR.
+
+Om Medarbetare och Chefer hanterar sin egen data direkt i Hailey (*utifrån rättigheterna de har*) är det mer sannolikt att data hålls uppdaterad och fräsch.
+
+Med Hailey som master behöver du bara uppdatera information på ett ställe, vilket sparar tid och minskar risken för att data blir utdaterad eller skiljer sig åt mellan systemen.
+
+## Vad kan standardintegrationer göra för dig?
+
+Standardintegrationer kopplar samman Hailey med andra system för att minska manuellt och återkommande arbete – så att du slipper uppdatera samma information på flera ställen.
+
+Här är några exempel på vad en standardintegration kan göra:
+
+- Skapa eller avaktivera användare i andra system
+- Synkronisera förändringar i medarbetar- eller lönedata till ett annat system
+- Synkronisera frånvarodata till ett annat system
+- Skicka påminnelser för födelsedagar eller nyanställda
+
+<Note>
+  Varje integration fungerar olika. Läs alltid igenom integrationsguiden för att se vilken data som är inkluderad, hur den överförs och vilka steg som krävs för att aktivera den.
+</Note>
+
+Vi vet att alla inte har möjlighet att bygga egna integrationer. Därför erbjuder vi kostnadsfria integrationer som är enkla att aktivera och som täcker de mest grundläggande behoven för de allra flesta kunderna.
+
+Om en standardintegration inte täcker alla era behov finns det några alternativ:
+
+- **Bygg egen integration:** Använd Haileys API för att bygga en egen integration, antingen med er interna kompetens eller via en tredjepartspartner.
+- **Ta hjälp av Hailey:** Vi har en egen integrationsavdelning som kan hjälpa er att skräddarsy en lösning utifrån era behov
+
+<Tip>
+  Vill ni att Hailey hjälper er anpassa en integration? Hör av er till er kontakt på **Customer Success** för att komma igång.
+</Tip>
+
+<Tip>
+  Föredrar ni att bygga egna integrationer? **[HÄR](https://api.haileyhr.app/docs/index.html)** hittar ni vår[https://api.haileyhr.app/docs/index.html](https://api.haileyhr.app/docs/index.html) **API-dokumentation** med information om alla förutsättningar och endpoints.
+</Tip>
+
+## Innan du aktiverar - våra rekommendationer
+
+Med rätt förberedelse tar det inte mer än 10 minuter att aktivera en integration. Här är några saker vi rekommenderar att du tänker på innan du sätter igång:
+
+- **Se till att all data finns på plats**: Det är enklare att göra rätt från start, så se till att all relevant data (*även historisk data*) är importerad och uppdaterad innan du aktiverar.
+- **Involvera rätt personer**: Att aktivera en integration är ofta ett lagarbete! Löneadmins eller IT behöver ofta vara med vid aktivering eftersom de har behörigheter i det andra systemet.
+- **Välj rätt tidpunkt:** Aktivera inte integrationen i direkt anslutning till en lönekörning. Om data saknas/något behöver korrigeras är det bra att ha marginal innan lönen ska köras.
+- **Namnge saker konsekvent:** Använd exempelvis namn på **Frånvaroanledningar** och **Lönetyper** som alla inblandade känner igen. Det gör mappningen mellan systemen mycket enklare.
+- **Dubbelkolla namn och format:** Om integrationen kräver att specifika fält skapas i Hailey, se till att stavningen stämmer exakt med vad som anges i guiden innan du aktiverar.
+- **Informera de som berörs internt:** Innan du aktiverar, se till att alla som hanterar inkluderad data vet i vilket system ändringar ska göras så att alla är med på noterna.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Kan vi administrera och ändra inkluderad data i både Hailey och det andra systemet vi integrerat mot?">
+  Nej, om du aktiverat en integration där Hailey är master måste alla ändringar av inkluderad data göras i Hailey. Ändringar som görs direkt i det andra systemet kommer att skrivas över nästa gång data överförs från Hailey eftersom det är Hailey som är facit.
+  </Accordion>
+  <Accordion title="Går det att ta bort/lägga till mer data i en standardintegration?">
+  Nej, det går *inte* att ändra/uppdatera innehållet i **Inkluderad data** i en standardintegration.
+
+  Har ni behov utöver standardintegrationen kan ni antingen bygga en egen integration som kompletterar standardintegrationen med vårt **API**. Dokumentationen hittar ni [HÄR](https://api.haileyhr.app/docs/index.html).
+
+  Eller så kan ni vända er till er kontakt på **Customer success** för att veta mer om hur **Haileys integrationsavdelning** kan hjälpa er att skapa en anpassad lösning.
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,109 @@
+---
+title: "Add and rate Competences"
+---
+
+Learn how to add and rate competences in Hailey to get an overview of your organization's competences!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="73jXHfm" title="Add and rate Competences" />
+
+## What are competences?
+
+Competencies give you a clear overview of the skills and expertise across your organization today and help you understand what you'll need in the future. With these insights, it's easier to make informed decisions about employee development, recruitment, and workforce planning.
+
+At the same time, you create better opportunities for employees to grow, develop new skills, and reach their full potential. It's a simple way to support smarter decisions today while strategically planning for the future.
+
+## How do you rate competences?
+
+To rate a competence, navigate to the employee's profile, open the **Competences** tab and click on the competence you want to rate. From there, you can view the description of the competence and select a rating on a scale of 1–5. If needed, add a comment to provide additional context. Last, click **Submit rating** to save it.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-28-2026-09-36-02-6358-AM.png?width=627&height=339&name=image-png-Jul-28-2026-09-36-02-6358-AM.png)
+
+Click on **History** to see the previous ratings for the competence. You can also see who submitted the rating, when it was done and the comment.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-28-2026-09-37-39-5194-AM.png?width=627&height=364&name=image-png-Jul-28-2026-09-37-39-5194-AM.png)
+
+## How do you add competences?
+
+The overview of competences on the employee profile shows two separate headings:
+
+- **Competences from organizational belonging** - the employee’s organizational affiliation requires these competencies.
+- **Competences** - manually added
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-27-2026-06-23-27-1138-PM.png?width=669&height=319&name=image-png-Apr-27-2026-06-23-27-1138-PM.png)
+
+To add a new competence that **does not** fall under Organizational belonging, click on **Action -** **Add competences**. The competences that can be selected are those that are **not** covered by a specific Organizational belonging for the employee.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-27-2026-06-24-26-9740-PM.png?width=665&height=386&name=image-png-Apr-27-2026-06-24-26-9740-PM.png)
+
+## Overview of Competences
+
+If you have the right to see competences for other employees than yourself, you get an overview of competences by clicking on **Skills - Competences** in the main menu.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Mar-04-2026-12-21-26-8827-PM.png?width=670&height=378&name=image-png-Mar-04-2026-12-21-26-8827-PM.png)
+
+The **By employee** view displays each employee's competencies, along with their current rating and your company's target rating.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-30-2026-07-46-07-0673-AM.png?width=669&height=337&name=image-png-Jun-30-2026-07-46-07-0673-AM.png)
+
+The **By competence** view displays each competence along with the average rating across all employees who have been rated for that competence. You can also view the target rating for each competence.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jun-30-2026-07-46-30-3529-AM.png?width=667&height=337&name=image-png-Jun-30-2026-07-46-30-3529-AM.png)
+
+<Tip>
+  **Tip!** Use the **Filtering menu** to navigate easily. For example you can filter on a specific **Competence** and get a quick overview of which employees have that specific competence.
+</Tip>
+
+## Rights
+
+Here are rights that may be useful when working with competences in Hailey:
+
+- **View on own profile:** gives access to the **Competences** tab on the employee's own profile.
+- **View others:** gives access to the **Competences** tab on targeted employees' profiles, and **Skills - Competences** in the main menu to see the overview of the targeted employees' competences.
+- **View all employees:** gives access to the **Competences** tab on all employees' profiles, and **Skills - Competences** in the main menu. Additional access to the **By competence** view.
+- **View & edit:** allows to view, add, rate and delete competences on the employee profile.
+- **Settings - Create competences:** gives access to create new and edit the existing competences in Settings
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="We have quite a few employees whose competences have not been rated. How is that going to influence the average rate of the competence?">
+    The employees whose competences have not been rated will not affect the average rate of the competence.
+  </Accordion>
+
+  <Accordion title="We have completed a competence mapping outside of Hailey and would like to import it. How can we do that?">
+    At the moment, it is not possible to import competences to Hailey. However, you can easily add and rate competencies for employees by following the steps outlined [HERE](#add).
+  </Accordion>
+
+  <Accordion title="Some employees are missing from the Competence overview - Per competence. Why is that?">
+    The **By competence** overview displays all employees with a rated competence whose employment status is **In service**, **Leaving**, or **Garden leave**.
+
+    Please check the employment status on the profiles of the employees who are missing from the overview.
+  </Accordion>
+
+  <Accordion title="An employee says they cannot rate their competence, what can I do?">
+    To be able to rate a competence, the employee needs the right to **View & edit** competences.
+
+    Read more about roles & rights [HERE](/roles-and-rights).
+  </Accordion>
+
+  <Accordion title="A manager told me that under Skills - Competences, they can only see the By employee overview. Why can't they see the By competence view?">
+    To access the **By competence** tab, the employee must have the right to **View everyone's** competences\*\*.\*\*
+
+    If the right is limited to a specific group of employees (such as only their employees), only the **By employee** tab will be available.
+
+    Read more about roles & rights [HERE](/roles-and-rights).
+  </Accordion>
+</AccordionGroup>

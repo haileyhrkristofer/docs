@@ -1,0 +1,122 @@
+---
+title: "Import salary information changes"
+---
+
+Save time by updating the salary title or salary type for multiple existing salaries at the same time by importing a file into Hailey.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="HKasnpI" title="Import salary information changes" />
+
+## Before you get started
+
+An import of changes to salary information is used to update information for multiple existing salaries at the same time. This import is only used when wanting to change the Salary Title or Salary Type.
+
+Before importing changes to salary information, make sure that:
+
+- The employees already exist in Hailey.
+- The employees have an existing salary registered in Hailey.
+- The salary types you want to use have been created in your Hailey account settings.
+
+<Note>
+  Do the employees not yet have a salary in Hailey? Follow the **Import Salary** guide **[HERE](/import-salaries)** before continuing.
+
+  Do you need to create a new salary type? Follow the **Create Salary Types** guide **[HERE](/salary-types)** before completing the import.
+</Note>
+
+## How do you import changes to salary information?
+
+First you need to download the template by going to **Employees** - **Import** - **Salary information changes**. If you want to download the template for only certain employees, you can start by checking their boxes in the list.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-16-2026-05-47-21-1748-AM.png?width=670&height=486&name=image-png-Sep-16-2026-05-47-21-1748-AM.png)
+
+Here, you can choose whether to download the template **for all employees** or only for the **selected employees**. Click on the option you prefer and the template will download.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-16-2026-05-50-15-5702-AM.png?width=670&height=344&name=image-png-Sep-16-2026-05-50-15-5702-AM.png)
+
+In the template the following existing information is used to identify the correct employee and salary:
+
+- Employee ID
+- Employment number
+- Name
+- Company email
+- Salary ID
+- Current currency
+- Current pay period
+- Current salary amount
+- Current salary title
+- Current salary type
+
+Do not change the information in these columns. If the information is changed, Hailey may not be able to connect the change to the correct employee and salary. **Only enter information for the salaries that should be changed**. Complete one or both of the following columns:
+
+- **New Salary Title:** Enter the new title for the salary.
+- **New Salary Type:** Enter the new salary type. The name must exactly match the name of the salary type in Hailey.
+
+<Note>
+  Check the name of the New Salary Type before uploading the file. The spelling, capitalisation, and spacing must exactly match the name in Hailey. An extra space may prevent the import from finding the correct salary type.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-16-2026-06-21-55-1597-AM.png?width=670&height=154&name=image-png-Sep-16-2026-06-21-55-1597-AM.png)
+
+Once you have finished filling out the template, it’s time to import. Go to **Employees** - **Import** - **Salary information changes**. Upload your file by selecting **Click or drag the file here to upload**. Choose your file, and Hailey will begin verifying that all the data in the file is correct. If any column is incorrectly filled in, an error message will appear indicating which column and row need correction. Make the necessary adjustments and upload the file again.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-16-2026-05-59-36-6464-AM.png?width=670&height=378&name=image-png-Sep-16-2026-05-59-36-6464-AM.png)
+
+When everything is correct, click **Import**. The window below will appear. The import may take some time depending on how much information needs to be imported. You can close this window, the import will continue running in the background. Once the import is complete, the updated salary information is displayed on each employee’s profile.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-16-2026-06-00-52-1458-AM.png?width=670&height=317&name=image-png-Sep-16-2026-06-00-52-1458-AM.png)
+
+Key terms
+
+Below are explanations of the terms used in the import file:
+
+- **Current salary title:** The title of the salary before the import.
+- **New salary title:** The title that will replace the current salary title.
+- **Current salary type:** The salary type connected to the salary before the import.
+- **New salary type:** The salary type that will be connected to the salary after the import.
+- **Salary ID:** The unique ID used to connect the change to the correct salary.
+
+## Rights
+
+Only an **Admin** in Hailey can import changes to salary information. If you’d like to learn more about Roles & rights, you can do so [**HERE**.](/roles-and-rights)
+
+## Common questions
+
+**Question 1:** Can I use the import to add a new salary?
+
+No. The import can only change information for salaries that already exist in Hailey. Use the import **Salary** to add new salaries.
+
+**Question 2:** Can I change the salary amount with this import?
+
+No. The import can only change the salary title and salary type. Use the import **Salary amount changes** to update salary amounts.
+
+**Question 3:** Does the new salary type need to exist in Hailey already?
+
+Yes. The salary type must be created in your Hailey account before the import is started.
+
+**Question 4:** Why can't the import find the salary type I entered?
+
+Make sure that the name is written exactly as it appears in Hailey. The spelling, capitalisation, and spacing must match.
+
+**Question 5:** Do I need to complete both New Salary Title and New Salary Type?
+
+No. Only enter the information that should be changed. You can change only the salary title, the salary type, or both at the same time.
+
+**Question 6:** What happens if I change the existing information in the import file?
+
+Hailey uses the existing information to identify the correct employee and salary. Therefore, you shouldn't change the information in these columns.
+
+**Question 7:** What happens if the import file contains an error?
+
+Hailey validates the file and shows which field needs to be corrected. Update the file and then upload it again.

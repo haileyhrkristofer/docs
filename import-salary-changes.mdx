@@ -1,0 +1,161 @@
+---
+title: "Import salary changes"
+---
+
+Update salary amounts for multiple employees at the same time by importing a file into Hailey. This guide explains what needs to be in place before the import, how to download and complete the import template, and how to validate and complete the import.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="UnI29rp" title="Import salary changes" />
+
+## What is a salary changes import?
+
+A salary changes import is used to update the amount of multiple existing salaries at the same time. The function creates a new change for each salary using the amount and effective date specified in the import file.
+
+<Note>
+  The import can only be used to change the salary amount. It cannot be used to change the salary title, salary type, pay period, or currency. Click **HERE** to learn how to import salaries.
+</Note>
+
+## Before you get started
+
+Before importing salary changes, make sure that:
+
+- The employees already exist in Hailey.
+- Each salary that should be changed is already registered in Hailey.
+- You know the new salary amount and the date from which the change should apply.
+- The import file is used to change the amounts of existing salaries, not to add new salaries.
+
+## How do you import salary changes?
+
+1. Go to **Employees** in the main menu.
+
+2. Select the employees that should be included in the import if you only want to update the salaries of specific employees.
+
+3. Click **Import - Salary changes**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Oct-20-2025-07-43-03-8396-AM.png?width=670&height=831&name=image-png-Oct-20-2025-07-43-03-8396-AM.png)
+
+4. Choose whether the template should include:
+
+- All employees, or
+- only the employees you have selected.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-31-2024-02-31-43-3332-PM.png?width=670&height=422&name=image-png-Jul-31-2024-02-31-43-3332-PM.png)
+
+5. Download and open the file.
+
+## Complete the import template
+
+The downloaded file contains information about the employees and their active salaries.
+
+The following existing information is used to identify the correct employee and salary:
+
+- EmployeeID
+- Employment Number
+- Name
+- Company email
+- Salary Id
+- Salary Title
+- Start Date
+- End Date
+- Pay Period
+- Currency Code
+- Current Amount
+
+Do not change the information in these columns. If existing information is changed, Hailey cannot connect the change to the correct salary.
+
+![Guide](https://docs.haileyhr.com/hs-fs/hubfs/Guide.png?width=670&height=171&name=Guide.png)
+
+Complete the following columns for each salary that should be changed:
+
+- **New Amount:** Enter the new total salary amount. The field should only contain numbers, as the currency is already specified in a separate column.
+- **Effective Date:** Enter the date from which the new amount should apply. Use the format **YYYY-MM-DD**.
+
+The effective date must be later than the salary’s existing start date. It cannot be the same as or earlier than the salary’s **Start Date.**
+
+<Note>
+  Only one change per salary can be included in the import.
+</Note>
+
+![Guide2](https://docs.haileyhr.com/hs-fs/hubfs/Guide2.png?width=670&height=215&name=Guide2.png)
+
+## Upload and validate the file
+
+<Steps>
+  <Step title="Save the completed file on your computer">
+    Save the completed file on your computer.
+  </Step>
+  <Step title="Go back to Employees">
+    Go back to **Employees**.
+  </Step>
+  <Step title="Click Import - Salary changes">
+    Click **Import - Salary changes**.
+  </Step>
+  <Step title="Drag the file into the upload area or click the area to sele">
+    Drag the file into the upload area or click the area to select the file.
+  </Step>
+  <Step title="Review the validation results">
+    Review the validation results.
+  </Step>
+  <Step title="Click Import once the file has been validated">
+    Click **Import** once the file has been validated.
+  </Step>
+</Steps>
+
+If the file contains errors, Hailey shows which field needs to be corrected. Update the file and then upload it again.
+
+<Note>
+  If a salary already has a change awaiting approval, the pending change will be overwritten by the import. Therefore, review any ongoing salary changes before starting the import.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-31-2024-02-24-57-1597-PM.png?width=670&height=417&name=image-png-Jul-31-2024-02-24-57-1597-PM.png)
+
+Once the import has started, a message confirms that the salary changes are being processed. The import may take some time, depending on the number of changes included in the file.
+
+Once the import is complete, the salary changes are displayed:
+
+- on each employee’s profile
+- in relevant reports.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-31-2024-02-28-07-9696-PM.png?width=670&height=418&name=image-png-Jul-31-2024-02-28-07-9696-PM.png)
+
+## Rights
+
+Only an admin in the system can import salary changes.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Can I use the import to add a completely new salary?">
+  No. The salary changes import can only be used for salaries that already exist in Hailey. Use **Import - Salaries** to add new salaries.
+  </Accordion>
+  <Accordion title="Can I change the salary title or salary type in the same file?">
+  No. The import can only change the salary amount. Use **Import - Salary information changes** to change the salary title or salary type.
+  </Accordion>
+  <Accordion title="Should I enter the salary increase or the new total amount in New Amount?">
+  Enter the new total salary amount. If the current salary is 30,000 and the new salary should be 32,000, enter **32000**, not the difference of 2,000.
+  </Accordion>
+  <Accordion title="Why is my effective date not accepted?">
+  Make sure that the date uses the format **YYYY-MM-DD** and is later than the salary’s existing **Start Date**. The effective date cannot be the same as or earlier than the salary’s start date.
+  </Accordion>
+  <Accordion title="Can I import multiple future changes for the same salary at the same time?">
+  No. Only one change per salary can be included in the same import.
+  </Accordion>
+  <Accordion title="What happens if the file contains one or more errors?">
+  Hailey validates the file before completing the import and shows which field needs to be corrected. Update the file and then upload it again.
+  </Accordion>
+  <Accordion title="What happens to a salary change that is already awaiting approval?">
+  A pending change for the same salary is overwritten when the new change is imported. Therefore, review any ongoing changes before completing the import.
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,157 @@
+---
+title: "Godkänn och hantera tid"
+---
+
+I den här guiden hittar du information om hur du godkänner och hanterar rapporterad tid.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="iJ9y5bV" title="Godkänn och hantera tid" />
+
+## Vad innebär det att godkänna och hantera tid?
+
+Tidsrapportering hjälper organisationer att hålla koll på arbetade timmar, övertid, projekttid och annan registrerad arbetstid.
+
+Som chef eller administratör kan du attestera, redigera eller ta bort tid som har rapporterats av dina medarbetare. När medarbetarna rapporterar tid kan du granska deras registreringar i **Tidsöversikten** och säkerställa att de rapporterade timmarna är korrekta innan du attesterar dem.
+
+Innan du sätter igång
+
+Innan du kan börja attestera och hantera medarbetares tid behöver **Inställningar för Tid & ledighet** vara konfigurerade i ditt Hailey-konto. Säkerställ att följande inställningar är på plats:
+
+<Steps>
+  <Step title="Rapporteringspolicyer">
+    [Rapporteringspolicyer](/sv/create-reporting-policy)
+  </Step>
+  <Step title="Arbetstimmar">
+    [Arbetstimmar](/sv/work-hours)
+  </Step>
+  <Step title="Arbetsfria dagar">
+    [Arbetsfria dagar](/sv/non-working-days)
+  </Step>
+  <Step title="Tidscykler">
+    [Tidscykler](/sv/time-cycles) (om dessa används av ert företag)
+  </Step>
+  <Step title="Projekt">
+    [Projekt](/sv/projects) (om tidrapportering på projekt behövs)
+  </Step>
+</Steps>
+
+Varje punkt ovan länkar till en specifik guide som beskriver funktionaliteten mer i detalj.
+
+## Hur lägger du till rapporterad tid för en medarbetare?
+
+Behöver du rapportera tid för en medarbetare?
+
+Gå till den anställdes profil, klicka på **Hantera - Rapportera tid** och rapportera tiden.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/1-png-Sep-16-2026-11-21-19-0154-AM.png?width=670&height=372&name=1-png-Sep-16-2026-11-21-19-0154-AM.png)
+
+<Note>
+  Tid som **rapporteras åt någon annan godkänns direkt.**
+</Note>
+
+Om ni använder tidrapportering på projekt i företaget kan ni välja vilka projekt som medarbetarna ska rapportera tid på genom att välja rätt projekt i rullgardinsmenyn.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/2-png-Sep-16-2026-11-23-49-1012-AM.png?width=670&height=371&name=2-png-Sep-16-2026-11-23-49-1012-AM.png)
+
+Du kan se vilka projekt tid har rapporterats på genom att hålla muspekaren över en specifik dag i översikten.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/3-png-Sep-16-2026-11-25-12-3067-AM.png?width=670&height=372&name=3-png-Sep-16-2026-11-25-12-3067-AM.png)
+
+<Note>
+  Om du vill se mer detaljer går du till **Rapporter → Tidsrapport** i huvudmenyn för att visa och filtrera alla registrerade tidsposter, **till exempel per projekt**.
+
+  **Läs mer om Tidsrapporten** [HÄR](/sv/rapporter/tid).
+</Note>
+
+<Note>
+  Om **kompsaldo** är aktiverat visas även ditt aktuella kompsaldo här.
+
+  Läs mer om komptid [**HÄR**](/sv/time-comp-time-balance).
+</Note>
+
+## Hur godkänner man tid?
+
+För att attestera tid går du som attestansvarig till **Tid** i huvudmenyn. Markera sedan den eller de medarbetare vars tid du vill attestera genom att kryssa i rutan bredvid deras namn. Klicka därefter på **Attestera** och välj den period som ska attesteras.
+
+I denna översikt kan du se den tid som medarbetarna har rapporterat. Ikonen visar om tiden redan har attesterats eller inte. Du kan även se den totala balansen mellan schemalagd och rapporterad tid per medarbetare och månad.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/5-png-Sep-16-2026-01-08-01-5720-PM.png?width=670&height=303&name=5-png-Sep-16-2026-01-08-01-5720-PM.png)
+
+<Note>
+  Använder ni er av **Tidscykler**? Då kan ni enkelt godkänna tid för föregående månad via utskickade uppgifter. Läs mer om hur tidscykler fungerar [HÄR](/sv/time-cycles)!
+</Note>
+
+## Ta bort rapporterad tid
+
+Om tiden ännu inte har godkänts kan du ta bort den genom att gå till den anställdes profil och öppna fliken **Tid**. Klicka på papperskorgsikonen längst upp till höger i kalendern för att ta bort den rapporterade tiden.
+
+**Om tiden redan har godkänts** kan den endast tas bort av en **administratör** eller en användare som har behörigheten **Visa & ändra** under **Tid och frånvaro**.
+
+Om tiden har godkänts via en **tidscykel** kan den godkända månaden endast redigeras av en **administratör** eller en användare som har behörigheten **Ändra godkänd tidscykel.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/7-png-Sep-16-2026-01-13-34-0341-PM.png?width=670&height=342&name=7-png-Sep-16-2026-01-13-34-0341-PM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/8-png-Sep-16-2026-01-16-14-5878-PM.png?width=670&height=342&name=8-png-Sep-16-2026-01-16-14-5878-PM.png)
+
+## Rättigheter
+
+För att hantera Tid behöver man följande rättigheter:
+
+- **Tid och frånvaro - Visa**: ger tillgång till fliken **Tid** på medarbetarprofilen
+- **Tid och frånvaro - Visa & ändra**: ger rättigheten att godkänna tid från **Tid-översikten,** lägga till automatisk godkänd tid och ta bort godkänd tid
+
+För att läsa mer om hur **Roller & rättigheter** fungerar i Hailey, klicka [HÄR](/sv/roles-and-rights)!
+
+## Vanliga fragor
+
+Här hittar du svar på vanliga frågor om att rapportera och godkänna tid.
+
+<AccordionGroup>
+  <Accordion title="Jag vill rapportera tid, men jag kan inte se knappen Rapportera tid. Vad ska jag göra?">
+    Om knappen **Rapportera tid** saknas beror det troligtvis på att ingen **rapporteringspolicy** är kopplad till din anställning.
+
+    För att aktivera tidsrapportering behöver en admin eller någon med rättighet uppdatera dina **inställningar för Tid och frånvaro** och tilldela rätt rapporteringspolicy.
+
+    Läs mer om hur du uppdaterar en medarbetares inställningar för tid & frånvaro [HÄR](/sv/update-time-and-time-off-settings-on-employee).
+  </Accordion>
+
+  <Accordion title="Kan jag rapportera tid flera gånger samma dag?">
+    Ja, men tänk på att **endast den senaste tidsrapporteringen sparas**. Om du rapporterar tid igen för en dag där du redan har rapporterat tid, ersätts den tidigare rapporteringen med den nya.
+
+    Om du ska rapportera tid på flera projekt samma dag behöver du rapportera all tid vid samma tillfälle.
+  </Accordion>
+
+  <Accordion title="Varför visas inte tiden jag har rapporterat i kalendern?">
+    Kontrollera om dagen du rapporterade tid för är markerad som **vit** eller **grå** i kalendern.
+
+    Om dagen är grå betyder det att den är en **arbetsfri dag** enligt ditt arbetsschema. Det går inte att rapportera tid på arbetsfria dagar, vilket innebär att tid som rapporteras för en sådan dag inte visas i kalendern.
+  </Accordion>
+
+  <Accordion title="Hur godkänner jag en medarbetares rapporterade tid som admin?">
+    Du kan endast godkänna tid för de medarbetare där du är **godkännare** för. Att vara admin innebär inte automatiskt att du kan godkänna tid för alla medarbetare.
+
+    Om du behöver godkänna tid för en medarbetare som du inte är godkännare för kan du istället **rapportera tiden på nytt** direkt från medarbetarens profil. Den nya rapporteringen ersätter den tidigare för den aktuella dagen. Om du är admin eller har rättigheten **Visa & ändra** för Tid och frånvaro godkänns tiden automatiskt när den registreras.
+  </Accordion>
+
+  <Accordion title="Hur tar jag bort en rapporterad tid?">
+    Om tiden ännu **inte har godkänts** kan du ta bort den genom att gå till din profil och öppna fliken **Tid**. Klicka på **papperskorgsikonen** längst upp till höger i kalendern för att ta bort den rapporterade tiden.
+
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-21-2026-02-18-21-9595-PM.png?width=670&height=260&name=image-png-Jul-21-2026-02-18-21-9595-PM.png)
+
+    Om tiden redan **har godkänts** kan den endast tas bort av en admin eller någon med rättighet **Visa & ändra.**
+
+    Om tiden har godkänts via en **tidscykel** kan den godkända månaden endast redigeras av en admin eller någon med rättighet att **Redigera en godkänd tidscykel**. Läs mer om Tidscykler [HÄR](/sv/time-cycles).
+  </Accordion>
+</AccordionGroup>

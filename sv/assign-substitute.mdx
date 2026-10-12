@@ -1,0 +1,114 @@
+---
+title: "Tilldela vikarie"
+---
+
+Är en medarbetare tillfälligt frånvarande, och behöver en ersättare under en kortare period? - Med hjälp av Tilldela vikarie, kan detta visualiseras.
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="51eqAFA" title="Tilldela vikarie" />
+
+## Vad är Tilldela vikarie?
+
+Tilldela vikarie gör det möjligt att tillfälligt tilldela en ersättare för en medarbetare som är frånvarande. Med hjälp av funktionen kan vikarien tillfälligt inneha rättigheter för den man vikarierar för!
+
+## Innan du sätter igång
+
+För att tillfälligt överföra rättigheterna till den vikarierande medarbetaren kan ni **Tilldela vikarie** via **Hantera** **knappen** på medarbetarkortet.
+
+Ni kan även **Lägga till en ny anställning** för att spara historiken och visualisera vikariatet efter att vikariatperioden har utgått. När vikariatet tilläggs som en anställning, behöver en anledning för vikariatet anges. Anledningarna behöver ni ställa in innan en vikariat anställning tilläggs för en medarbetare.
+
+<Note>
+  [**HÄR**](/sv/template-new-article-7-0-0) kan ni läsa mer om hur ni skapar upp anledningar för vikariatet.
+</Note>
+
+## Hur tilldelar man en vikarie genom Hantera knappen?
+
+För att Tilldela vikarie genom hantera knappen gör ni såhär:
+
+- Gå till medarbetarkortet **för den medarbetare som kommer att vara frånvarande**.
+- Klicka på **Hantera**
+- Välj **Tilldela vikarie**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Nov-07-2025-01-03-28-6494-PM.png?width=670&height=450&name=image-png-Nov-07-2025-01-03-28-6494-PM.png)
+
+Välj sedan **Vem** **som ska vara vikarie** samt **Från och Till vilket datum** vikarieperioden gäller. När ni är nöjda klickar ni på **Spara**.
+
+<Note>
+  Genom att Tilldela vikarie överförs den frånvarande medarbetarens Roller & rättigheter samt godkännandeprinciper till den vikarierande medarbetaren under den period som vikariatet gäller.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Nov-07-2025-01-04-32-8692-PM.png?width=670&height=317&name=image-png-Nov-07-2025-01-04-32-8692-PM.png)
+
+När valen har sparats visas detta tydligt på både den frånvarande medarbetarens och vikariens medarbetarkort, i en **ruta under respektive profilbild**. Där visas även vikariatets till- och fråndatum. Alla medarbetare ser rutan om vikariatet i medarbetarprofilerna.
+
+<Note>
+  För medarbetaren som ska vikariera syns det på dennes profil först **när vikariatet börjat gälla.**
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Nov-07-2025-01-07-48-1412-PM.png?width=670&height=543&name=image-png-Nov-07-2025-01-07-48-1412-PM.png)
+
+Skulle ni behöva **redigera vikariatet** eller **ta bort det**? Gå då till den frånvarande medarbetarens profil, klicka på rutan under dennes profilbild och redigera efter behov.
+
+<Note>
+  Det går bra att ha flera vikarier samtidigt. Upprepa då processen ovan.
+</Note>
+
+<Note>
+  När ett **vikariat löpt ut kommer rättigheterna återgå till den medarbetare som varit frånvarande per automatik**. Korten under profilbilderna kommer därmed försvinna efter vikariatets sista dag.
+</Note>
+
+<Note>
+  Ska ni **byta vikarie** behöver det pågående vikariatet först tas bort. Därefter läggs den nya vikarien till enligt beskrivningen ovan.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Nov-07-2025-01-13-03-4811-PM.png?width=670&height=466&name=image-png-Nov-07-2025-01-13-03-4811-PM.png)
+
+## Hur tilldelar man en ny anställning för vikariatet?
+
+**Lägga till en ny anställning** för att spara historiken och visualisera vikariatet efter att vikariat perioden har utgått.
+
+Följ instruktionerna [**HÄR**](/sv/employment-wizard) för att Tillägga en anställning.
+
+För att tilldela en vikariat anställning behöver du välja vissa fält under **Anställningsinformation** i wizarden:
+
+- Som **Anställningsform** behöver du välja **Tidsbegränsad anställning.** Varefter du kan välja **Vikariat** som **Typ av tidsbegränsad anställning.**
+- Ange ett slutdatum på tidsbegränsad anställning.
+- Välj sedan vem medarbetaren **Vikarierar för** och **Anledning för vikariat.**
+
+Efter att du har fyllt i anställningsinformationen kan du fortsätta enligt wizarden som vanligt.
+
+## Rättigheter
+
+Som admin i Hailey har du alltid möjligheten att Tilldela vikarie. Om ni vill att någon som inte är admin i systemet ska ha rätt att tilldela vikarie ställer ni in det under Roller & rättigheter.
+
+- **Lägg till vikarie via hantera knappen**: Hantera - Tilldela vikarie - Ja
+
+<Note>
+  [**HÄR**](/sv/roles-and-rights) kan du läsa mer om **Roller & rättigheter**
+</Note>
+
+## Vanliga fragor
+
+<AccordionGroup>
+  <Accordion title="Varför ser jag inte rutan om vikariat i medarbetarens profil?">
+    Ingen fara, för medarbetaren som ska vikariera syns rutan på dennes profil först **när vikariatet börjat gälla.** På den frånvarande medarbetarens profil syns rutan genast efter att vikariatet har tilldelats.
+  </Accordion>
+
+  <Accordion title="Varför kan jag inte välja en anledning för vikariat när jag lägger till en ny anställning för en medarbetare?">
+    Detta kan bero på att anledningar för vikariat saknas. För att kunna välja en anledning från nedrullningsmenyn måste anledningarna först skapas i Hailey.
+
+    Skapa anledningar för vikariatet enligt instruktionerna [**HÄR.**](/sv/template-new-article-7-0-0)
+  </Accordion>
+</AccordionGroup>

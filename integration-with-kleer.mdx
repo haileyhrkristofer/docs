@@ -1,0 +1,182 @@
+---
+title: "Integration with Kleer - Time off"
+---
+
+Eliminate unnecessary duplicate work and free valuable time with Hailey’s integration with Kleer, where time off registration and employee creation happens automatically!
+
+<Tip>
+  First time activating one of **Hailey's standard integrations**? Start by reading [**THIS**](/haileys-standard-integrations) guide to know what to keep in mind before you get started.
+</Tip>
+
+---
+
+## What does the integration do?
+
+During each synchronization, **included data** is automatically updated via **API transfer** in Kleer to match the values in Hailey, as **Hailey serves as master.**
+
+<Note>
+  **Do you also want to sync salary and employee data?** - See our guide [**HERE**](/integration-with-kleer-salary-and-employee-data) for integration with Kleer – Salary and employee data.
+</Note>
+
+## How does the integration work?
+
+With the API transfer, a synchronization between Hailey and Kleer takes place **once an hour based on changes.** This means that:
+
+- If any updates are made to an employees included data in Hailey, the information will be automatically updated in Kleer.
+- When an employee’s time off is approved in Hailey, the time off will be updated in Kleer.
+
+## What data is included?
+
+Employee data:
+
+| **HAILEY** | **KLEER** |
+| --- | --- |
+| Company email | Email |
+| First name, Last name | Name |
+
+Time off synchronization:
+
+| **HAILEY** | **KLEER** |
+| --- | --- |
+| Time off | Time off |
+
+What is required to be included in the integration?
+
+For an employee to be included in the integration, the following is required:
+
+- Company email
+
+If an employee in Hailey has a company email that **does not yet exist in Kleer**, a new user will be **created** in Kleer. Therefore, it is important that all new employees are always created in Hailey first.
+
+Make sure that the **company email** for your existing employees **is identical in both Hailey and Kleer** and **matches their existing profile in Kleer** before the integration is activated.
+
+<Note>
+  If an employee’s **company email is changed in Hailey,** the integration will **create a new profile in Kleer** with the updated email.
+</Note>
+
+For an employee to be included in the **time off** sync, the following information must be available on their profile in Hailey:
+
+- Company email
+- First and last name
+- Swedish personal identity number
+
+Employees with the following **employment statuses** are included in the integration:
+
+- Unknown
+- Will join
+- Being hired
+- In service
+- Leaving
+- Has left
+
+**Important notes** regarding **time off** sync **:**
+
+- If an employee reports **time off in percentage (%)**, they must have **working hours** specified in their profile in Hailey. This allows the system to understand the extent of the time off.
+- If an employee reports **time off in hours,** working hours are **not** required in their profile.
+- Time off for **vacation** must always be reported as a **full day**, as Kleer does not allow vacation time off that is shorter than a full working day.
+
+How do you activate the integration?
+
+To activate the integration, you need to:
+
+<Steps>
+  <Step title="Contact your contact person at Kleer to receive the API key">
+    Contact your contact person at Kleer to receive the API key.
+  </Step>
+  <Step title="Add the integration in Hailey">
+    Add the integration in Hailey.
+  </Step>
+  <Step title="Fill in the required data for the integration setup">
+    Fill in the required data for the integration setup.
+  </Step>
+  <Step title="Scope the integration if needed">
+    Scope the integration if needed.
+  </Step>
+  <Step title="Save and activate the integration!">
+    Save and activate the integration!
+  </Step>
+</Steps>
+
+**Follow the instructions below to complete the activation of the integration.**
+
+Before activating the integration, it is important that you **contact your contact person at Kleer**, who can provide the **required API key** for the setup. The person setting up the integration between Hailey and Kleer must also have access to an **administrator** **account** **in both systems.**
+
+To activate the integration in Hailey:
+
+- Go to **Settings.**
+- Click **Integrations** at the bottom of the menu bar.
+- Select the **Payroll** section.
+- Click on **Kleer** and then **Add integration.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-04-2026-08-30-11-4965-AM.png?width=670&height=312&name=image-png-May-04-2026-08-30-11-4965-AM.png)
+
+Paste the **company number** and the **access token** that you **received from Kleer.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-04-2026-08-30-53-6204-AM.png?width=670&height=297&name=image-png-May-04-2026-08-30-53-6204-AM.png)
+
+When activating the time off sync, you must **select a start date for when you want time off data to be transferred from Hailey to Kleer.**
+
+Ensure the following before activation:
+
+- **To synchronize time off** you need to **map** out your **Time off reasons** in Hailey to the corresponding reason in Kleer. You find your time off reasons in Kleer from Payroll - Monthly Reports.
+- If you add new activities in Kleer, the activity must **have a unique name** in addition to the standard activities for the integration to work.
+- If an activity **doesn't exist in Kleer** or is spelled wrong the admin at your company will receive an email with information that the time off synchronization has been **inactivated**.
+- The activities from Kleer must be filled out in **Swedish** in the configuration of the integration.
+- If an activity doesn't exist in Kleer or is spelled wrong the admin at your company will receive an email with information that the time off synchronization has been inactivated.
+- The time off reason **vacation** must always be reported for a **full day** since Kleer doesn't allow vacation to be reported shorter than a working day.
+- Once the time off has been **attested**/**approved in Kleer,** it can only be corrected there.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-04-2026-08-31-31-8154-AM.png?width=670&height=583&name=image-png-May-04-2026-08-31-31-8154-AM.png)
+
+When all steps of the integration setup have been completed, click **Save**.
+
+- _Does the integration not apply to the entire company? -_ Read the next step in the guide about scope **before** **you click save.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-04-2026-08-32-57-0136-AM.png?width=670&height=1072&name=image-png-May-04-2026-08-32-57-0136-AM.png)
+
+Now that the integration is enabled, Hailey will automatically read in all users from your Kleer account who meet the requirements for the integration.You can see which/how many integrations your company has active under the Active tab in Integrations.
+
+## Does the integration not apply to the entire company?
+
+Then it is possible to add a **scope** for the integration!
+
+- Setting a scope means you can choose to include only **employees assigned to a specific workplace and/or legal entity in the integration.**
+- This must be configured when setting up the integration. It is **important** to do this at the initial setup, **as the synchronization starts immediately.** This ensures that only the correct employees are synced from Hailey to Kleer.
+
+If these fields are left empty, all employees with a company email address will be included in the integration.
+
+<Note>
+  **The example image** below shows that only employees belonging to the specifik legal  and the specifik workplace are included in the integration with Kleer.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-04-2026-08-34-26-8084-AM.png?width=670&height=319&name=image-png-May-04-2026-08-34-26-8084-AM.png)
+
+### If you want to set up multiple integrations with different Kleer accounts.
+
+- If your company has multiple workplaces and/or legal entities in Hailey, it may be beneficial to create separate integrations with Kleer for different/multiple Kleer accounts.
+
+Repeat the same process described above. In other words, navigate to the **Payroll** section and follow the same steps as when you configured the first integration.
+
+You can view which and how many integrations your company has active under the **Active** tab in the Integrations section.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-04-2026-08-35-11-1244-AM.png?width=670&height=440&name=image-png-May-04-2026-08-35-11-1244-AM.png)
+
+---
+
+## Common questions
+
+**Question**: What do I need to have in mind if I use time off report in procentage in Hailey?
+
+If an employee reports time off in percentage, they must have **working hours** specified in their profile in Hailey. This allows the system to understand the extent of the time off.
+
+<AccordionGroup>
+  <Accordion title="What can I double-check if an employee’s time off is not syncing correctly?">
+    Make sure that the activities in Kleer match the time off reasons in Hailey and that there are no duplicate activities with the same name in Kleer. Also, double-check that the employee’s time off has been approved in Hailey.
+  </Accordion>
+
+  <Accordion title="An employee cannot report time off in Kleer, what should I double-check?">
+    Check that the employee has a valid employment contract registered in Kleer. A valid employment contract is required for the employee to be able to report time off.
+
+    _If you have any questions regarding the integration, please contact Hailey support._
+  </Accordion>
+</AccordionGroup>

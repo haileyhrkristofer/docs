@@ -1,0 +1,229 @@
+---
+title: "Create Hiring templates"
+---
+
+With hiring templates you get to tailor the candidate experience. Customize each template so that it fits your needs!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="1PiW4uc" title="Create Hiring templates" />
+
+## What is a Hiring template?
+
+With hiring templates in Hailey, you can customize the candidate experience. Through the candidate portal and the preboarding portal, you can provide a warm welcome while gathering all necessary information for a smooth hiring process of the candidate.
+
+To create a customized candidate experience, follow the guide below.
+
+## Create a Hiring Template
+
+Your hiring template consists of two parts: the **Candidate Portal** and the **Preboarding Portal**. To create your hiring template, follow these steps:
+
+- **Settings – Hiring Templates**
+- Click **Add**
+- Fill in the title, description, language, and, if needed, specify who can use the template
+- Click **Start building**
+
+<Tip>
+  The description helps the person initiating the employment choose the right template. This is useful if there are multiple employment templates to choose from!
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2026-09-48-39-7506-AM.png?width=670&height=382&name=image-png-Jul-14-2026-09-48-39-7506-AM.png)
+
+<Note>
+  If you input values in **multiple fields**, such as **Location** and **Department**, the user applying the template must be associated with both entities. However, if you provide multiple values within the same field, the user only needs to be associated with at least one of the options.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2026-09-49-20-9274-AM.png?width=670&height=385&name=image-png-Jul-14-2026-09-49-20-9274-AM.png)
+
+## Candidate portal
+
+**The Candidate Portal** is the first part of the hiring template and the first thing the candidate sees. Here, you welcome the candidate with a cover image and a welcome message, provide information about the company or team, and collect the information needed to create the employment agreement.
+
+In the first step, **About Us**, you write a welcome message and choose a cover image.
+
+<Note>
+  To make a cover image and logo available for selection, you need to upload them under **Settings – General – Branding**. Read more about this [**HERE**](/admin-get-started#Branding)
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-10-2026-11-36-00-7020-AM.png?width=670&height=386&name=image-png-Apr-10-2026-11-36-00-7020-AM.png)
+
+Under **Meet the Colleagues**, you choose which parts of the organization will be shown to the candidate. You can easily turn each section on or off.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-10-2026-08-32-45-4893-AM.png?width=670&height=338&name=image-png-Apr-10-2026-08-32-45-4893-AM.png)
+
+The final part of the Candidate Portal is **Your Info.** This is where you collect the personal information needed from the candidate to create the employment agreement. This section is mandatory.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-09-2026-09-10-10-9378-AM.png?width=670&height=387&name=image-png-Jul-09-2026-09-10-10-9378-AM.png)
+
+In this step, you can also choose to collect additional information from the candidate before signing:
+
+- **Bank details** – Collect the candidate’s bank name, clearing number, and account number.
+- **Other information** – Choose from your own custom fields and collect any information you need. Read more about how to create custom fields **[HERE](/custom-fields).**
+- **Attachments** – Collect attachments from the candidate before signing. Enter a title for the attachment and select the employee folder where the uploaded document should be saved.
+
+<Note>
+  These sections are optional. Simply toggle on or off the ones you want to include. Note that this information can also be collected in the Preboarding Portal.
+</Note>
+
+<img src="https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-09-2026-08-23-50-6362-AM.png?width=670&height=385&name=image-png-Jul-09-2026-08-23-50-6362-AM.png" alt="" /> When you’ve made your selections here, the first part of the hiring template is complete. Click **Preboarding Portal** in the menu on the left to continue building your hiring template.
+
+## Preboarding portal
+
+The second and final part of the hiring template is the **Preboarding Portal.** The Preboarding Portal is sent to the new employee once the employment agreement has been signed by all parties. The steps are similar to those used when creating the Candidate Portal.
+
+First, you choose a cover image and write your welcome text.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-10-2026-11-37-35-1961-AM.png?width=670&height=389&name=image-png-Apr-10-2026-11-37-35-1961-AM.png)
+
+Under **Meet the colleagues,** you again decide how much of the employee’s future colleagues you want to show. Toggle the sections on or off as needed.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Apr-10-2026-08-46-01-6190-AM.png?width=670&height=338&name=image-png-Apr-10-2026-08-46-01-6190-AM.png)
+
+Under **More information,** you can collect details from the employee ahead of their first working day **.** You can choose to include the following standard fields:
+
+- **Bank details**
+- **Emergency contact**
+- **Date of birth**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-09-2026-08-37-56-1454-AM.png?width=670&height=387&name=image-png-Jul-09-2026-08-37-56-1454-AM.png)
+
+Just like in the Candidate Portal, you can add your own employee fields and request attachments to collect additional information — for example allergies or shoe size.
+
+<Tip>
+  If you already collect bank details or information for your custom fields in the Candidate Portal, you do not need to collect this again here.
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-09-2026-08-25-15-1278-AM.png?width=670&height=363&name=image-png-Jul-09-2026-08-25-15-1278-AM.png)
+
+The final step in the Preboarding Portal is **Equipment**. Here, you can add the equipment options that the new employee can choose from. This makes it easier for you to order the equipment early, well before the employee’s first working day.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-09-2026-08-34-06-7517-AM.png?width=670&height=388&name=image-png-Jul-09-2026-08-34-06-7517-AM.png)
+
+To add equipment:
+
+- Click **Add equipment**.
+- Enter a **Title** and an optional description of the options.
+- Click **Add option** and fill in what the employee can choose, along with a description of the option.
+- Add more options by clicking **Add option** again.
+- Click **Save** when you’re done.
+
+<Tip>
+  You can also add a URL that links to, for example, a page with more information about the equipment.
+</Tip>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-09-2026-08-30-07-8700-AM.png?width=670&height=385&name=image-png-Jul-09-2026-08-30-07-8700-AM.png)
+
+<Note>
+  The employee will be able to select one option per equipment you create. Therefore, make sure to create multiple sections of equipment if you want the employee to be able to choose from several options.
+</Note>
+
+Here, you also have the option to generate a task based on the equipment selection.  If you activate this, the selected person or people will receive a task in their task-list containing the information about the employee’s chosen equipment, allowing them to take the relevant actions. Enable this by toggling on **Create a task** and selecting who should receive the task.
+
+You can create the task for:
+
+- The person the employee reports to
+- Specific employee
+- Specific team
+- Specific task force
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Nov-19-2025-01-30-45-7471-PM.png?width=670&height=469&name=image-png-Nov-19-2025-01-30-45-7471-PM.png)
+
+If you choose not to assign the task to anyone, you can find the equipment selection via **HR Hub -  Hiring Processes**. Click on the relevant hiring process, and you will then find the equipment under the **Preboarding portal section.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-14-2026-09-57-02-8502-AM.png?width=670&height=381&name=image-png-Jul-14-2026-09-57-02-8502-AM.png)
+
+Once you feel satisfied with your template, click on **Save** in the top right corner. Your template is now ready for use!
+
+<Note>
+  For information on how to use this when hiring new employees, click **[HERE](/iniate-hire).**
+</Note>
+
+## Rights
+
+As an admin in Hailey, you always have the right to manage hiring templates. Below is a list of rights that are relevant to enable if you want others in the organization to be able to do this as well:
+
+- **View & Edit – Hiring Templates** gives members in the role the right to create, modify, and delete employment templates.
+- **Yes - Can view employees that will join** gives members in the role the right to see new employees who are about to start. The person responsible for ordering equipment must have this right to see which employee the equipment should be ordered for.
+
+<Note>
+  [**HERE**](/roles-and-rights) you can read more on Roles & rights.
+</Note>
+
+## Common questions
+
+Here you find frequently asked questions and answers.
+
+<AccordionGroup>
+  <Accordion title="How does the candidate portal look from the candidates view?">
+    When the candidate portal is sent away the candidate receives an e-mail:
+
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-09-2026-11-06-36-1359-AM.png?width=670&height=177&name=image-png-Jul-09-2026-11-06-36-1359-AM.png)
+
+    Through the link, your company is presented to the candidate with your company logo, cover image, and welcome text, based on the hiring template you have selected.
+
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-09-2026-11-11-09-7358-AM.png?width=670&height=387&name=image-png-Jul-09-2026-11-11-09-7358-AM.png)
+
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-09-2026-11-13-33-0817-AM.png?width=670&height=363&name=image-png-Jul-09-2026-11-13-33-0817-AM.png)
+
+    The candidate will be asked to provide their personal information and approve that you have the right to use this information to generate the employment agreement.
+
+    In this step, Hailey’s **Privacy Policy** is also presented to the candidate. This means that the candidate can already at this stage read about how their data is processed within your HR system.
+
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-09-2026-11-13-51-5511-AM.png?width=670&height=386&name=image-png-Jul-09-2026-11-13-51-5511-AM.png)
+  </Accordion>
+
+  <Accordion title="How does the Preboarding portal look from the new employee's view?">
+    When the contract has been created and signed by all parties, the Preboarding Portal is sent to the new employee’s personal email.  The information presented at this stage is based on the settings you have configured in your hiring template.
+
+    By clicking the link in the email, the new employee is taken to the Preboarding Portal, where they are greeted by the welcome text and cover image you have selected.
+
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-09-2026-11-33-59-7552-AM.png?width=670&height=521&name=image-png-Jul-09-2026-11-33-59-7552-AM.png)
+
+    The new employee then gets to see their future colleagues and to fill out the information you have requested.
+
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-09-2026-11-36-27-0785-AM.png?width=670&height=504&name=image-png-Jul-09-2026-11-36-27-0785-AM.png)
+
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-09-2026-11-35-57-3008-AM.png?width=670&height=469&name=image-png-Jul-09-2026-11-35-57-3008-AM.png)
+
+    In the final step, the new employee can choose equipment, for example a computer or a mobile phone, if you have chosen to include this in the hiring template.
+
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-09-2026-11-31-35-4301-AM.png?width=670&height=350&name=image-png-Jul-09-2026-11-31-35-4301-AM.png)
+
+    The link to the Preboarding Portal will remain available even after the requested information has been filled in and submitted.
+
+    If the employee chooses to visit the Preboarding Portal again, the view below will be shown: a countdown clock to the employment start date, the welcome information, and the option to see their future colleagues.
+
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-09-2026-11-49-02-1121-AM.png?width=670&height=444&name=image-png-Jul-09-2026-11-49-02-1121-AM.png)
+  </Accordion>
+
+  <Accordion title="Can I resend the Preboarding Portal to the employee?">
+    Yes. If you want to send the Preboarding Portal to the employee again, you can do so by copying the link found under the employee’s name on the employee card and sending it manually. The new employee will then receive the link to the Preboarding Portal once more.
+  </Accordion>
+
+  <Accordion title="What happens if we don't create any hiring templates?">
+    If you choose to **not** create and use hiring templates in Hailey, Hailey’s default hiring template will be sent when hiring a new employee. The default template includes:
+
+    - Company information displayed in the Candidate Portal, retrieved from **Settings - General - Company Information - Company cover text**
+    - A welcome message displayed in the Preboarding Portal: _We are so thrilled that you have decided to join our company. We look forward to have you as part of the team._
+    - Information about the employee’s manager and future colleagues
+    - Collection of personal information required for the employment contract
+    - Collection of bank details and emergency contact information
+  </Accordion>
+
+  <Accordion title="The person who is ordering the equipment chosen by the new employee in the Preboarding Portal gets the task to do so but can’t see who the equipment is for. What could be wrong?">
+    The issue is likely connected to that the person receiving the task does not have the right; **Can view employees that will join**. This right is required to see new employees who are about to start — and therefore to see _who_ the equipment should be ordered for.
+
+    To fix this, go to **Settings** - **Security** - **Roles & rights**, open the role that handles this task, and under **Can view employees that will join**, select **Yes**.
+  </Accordion>
+</AccordionGroup>

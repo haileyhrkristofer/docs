@@ -1,0 +1,78 @@
+---
+title: "Export data from Hailey"
+---
+
+Do you need to export data from Hailey to an Excel file? Below you will find instructions on how to do it as smoothly as possible!
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="MOZL88W" title="Export data from Hailey" />
+
+## Export employee data
+
+If you want to **export employee data** from Hailey, go to the employee list. By using the **filter menu** on the left and the **columns** above the employee list, you create a list with the information you want to export. Then click **Export** - **To Excel/xlsx.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jan-15-2026-10-25-04-4809-AM.png?width=670&height=280&name=image-png-Jan-15-2026-10-25-04-4809-AM.png)
+
+## Export change data
+
+If you want to export data on changes made to fields during a specific period, export the **All Changes report.** You can find it by going to **Reports in the main menu.** Use the filter menu and the calendar selector to view the changes according to your preferences, then click Export. Read more about how to work with the change report [**/all-changesHERE.**](/all-changes)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-06-2026-12-10-47-3328-PM.png?width=670&height=367&name=image-png-Aug-06-2026-12-10-47-3328-PM.png)
+
+## Manage CSV-file
+
+The information exported from Hailey is exported to a CSV file. This means all data is comma-separated and is therefore in just one column. To separate the data into multiple columns, start by **marking column A** where all the data is.
+
+![](https://docs.haileyhr.com/hubfs/image-png-Apr-25-2023-09-41-17-0082-AM.png)
+
+Go to **Data** in the main menu and click Text to columns. This window opens where you first click Next.
+
+![](https://docs.haileyhr.com/hubfs/image-png-Apr-25-2023-09-42-05-8548-AM.png)
+
+... which takes you here, where you choose the separator for your data. Tab is already marked, let that stay and **just add Comma as a separator too**. Click Finish.
+
+![](https://docs.haileyhr.com/hubfs/image-png-Apr-25-2023-09-42-40-1853-AM.png)
+
+<Note>
+  If you want to choose what format Excel should use for certain data points, e.g. if you have data that begins with "0" or includes a hyphen, such as a work phone number, clearing number, or employee number, you have to change the data format.
+</Note>
+
+If you have data that begins with "0" or includes a hyphen, click Next. Mark the columns that you want to change and mark the Column data format Text. Then click on Finish.
+
+![](https://docs.haileyhr.com/hubfs/image-png-Oct-24-2023-09-22-41-9343-AM.png)
+
+All the data in the Excel file is now separated into different columns. Now it is time to make sure the file is saved in the right format.
+
+<Note>
+  Initially, your computer will want to save the file in ”CSV-UTF-8 (comma-separated) (_.CSV)”. Therefore, It is important that you change the format to the one in the picture: ”Excel-workbook (_.xlsx)”
+</Note>
+
+![](https://docs.haileyhr.com/hubfs/image-png-Apr-25-2023-09-43-14-7091-AM.png)
+
+## Export Emails
+
+Do you need to send an email to all employees or maybe just to a specific department? Then filter out the people you want to get the email addresses of in the filter menu on the left and then click **Export - Emails to clipboard**. Then we copy the company email to the people you have filtered out and you can easily paste them into the recipient list.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jan-15-2026-10-28-28-9363-AM.png?width=670&height=265&name=image-png-Jan-15-2026-10-28-28-9363-AM.png)
+
+## Rights
+
+As an admin in Hailey, you automatically have the right to export employee data from the employee list. The right required to both **export the employee list and export emails** are:
+
+- Other – Export employee list
+
+The employee will only be able to export data that they have the right to view in Hailey.
+
+[**HERE**](/roles-and-rights) you can read more about Roles & Rights in Hailey

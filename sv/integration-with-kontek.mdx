@@ -1,0 +1,400 @@
+---
+title: "Integration med Kontek Lön"
+---
+
+Med integrationen till Kontek Lön kan ni säkerställa att uppgifter som förs mellan systemen hanteras GDPR-säkert. Samtidigt sparar ni tid genom att ändringar i Hailey synkroniseras till Kontek Lön automatiskt.
+
+<Tip>
+  Första gången du aktiverar en av **Haileys standardintegrationer**? Börja med att läsa den [**HÄR**](/sv/haileys-standard-integrations) guiden för att veta vad du ska tänka på innan du sätter igång.
+</Tip>
+
+---
+
+## Vad gör integrationen?
+
+Vid varje synkronisering kommer [inkluderad data](#Vilken-data-ar-inkluderad)att **automatiskt** uppdateras via **API överföring** **till Kontek Lön** och få samma värde som finns i Hailey, eftersom **Hailey är master** (facit).
+
+## Hur fungerar integrationen?
+
+Med API-överföringen sker en synkronisering mellan Hailey och Kontek Lön **varje timme** baserat på förändringar. Detta innebär att:
+
+- Inkluderad data som inte överensstämmer mellan Hailey och Kontek Lön kommer att uppdateras med den information som finns i Hailey varje timme.
+
+## Vilken data är inkluderad i integrationen?
+
+**Medarbetardata:**
+
+| **HAILEY** | **KONTEK LÖN** |
+| --- | --- |
+| Telefonnummer jobb | Telefonnummer |
+| Företagsmail | Email |
+| Anställningsnummer | Anst.id |
+| Förnamn | Förnamn |
+| Efternamn | Efternamn |
+| Personnummer | Personnummer |
+| Gatuadress | Gatuadress |
+| Postnummer | Postnr |
+| Stad | Ort |
+| Land | Land |
+| Clearingnummer | Clearingnr |
+| Kontonummer | Kontonummer |
+| Startdatum | Fr.o.m datum |
+| Slutdatum | T.o.m datum |
+| Anställningsform/ Typ av tidsbegränsad anställning | Anställningsform |
+| Rapporterar till | Chef |
+| Avdelning | Avdelning |
+| Titel | Befattning |
+
+**Lönedata:**
+
+| **HAILEY** | **KONTEK LÖN** |
+| --- | --- |
+| Månadslön | Synkar till den lönebenämningen ni valt under månadslön |
+| Timlön | Synkar till den lönebenämningen ni valt under timlön |
+| Startdatum för lön | fr.o.m datum (lön) |
+| Omfattning (% och timmar/vecka) | Sysselsättningsgrad |
+
+## Vad krävs för att ingå i integrationen?
+
+För att en medarbetare **ska ingå i integrationen** behöver medarbetaren ha:
+
+- Anställningsnummer som matchar anställnings-ID:t i Kontek Lön
+- Svenskt personnummer
+- Anställningsform...
+  - på samtliga anställningar på medarbetarens kort i Hailey.
+  - för medarbetare med en tidsbegränsad anställning behöver ni även ange vilken typ av typ av tidsbegränsad anställning medarbetaren har.
+  - medarbetare med en tidsbegränsad anställning eller provanställning behöver ha fältet **Slutdatum** ifyllt på sin anställning.
+- [Eget anställningsfält](/sv/integration-med-hogia#Eget-falt) för anställningskategori på sin profil i Hailey ([läs mer om detta i guiden nedan)](#Eget-falt-kategori)
+
+<Note>
+  Om medarbetarens anställningsnummer inte finns i Kontek Lön skapas en ny medarbetare upp i Kontek Lön.
+
+  Medarbetare utan anställningsnummer i Hailey kommer inte att inkluderas i integrationen.
+</Note>
+
+För att **lönedata** ska föras över korrekt i integrationen så behöver medarbetaren även ha:
+
+- Lönetyper i Hailey och att varje lön har en tillskriven lönetyp
+- Omfattning (%) och Omfattning (timmar per vecka) ifyllt på sin profil i Hailey
+
+Medarbetare med följande **anställningsstatus** ingår i integrationen:
+
+- Börjar snart
+- I tjänst
+- Ska lämna
+- Har lämnat
+
+## Vilka förberedelser krävs i Hailey?
+
+Förberedelser i Hailey innan aktivering av integrationen:
+
+- [Skapa eget anställningsfält](#Eget-falt-kategori) för kategori
+- [Skapa eget anställningsfält för inmatningsmall](#eget-falt-inmatningsmall)
+- [Lön och lönetyper](#Lon-lonetyper)
+
+**Eget anställningsfält för kategori**
+
+Ett specifikt anställningsfält behöver skapas upp i Hailey med fältet kategori från Kontek Lön för att medarbetaren ska följa med i integrationen. Kategorin för era medarbetares anställning hittar ni i Kontek Lön - Personalregister. Gör följande för att skapa det egna fältet i Hailey:
+
+- Gå till Inställningar - Anpassning
+- Klicka på **Lägg till** - **Anställningsfält**
+- Ge anställningsfältet ett namn, förslagsvis Kontek Kategori
+- Välj svarstyp: Alternativ
+
+<Note>
+  Se vår guide [**HÄR**](/sv/custom-fields)för hur ni lägger till egna fält i Hailey.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-26-2025-08-03-53-1433-AM.png?width=670&height=459&name=image-png-Aug-26-2025-08-03-53-1433-AM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-Jan-03-2025-08-14-57-6491-AM.png?width=664&height=315&name=undefined-Jan-03-2025-08-14-57-6491-AM.png)
+
+Det egna fältet hittar du sedan på **medarbetarkortet** under **Anställningar -** **Villkor**.
+
+- Fältet måste vara ifyllt på **alla** anställningar kopplat till medarbetaren (inklusive tidigare anställningar).
+- Medarbetare som **inte** har fältet ifyllt på sin profil i Hailey kommer inte att ingå i integrationen.
+
+<Note>
+  Vill ni uppdatera informationen i fältet i ett svep på medarbetarnas profiler? [**HÄR**](/sv/import-custom-employment-fields) kan ni läsa mer om hur ni bulk uppdaterar anställningsfältet.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jul-15-2025-12-02-55-0638-PM.png?width=670&height=265&name=image-png-Jul-15-2025-12-02-55-0638-PM.png)
+
+**Eget anställningsfält för inmatningsmall**
+
+När ni slår på integrationen kommer ni att få göra ett val i integrationsuppsättningen där ni antingen kan:
+
+<Steps>
+  <Step title="Välja en fördefinierad inmatningsmall från Kontek Lön">
+    Välja en fördefinierad inmatningsmall från Kontek Lön.
+  </Step>
+  <Step title="Välja mellan olika inmatningsmallar med hjälp av ett eget an">
+    Välja mellan olika inmatningsmallar med hjälp av ett **eget anställningsfält i Hailey.**
+  </Step>
+</Steps>
+
+Om ni väljer att ha olika inmatningsmallar behövs ett eget anställningsfält för inmatningsmallar skapas upp i Hailey. Detta behövs för att integrationen ska kunna identifiera vilken av de olika inmatningsmallarna som ska synkroniseras från Hailey till Kontek Lön. Ni hittar era inmatningsmallar i Kontek Lön under Personal - Växla till inmatningsmall.
+
+- För att skapa upp fältet i Hailey gör ni på samma sätt som när ni skapade upp fältet för Kategori.
+- Det egna anställningsfältet behöver vara av svarstypen **Alternativ**.
+- Alternativet i Hailey måste heta exakt samma som inmatningsmallen i Kontek för att den ska kunna synkas över ordentligt.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-21-2026-11-49-14-4334-AM.png?width=670&height=465&name=image-png-May-21-2026-11-49-14-4334-AM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-21-2026-11-34-44-4578-AM.png?width=670&height=362&name=image-png-May-21-2026-11-34-44-4578-AM.png)
+
+Precis som det egna fältet för Kategori, hittar ni det skapade fältet för inmatningsmallen på **medarbetarkortet** under **Anställningar -** **Villkor**.
+
+- Fältet måste vara ifyllt på **alla** anställningar kopplat till medarbetaren (inklusive tidigare anställningar).
+- Medarbetare som **inte** har fältet ifyllt på sin profil i Hailey kommer inte att ingå i integrationen.
+
+<Note>
+  Vill ni uppdatera informationen i fältet i ett svep på medarbetarnas profiler? [**HÄR**](/sv/import-custom-employment-fields) kan ni läsa mer om hur ni bulk uppdaterar anställningsfältet.
+</Note>
+
+**Lön och Lönetyper**
+
+För att rätt lön i Hailey ska kopplas ihop till rätt lönetyp i Kontek Lön så behöver ni se till att ni har lönetyper registrerade i Hailey. Du kan läsa mer om lönetyper **[HÄR](/sv/salary-types).**
+
+- Löner som ingår i integrationen ska anges som **heltidslöner**, oavsett medarbetarens anställningsomfattning.
+- För att lönedata ska föras över korrekt i integrationen så behöver medarbetaren ha omfattning (%) och Omfattning (timmar per vecka) ifyllt på sin profil i Hailey.
+- Om **lönetyper saknas** kommer alla löner för en medarbetare att slås ihop i integrationen.
+
+## Hur aktiveras integrationen?
+
+För att aktivera integrationen behöver du:
+
+<Steps>
+  <Step title="Hämta ert Tenant ID från Visma App Store">
+    Hämta ert Tenant ID från Visma App Store.
+  </Step>
+  <Step title="Lägga till integrationen i Hailey">
+    Lägga till integrationen i Hailey.
+  </Step>
+  <Step title="Fyll i nödvändig data för integrationsuppsättningen">
+    Fyll i nödvändig data för integrationsuppsättningen.
+  </Step>
+  <Step title="Omfatta integrationen vid behov">
+    Omfatta integrationen vid behov.
+  </Step>
+  <Step title="Spara och aktivera!">
+    Spara och aktivera!
+  </Step>
+</Steps>
+
+Följ instruktionerna nedan för att gå genomföra aktivering av integrationen.
+
+### Steg 1 - Förberedelser
+
+Personen som sätter upp integrationen behöver...
+
+- ha tillgång till ett admin-konto i Hailey, eller ha rättigheten att redigera integrationer i Hailey.
+- vara systemadministratör i Kontek Lön.
+- ha licensmodulen för Öppet API, vilket ger systemadministratören i Kontek Lön tillgång till Visma App Store. Denna modul ger er systemadministratör i Kontek Lön tillgång till Visma App Store, vilket behövs för att kunna sätta upp integrationen.
+
+<Note>
+  **Vid outsourcad lön** behöver ni **kontakta Kontek Lön support** för att få följande information till uppsättning av integrationen:
+
+  - Tentant ID
+  - Namn på era Inmatningsmallar/inmatningsmall
+  - Namn på er Kategori
+  - Namn på era anställningsformer för mappning av anställningar
+  - Benämning av era löner för mappning av löner
+</Note>
+
+### Steg 2 - Visma App Store
+
+För att sätta upp integrationen behöver du först gå till Visma App Store för att hämta ert Tenant ID som används i integrationsinställningarna mellan Kontek Lön och Hailey (Tenant ID har ersatt det som tidigare var Företags ID).
+
+- Gå till **Visma App Store**
+- **Logga in** och välj rätt organisationskonto
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Feb-05-2026-02-49-32-9595-PM.png?width=670&height=522&name=image-png-Feb-05-2026-02-49-32-9595-PM.png)
+
+Under Appar söker du efter Hailey‑appen och klicka in på sidan.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Feb-09-2026-12-13-48-9499-PM.png?width=670&height=219&name=image-png-Feb-09-2026-12-13-48-9499-PM.png)
+
+Lägg sedan till appen genom att skrolla ner på sidan och klicka på **Administrera**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Feb-24-2026-09-53-37-4674-AM.png?width=670&height=350&name=image-png-Feb-24-2026-09-53-37-4674-AM.png)
+
+Toggla sedan på **API-kopplingen**, välj följande nedan beroende på er lönehantering:
+
+- **Intern lönehantering:** Toggla på Open API
+- **Outsourcad lönehantering:** Toggla på Outsourcing Open API
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Feb-24-2026-09-58-18-6031-AM.png?width=670&height=347&name=image-png-Feb-24-2026-09-58-18-6031-AM.png)
+
+Navigera sedan till rullgardinsmenyn uppe i högra hörnet. Kopiera ert **Tenant ID** och spara det för senare användning.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Feb-05-2026-02-55-16-6395-PM.png?width=670&height=669&name=image-png-Feb-05-2026-02-55-16-6395-PM.png)
+
+### Steg 3 - Aktivera integrationen i Hailey
+
+- Gå till **Inställningar.**
+- Klicka på **Integrationer** längst ner i menyraden.
+- Klicka därefter på rubriken **Lön.**
+- Klicka på **Kontek Lön** och **Lägg till integration.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-20-2026-02-07-45-0817-PM.png?width=670&height=386&name=image-png-May-20-2026-02-07-45-0817-PM.png)
+
+Klistra in ert **Tenant ID** i det avsedda fältet i integrationsinställningarna och tryck sedan på **Autentisera**. Efter ni har klickat på **Autentisera** kommer ni att finna integrationen under fliken **Tillagda** i Hailey.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-20-2026-02-08-51-9817-PM.png?width=670&height=356&name=image-png-May-20-2026-02-08-51-9817-PM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-21-2026-06-53-45-7478-AM.png?width=670&height=597&name=image-png-May-21-2026-06-53-45-7478-AM.png)
+
+Klicka på **Kontek Lön** integrationen för att göra resterande uppsättning av integrationen och för att aktivera integrationen.
+
+När ni har öppnat upp integrationsuppsättning på nytt kan ni välja att toggla på **Aktiv** knappen.
+
+- Integrationen blir inte aktiv förens du klickat på **Spara** längst ned i höger hörn, vilket görs som ett slutsteg när hela integrationsuppsättningen är färdigställd.
+
+Välj sedan om lönehanteringen sker **internt** eller **outsourcad**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-21-2026-06-54-55-7026-AM.png?width=670&height=409&name=image-png-May-21-2026-06-54-55-7026-AM.png)
+
+### Inmatningsmall
+
+Nästa steg i integrationen får ni valet att antingen:
+
+- Alternativ 1: Synkronisera medarbetare **med en och samma inmatningsmall** från Kontek Lön.
+- Alternativ 2: Synkronisera medarbetare **med olika inmatningsmallar** med hjälp av det **egna anställningsfältet för inmatningsmall** som ni skapat upp i Hailey.
+
+Valet av inmatningsmall görs under **Inmatningsmall**.
+
+- Alternativ 1: Toggla på **Använd eget fält** och välj det **egna anställningsfältet för inmatningsmall** som du skapade upp i Hailey.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-21-2026-01-25-56-7952-PM.png?width=670&height=281&name=image-png-May-21-2026-01-25-56-7952-PM.png)
+
+- Alternativ 2: Välj en **fördefinierad inmatningsmall från Kontek Lön** för att synkronisera samtliga medarbetare med samma inmatningsmall.
+
+Om ni väljer alternativ 2 måste hämta värdet för inmatningsmallen i Kontek Lön. Gå till **Kontek Lön** för att hämta inmatningsmallen. För att hitta inmatningsmallen, gå till Kontek Lön och...
+
+- Personal - Personalregister - Växla till inmatningsmall
+- Kopiera värdet i rutan för **Växla till inmatningsmall.**
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-20-2026-02-03-00-8987-PM.png?width=670&height=535&name=image-png-May-20-2026-02-03-00-8987-PM.png)
+
+- Klistra sedan i inmatningsmallens namn i **fri text** i fältet för **Inmatningsmall** i Hailey.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-21-2026-01-45-50-8775-PM.png?width=670&height=279&name=image-png-May-21-2026-01-45-50-8775-PM.png)
+
+### Kategori
+
+Under **Kategori** väljer ni sedan det **egna** **anställningsfält** **för kategori** som motsvarar kategorin i Kontek Lön.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-21-2026-01-30-47-4190-PM.png?width=670&height=125&name=image-png-May-21-2026-01-30-47-4190-PM.png)
+
+### Synkronisera anställningar
+
+Ni kan välja om ni vill inkludera överföring av anställningar i integrationen. Om ni vill inkludera anställningar så säkerställ detta vid val av datum och mappning av anställningar:
+
+**Val av datum**
+
+- Välja **ett datum** när anställningar i Hailey ska överföras till Kontek Lön.
+- Om ni **inte** anger ett specifikt från-datum, kommer all anställningshistorik i Kontek Lön att ersättas av den information som finns i Hailey.
+
+### Mappning av anställningstyper
+
+**Vi rekommenderar** **alltid** att man **mappar anställningsformerna i Hailey** mot motsvarande **anställningsformer i Kontek Lön.**
+
+- Om anställningsformerna i Hailey och Kontek Lön inte överensstämmer (med stavning och benämning) kommer synkroniseringen inte att fungera.
+- Om ni väljer att inte mappa anställningstyper kommer de angivna anställningsformer i Hailey automatiskt föras över till Kontek Lön när integrationen är aktiv, eftersom Hailey är master.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-21-2026-08-26-19-2015-AM.png?width=670&height=565&name=image-png-May-21-2026-08-26-19-2015-AM.png)
+
+### Synkronisera löner
+
+Ni kan välja om ni vill inkludera överföring av löner i integrationen. Om ni vill inkludera löner så toggla på **Synkronisera löner från Hailey till Kontek** och säkerställ detta vid val av datum och mappning av lönetyper:
+
+**Val av datum**
+
+- Välj sedan **ett datum** från när löner i Hailey ska överföras till Kontek Lön.
+- Endast tillagda samt ändrade löner som har startdatum från och med det angivna datumet för synkronisering, kommer att följa med i integrationen. Hailey är master och kommer att skriva över lönedata i Kontek Lön efter det valda datumet.
+- Löner med startdatum innan det valda datumet kommer med andra ord inte synkroniseras över.
+
+**Mappning av lönetyper**
+
+Vi rekommenderar att ni använder lönetyper i Hailey för att säkerställa att rätt lön synkroniseras till rätt lön i Kontek Lön. För att integrationen ska förstå vilken lönetyp i Hailey som tillfaller motsvarande lön i Kontek Lön, behövs mappning av lönerna. Om inga lönetyper finns registrerade i Hailey kommer samtliga löner för en medarbetare att slås ihop.
+
+- Om ni lämnar en lönetyp omappad (fältet för motsvarande löneart i Kontek Lön blir tom), kommer lönen inte synkroniseras alls.
+- Den lönetyp som ni väljer att mappa **heltidslönen/månadslönen** till i Kontek Lön behöver ha typ: **Datumstyrt** (se referensbild).
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-21-2026-02-07-22-5581-PM.png?width=670&height=489&name=image-png-May-21-2026-02-07-22-5581-PM.png)
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Jan-03-2025-08-28-46-2205-AM.png?width=670&height=180&name=image-png-Jan-03-2025-08-28-46-2205-AM.png)
+
+**Bra att känna till vid lönesynkronisering:**
+
+- Integrationen synkroniserar endast **en** timlön åt gången. Om en medarbetare har flera aktiva timlöner synkroniseras ingen av dem.
+- Har medarbetaren flera aktiva månadslöner i Hailey, synkroniserar vi den totala summan.
+- Om en medarbetare har både timlön och månadslön, synkroniserar vi båda.
+
+Klicka på **Spara** när du har har färdigställt integrationsuppsättningen. Nu är integrationen aktiv! Du kan följa vilka/hur många integrationer som ert företag har aktiva under Aktiv-fliken under Integrationer.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-21-2026-02-22-21-6286-PM.png?width=670&height=226&name=image-png-May-21-2026-02-22-21-6286-PM.png)
+
+## Gäller integrationen inte hela företaget?
+
+Då finns det möjlighet att **omfatta** integrationen!
+
+- Omfattning av integrationen innebär att ni kan möjliggöra att **endast medarbetare med specifik arbetsplats och/eller legal enhet,** **inkluderas i integrationen.**
+- Detta är viktigt att göra **direkt när ni sätter upp integrationen**. Varför detta måste göras direkt i uppsättningen av integrationen är för att säkerställa att rätt medarbetare synkas från Hailey till Kontek Lön **eftersom synkroniseringen inleds omedelbart.**
+
+Om dessa fält lämnas tomma kommer alla anställda som uppfyller krav för integrationen att synkas över.
+
+<Note>
+  **Exempelbilden** nedan visar att endast medarbetare som tillhör den valda arbetsplatsen som anges i integrationsuppsättningen, kommer att inkluderas i integrationen mot Kontek Lön.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-21-2026-02-13-37-3604-PM.png?width=670&height=251&name=image-png-May-21-2026-02-13-37-3604-PM.png)
+
+### Det är även möjligt att skapa upp flera integrationer mot olika/flera konton i Kontek Lön.
+
+- Om ert företag har flera arbetsplatser och/eller legala enheter i Hailey kan det vara fördelaktigt att skapa separata integrationer med Kontek Lön till olika/flera Kontek Lön konton.
+
+Om ni **vill ha flera uppsättningar av integrationen mot olika Kontek Lön konton** gör ni om samma process som beskrivit ovan. Med andra ord, navigera till rubriken **Lön** sedan gör du på samma sätt som när du satte upp den första integrationen.
+
+- När du sätter upp flera integrationer behöver ni säkerställa att ni väljer olika konton i Visma App Store som är kopplade till det Kontek-konto du arbetar med. Därefter hämtar du Tenant ID för varje konto. Varje ny integration kräver ett nytt Tenant ID.
+
+<Note>
+  Eftersom anställningsnummer i Hailey är unika behöver dessa även vara unika i Kontek Lön. Har två medarbetare i två olika Kontek konton samma anställningsnummer, behöver detta justeras.
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-21-2026-02-19-57-1767-PM.png?width=670&height=515&name=image-png-May-21-2026-02-19-57-1767-PM.png)
+
+Du kan följa vilka/hur många integrationer som ert företag har aktiva under Aktiv-fliken under Integrationer.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-May-21-2026-02-22-21-6286-PM.png?width=670&height=226&name=image-png-May-21-2026-02-22-21-6286-PM.png)
+
+---
+
+## Vanliga fragor
+
+**Fråga**: Vi behöver ändra vårt synkroniseringsdatum efter den initiala uppsättningen av integrationen, hur gör jag då?
+
+Om ni vill ändra synkrioniseringsdatumet måste ni konfigurera integrationen på nytt för att Hailey ska inkludera informationen före det först valda datumet.
+
+<AccordionGroup>
+  <Accordion title="Vi har medarbetare i Kontek Lön som inte är registrerade i Hailey. Kommer integrationen att rensa bort dessa medarbetare i Kontek Lön om integrationen aktiveras?">
+    Integrationen uppdaterar endast de medarbetare som finns registrerade i båda systemen. För medarbetare som inte finns i Hailey så finns det ingen motsvarande data att synkronisera mot, vilket innebär att de inte påverkas av integrationen och kommer att ligga kvar oförändrade i Kontek Lön.
+
+    **Fråga**: Jag som admin har fått detta mejl, vad innebär det?
+
+    ![](https://docs.haileyhr.com/hs-fs/hubfs/undefined-Jan-03-2025-10-43-08-3414-AM.png?width=580&height=330&name=undefined-Jan-03-2025-10-43-08-3414-AM.png)
+
+    I detta fall behöver ni se över så att kategorin ifylld i det egna anställningsfältet matchar med medarbetarens kategori i Kontek.
+  </Accordion>
+
+  <Accordion title="Har ni lagt till en ny anställning på en medarbetare där dess omfattning i % har                   ökat eller minskat, men det uppdateras inte i Kontek?">
+    I  detta fall är det för att även Lönen behöver en uppdatering då omfattning i % är kopplat till Haileys Lönesynk mot Kontek. Det man kan göra för att det ska synkas ordentligt är att uppdatera den lön som ligger med samma datum och summa så kommer omfattningen sedan att uppdateras.
+  </Accordion>
+
+  <Accordion title="Kan man lägga till fler legala enheter i en befintlig Kontek-integration i                                 efterhand, eller behöver integrationen sättas upp på nytt för att triggas korrekt?">
+    Man behöver inte sätta upp integrationen på nytt om man redan har en aktiv integration påslagen, det räcker att man lägger till de nya legala enheterna i den aktiva integrationen och sparar
+
+    _Om du har några frågor angående integrationen, vänligen kontakta Hailey support._
+  </Accordion>
+</AccordionGroup>

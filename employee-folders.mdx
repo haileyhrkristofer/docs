@@ -1,0 +1,135 @@
+---
+title: "Employee folders"
+---
+
+Keep employee documents secure and organized with folders. Manage access rights and automatic disposal rules to help maintain GDPR compliance.
+
+## How do document disposal and scope work?
+
+export const VaamVideo = ({ id, title = "Video", crop = 0 }) => (
+  <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#262626" }}>
+    <iframe
+      src={`https://app.vaam.io/embed/${id}?bg=262626`}
+      title={title}
+      frameBorder="0"
+      allow="fullscreen; picture-in-picture"
+      allowFullScreen
+      style={{ position: "absolute", top: `-${crop}%`, left: `-${crop}%`, width: `${100 + crop * 2}%`, height: `${100 + crop * 2}%` }}
+    />
+  </div>
+);
+
+<VaamVideo id="1owePWv" title="Employee folders" />
+
+## What are employee folders?
+
+Employee folders provide a structured way to organize documents on employee profiles. They allow you to categorize and group documents, making them easier to navigate, manage and maintain over time.
+
+A single employee can have a large number of associated documents. Some may require restricted access, while others need to be retained for a specific period. Folders can be configured with access rights and automatic disposal rules to help ensure GDPR compliance.
+
+## How do you create new folders?
+
+To create an Employee folder, navigate to **Settings - Customisation** and click on **Add new**. Select **Employee folder**.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-02-2026-07-07-53-1672-AM.png?width=670&height=371&name=image-png-Sep-02-2026-07-07-53-1672-AM.png)
+
+Select a name - Select the access settings for the folder - Save.
+
+<Note>
+  It is optional to scope the folder and to set a disposal period. Read more about that [**HERE**](#document-disposal-scope).
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-02-2026-07-18-20-3184-AM.png?width=670&height=401&name=image-png-Sep-02-2026-07-18-20-3184-AM.png)
+
+## How do you set the access to folders?
+
+Access to employee folders is **not** included in the Admin role. You therefore need to manually grant administrators access to the employee folders they should be able to use. The same applies to all other access settings. These are configured individually within each folder.
+
+<Note>
+  Read more about how you can add admin access **[HERE](#admin-access).**
+</Note>
+
+First you need to decide who should be able to do what with the documents in the folder. The basic settings that can be done is for:
+
+- The employee
+- All managers above
+- The employee's manager
+- The employee's team lead
+
+<Note>
+  An explanation of the four settings possible to have:
+
+  - **None**: the folder will not be visible at all.
+  - **View**: the folder will be visible along with all documents in it.
+  - **Upload**: Same as for View and the possibility to add documents in the folder.
+  - **Full access:** Same as for View and Upload and the possibility to delete documents.
+</Note>
+
+In addition to this, you can add **other options for who should be granted access** to the folder. This is done via the button **Add** and can be done for:
+
+- Specific employee
+- Specific team
+- Specific department
+- Specific task force
+
+<Note>
+  Team, department and task force are all set via Settings - Organization. You can read more about this [HERE](/admin-get-started#organization).
+</Note>
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-02-2026-08-26-50-9123-PM.png?width=670&height=1008&name=image-png-Sep-02-2026-08-26-50-9123-PM.png)
+
+**Follow the steps below to grant yourself as Admin access to the folder:**
+
+- Click on the **three dots** to the right of the relevant folder and select **Edit**. Then click on **Add**.
+- Select the option **Specific employee** or **Specific task force** (if you have created one for the administrators in your account). Then select the employee(s) or task force that should have access to the documents in the folder.
+- Select which settings the administrator(s) should be able to manage in the folder, as described [HERE](#access-to-folders).
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Sep-02-2026-08-28-51-8757-PM.png?width=658&height=414&name=image-png-Sep-02-2026-08-28-51-8757-PM.png)
+
+## How do document disposal and scope work?
+
+To ensure that you don't keep documents longer than necessary, Hailey allows you to set rules regarding when documents should be automatically disposed. The rules apply to the entire folder, so it may be beneficial to create multiple folders if document disposal needs vary.
+
+The rules can be set for Days after upload and for Days after termination. Along with this, Hailey also supports having no disposal rule at all on a folder.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-31-2026-09-49-03-9372-PM.png?width=670&height=421&name=image-png-Aug-31-2026-09-49-03-9372-PM.png)
+
+**Scoping** only determines **where** the folder appears. It does not affect access rights or what users can view or edit. In other words, scoping controls the folder's placement, not who can see or interact with its contents.
+
+![](https://docs.haileyhr.com/hs-fs/hubfs/image-png-Aug-31-2026-09-46-41-2109-PM.png?width=670&height=424&name=image-png-Aug-31-2026-09-46-41-2109-PM.png)
+
+## How do you manage folders?
+
+When starting to work with your employee folders, you will see that there is already one type of folder existing, which is the Root folder. This is where all non-organized documents end up and they are shown directly as individual files. All folders that one has access to, in accordance with ones rights, will appear on each **employee card** under the **Docs tab**. Empty folders are also shown if you have the right to view them.
+
+<Note>
+  Read more about how to upload documents to folders [**HERE**](/upload-document-to-folders).
+</Note>
+
+## Rights
+
+To create and edit employee folders in Settings, users must have the **Edit Employee Folders** right **enabled**. Read more about Roles & Rights **[HERE](/roles-and-rights)**.
+
+The ability to view and upload documents in employee folders is not governed by Roles & Rights. Access is managed through the Access Settings configured for each folder. Read more about that [HERE](#access-to-folders).
+
+## Common questions
+
+Below you will find a list of frequently asked questions that you can use to troubleshoot.
+
+**Question 1:** Can I get an overview of all employee documents in a list?
+
+Yes, you can access an overview of the documents via HR Hub - Employee documents. Admin automatically has access to this view. You can filter and organize columns as well as see disposal information in the overview.
+
+Read more about the HR-hub and Employee documents in the guide **[HERE](/hr-hub)**.
+
+**Question 2:** What applies if rules are set for both Days after upload and for Days after termination?
+
+If the employee stays employed for the number of days set in Days after upload, that is what applies. If the employee is terminated before that number of days has passed, Days after termination will apply.
+
+**Question 3:** What happens if I scope a folder to managers?
+
+If you scope a folder to Managers, the folder will only be created and displayed on manager profiles. The Access settings within the folder determine who can view it.
+
+**Question 4:** As an administrator, I cannot see documents that are not assigned to a folder. Why?
+
+To access documents that are not uploaded to an employee folder, you must have the right to view the Root folder. Edit the Root folder settings and add yourself as at least a viewer if you need access to see all documents that does not belong to a folder.
